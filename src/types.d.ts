@@ -17,6 +17,7 @@ declare type TColor =
   | 'footerUnderlineGray'
   | 'darkGray'
 
+
 declare type CallbackFnType = () => void
 
 declare type TIconSizes = {

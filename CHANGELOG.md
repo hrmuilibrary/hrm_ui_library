@@ -12,9 +12,3 @@
 * remove changelog ([f14b0d3](https://github.com/dino-front-bot/hrm_ui_lib/commit/f14b0d3dea068dcabaa14d5e1400bd0233bfd5fd))
 * remove log ([67ac733](https://github.com/dino-front-bot/hrm_ui_lib/commit/67ac7337a3838dc9af519ce270fc183cb655dfc0))
 * test npm publish ([64b7087](https://github.com/dino-front-bot/hrm_ui_lib/commit/64b708727354847d9ddc19fef6a4d9bcdc2b6ac9))
-
-# 1.0.0 (2024-11-04)
-
-### Bug Fixes
-
-* test npm publish
