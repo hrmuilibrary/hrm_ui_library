@@ -5,7 +5,6 @@ export const noop = (): void => {
 }
 
 export const checkIsAllowedFileSize = (allowedSize: number, fileSize: number): boolean => {
-  console.log('test')
   return fileSize <= allowedSize
 }
 
