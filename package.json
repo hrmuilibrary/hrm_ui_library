@@ -1,7 +1,7 @@
 {
   "homepage": "https://dinofrontend.github.io/dino_ui_library",
   "name": "hrm_ui_lib",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "UI library for Dino",
   "private": false,
   "main": "index.js",
