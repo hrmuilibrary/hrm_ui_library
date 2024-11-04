@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.0.0...1.1.0) (2024-11-04)
+
+
+### Features
+
+* test npm publish ([d6a86fa](https://github.com/dino-front-bot/hrm_ui_lib/commit/d6a86fa1cc0ee5e4c48ae6ac4f82b9122cb4b72d))
+
 # 1.0.0 (2024-11-04)
 
 
