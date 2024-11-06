@@ -46,8 +46,8 @@ export const MultiBase = (props: TMultySingleTabPropTypes): ReactElement | null 
 
     return options.filter((dataItem) => {
       return (
-          typeof dataItem.label === 'string' &&
-          dataItem.label.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())
+        typeof dataItem.label === 'string' &&
+        dataItem.label.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())
       )
     })
   }, [searchValue, options, selectedValues])
@@ -82,58 +82,58 @@ export const MultiBase = (props: TMultySingleTabPropTypes): ReactElement | null 
   }, [avatar, labelLeftIconProps, optionRightIconComponent, labelRightIconComponent])
 
   return (
-      <>
-        <ContentTop
-            dataIdPrefix={dataIdPrefix}
-            menuOptions={menuOptions}
-            selectAll={selectAll}
-            clearAll={clearAll}
-            hasLimitation={!!maxSelectCount}
-            isAnySelected={selectedValues.length !== 0}
-            helperText={helperText}
-            isSearchAvailable={isSearchAvailable}
-            isSelectAllDisabled={isAllSelected || filteredData.length === 0}
-            setSearchValue={setSearchValue}
-            searchValue={searchValue}
-            translations={translations}
-        />
+    <>
+      <ContentTop
+        dataIdPrefix={dataIdPrefix}
+        menuOptions={menuOptions}
+        selectAll={selectAll}
+        clearAll={clearAll}
+        hasLimitation={!!maxSelectCount}
+        isAnySelected={selectedValues.length !== 0}
+        helperText={helperText}
+        isSearchAvailable={isSearchAvailable}
+        isSelectAllDisabled={isAllSelected || filteredData.length === 0}
+        setSearchValue={setSearchValue}
+        searchValue={searchValue}
+        translations={translations}
+      />
 
-        <div className={'select__options__scroll scrollbar'} style={scrollableContentStyle}>
-          {filteredData.length > 0 && (
-              <List
-                  height={DROPDOWN_HEIGHT}
-                  itemCount={filteredData.length}
-                  itemSize={ITEM_SIZE}
-                  width={dropdownWidth || DROPDOWN_WIDTH}
-                  style={{ width: dropdownWidth || '100%' }}
-              >
-                {({ index, style }) => {
-                  const item = filteredData[index]
-                  const isSelected = checkIsSelected(item.value)
-                  return (
-                      <OptionItem
-                          data={item}
-                          dataId={item.dataId}
-                          onClick={isSelected ? onDeselect : onItemSelect}
-                          disabled={
-                              item.disabled || (!isSelected && selectedValues.length === maxSelectCount)
-                          }
-                          isSelected={isSelected}
-                          style={style}
-                          {...optionProps}
-                      />
-                  )
-                }}
-              </List>
-          )}
-        </div>
-        {filteredData.length === 0 ? (
-            <Empty
-                size="small"
-                mainMessage={emptyListMainMessage}
-                paragraphMessage={emptyListSecondaryMessage}
-            />
-        ) : null}
-      </>
+      <div className={'select__options__scroll scrollbar'} style={scrollableContentStyle}>
+        {filteredData.length > 0 && (
+          <List
+            height={DROPDOWN_HEIGHT}
+            itemCount={filteredData.length}
+            itemSize={ITEM_SIZE}
+            width={dropdownWidth || DROPDOWN_WIDTH}
+            style={{ width: dropdownWidth || '100%' }}
+          >
+            {({ index, style }) => {
+              const item = filteredData[index]
+              const isSelected = checkIsSelected(item.value)
+              return (
+                <OptionItem
+                  data={item}
+                  dataId={item.dataId}
+                  onClick={isSelected ? onDeselect : onItemSelect}
+                  disabled={
+                    item.disabled || (!isSelected && selectedValues.length === maxSelectCount)
+                  }
+                  isSelected={isSelected}
+                  style={style}
+                  {...optionProps}
+                />
+              )
+            }}
+          </List>
+        )}
+      </div>
+      {filteredData.length === 0 ? (
+        <Empty
+          size="small"
+          mainMessage={emptyListMainMessage}
+          paragraphMessage={emptyListSecondaryMessage}
+        />
+      ) : null}
+    </>
   )
 }

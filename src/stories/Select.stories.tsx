@@ -120,7 +120,7 @@ const OPTIONS: TSelectOptions = [
   {
     value: 1,
     label:
-        'Armeniaaasdasdasdasdlkashdkjlashdkjasdkjashkdjhaskjdhdaskjdhaskjhdkajsdkjasdkjashdjkashdkjhaskdhaskjdhaskjdhaskjdhaskjhdkjas',
+      'Armeniaaasdasdasdasdlkashdkjlashdkjasdkjashkdjhaskjdhdaskjdhaskjhdkajsdkjasdkjashdjkashdkjhaskdhaskjdhaskjdhaskjdhaskjhdkjas',
     meta: 'AM'
   },
   {
@@ -13295,34 +13295,34 @@ const Template: StoryFn<TSingleSelectPropTypes> = (args) => {
   const closeMenu = () => setIsOpen(false)
 
   return (
-      <div style={{ display: 'flex', height: '100vh', justifyContent: 'center' }}>
-        <_Select
-            {...args}
-            dataId={'single-select'}
-            // tooltipAddons={{ position: Positions.TOP_LEFT, text: '' }}
-            isRequiredField
-            options={MOCK_DATA}
-            outerHelperText="helper text"
-            selectedItem={selectedValue}
-            setSelectedItem={setSelectedValue}
-            withSearch={true}
-            optionRightIconComponent={() => {
-              return (
-                  <div ref={ref} style={{ position: 'absolute', right: '16px' }}>
-                    <IconMore size="small" onClick={openMenu} />
-                    {ref.current && (
-                        <Menu
-                            isOpen={isOpen}
-                            parentRef={ref.current}
-                            menuItems={subMenuItems}
-                            onClose={closeMenu}
-                        />
-                    )}
-                  </div>
-              )
-            }}
-        />
-      </div>
+    <div style={{ display: 'flex', height: '100vh', justifyContent: 'center' }}>
+      <_Select
+        {...args}
+        dataId={'single-select'}
+        // tooltipAddons={{ position: Positions.TOP_LEFT, text: '' }}
+        isRequiredField
+        options={MOCK_DATA}
+        outerHelperText="helper text"
+        selectedItem={selectedValue}
+        setSelectedItem={setSelectedValue}
+        withSearch={true}
+        optionRightIconComponent={() => {
+          return (
+            <div ref={ref} style={{ position: 'absolute', right: '16px' }}>
+              <IconMore size="small" onClick={openMenu} />
+              {ref.current && (
+                <Menu
+                  isOpen={isOpen}
+                  parentRef={ref.current}
+                  menuItems={subMenuItems}
+                  onClose={closeMenu}
+                />
+              )}
+            </div>
+          )
+        }}
+      />
+    </div>
   )
 }
 export const Select = Template.bind({})
@@ -13332,28 +13332,28 @@ const Template2: StoryFn<TButtonSelectPropTypes> = (args) => {
   const [selectedValue, setSelectedValue] = useState<TItemValue | undefined>(null)
 
   return (
-      <div
-          style={{
-            display: 'flex',
-            height: '100vh',
-            justifyContent: 'center',
-            position: 'absolute',
-            top: 100
-          }}
-      >
-        <_ButtonSelect
-            {...args}
-            size="small"
-            placeHolder="Select month"
-            // tooltipAddons={{ position: 'bottom-left' }}
-            isRequiredField
-            options={BUTTON_SELECT_OPTIONS}
-            selectedItem={selectedValue}
-            setSelectedItem={setSelectedValue}
-            dropdownWidth={300}
-            // optionRightIconComponent={(value) => <>{value}</div>}
-        />
-      </div>
+    <div
+      style={{
+        display: 'flex',
+        height: '100vh',
+        justifyContent: 'center',
+        position: 'absolute',
+        top: 100
+      }}
+    >
+      <_ButtonSelect
+        {...args}
+        size="small"
+        placeHolder="Select month"
+        // tooltipAddons={{ position: 'bottom-left' }}
+        isRequiredField
+        options={BUTTON_SELECT_OPTIONS}
+        selectedItem={selectedValue}
+        setSelectedItem={setSelectedValue}
+        dropdownWidth={300}
+        // optionRightIconComponent={(value) => <>{value}</div>}
+      />
+    </div>
   )
 }
 export const ButtonSelect = Template2.bind({})
@@ -13370,25 +13370,25 @@ const ButtonMenu = () => {
   const close = () => setIsOpen(false)
 
   return (
-      <div ref={setButtonRef}>
-        <Button type="tertiary" onClick={open} iconProps={{ Component: IconMore }} size="small" />
-        {buttonRef ? (
-            <Menu
-                menuItems={[
-                  {
-                    label: 'delete',
-                    value: 'delete',
-                    handler: () => {
-                      console.log('delete')
-                    }
-                  }
-                ]}
-                parentRef={buttonRef}
-                onClose={close}
-                isOpen={isOpen}
-            />
-        ) : null}
-      </div>
+    <div ref={setButtonRef}>
+      <Button type="tertiary" onClick={open} iconProps={{ Component: IconMore }} size="small" />
+      {buttonRef ? (
+        <Menu
+          menuItems={[
+            {
+              label: 'delete',
+              value: 'delete',
+              handler: () => {
+                console.log('delete')
+              }
+            }
+          ]}
+          parentRef={buttonRef}
+          onClose={close}
+          isOpen={isOpen}
+        />
+      ) : null}
+    </div>
   )
 }
 Select.args = {
@@ -13414,37 +13414,37 @@ const MultiSelectTemplate: StoryFn<TMultiSelectPropTypes> = (args) => {
     console.log(isChecked)
   }
   return (
-      <div
-          style={{ width: 250, height: '100vh', position: 'absolute', left: 500, top: 10 }}
-          className="ddddd"
-      >
-        <_MultiSelect
-            {...args}
-            // isButtonSelect={true}
-            dropdownWidth={400}
-            align="right"
-            maxSelectCount={3}
-            selectedItems={selectedValues}
-            setSelectedItems={set}
-            labelRightIconComponent={() => (
-                <IconPerson
-                    size="xsmall"
-                    className="mr-4"
-                    onClick={(e: any) => {
-                      e.preventDefault()
-                      e.stopPropagation()
-                    }}
-                />
-            )}
-            translations={{
-              emptyListMainMessage: '',
-              innerLabel: 'Group name',
-              clearAllLabel: 'Clear All',
-              selectAllLabel: 'Select All'
+    <div
+      style={{ width: 250, height: '100vh', position: 'absolute', left: 500, top: 10 }}
+      className="ddddd"
+    >
+      <_MultiSelect
+        {...args}
+        // isButtonSelect={true}
+        dropdownWidth={400}
+        align="right"
+        maxSelectCount={3}
+        selectedItems={selectedValues}
+        setSelectedItems={set}
+        labelRightIconComponent={() => (
+          <IconPerson
+            size="xsmall"
+            className="mr-4"
+            onClick={(e: any) => {
+              e.preventDefault()
+              e.stopPropagation()
             }}
-            optionRightIconComponent={() => <ButtonMenu />}
-        />
-      </div>
+          />
+        )}
+        translations={{
+          emptyListMainMessage: '',
+          innerLabel: 'Group name',
+          clearAllLabel: 'Clear All',
+          selectAllLabel: 'Select All'
+        }}
+        optionRightIconComponent={() => <ButtonMenu />}
+      />
+    </div>
   )
 }
 export const MultiSelect = MultiSelectTemplate.bind({})
@@ -13472,14 +13472,14 @@ const NestedSelectTemplate = (args: any): JSX.Element => {
   })
 
   return (
-      <div style={{ width: 320, position: 'absolute', left: 300 }}>
-        <_NestedSelect
-            {...args}
-            selected={selected}
-            setSelectedValue={setSelected}
-            initialSelectedFolderIds={[1, 2]}
-        />
-      </div>
+    <div style={{ width: 320, position: 'absolute', left: 300 }}>
+      <_NestedSelect
+        {...args}
+        selected={selected}
+        setSelectedValue={setSelected}
+        initialSelectedFolderIds={[1, 2]}
+      />
+    </div>
   )
 }
 export const NestedSelect = NestedSelectTemplate.bind({})
@@ -13493,13 +13493,13 @@ NestedSelect.args = {
   labelLeftIconProps: { Component: IconPerson },
   labelRightIconComponent: () => <IconPerson size="xsmall" className="mr-4" />,
   optionRightIconComponent: () => (
-      <IconMore
-          size="xsmall"
-          onClick={(e: any) => {
-            e.preventDefault()
-            e.stopPropagation()
-          }}
-      />
+    <IconMore
+      size="xsmall"
+      onClick={(e: any) => {
+        e.preventDefault()
+        e.stopPropagation()
+      }}
+    />
   ),
   labelAddons: <IconInfo size={'xsmall'} type={'information'} className={'ml-4'} />
 }
@@ -13510,23 +13510,23 @@ const LanguageSelectTemplate: StoryFn<TSingleSelectPropTypes> = (args) => {
   const [selectedValue, setSelectedValue] = useState<TItemValue | undefined>(null)
 
   return (
-      <div style={{ display: 'flex', height: '100vh', justifyContent: 'center', width: '20vw' }}>
-        <_Select
-            {...args}
-            options={languagesOptions}
-            selectedItem={selectedValue}
-            setSelectedItem={setSelectedValue}
-            className={'select--language'}
-            selectRightIconProps={{
-              Component: IconChevronDown,
-              size: 'small'
-            }}
-            selectRightIconOpenedProps={{
-              Component: IconChevronUp,
-              size: 'small'
-            }}
-        />
-      </div>
+    <div style={{ display: 'flex', height: '100vh', justifyContent: 'center', width: '20vw' }}>
+      <_Select
+        {...args}
+        options={languagesOptions}
+        selectedItem={selectedValue}
+        setSelectedItem={setSelectedValue}
+        className={'select--language'}
+        selectRightIconProps={{
+          Component: IconChevronDown,
+          size: 'small'
+        }}
+        selectRightIconOpenedProps={{
+          Component: IconChevronUp,
+          size: 'small'
+        }}
+      />
+    </div>
   )
 }
 export const LanguageSelect = LanguageSelectTemplate.bind({})
@@ -13535,19 +13535,19 @@ export const LanguageSelect = LanguageSelectTemplate.bind({})
 
 const ProfileDropdownTemplate = (args: any): JSX.Element => {
   return (
-      <div
-          style={{
-            width: 320,
-            display: 'flex',
-            flexDirection: 'column',
-            position: 'absolute',
-            left: 300
-          }}
-      >
-        <div style={{ position: 'absolute', left: 300 }}>
-          <_ProfileDropdown {...args} />
-        </div>
+    <div
+      style={{
+        width: 320,
+        display: 'flex',
+        flexDirection: 'column',
+        position: 'absolute',
+        left: 300
+      }}
+    >
+      <div style={{ position: 'absolute', left: 300 }}>
+        <_ProfileDropdown {...args} />
       </div>
+    </div>
   )
 }
 
