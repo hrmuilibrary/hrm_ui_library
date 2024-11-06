@@ -17,6 +17,7 @@ type TProps = {
   containerRef: HTMLDivElement | null
   setIsOpen: (isOpen: boolean) => void
   dropdownRef: HTMLDivElement | null
+  dropdownWidth?: number
   options: TSelectOptions
   selectedValues: TSelectedValue[]
   setSelectedValues: (values: TSelectedValue[]) => void
@@ -45,20 +46,20 @@ export const OptionsWrapper = (props: TProps): ReactElement => {
   const SelectComp = withTabs ? MultiSelectWithTabs : isGrouped ? MultiSelectGrouped : MultiBase
 
   const checkIsValueOverflowed = useCallback(
-    (value: string) => {
-      const elemWidth = getStringWidth(value, 14)
-      return elemWidth > width - 80 // padding and width of (+number)
-    },
-    [width]
+      (value: string) => {
+        const elemWidth = getStringWidth(value, 14)
+        return elemWidth > width - 80 // padding and width of (+number)
+      },
+      [width]
   )
 
   const toggleDropdown = (e?: TClickEventType) => {
     const clickedElement = e?.target as HTMLDivElement
     const className = clickedElement?.getAttribute('class')
     if (
-      e &&
-      className &&
-      (className.indexOf('icon-') !== -1 || className.indexOf('svg-icon') !== -1)
+        e &&
+        className &&
+        (className.indexOf('icon-') !== -1 || className.indexOf('svg-icon') !== -1)
     ) {
       setIsOpen(!isOpen)
       e.preventDefault()
@@ -73,7 +74,7 @@ export const OptionsWrapper = (props: TProps): ReactElement => {
 
   const onItemDeselect = (item: TSelectedValue) => {
     setSelectedValues(
-      selectedValues.filter((optionValue: TSelectedValue) => optionValue.value !== item.value)
+        selectedValues.filter((optionValue: TSelectedValue) => optionValue.value !== item.value)
     )
   }
 
@@ -105,24 +106,24 @@ export const OptionsWrapper = (props: TProps): ReactElement => {
   }
 
   return (
-    <SelectComp
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      options={options}
-      isOpen={isOpen}
-      hasBottomSpace={hasBottomSpace}
-      translations={localizations}
-      selectedValues={selectedValues}
-      onItemSelect={onItemSelect}
-      onItemDeselect={onItemDeselect}
-      toggleDropdown={toggleDropdown}
-      setSelectedValues={setSelectedValues}
-      checkIsValueOverflowed={checkIsValueOverflowed}
-      isSearchAvailable={optionsCount > SELECTED_VISIBLE_MIN_COUNT}
-      scrollableContentStyle={{
-        ...(!hasBottomSpace && !hasTopSpace ? { maxHeight: bottomSpace - 65 - 56 } : {})
-      }} // 65 - height of the top content, 56 - height of the footer
-      {...rest}
-    />
+      <SelectComp
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-ignore
+          options={options}
+          isOpen={isOpen}
+          hasBottomSpace={hasBottomSpace}
+          translations={localizations}
+          selectedValues={selectedValues}
+          onItemSelect={onItemSelect}
+          onItemDeselect={onItemDeselect}
+          toggleDropdown={toggleDropdown}
+          setSelectedValues={setSelectedValues}
+          checkIsValueOverflowed={checkIsValueOverflowed}
+          isSearchAvailable={optionsCount > SELECTED_VISIBLE_MIN_COUNT}
+          scrollableContentStyle={{
+            ...(!hasBottomSpace && !hasTopSpace ? { maxHeight: bottomSpace - 65 - 56 } : {})
+          }} // 65 - height of the top content, 56 - height of the footer
+          {...rest}
+      />
   )
 }

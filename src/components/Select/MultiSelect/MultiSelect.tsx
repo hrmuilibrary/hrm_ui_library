@@ -53,9 +53,9 @@ export const MultiSelect = (props: TMultiSelectPropTypes): ReactElement => {
     }
 
     return (
-      selectedValues?.findIndex(
-        (value) => initialSelected?.findIndex((i: TSelectOption) => i.value === value.value) === -1
-      ) !== -1
+        selectedValues?.findIndex(
+            (value) => initialSelected?.findIndex((i: TSelectOption) => i.value === value.value) === -1
+        ) !== -1
     )
   }, [selectedValues, initialSelected])
 
@@ -97,51 +97,52 @@ export const MultiSelect = (props: TMultiSelectPropTypes): ReactElement => {
 
   const { overflowText } = localizations
   return (
-    <WrapperComponent
-      dropdownRef={dropdownRef}
-      isOpen={isOpen}
-      setIsOpen={setIsOpen}
-      containerRef={containerRef?.current}
-      setContainerRef={containerRef}
-      dropdownWidth={dropdownWidth}
-      setDropdownRef={setDropdownRef}
-      size={size}
-      label={label}
-      align={align}
-      disabled={disabled}
-      className={className}
-      labelAddons={labelAddons}
-      placeHolder={placeHolder}
-      selectedValues={selectedValues}
-      isRequiredField={isRequiredField}
-      overflowText={overflowText}
-      hasError={hasError}
-    >
-      <>
-        <OptionsWrapper
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          // @ts-ignore
-          options={options}
-          isOpen={isOpen}
-          translations={translations}
-          setIsOpen={setIsOpen}
+      <WrapperComponent
           dropdownRef={dropdownRef}
-          openDropdown={openDropdown}
-          selectedValues={selectedValues}
-          setSelectedValues={setSelectedValues}
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
           containerRef={containerRef?.current}
-          {...rest}
-        />
-        {options.length ? (
-          <Footer
-            checkboxInfo={checkboxInfo}
-            hasChange={hasChange}
-            buttonProps={footerButtonProps}
-            onCancel={cancelSelectedItems}
-            onApply={applySelectedItems}
+          setContainerRef={containerRef}
+          dropdownWidth={dropdownWidth}
+          setDropdownRef={setDropdownRef}
+          size={size}
+          label={label}
+          align={align}
+          disabled={disabled}
+          className={className}
+          labelAddons={labelAddons}
+          placeHolder={placeHolder}
+          selectedValues={selectedValues}
+          isRequiredField={isRequiredField}
+          overflowText={overflowText}
+          hasError={hasError}
+      >
+        <>
+          <OptionsWrapper
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-ignore
+              options={options}
+              isOpen={isOpen}
+              translations={translations}
+              setIsOpen={setIsOpen}
+              dropdownRef={dropdownRef}
+              openDropdown={openDropdown}
+              selectedValues={selectedValues}
+              setSelectedValues={setSelectedValues}
+              containerRef={containerRef?.current}
+              dropdownWidth={dropdownWidth}
+              {...rest}
           />
-        ) : null}
-      </>
-    </WrapperComponent>
+          {options.length ? (
+              <Footer
+                  checkboxInfo={checkboxInfo}
+                  hasChange={hasChange}
+                  buttonProps={footerButtonProps}
+                  onCancel={cancelSelectedItems}
+                  onApply={applySelectedItems}
+              />
+          ) : null}
+        </>
+      </WrapperComponent>
   )
 }
