@@ -24,6 +24,7 @@ interface TSelectBaseProps {
   avatar?: string
   size?: 'small' | 'large' | 'medium'
   className?: string
+  dropdownWidth?: number
 }
 export interface TNestedSelectProps {
   options: TSelectOptions

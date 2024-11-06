@@ -1,4 +1,4 @@
-import { ReactElement } from 'react'
+import { CSSProperties, ReactElement } from 'react'
 import { TTooltipProps } from '../../components/Tooltip/types'
 
 export type TSelectItemProps = {
@@ -15,4 +15,5 @@ export type TSelectItemProps = {
   isCheckbox?: boolean
   tooltipAddons?: TTooltipProps
   dataId?: string
+  style?: CSSProperties
 }

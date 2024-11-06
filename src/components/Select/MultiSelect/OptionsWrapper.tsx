@@ -17,6 +17,7 @@ type TProps = {
   containerRef: HTMLDivElement | null
   setIsOpen: (isOpen: boolean) => void
   dropdownRef: HTMLDivElement | null
+  dropdownWidth?: number
   options: TSelectOptions
   selectedValues: TSelectedValue[]
   setSelectedValues: (values: TSelectedValue[]) => void

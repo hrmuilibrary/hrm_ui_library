@@ -1,13 +1,12 @@
-import React, { useCallback, useMemo, useState } from 'react'
-import { Divider } from '../../../Divider'
+import React, { ReactElement, useCallback, useMemo, useState } from 'react'
 import { Empty } from '../../../Empty'
-import { useGetElemSizes } from '../../../../hooks'
 import { OptionItem } from '../../../../helperComponents'
 import { ContentTop } from '../../SharedComponents'
 import { TMultySingleTabPropTypes } from '../../types'
-import { DROPDOWN_MAX_HEIGHT } from '../../constants'
+import { FixedSizeList as List } from 'react-window'
+import { DROPDOWN_HEIGHT, DROPDOWN_WIDTH, ITEM_SIZE } from '../../constants'
 
-export const MultiBase = (props: TMultySingleTabPropTypes): JSX.Element | null => {
+export const MultiBase = (props: TMultySingleTabPropTypes): ReactElement | null => {
   const {
     avatar,
     scrollableContentStyle,
@@ -24,26 +23,25 @@ export const MultiBase = (props: TMultySingleTabPropTypes): JSX.Element | null =
     optionRightIconComponent,
     maxSelectCount,
     menuOptions,
-    dataIdPrefix
+    dataIdPrefix,
+    dropdownWidth
   } = props
 
   const { emptyListMainMessage, emptyListSecondaryMessage } = translations
 
-  const [contentContainerRef, setContentContainerRef] = useState<HTMLDivElement | null>(null)
-
   const [searchValue, setSearchValue] = useState('')
   const [isAllSelected, setAllSelected] = useState(false)
-
-  const { scrollHeight } = useGetElemSizes(contentContainerRef)
 
   const clearAll = useCallback(() => {
     setAllSelected(false)
     setSelectedValues([])
   }, [])
 
-  const filteredData = useMemo(() => {
+  const filteredData = useMemo((): TSelectOptions => {
     if (!searchValue) {
-      return options
+      const selectedValuesArray = selectedValues.map((item) => item.value)
+      const newOptions = options.filter((item) => selectedValuesArray.indexOf(item.value) === -1)
+      return [...selectedValues, ...newOptions]
     }
 
     return options.filter((dataItem) => {
@@ -52,7 +50,7 @@ export const MultiBase = (props: TMultySingleTabPropTypes): JSX.Element | null =
         dataItem.label.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())
       )
     })
-  }, [searchValue, options])
+  }, [searchValue, options, selectedValues])
 
   const selectAll = useCallback(() => {
     setAllSelected(true)
@@ -72,14 +70,6 @@ export const MultiBase = (props: TMultySingleTabPropTypes): JSX.Element | null =
   const checkIsSelected = (itemValue: TItemValue) => {
     return selectedValues.find((item) => item.value === itemValue) !== undefined
   }
-
-  const selectedOptions = useMemo(
-    () =>
-      options.filter(
-        (item: TSelectOption) => selectedValues.findIndex((s) => s.value === item.value) !== -1
-      ),
-    [options, selectedValues]
-  )
 
   const optionProps = useMemo(() => {
     return {
@@ -108,47 +98,34 @@ export const MultiBase = (props: TMultySingleTabPropTypes): JSX.Element | null =
         translations={translations}
       />
 
-      <div
-        ref={setContentContainerRef}
-        className={`select__options__scroll scrollbar scrollbar--vertical ${
-          scrollHeight > DROPDOWN_MAX_HEIGHT ? 'mr-6' : ''
-        }`}
-        style={scrollableContentStyle}
-      >
-        {isSearchAvailable && (
-          <div className="selected-items">
-            {selectedOptions.map((item: TSelectOption) => {
-              const isSelected = selectedValues.findIndex((s) => s.value === item.value) !== -1
-
+      <div className={'select__options__scroll scrollbar'} style={scrollableContentStyle}>
+        {filteredData.length > 0 && (
+          <List
+            height={DROPDOWN_HEIGHT}
+            itemCount={filteredData.length}
+            itemSize={ITEM_SIZE}
+            width={dropdownWidth || DROPDOWN_WIDTH}
+            style={{ width: dropdownWidth || '100%' }}
+          >
+            {({ index, style }) => {
+              const item = filteredData[index]
+              const isSelected = checkIsSelected(item.value)
               return (
                 <OptionItem
                   data={item}
-                  key={item.value}
-                  isSelected
-                  disabled={item.disabled}
+                  dataId={item.dataId}
                   onClick={isSelected ? onDeselect : onItemSelect}
+                  disabled={
+                    item.disabled || (!isSelected && selectedValues.length === maxSelectCount)
+                  }
+                  isSelected={isSelected}
+                  style={style}
                   {...optionProps}
                 />
               )
-            })}
-          </div>
+            }}
+          </List>
         )}
-
-        <Divider type="primary" isHorizontal />
-        {filteredData.map((item: TSelectOption, index) => {
-          const isSelected = checkIsSelected(item.value)
-          return (
-            <OptionItem
-              data={item}
-              dataId={item.dataId}
-              key={`${item.value}_${index}`}
-              onClick={isSelected ? onDeselect : onItemSelect}
-              disabled={item.disabled || (!isSelected && selectedValues.length === maxSelectCount)}
-              isSelected={isSelected}
-              {...optionProps}
-            />
-          )
-        })}
       </div>
       {filteredData.length === 0 ? (
         <Empty

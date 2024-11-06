@@ -130,6 +130,7 @@ export const MultiSelect = (props: TMultiSelectPropTypes): ReactElement => {
           selectedValues={selectedValues}
           setSelectedValues={setSelectedValues}
           containerRef={containerRef?.current}
+          dropdownWidth={dropdownWidth}
           {...rest}
         />
         {options.length ? (

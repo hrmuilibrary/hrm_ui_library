@@ -20,7 +20,8 @@ export const OptionItem = (props: TSelectItemProps): JSX.Element => {
     isCheckbox,
     className = '',
     tooltipAddons,
-    dataId = ''
+    dataId = '',
+    style = {}
   } = props
 
   const { label, meta, value } = data
@@ -50,6 +51,7 @@ export const OptionItem = (props: TSelectItemProps): JSX.Element => {
         className
       )}
       onClick={handleClick}
+      style={style}
     >
       {isCheckbox ? (
         <Checkbox className="mr-8" selectedValue={isSelected} disabled={disabled} />

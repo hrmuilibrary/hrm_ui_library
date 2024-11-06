@@ -12,12 +12,20 @@ import { Text } from '../../Text'
 import { OptionItem } from '../../../helperComponents'
 import { Loading } from '../SharedComponents'
 import { TSingleSelectPropTypes } from '../types'
-import { SELECTED_VISIBLE_MIN_COUNT } from '../constants'
+import {
+  DROPDOWN_HEIGHT,
+  DROPDOWN_WIDTH,
+  ITEM_SIZE,
+  SELECTED_VISIBLE_MIN_COUNT,
+  TRANSLATIONS_DEFAULT_VALUES
+} from '../constants'
 import { useChangePositionsOnScroll } from '../../../hooks/useChangePositionsOnScroll'
 import { IconCaretUpFilled } from '../../SVGIcons/IconCaretUpFilled'
 import { IconCaretDownFilled } from '../../SVGIcons/IconCaretDownFilled'
 import { noop } from '../../../utils/helpers'
 import { DROPDOWN_AND_INPUT_GAP } from '../../../consts'
+import { FixedSizeList as List } from 'react-window'
+import { Empty } from '../../Empty'
 
 export const Select = (props: TSingleSelectPropTypes): JSX.Element | null => {
   const {
@@ -54,18 +62,17 @@ export const Select = (props: TSingleSelectPropTypes): JSX.Element | null => {
       size: 'xsmall'
     },
     labelAddons,
-    tooltipAddons
+    tooltipAddons,
+    dropdownWidth
   } = props
   const scrollRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement | null>(null)
-  const { scrollHeight } = useGetElemSizes(scrollRef.current)
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const containerRef = useRef<HTMLDivElement>(null)
   const [searchValue, setSearchValue] = useState<string>('')
   const [dropdownRef, setDropdownRef] = useState<HTMLDivElement | null>(null)
   const currentSelection = (value as TItemValue) || selectedItem
   const [selectedOption, setSelectedOption] = useState<TSelectOption | null>(null)
-
   const isWithSearch = withSearch && options.length > SELECTED_VISIBLE_MIN_COUNT
 
   const setCurrentSelectedLabel = useCallback(() => {
@@ -195,7 +202,7 @@ export const Select = (props: TSingleSelectPropTypes): JSX.Element | null => {
         rightIconProps={isOpen ? selectRightIconOpenedProps : selectRightIconProps}
         readonly={!isWithSearch}
         placeholder={placeHolder}
-        value={selectedOption?.label || ''}
+        currentValue={searchValue || selectedOption?.label.toString() || ''}
         isValid={isValid}
         disabled={disabled}
         helperText={isOpen ? '' : outerHelperText}
@@ -225,11 +232,11 @@ export const Select = (props: TSingleSelectPropTypes): JSX.Element | null => {
                 ref={scrollRef}
                 className={classNames(
                   'select__options__scroll',
-                  'scrollbar',
-                  'scrollbar--vertical',
-                  {
-                    'mr-6': scrollHeight > 300
-                  }
+                  'scrollbar'
+                  // 'scrollbar--vertical',
+                  // {
+                  //   'mr-6': scrollHeight > 300
+                  // }
                 )}
               >
                 {innerHelperText ? (
@@ -239,25 +246,52 @@ export const Select = (props: TSingleSelectPropTypes): JSX.Element | null => {
                     </Text>
                   </div>
                 ) : null}
-
-                {filteredData.map((item: TSelectOption) => {
-                  const isSelected = item.value === currentSelection
-                  return (
-                    <OptionItem
-                      tooltipAddons={tooltipAddons}
-                      data={item}
-                      key={item.value}
-                      onClick={clickHandler(isSelected)}
-                      optionLeftIcon={item?.optionLeftIcon}
-                      labelLeftIconProps={labelLeftIconProps}
-                      OptionRightIconComponent={optionRightIconComponent}
-                      LabelRightIconComponent={labelRightIconComponent}
-                      avatar={avatar}
-                      disabled={item.disabled}
-                      isSelected={isSelected}
-                    />
-                  )
-                })}
+                {filteredData.length > 0 && (
+                  <List
+                    height={
+                      filteredData.length * ITEM_SIZE > DROPDOWN_HEIGHT
+                        ? DROPDOWN_HEIGHT
+                        : filteredData.length * ITEM_SIZE
+                    }
+                    itemCount={filteredData.length}
+                    itemSize={ITEM_SIZE}
+                    width={dropdownWidth || DROPDOWN_WIDTH}
+                    style={{
+                      width: dropdownWidth || '100%',
+                      overflowX: 'hidden',
+                      overflowY: 'auto',
+                      willChange: 'auto'
+                    }}
+                  >
+                    {({ index, style }) => {
+                      const item = filteredData[index]
+                      const isSelected = item.value === currentSelection
+                      return (
+                        <OptionItem
+                          tooltipAddons={tooltipAddons}
+                          data={item}
+                          key={item.value}
+                          onClick={clickHandler(isSelected)}
+                          optionLeftIcon={item?.optionLeftIcon}
+                          labelLeftIconProps={labelLeftIconProps}
+                          OptionRightIconComponent={optionRightIconComponent}
+                          LabelRightIconComponent={labelRightIconComponent}
+                          avatar={avatar}
+                          disabled={item.disabled}
+                          isSelected={isSelected}
+                          dataId={item.dataId}
+                          style={style}
+                        />
+                      )
+                    }}
+                  </List>
+                )}
+                {filteredData.length === 0 ? (
+                  <Empty
+                    size="small"
+                    mainMessage={TRANSLATIONS_DEFAULT_VALUES.emptyListMainMessage}
+                  />
+                ) : null}
               </div>
             </>
           )}
