@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.1.0...1.2.0) (2024-11-06)
+
+
+### Features
+
+* eslint fixes ([e821670](https://github.com/dino-front-bot/hrm_ui_lib/commit/e8216703a5aaf6fc811e5575c7b524b870cb9f30))
+* integrate react window ([2d09a62](https://github.com/dino-front-bot/hrm_ui_lib/commit/2d09a62d6e4f91e752de5f1e6e0b9a3f7a2607e3))
+
 # [1.1.0](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.0.0...1.1.0) (2024-11-04)
 
 
