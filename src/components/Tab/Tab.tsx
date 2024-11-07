@@ -7,11 +7,10 @@ export const Tab = (props: TTabProps): ReactElement => {
   const { selectedValue, tabItems, onSelect, size, className, type = 'primary', ...rest } = props
 
   return (
-    <div className={classNames('tabs-container', `tabs-container--${type}`, className)}>
+    <div className={classNames('tabs-container', className)}>
       {tabItems.map((tabInfo) => {
         return (
           <TabItem
-            size={type === 'secondary' ? 'medium' : size}
             label={tabInfo.label}
             badgeProps={tabInfo.badgeProps}
             onClick={() => onSelect(tabInfo.value)}
