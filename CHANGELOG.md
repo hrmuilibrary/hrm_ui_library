@@ -1,3 +1,11 @@
+## [1.2.1](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.2.0...1.2.1) (2024-11-07)
+
+
+### Bug Fixes
+
+* add slack yml ([d8ab9d2](https://github.com/dino-front-bot/hrm_ui_lib/commit/d8ab9d29d7dce6d4361d9da48ee2455b5f447d44))
+* revert same ui changes ([145c1a3](https://github.com/dino-front-bot/hrm_ui_lib/commit/145c1a3e7c77f402dc932bbed1e6c411d07b8415))
+
 # [1.2.0](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.1.0...1.2.0) (2024-11-06)
 
 
