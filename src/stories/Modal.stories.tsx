@@ -36,7 +36,7 @@ const Template: StoryFn<TModalPropTypes> = (args) => {
             buttonText: 'Save',
             buttonActionType: 'submit'
           },
-          cancel: { buttonText: 'Cancel' }
+          cancel: { buttonText: 'Cancel', type: 'secondary' }
         }}
       >
         <div>Modal content</div>
