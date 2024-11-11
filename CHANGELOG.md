@@ -1,3 +1,12 @@
+## [1.2.2](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.2.1...1.2.2) (2024-11-11)
+
+
+### Bug Fixes
+
+* add channel mention for testing ([fbc0de9](https://github.com/dino-front-bot/hrm_ui_lib/commit/fbc0de9c54a0207ebb1558dac402c29266edfc81))
+* improve btn click handler ([e5c1a0f](https://github.com/dino-front-bot/hrm_ui_lib/commit/e5c1a0f1b5c843ca8d35de3270775bc89979c56c))
+* improve click handler function ([6d0b961](https://github.com/dino-front-bot/hrm_ui_lib/commit/6d0b961644dcd4c1b11a03bff10bb278dc2ca34f))
+
 ## [1.2.1](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.2.0...1.2.1) (2024-11-07)
 
 
