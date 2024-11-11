@@ -23,13 +23,13 @@ export const Button = (props: TButtonPropTypes): ReactElement => {
   } = props
 
   const justIcon = !buttonText && !children && iconProps !== undefined
-  
+
   const clickHandler = (e: TClickEventType) => {
-    if(disabled || isLoading) {
-      return;
+    if (disabled || isLoading) {
+      return
     }
-      
-    onClick?.(e);
+
+    onClick?.(e)
   }
 
   return (
