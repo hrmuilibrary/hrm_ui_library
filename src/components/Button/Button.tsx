@@ -24,6 +24,14 @@ export const Button = (props: TButtonPropTypes): ReactElement => {
 
   const justIcon = !buttonText && !children && iconProps !== undefined
 
+  const clickHandler = (e: TClickEventType) => {
+    if (disabled || isLoading) {
+      return
+    }
+
+    onClick?.(e)
+  }
+
   return (
     <button
       ref={refHandler}
@@ -41,7 +49,7 @@ export const Button = (props: TButtonPropTypes): ReactElement => {
         },
         className
       )}
-      onClick={onClick}
+      onClick={clickHandler}
       form={formId}
       {...rest}
     >
