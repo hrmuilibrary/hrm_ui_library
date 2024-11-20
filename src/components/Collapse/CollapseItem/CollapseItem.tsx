@@ -7,6 +7,7 @@ import { AnimatePresenceWrapper } from '../../../helperComponents/AnimatePresenc
 import { TCollapseProps } from '../types'
 import classNames from 'classnames'
 import IconChevronDown from '../../SVGIcons/IconChevronDown'
+import { generateDataTestId } from '../../../utils/helpers'
 
 export const CollapseItem = (props: TCollapseProps): JSX.Element => {
   const {
@@ -15,7 +16,6 @@ export const CollapseItem = (props: TCollapseProps): JSX.Element => {
     isOpen,
     toggle,
     dataId,
-    dataItemId,
     children,
     reverse = false,
     additionalInfo,
@@ -25,7 +25,7 @@ export const CollapseItem = (props: TCollapseProps): JSX.Element => {
 
   const title =
     typeof text === 'string' ? (
-      <Text size={size} type={color} weight="bolder" dataId={dataId}>
+      <Text size={size} type={color} weight="bolder" dataId={generateDataTestId('title', dataId)}>
         {text}
       </Text>
     ) : (
@@ -36,7 +36,7 @@ export const CollapseItem = (props: TCollapseProps): JSX.Element => {
     <div
       className={classNames('collapse', { 'collapse--opened': isOpen }, className)}
       id={`${id || ''}`}
-      data-id={dataItemId}
+      data-id={generateDataTestId('collapse-item', dataId)}
     >
       <div className="collapse__header flexbox justify-content--between" onClick={toggle}>
         {reverse ? (

@@ -91,3 +91,10 @@ export const isSameDay = (date1?: Date, date2?: Date): boolean => {
 
   return dayjs(date1).isSame(date2, 'day')
 }
+
+export const generateDataTestId = (postfix: string, dataId?: string): string => {
+  if (!dataId) {
+    return ''
+  }
+  return `${dataId}-${postfix}`
+}

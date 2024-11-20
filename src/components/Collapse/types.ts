@@ -18,7 +18,6 @@ export type TCollapseProps = {
   reverse?: boolean
   additionalInfo?: ReactNode
   dataId?: string | undefined
-  dataItemId?: string | undefined
   labelLeftIconProps?: TSelectIconProps
   id?: string | number
   className?: string
