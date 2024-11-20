@@ -1,16 +1,22 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import { TErrorMessageProps } from './types'
 import { Text } from '../../components/Text'
 import { IconDynamicComponent } from '../IconDynamicComponent'
+import { generateDataTestId } from '../../utils/helpers'
+import classnames from 'classnames'
 
-export const ErrorMessage = (props: TErrorMessageProps): JSX.Element => {
-  const { message, icon, dataId, className } = props
+export const ErrorMessage = ({
+  message,
+  icon,
+  dataId,
+  className
+}: TErrorMessageProps): ReactElement => {
   return (
     <Text
-      className={`error-message ${className}`}
+      className={classnames('error-message', className)}
       size="small"
       type="danger"
-      dataId={dataId ? `${dataId}-error-message` : ''}
+      dataId={generateDataTestId('error-message', dataId)}
     >
       <>
         {icon && (
