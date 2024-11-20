@@ -1,3 +1,12 @@
+## [1.2.3](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.2.2...1.2.3) (2024-11-20)
+
+
+### Bug Fixes
+
+* add data test ids ([c4413b1](https://github.com/dino-front-bot/hrm_ui_lib/commit/c4413b1f4abb438344876ab4c753a826474bd0b9))
+* make same improvements ([2e19a2b](https://github.com/dino-front-bot/hrm_ui_lib/commit/2e19a2b26235077bd0d9d4beb96f015fac5cd477))
+* run eslint ([b3c6d54](https://github.com/dino-front-bot/hrm_ui_lib/commit/b3c6d549b0a907f9d83255efbc752e36b026a1a4))
+
 ## [1.2.2](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.2.1...1.2.2) (2024-11-11)
 
 
