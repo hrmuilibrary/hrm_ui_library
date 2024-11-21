@@ -1,3 +1,11 @@
+## [1.2.5](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.2.4...1.2.5) (2024-11-21)
+
+
+### Bug Fixes
+
+* align footer buttons ([77def73](https://github.com/dino-front-bot/hrm_ui_lib/commit/77def73cbb868d0fb39b09107b625c2346712abd))
+* remove test prop ([fb0408a](https://github.com/dino-front-bot/hrm_ui_lib/commit/fb0408aa28d74073f011f024a8d7d1a1d875d7ef))
+
 ## [1.2.4](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.2.3...1.2.4) (2024-11-21)
 
 
