@@ -47,7 +47,6 @@ export const Footer = ({
         ) : null}
         {<Button type="secondary" size="large" className="mr-12" onClick={onClose} {...cancel} />}
         <Button
-          isLoading={true}
           type="primary"
           size="large"
           onClick={handleSubmit}
