@@ -1,3 +1,11 @@
+## [1.2.4](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.2.3...1.2.4) (2024-11-21)
+
+
+### Bug Fixes
+
+* remove comment ([4da013b](https://github.com/dino-front-bot/hrm_ui_lib/commit/4da013be7bfee180d1a29ada508f0b5b8f764648))
+* tooltip space calculation correction ([383ccf5](https://github.com/dino-front-bot/hrm_ui_lib/commit/383ccf50b4a082940450f4561003683394fe1ab9))
+
 ## [1.2.3](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.2.2...1.2.3) (2024-11-20)
 
 
