@@ -99,6 +99,9 @@
     border-top: var(--ds-side-sheet-content-border-width) solid var(--ds-side-sheet-content-border-color);
     &_buttons{
       margin-left: auto;
+      @include mixin.flexbox;
+      @include mixin.align-items(center);
+      @include mixin.justify-content(center);
     }
   }
 
