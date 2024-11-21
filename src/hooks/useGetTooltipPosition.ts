@@ -16,7 +16,7 @@ export const useGetTooltipPosition = (info: TTooltipInfo): TTooltipPosition => {
   const calculatedPosition = useMemo(() => {
     const hasTopSpace = tooltipHeight + GAP < top
 
-    const hasBottomSpace = top + tooltipHeight + GAP < window.innerHeight - bottom //
+    const hasBottomSpace = top + tooltipHeight + GAP < window.innerHeight - bottom
 
     const hasLeftSpace = tooltipWidth + GAP < left
     const hasRightSpace = tooltipWidth + GAP < window.innerWidth - left
