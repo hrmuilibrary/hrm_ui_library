@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import { TButtonPropTypes } from '../Button/types'
 
-export type TSideSheet = 'small' | 'large'
+export type TSideSheetSize = 'small' | 'large' | 'mobile'
 
 export type TCheckboxInfo = {
   label: string
@@ -11,7 +11,7 @@ export type TCheckboxInfo = {
 export interface TSideSheetPropTypes {
   closeOnOutsideClick?: boolean
   shouldRemoveCallback?: boolean
-  size?: TSideSheet
+  size?: TSideSheetSize
   isLoading?: boolean
   isOpen: boolean
   onClose: (e?: TClickEventType | MouseEvent) => void

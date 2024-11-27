@@ -41,6 +41,9 @@
     &--large {
       max-width: var(--ds-side-sheet-width-lg);
     }
+    &--mobile{
+      max-width: 100%;      
+    }
     
   }
 
