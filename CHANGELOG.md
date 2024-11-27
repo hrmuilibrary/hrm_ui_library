@@ -1,3 +1,10 @@
+## [1.2.6](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.2.5...1.2.6) (2024-11-27)
+
+
+### Bug Fixes
+
+* sidesheet mobile view ([c38e71d](https://github.com/dino-front-bot/hrm_ui_lib/commit/c38e71da6801bad9aa01407a9d25062db279959c))
+
 ## [1.2.5](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.2.4...1.2.5) (2024-11-21)
 
 
