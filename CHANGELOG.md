@@ -1,3 +1,11 @@
+## [1.2.7](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.2.6...1.2.7) (2024-11-28)
+
+
+### Bug Fixes
+
+* add `useIsMobile` custom hook ([19311f7](https://github.com/dino-front-bot/hrm_ui_lib/commit/19311f74710a89992e5412e1dab8293a1759eb02))
+* remove redundant hooks exports ([da778e8](https://github.com/dino-front-bot/hrm_ui_lib/commit/da778e87be6f9138453694bba285c3673df8178e))
+
 ## [1.2.6](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.2.5...1.2.6) (2024-11-27)
 
 
