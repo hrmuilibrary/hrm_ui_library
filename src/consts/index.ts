@@ -18,6 +18,8 @@ export const SCREEN_SIZES = {
   LARGE: 1200
 }
 
+export const MOBILE_POINT = SCREEN_SIZES.SMALL
+
 export enum FILE_UPLOAD_ERRORS {
   'size',
   'type'
