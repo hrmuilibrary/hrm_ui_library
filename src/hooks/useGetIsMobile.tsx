@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { MOBILE_POINT } from '../consts'
 
-export const useEventListener = (
+const useEventListener = (
   eventName: string,
   handler: (event: MouseEvent) => void,
   element: HTMLElement | null | Window = window
@@ -25,7 +25,7 @@ export const useEventListener = (
   }, [eventName, element, savedHandler])
 }
 
-export const useWindowSize = (): { width: number; height: number } => {
+const useWindowSize = (): { width: number; height: number } => {
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight
