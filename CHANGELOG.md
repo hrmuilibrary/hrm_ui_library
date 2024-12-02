@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.3.1...1.3.2) (2024-12-02)
+
+
+### Bug Fixes
+
+* revert react import ([16b346a](https://github.com/dino-front-bot/hrm_ui_lib/commit/16b346a9b908b919812b1452d69726653decef39))
+
 ## [1.3.1](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.3.0...1.3.1) (2024-12-02)
 
 
