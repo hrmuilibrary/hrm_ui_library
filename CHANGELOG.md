@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.3.0...1.3.1) (2024-12-02)
+
+
+### Bug Fixes
+
+* get option `optionLeftIcon` from data instead of prop ([ba1dbcd](https://github.com/dino-front-bot/hrm_ui_lib/commit/ba1dbcd62dd99b4975d27f00a575f797890fc5cd))
+
 # [1.3.0](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.2.7...1.3.0) (2024-12-02)
 
 
