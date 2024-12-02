@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
 import { FixedSizeList as List } from 'react-window'
 import { DROPDOWN_AND_INPUT_GAP } from '../../../consts'
 import { OptionItem } from '../../../helperComponents'

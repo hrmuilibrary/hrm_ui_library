@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import { useCallback } from 'react'
+import React, { useCallback } from 'react'
 import { Avatar } from '../../components/Avatar'
 import { Checkbox } from '../../components/Checkbox'
 import { IconCheckmark } from '../../components/SVGIcons/IconCheckmark'
