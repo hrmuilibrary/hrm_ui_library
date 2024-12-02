@@ -1,17 +1,23 @@
-import React, { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
 import classNames from 'classnames'
+import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
+import { FixedSizeList as List } from 'react-window'
+import { DROPDOWN_AND_INPUT_GAP } from '../../../consts'
+import { OptionItem } from '../../../helperComponents'
 import {
-  useOnOutsideClick,
   useGetElemPositions,
   useGetElemSizes,
   useGetHasBottomSpace,
-  useGetHasTopSpace
+  useGetHasTopSpace,
+  useOnOutsideClick
 } from '../../../hooks'
+import { useChangePositionsOnScroll } from '../../../hooks/useChangePositionsOnScroll'
+import { noop } from '../../../utils/helpers'
+import { Empty } from '../../Empty'
 import { Input } from '../../Input'
+import { IconCaretDownFilled } from '../../SVGIcons/IconCaretDownFilled'
+import { IconCaretUpFilled } from '../../SVGIcons/IconCaretUpFilled'
 import { Text } from '../../Text'
-import { OptionItem } from '../../../helperComponents'
 import { Loading } from '../SharedComponents'
-import { TSingleSelectPropTypes } from '../types'
 import {
   DROPDOWN_HEIGHT,
   DROPDOWN_WIDTH,
@@ -19,13 +25,7 @@ import {
   SELECTED_VISIBLE_MIN_COUNT,
   TRANSLATIONS_DEFAULT_VALUES
 } from '../constants'
-import { useChangePositionsOnScroll } from '../../../hooks/useChangePositionsOnScroll'
-import { IconCaretUpFilled } from '../../SVGIcons/IconCaretUpFilled'
-import { IconCaretDownFilled } from '../../SVGIcons/IconCaretDownFilled'
-import { noop } from '../../../utils/helpers'
-import { DROPDOWN_AND_INPUT_GAP } from '../../../consts'
-import { FixedSizeList as List } from 'react-window'
-import { Empty } from '../../Empty'
+import { TSingleSelectPropTypes } from '../types'
 
 export const Select = (props: TSingleSelectPropTypes): JSX.Element | null => {
   const {
@@ -272,7 +272,6 @@ export const Select = (props: TSingleSelectPropTypes): JSX.Element | null => {
                           data={item}
                           key={item.value}
                           onClick={clickHandler(isSelected)}
-                          optionLeftIcon={item?.optionLeftIcon}
                           labelLeftIconProps={labelLeftIconProps}
                           OptionRightIconComponent={optionRightIconComponent}
                           LabelRightIconComponent={labelRightIconComponent}

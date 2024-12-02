@@ -1,10 +1,10 @@
-import React, { useCallback } from 'react'
-import { Checkbox } from '../../components/Checkbox'
+import classNames from 'classnames'
+import { useCallback } from 'react'
 import { Avatar } from '../../components/Avatar'
+import { Checkbox } from '../../components/Checkbox'
+import { IconCheckmark } from '../../components/SVGIcons/IconCheckmark'
 import { Tooltip } from '../../components/Tooltip'
 import { TSelectItemProps } from './types'
-import classNames from 'classnames'
-import { IconCheckmark } from '../../components/SVGIcons/IconCheckmark'
 
 export const OptionItem = (props: TSelectItemProps): JSX.Element => {
   const {
@@ -14,7 +14,6 @@ export const OptionItem = (props: TSelectItemProps): JSX.Element => {
     avatar,
     isSelected,
     labelLeftIconProps,
-    optionLeftIcon,
     LabelRightIconComponent,
     OptionRightIconComponent,
     isCheckbox,
@@ -24,7 +23,7 @@ export const OptionItem = (props: TSelectItemProps): JSX.Element => {
     style = {}
   } = props
 
-  const { label, meta, value } = data
+  const { label, meta, value, optionLeftIcon } = data
 
   const handleClick = useCallback(
     (e: TClickEventType) => {
