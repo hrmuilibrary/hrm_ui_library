@@ -178,11 +178,13 @@ const OPTIONS: TSelectOptions = [
 const MOCK_DATA: TSelectOptions = [
   {
     value: 1,
-    label: 'Zhanna Yeghiazaryan'
+    label: 'Zhanna Yeghiazaryan',
+    meta: 'Junior Dev'
   },
   {
     value: 2,
-    label: 'Marta Kostumyan'
+    label: 'Marta Kostumyan',
+    meta: 'Senior Dev'
   },
   {
     value: 3,
@@ -13404,10 +13406,7 @@ Select.args = {
 
 // -----------MULTISELECT---------
 const MultiSelectTemplate: StoryFn<TMultiSelectPropTypes> = (args) => {
-  const [selectedValues, setSelectedValues] = useState<TSelectedValue[]>([
-    MOCK_DATA[0],
-    MOCK_DATA[1]
-  ])
+  const [selectedValues, setSelectedValues] = useState<TSelectedValue[]>([])
 
   const set = (value: TSelectedValue[], isChecked: boolean) => {
     setSelectedValues(value)
@@ -13423,7 +13422,7 @@ const MultiSelectTemplate: StoryFn<TMultiSelectPropTypes> = (args) => {
         // isButtonSelect={true}
         dropdownWidth={400}
         align="right"
-        maxSelectCount={3}
+        // maxSelectCount={3}
         selectedItems={selectedValues}
         setSelectedItems={set}
         labelRightIconComponent={() => (
