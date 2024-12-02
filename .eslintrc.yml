@@ -22,6 +22,7 @@ rules:
   "no-var": "error"
   "prefer-const": "error"
   "no-extra-bind": "error"
+  "react/react-in-jsx-scope": "off"
   "no-implicit-globals": "error"
   "react-hooks/rules-of-hooks": "error"
   "react/no-unknown-property": ["error", { ignore: ["class"] }]

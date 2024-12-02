@@ -6,7 +6,6 @@ export type TSelectItemProps = {
   data: TSelectOption
   className?: string
   onClick: (itemValue: TSelectedValue) => void
-  optionLeftIcon?: TSelectIconProps
   labelLeftIconProps?: TSelectIconProps
   OptionRightIconComponent?: (value: TItemValue) => ReactElement
   LabelRightIconComponent?: (value: TItemValue) => ReactElement
