@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.2.7...1.3.0) (2024-12-02)
+
+
+### Features
+
+* run prettier ([7e9165c](https://github.com/dino-front-bot/hrm_ui_lib/commit/7e9165c97c9232c54a22622e703d1388e36a6224))
+* show meta options in select ([a916af9](https://github.com/dino-front-bot/hrm_ui_lib/commit/a916af9ad419388506ea63782bd214fdc74777f1))
+
 ## [1.2.7](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.2.6...1.2.7) (2024-11-28)
 
 
