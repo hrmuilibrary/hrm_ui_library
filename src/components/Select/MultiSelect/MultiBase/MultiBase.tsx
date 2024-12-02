@@ -55,8 +55,8 @@ export const MultiBase = (props: TMultySingleTabPropTypes): ReactElement | null 
   const selectAll = useCallback(() => {
     setAllSelected(true)
     const allValues = filteredData.map((item: TSelectOption) => {
-      const { value, label } = item
-      return { value, label }
+      const { value, label, meta } = item
+      return { value, label, meta }
     })
 
     setSelectedValues(allValues)

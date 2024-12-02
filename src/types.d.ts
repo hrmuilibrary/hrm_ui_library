@@ -93,6 +93,7 @@ declare type TSelectedValue = {
   value: TItemValue
   label: TItemLabel
   optionLeftIcon?: TSelectIconProps
+  meta?: string
 }
 declare type TItemLabel = string | number
 

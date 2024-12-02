@@ -34,7 +34,7 @@ export const OptionItem = (props: TSelectItemProps): JSX.Element => {
       if (disabled) {
         return
       }
-      onClick({ value, label })
+      onClick({ value, label, meta })
     },
     [disabled, value, label, onClick]
   )
