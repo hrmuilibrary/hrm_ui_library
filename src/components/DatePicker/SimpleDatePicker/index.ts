@@ -1,1 +1,1 @@
-export * from './SimpleDatePickerWrapper'
+export * from './SimpleDatePicker'
