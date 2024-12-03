@@ -8,6 +8,7 @@ import { Button } from '../Button'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 import { TButtonPropTypes } from '../Button/types'
+import { noop } from '../../utils/helpers'
 
 type TProps = {
   title?: string
@@ -23,7 +24,7 @@ type TProps = {
     cancel?: TButtonPropTypes
     confirm: TButtonPropTypes
   }
-  onSubmit: () => void
+  onSubmit?: () => void
 }
 export const ModalContent = ({
   title,
@@ -88,7 +89,7 @@ export const ModalContent = ({
             id={'confirm-btn-tooltip'}
             className={'modal__footer__btn'}
             type="primary"
-            onClick={onSubmit}
+            onClick={onSubmit ? onSubmit : noop}
             dataId={dataIdPrefix ? `${dataIdPrefix}-modal-confirm-button` : ''}
             {...buttonProps.confirm}
           />

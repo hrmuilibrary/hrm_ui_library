@@ -2,17 +2,17 @@ import React, { ReactElement, useRef } from 'react'
 import dayjs from 'dayjs'
 import DatePicker from 'react-datepicker'
 
-import { Input } from '../Input'
-import { Label } from '../../helperComponents'
-import { CustomHeader } from './CustomHeader/CustomHeader'
+import { Input } from '../../Input'
+import { Label } from '../../../helperComponents'
+import { CustomHeader } from '../CustomHeader/CustomHeader'
 
-import { MONTHS } from '../../consts'
-import { useImportFilesDynamically } from './hooks'
+import { MONTHS } from '../../../consts'
+import { useImportFilesDynamically } from '../hooks'
 
-import { ISimpleDatePickerProps } from './types'
-import IconCalendarRight from '../SVGIcons/IconCalendarRight'
+import { ISimpleDatePickerProps } from '../types'
+import IconCalendarRight from '../../SVGIcons/IconCalendarRight'
 
-export const SimpleDatePicker = (props: ISimpleDatePickerProps): ReactElement => {
+export const SimpleDatePickerDesktop = (props: ISimpleDatePickerProps): ReactElement => {
   const {
     value,
     currentDate,
@@ -33,6 +33,7 @@ export const SimpleDatePicker = (props: ISimpleDatePickerProps): ReactElement =>
     maxDate,
     dataIdPrefix,
     helperText,
+    inline,
     ...rest
   } = props
 
@@ -88,6 +89,7 @@ export const SimpleDatePicker = (props: ISimpleDatePickerProps): ReactElement =>
             currentValue={selectedDate ? dayjs(selectedDate.toString()).format(format) : ''}
           />
         }
+        inline={inline}
         {...rest}
         onChange={onChange}
         renderCustomHeader={(props) => (
