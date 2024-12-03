@@ -1,3 +1,10 @@
+## [1.3.5](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.3.4...1.3.5) (2024-12-03)
+
+
+### Bug Fixes
+
+* change Simple date picker main file name ([3248901](https://github.com/dino-front-bot/hrm_ui_lib/commit/3248901baa50b6106df0ab960ab61ac89d5576cf))
+
 ## [1.3.4](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.3.3...1.3.4) (2024-12-03)
 
 
