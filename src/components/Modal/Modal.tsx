@@ -3,13 +3,10 @@ import classnames from 'classnames'
 import { motion } from 'framer-motion'
 import { AnimatePresenceWrapper } from '../../helperComponents/AnimatePresenceWrapper'
 import { useHideBodyScroll, useOnOutsideClick } from '../../hooks'
-import { Button } from '../Button'
-import { Text } from '../Text'
 import { TModalPropTypes } from './types'
-import IconDismiss from '../SVGIcons/IconDismiss'
-import { ButtonIcon } from '../ButtonIcon'
-import { Tooltip } from '../Tooltip'
-import { Positions } from '../Tooltip/types'
+import { ModalContent } from './ModalContent'
+import { useIsMobile } from '../../hooks/useGetIsMobile'
+import classNames from 'classnames'
 
 const DESKTOP_ANIMATION = {
   initial: { opacity: 0.5, scale: 0.65 },
@@ -29,23 +26,27 @@ const DESKTOP_ANIMATION = {
   }
 }
 
+export const MOBILE_ANIMATION = {
+  initial: { height: 0, bottom: 0 },
+  animate: {
+    height: 'auto',
+    bottom: 10
+  },
+  exit: { height: 0, bottom: 0 },
+  transition: { duration: 0.6 }
+}
+
 export const Modal = (props: TModalPropTypes): ReactElement => {
   const {
     isOpen,
     onClose,
-    onSubmit,
-    title,
-    subtitle,
-    closeIcon,
     className = '',
     size = 'medium',
-    withFooter = true,
-    buttonProps,
-    children,
-    dataIdPrefix,
     closeOnOutsideClick = true,
-    confirmBtnTooltipText
+    ...rest
   } = props
+
+  const isMobile = useIsMobile()
 
   const [containerRef, setContainerRef] = useState<HTMLDivElement | null>(null)
   useOnOutsideClick(containerRef, onClose, closeOnOutsideClick && isOpen, useId())
@@ -65,66 +66,13 @@ export const Modal = (props: TModalPropTypes): ReactElement => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.4 }}
         >
-          <div className="modal__container" ref={setContainerRef} {...DESKTOP_ANIMATION}>
-            {title ? (
-              <div className="modal__header">
-                <div>
-                  <Text
-                    lineHeight="large"
-                    size="large"
-                    weight={'bolder'}
-                    dataId={dataIdPrefix ? `${dataIdPrefix}-modal-title` : ''}
-                  >
-                    {title}
-                  </Text>
-                  {subtitle ? (
-                    <Text
-                      className={'mt-12'}
-                      dataId={dataIdPrefix ? `${dataIdPrefix}-modal-title` : ''}
-                    >
-                      {subtitle}
-                    </Text>
-                  ) : null}
-                </div>
-                {closeIcon ? (
-                  <ButtonIcon
-                    className={'modal__close ml-16'}
-                    dataId={dataIdPrefix ? `${dataIdPrefix}-modal-close-button` : ''}
-                    iconProps={{ Component: IconDismiss }}
-                    onClick={onClose}
-                  />
-                ) : null}
-              </div>
-            ) : null}
-
-            <div className="modal__content scrollbar scrollbar--vertical">{children}</div>
-            {withFooter && buttonProps ? (
-              <div className="modal__footer">
-                <Button
-                  type="tertiary"
-                  className="modal__footer__btn mr-16"
-                  onClick={onClose}
-                  dataId={dataIdPrefix ? `${dataIdPrefix}-modal-cancel-button` : ''}
-                  {...(buttonProps.cancel || {})}
-                />
-                {confirmBtnTooltipText ? (
-                  <Tooltip
-                    text={confirmBtnTooltipText as string}
-                    id={'confirm-btn-tooltip'}
-                    position={Positions.TOP_CENTER}
-                  />
-                ) : null}
-                <Button
-                  id={'confirm-btn-tooltip'}
-                  className={'modal__footer__btn'}
-                  type="primary"
-                  onClick={onSubmit}
-                  dataId={dataIdPrefix ? `${dataIdPrefix}-modal-confirm-button` : ''}
-                  {...buttonProps.confirm}
-                />
-              </div>
-            ) : null}
-          </div>
+          <motion.div
+            className={classNames('modal__container', { modal__container_mobile: isMobile })}
+            ref={setContainerRef}
+            {...(isMobile ? MOBILE_ANIMATION : DESKTOP_ANIMATION)}
+          >
+            <ModalContent {...rest} onClose={onClose} />
+          </motion.div>
         </motion.div>
       ) : null}
     </AnimatePresenceWrapper>
