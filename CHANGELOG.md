@@ -1,3 +1,11 @@
+## [1.3.3](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.3.2...1.3.3) (2024-12-03)
+
+
+### Bug Fixes
+
+* add modal responsive layout ([a8e0798](https://github.com/dino-front-bot/hrm_ui_lib/commit/a8e0798240035b7747573cb0dbd56d2c3c4433ef))
+* add modal responsive layout ([bbf755f](https://github.com/dino-front-bot/hrm_ui_lib/commit/bbf755fb96605ae82cf9c43acaa0b9c8530086fa))
+
 ## [1.3.2](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.3.1...1.3.2) (2024-12-02)
 
 
