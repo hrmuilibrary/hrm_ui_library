@@ -8,6 +8,7 @@ export interface TDatepickerBaseProps extends DatePickerDefaultProps {
   dataId?: string
   label?: ReactNode
   format?: string
+  inline?: boolean
 }
 
 export interface ISimpleDatePickerProps extends TDatepickerBaseProps {
@@ -23,6 +24,7 @@ export interface ISimpleDatePickerProps extends TDatepickerBaseProps {
   value?: Date
   size?: 'large' | 'small'
   months?: TSelectOptions
+  mobileTitle?: string
 }
 export interface ITimePickerProps extends TDatepickerBaseProps {
   currentTime?: Date | undefined

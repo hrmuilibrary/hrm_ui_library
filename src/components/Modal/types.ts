@@ -6,7 +6,7 @@ export interface TModalPropTypes {
   closeOnOutsideClick?: boolean
   isOpen: boolean
   onClose: () => void
-  onSubmit: () => void
+  onSubmit?: () => void
   title?: string
   subtitle?: string
   size?: 'small' | 'medium' | 'large' | 'xlarge'
