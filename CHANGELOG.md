@@ -1,3 +1,10 @@
+## [1.3.4](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.3.3...1.3.4) (2024-12-03)
+
+
+### Bug Fixes
+
+* add datepicker mobile layout ([67b6ee2](https://github.com/dino-front-bot/hrm_ui_lib/commit/67b6ee21087c2e27102f6f0045465b812f74bf8e))
+
 ## [1.3.3](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.3.2...1.3.3) (2024-12-03)
 
 
