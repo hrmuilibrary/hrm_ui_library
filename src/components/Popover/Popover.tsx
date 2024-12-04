@@ -1,7 +1,4 @@
 import React, { ReactElement, useEffect, useId, useState } from 'react'
-import classNames from 'classnames'
-import { Text } from '../Text'
-import { Link } from '../Link'
 import { TPopoverProps } from './types'
 import { useIsMobile } from '../../hooks/useGetIsMobile'
 import { PopoverMobile } from './PopoverMobile'
