@@ -19,4 +19,15 @@ export interface TPopoverProps extends IFormCompProps {
   className?: string
   elemRef?: HTMLElement
   id?: string | number
+  mobileTitle?: string
+}
+
+export interface TPopoverDesktopProps extends TPopoverProps {
+  showMessage: () => void
+  hideMessage: () => void
+  parent: HTMLElement | null
+}
+
+export interface TPopoverMobileProps extends TPopoverProps {
+  hideMessage: () => void
 }
