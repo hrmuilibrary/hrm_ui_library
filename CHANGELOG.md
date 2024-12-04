@@ -1,3 +1,10 @@
+## [1.3.7](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.3.6...1.3.7) (2024-12-04)
+
+
+### Bug Fixes
+
+* set with footer default value ([911133c](https://github.com/dino-front-bot/hrm_ui_lib/commit/911133c34c0e3c38c688390d3feefc8aa5f30057))
+
 ## [1.3.6](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.3.5...1.3.6) (2024-12-04)
 
 
