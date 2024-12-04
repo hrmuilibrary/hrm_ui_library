@@ -33,7 +33,7 @@ export const ModalContent = ({
   closeIcon,
   onClose,
   children,
-  withFooter,
+  withFooter = true,
   confirmBtnTooltipText,
   buttonProps,
   onSubmit
