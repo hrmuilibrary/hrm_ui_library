@@ -1,3 +1,11 @@
+## [1.3.6](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.3.5...1.3.6) (2024-12-04)
+
+
+### Bug Fixes
+
+* add popover mobile layout ([2831e39](https://github.com/dino-front-bot/hrm_ui_lib/commit/2831e39ede538feab980ddb75e90505ede98aedb))
+* remove unused imports ([08964fd](https://github.com/dino-front-bot/hrm_ui_lib/commit/08964fd56f95ab4c4e14bfe0dbc7d3b5995bf288))
+
 ## [1.3.5](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.3.4...1.3.5) (2024-12-03)
 
 
