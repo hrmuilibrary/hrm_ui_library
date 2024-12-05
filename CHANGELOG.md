@@ -1,3 +1,11 @@
+## [1.3.9](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.3.8...1.3.9) (2024-12-05)
+
+
+### Bug Fixes
+
+* fix popover clicked state change ([4b687e6](https://github.com/dino-front-bot/hrm_ui_lib/commit/4b687e65f964d9df29cd22968b9343a4613cf698))
+* popover outer clicked state update ([9d9a6c0](https://github.com/dino-front-bot/hrm_ui_lib/commit/9d9a6c074bb5d3c704ed3de286c638f55c547a77))
+
 ## [1.3.8](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.3.7...1.3.8) (2024-12-05)
 
 
