@@ -58,6 +58,14 @@
 
   //----------//
 
+  // MOBILE
+
+  @media screen and (max-width: 768px) {
+    input{
+        font-size: var(--ds-paragraph-md) !important;
+    }
+  }
+
   input {
     border: 0;
     width: 100%;
@@ -223,3 +231,5 @@
     text-align: right;
   }
 }
+
+

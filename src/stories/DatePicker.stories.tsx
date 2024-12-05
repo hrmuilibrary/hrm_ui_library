@@ -39,6 +39,7 @@ const SimplePicker: StoryFn<ISimpleDatePickerProps> = (args) => {
       <_SimpleDatePicker
         {...args}
         value={value}
+        label={'Simple Date Picker'}
         mobileTitle="Select date"
         changeHandler={setValue}
         format="DD"

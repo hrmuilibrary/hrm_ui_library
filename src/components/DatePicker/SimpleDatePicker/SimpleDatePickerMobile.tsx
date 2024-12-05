@@ -8,6 +8,7 @@ import { Modal } from '../../Modal'
 import { MONTHS } from '../../../consts'
 import { CustomHeader } from '../CustomHeader/CustomHeader'
 import DatePicker from 'react-datepicker'
+import { Label } from '../../../helperComponents'
 
 export const SimpleDatePickerMobile = (props: ISimpleDatePickerProps): ReactElement => {
   const {
@@ -29,6 +30,8 @@ export const SimpleDatePickerMobile = (props: ISimpleDatePickerProps): ReactElem
     name,
     changeHandler,
     setFieldValue,
+    required,
+    hasError,
     ...rest
   } = props
 
@@ -62,10 +65,12 @@ export const SimpleDatePickerMobile = (props: ISimpleDatePickerProps): ReactElem
   }
   return (
     <>
+      <Label text={label} required={required} invalid={hasError} />
       <Input
         size={size}
         onClick={openDatepicker}
         dataId={dataId}
+        readOnly={true}
         helperText={helperText}
         datePlaceHolderText={label ? '' : placeholderText}
         rightIconProps={{ Component: IconCalendarRight, onClick: openDatepicker }}
