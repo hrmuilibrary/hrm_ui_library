@@ -29,7 +29,7 @@ export const Popover = (props: TPopoverProps): ReactElement | null => {
   }, [id])
 
   useEffect(() => {
-    if (clicked !== isClicked) {
+    if (clicked !== undefined && clicked !== isClicked) {
       setIsClicked(clicked)
     }
   }, [clicked, isClicked])
