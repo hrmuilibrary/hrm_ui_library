@@ -1,3 +1,10 @@
+## [1.3.8](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.3.7...1.3.8) (2024-12-05)
+
+
+### Bug Fixes
+
+* style fixes for input mobile view ([882371f](https://github.com/dino-front-bot/hrm_ui_lib/commit/882371f154da0680cf802c4038973853b9dac215))
+
 ## [1.3.7](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.3.6...1.3.7) (2024-12-04)
 
 
