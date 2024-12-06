@@ -101,6 +101,7 @@ export const SimpleDatePickerMobile = (props: ISimpleDatePickerProps): ReactElem
               startYear={startYear}
               endYear={endYear}
               dataPrefix={dataIdPrefix}
+              isMobile
             />
           )}
         />

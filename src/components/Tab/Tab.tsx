@@ -4,7 +4,7 @@ import { TabItem } from './TabItem'
 import classNames from 'classnames'
 
 export const Tab = (props: TTabProps): ReactElement => {
-  const { selectedValue, tabItems, onSelect, size, className, type = 'primary', ...rest } = props
+  const { selectedValue, tabItems, onSelect, className, ...rest } = props
 
   return (
     <div className={classNames('tabs-container', className)}>

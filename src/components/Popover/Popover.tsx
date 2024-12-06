@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect, useId, useState } from 'react'
+import React, { ReactElement, useEffect, useState } from 'react'
 import { TPopoverProps } from './types'
 import { useIsMobile } from '../../hooks/useGetIsMobile'
 import { PopoverMobile } from './PopoverMobile'

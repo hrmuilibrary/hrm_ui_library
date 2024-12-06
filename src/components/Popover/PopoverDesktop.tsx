@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect, useId, useState } from 'react'
+import React, { ReactElement, useId, useState } from 'react'
 import { useGetTooltipStyles, useHideOnScroll, useOnOutsideClick } from '../../hooks'
 import classNames from 'classnames'
 import { Link } from '../Link'
@@ -13,9 +13,7 @@ export const PopoverDesktop = (props: TPopoverDesktopProps): ReactElement => {
     className = '',
     position = 'top-left',
     children,
-    id,
     hideMessage,
-    showMessage,
     parent,
     clicked = false
   } = props

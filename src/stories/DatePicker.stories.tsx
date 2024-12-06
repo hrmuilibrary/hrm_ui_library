@@ -89,6 +89,7 @@ const RangePicker: StoryFn<IRangeDatePickerProps> = (args) => {
         changeHandler={setValue}
         locale={'en'}
         label={'Range Label'}
+        mobileTitle="Select date"
         filterDate={(date) => date.getDay() !== 0 && date.getDay() !== 6}
       />
     </div>

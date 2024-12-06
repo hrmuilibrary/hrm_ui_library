@@ -1,9 +1,8 @@
 import React, { ReactElement } from 'react'
 import { TPopoverMobileProps } from './types'
-import { Modal } from '../../components/Modal'
-import { Link } from '../../components/Link'
-import { Text } from '../../components/Text'
-import classNames from 'classnames'
+import { Modal } from '../Modal'
+import { Link } from '../Link'
+import { Text } from '../Text'
 
 export const PopoverMobile = (props: TPopoverMobileProps): ReactElement | null => {
   const { dataId, text, linkAddons, mobileTitle, hideMessage, clicked = false, children } = props
