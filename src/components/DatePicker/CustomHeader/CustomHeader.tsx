@@ -4,15 +4,16 @@ import { ReactDatePickerCustomHeaderProps } from 'react-datepicker'
 import { ButtonSelect } from '../../Select'
 
 import { getYearOptions, noop } from '../../../utils/helpers'
-import './styles.scss'
 import IconChevronLeft from '../../SVGIcons/IconChevronLeft'
 import IconChevronRight from '../../SVGIcons/IconChevronRight'
+import './styles.scss'
 
 interface TProps extends ReactDatePickerCustomHeaderProps {
   months: TSelectOptions
   startYear: number
   endYear: number
   dataPrefix?: string
+  isMobile?: boolean
 }
 
 export const CustomHeader = (props: TProps): ReactElement => {
@@ -27,7 +28,8 @@ export const CustomHeader = (props: TProps): ReactElement => {
     startYear,
     endYear,
     prevMonthButtonDisabled,
-    nextMonthButtonDisabled
+    nextMonthButtonDisabled,
+    isMobile = false
   } = props
 
   const getMonthLabel = (month: number) => {
@@ -52,7 +54,7 @@ export const CustomHeader = (props: TProps): ReactElement => {
           size="small"
           type="tertiary"
           className="date_picker_select"
-          offsets={{ top: 42, left: 48 }}
+          offsets={isMobile ? {} : { top: 42, left: 48 }}
           placeHolder={getMonthLabel(month)}
           dataId={dataPrefix ? `${dataPrefix}-month-select` : ''}
           options={months}
@@ -64,7 +66,7 @@ export const CustomHeader = (props: TProps): ReactElement => {
         <ButtonSelect
           type="tertiary"
           className="date_picker_select"
-          offsets={{ top: 42, left: 138 }}
+          offsets={isMobile ? {} : { top: 42, left: 138 }}
           placeHolder={year.toString()}
           dataId={dataPrefix ? `${dataPrefix}-year-select` : ''}
           size="small"

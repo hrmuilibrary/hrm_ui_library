@@ -25,7 +25,12 @@ const useEventListener = (
   }, [eventName, element, savedHandler])
 }
 
-const useWindowSize = (): { width: number; height: number } => {
+type TUseWindowSize = {
+  width: number
+  height: number
+}
+
+const useWindowSize = (): TUseWindowSize => {
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight

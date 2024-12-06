@@ -6,14 +6,16 @@ type DatePickerDefaultProps = Omit<IFormCompProps, 'value'> &
 
 export interface TDatepickerBaseProps extends DatePickerDefaultProps {
   dataId?: string
+  dataIdPrefix?: string
   label?: ReactNode
   format?: string
   inline?: boolean
+  mobileTitle?: string
+  months?: TSelectOptions
 }
 
 export interface ISimpleDatePickerProps extends TDatepickerBaseProps {
   helperText?: string
-  dataIdPrefix?: string
   currentDate?: Date | undefined
   changeHandler?: (date: Date) => void
   excludeDates?: Date[]
@@ -23,8 +25,6 @@ export interface ISimpleDatePickerProps extends TDatepickerBaseProps {
   dayjsLocale?: string
   value?: Date
   size?: 'large' | 'small'
-  months?: TSelectOptions
-  mobileTitle?: string
 }
 export interface ITimePickerProps extends TDatepickerBaseProps {
   currentTime?: Date | undefined

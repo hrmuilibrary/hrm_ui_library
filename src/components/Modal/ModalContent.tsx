@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React, { ReactElement, ReactNode } from 'react'
 
 import { ButtonIcon } from '../ButtonIcon'
 import IconDismiss from '../SVGIcons/IconDismiss'
@@ -37,7 +37,7 @@ export const ModalContent = ({
   confirmBtnTooltipText,
   buttonProps,
   onSubmit
-}: TProps) => {
+}: TProps): ReactElement => {
   return (
     <>
       {title ? (
