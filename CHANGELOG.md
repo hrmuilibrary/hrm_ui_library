@@ -1,3 +1,11 @@
+# [1.4.0](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.3.9...1.4.0) (2024-12-09)
+
+
+### Features
+
+* range picker mobile view ([512fa17](https://github.com/dino-front-bot/hrm_ui_lib/commit/512fa1757155c607219f549e2ef556c30f494cdb))
+* update motion library, fix related issues ([939bbbd](https://github.com/dino-front-bot/hrm_ui_lib/commit/939bbbd236efb49d5bc5e04fed177d31565be0cd))
+
 ## [1.3.9](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.3.8...1.3.9) (2024-12-05)
 
 
