@@ -1,3 +1,14 @@
+## [1.4.1](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.0...1.4.1) (2024-12-09)
+
+
+### Bug Fixes
+
+* add time picker mobile layout ([accfdfa](https://github.com/dino-front-bot/hrm_ui_lib/commit/accfdfaf083e4c7bcdc42bbb78d58a467c229a6b))
+* prop name refactor ([dc031cb](https://github.com/dino-front-bot/hrm_ui_lib/commit/dc031cb40713ea0d54414fb0f26bd9a1fcf36036))
+* remove redundant imports ([d672494](https://github.com/dino-front-bot/hrm_ui_lib/commit/d672494161890a2c4368e9501f903e09b714a905))
+* use alias instead of hardcoded style ([e06f104](https://github.com/dino-front-bot/hrm_ui_lib/commit/e06f10477a9c683980a3c0f3f9c54d7053d51a67))
+* use alias instead of hardcoded style ([48d2c6f](https://github.com/dino-front-bot/hrm_ui_lib/commit/48d2c6f01f409faef78f36af64993428f5677dca))
+
 # [1.4.0](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.3.9...1.4.0) (2024-12-09)
 
 
