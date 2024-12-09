@@ -71,6 +71,7 @@ const TimeDatePicker = (): JSX.Element => {
         timeIntervals={60}
         format={'HH:mm'}
         label="time"
+        mobileTitle="Select time"
       />
       {/* <_TimePicker value={value2} changeHandler={setValue2} filterTime={filterPassedTime} /> */}
     </div>
