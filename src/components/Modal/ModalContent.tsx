@@ -71,13 +71,15 @@ export const ModalContent = ({
       <div className="modal__content scrollbar scrollbar--vertical">{children}</div>
       {withFooter && buttonProps ? (
         <div className="modal__footer">
-          <Button
-            type="tertiary"
-            className="modal__footer__btn mr-16"
-            onClick={onClose}
-            dataId={dataIdPrefix ? `${dataIdPrefix}-modal-cancel-button` : ''}
-            {...(buttonProps.cancel || {})}
-          />
+          {buttonProps.cancel && (
+            <Button
+              type="tertiary"
+              className="modal__footer__btn mr-16"
+              onClick={onClose}
+              dataId={dataIdPrefix ? `${dataIdPrefix}-modal-cancel-button` : ''}
+              {...(buttonProps.cancel || {})}
+            />
+          )}
           {confirmBtnTooltipText ? (
             <Tooltip
               text={confirmBtnTooltipText as string}
