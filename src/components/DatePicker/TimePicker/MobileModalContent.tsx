@@ -60,11 +60,11 @@ export const MobileModalContent = ({
   }
 
   const applyDate = () => {
-    const today = new Date()
-    today.setHours(selectedHour)
-    today.setMinutes(selectedMinute)
-    today.setSeconds(0)
-    onApply(today)
+    const selectedDate = new Date()
+    selectedDate.setHours(selectedHour)
+    selectedDate.setMinutes(selectedMinute)
+    selectedDate.setSeconds(0)
+    onApply(selectedDate)
   }
   return (
     <Modal
