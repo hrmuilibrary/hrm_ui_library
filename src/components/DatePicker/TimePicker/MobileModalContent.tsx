@@ -1,7 +1,5 @@
 import React, { useRef, useState, MouseEvent } from 'react'
 import { Text } from '../../Text'
-import { useGetElemPositions } from '../../../hooks'
-import classNames from 'classnames'
 import { IconChevronDown } from '../../SVGIcons/IconChevronDown'
 import { IconChevronUp } from '../../SVGIcons/IconChevronUp'
 import { Modal } from '../../Modal'
@@ -61,9 +59,7 @@ export const MobileModalContent = ({
 
   const applyDate = () => {
     const selectedDate = new Date()
-    selectedDate.setHours(selectedHour)
-    selectedDate.setMinutes(selectedMinute)
-    selectedDate.setSeconds(0)
+    selectedDate.setHours(selectedHour, selectedMinute, 0)
     onApply(selectedDate)
   }
   return (

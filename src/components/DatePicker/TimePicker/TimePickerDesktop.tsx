@@ -38,7 +38,6 @@ export const TimePickerDesktop = (props: ITimePickerProps): JSX.Element => {
   useImportFilesDynamically(dayjsLocale)
 
   const onChange = (date: Date) => {
-    console.log('date', date)
     setCurrentTime(date)
 
     if (changeHandler) {

@@ -2,17 +2,12 @@ import React, { ReactElement, useState } from 'react'
 import { ITimePickerProps } from '../types'
 import { Label } from '../../../helperComponents'
 import { Input } from '../../Input'
-import { Text } from '../../Text'
 import IconCalendarRight from '../../SVGIcons/IconCalendarRight'
 import dayjs from 'dayjs'
-import { Modal } from '../../Modal'
-import DatePicker from 'react-datepicker'
-import { CustomHeader } from '../CustomHeader/CustomHeader'
 import { MobileModalContent } from './MobileModalContent'
 
 export const TimePickerMobile = (props: ITimePickerProps): ReactElement => {
   const {
-    locale,
     value,
     currentTime,
     mobileTitle,
@@ -26,8 +21,7 @@ export const TimePickerMobile = (props: ITimePickerProps): ReactElement => {
     changeHandler,
     setFieldValue,
     modalApplyButtonText,
-    name,
-    ...rest
+    name
   } = props
   const dateInitialValue =
     value !== undefined && Object.prototype.toString.call(value) === '[object Date]'
