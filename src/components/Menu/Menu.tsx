@@ -1,5 +1,5 @@
 import React, { ReactElement, useId, useMemo, useState } from 'react'
-import ReactDOM from 'react-dom'
+import { createPortal } from 'react-dom'
 import {
   useOnOutsideClick,
   useGetElemSizes,
@@ -56,44 +56,48 @@ export const Menu = (props: TMenuProps): ReactElement | null => {
     return null
   }
 
-  return ReactDOM.createPortal(
-    <div
-      className={classNames('select', 'select--menu', className)}
-      style={menuStyles}
-      ref={setMenuRef}
-    >
-      <>
-        {children ? (
-          children
-        ) : (
+  return (
+    <>
+      {createPortal(
+        <div
+          className={classNames('select', 'select--menu', className)}
+          style={menuStyles}
+          ref={setMenuRef}
+        >
           <>
-            {menuItems.map(
-              ({ label, meta, value, handler, iconProps, disabled, dataId }: TMenuItem) => {
-                return (
-                  <OptionItem
-                    dataId={dataId}
-                    disabled={disabled}
-                    key={value}
-                    data={{
-                      label,
-                      value,
-                      meta
-                    }}
-                    labelLeftIconProps={iconProps}
-                    onClick={() => {
-                      onClose()
-                      if (handler) {
-                        handler()
-                      }
-                    }}
-                  />
-                )
-              }
+            {children ? (
+              children
+            ) : (
+              <>
+                {menuItems.map(
+                  ({ label, meta, value, handler, iconProps, disabled, dataId }: TMenuItem) => {
+                    return (
+                      <OptionItem
+                        dataId={dataId}
+                        disabled={disabled}
+                        key={value}
+                        data={{
+                          label,
+                          value,
+                          meta
+                        }}
+                        labelLeftIconProps={iconProps}
+                        onClick={() => {
+                          onClose()
+                          if (handler) {
+                            handler()
+                          }
+                        }}
+                      />
+                    )
+                  }
+                )}
+              </>
             )}
           </>
-        )}
-      </>
-    </div>,
-    parentRef
+        </div>,
+        parentRef
+      )}
+    </>
   )
 }

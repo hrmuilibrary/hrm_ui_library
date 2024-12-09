@@ -87,52 +87,56 @@ export const FilterSelect = (props: TFilterProps): ReactElement | null => {
     return null
   }
 
-  return createPortal(
-    <div className="select filter">
-      <div className="select__options" ref={setContainerRef}>
-        <Input
-          onChange={onFilter}
-          className="filter__input"
-          size="small"
-          currentValue={filterValue}
-          rightIconProps={{
-            size: filterValue === '' ? 'small' : 'xsmall',
-            Component: filterValue === '' ? IconSearchFilled : IconDismissFilled,
-            onClick: removeFilterValue
-          }}
-        />
-        <div className={'select__options__scroll scrollbar scrollbar--vertical '}>
-          {isLoading ? (
-            <Loading />
-          ) : isGrouped ? (
-            <FilterGroupDropdownContent
-              checkIsSelected={checkIsSelected}
-              onItemDeselect={onItemDeselect}
-              filterValue={filterValue}
-              onItemSelect={onItemSelect}
-              options={options as TSelectGroupOptions}
-              {...rest}
+  return (
+    <>
+      {createPortal(
+        <div className="select filter">
+          <div className="select__options" ref={setContainerRef}>
+            <Input
+              onChange={onFilter}
+              className="filter__input"
+              size="small"
+              currentValue={filterValue}
+              rightIconProps={{
+                size: filterValue === '' ? 'small' : 'xsmall',
+                Component: filterValue === '' ? IconSearchFilled : IconDismissFilled,
+                onClick: removeFilterValue
+              }}
             />
-          ) : (
-            <FilterDropdownContent
-              checkIsSelected={checkIsSelected}
-              onItemDeselect={onItemDeselect}
-              filterValue={filterValue}
-              onItemSelect={onItemSelect}
-              options={options as TSelectOptions}
-              {...rest}
-            />
-          )}
-        </div>
-        {isLoading ? null : (
-          <Footer
-            buttonProps={footerButtonProps}
-            onCancel={cancelSelectedItems}
-            onApply={applySelectedItems}
-          />
-        )}
-      </div>
-    </div>,
-    parentRef
+            <div className={'select__options__scroll scrollbar scrollbar--vertical '}>
+              {isLoading ? (
+                <Loading />
+              ) : isGrouped ? (
+                <FilterGroupDropdownContent
+                  checkIsSelected={checkIsSelected}
+                  onItemDeselect={onItemDeselect}
+                  filterValue={filterValue}
+                  onItemSelect={onItemSelect}
+                  options={options as TSelectGroupOptions}
+                  {...rest}
+                />
+              ) : (
+                <FilterDropdownContent
+                  checkIsSelected={checkIsSelected}
+                  onItemDeselect={onItemDeselect}
+                  filterValue={filterValue}
+                  onItemSelect={onItemSelect}
+                  options={options as TSelectOptions}
+                  {...rest}
+                />
+              )}
+            </div>
+            {isLoading ? null : (
+              <Footer
+                buttonProps={footerButtonProps}
+                onCancel={cancelSelectedItems}
+                onApply={applySelectedItems}
+              />
+            )}
+          </div>
+        </div>,
+        parentRef
+      )}
+    </>
   )
 }
