@@ -811,7 +811,7 @@
   justify-content: center;
   align-items: center;
   .picker_items{
-    gap: 54px;
+    gap: var(--size-56);
     .date_item_picker_container{
       display: flex;
       flex-direction: column;
