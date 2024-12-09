@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.1...1.4.2) (2024-12-09)
+
+
+### Bug Fixes
+
+* add module `emotion/is-prop-valid` ([e05120c](https://github.com/dino-front-bot/hrm_ui_lib/commit/e05120c87fbc8671dc220dc1b1e5fd14482cb120))
+
 ## [1.4.1](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.0...1.4.1) (2024-12-09)
 
 
