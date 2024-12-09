@@ -1,5 +1,5 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 import { Text } from '../../Text'
 import { IconChevronRight } from '../../SVGIcons/IconChevronRight'
 import { Divider } from '../../Divider'

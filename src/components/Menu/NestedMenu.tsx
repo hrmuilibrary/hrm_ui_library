@@ -1,5 +1,5 @@
 import React, { ReactElement, useId, useMemo, useState } from 'react'
-import ReactDOM from 'react-dom'
+import { createPortal } from 'react-dom'
 import {
   useOnOutsideClick,
   useGetElemSizes,
@@ -88,10 +88,14 @@ export const NestedMenu = ({
     }
   })
 
-  return ReactDOM.createPortal(
-    <div className={classNames('nested-menu', className)} style={menuStyles} ref={setMenuRef}>
-      <CollapseGroup items={_menuItems} />
-    </div>,
-    parentRef
+  return (
+    <>
+      {createPortal(
+        <div className={classNames('nested-menu', className)} style={menuStyles} ref={setMenuRef}>
+          <CollapseGroup items={_menuItems} />
+        </div>,
+        parentRef
+      )}
+    </>
   )
 }
