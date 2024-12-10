@@ -7,7 +7,7 @@ import { Label } from '../../../helperComponents'
 import { useImportFilesDynamically } from '../hooks'
 import IconClock from '../../SVGIcons/IconClock'
 
-export const TimePickerDesktop = (props: ITimePickerProps): JSX.Element => {
+export const TimePickerDesktop = (props: ITimePickerProps): React.ReactElement => {
   const {
     value,
     currentTime,

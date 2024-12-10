@@ -7,5 +7,5 @@ export interface TSwitcherProps extends IFormCompProps {
   inlineType?: boolean
   id?: string
   label?: string
-  labelAddons?: JSX.Element
+  labelAddons?: React.ReactElement
 }

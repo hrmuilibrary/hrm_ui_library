@@ -4,7 +4,7 @@ import { FilterDropdownContent } from './FilterDropdown'
 
 export const FilterGroupDropdownContent = (
   props: TFilterGroupDropdownContentProps
-): JSX.Element => {
+): React.ReactElement => {
   const { options, ...rest } = props
 
   return (

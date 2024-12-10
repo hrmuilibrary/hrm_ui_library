@@ -8,7 +8,7 @@ import IconCaretDownFilled from '../../SVGIcons/IconCaretDownFilled'
 
 const LEVEL_LEFT_MARGIN = 10
 
-export const NestedSelect = (props: TNestedSelectProps): JSX.Element | null => {
+export const NestedSelect = (props: TNestedSelectProps): React.ReactElement | null => {
   const {
     label,
     avatar,
@@ -63,8 +63,8 @@ export const NestedSelect = (props: TNestedSelectProps): JSX.Element | null => {
     [selected, selectedValues]
   )
 
-  const generateFolders = (foldersArr: TSelectOption[], level: number): Array<JSX.Element> =>
-    foldersArr.reduce((acc: Array<JSX.Element>, option: TSelectOption) => {
+  const generateFolders = (foldersArr: TSelectOption[], level: number): Array<React.ReactElement> =>
+    foldersArr.reduce((acc: Array<React.ReactElement>, option: TSelectOption) => {
       const { value, children, disabled } = option
       const isOpen = selectedValues.indexOf(option.value) !== -1
       const isSelected = option.value === selected?.value

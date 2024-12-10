@@ -6,7 +6,7 @@ export interface TStepperContentWrapperProps {
   activeStepIndex: number
   stepCount: number
 }
-declare type TComp = (props: TStepperContentWrapperProps) => JSX.Element
+declare type TComp = (props: TStepperContentWrapperProps) => React.ReactElement
 
 export interface TStepperProps {
   list: TComp[]

@@ -27,7 +27,7 @@ import {
 } from '../constants'
 import { TSingleSelectPropTypes } from '../types'
 
-export const Select = (props: TSingleSelectPropTypes): JSX.Element | null => {
+export const Select = (props: TSingleSelectPropTypes): React.ReactElement | null => {
   const {
     className,
     size = 'large',

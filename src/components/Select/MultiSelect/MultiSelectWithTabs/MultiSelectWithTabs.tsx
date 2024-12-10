@@ -8,7 +8,7 @@ import { ContentTop } from '../../SharedComponents'
 import { TMultiSelectGroupedProps } from '../../types'
 import { DROPDOWN_MAX_HEIGHT } from '../../constants'
 
-export const MultiSelectWithTabs = (props: TMultiSelectGroupedProps): JSX.Element => {
+export const MultiSelectWithTabs = (props: TMultiSelectGroupedProps): React.ReactElement => {
   const {
     avatar,
     options,

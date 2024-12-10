@@ -23,7 +23,7 @@ type TProps = {
   dataIdPrefix?: string
 }
 
-export const ContentTop = React.memo<TProps>((props: TProps): JSX.Element => {
+export const ContentTop = React.memo<TProps>((props: TProps): React.ReactElement => {
   const {
     clearAll,
     selectAll,

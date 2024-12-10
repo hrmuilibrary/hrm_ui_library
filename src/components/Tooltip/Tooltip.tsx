@@ -4,7 +4,7 @@ import { Text } from '../Text'
 import { useGetTooltipStyles, useHideOnScroll } from '../../hooks'
 import { Positions, TTooltipProps } from './types'
 
-export const Tooltip = (props: TTooltipProps): JSX.Element | null => {
+export const Tooltip = (props: TTooltipProps): React.ReactElement | null => {
   const tooltipRef = useRef<HTMLDivElement | null>(null)
   const {
     size = 'large',

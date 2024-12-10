@@ -1,10 +1,10 @@
 export interface LinkPropTypes {
-  children?: string | JSX.Element
+  children?: string | React.ReactElement
   className?: string
   url?: string
   dataId?: string
   target?: string
-  beforeLink?: string | JSX.Element
-  afterLink?: string | JSX.Element
+  beforeLink?: string | React.ReactElement
+  afterLink?: string | React.ReactElement
   onclick?: () => void
 }

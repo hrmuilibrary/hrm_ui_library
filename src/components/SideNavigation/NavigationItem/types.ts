@@ -11,7 +11,7 @@ export enum NavigationItemTypes {
 }
 
 export interface TNavigationLinkPropTypes {
-  As: () => JSX.Element
+  As: () => React.ReactElement
   expandIconProps?: ISVGIconProps
   type: NavigationItemTypes
   isOpen: boolean
@@ -19,7 +19,7 @@ export interface TNavigationLinkPropTypes {
   showBadge?: boolean
   expandable?: boolean
   showAction?: boolean
-  actionElm?: JSX.Element
+  actionElm?: React.ReactElement
   active?: boolean
   badgeContent?: string
   children?: ReactNode

@@ -2,8 +2,8 @@ import { FILE_UPLOAD_ERRORS } from '../../consts'
 
 export interface TFileUploadProps extends IFormCompProps {
   allowedTypes?: string
-  label?: string | JSX.Element
-  buttonText?: string | JSX.Element
+  label?: string | React.ReactElement
+  buttonText?: string | React.ReactElement
   getFiles?: (files: File[]) => void
   handleFileClick?: (file: File) => void
   removeFiles?: (file: File) => void
@@ -15,7 +15,7 @@ export interface TFileUploadProps extends IFormCompProps {
   uploadedFiles?: File[]
   multiple?: boolean
   mode?: FileUploadMode
-  labelAddons?: JSX.Element
+  labelAddons?: React.ReactElement
   onError?: (errorType: FILE_UPLOAD_ERRORS) => void
   fileAllowedSize?: number
 }

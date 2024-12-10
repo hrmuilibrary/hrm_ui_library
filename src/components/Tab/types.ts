@@ -2,7 +2,7 @@ import { TBadgeProps } from '../Badge/types'
 
 export type TTabItem = {
   value: number | string
-  label: string | JSX.Element
+  label: string | React.ReactElement
   dataId?: string
   disabled?: boolean
   badgeProps?: TBadgeProps
@@ -29,7 +29,7 @@ export interface TTabProps extends IFormCompProps {
 
 export type TTabItemProps = {
   dataId?: string
-  label?: string | JSX.Element
+  label?: string | React.ReactElement
   size?: 'large' | 'medium' | 'small'
   className?: string
   iconProps?: {

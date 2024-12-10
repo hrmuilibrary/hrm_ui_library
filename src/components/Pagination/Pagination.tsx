@@ -8,7 +8,7 @@ import IconChevronLeft from '../SVGIcons/IconChevronLeft'
 import IconMore from '../SVGIcons/IconMore'
 import { ICON_SIZE_MAPPING } from './consts'
 
-export const Pagination = (props: TPaginationProps): JSX.Element | null => {
+export const Pagination = (props: TPaginationProps): React.ReactElement | null => {
   const {
     totalCount,
     handleChangePage,

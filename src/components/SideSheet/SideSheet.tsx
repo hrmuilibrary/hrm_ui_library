@@ -11,7 +11,7 @@ import { Footer } from './Footer/Footer'
 import IconCaretUp from '../SVGIcons/IconCaretUp'
 import IconDismissFilled from '../SVGIcons/IconDismissFilled'
 
-export const SideSheet = (props: TSideSheetPropTypes): JSX.Element | null => {
+export const SideSheet = (props: TSideSheetPropTypes): React.ReactElement | null => {
   const {
     size = 'small',
     isLoading,
