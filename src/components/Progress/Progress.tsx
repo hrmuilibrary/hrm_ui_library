@@ -6,7 +6,7 @@ enum CIRCLE_SIZES {
   large = 45
 }
 
-export const Progress = (props: TProgressPropTypes): JSX.Element => {
+export const Progress = (props: TProgressPropTypes): React.ReactElement => {
   const {
     percent,
     stepCount,

@@ -2,7 +2,7 @@ import React from 'react'
 import { TDividerProps } from './types'
 import classnames from 'classnames'
 
-export const Divider = (props: TDividerProps): JSX.Element => {
+export const Divider = (props: TDividerProps): React.ReactElement => {
   const { type, isHorizontal, className } = props
   return (
     <hr

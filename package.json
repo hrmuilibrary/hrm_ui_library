@@ -19,6 +19,7 @@
     "install-latest": "npm install --legacy-peer-deps",
     "import-all-svg-components": "node ./bin/import_all_svg_components.js",
     "publish-alpha-version": "cd \"./dist/\" && npm publish --tag alpha",
+    "tsc": "tsc -d --declarationDir dist --outDir dts-temp --project ./tsconfig.json",
     "generate-svg-component": "node ./bin/generate_svg_component.js && npm run import-all-svg-components && npm run check"
   },
   "eslintConfig": {
@@ -122,7 +123,7 @@
     "@types/react-input-mask": "^3.0.2",
     "classnames": "^2.3.2",
     "dayjs": "^1.11.10",
-    "framer-motion": "4.1.17",
+    "framer-motion": "12.0.0-alpha.2",
     "react-datepicker": "^4.25.0",
     "react-hook-form": "^7.50.0",
     "react-input-mask": "^2.0.4",

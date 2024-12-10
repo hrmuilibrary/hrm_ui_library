@@ -9,7 +9,7 @@ import classNames from 'classnames'
 import IconChevronDown from '../../SVGIcons/IconChevronDown'
 import { generateDataTestId } from '../../../utils/helpers'
 
-export const CollapseItem = (props: TCollapseProps): JSX.Element => {
+export const CollapseItem = (props: TCollapseProps): React.ReactElement => {
   const {
     title: { text, size = 'medium', color },
     className,

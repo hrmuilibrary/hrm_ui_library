@@ -7,7 +7,7 @@ import { ErrorMessage } from '../../helperComponents'
 import { Button } from '../Button'
 import IconDelete from '../SVGIcons/IconDelete'
 
-export const UploadItems = (props: IUploadItemPropTypes): JSX.Element => {
+export const UploadItems = (props: IUploadItemPropTypes): React.ReactElement => {
   const { files, onRemove, withFilePreview, handleFileClick } = props
   const { errors } = useFormProps()
   const filesErrors = errors && errors.files && errors.files.length > 0

@@ -1,6 +1,6 @@
 export type TBreadCrumbItem = {
   value: number | string
-  label: string | JSX.Element
+  label: string | React.ReactElement
   onClick: () => void
 }
 export interface TBreadCrumbProps extends IFormCompProps {

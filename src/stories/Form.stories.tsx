@@ -146,7 +146,7 @@ const VALIDATION_SCHEME = yup.object({
   firstname: yup.string().required('validation').nullable()
 })
 
-const Template = (): JSX.Element => {
+const Template = (): React.ReactElement => {
   const INITIAL_VALUES = {
     firstname: ''
   }

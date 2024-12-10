@@ -3,7 +3,7 @@ import { Button } from '../../Button'
 import { TSelectFooterPropTypes } from '../types'
 import { Checkbox } from '../../Checkbox'
 
-export const Footer = (props: TSelectFooterPropTypes): JSX.Element => {
+export const Footer = (props: TSelectFooterPropTypes): React.ReactElement => {
   const { buttonProps, onApply, onCancel, hasChange = true, checkboxInfo } = props
   const [isSelected, setIsSelected] = React.useState(checkboxInfo?.isChecked || false)
 

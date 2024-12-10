@@ -4,7 +4,7 @@ import { noop } from '../../utils/helpers'
 import { TTabItemProps } from './types'
 import classNames from 'classnames'
 
-export const TabItem = (props: TTabItemProps): JSX.Element | null => {
+export const TabItem = (props: TTabItemProps): React.ReactElement | null => {
   const {
     size = 'large',
     iconProps,

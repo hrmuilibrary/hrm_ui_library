@@ -1,9 +1,9 @@
 import { TPopoverProps } from '../Popover/types'
 
 export interface TCheckboxProps extends IFormCompProps {
-  label?: string | JSX.Element
-  beforeLink?: string | JSX.Element
-  afterLink?: string | JSX.Element
+  label?: string | React.ReactElement
+  beforeLink?: string | React.ReactElement
+  afterLink?: string | React.ReactElement
   className?: string
   disabled?: boolean
   required?: boolean

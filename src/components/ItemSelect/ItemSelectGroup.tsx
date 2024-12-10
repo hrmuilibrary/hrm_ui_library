@@ -3,7 +3,7 @@ import { TItemSelectGroupProps } from './types'
 import { ItemSelect } from './ItemSelect'
 import classnames from 'classnames'
 
-export const ItemSelectGroup = (props: TItemSelectGroupProps): JSX.Element => {
+export const ItemSelectGroup = (props: TItemSelectGroupProps): React.ReactElement => {
   const { items, name, value, isHorizontal, handleChange, className, iconGroup } = props
 
   return (

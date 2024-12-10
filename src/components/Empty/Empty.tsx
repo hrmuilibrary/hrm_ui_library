@@ -8,7 +8,7 @@ import classNames from 'classnames'
 // @ts-ignore
 import noResultImage from '../../assets/images/no-result.svg'
 
-export const Empty = (props: TEmptyProps): JSX.Element => {
+export const Empty = (props: TEmptyProps): React.ReactElement => {
   const {
     size = 'large',
     mainMessage,

@@ -1,7 +1,7 @@
 import React from 'react'
 import { ImagePropTypes } from './types'
 
-export const Image = (props: ImagePropTypes): JSX.Element => {
+export const Image = (props: ImagePropTypes): React.ReactElement => {
   const {
     name,
     imagePath = 'static/media/src/assets/images/image-placeholder.png',

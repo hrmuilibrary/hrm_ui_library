@@ -8,7 +8,7 @@ interface TSelectBaseProps {
   error?: string
   isLoading?: boolean
   disabled?: boolean
-  label?: string | JSX.Element
+  label?: string | React.ReactElement
   placeHolder?: string
   isRequiredField?: boolean
   labelLeftIconProps?: {
@@ -93,7 +93,7 @@ export interface TMultiSelectPropTypes extends IFormCompProps, TSelectBaseProps 
     cancel: TButtonPropTypes
     confirm: TButtonPropTypes
   }
-  labelAddons?: JSX.Element
+  labelAddons?: React.ReactElement
   className?: string
   isButtonSelect?: boolean
 }
@@ -121,7 +121,7 @@ export interface TSingleSelectPropTypes extends IFormCompProps, TSelectBaseProps
   withSearch?: boolean
   outerHelperText?: string
   innerHelperText?: string
-  labelAddons?: JSX.Element
+  labelAddons?: React.ReactElement
   tooltipAddons?: TTooltipProps
 }
 
@@ -210,11 +210,11 @@ export type TSelectWrapperProps = {
   containerRef: HTMLDivElement | null
   setContainerRef: LegacyRef<HTMLDivElement> | undefined
   options?: TSelectOptions
-  label?: string | JSX.Element
+  label?: string | React.ReactElement
   placeHolder?: string
   isRequiredField?: boolean
   overflowText?: string
-  labelAddons?: JSX.Element
+  labelAddons?: React.ReactElement
   disabled?: boolean
   dropdownRef: HTMLDivElement | null
   setDropdownRef: LegacyRef<HTMLDivElement>

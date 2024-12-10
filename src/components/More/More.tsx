@@ -3,7 +3,7 @@ import { Text } from '../Text'
 import { TMorePropTypes } from './types'
 import { Button } from '../Button'
 
-export const More = (props: TMorePropTypes): JSX.Element => {
+export const More = (props: TMorePropTypes): React.ReactElement => {
   const {
     textProps = {},
     expandedText,

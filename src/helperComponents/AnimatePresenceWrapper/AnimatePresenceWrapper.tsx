@@ -12,7 +12,7 @@ export function AnimatePresenceWrapper({
 }: {
   children: React.ReactNode
   initial?: boolean
-}): JSX.Element {
+}): React.ReactElement {
   const NewAnimatePresence: React.FC<NewAnimatePresenceProps> = AnimatePresence
 
   return <NewAnimatePresence initial={initial}>{children}</NewAnimatePresence>

@@ -1,5 +1,5 @@
 export interface TErrorMessageProps {
-  message?: string | JSX.Element
+  message?: string | React.ReactElement
   icon?: string
   dataId?: string
   className?: string

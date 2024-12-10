@@ -5,7 +5,7 @@ import { Button } from '../Button'
 import { TCardBodyProps } from './types'
 import classNames from 'classnames'
 
-export const CardBody = (props: TCardBodyProps): JSX.Element => {
+export const CardBody = (props: TCardBodyProps): React.ReactElement => {
   const { title, description, buttonProps, className, illustration } = props
 
   return (

@@ -7,7 +7,7 @@ export interface TToastProps {
   type?: TSnackbarTypes
   toastId: number | string
   closeSnackbar?: (id: number | string) => void
-  text: string | JSX.Element
+  text: string | React.ReactElement
   actionProps?: TButtonPropTypes
 }
 export interface TSnackbarProps extends IFormCompProps {
