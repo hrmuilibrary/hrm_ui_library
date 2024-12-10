@@ -1,5 +1,4 @@
 ﻿import React, { forwardRef, ReactElement, useEffect, useState } from 'react'
-import dayjs from 'dayjs'
 import DatePicker from 'react-datepicker'
 import { Input } from '../../Input'
 import { DateFormat, IRangeDatePickerProps, TRangePickerValues } from '../types'
@@ -9,6 +8,7 @@ import IconCalendarRight from '../../SVGIcons/IconCalendarRight'
 import { Modal } from '../../Modal'
 import { CustomHeader } from '../CustomHeader/CustomHeader'
 import { MONTHS } from '../../../consts'
+import { formatDate } from '../../../helpers'
 
 export const RangeDatePickerMobile = forwardRef(
   (props: IRangeDatePickerProps): ReactElement | null => {
@@ -48,9 +48,6 @@ export const RangeDatePickerMobile = forwardRef(
         if (setFieldValue && name) {
           setFieldValue(name, date)
         }
-        if (date.every((d) => !!d)) {
-          closeDatepicker()
-        }
       }
     }
 
@@ -62,10 +59,6 @@ export const RangeDatePickerMobile = forwardRef(
       return null
     }
 
-    const formatDate = (date: Date | undefined): string => {
-      return date ? dayjs(date).format(format) : ''
-    }
-
     const checkRange = () => {
       const [startDate, endDate] = rangeArray
       if (!startDate || !endDate) {
@@ -75,10 +68,10 @@ export const RangeDatePickerMobile = forwardRef(
 
     const renderCurrentSelectedDate = (rangeArray: (Date | undefined)[]) => {
       const [startDate, endDate] = rangeArray
-      const startDateFormatted = formatDate(startDate)
-      const endDateFormatted = formatDate(endDate)
+      const startDateFormatted = formatDate(startDate, format)
+      const endDateFormatted = formatDate(endDate, format)
 
-      if (isSameDay(startDate, endDate) || !rangeArray[1]) {
+      if (isSameDay(startDate, endDate) || !endDate) {
         return startDateFormatted
       }
 
@@ -92,6 +85,8 @@ export const RangeDatePickerMobile = forwardRef(
     const closeDatepicker = () => {
       setIsCalendarOpen(false)
     }
+
+    const [startDate, endDate] = rangeArray
 
     return (
       <>
@@ -110,22 +105,28 @@ export const RangeDatePickerMobile = forwardRef(
           isOpen={isCalendarOpen}
           title={mobileTitle}
           onClose={closeDatepicker}
-          withFooter={false}
+          // withFooter={false}
+          buttonProps={{
+            confirm: { buttonText: 'Apply' }
+          }}
           closeIcon={true}
         >
+          <div className="flexbox justify-content--between mb-16">
+            <Input readOnly value={formatDate(startDate, 'DD.MM.YYYY')} />
+            <Input readOnly value={formatDate(endDate, 'DD.MM.YYYY')} />
+          </div>
           <DatePicker
             {...rest}
             inline
             locale={locale}
             minDate={minDate}
             maxDate={maxDate}
-            startDate={rangeArray[0] as Date}
-            endDate={rangeArray[1] as Date}
+            startDate={startDate}
+            endDate={endDate}
             selectsRange
             disabled={disabled}
             onChange={onChange}
             onClickOutside={checkRange}
-            monthsShown={1}
             renderCustomHeader={(props) => (
               <CustomHeader
                 {...props}
