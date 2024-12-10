@@ -1,3 +1,10 @@
+## [1.4.4](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.3...1.4.4) (2024-12-10)
+
+
+### Bug Fixes
+
+* move components styles ([a50f756](https://github.com/dino-front-bot/hrm_ui_lib/commit/a50f75622b68389a597d308b936f2071503a5351))
+
 ## [1.4.3](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.2...1.4.3) (2024-12-10)
 
 
