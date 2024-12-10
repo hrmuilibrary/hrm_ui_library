@@ -1,6 +1,6 @@
 import React, { ReactElement, useId, useState } from 'react'
 import classnames from 'classnames'
-import { motion } from 'motion/react'
+import { motion } from 'framer-motion'
 import { AnimatePresenceWrapper } from '../../helperComponents/AnimatePresenceWrapper'
 import { useHideBodyScroll, useOnOutsideClick } from '../../hooks'
 import { Button } from '../Button'
