@@ -1,3 +1,11 @@
+## [1.4.3](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.2...1.4.3) (2024-12-10)
+
+
+### Bug Fixes
+
+* fix some packages to test build issue ([01521d1](https://github.com/dino-front-bot/hrm_ui_lib/commit/01521d107ec1fb30da8319f518b8cb00c07b51c6))
+* test framer motion build issues ([e8ea131](https://github.com/dino-front-bot/hrm_ui_lib/commit/e8ea131315bf34a8337f0d06b5b5905a5789200d))
+
 ## [1.4.2](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.1...1.4.2) (2024-12-09)
 
 
