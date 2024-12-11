@@ -1,3 +1,11 @@
+## [1.4.5](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.4...1.4.5) (2024-12-11)
+
+
+### Bug Fixes
+
+* popover visibility state when clicked prop is passed ([7f073cd](https://github.com/dino-front-bot/hrm_ui_lib/commit/7f073cdfefedfa984435007d83130fca39552757))
+* remove redundant unmount case ([fd83be0](https://github.com/dino-front-bot/hrm_ui_lib/commit/fd83be025d0e225a44480624a475fb70e5896f1e))
+
 ## [1.4.4](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.3...1.4.4) (2024-12-10)
 
 
