@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import IconChevronRight from '../SVGIcons/IconChevronRight'
 import IconChevronLeft from '../SVGIcons/IconChevronLeft'
 
-export const SideNavigation = (props: TSideNavigationPropTypes): JSX.Element => {
+export const SideNavigation = (props: TSideNavigationPropTypes): React.ReactElement => {
   const {
     children,
     open,

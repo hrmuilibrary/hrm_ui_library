@@ -13464,7 +13464,7 @@ MultiSelect.args = {
 
 // ----------NESTED_SELECT---------------
 
-const NestedSelectTemplate = (args: any): JSX.Element => {
+const NestedSelectTemplate = (args: any): React.ReactElement => {
   const [selected, setSelected] = useState<TSelectOption>({
     value: 3,
     label: 'Management board'
@@ -13532,7 +13532,7 @@ export const LanguageSelect = LanguageSelectTemplate.bind({})
 
 // ----------PROFILE DROPDOWN---------------
 
-const ProfileDropdownTemplate = (args: any): JSX.Element => {
+const ProfileDropdownTemplate = (args: any): React.ReactElement => {
   return (
     <div
       style={{
@@ -13581,7 +13581,7 @@ ProfileDropdown.args = {
 
 // ----------FILTERDROPDOWN---------------
 
-// const FilterDropdownTemplate = (args: any): JSX.Element => {
+// const FilterDropdownTemplate = (args: any): React.ReactElement => {
 //   const [selectedValues, setSelectedValues] = useState<TItemValue[]>([])
 //   const [isOpen, setIsOpen] = useState(false)
 //   const containerRef = useRef(null)

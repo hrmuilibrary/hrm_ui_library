@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useId, useRef, useState } from 'react'
-import { motion } from 'motion/react'
+import { motion } from 'framer-motion'
 import classnames from 'classnames'
 import { useHideBodyScroll, useOnOutsideClick } from '../../hooks'
 import { AnimatePresenceWrapper } from '../../helperComponents/AnimatePresenceWrapper'
@@ -11,7 +11,7 @@ import { Footer } from './Footer/Footer'
 import IconCaretUp from '../SVGIcons/IconCaretUp'
 import IconDismissFilled from '../SVGIcons/IconDismissFilled'
 
-export const SideSheet = (props: TSideSheetPropTypes): JSX.Element | null => {
+export const SideSheet = (props: TSideSheetPropTypes): React.ReactElement | null => {
   const {
     size = 'small',
     isLoading,

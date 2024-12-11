@@ -1,5 +1,5 @@
 import React from 'react'
-import { AnimatePresence, AnimatePresenceProps } from 'motion/react'
+import { AnimatePresence, AnimatePresenceProps } from 'framer-motion'
 
 interface NewAnimatePresenceProps extends Omit<AnimatePresenceProps, 'children'> {
   children: React.ReactNode
@@ -12,7 +12,7 @@ export function AnimatePresenceWrapper({
 }: {
   children: React.ReactNode
   initial?: boolean
-}): JSX.Element {
+}): React.ReactElement {
   const NewAnimatePresence: React.FC<NewAnimatePresenceProps> = AnimatePresence
 
   return <NewAnimatePresence initial={initial}>{children}</NewAnimatePresence>

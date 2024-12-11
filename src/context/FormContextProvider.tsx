@@ -4,8 +4,8 @@ import { FormContext, TFormContextProps } from './types'
 export const WithFormFeedback = ({
   children
 }: {
-  children?: (context: TFormContextProps) => JSX.Element | null
-}): JSX.Element | null => {
+  children?: (context: TFormContextProps) => React.ReactElement | null
+}): React.ReactElement | null => {
   const context = useContext(FormContext)
 
   return children ? children(context) : null

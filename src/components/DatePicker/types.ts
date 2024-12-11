@@ -34,6 +34,8 @@ export interface ITimePickerProps extends TDatepickerBaseProps {
   dayjsLocale?: string
   value?: Date
   size?: 'large' | 'small'
+  mobileTitle?: string
+  modalApplyButtonText?: string
 }
 
 export interface IRangeDatePickerProps extends TDatepickerBaseProps {

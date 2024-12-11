@@ -7,6 +7,6 @@ export interface LabelPropTypes {
   text?: ReactNode
   size?: 'xxsmall' | 'xsmall' | 'small' | 'standard' | 'medium' | 'large'
   className?: string
-  labelAddons?: JSX.Element
+  labelAddons?: React.ReactElement
   dataId?: string
 }

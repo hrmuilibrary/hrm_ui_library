@@ -55,7 +55,7 @@ const SimplePicker: StoryFn<ISimpleDatePickerProps> = (args) => {
 }
 export const SimpleDatePicker = SimplePicker.bind({})
 
-const TimeDatePicker = (): JSX.Element => {
+const TimeDatePicker = (): React.ReactElement => {
   const [value1, setValue1] = useState<Date>(new Date())
   // const [value2, setValue2] = useState<Date>(new Date())
   // const filterPassedTime = (time) => {
@@ -71,6 +71,7 @@ const TimeDatePicker = (): JSX.Element => {
         timeIntervals={60}
         format={'HH:mm'}
         label="time"
+        mobileTitle="Select time"
       />
       {/* <_TimePicker value={value2} changeHandler={setValue2} filterTime={filterPassedTime} /> */}
     </div>

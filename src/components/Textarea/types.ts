@@ -4,7 +4,7 @@ export interface TTextAreaTypeProps extends IFormCompProps {
   error?: string
   cols?: number
   row?: number
-  label?: string | JSX.Element
+  label?: string | React.ReactElement
   currentValue?: string
   placeHolder?: string
   required?: boolean
@@ -13,5 +13,5 @@ export interface TTextAreaTypeProps extends IFormCompProps {
   changeHandler?: (event: TChangeEventType) => void
   helperText?: string
   successMessage?: string
-  labelAddons?: JSX.Element
+  labelAddons?: React.ReactElement
 }

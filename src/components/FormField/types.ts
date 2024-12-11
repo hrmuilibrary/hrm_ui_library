@@ -1,5 +1,5 @@
 export interface TFormFieldPropTypes {
-  As: (props: IFormCompProps) => JSX.Element
+  As: (props: IFormCompProps) => React.ReactElement
   name: string
   className?: string
   dataId?: string

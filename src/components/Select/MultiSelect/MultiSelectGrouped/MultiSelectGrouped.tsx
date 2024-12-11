@@ -10,7 +10,7 @@ import { DROPDOWN_MAX_HEIGHT } from '../../constants'
 import IconCaretUpFilled from '../../../SVGIcons/IconCaretUpFilled'
 import IconCaretDownFilled from '../../../SVGIcons/IconCaretDownFilled'
 
-export const MultiSelectGrouped = (props: TMultiSelectGroupedProps): JSX.Element | null => {
+export const MultiSelectGrouped = (props: TMultiSelectGroupedProps): React.ReactElement | null => {
   const {
     avatar,
     options,

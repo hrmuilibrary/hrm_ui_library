@@ -6,7 +6,7 @@ import { IconCheckmark } from '../../components/SVGIcons/IconCheckmark'
 import { Tooltip } from '../../components/Tooltip'
 import { TSelectItemProps } from './types'
 
-export const OptionItem = (props: TSelectItemProps): JSX.Element => {
+export const OptionItem = (props: TSelectItemProps): React.ReactElement => {
   const {
     data,
     onClick,

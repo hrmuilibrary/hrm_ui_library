@@ -6,7 +6,7 @@ export default {
   title: 'Container',
   component: _Container
 }
-const Template = (): JSX.Element => {
+const Template = (): React.ReactElement => {
   const helperStyles = {
     marginTop: '10px'
   }

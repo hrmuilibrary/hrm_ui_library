@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { TStepperProps } from './types'
 
-export const Stepper = (props: TStepperProps): JSX.Element => {
+export const Stepper = (props: TStepperProps): React.ReactElement => {
   const { list, activeStep = 0, setActiveStep } = props
 
   const [activeStepIndex, setActiveStepIndex] = useState(activeStep)

@@ -9,7 +9,7 @@ type TProps = {
   selectActions: TMenuItem[]
   innerLabel?: string
 }
-export const Actions = (props: TProps): JSX.Element | null => {
+export const Actions = (props: TProps): React.ReactElement | null => {
   const { selectActions, innerLabel } = props
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)

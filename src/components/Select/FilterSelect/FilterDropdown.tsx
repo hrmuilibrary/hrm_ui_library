@@ -2,7 +2,7 @@ import React, { useMemo } from 'react'
 import { OptionItem } from '../../../helperComponents'
 import { TFilterDropdownContentProps } from '../types'
 
-export const FilterDropdownContent = (props: TFilterDropdownContentProps): JSX.Element => {
+export const FilterDropdownContent = (props: TFilterDropdownContentProps): React.ReactElement => {
   const {
     checkIsSelected,
     filterValue,

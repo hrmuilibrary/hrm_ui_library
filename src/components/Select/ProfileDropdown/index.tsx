@@ -1,11 +1,10 @@
 import React, { useId, useRef } from 'react'
 import { TProfileDropdownProps } from '../types'
-import './styles.scss'
 import { Text } from '../../Text'
 import { useOnOutsideClick } from '../../../hooks'
 import { Link } from '../../Link'
 
-export const ProfileDropdown = (props: TProfileDropdownProps): JSX.Element => {
+export const ProfileDropdown = (props: TProfileDropdownProps): React.ReactElement => {
   const menuRef = useRef<HTMLDivElement>(null)
   const { avatar, name, email, bodyItems, footerItems, className } = props
   const [isOpen, setIsOpen] = React.useState(false)

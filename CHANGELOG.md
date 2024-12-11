@@ -1,3 +1,36 @@
+## [1.4.4](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.3...1.4.4) (2024-12-10)
+
+
+### Bug Fixes
+
+* move components styles ([a50f756](https://github.com/dino-front-bot/hrm_ui_lib/commit/a50f75622b68389a597d308b936f2071503a5351))
+
+## [1.4.3](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.2...1.4.3) (2024-12-10)
+
+
+### Bug Fixes
+
+* fix some packages to test build issue ([01521d1](https://github.com/dino-front-bot/hrm_ui_lib/commit/01521d107ec1fb30da8319f518b8cb00c07b51c6))
+* test framer motion build issues ([e8ea131](https://github.com/dino-front-bot/hrm_ui_lib/commit/e8ea131315bf34a8337f0d06b5b5905a5789200d))
+
+## [1.4.2](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.1...1.4.2) (2024-12-09)
+
+
+### Bug Fixes
+
+* add module `emotion/is-prop-valid` ([e05120c](https://github.com/dino-front-bot/hrm_ui_lib/commit/e05120c87fbc8671dc220dc1b1e5fd14482cb120))
+
+## [1.4.1](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.0...1.4.1) (2024-12-09)
+
+
+### Bug Fixes
+
+* add time picker mobile layout ([accfdfa](https://github.com/dino-front-bot/hrm_ui_lib/commit/accfdfaf083e4c7bcdc42bbb78d58a467c229a6b))
+* prop name refactor ([dc031cb](https://github.com/dino-front-bot/hrm_ui_lib/commit/dc031cb40713ea0d54414fb0f26bd9a1fcf36036))
+* remove redundant imports ([d672494](https://github.com/dino-front-bot/hrm_ui_lib/commit/d672494161890a2c4368e9501f903e09b714a905))
+* use alias instead of hardcoded style ([e06f104](https://github.com/dino-front-bot/hrm_ui_lib/commit/e06f10477a9c683980a3c0f3f9c54d7053d51a67))
+* use alias instead of hardcoded style ([48d2c6f](https://github.com/dino-front-bot/hrm_ui_lib/commit/48d2c6f01f409faef78f36af64993428f5677dca))
+
 # [1.4.0](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.3.9...1.4.0) (2024-12-09)
 
 

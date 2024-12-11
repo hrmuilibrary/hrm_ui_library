@@ -1,7 +1,7 @@
 {
   "homepage": "https://github.com/dino-front-bot/hrm_ui_lib",
   "name": "hrm_ui_lib",
-  "version": "1.4.0",
+  "version": "1.4.4",
   "description": "UI library for Dino",
   "private": false,
   "main": "index.js",
@@ -46,6 +46,9 @@
     "yup": "^1.2.0"
   },
   "devDependencies": {
+    "@babel/preset-react": "7.24.1",
+    "@babel/preset-env": "7.24.1",
+    "@babel/preset-typescript": "7.24.1",
     "@commitlint/cli": "^19.4.1",
     "@commitlint/config-conventional": "^19.4.1",
     "@rollup/plugin-babel": "^6.0.4",
@@ -119,8 +122,7 @@
     "@types/react-input-mask": "^3.0.2",
     "classnames": "^2.3.2",
     "dayjs": "^1.11.10",
-    "framer-motion": "^12.0.0-alpha.2",
-    "motion": "^12.0.0-alpha.2",
+    "framer-motion": "12.0.0-alpha.2",
     "react-datepicker": "^4.25.0",
     "react-hook-form": "^7.50.0",
     "react-input-mask": "^2.0.4",

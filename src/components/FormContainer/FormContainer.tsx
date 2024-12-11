@@ -6,7 +6,7 @@ import { FormContext } from '../../context'
 import { FormPropTypes } from './types'
 import { Button } from '../Button'
 
-export const FormContainer = (props: FormPropTypes): JSX.Element => {
+export const FormContainer = (props: FormPropTypes): React.ReactElement => {
   const {
     children,
     className = '',

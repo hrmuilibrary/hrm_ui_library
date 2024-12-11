@@ -7,7 +7,7 @@ import IconAdd from '../SVGIcons/IconAdd'
 import IconSubtract from '../SVGIcons/IconSubtract'
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const Counter = forwardRef((props: ICounterProps, ref): JSX.Element => {
+export const Counter = forwardRef((props: ICounterProps, ref): React.ReactElement => {
   const {
     max = 99999999,
     min = 0,
