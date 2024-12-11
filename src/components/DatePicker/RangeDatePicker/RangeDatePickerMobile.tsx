@@ -105,13 +105,12 @@ export const RangeDatePickerMobile = forwardRef(
           isOpen={isCalendarOpen}
           title={mobileTitle}
           onClose={closeDatepicker}
-          // withFooter={false}
           buttonProps={{
             confirm: { buttonText: 'Apply' }
           }}
           closeIcon={true}
         >
-          <div className="flexbox justify-content--between mb-16">
+          <div className="flexbox justify-content--between mb-16 gap-16">
             <Input readOnly value={formatDate(startDate, 'DD.MM.YYYY')} />
             <Input readOnly value={formatDate(endDate, 'DD.MM.YYYY')} />
           </div>
