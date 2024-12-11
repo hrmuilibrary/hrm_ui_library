@@ -26,16 +26,25 @@ const DESKTOP_ANIMATION = {
   }
 }
 
-export const MOBILE_ANIMATION = {
-  initial: { height: 0, bottom: 0 },
-  animate: {
-    height: 'auto',
-    bottom: 10
-  },
-  exit: { height: 0, bottom: 0 },
-  transition: { duration: 0.6 }
+export const MOBILE_ANIMATION = (isFullScreen?: boolean) => {
+  return {
+    initial: {
+      height: 0,
+      bottom: 0
+    },
+    animate: {
+      height: isFullScreen ? '100vh' : 'auto',
+      bottom: 10
+    },
+    exit: {
+      height: 0,
+      bottom: 0
+    },
+    transition: {
+      duration: 0.6
+    }
+  }
 }
-
 export const Modal = (props: TModalPropTypes): ReactElement => {
   const {
     isOpen,
@@ -43,6 +52,7 @@ export const Modal = (props: TModalPropTypes): ReactElement => {
     className = '',
     size = 'medium',
     closeOnOutsideClick = true,
+    isMobileFullScreen,
     ...rest
   } = props
 
@@ -67,9 +77,12 @@ export const Modal = (props: TModalPropTypes): ReactElement => {
           transition={{ duration: 0.4 }}
         >
           <motion.div
-            className={classNames('modal__container', { modal__container_mobile: isMobile })}
+            className={classNames('modal__container', {
+              modal__container_mobile: isMobile,
+              fullScreen: isMobileFullScreen
+            })}
             ref={setContainerRef}
-            {...(isMobile ? MOBILE_ANIMATION : DESKTOP_ANIMATION)}
+            {...(isMobile ? MOBILE_ANIMATION(isMobileFullScreen) : DESKTOP_ANIMATION)}
           >
             <ModalContent {...rest} onClose={onClose} />
           </motion.div>

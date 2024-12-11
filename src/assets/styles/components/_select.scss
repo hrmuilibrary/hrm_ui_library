@@ -15,9 +15,11 @@
   --ds-select-options-margin: var(--ds-space-4);
   --ds-select-options-padding: 0;
   --ds-select-options-height: var(--ds-size-32);
+  --ds-select-options-height-large: var(--ds-size-40);
 
   --ds-select-option-bg-hover: var(--grey-20);
   --ds-select-option-margin: var(--ds-space-4);
+  --ds-select-option-margin-large: var(--ds-space-16);
   --ds-select-option-padding: 0 var(--ds-space-16);
   --ds-select-option-font: var(--ds-font-weight-default) var(--ds-paragraph-sm)/var(--ds-line-height-tight) var(--ds-font-family);
 
@@ -51,6 +53,7 @@
   --ds-select-language-shadow-focused: var(--ds-shadow-brand-2);
 
   position: relative;
+  width: 100%;
 
   .tabs-container{
     width: 100%;
@@ -106,6 +109,11 @@
     margin-bottom: var(--ds-select-option-margin);
     font: var(--ds-select-option-font);
 
+    &_large{
+      height: var(--ds-select-options-height-large);
+      margin-bottom: var(--ds-select-option-margin-large);
+      position: relative;
+    }
     &:last-child {
       margin-bottom: 0;
     }
@@ -123,9 +131,17 @@
     &__content {
       @include mixin.justify-content(flex-start);
     }
+    &__content__large {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
 
     &__text {
       @include mixin.truncate(calc(100%));
+      &__large{
+        font-size:var(--ds-paragraph-std);
+      }
     }
 
     &__meta {
@@ -133,6 +149,11 @@
       color: var(--ds-color-text-tertiary);
       &:before {
         content: '- ';
+      }
+      &__large {
+        &:before {
+          content: '';
+        }
       }
     }
   }
@@ -285,3 +306,41 @@
 .select_button{
   box-shadow: none !important;
 }
+
+
+//MOBILE
+
+  .modal__content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-bottom: 0;
+    padding-right: 0;
+    .mobile_top_content{
+      display: flex;
+      width: 100%;
+      align-items: center;
+      padding-right: var(--ds-space-24);
+      .input{
+        width: 100%;
+      }
+    }
+  }
+
+
+  .mobile_options_content{
+    height: calc(100% - 44px);
+    &__label{
+      padding: 8px 0;
+    }
+    &__inner{
+      height: calc(100% - 30px);
+      overflow: hidden;
+      .mobile_options_container{
+        overflow: auto;
+        height: 100%;
+      }
+    }
+  }
+

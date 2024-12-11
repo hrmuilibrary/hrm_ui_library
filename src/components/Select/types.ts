@@ -2,6 +2,7 @@ import { LegacyRef, ReactElement, ReactNode } from 'react'
 import { TButtonPropTypes } from '../Button/types'
 import { TTooltipProps } from '../Tooltip/types'
 import { TMenuItem } from '../Menu/types'
+import { bool } from 'yup'
 
 interface TSelectBaseProps {
   dataIdPrefix?: string
@@ -123,6 +124,65 @@ export interface TSingleSelectPropTypes extends IFormCompProps, TSelectBaseProps
   innerHelperText?: string
   labelAddons?: React.ReactElement
   tooltipAddons?: TTooltipProps
+  translations?: {
+    emptyListMainMessage: string
+  }
+}
+
+export interface TSingleSelectMobileProps {
+  isOpen: boolean
+  closeDropdown: () => void
+  isLoading?: boolean
+  dataId?: string
+  innerHelperText?: string
+  options: TSelectOptions
+  avatar?: string
+  currentSelection: TItemValue | undefined
+  isRequiredField?: boolean
+  onItemSelect: (item: TItemValue) => void
+  onItemDeselect: () => void
+  labelLeftIconProps?: {
+    size?: TIconSize
+    className?: string
+    onClick?: TClickHandler
+  }
+  labelRightIconComponent?: (value: TItemValue) => ReactElement
+  optionRightIconComponent?: (value: TItemValue) => ReactElement
+  tooltipAddons?: TTooltipProps
+  translations?: {
+    emptyListMainMessage: string
+  }
+}
+export interface TSingleSelectDesktopProps {
+  searchValue: string
+  setSearchValue: (value: string) => void
+  currentSelection: TItemValue | undefined
+  avatar?: string
+  options: TSelectOptions
+  isLoading?: boolean
+  withSearch?: boolean
+  dataId?: string
+  onItemDeselect: () => void
+  isRequiredField?: boolean
+  labelLeftIconProps?: {
+    size?: TIconSize
+    className?: string
+    onClick?: TClickHandler
+  }
+  labelRightIconComponent?: (value: TItemValue) => ReactElement
+  optionRightIconComponent?: (value: TItemValue) => ReactElement
+  tooltipAddons?: TTooltipProps
+  dropdownWidth?: number
+  isOpen: boolean
+  closeDropdown: () => void
+  inputRef: HTMLInputElement | null
+  containerRef: HTMLDivElement | null
+  onItemSelect: (item: TItemValue) => void
+  setSelectedOption: (item: TSelectOption | null) => void
+  innerHelperText?: string
+  translations?: {
+    emptyListMainMessage: string
+  }
 }
 
 export type TSelectFooterPropTypes = {
