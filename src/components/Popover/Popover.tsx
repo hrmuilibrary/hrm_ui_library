@@ -8,7 +8,7 @@ export const Popover = (props: TPopoverProps): ReactElement | null => {
   const { elemRef, id, clicked, ...rest } = props
   const isMobile = useIsMobile()
 
-  const [isClicked, setIsClicked] = useState(clicked)
+  const [isClicked, setIsClicked] = useState(false)
   const [parent, setElement] = useState<HTMLElement | null>(elemRef || null)
 
   const showMessage = () => setIsClicked(true)
@@ -29,10 +29,10 @@ export const Popover = (props: TPopoverProps): ReactElement | null => {
   }, [id])
 
   useEffect(() => {
-    if (clicked !== undefined && clicked !== isClicked) {
+    if (clicked === false) {
       setIsClicked(clicked)
     }
-  }, [clicked, isClicked])
+  }, [clicked])
 
   return isMobile ? (
     <PopoverMobile {...rest} clicked={isClicked} hideMessage={hideMessage} />
