@@ -34,10 +34,6 @@ export const Popover = (props: TPopoverProps): ReactElement | null => {
     }
   }, [clicked])
 
-  useEffect(() => {
-    return () => setIsClicked(false)
-  }, [])
-
   return isMobile ? (
     <PopoverMobile {...rest} clicked={isClicked} hideMessage={hideMessage} />
   ) : (
