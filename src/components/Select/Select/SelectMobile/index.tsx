@@ -3,20 +3,14 @@ import { OptionItem } from '../../../../helperComponents'
 import { Empty } from '../../../Empty'
 import { Modal } from '../../../Modal'
 import { Text } from '../../../Text'
-import {
-  DROPDOWN_HEIGHT,
-  DROPDOWN_WIDTH,
-  ITEM_SIZE,
-  ITEM_SIZE_MOBILE,
-  TRANSLATIONS_DEFAULT_VALUES
-} from '../../constants'
+import { ITEM_SIZE_MOBILE, TRANSLATIONS_DEFAULT_VALUES } from '../../constants'
 import { Loading } from '../../SharedComponents'
-import { TSingleSelectMobileProps } from '../../types'
+import { ISingleSelectMobileProps } from '../../types'
 import { filterOptions } from '../helpers'
 import { MobileTopContent } from './MobileTopContent'
 import { FixedSizeList as List } from 'react-window'
 
-export const SelectMobile = (props: TSingleSelectMobileProps): ReactElement => {
+export const SelectMobile = (props: ISingleSelectMobileProps): ReactElement => {
   const {
     translations,
     currentSelection,

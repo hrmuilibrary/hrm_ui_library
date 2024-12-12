@@ -20,10 +20,10 @@ import {
   ITEM_SIZE,
   TRANSLATIONS_DEFAULT_VALUES
 } from '../../constants'
-import { TSingleSelectDesktopProps } from '../../types'
+import { ISingleSelectDesktopProps } from '../../types'
 import { filterOptions } from '../helpers'
 
-export const SelectDesktop = (props: TSingleSelectDesktopProps): ReactElement | null => {
+export const SelectDesktop = (props: ISingleSelectDesktopProps): ReactElement | null => {
   const {
     currentSelection,
     avatar,
