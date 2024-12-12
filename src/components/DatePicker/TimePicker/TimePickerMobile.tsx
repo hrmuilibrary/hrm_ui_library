@@ -10,7 +10,6 @@ export const TimePickerMobile = (props: ITimePickerProps): ReactElement => {
   const {
     value,
     currentTime,
-    mobileTitle,
     format,
     label,
     required,
@@ -20,7 +19,7 @@ export const TimePickerMobile = (props: ITimePickerProps): ReactElement => {
     dataId,
     changeHandler,
     setFieldValue,
-    modalApplyButtonText,
+    modalOptions,
     name
   } = props
   const dateInitialValue =
@@ -65,10 +64,10 @@ export const TimePickerMobile = (props: ITimePickerProps): ReactElement => {
       <MobileModalContent
         dateInitialValue={dateInitialValue}
         onApply={onApply}
-        mobileTitle={mobileTitle}
+        mobileTitle={modalOptions?.title}
         isOpen={isPickerOpen}
         closeTimePicker={closeTimePicker}
-        modalApplyButtonText={modalApplyButtonText}
+        modalApplyButtonText={modalOptions?.btnConfirmText}
       />
     </>
   )

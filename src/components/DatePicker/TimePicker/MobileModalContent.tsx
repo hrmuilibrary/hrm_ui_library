@@ -1,4 +1,4 @@
-import React, { useRef, useState, MouseEvent } from 'react'
+import React, { ReactElement, useState } from 'react'
 import { Text } from '../../Text'
 import { IconChevronDown } from '../../SVGIcons/IconChevronDown'
 import { IconChevronUp } from '../../SVGIcons/IconChevronUp'
@@ -20,7 +20,7 @@ export const MobileModalContent = ({
   modalApplyButtonText = 'Apply',
   closeTimePicker,
   dateInitialValue = new Date()
-}: TProps) => {
+}: TProps): ReactElement => {
   const [selectedHour, setSelectedHour] = useState<number>(dateInitialValue.getHours())
 
   const [selectedMinute, setSelectedMinute] = useState<number>(dateInitialValue.getMinutes())

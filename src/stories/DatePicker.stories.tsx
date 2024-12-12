@@ -40,7 +40,9 @@ const SimplePicker: StoryFn<ISimpleDatePickerProps> = (args) => {
         {...args}
         value={value}
         label={'Simple Date Picker'}
-        mobileTitle="Select date"
+        modalOptions={{
+          title: 'Select date'
+        }}
         changeHandler={setValue}
         format="DD"
         // label="ddd"
@@ -71,7 +73,7 @@ const TimeDatePicker = (): React.ReactElement => {
         timeIntervals={60}
         format={'HH:mm'}
         label="time"
-        mobileTitle="Select time"
+        modalOptions={{ title: 'Select time', btnConfirmText: 'Apply' }}
       />
       {/* <_TimePicker value={value2} changeHandler={setValue2} filterTime={filterPassedTime} /> */}
     </div>
@@ -90,7 +92,7 @@ const RangePicker: StoryFn<IRangeDatePickerProps> = (args) => {
         changeHandler={setValue}
         locale={'en'}
         label={'Range Label'}
-        mobileTitle="Select date"
+        modalOptions={{ title: 'Select date', btnConfirmText: 'Apply', btnCancelText: 'Cancel' }}
         filterDate={(date) => date.getDay() !== 0 && date.getDay() !== 6}
       />
     </div>
@@ -99,5 +101,6 @@ const RangePicker: StoryFn<IRangeDatePickerProps> = (args) => {
 export const RangeDatePicker = RangePicker.bind({})
 
 RangeDatePicker.args = {
-  label: 'Range Date Picker'
+  label: 'Range Date Picker',
+  format: 'DD/MM/YYYY'
 }

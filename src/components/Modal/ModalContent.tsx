@@ -1,6 +1,5 @@
 import React, { ReactElement, ReactNode } from 'react'
 
-import { ButtonIcon } from '../ButtonIcon'
 import IconDismiss from '../SVGIcons/IconDismiss'
 import { Positions } from '../Tooltip/types'
 
@@ -58,11 +57,12 @@ export const ModalContent = ({
             ) : null}
           </div>
           {closeIcon ? (
-            <ButtonIcon
+            <Button
               className={'modal__close ml-16'}
               dataId={dataIdPrefix ? `${dataIdPrefix}-modal-close-button` : ''}
               iconProps={{ Component: IconDismiss }}
               onClick={onClose}
+              type="tertiary"
             />
           ) : null}
         </div>

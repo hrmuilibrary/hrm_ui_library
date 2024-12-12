@@ -604,3 +604,18 @@ $space-prefixes: (
 .text-truncate {
   @include mixin.truncate(100%);
 }
+
+.gap {
+  &-4 {
+    gap: var(--ds-space-4);
+  }
+  &-8 {
+      gap: var(--ds-space-8);
+  }
+  &-12 {
+      gap: var(--ds-space-12);
+  }
+  &-16 {
+      gap: var(--ds-space-16);
+  }
+}
