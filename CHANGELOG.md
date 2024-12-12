@@ -1,3 +1,14 @@
+## [1.4.7](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.6...1.4.7) (2024-12-12)
+
+
+### Bug Fixes
+
+* improvement on range picker component ([42fcc5b](https://github.com/dino-front-bot/hrm_ui_lib/commit/42fcc5b23604a5bcd67c5ffaf6f73d70aa9c092f))
+* modal responsive ([92d7b81](https://github.com/dino-front-bot/hrm_ui_lib/commit/92d7b81fd15b3bfb27f31588e040e4693217b291))
+* range picker style issues ([b5bf570](https://github.com/dino-front-bot/hrm_ui_lib/commit/b5bf570a662c54bbf9f2fefebc8e0421dedcf803))
+* remove unnecessary ButtonIcon component ([174d2a2](https://github.com/dino-front-bot/hrm_ui_lib/commit/174d2a24adc54350cd3b0a09a84c1fad8c386d93))
+* update deprecated functions in sass api ([25aad87](https://github.com/dino-front-bot/hrm_ui_lib/commit/25aad878873ced946d7576710f8183a2d2f6d0e3))
+
 ## [1.4.6](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.5...1.4.6) (2024-12-12)
 
 
