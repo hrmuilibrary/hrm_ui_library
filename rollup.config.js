@@ -10,7 +10,7 @@ import pkg from './package.json'
 import generatePackageJson from 'rollup-plugin-generate-package-json'
 import image from '@rollup/plugin-image'
 import postcss from 'rollup-plugin-postcss'
-import { renderSync } from 'sass'
+import * as sass from 'sass'
 
 const extensions = ['.ts', '.tsx', '.js', '.jsx']
 const ignoreExtensions = ['.stories.tsx', '.stories.d.ts']
@@ -67,18 +67,19 @@ function writeCSS() {
   return {
     name: 'write-css',
     async generateBundle(_, bundle) {
-      const scssFile = bundle['assets/styles/styles.scss']
+      for (const fileName of Object.keys(bundle)) {
+        if (fileName.endsWith('.scss')) {
+          const scssFile = bundle[fileName]
+          const scssContent = scssFile.source.toString()
+          const cssContent = sass.compileString(scssContent).css.toString()
 
-      if (scssFile) {
-        const scssContent = scssFile.source.toString()
-        const cssContent = renderSync({ data: scssContent }).css.toString()
+          if (!fs.existsSync('dist/assets/styles')) {
+            fs.mkdirSync('dist/assets/styles', { recursive: true })
+          }
 
-        if (!fs.existsSync('dist/assets/styles')) {
-          fs.mkdirSync('dist/assets/styles', { recursive: true })
+          const cssFilePath = path.resolve('dist/assets/styles/styles.css')
+          fs.writeFileSync(cssFilePath, cssContent)
         }
-
-        const cssFilePath = path.resolve('dist/assets/styles/styles.css')
-        fs.writeFileSync(cssFilePath, cssContent)
       }
     }
   }
