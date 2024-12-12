@@ -2,6 +2,7 @@ import { LegacyRef, ReactElement, ReactNode } from 'react'
 import { TButtonPropTypes } from '../Button/types'
 import { TTooltipProps } from '../Tooltip/types'
 import { TMenuItem } from '../Menu/types'
+import { bool } from 'yup'
 
 interface TSelectBaseProps {
   dataIdPrefix?: string
@@ -123,6 +124,45 @@ export interface TSingleSelectPropTypes extends IFormCompProps, TSelectBaseProps
   innerHelperText?: string
   labelAddons?: React.ReactElement
   tooltipAddons?: TTooltipProps
+  translations?: {
+    emptyListMainMessage: string
+  }
+}
+
+export interface ISingleSelectResponsiveProps {
+  isOpen: boolean
+  closeDropdown: () => void
+  isLoading?: boolean
+  dataId?: string
+  innerHelperText?: string
+  labelLeftIconProps?: {
+    size?: TIconSize
+    className?: string
+    onClick?: TClickHandler
+  }
+  labelRightIconComponent?: (value: TItemValue) => ReactElement
+  optionRightIconComponent?: (value: TItemValue) => ReactElement
+  tooltipAddons?: TTooltipProps
+  onItemSelect: (item: TItemValue) => void
+  onItemDeselect: () => void
+  options: TSelectOptions
+  avatar?: string
+  currentSelection: TItemValue | undefined
+  isRequiredField?: boolean
+  translations?: {
+    emptyListMainMessage: string
+  }
+}
+
+export type ISingleSelectMobileProps = ISingleSelectResponsiveProps
+export interface ISingleSelectDesktopProps extends ISingleSelectResponsiveProps {
+  searchValue: string
+  setSearchValue: (value: string) => void
+  withSearch?: boolean
+  dropdownWidth?: number
+  inputRef: HTMLInputElement | null
+  containerRef: HTMLDivElement | null
+  setSelectedOption: (item: TSelectOption | null) => void
 }
 
 export type TSelectFooterPropTypes = {

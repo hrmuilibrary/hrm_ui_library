@@ -15,4 +15,5 @@ export type TSelectItemProps = {
   tooltipAddons?: TTooltipProps
   dataId?: string
   style?: CSSProperties
+  size?: 'small' | 'large'
 }

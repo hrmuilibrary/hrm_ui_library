@@ -8,6 +8,7 @@ import { TSelectItemProps } from './types'
 
 export const OptionItem = (props: TSelectItemProps): React.ReactElement => {
   const {
+    size = 'small',
     data,
     onClick,
     disabled,
@@ -62,7 +63,13 @@ export const OptionItem = (props: TSelectItemProps): React.ReactElement => {
         {optionLeftIcon && optionLeftIcon.Component ? (
           <optionLeftIcon.Component {...optionLeftIcon} size="small" className="mr-8" />
         ) : null}
-        {avatar ? <Avatar size="xxsmall" imagePath={avatar} className="mr-4" /> : null}
+        {avatar ? (
+          <Avatar
+            size={size === 'small' ? 'xxsmall' : 'medium'}
+            imagePath={avatar}
+            className="mr-4"
+          />
+        ) : null}
         {labelLeftIconProps?.Component ? (
           <labelLeftIconProps.Component
             size="xsmall"
@@ -71,14 +78,27 @@ export const OptionItem = (props: TSelectItemProps): React.ReactElement => {
             {...labelLeftIconProps}
           />
         ) : null}
-        <div className="select__option__content" data-id={dataId}>
-          <span className={`select__option__text pr-4 ${disabled ? 'color-disabled' : ''}`}>
+        <div
+          className={classNames('select__option__content', {
+            select__option__content__large: size === 'large'
+          })}
+          data-id={dataId}
+        >
+          <span
+            className={classNames(`select__option__text pr-4 ${disabled ? 'color-disabled' : ''}`, {
+              select__option__text__large: size === 'large'
+            })}
+          >
             {label}
           </span>
           {LabelRightIconComponent && LabelRightIconComponent(value)}
 
           {meta ? (
-            <span className={`select__option__meta ${disabled ? 'color-disabled' : ''}`}>
+            <span
+              className={classNames(`select__option__meta ${disabled ? 'color-disabled' : ''}`, {
+                select__option__meta__large: size === 'large'
+              })}
+            >
               {meta}
             </span>
           ) : null}

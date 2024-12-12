@@ -19,6 +19,7 @@ export interface TModalPropTypes {
   children?: ReactNode
   className?: string
   confirmBtnTooltipText?: string
+  isMobileFullScreen?: boolean
 }
 
 export interface TModalConfirmationPropTypes {

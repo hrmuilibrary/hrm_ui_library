@@ -13297,17 +13297,18 @@ const Template: StoryFn<TSingleSelectPropTypes> = (args) => {
   const closeMenu = () => setIsOpen(false)
 
   return (
-    <div style={{ display: 'flex', height: '100vh', justifyContent: 'center' }}>
+    <div style={{ display: 'flex', height: '100vh', width: 300, justifyContent: 'center' }}>
       <_Select
         {...args}
         dataId={'single-select'}
         // tooltipAddons={{ position: Positions.TOP_LEFT, text: '' }}
-        isRequiredField
+        // isRequiredField
         options={MOCK_DATA}
         outerHelperText="helper text"
         selectedItem={selectedValue}
         setSelectedItem={setSelectedValue}
         withSearch={true}
+        innerHelperText="Results"
         optionRightIconComponent={() => {
           return (
             <div ref={ref} style={{ position: 'absolute', right: '16px' }}>
