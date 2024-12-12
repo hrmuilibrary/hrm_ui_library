@@ -26,7 +26,7 @@ export const SimpleDatePickerMobile = (props: ISimpleDatePickerProps): ReactElem
     locale,
     dataIdPrefix,
     months = MONTHS,
-    mobileTitle,
+    modalOptions,
     name,
     changeHandler,
     setFieldValue,
@@ -78,7 +78,7 @@ export const SimpleDatePickerMobile = (props: ISimpleDatePickerProps): ReactElem
       />
       <Modal
         isOpen={isCalendarOpen}
-        title={mobileTitle}
+        title={modalOptions?.title}
         onClose={closeDatepicker}
         withFooter={false}
         closeIcon={true}

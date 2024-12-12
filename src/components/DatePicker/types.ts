@@ -10,8 +10,12 @@ export interface TDatepickerBaseProps extends DatePickerDefaultProps {
   label?: ReactNode
   format?: string
   inline?: boolean
-  mobileTitle?: string
   months?: TSelectOptions
+  modalOptions?: {
+    title?: string
+    btnConfirmText?: string
+    btnCancelText?: string
+  }
 }
 
 export interface ISimpleDatePickerProps extends TDatepickerBaseProps {
@@ -34,7 +38,6 @@ export interface ITimePickerProps extends TDatepickerBaseProps {
   dayjsLocale?: string
   value?: Date
   size?: 'large' | 'small'
-  mobileTitle?: string
   modalApplyButtonText?: string
 }
 
