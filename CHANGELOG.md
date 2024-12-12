@@ -1,3 +1,12 @@
+## [1.4.6](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.5...1.4.6) (2024-12-12)
+
+
+### Bug Fixes
+
+* add single select mobile layout ([e0a1498](https://github.com/dino-front-bot/hrm_ui_lib/commit/e0a1498aeab7e9efe8180bcc45b35a1602636f51))
+* combine mobile and desktop types ([7be39ad](https://github.com/dino-front-bot/hrm_ui_lib/commit/7be39ad3666c033d8298f84d57f0ad4f94443b06))
+* use react window for mobile options list ([de32fd7](https://github.com/dino-front-bot/hrm_ui_lib/commit/de32fd7c44c1eb35aa4678aeff7543ebc871248a))
+
 ## [1.4.5](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.4...1.4.5) (2024-12-11)
 
 
