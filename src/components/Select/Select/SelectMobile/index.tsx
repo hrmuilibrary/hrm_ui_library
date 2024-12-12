@@ -3,11 +3,18 @@ import { OptionItem } from '../../../../helperComponents'
 import { Empty } from '../../../Empty'
 import { Modal } from '../../../Modal'
 import { Text } from '../../../Text'
-import { TRANSLATIONS_DEFAULT_VALUES } from '../../constants'
+import {
+  DROPDOWN_HEIGHT,
+  DROPDOWN_WIDTH,
+  ITEM_SIZE,
+  ITEM_SIZE_MOBILE,
+  TRANSLATIONS_DEFAULT_VALUES
+} from '../../constants'
 import { Loading } from '../../SharedComponents'
 import { TSingleSelectMobileProps } from '../../types'
 import { filterOptions } from '../helpers'
 import { MobileTopContent } from './MobileTopContent'
+import { FixedSizeList as List } from 'react-window'
 
 export const SelectMobile = (props: TSingleSelectMobileProps): ReactElement => {
   const {
@@ -51,6 +58,8 @@ export const SelectMobile = (props: TSingleSelectMobileProps): ReactElement => {
     setSearchValue('')
   }
 
+  const windowHeight = window.innerHeight
+  const windowWidth = window.innerWidth
   return (
     <Modal isOpen={isOpen} onClose={closeDropdown} isMobileFullScreen>
       <MobileTopContent
@@ -67,10 +76,22 @@ export const SelectMobile = (props: TSingleSelectMobileProps): ReactElement => {
         {isLoading ? (
           <Loading />
         ) : (
-          <div data-id={`${dataId}-options-content`} className="mobile_options_content__inner">
+          <div data-id={`${dataId}-options-content`}>
             {filteredData.length > 0 && (
-              <div className="mobile_options_container pb-12">
-                {filteredData.map((item) => {
+              <List
+                height={windowHeight - 30 - 32 - 24}
+                itemCount={filteredData.length}
+                itemSize={ITEM_SIZE_MOBILE}
+                width={windowWidth}
+                style={{
+                  width: '100%',
+                  overflowX: 'hidden',
+                  overflowY: 'auto',
+                  willChange: 'auto'
+                }}
+              >
+                {({ index, style }) => {
+                  const item = filteredData[index]
                   const isSelected = item.value === currentSelection
                   return (
                     <OptionItem
@@ -86,11 +107,13 @@ export const SelectMobile = (props: TSingleSelectMobileProps): ReactElement => {
                       disabled={item.disabled}
                       isSelected={isSelected}
                       dataId={item.dataId}
+                      style={style}
                     />
                   )
-                })}
-              </div>
+                }}
+              </List>
             )}
+
             {filteredData.length === 0 ? (
               <Empty
                 size="small"

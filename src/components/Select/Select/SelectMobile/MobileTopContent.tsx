@@ -15,12 +15,7 @@ export const MobileTopContent = ({ onBack, setSearchValue, searchValue }: TProps
   return (
     <div className="flexbox mobile_top_content">
       <IconChevronLeft onClick={onBack} size="large" />
-      <Input
-        currentValue={searchValue}
-        handleChange={onSearch}
-        className="ml-8 mb-12"
-        size="small"
-      />
+      <Input currentValue={searchValue} handleChange={onSearch} className="ml-8" size="small" />
     </div>
   )
 }

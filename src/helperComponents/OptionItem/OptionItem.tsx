@@ -46,8 +46,7 @@ export const OptionItem = (props: TSelectItemProps): React.ReactElement => {
       className={classNames(
         'select__option',
         {
-          'select__option--disabled': disabled,
-          select__option_large: size === 'large'
+          'select__option--disabled': disabled
         },
         className
       )}

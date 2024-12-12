@@ -109,11 +109,6 @@
     margin-bottom: var(--ds-select-option-margin);
     font: var(--ds-select-option-font);
 
-    &_large{
-      height: var(--ds-select-options-height-large);
-      margin-bottom: var(--ds-select-option-margin-large);
-      position: relative;
-    }
     &:last-child {
       margin-bottom: 0;
     }
@@ -330,17 +325,8 @@
 
 
   .mobile_options_content{
-    height: calc(100% - 44px);
     &__label{
       padding: 8px 0;
-    }
-    &__inner{
-      height: calc(100% - 30px);
-      overflow: hidden;
-      .mobile_options_container{
-        overflow: auto;
-        height: 100%;
-      }
     }
   }
 
