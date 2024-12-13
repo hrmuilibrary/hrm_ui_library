@@ -78,8 +78,7 @@ export const Modal = (props: TModalPropTypes): ReactElement => {
         >
           <motion.div
             className={classNames('modal__container', {
-              modal__container_mobile: isMobile,
-              fullScreen: isMobileFullScreen
+              modal__container_fullScreen: isMobile && isMobileFullScreen
             })}
             ref={setContainerRef}
             {...(isMobile ? MOBILE_ANIMATION(isMobileFullScreen) : DESKTOP_ANIMATION)}

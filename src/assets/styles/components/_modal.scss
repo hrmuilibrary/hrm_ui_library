@@ -40,12 +40,15 @@
     border-radius: var(--ds-modal-border-radius);
     background-color: var(--ds-modal-bg);
     box-shadow: var(--ds-modal-shadow);
-
-    &_mobile {
+    @media screen and (max-width: 768px) {
       position: absolute;
-      max-height: 100vh;
+      max-height: 70%;
       border-radius: var(--ds-modal-border-radius-mobile) var(--ds-modal-border-radius-mobile) 0 0;
     }
+    &_fullScreen{
+        max-height: 100vh;
+    }
+
   }
 
   &__header {
