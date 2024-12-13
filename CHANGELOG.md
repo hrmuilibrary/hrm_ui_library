@@ -1,3 +1,11 @@
+## [1.4.8](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.7...1.4.8) (2024-12-13)
+
+
+### Bug Fixes
+
+* add mobile and desktop wrappers for multiselect components ([9e9b9a0](https://github.com/dino-front-bot/hrm_ui_lib/commit/9e9b9a0a3823ec5caf1b55dfc497d4cce70cb7b0))
+* add multiselect mobile layout ([b9de335](https://github.com/dino-front-bot/hrm_ui_lib/commit/b9de3350616fab008068fbb827c5eec6ef9b2323))
+
 ## [1.4.7](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.6...1.4.7) (2024-12-12)
 
 
