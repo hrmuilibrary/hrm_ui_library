@@ -21,6 +21,7 @@ export const MobileWrapper = (props: TProps) => {
       onClose={closeDrodown}
       onSubmit={submitSelection}
       isMobileFullScreen
+      className={'select__modal'}
       buttonProps={{
         confirm: {
           buttonText: modalApplyButtonText
