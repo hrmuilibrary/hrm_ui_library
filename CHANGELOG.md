@@ -1,3 +1,10 @@
+## [1.4.11](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.10...1.4.11) (2024-12-16)
+
+
+### Bug Fixes
+
+* add classname to change modal styles only for select compomnent ([f70ecd5](https://github.com/dino-front-bot/hrm_ui_lib/commit/f70ecd5879cbb6e44a2cbdf30dead9fd9ff1ee1f))
+
 ## [1.4.10](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.9...1.4.10) (2024-12-16)
 
 
