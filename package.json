@@ -1,7 +1,7 @@
 {
   "homepage": "https://github.com/dino-front-bot/hrm_ui_lib",
   "name": "hrm_ui_lib",
-  "version": "1.4.9",
+  "version": "1.4.10",
   "description": "UI library for Dino",
   "private": false,
   "main": "index.js",

@@ -1,3 +1,10 @@
+## [1.4.10](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.9...1.4.10) (2024-12-16)
+
+
+### Bug Fixes
+
+* fix modal max height in mobile view ([6494a71](https://github.com/dino-front-bot/hrm_ui_lib/commit/6494a71d053afee4e2ed7e62d9772d884e2a96df))
+
 ## [1.4.9](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.8...1.4.9) (2024-12-13)
 
 
