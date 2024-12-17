@@ -1,3 +1,10 @@
+## [1.4.13](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.12...1.4.13) (2024-12-17)
+
+
+### Bug Fixes
+
+* add `isMobileFullScreen` prop for all select components ([7f9d48a](https://github.com/dino-front-bot/hrm_ui_lib/commit/7f9d48adb1ac3254df57e12eb721f74bf428c424))
+
 ## [1.4.12](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.11...1.4.12) (2024-12-17)
 
 
