@@ -41,12 +41,13 @@
     background-color: var(--ds-modal-bg);
     box-shadow: var(--ds-modal-shadow);
     @media screen and (max-width: 768px) {
-      position: absolute;
+      position: fixed;
       max-height: 70%;
       border-radius: var(--ds-modal-border-radius-mobile) var(--ds-modal-border-radius-mobile) 0 0;
     }
     &_fullScreen{
-        max-height: 100vh;
+      max-height: 100vh;
+      border-radius:0;
     }
 
   }
@@ -66,6 +67,7 @@
 
   &__content {
     padding: var(--ds-modal-content-padding);
+    height: 100%;
   }
 
   &__footer {
