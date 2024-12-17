@@ -7,6 +7,8 @@ import { Input } from '../../Input'
 import { noop } from '../../../utils/helpers'
 import { SELECTED_VISIBLE_MIN_COUNT } from '../constants'
 import { SelectMobile } from './SelectMobile'
+import { IconCaretUpFilled } from '../../SVGIcons/IconCaretUpFilled'
+import { IconCaretDownFilled } from '../../SVGIcons/IconCaretDownFilled'
 
 export const Select = (props: TSingleSelectPropTypes): ReactElement | null => {
   const {
@@ -21,8 +23,14 @@ export const Select = (props: TSingleSelectPropTypes): ReactElement | null => {
     outerHelperText,
     isRequiredField,
     placeHolder,
-    selectRightIconProps,
-    selectRightIconOpenedProps,
+    selectRightIconProps = {
+      Component: IconCaretDownFilled,
+      size: 'xsmall'
+    },
+    selectRightIconOpenedProps = {
+      Component: IconCaretUpFilled,
+      size: 'xsmall'
+    },
     options,
     withSearch,
     setSelectedItem,

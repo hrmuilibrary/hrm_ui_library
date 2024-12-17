@@ -2,7 +2,6 @@ import { LegacyRef, ReactElement, ReactNode } from 'react'
 import { TButtonPropTypes } from '../Button/types'
 import { TTooltipProps } from '../Tooltip/types'
 import { TMenuItem } from '../Menu/types'
-import { bool } from 'yup'
 
 interface TSelectBaseProps {
   dataIdPrefix?: string
