@@ -30,6 +30,7 @@ export const Select = (props: TSingleSelectPropTypes): ReactElement | null => {
     name,
     selectedItem,
     value,
+    isMobileFullScreen = true,
     ...rest
   } = props
   const isMobile = useIsMobile()
@@ -120,7 +121,7 @@ export const Select = (props: TSingleSelectPropTypes): ReactElement | null => {
         labelAddons={labelAddons}
         autoComplete="false"
       />
-      {isMobile ? (
+      {isMobile && isMobileFullScreen ? (
         <SelectMobile
           {...rest}
           options={options}

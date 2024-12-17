@@ -8,12 +8,12 @@ import { useChangePositionsOnScroll } from '../../../../hooks/useChangePositions
 import { IconCaretDownFilled } from '../../../SVGIcons/IconCaretDownFilled'
 import { IconCaretUpFilled } from '../../../SVGIcons/IconCaretUpFilled'
 import { TSelectWrapperProps } from '../../types'
-import { useIsMobile } from '../../../../hooks/useGetIsMobile'
 import { MobileWrapper } from '../../MultiSelect/MobileWrapper'
 import { DesktopWrapper } from '../../MultiSelect/DesktopWrapper'
 
 export const InputSelectWrapper = (props: TSelectWrapperProps): ReactElement | null => {
   const {
+    isMobile,
     children,
     options,
     label,
@@ -83,8 +83,6 @@ export const InputSelectWrapper = (props: TSelectWrapperProps): ReactElement | n
   })
 
   useChangePositionsOnScroll(inputRef?.current, dropdownRef, hasBottomSpace)
-
-  const isMobile = useIsMobile()
 
   return (
     <div className={classNames('select select--multi', className)} ref={setContainerRef}>

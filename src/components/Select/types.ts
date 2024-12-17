@@ -52,6 +52,7 @@ export type TSelectTranslations = {
 }
 
 interface TMultiSelectCompProps extends IFormCompProps, TSelectBaseProps {
+  isMobile: boolean
   maxSelectCount: number
   isSearchAvailable: boolean
   helperText?: string
@@ -79,6 +80,7 @@ export type TCheckboxInfo = {
 }
 
 export interface TMultiSelectPropTypes extends IFormCompProps, TSelectBaseProps {
+  isMobileFullScreen?: boolean
   dropdownWidth?: number
   align?: 'left' | 'right'
   helperText?: string
@@ -101,6 +103,7 @@ export interface TMultiSelectPropTypes extends IFormCompProps, TSelectBaseProps 
 }
 
 export interface TButtonSelectPropTypes extends IFormCompProps, TSelectBaseProps {
+  isMobileFullScreen?: boolean
   dataId?: string
   options: TSelectOptions
   selectedItem?: TItemValue
@@ -117,6 +120,7 @@ export interface TButtonSelectPropTypes extends IFormCompProps, TSelectBaseProps
 }
 
 export interface TSingleSelectPropTypes extends IFormCompProps, TSelectBaseProps {
+  isMobileFullScreen?: boolean
   options: TSelectOptions
   selectedItem?: TItemValue
   setSelectedItem?: (items: TItemValue | undefined) => void
@@ -235,6 +239,7 @@ export interface TFilterGroupDropdownContentProps extends IFormCompProps {
 }
 
 export type TSelectWrapperProps = {
+  isMobile: boolean
   applySelectedItems: (isChecked: boolean) => void
   hasError?: boolean
   children: ReactElement

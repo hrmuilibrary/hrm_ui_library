@@ -8,7 +8,6 @@ import { noop } from '../../../../utils/helpers'
 import { useChangePositionsOnScroll } from '../../../../hooks/useChangePositionsOnScroll'
 import { MobileWrapper } from '../../MultiSelect/MobileWrapper'
 import { DesktopWrapper } from '../../MultiSelect/DesktopWrapper'
-import { useIsMobile } from '../../../../hooks/useGetIsMobile'
 
 export const ButtonSelectWrapper = (props: TSelectWrapperProps): ReactElement => {
   const {
@@ -29,7 +28,8 @@ export const ButtonSelectWrapper = (props: TSelectWrapperProps): ReactElement =>
     disabled,
     modalApplyButtonText,
     type = 'secondary',
-    applySelectedItems
+    applySelectedItems,
+    isMobile
   } = props
 
   const buttonRef = useRef<HTMLButtonElement>(null)
@@ -50,7 +50,7 @@ export const ButtonSelectWrapper = (props: TSelectWrapperProps): ReactElement =>
   }, [selectedValues])
 
   useChangePositionsOnScroll(buttonRef?.current, dropdownRef, hasBottomSpace)
-  const isMobile = useIsMobile()
+
   return (
     <div className={classNames(`select select--${size}`, className)} ref={setContainerRef}>
       <Button

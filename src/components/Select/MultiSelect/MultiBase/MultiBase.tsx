@@ -5,11 +5,11 @@ import { ContentTop } from '../../SharedComponents'
 import { TMultySingleTabPropTypes } from '../../types'
 import { FixedSizeList as List } from 'react-window'
 import { DROPDOWN_HEIGHT, DROPDOWN_WIDTH, ITEM_SIZE, ITEM_SIZE_MOBILE } from '../../constants'
-import { useIsMobile } from '../../../../hooks/useGetIsMobile'
 import classNames from 'classnames'
 
 export const MultiBase = (props: TMultySingleTabPropTypes): ReactElement | null => {
   const {
+    isMobile,
     closeDropdown,
     avatar,
     scrollableContentStyle,
@@ -84,7 +84,6 @@ export const MultiBase = (props: TMultySingleTabPropTypes): ReactElement | null 
     }
   }, [avatar, labelLeftIconProps, optionRightIconComponent, labelRightIconComponent])
 
-  const isMobile = useIsMobile()
   return (
     <>
       <ContentTop
