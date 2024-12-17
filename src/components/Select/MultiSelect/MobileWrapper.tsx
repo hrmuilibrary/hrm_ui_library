@@ -6,13 +6,20 @@ type TProps = {
   children: ReactElement
   closeDrodown: () => void
   modalApplyButtonText?: string
+  applySelectedItems: (isChecked: boolean) => void
 }
 
 export const MobileWrapper = (props: TProps) => {
-  const { isOpen, closeDrodown, children, modalApplyButtonText = 'Apply' } = props
+  const {
+    applySelectedItems,
+    isOpen,
+    closeDrodown,
+    children,
+    modalApplyButtonText = 'Apply'
+  } = props
 
   const submitSelection = () => {
-    closeDrodown()
+    applySelectedItems(false)
   }
 
   return (

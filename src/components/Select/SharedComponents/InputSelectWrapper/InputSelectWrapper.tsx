@@ -34,7 +34,8 @@ export const InputSelectWrapper = (props: TSelectWrapperProps): ReactElement | n
     setContainerRef,
     overflowText,
     hasError,
-    modalApplyButtonText
+    modalApplyButtonText,
+    applySelectedItems
   } = props
 
   const inputRef = useRef<HTMLInputElement | null>(null)
@@ -110,6 +111,7 @@ export const InputSelectWrapper = (props: TSelectWrapperProps): ReactElement | n
       <>
         {isMobile ? (
           <MobileWrapper
+            applySelectedItems={applySelectedItems}
             isOpen={isOpen}
             closeDrodown={() => setIsOpen(false)}
             modalApplyButtonText={modalApplyButtonText}

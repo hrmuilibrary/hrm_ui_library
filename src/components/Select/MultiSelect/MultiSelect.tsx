@@ -88,7 +88,7 @@ export const MultiSelect = (props: TMultiSelectPropTypes): ReactElement => {
     closeDropdown()
   }
 
-  const applySelectedItems = (isChecked: boolean) => {
+  const applySelectedItems = (isChecked = false) => {
     submitSelectedValue(selectedValues, isChecked)
   }
 
@@ -118,6 +118,7 @@ export const MultiSelect = (props: TMultiSelectPropTypes): ReactElement => {
       isRequiredField={isRequiredField}
       overflowText={overflowText}
       hasError={hasError}
+      applySelectedItems={applySelectedItems}
     >
       <>
         <OptionsWrapper

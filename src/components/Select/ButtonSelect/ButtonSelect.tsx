@@ -4,6 +4,7 @@ import { OptionItem } from '../../../helperComponents'
 import { useGetElemSizes, useOnOutsideClick } from '../../../hooks'
 import { Loading, ButtonSelectWrapper } from '../SharedComponents'
 import { TButtonSelectPropTypes } from '../types'
+import { noop } from '../../../utils/helpers'
 
 export const ButtonSelect = (props: TButtonSelectPropTypes): ReactElement => {
   const {
@@ -70,6 +71,7 @@ export const ButtonSelect = (props: TButtonSelectPropTypes): ReactElement => {
 
   return (
     <ButtonSelectWrapper
+      applySelectedItems={noop}
       size={size}
       className={className}
       dropdownWidth={dropdownWidth}

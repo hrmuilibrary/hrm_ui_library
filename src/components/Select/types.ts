@@ -235,6 +235,7 @@ export interface TFilterGroupDropdownContentProps extends IFormCompProps {
 }
 
 export type TSelectWrapperProps = {
+  applySelectedItems: (isChecked: boolean) => void
   hasError?: boolean
   children: ReactElement
   size?: 'small' | 'large' | 'medium'
