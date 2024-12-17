@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.5.0...1.5.1) (2024-12-17)
+
+
+### Bug Fixes
+
+* change modal position to fixed in mobile size ([5af84de](https://github.com/dino-front-bot/hrm_ui_lib/commit/5af84de3b637f99dfffc3e05ccbf3c2c37ec5177))
+
 # [1.5.0](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.13...1.5.0) (2024-12-17)
 
 
