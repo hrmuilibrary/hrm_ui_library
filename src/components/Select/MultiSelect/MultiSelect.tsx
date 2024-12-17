@@ -9,6 +9,7 @@ import { useIsMobile } from '../../../hooks/useGetIsMobile'
 
 export const MultiSelect = (props: TMultiSelectPropTypes): ReactElement => {
   const {
+    isMobileFullScreen = true,
     options,
     footerButtonProps = {
       confirm: {
@@ -98,6 +99,7 @@ export const MultiSelect = (props: TMultiSelectPropTypes): ReactElement => {
 
   const { overflowText } = localizations
   const isMobile = useIsMobile()
+
   return (
     <WrapperComponent
       dropdownRef={dropdownRef}
@@ -119,6 +121,7 @@ export const MultiSelect = (props: TMultiSelectPropTypes): ReactElement => {
       overflowText={overflowText}
       hasError={hasError}
       applySelectedItems={applySelectedItems}
+      isMobile={isMobile && isMobileFullScreen}
     >
       <>
         <OptionsWrapper
@@ -134,9 +137,10 @@ export const MultiSelect = (props: TMultiSelectPropTypes): ReactElement => {
           setSelectedValues={setSelectedValues}
           containerRef={containerRef?.current}
           dropdownWidth={dropdownWidth}
+          isMobileFullScreen={isMobileFullScreen}
           {...rest}
         />
-        {options.length && !isMobile ? (
+        {options.length && !(isMobile && isMobileFullScreen) ? (
           <Footer
             checkboxInfo={checkboxInfo}
             hasChange={hasChange}

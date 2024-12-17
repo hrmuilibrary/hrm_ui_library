@@ -5,6 +5,7 @@ import { useGetElemSizes, useOnOutsideClick } from '../../../hooks'
 import { Loading, ButtonSelectWrapper } from '../SharedComponents'
 import { TButtonSelectPropTypes } from '../types'
 import { noop } from '../../../utils/helpers'
+import { useIsMobile } from '../../../hooks/useGetIsMobile'
 
 export const ButtonSelect = (props: TButtonSelectPropTypes): ReactElement => {
   const {
@@ -28,7 +29,8 @@ export const ButtonSelect = (props: TButtonSelectPropTypes): ReactElement => {
     placeHolder,
     offsets,
     dataId,
-    type
+    type,
+    isMobileFullScreen = false
   } = props
 
   const currentSelection = (value as TItemValue) || selectedItem
@@ -45,6 +47,7 @@ export const ButtonSelect = (props: TButtonSelectPropTypes): ReactElement => {
   useOnOutsideClick(containerRef.current, closeDropdown, isOpen, useId())
 
   const onItemDeselect = () => onItemSelect(null)
+  const isMobile = useIsMobile()
 
   const onItemSelect = (value: TItemValue) => {
     if (setSelectedItem) {
@@ -86,6 +89,7 @@ export const ButtonSelect = (props: TButtonSelectPropTypes): ReactElement => {
       placeHolder={placeHolder}
       dataId={dataId}
       type={type}
+      isMobile={isMobile && isMobileFullScreen}
     >
       {isLoading ? (
         <Loading />

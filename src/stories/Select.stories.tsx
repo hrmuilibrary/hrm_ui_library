@@ -13426,6 +13426,7 @@ const MultiSelectTemplate: StoryFn<TMultiSelectPropTypes> = (args) => {
         // maxSelectCount={3}
         selectedItems={selectedValues}
         setSelectedItems={set}
+        isMobileFullScreen={false}
         labelRightIconComponent={() => (
           <IconPerson
             size="xsmall"

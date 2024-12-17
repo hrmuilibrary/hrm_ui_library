@@ -14,6 +14,7 @@ import { useIsMobile } from '../../../../hooks/useGetIsMobile'
 
 export const MultiSelectGrouped = (props: TMultiSelectGroupedProps): React.ReactElement | null => {
   const {
+    isMobile,
     avatar,
     options,
     helperText,
@@ -131,7 +132,6 @@ export const MultiSelectGrouped = (props: TMultiSelectGroupedProps): React.React
   }, [avatar, labelLeftIconProps, optionRightIconComponent, labelRightIconComponent])
   const hasTopContent = isSearchAvailable || helperText
 
-  const isMobile = useIsMobile()
   return (
     <>
       {hasTopContent ? (

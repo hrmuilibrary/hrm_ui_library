@@ -7,6 +7,7 @@ import { getStringWidth } from '../../../utils/helpers'
 import { SELECTED_VISIBLE_MIN_COUNT, TRANSLATIONS_DEFAULT_VALUES } from '../constants'
 import { useGetElemSizes, useGetHasBottomSpace, useGetHasTopSpace } from '../../../hooks'
 import { TSelectTranslations } from '../types'
+import { useIsMobile } from '../../../hooks/useGetIsMobile'
 
 type TProps = {
   isLoading?: boolean
@@ -21,6 +22,7 @@ type TProps = {
   options: TSelectOptions
   selectedValues: TSelectedValue[]
   setSelectedValues: (values: TSelectedValue[]) => void
+  isMobileFullScreen: boolean
 }
 export const OptionsWrapper = (props: TProps): ReactElement => {
   const {
@@ -35,6 +37,7 @@ export const OptionsWrapper = (props: TProps): ReactElement => {
     setSelectedValues,
     setIsOpen,
     dropdownRef,
+    isMobileFullScreen,
     ...rest
   } = props
   const { width } = useGetElemSizes(containerRef)
@@ -52,21 +55,6 @@ export const OptionsWrapper = (props: TProps): ReactElement => {
     },
     [width]
   )
-
-  const toggleDropdown = (e?: TClickEventType) => {
-    const clickedElement = e?.target as HTMLDivElement
-    const className = clickedElement?.getAttribute('class')
-    if (
-      e &&
-      className &&
-      (className.indexOf('icon-') !== -1 || className.indexOf('svg-icon') !== -1)
-    ) {
-      setIsOpen(!isOpen)
-      e.preventDefault()
-    } else {
-      setIsOpen(true)
-    }
-  }
 
   const onItemSelect = (item: TSelectedValue) => {
     setSelectedValues([...selectedValues, item])
@@ -100,6 +88,8 @@ export const OptionsWrapper = (props: TProps): ReactElement => {
     element: dropdownRef,
     input: inputRef.current
   })
+  const _isMobile = useIsMobile()
+  const isMobile = _isMobile && isMobileFullScreen
 
   if (isLoading) {
     return <Loading />
@@ -111,6 +101,7 @@ export const OptionsWrapper = (props: TProps): ReactElement => {
       // @ts-ignore
       options={options}
       isOpen={isOpen}
+      isMobile={isMobile}
       hasBottomSpace={hasBottomSpace}
       translations={localizations}
       selectedValues={selectedValues}
