@@ -1,3 +1,11 @@
+# [1.5.0](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.13...1.5.0) (2024-12-17)
+
+
+### Features
+
+* add some helpers files ([5370ef8](https://github.com/dino-front-bot/hrm_ui_lib/commit/5370ef8ccf44075910878dae880d4bc7cbf30a6c))
+* revert default props in single select ([67c69f0](https://github.com/dino-front-bot/hrm_ui_lib/commit/67c69f00633e3dc687d0d35f030248a5d5d0287d))
+
 ## [1.4.13](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.12...1.4.13) (2024-12-17)
 
 
