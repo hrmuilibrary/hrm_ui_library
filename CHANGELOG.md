@@ -1,3 +1,11 @@
+## [1.4.12](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.11...1.4.12) (2024-12-17)
+
+
+### Bug Fixes
+
+* change text area in mobile size ([a32b81a](https://github.com/dino-front-bot/hrm_ui_lib/commit/a32b81ad63731d075b70679f0760c08fdffd8ca4))
+* fix multi select item selection in mobile view ([3bdced2](https://github.com/dino-front-bot/hrm_ui_lib/commit/3bdced2de70c26cb3af3707e7d19de3fa43356c1))
+
 ## [1.4.11](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.4.10...1.4.11) (2024-12-16)
 
 
