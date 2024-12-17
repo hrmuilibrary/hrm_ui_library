@@ -17,7 +17,6 @@ export const ButtonSelectWrapper = (props: TSelectWrapperProps): ReactElement =>
     className,
     dropdownWidth,
     align = 'left',
-    offsets,
     isOpen,
     setIsOpen,
     containerRef,
@@ -29,7 +28,8 @@ export const ButtonSelectWrapper = (props: TSelectWrapperProps): ReactElement =>
     dataId,
     disabled,
     modalApplyButtonText,
-    type = 'secondary'
+    type = 'secondary',
+    applySelectedItems
   } = props
 
   const buttonRef = useRef<HTMLButtonElement>(null)
@@ -68,6 +68,7 @@ export const ButtonSelectWrapper = (props: TSelectWrapperProps): ReactElement =>
       <>
         {isMobile ? (
           <MobileWrapper
+            applySelectedItems={applySelectedItems}
             isOpen={isOpen}
             closeDrodown={() => setIsOpen(false)}
             modalApplyButtonText={modalApplyButtonText}

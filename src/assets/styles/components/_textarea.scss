@@ -120,3 +120,12 @@
     text-align: right;
   }
 }
+
+
+// MOBILE
+
+@media screen and (max-width: 768px) {
+  textarea{
+    font-size: var(--ds-paragraph-md) !important;
+  }
+}
