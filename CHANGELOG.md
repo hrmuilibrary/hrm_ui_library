@@ -1,3 +1,11 @@
+## [1.5.2](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.5.1...1.5.2) (2024-12-19)
+
+
+### Bug Fixes
+
+* change fullscreen modal style ([972f79c](https://github.com/dino-front-bot/hrm_ui_lib/commit/972f79c6f811b55cb338ad50a5b9426aa964e218))
+* change modal animation duration ([13d63d6](https://github.com/dino-front-bot/hrm_ui_lib/commit/13d63d6c329c322378995701fe6fd6aa2a9a3dac))
+
 ## [1.5.1](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.5.0...1.5.1) (2024-12-17)
 
 
