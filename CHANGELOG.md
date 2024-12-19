@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.5.2...1.5.3) (2024-12-19)
+
+
+### Bug Fixes
+
+* revert styles for `DesktopWrapper` ([663c806](https://github.com/dino-front-bot/hrm_ui_lib/commit/663c806697463d0818e8da7098e214df79a32d42))
+
 ## [1.5.2](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.5.1...1.5.2) (2024-12-19)
 
 
