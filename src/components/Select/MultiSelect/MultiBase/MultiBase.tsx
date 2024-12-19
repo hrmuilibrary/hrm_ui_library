@@ -110,7 +110,13 @@ export const MultiBase = (props: TMultySingleTabPropTypes): ReactElement | null 
       >
         {filteredData.length > 0 && (
           <List
-            height={isMobile ? window.innerHeight - 80 - 73 - 24 : DROPDOWN_HEIGHT}
+            height={
+              isMobile
+                ? window.innerHeight - 80 - 73 - 24
+                : filteredData.length * ITEM_SIZE > DROPDOWN_HEIGHT
+                ? DROPDOWN_HEIGHT
+                : filteredData.length * ITEM_SIZE
+            }
             itemCount={filteredData.length}
             itemSize={isMobile ? ITEM_SIZE_MOBILE : ITEM_SIZE}
             width={isMobile ? window.innerWidth : dropdownWidth || DROPDOWN_WIDTH}
