@@ -41,7 +41,7 @@ export const MOBILE_ANIMATION = (isFullScreen?: boolean) => {
       bottom: 0
     },
     transition: {
-      duration: 0.6
+      duration: 0.3
     }
   }
 }
