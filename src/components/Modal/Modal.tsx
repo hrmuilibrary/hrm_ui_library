@@ -33,7 +33,7 @@ export const MOBILE_ANIMATION = (isFullScreen?: boolean) => {
       bottom: 0
     },
     animate: {
-      height: isFullScreen ? '100vh' : 'auto',
+      height: isFullScreen ? '100%' : 'auto',
       bottom: 0
     },
     exit: {
