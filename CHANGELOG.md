@@ -1,3 +1,10 @@
+## [1.5.4](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.5.3...1.5.4) (2024-12-19)
+
+
+### Bug Fixes
+
+* fix multiselect optiosn height calculation in desktop view ([52be684](https://github.com/dino-front-bot/hrm_ui_lib/commit/52be6846758b7c855a62b15f1a3cc9c30d1df55e))
+
 ## [1.5.3](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.5.2...1.5.3) (2024-12-19)
 
 
