@@ -11,6 +11,7 @@ import { DesktopWrapper } from '../../MultiSelect/DesktopWrapper'
 
 export const ButtonSelectWrapper = (props: TSelectWrapperProps): ReactElement => {
   const {
+    offsets,
     children,
     size,
     className,
@@ -77,6 +78,7 @@ export const ButtonSelectWrapper = (props: TSelectWrapperProps): ReactElement =>
           </MobileWrapper>
         ) : (
           <DesktopWrapper
+            offsets={offsets}
             setDropdownRef={setDropdownRef}
             isOpen={isOpen}
             align={align}
