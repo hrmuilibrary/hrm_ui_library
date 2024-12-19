@@ -16,9 +16,15 @@ type TProps = {
   dropdownRef: HTMLDivElement | null
   containerRef: HTMLDivElement | null
   dropdownWidth: number | undefined
+  offsets?: {
+    top?: number
+    left?: number
+    right?: number
+  }
 }
 export const DesktopWrapper = (props: TProps): ReactElement | null => {
   const {
+    offsets,
     setDropdownRef,
     align,
     isOpen,
@@ -46,10 +52,12 @@ export const DesktopWrapper = (props: TProps): ReactElement | null => {
       className="select__options"
       ref={setDropdownRef}
       style={{
-        left: align === 'left' ? left : right - (dropdownWidth || containerWidth),
+        left: align === 'left' ? offsets?.left || left : right - (dropdownWidth || containerWidth),
+        right:
+          align === 'right' ? offsets?.right || left : right - (dropdownWidth || containerWidth),
         width: dropdownWidth || containerWidth,
         ...(hasBottomSpace || !hasTopSpace
-          ? { top: bottom }
+          ? { top: offsets?.top || bottom }
           : { bottom: window.innerHeight - top + DROPDOWN_AND_INPUT_GAP })
       }}
     >
