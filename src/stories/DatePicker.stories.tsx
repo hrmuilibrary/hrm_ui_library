@@ -28,8 +28,28 @@ const getAllLastDays = () => {
       arr.push(new Date(CURRENT_YEAR, month, day))
     }
   }
-  return arr
+  return [new Date('2025-01-14T00:00:00')]
 }
+
+export const isWeekend = (date: Date) => {
+  return date.getDay() === 6 || date.getDay() === 0 // 6 is Saturday, 0 is Sunday
+}
+export const isSameDay = (date1: Date, date2: Date): boolean => {
+  const day1 = date1.getDate()
+  const month1 = date1.getMonth()
+  const year1 = date1.getFullYear()
+
+  const day2 = date2.getDate()
+  const month2 = date2.getMonth()
+  const year2 = date2.getFullYear()
+
+  return day1 === day2 && month1 === month2 && year1 === year2
+}
+export const isWeekday = (date: Date, publicHolidays: string[]): boolean => {
+  // Return true if the day is not Saturday or Sunday or Public holiday
+  return !isWeekend(date) && !publicHolidays.some((holiday) => isSameDay(new Date(holiday), date))
+}
+const publicHolidays = ['2025-01-14T00:00:00']
 
 const SimplePicker: StoryFn<ISimpleDatePickerProps> = (args) => {
   const [value, setValue] = useState<Date | undefined>(undefined)
@@ -48,9 +68,10 @@ const SimplePicker: StoryFn<ISimpleDatePickerProps> = (args) => {
         // label="ddd"
         placeholderText="Select date"
         size="small"
-        excludeDates={getAllLastDays()}
-        minDate={new Date(new Date().setDate(new Date().getDate() + 15))}
-        maxDate={new Date(new Date().setDate(new Date().getDate() + 60))}
+        // excludeDates={getAllLastDays()}
+        // minDate={new Date(new Date().setDate(new Date().getDate() + 15))}
+        // maxDate={new Date(new Date().setDate(new Date().getDate() + 60))}
+        filterDate={(date) => isWeekday(date, publicHolidays)}
       />
     </div>
   )
