@@ -1,3 +1,10 @@
+## [1.5.5](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.5.4...1.5.5) (2024-12-20)
+
+
+### Bug Fixes
+
+* add styles to highlight dates in datepicker ([ec00099](https://github.com/dino-front-bot/hrm_ui_lib/commit/ec0009963416f23bda6052416749215ef29169d9))
+
 ## [1.5.4](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.5.3...1.5.4) (2024-12-19)
 
 
