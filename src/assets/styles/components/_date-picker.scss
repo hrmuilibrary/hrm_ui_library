@@ -95,6 +95,17 @@
   border: 0;
   width: 100%;
 }
+.react-datepicker__day {
+    &.react-datepicker__day--disabled {
+      background-color: unset;
+      color: var(--red-800);
+    }
+    &.react-datepicker__day--weekend {
+      background-color: unset;
+      color: var(--grey-400);
+    }
+}
+
 
 .react-datepicker {
   font-family: "Helvetica Neue", helvetica, arial, sans-serif;
