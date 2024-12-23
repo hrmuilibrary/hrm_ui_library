@@ -1,3 +1,10 @@
+## [1.5.7](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.5.6...1.5.7) (2024-12-23)
+
+
+### Bug Fixes
+
+* fix select component UI issue ([6b914bb](https://github.com/dino-front-bot/hrm_ui_lib/commit/6b914bbfdb09aa49a376c8cc09fa60e1cc912c65))
+
 ## [1.5.6](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.5.5...1.5.6) (2024-12-23)
 
 
