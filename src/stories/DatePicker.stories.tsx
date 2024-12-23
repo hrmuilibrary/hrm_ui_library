@@ -59,6 +59,7 @@ const SimplePicker: StoryFn<ISimpleDatePickerProps> = (args) => {
       <_SimpleDatePicker
         {...args}
         value={value}
+        minDate={new Date()}
         label={'Simple Date Picker'}
         modalOptions={{
           title: 'Select date'
