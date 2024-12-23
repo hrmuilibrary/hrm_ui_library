@@ -1,3 +1,10 @@
+## [1.5.6](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.5.5...1.5.6) (2024-12-23)
+
+
+### Bug Fixes
+
+* reset changes ([d6b89c3](https://github.com/dino-front-bot/hrm_ui_lib/commit/d6b89c32d11eca83791d4f658a157c33f79d4611))
+
 ## [1.5.5](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.5.4...1.5.5) (2024-12-20)
 
 
