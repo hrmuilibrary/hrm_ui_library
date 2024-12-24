@@ -13270,7 +13270,7 @@ const languagesOptions = [
 
 // -----------SINGLE SELECT---------
 const Template: StoryFn<TSingleSelectPropTypes> = (args) => {
-  const [selectedValue, setSelectedValue] = useState<TItemValue | undefined>(null)
+  const [selectedValue, setSelectedValue] = useState<TItemValue | undefined>(MOCK_DATA[0].value)
   const ref = useRef<HTMLDivElement | null>(null)
 
   const subMenuItems = useMemo(() => {

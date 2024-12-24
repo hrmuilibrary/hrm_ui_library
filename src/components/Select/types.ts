@@ -1,7 +1,7 @@
 import { LegacyRef, ReactElement, ReactNode } from 'react'
 import { TButtonPropTypes } from '../Button/types'
-import { TTooltipProps } from '../Tooltip/types'
 import { TMenuItem } from '../Menu/types'
+import { TTooltipProps } from '../Tooltip/types'
 
 interface TSelectBaseProps {
   dataIdPrefix?: string
@@ -254,7 +254,7 @@ export type TSelectWrapperProps = {
   isOpen: boolean
   setIsOpen: (isOpen: boolean) => void
   containerRef: HTMLDivElement | null
-  setContainerRef: LegacyRef<HTMLDivElement> | undefined
+  setContainerRef: (value: HTMLDivElement | null) => void
   options?: TSelectOptions
   label?: string | React.ReactElement
   placeHolder?: string
