@@ -1,3 +1,10 @@
+## [1.5.8](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.5.7...1.5.8) (2024-12-24)
+
+
+### Bug Fixes
+
+* fix multiselect label visibility in initial mount ([3f455f9](https://github.com/dino-front-bot/hrm_ui_lib/commit/3f455f96118c8ee0789c1a23502bd06b05ce239f))
+
 ## [1.5.7](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.5.6...1.5.7) (2024-12-23)
 
 
