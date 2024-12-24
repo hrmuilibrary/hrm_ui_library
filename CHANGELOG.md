@@ -1,3 +1,10 @@
+## [1.5.9](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.5.8...1.5.9) (2024-12-24)
+
+
+### Bug Fixes
+
+* add `GoToWebPage` component ([8e7e19e](https://github.com/dino-front-bot/hrm_ui_lib/commit/8e7e19ed4b9d6c66a7d60d39432936cdadf38681))
+
 ## [1.5.8](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.5.7...1.5.8) (2024-12-24)
 
 
