@@ -36,7 +36,7 @@ export const ButtonSelect = (props: TButtonSelectPropTypes): ReactElement => {
   const currentSelection = (value as TItemValue) || selectedItem
 
   const [isOpen, setIsOpen] = useState<boolean>(false)
-  const containerRef = useRef<HTMLDivElement>(null)
+  const [containerRef, setContainerRef] = useState<HTMLDivElement | null>(null)
   const scrollRef = useRef<HTMLDivElement>(null)
   const [dropdownRef, setDropdownRef] = useState<HTMLDivElement | null>(null)
 
@@ -44,7 +44,7 @@ export const ButtonSelect = (props: TButtonSelectPropTypes): ReactElement => {
 
   const closeDropdown = () => setIsOpen(false)
 
-  useOnOutsideClick(containerRef.current, closeDropdown, isOpen, useId())
+  useOnOutsideClick(containerRef, closeDropdown, isOpen, useId())
 
   const onItemDeselect = () => onItemSelect(null)
   const isMobile = useIsMobile()
@@ -82,8 +82,8 @@ export const ButtonSelect = (props: TButtonSelectPropTypes): ReactElement => {
       offsets={offsets}
       isOpen={isOpen}
       setIsOpen={setIsOpen}
-      containerRef={containerRef.current}
-      setContainerRef={containerRef}
+      containerRef={containerRef}
+      setContainerRef={setContainerRef}
       dropdownRef={dropdownRef}
       setDropdownRef={setDropdownRef}
       placeHolder={placeHolder}

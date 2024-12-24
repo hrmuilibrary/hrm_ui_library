@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect, useId, useMemo, useRef, useState } from 'react'
+import React, { ReactElement, useEffect, useId, useMemo, useState } from 'react'
 
 import { OptionsWrapper } from './OptionsWrapper'
 import { Footer, InputSelectWrapper, ButtonSelectWrapper } from '../SharedComponents'
@@ -44,7 +44,7 @@ export const MultiSelect = (props: TMultiSelectPropTypes): ReactElement => {
 
   const [isOpen, setIsOpen] = useState(false)
   const [selectedValues, setSelectedValues] = useState<TSelectedValue[]>(initialSelected)
-  const containerRef = useRef<HTMLDivElement | null>(null)
+  const [containerRef, setContainerRef] = useState<HTMLDivElement | null>(null)
 
   const closeDropdown = () => setIsOpen(false)
   const openDropdown = () => setIsOpen(true)
@@ -76,7 +76,7 @@ export const MultiSelect = (props: TMultiSelectPropTypes): ReactElement => {
     closeDropdown()
   }
 
-  useOnOutsideClick(containerRef.current, cancelSelectedItems, isOpen, useId())
+  useOnOutsideClick(containerRef, cancelSelectedItems, isOpen, useId())
 
   const submitSelectedValue = (selections: TSelectedValue[], isChecked: boolean) => {
     if (setSelectedItems) {
@@ -105,8 +105,8 @@ export const MultiSelect = (props: TMultiSelectPropTypes): ReactElement => {
       dropdownRef={dropdownRef}
       isOpen={isOpen}
       setIsOpen={setIsOpen}
-      containerRef={containerRef?.current}
-      setContainerRef={containerRef}
+      containerRef={containerRef}
+      setContainerRef={setContainerRef}
       dropdownWidth={dropdownWidth}
       setDropdownRef={setDropdownRef}
       size={size}
@@ -135,7 +135,7 @@ export const MultiSelect = (props: TMultiSelectPropTypes): ReactElement => {
           openDropdown={openDropdown}
           selectedValues={selectedValues}
           setSelectedValues={setSelectedValues}
-          containerRef={containerRef?.current}
+          containerRef={containerRef}
           dropdownWidth={dropdownWidth}
           isMobileFullScreen={isMobileFullScreen}
           {...rest}
