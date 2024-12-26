@@ -1,3 +1,10 @@
+## [1.5.11](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.5.10...1.5.11) (2024-12-26)
+
+
+### Bug Fixes
+
+* change vh to % for modal mobile fullscreen ([a25b0e7](https://github.com/dino-front-bot/hrm_ui_lib/commit/a25b0e77f14d14eff54bc9cc30a371c9fbe2cade))
+
 ## [1.5.10](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.5.9...1.5.10) (2024-12-26)
 
 
