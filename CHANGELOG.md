@@ -1,3 +1,10 @@
+## [1.5.10](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.5.9...1.5.10) (2024-12-26)
+
+
+### Bug Fixes
+
+* modal opacity for mobile fullscreen ([991db9e](https://github.com/dino-front-bot/hrm_ui_lib/commit/991db9e0535ad7a7ed571afc434f52c4dbfbcd44))
+
 ## [1.5.9](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.5.8...1.5.9) (2024-12-24)
 
 
