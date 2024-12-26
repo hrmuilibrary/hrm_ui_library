@@ -74,7 +74,7 @@ export const Modal = (props: TModalPropTypes): ReactElement => {
             opacity: 1
           }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: isMobile ? 0 : 0.4 }}
         >
           <motion.div
             className={classNames('modal__container', {
