@@ -94,8 +94,8 @@
       min-height: var(--ds-select-scroll-min-height);
       //padding: var(--ds-select-scroll-padding);
       @media screen and (max-width: 768px) {
-        max-height: 100%;
         overflow-y: auto;
+        max-height: initial;
       }
     }
 
