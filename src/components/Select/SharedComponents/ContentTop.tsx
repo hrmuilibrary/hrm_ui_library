@@ -89,17 +89,19 @@ export const ContentTop = React.memo<TProps>((props: TProps): React.ReactElement
     setSearchValue && setSearchValue(e.target.value)
   }
 
+  const isMobile = useIsMobile()
+
   const removeFilter = () => setSearchValue && setSearchValue('')
   useEffect(() => {
-    if (inputRef && inputRef.current) {
+    if (inputRef && inputRef.current && !isMobile) {
       inputRef.current.focus()
     }
-  }, [inputRef])
+  }, [inputRef, isMobile])
 
   const onBack = () => {
     closeDropdown && closeDropdown()
   }
-  const isMobile = useIsMobile()
+
   return (
     <div className="content-top">
       {helperText && !isMobile ? (
