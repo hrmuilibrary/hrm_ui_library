@@ -1,3 +1,10 @@
+## [1.5.13](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.5.12...1.5.13) (2025-01-10)
+
+
+### Bug Fixes
+
+* styles for select fullscreen ([3444209](https://github.com/dino-front-bot/hrm_ui_lib/commit/3444209a50f3a856ba21abea93adced42d13f3b8))
+
 ## [1.5.12](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.5.11...1.5.12) (2025-01-09)
 
 
