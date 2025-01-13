@@ -1,3 +1,10 @@
+## [1.5.14](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.5.13...1.5.14) (2025-01-13)
+
+
+### Bug Fixes
+
+* test deployment process (CI/CD) ([b396c7a](https://github.com/hrmuilibrary/hrm_ui_library/commit/b396c7afde10ff7fa2b4642f5369b5cbbada2dac))
+
 ## [1.5.13](https://github.com/dino-front-bot/hrm_ui_lib/compare/1.5.12...1.5.13) (2025-01-10)
 
 
