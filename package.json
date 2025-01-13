@@ -1,5 +1,5 @@
 {
-  "homepage": "https://github.com/dino-front-bot/hrm_ui_lib",
+  "homepage": "https://github.com/hrmuilibrary/hrm_ui_library",
   "name": "hrm_ui_lib",
   "version": "1.5.13",
   "description": "UI library for Dino",
@@ -142,6 +142,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dino-front-bot/hrm_ui_lib.git"
+    "url": "https://github.com/hrmuilibrary/hrm_ui_library.git"
   }
 }
