@@ -1,7 +1,11 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 import React, { useState } from 'react'
-import { FileUpload as _FileUpload, TFileUploadProps } from '../components/FileUpload'
+import {
+  FileUpload as _FileUpload,
+  TFileUploadProps,
+  DnDFileUpload as _DnDFileUpload
+} from '../components/FileUpload'
 import IconInfo from '../components/SVGIcons/IconInfo'
 import { StoryFn } from '@storybook/react'
 
@@ -41,3 +45,13 @@ FileUpload.args = {
   isFileUploaded: false,
   labelAddons: <IconInfo size={'xsmall'} type={'information'} className={'ml-4'} />
 }
+
+const Template2 = (args) => {
+  return (
+    <div style={{ width: 400 }}>
+      <_DnDFileUpload {...args} />
+    </div>
+  )
+}
+
+export const DragAndDropFileUpload = Template2.bind({})
