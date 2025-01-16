@@ -1,5 +1,5 @@
-import React, { ReactElement, useState } from 'react'
-import { FileError, FileRejection, useDropzone } from 'react-dropzone'
+import React, { ReactElement, useMemo, useState } from 'react'
+import { ErrorCode, FileError, FileRejection, useDropzone } from 'react-dropzone'
 import IconUpload from '../SVGIcons/IconUpload'
 import { Text } from '../Text'
 import classnames from 'classnames'
@@ -7,10 +7,11 @@ import { Button } from '../Button'
 import filePreviewSVG from '../../assets/images/file-preview.svg'
 import { Progress } from '../Progress'
 import IconDelete from '../SVGIcons/IconDelete'
+import { Alert } from '../Alert'
 
 interface DnDFileUploadProps {
   maxSize?: number
-  accept?: string
+  accept?: FileTypeEnum[]
 }
 
 type FileType = File & { preview: string }
@@ -107,12 +108,85 @@ const PreviewItem = ({ file, onRemove }: { file: FileType; onRemove: () => void 
   )
 }
 
+const ErrorItem = ({
+  code,
+  onRemove,
+  areaContent
+}: {
+  code: string
+  areaContent: AreaContentDTO
+  onRemove: () => void
+}) => {
+  const errorMessage = useMemo(() => {
+    if (code === ErrorCode.FileInvalidType) {
+      return `The file type should be ${areaContent.acceptTypesMessage}`
+    } else if (code === ErrorCode.FileTooLarge) {
+      return `The file is too large (Max ${areaContent.maxSizeFormatted})`
+    }
+    return ''
+  }, [code])
+
+  return errorMessage ? (
+    <Alert type="error" text={errorMessage} closeIcon onClose={onRemove} />
+  ) : null
+}
+
+export type AreaContentDTO = {
+  acceptTypes: string[]
+  maxSizeFormatted: string
+  acceptTypesMessage: string
+}
+
+const generateAreaContent = ({
+  accept,
+  maxSize
+}: {
+  accept: FileTypeEnum[]
+  maxSize: number
+}): AreaContentDTO => {
+  const acceptTypes = accept.map((type: FileTypeEnum) => FileAcceptType[type])
+
+  const acceptTypesMessage =
+    accept.length === 1
+      ? accept[0]
+      : accept.reduce((acc, currentValue, _index, _arr) => {
+          if (_index === _arr.length - 1) {
+            return `${acc} or ${currentValue}`
+          }
+          return acc ? `${acc}, ${currentValue}` : currentValue
+        }, '')
+
+  return {
+    acceptTypes,
+    maxSizeFormatted: formatFileSize(maxSize),
+    acceptTypesMessage
+  }
+}
+
+export enum FileTypeEnum {
+  PDF = 'PDF',
+  IMAGE = 'IMAGE',
+  DOC = 'DOC'
+}
+
+const FileAcceptType = {
+  [FileTypeEnum.PDF]: 'application/pdf,.pdf',
+  [FileTypeEnum.IMAGE]: 'image/*',
+  [FileTypeEnum.DOC]:
+    '.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+}
+
 export const DnDFileUpload = ({
-  maxSize = 40 * 1024 * 1024,
-  accept = 'application/pdf, image/*, video/*'
+  maxSize = 10 * 1024 * 1024,
+  accept = [FileTypeEnum.DOC]
 }: DnDFileUploadProps): ReactElement => {
   const [acceptedFiles, setAcceptedFiles] = useState<FileType[]>([])
   const [errors, setErrors] = useState<FileError[]>([])
+  const areaContent = generateAreaContent({
+    accept,
+    maxSize
+  })
+
   const onDrop = (acceptedFiles: File[], fileRejections: FileRejection[]) => {
     const newAcceptedFiles = acceptedFiles.map((file: File) => {
       return Object.assign(file, {
@@ -126,7 +200,7 @@ export const DnDFileUpload = ({
 
   const { getRootProps, getInputProps, isFocused, isDragActive, isDragReject } = useDropzone({
     onDrop,
-    accept,
+    accept: areaContent.acceptTypes,
     maxSize
   })
 
@@ -136,7 +210,11 @@ export const DnDFileUpload = ({
     )
   }
 
-  console.log(errors)
+  const removeError = (index: number) => {
+    setErrors((prevErrors: FileError[]) =>
+      prevErrors.filter((_error: FileError, i: number) => i !== index)
+    )
+  }
 
   return (
     <div className="dnd-file-upload">
@@ -153,11 +231,23 @@ export const DnDFileUpload = ({
         <Text type="primary" weight="semibold" className="mb-6">
           Choose a file or drag it here
         </Text>
-        {/* Todo: check description depends on accept types*/}
-        <Text size="small">JPEG, PNG, PDF, and MP4 formats, up to {formatFileSize(maxSize)}.</Text>
+        <Text size="small">
+          {areaContent.acceptTypesMessage} formats, Maximum size up to{' '}
+          {areaContent.maxSizeFormatted}.
+        </Text>
       </div>
 
       <div className="dnd-file-upload__files">
+        {errors.map(({ code }: FileError, index: number) => {
+          return (
+            <ErrorItem
+              key={index}
+              code={code}
+              areaContent={areaContent}
+              onRemove={() => removeError(index)}
+            />
+          )
+        })}
         {acceptedFiles.map((file: FileType, index: number) => {
           return <PreviewItem file={file} onRemove={() => removeFile(file.name)} key={index} />
         })}

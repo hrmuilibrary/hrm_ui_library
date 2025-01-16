@@ -7,7 +7,7 @@ export interface TAlertProps extends IFormCompProps {
   type?: TAlertTypes
   position?: TAlertPosition
   text: string | React.ReactElement
-  subtext: string | React.ReactElement
+  subtext?: string | React.ReactElement
   closeIcon?: boolean
   onClose: () => void
   buttonProps?: {
