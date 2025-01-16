@@ -48,7 +48,7 @@ FileUpload.args = {
 
 const Template2 = (args) => {
   return (
-    <div style={{ width: 400 }}>
+    <div style={{ width: 800 }}>
       <_DnDFileUpload {...args} />
     </div>
   )

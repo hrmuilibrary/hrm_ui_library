@@ -1,3 +1,3 @@
 export * from './FileUpload'
-export * from './DnDFileUpload'
+export * from './DnDFileUpload/DnDFileUpload'
 export * from './types'

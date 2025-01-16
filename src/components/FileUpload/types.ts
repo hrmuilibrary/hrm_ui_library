@@ -35,3 +35,12 @@ export interface IUploadItemPropTypes {
   withFilePreview?: boolean
   files: File[]
 }
+
+// DnDFileUpload types
+export type FileType = File & { preview?: string }
+
+export type AreaContentDTO = {
+  acceptTypes: string[]
+  maxSizeFormatted: string
+  acceptTypesMessage: string
+}
