@@ -14,10 +14,6 @@ export default {
   component: _FileUpload
 }
 
-const getFiles = (files: FileList) => {
-  console.log('getFiles', files)
-}
-
 const Template: StoryFn<TFileUploadProps> = (args) => {
   const [files, setFiles] = useState([])
   const getFiles = (_files) => {
@@ -47,11 +43,15 @@ FileUpload.args = {
 }
 
 const Template2 = (args) => {
+  const [files, setFiles] = useState([])
+  console.log('files', files)
+
   return (
     <div style={{ width: 800 }}>
-      <_DnDFileUpload {...args} />
+      <_DnDFileUpload {...args} setFiles={setFiles} />
     </div>
   )
 }
 
 export const DragAndDropFileUpload = Template2.bind({})
+DragAndDropFileUpload.args = {}

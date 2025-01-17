@@ -1,4 +1,11 @@
-import React, { ReactElement, useState } from 'react'
+import React, {
+  Dispatch,
+  ReactElement,
+  SetStateAction,
+  useCallback,
+  useEffect,
+  useState
+} from 'react'
 import { FileError, FileRejection, useDropzone } from 'react-dropzone'
 import IconUpload from '../../SVGIcons/IconUpload'
 import { Text } from '../../Text'
@@ -10,18 +17,21 @@ import { ErrorItem } from './ErrorItem'
 import { PreviewItem } from './PreviewItem'
 import { uniqueFiles as _uniqueFiles } from '../../../utils/helpers'
 
-interface DnDFileUploadProps {
+interface DnDFileUploadProps extends IFormCompProps {
   maxSize?: number
   accept?: FileTypeEnum[]
   name?: string
   multiple?: boolean
+  setFiles: Dispatch<SetStateAction<FileType[]>>
 }
 
 export const DnDFileUpload = ({
   maxSize = 10 * 1024 * 1024,
   accept = [FileTypeEnum.IMAGE, FileTypeEnum.PDF, FileTypeEnum.DOC],
+  multiple = true,
   name,
-  multiple = true
+  setFiles,
+  setFieldValue
 }: DnDFileUploadProps): ReactElement => {
   const [acceptedFiles, setAcceptedFiles] = useState<FileType[]>([])
   const [errors, setErrors] = useState<FileError[]>([])
@@ -59,6 +69,20 @@ export const DnDFileUpload = ({
       prevErrors.filter((_error: FileError, i: number) => i !== index)
     )
   }
+
+  const updateInForm = useCallback(
+    (values: File[]) => {
+      if (name && setFieldValue) {
+        setFieldValue(name, values as TFormValue)
+      }
+    },
+    [name, setFieldValue]
+  )
+
+  useEffect(() => {
+    setFiles(acceptedFiles)
+    updateInForm(acceptedFiles)
+  }, [acceptedFiles])
 
   return (
     <div className="dnd-file-upload">
