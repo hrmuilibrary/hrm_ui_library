@@ -3,15 +3,17 @@ import { ErrorCode } from 'react-dropzone'
 import { Alert } from '../../Alert'
 import { AreaContentDTO } from '../types'
 
+interface IErrorItemProps {
+  code: string
+  areaContent: AreaContentDTO
+  onRemove: () => void
+}
+
 export const ErrorItem = ({
   code,
   onRemove,
   areaContent
-}: {
-  code: string
-  areaContent: AreaContentDTO
-  onRemove: () => void
-}): ReactElement | null => {
+}: IErrorItemProps): ReactElement | null => {
   const errorMessage = useMemo(() => {
     if (code === ErrorCode.FileInvalidType) {
       return `The file type should be ${areaContent.acceptTypesMessage}`

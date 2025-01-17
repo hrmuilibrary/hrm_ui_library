@@ -1,7 +1,7 @@
 import { Text } from '../../Text'
 import { Button } from '../../Button'
 import IconDelete from '../../SVGIcons/IconDelete'
-import React, { ReactElement } from 'react'
+import React, { ReactElement, useMemo } from 'react'
 import { FileType } from '../types'
 import { FilePreview } from './FilePreview'
 import { formatFileSize, shortenFileName } from './helpers'
@@ -15,10 +15,14 @@ export const PreviewItem = ({
 }): ReactElement => {
   const type = file.type.split('/')[0]
 
+  const preview = useMemo(() => {
+    return URL.createObjectURL(file)
+  }, [file.name])
+
   return (
     <div className="dnd-file-upload__files--item">
       <div className={'dnd-file-upload__files--item__preview'}>
-        <FilePreview preview={file.preview} type={type} />
+        <FilePreview preview={preview} type={type} />
       </div>
       <div className={'dnd-file-upload__files--item__info'}>
         <div className="dnd-file-upload__files--item__info-title">

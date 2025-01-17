@@ -1,9 +1,14 @@
-import React, { useState } from 'react'
+import React, { ReactElement, useState } from 'react'
 import { Progress } from '../../Progress'
 import filePreviewSVG from '../../../assets/images/file-preview.svg'
 import classnames from 'classnames'
 
-export const FilePreview = ({ preview, type }: { preview?: string; type: string }) => {
+interface IFilePreviewProps {
+  preview?: string
+  type: string
+}
+
+export const FilePreview = ({ preview, type }: IFilePreviewProps): ReactElement => {
   const [loading, setLoading] = useState(true)
   const [hasError, setHasError] = useState(false)
 

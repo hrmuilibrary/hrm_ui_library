@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import { IconChevronLeft } from '../../../SVGIcons/IconChevronLeft'
 import { Input } from '../../../Input'
 import IconDismissFilled from '../../../SVGIcons/IconDismissFilled'
@@ -9,7 +9,7 @@ type TProps = {
   setSearchValue: (value: string) => void
   onBack: () => void
 }
-export const MobileTopContent = ({ onBack, setSearchValue, searchValue }: TProps) => {
+export const MobileTopContent = ({ onBack, setSearchValue, searchValue }: TProps): ReactElement => {
   const onSearch = (e: TChangeEventType) => {
     setSearchValue(e.target.value)
   }

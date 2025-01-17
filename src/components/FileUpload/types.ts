@@ -53,4 +53,5 @@ export interface DnDFileUploadProps extends IFormCompProps {
   name?: string
   multiple?: boolean
   setFiles?: Dispatch<SetStateAction<FileType[]>>
+  selectedFiles?: FileType[]
 }
