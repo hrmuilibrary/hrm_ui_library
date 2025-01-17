@@ -1,4 +1,6 @@
 import { FILE_UPLOAD_ERRORS } from '../../consts'
+import { FileTypeEnum } from '../../type'
+import { Dispatch, SetStateAction } from 'react'
 
 export interface TFileUploadProps extends IFormCompProps {
   allowedTypes?: string
@@ -43,4 +45,12 @@ export type AreaContentDTO = {
   acceptTypes: string[]
   maxSizeFormatted: string
   acceptTypesMessage: string
+}
+
+export interface DnDFileUploadProps extends IFormCompProps {
+  maxSize?: number
+  accept?: FileTypeEnum[]
+  name?: string
+  multiple?: boolean
+  setFiles?: Dispatch<SetStateAction<FileType[]>>
 }

@@ -11,19 +11,11 @@ import IconUpload from '../../SVGIcons/IconUpload'
 import { Text } from '../../Text'
 import classnames from 'classnames'
 import { FileTypeEnum } from '../../../type'
-import { FileType } from '../types'
+import { DnDFileUploadProps, FileType } from '../types'
 import { generateAreaContent } from './helpers'
 import { ErrorItem } from './ErrorItem'
 import { PreviewItem } from './PreviewItem'
 import { uniqueFiles as _uniqueFiles } from '../../../utils/helpers'
-
-interface DnDFileUploadProps extends IFormCompProps {
-  maxSize?: number
-  accept?: FileTypeEnum[]
-  name?: string
-  multiple?: boolean
-  setFiles: Dispatch<SetStateAction<FileType[]>>
-}
 
 export const DnDFileUpload = ({
   maxSize = 10 * 1024 * 1024,
@@ -80,7 +72,7 @@ export const DnDFileUpload = ({
   )
 
   useEffect(() => {
-    setFiles(acceptedFiles)
+    setFiles?.(acceptedFiles)
     updateInForm(acceptedFiles)
   }, [acceptedFiles])
 
