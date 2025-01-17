@@ -1,3 +1,5 @@
+import { FileTypeEnum } from '../type'
+
 export const IMAGE_MIME_TYPES = ['image/jpeg', 'image/png', 'application/pdf']
 
 export const IMAGE_MIME_TYPES_FOR_PREVIEW: TImageMimeTypes[] = [
@@ -85,3 +87,10 @@ export const MONTHS = [
 ]
 
 export const DROPDOWN_AND_INPUT_GAP = 10
+
+export const FILE_ACCEPT_TYPE = {
+  [FileTypeEnum.PDF]: 'application/pdf',
+  [FileTypeEnum.IMAGE]: 'image/*',
+  [FileTypeEnum.DOC]:
+    '.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+}

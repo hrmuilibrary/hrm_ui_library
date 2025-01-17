@@ -132,7 +132,8 @@
     "react-toastify": "10.0.5",
     "react-window": "^1.8.10",
     "sass": "^1.56.1",
-    "storybook-design-token": "^2.8.2"
+    "storybook-design-token": "^2.8.2",
+    "react-dropzone": "^11.4.2"
   },
   "husky": {
     "hooks": {

@@ -9,7 +9,7 @@ type TProps = {
   applySelectedItems: (isChecked: boolean) => void
 }
 
-export const MobileWrapper = (props: TProps) => {
+export const MobileWrapper = (props: TProps): ReactElement => {
   const {
     applySelectedItems,
     isOpen,

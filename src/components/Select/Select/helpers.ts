@@ -1,4 +1,4 @@
-export const filterOptions = (options: TSelectOptions, searchValue: string) => {
+export const filterOptions = (options: TSelectOptions, searchValue: string): TSelectOptions => {
   if (!searchValue) {
     return options
   }
