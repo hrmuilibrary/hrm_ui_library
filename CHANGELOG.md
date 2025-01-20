@@ -1,3 +1,12 @@
+## [1.6.1](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.0...1.6.1) (2025-01-20)
+
+
+### Bug Fixes
+
+* add view mode in DnD file upload component ([ab55bc3](https://github.com/hrmuilibrary/hrm_ui_library/commit/ab55bc3bccd4b3442941253e666b5d4c248a40a3))
+* change table title overflow styles ([f52fc11](https://github.com/hrmuilibrary/hrm_ui_library/commit/f52fc11f8826e87cfcbb5dd0f9398c7023b3c0dc))
+* reset version ([9a85f41](https://github.com/hrmuilibrary/hrm_ui_library/commit/9a85f4141aaa32171a2ab1d80e4b7385740af5f8))
+
 # [1.6.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.5.14...1.6.0) (2025-01-20)
 
 
