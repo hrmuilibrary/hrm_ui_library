@@ -29,6 +29,12 @@
           height: var(--ds-table-th-height);
           padding: var(--ds-table-th-padding);
           vertical-align: middle;
+          .table-header-title{
+            white-space: break-spaces;
+            min-width: 100px;
+            word-wrap: break-word;
+            text-align: left;
+          }
 
          .unsorted__icon {
            display: none;
