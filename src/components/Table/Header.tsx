@@ -68,7 +68,7 @@ export function Header({
               style={style}
             >
               <div className="flexbox align-items--center">
-                <Text weight="bold" className="text-truncate">
+                <Text weight="bold" className="table-header-title">
                   {render('Header')}
                 </Text>
                 {isSorted && isSortedDesc && <IconArrowDown size="xsmall" className="ml-4" />}

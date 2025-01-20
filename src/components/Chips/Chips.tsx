@@ -42,7 +42,7 @@ export const Chips = (props: TChipsProps): ReactElement => {
           dataId={`${dataId}-icon`}
           size={ICON_SIZE_MAPPING[size]}
           type={customType}
-          className={'mr-6'}
+          className={classNames({ 'mr-6': !!text })}
           {...leftIconProps}
         />
       ) : null}
