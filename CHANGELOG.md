@@ -1,3 +1,15 @@
+# [1.6.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.5.14...1.6.0) (2025-01-20)
+
+
+### Features
+
+* add drag and drop zone ([18cdf19](https://github.com/hrmuilibrary/hrm_ui_library/commit/18cdf1997da219107796db1879f0ee8594eb9329))
+* add errors in file upload ([4408fb6](https://github.com/hrmuilibrary/hrm_ui_library/commit/4408fb64b10f1314f3540e25ecd599ee01f97b67))
+* filter unique files ([ae63c2b](https://github.com/hrmuilibrary/hrm_ui_library/commit/ae63c2b81095de1ebce7660ce586607a41c7a355))
+* minor changes ([8aec8ac](https://github.com/hrmuilibrary/hrm_ui_library/commit/8aec8ac225c095ebd22420d6b53bb196275acdcb))
+* minor improvements ([d2c4e95](https://github.com/hrmuilibrary/hrm_ui_library/commit/d2c4e95e6a958bc883c3b32fe833551db0f9e626))
+* update files changes in component where it is used ([928e876](https://github.com/hrmuilibrary/hrm_ui_library/commit/928e87652eb10b94e42d09293d01dce44f154178))
+
 ## [1.5.14](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.5.13...1.5.14) (2025-01-13)
 
 
