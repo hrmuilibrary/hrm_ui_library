@@ -4,7 +4,7 @@ import IconUpload from '../../SVGIcons/IconUpload'
 import { Text } from '../../Text'
 import classnames from 'classnames'
 import { FileTypeEnum } from '../../../type'
-import { DnDFileUploadProps, FileType } from '../types'
+import { DnDFileUploadProps, FileType, FileUploadMode } from '../types'
 import { generateAreaContent } from './helpers'
 import { ErrorItem } from './ErrorItem'
 import { PreviewItem } from './PreviewItem'
@@ -18,7 +18,8 @@ export const DnDFileUpload = ({
   setFiles,
   setFieldValue,
   value,
-  selectedFiles
+  selectedFiles,
+  mode = FileUploadMode.attach
 }: DnDFileUploadProps): ReactElement => {
   const initialFiles = (value as FileType[]) || selectedFiles || []
   const [errors, setErrors] = useState<FileError[]>([])
@@ -43,7 +44,8 @@ export const DnDFileUpload = ({
     onDrop,
     accept: areaContent.acceptTypes,
     maxSize,
-    maxFiles: multiple ? undefined : 1
+    maxFiles: multiple ? undefined : 1,
+    multiple
   })
 
   const removeFile = (fileName: string) => {
@@ -72,24 +74,26 @@ export const DnDFileUpload = ({
 
   return (
     <div className="dnd-file-upload">
-      <div
-        {...getRootProps()}
-        className={classnames('dnd-file-upload__area', {
-          'dnd-file-upload__area--focused': isFocused,
-          'dnd-file-upload__area--active': isDragActive
-        })}
-      >
-        <IconUpload className="mb-20" size="xlarge" />
-        <input {...getInputProps()} name={name} />
-        <Text type="primary" weight="semibold" className="mb-6">
-          Choose a file or drag it here
-        </Text>
-        <Text size="small">
-          {areaContent.acceptTypesMessage}{' '}
-          {areaContent.acceptTypes.length === 1 ? 'format' : 'formats'}, Maximum size up to{' '}
-          {areaContent.maxSizeFormatted}.
-        </Text>
-      </div>
+      {mode !== FileUploadMode.view ? (
+        <div
+          {...getRootProps()}
+          className={classnames('dnd-file-upload__area', {
+            'dnd-file-upload__area--focused': isFocused,
+            'dnd-file-upload__area--active': isDragActive
+          })}
+        >
+          <IconUpload className="mb-20" size="xlarge" />
+          <input {...getInputProps()} name={name} />
+          <Text type="primary" weight="semibold" className="mb-6">
+            Choose a file or drag it here
+          </Text>
+          <Text size="small">
+            {areaContent.acceptTypesMessage}{' '}
+            {areaContent.acceptTypes.length === 1 ? 'format' : 'formats'}, Maximum size up to{' '}
+            {areaContent.maxSizeFormatted}.
+          </Text>
+        </div>
+      ) : null}
 
       <div className="dnd-file-upload__files">
         {errors.map(({ code }, index) => {
@@ -103,7 +107,14 @@ export const DnDFileUpload = ({
           )
         })}
         {initialFiles.map((file, index) => {
-          return <PreviewItem key={index} file={file} onRemove={() => removeFile(file.name)} />
+          return (
+            <PreviewItem
+              key={index}
+              file={file}
+              onRemove={() => removeFile(file.name)}
+              mode={mode}
+            />
+          )
         })}
       </div>
     </div>

@@ -1,9 +1,10 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   DnDFileUpload as _DnDFileUpload,
   FileUpload as _FileUpload,
+  FileUploadMode,
   TFileUploadProps
 } from '../components/FileUpload'
 import IconInfo from '../components/SVGIcons/IconInfo'
@@ -43,8 +44,32 @@ FileUpload.args = {
   labelAddons: <IconInfo size={'xsmall'} type={'information'} className={'ml-4'} />
 }
 
+async function urlToFile(url, fileName) {
+  const response = await fetch(url) // Fetch the file from the URL
+  const blob = await response.blob() // Convert the response to a Blob
+  return new File([blob], fileName, { type: blob.type }) // Create a File object
+}
+
+const mockFiles = [
+  {
+    name: 'file1.jpeg',
+    url: 'https://images.pexels.com/photos/842711/pexels-photo-842711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+  },
+  {
+    name: 'file2.jpeg',
+    url: 'https://images.unsplash.com/photo-1731505103716-7ee6fa96dee5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  }
+]
+
 const Template2 = (args) => {
   const [files, setFiles] = useState([])
+  useEffect(() => {
+    mockFiles.forEach((file) => {
+      urlToFile(file.url, file.name).then((file) => {
+        setFiles((prev) => [...prev, file])
+      })
+    })
+  }, [])
 
   return (
     <div style={{ width: 800 }}>
@@ -52,7 +77,10 @@ const Template2 = (args) => {
         {...args}
         setFiles={setFiles}
         selectedFiles={files}
+        maxSize={255 * 1024 * 1024}
         accept={[FileTypeEnum.PDF]}
+        mode={FileUploadMode.view}
+        multiple={false}
       />
     </div>
   )
