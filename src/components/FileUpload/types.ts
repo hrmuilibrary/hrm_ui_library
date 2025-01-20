@@ -24,7 +24,8 @@ export interface TFileUploadProps extends IFormCompProps {
 
 export enum FileUploadMode {
   edit = 'edit',
-  attach = 'attach'
+  attach = 'attach',
+  view = 'view'
 }
 
 export interface IUploadItemPropTypes {
@@ -54,4 +55,5 @@ export interface DnDFileUploadProps extends IFormCompProps {
   multiple?: boolean
   setFiles?: Dispatch<SetStateAction<FileType[]>>
   selectedFiles?: FileType[]
+  mode?: FileUploadMode
 }

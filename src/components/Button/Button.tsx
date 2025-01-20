@@ -59,7 +59,7 @@ export const Button = (props: TButtonPropTypes): ReactElement => {
         <>
           {iconProps?.Component ? (
             <iconProps.Component
-              size={ICON_SIZE_MAPPING[size]}
+              size={ICON_SIZE_MAPPING[iconProps.size || size]}
               type={ICON_TYPE_MAPPING[iconProps.type || type]}
               className="btn__icon"
             />

@@ -1,4 +1,5 @@
 @use "../helpers/mixin";
+@use "../helpers/classname";
 
 .dnd-file-upload {
   @include mixin.flexbox();
@@ -75,6 +76,10 @@
             @include mixin.justify-content(space-between);
             @include mixin.align-items(center);
         }
+      }
+
+      &--view {
+        cursor: pointer;
       }
     }
   }
