@@ -1,7 +1,7 @@
 @use "../helpers/mixin";
 @use "../helpers/classname";
 
-.dnd-file-upload {
+.dz-file-upload {
   @include mixin.flexbox();
   @include mixin.flex-direction(column);
   width: 100%;

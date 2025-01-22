@@ -38,16 +38,16 @@ export const PreviewItem = ({
 
   return (
     <div
-      className={classnames('dnd-file-upload__files--item', {
-        'dnd-file-upload__files--item--view': mode === FileUploadMode.view
+      className={classnames('dz-file-upload__files--item', {
+        'dz-file-upload__files--item--view': mode === FileUploadMode.view
       })}
       onClick={handleItemClick}
     >
-      <div className={'dnd-file-upload__files--item__preview'}>
+      <div className={'dz-file-upload__files--item__preview'}>
         <FilePreview preview={preview} type={type} />
       </div>
-      <div className={'dnd-file-upload__files--item__info'}>
-        <div className="dnd-file-upload__files--item__info-title">
+      <div className={'dz-file-upload__files--item__info'}>
+        <div className="dz-file-upload__files--item__info-title">
           <Text weight="semibold">{shortenFileName(file.name, 40)}</Text>
           {mode === FileUploadMode.attach && (
             <Button
@@ -66,7 +66,7 @@ export const PreviewItem = ({
             />
           )}
         </div>
-        <div className="dnd-file-upload__files--item__info-size">
+        <div className="dz-file-upload__files--item__info-size">
           <Text size="small">{formatFileSize(file.size)}</Text>
         </div>
       </div>

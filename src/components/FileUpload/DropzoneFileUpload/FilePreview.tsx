@@ -32,8 +32,8 @@ export const FilePreview = ({ preview, type }: IFilePreviewProps): ReactElement 
           alt="Preview"
           onLoad={handleImageOnLoad}
           onError={handleImageOnError}
-          className={classnames('dnd-file-upload__files--item__preview--image', {
-            'dnd-file-upload__files--item__preview--image--loading': loading
+          className={classnames('dz-file-upload__files--item__preview--image', {
+            'dz-file-upload__files--item__preview--image--loading': loading
           })}
         />
       </>

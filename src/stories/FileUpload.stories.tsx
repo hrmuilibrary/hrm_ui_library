@@ -2,7 +2,7 @@
 // @ts-nocheck
 import React, { useEffect, useState } from 'react'
 import {
-  DnDFileUpload as _DnDFileUpload,
+  DropzoneFileUpload as _DropzoneFileUpload,
   FileUpload as _FileUpload,
   FileUploadMode,
   TFileUploadProps
@@ -73,18 +73,18 @@ const Template2 = (args) => {
 
   return (
     <div style={{ width: 800 }}>
-      <_DnDFileUpload
+      <_DropzoneFileUpload
         {...args}
         setFiles={setFiles}
         selectedFiles={files}
-        maxSize={255 * 1024 * 1024}
+        maxFiles={2}
+        maxSize={30 * 1024 * 1024}
         accept={[FileTypeEnum.PDF]}
-        mode={FileUploadMode.view}
-        multiple={false}
+        mode={FileUploadMode.attach}
       />
     </div>
   )
 }
 
-export const DragAndDropFileUpload = Template2.bind({})
-DragAndDropFileUpload.args = {}
+export const DropzoneFileUpload = Template2.bind({})
+DropzoneFileUpload.args = {}
