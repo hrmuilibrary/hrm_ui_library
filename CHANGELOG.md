@@ -1,3 +1,11 @@
+## [1.6.2](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.1...1.6.2) (2025-01-23)
+
+
+### Bug Fixes
+
+* add drop zone file upload component localization ([f35b6c3](https://github.com/hrmuilibrary/hrm_ui_library/commit/f35b6c3c1b8ec465c4a57a030997298ff59f1d2a))
+* update drop zone file upload component ([a7b3710](https://github.com/hrmuilibrary/hrm_ui_library/commit/a7b37108707592ef7dd146ad7a9d98865a33627d))
+
 ## [1.6.1](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.0...1.6.1) (2025-01-20)
 
 
