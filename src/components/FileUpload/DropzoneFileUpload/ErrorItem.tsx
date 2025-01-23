@@ -2,25 +2,29 @@ import React, { ReactElement, useMemo } from 'react'
 import { ErrorCode } from 'react-dropzone'
 import { Alert } from '../../Alert'
 import { AreaContentDTO } from '../types'
+import { getDropzoneLocale } from './helpers'
 
 interface IErrorItemProps {
   code: string
   areaContent: AreaContentDTO
   onRemove: () => void
+  locale?: string
 }
 
 export const ErrorItem = ({
   code,
   onRemove,
-  areaContent
+  areaContent,
+  locale
 }: IErrorItemProps): ReactElement | null => {
   const errorMessage = useMemo(() => {
+    const translation = getDropzoneLocale(locale)
     if (code === ErrorCode.FileInvalidType) {
-      return `The file type should be ${areaContent.acceptTypesMessage}`
+      return translation.fileInvalidType.replace('$1', areaContent.acceptTypesMessage)
     } else if (code === ErrorCode.FileTooLarge) {
-      return `The file is too large (Max ${areaContent.maxSizeFormatted})`
+      return translation.fileTooLarge.replace('$1', areaContent.maxSizeFormatted)
     } else if (code === ErrorCode.TooManyFiles) {
-      return 'Too many files. Please select one file.'
+      return translation.tooManyFiles
     }
 
     return ''

@@ -4,32 +4,36 @@ import IconUpload from '../../SVGIcons/IconUpload'
 import { Text } from '../../Text'
 import classnames from 'classnames'
 import { FileTypeEnum } from '../../../type'
-import { DnDFileUploadProps, FileType, FileUploadMode } from '../types'
-import { generateAreaContent } from './helpers'
+import { DzFileUploadProps, FileType, FileUploadMode } from '../types'
+import { generateAreaContent, getDropzoneLocale } from './helpers'
 import { ErrorItem } from './ErrorItem'
 import { PreviewItem } from './PreviewItem'
 import { uniqueFiles as _uniqueFiles } from '../../../utils/helpers'
 
-export const DnDFileUpload = ({
+export const DropzoneFileUpload = ({
   maxSize = 10 * 1024 * 1024,
   accept = [FileTypeEnum.IMAGE, FileTypeEnum.PDF, FileTypeEnum.DOC],
-  multiple = true,
   name,
   setFiles,
   setFieldValue,
   value,
   selectedFiles,
-  mode = FileUploadMode.attach
-}: DnDFileUploadProps): ReactElement => {
+  maxFiles = 1,
+  mode = FileUploadMode.attach,
+  locale
+}: DzFileUploadProps): ReactElement => {
   const initialFiles = (value as FileType[]) || selectedFiles || []
+  const initialMaxFiles = initialFiles.length >= maxFiles ? 0 : maxFiles - initialFiles.length
   const [errors, setErrors] = useState<FileError[]>([])
   const areaContent = generateAreaContent({
     accept,
     maxSize
   })
 
+  const translation = getDropzoneLocale(locale)
+
   const onDrop = (fileAccepted: File[], fileRejections: FileRejection[]) => {
-    if (!multiple && initialFiles.length > 0) {
+    if (initialMaxFiles === 0) {
       setErrors([{ code: ErrorCode.TooManyFiles, message: '' }])
       return
     }
@@ -44,8 +48,8 @@ export const DnDFileUpload = ({
     onDrop,
     accept: areaContent.acceptTypes,
     maxSize,
-    maxFiles: multiple ? undefined : 1,
-    multiple
+    maxFiles: initialMaxFiles,
+    multiple: initialMaxFiles > 1
   })
 
   const removeFile = (fileName: string) => {
@@ -73,29 +77,29 @@ export const DnDFileUpload = ({
   )
 
   return (
-    <div className="dnd-file-upload">
+    <div className="dz-file-upload">
       {mode !== FileUploadMode.view ? (
         <div
           {...getRootProps()}
-          className={classnames('dnd-file-upload__area', {
-            'dnd-file-upload__area--focused': isFocused,
-            'dnd-file-upload__area--active': isDragActive
+          className={classnames('dz-file-upload__area', {
+            'dz-file-upload__area--focused': isFocused,
+            'dz-file-upload__area--active': isDragActive
           })}
         >
           <IconUpload className="mb-20" size="xlarge" />
           <input {...getInputProps()} name={name} />
           <Text type="primary" weight="semibold" className="mb-6">
-            Choose a file or drag it here
+            {translation.title}
           </Text>
           <Text size="small">
-            {areaContent.acceptTypesMessage}{' '}
-            {areaContent.acceptTypes.length === 1 ? 'format' : 'formats'}, Maximum size up to{' '}
-            {areaContent.maxSizeFormatted}.
+            {`${areaContent.acceptTypesMessage} ${
+              areaContent.acceptTypes.length === 1 ? translation.format : translation.formats
+            }, ${translation.maxSize.replace('$1', areaContent.maxSizeFormatted)}`}
           </Text>
         </div>
       ) : null}
 
-      <div className="dnd-file-upload__files">
+      <div className="dz-file-upload__files">
         {errors.map(({ code }, index) => {
           return (
             <ErrorItem
@@ -103,6 +107,7 @@ export const DnDFileUpload = ({
               code={code}
               areaContent={areaContent}
               onRemove={() => removeError(index)}
+              locale={locale}
             />
           )
         })}
