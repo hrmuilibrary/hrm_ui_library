@@ -54,4 +54,16 @@ export interface DzFileUploadProps extends DropzoneOptions, IFormCompProps {
   setFiles?: Dispatch<SetStateAction<FileType[]>>
   selectedFiles?: FileType[]
   mode?: FileUploadMode
+  locale?: string
+}
+
+export interface IDzTranslation {
+  title: string
+  format: string
+  formats: string
+  maxSize: string
+  fileInvalidType: string
+  fileTooLarge: string
+  tooManyFiles: string
+  or: string
 }

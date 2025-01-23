@@ -5,7 +5,7 @@ import { Text } from '../../Text'
 import classnames from 'classnames'
 import { FileTypeEnum } from '../../../type'
 import { DzFileUploadProps, FileType, FileUploadMode } from '../types'
-import { generateAreaContent } from './helpers'
+import { generateAreaContent, getDropzoneLocale } from './helpers'
 import { ErrorItem } from './ErrorItem'
 import { PreviewItem } from './PreviewItem'
 import { uniqueFiles as _uniqueFiles } from '../../../utils/helpers'
@@ -19,7 +19,8 @@ export const DropzoneFileUpload = ({
   value,
   selectedFiles,
   maxFiles = 1,
-  mode = FileUploadMode.attach
+  mode = FileUploadMode.attach,
+  locale
 }: DzFileUploadProps): ReactElement => {
   const initialFiles = (value as FileType[]) || selectedFiles || []
   const initialMaxFiles = initialFiles.length >= maxFiles ? 0 : maxFiles - initialFiles.length
@@ -28,6 +29,8 @@ export const DropzoneFileUpload = ({
     accept,
     maxSize
   })
+
+  const translation = getDropzoneLocale(locale)
 
   const onDrop = (fileAccepted: File[], fileRejections: FileRejection[]) => {
     if (initialMaxFiles === 0) {
@@ -86,12 +89,12 @@ export const DropzoneFileUpload = ({
           <IconUpload className="mb-20" size="xlarge" />
           <input {...getInputProps()} name={name} />
           <Text type="primary" weight="semibold" className="mb-6">
-            Choose a file or drop it here
+            {translation.title}
           </Text>
           <Text size="small">
-            {areaContent.acceptTypesMessage}{' '}
-            {areaContent.acceptTypes.length === 1 ? 'format' : 'formats'}, Maximum size up to{' '}
-            {areaContent.maxSizeFormatted}.
+            {`${areaContent.acceptTypesMessage} ${
+              areaContent.acceptTypes.length === 1 ? translation.format : translation.formats
+            }, ${translation.maxSize.replace('$1', areaContent.maxSizeFormatted)}`}
           </Text>
         </div>
       ) : null}
@@ -104,6 +107,7 @@ export const DropzoneFileUpload = ({
               code={code}
               areaContent={areaContent}
               onRemove={() => removeError(index)}
+              locale={locale}
             />
           )
         })}
