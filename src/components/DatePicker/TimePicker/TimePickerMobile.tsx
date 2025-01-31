@@ -22,20 +22,17 @@ export const TimePickerMobile = (props: ITimePickerProps): ReactElement => {
     modalOptions,
     name
   } = props
-  const dateInitialValue =
+  const selectedTime =
     value !== undefined && Object.prototype.toString.call(value) === '[object Date]'
       ? value
       : currentTime
 
   const [isPickerOpen, setIsPickerOpen] = useState(false)
-  const [selectedTime, setCurrentTime] = useState(dateInitialValue)
   const openTimePicker = () => setIsPickerOpen(true)
 
   const closeTimePicker = () => setIsPickerOpen(false)
 
   const onChange = (date: Date) => {
-    setCurrentTime(date)
-
     if (changeHandler) {
       changeHandler(date)
     }
@@ -62,7 +59,7 @@ export const TimePickerMobile = (props: ITimePickerProps): ReactElement => {
         currentValue={selectedTime ? dayjs(selectedTime.toString()).format(format) : ''}
       />
       <MobileModalContent
-        dateInitialValue={dateInitialValue}
+        dateInitialValue={selectedTime}
         onApply={onApply}
         mobileTitle={modalOptions?.title}
         isOpen={isPickerOpen}
