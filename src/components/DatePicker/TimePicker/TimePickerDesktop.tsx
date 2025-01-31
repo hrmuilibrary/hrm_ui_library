@@ -29,7 +29,6 @@ export const TimePickerDesktop = (props: ITimePickerProps): React.ReactElement =
     value !== undefined && Object.prototype.toString.call(value) === '[object Date]'
       ? value
       : currentTime
-  const [selectedTime, setCurrentTime] = useState(dateInitialValue)
   const calendarRef = useRef<{
     isCalendarOpen: () => boolean
     setOpen: (isOpen: boolean) => void | null
@@ -38,8 +37,6 @@ export const TimePickerDesktop = (props: ITimePickerProps): React.ReactElement =
   useImportFilesDynamically(dayjsLocale)
 
   const onChange = (date: Date) => {
-    setCurrentTime(date)
-
     if (changeHandler) {
       changeHandler(date)
     }
@@ -60,7 +57,7 @@ export const TimePickerDesktop = (props: ITimePickerProps): React.ReactElement =
       <Label text={label} required={required} invalid={hasError} />
 
       <DatePicker
-        selected={dayjs(selectedTime).isValid() ? selectedTime : null}
+        selected={dayjs(dateInitialValue).isValid() ? dateInitialValue : null}
         locale={locale}
         showTimeSelect
         showTimeSelectOnly
