@@ -1,3 +1,10 @@
+## [1.6.3](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.2...1.6.3) (2025-01-31)
+
+
+### Bug Fixes
+
+* remove redundant local state in TimePicker component ([877c35c](https://github.com/hrmuilibrary/hrm_ui_library/commit/877c35c18972996a485853bb9a7d6596de9f13b0))
+
 ## [1.6.2](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.1...1.6.2) (2025-01-23)
 
 
