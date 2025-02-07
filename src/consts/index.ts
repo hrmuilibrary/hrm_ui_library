@@ -89,8 +89,9 @@ export const MONTHS = [
 export const DROPDOWN_AND_INPUT_GAP = 10
 
 export const FILE_ACCEPT_TYPE = {
-  [FileTypeEnum.PDF]: 'application/pdf',
-  [FileTypeEnum.IMAGE]: 'image/*',
-  [FileTypeEnum.DOC]:
+  [FileTypeEnum.PDF]: ['application/pdf'],
+  [FileTypeEnum.IMAGE]: ['image/jpeg', 'image/png'],
+  [FileTypeEnum.DOC]: [
     '.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+  ]
 }
