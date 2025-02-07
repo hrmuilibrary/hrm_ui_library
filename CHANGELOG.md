@@ -1,3 +1,10 @@
+## [1.6.4](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.3...1.6.4) (2025-02-07)
+
+
+### Bug Fixes
+
+* fixes minor issues in drop zone file upload ([34d9e9d](https://github.com/hrmuilibrary/hrm_ui_library/commit/34d9e9dc2fef3a821558007d5e171e74e957c1a2))
+
 ## [1.6.3](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.2...1.6.3) (2025-01-31)
 
 
