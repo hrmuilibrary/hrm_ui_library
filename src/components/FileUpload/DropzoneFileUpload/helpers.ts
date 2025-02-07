@@ -37,7 +37,7 @@ export const generateAreaContent = ({
   maxSize: number
   locale?: string
 }): AreaContentDTO => {
-  const acceptTypes = accept.map((type: FileTypeEnum) => FILE_ACCEPT_TYPE[type])
+  const acceptTypes = accept.map((type: FileTypeEnum) => FILE_ACCEPT_TYPE[type]).flat()
   const translation = getDropzoneLocale(locale)
 
   const acceptTypesMessage =

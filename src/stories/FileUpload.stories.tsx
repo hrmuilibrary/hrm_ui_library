@@ -77,10 +77,11 @@ const Template2 = (args) => {
         {...args}
         setFiles={setFiles}
         selectedFiles={files}
-        maxFiles={2}
         maxSize={30 * 1024 * 1024}
-        accept={[FileTypeEnum.PDF]}
+        accept={[FileTypeEnum.IMAGE]}
         mode={FileUploadMode.attach}
+        multiple={false}
+        // maxFiles={2}
       />
     </div>
   )

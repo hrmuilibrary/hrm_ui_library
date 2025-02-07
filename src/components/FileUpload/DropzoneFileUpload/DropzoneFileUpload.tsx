@@ -20,7 +20,8 @@ export const DropzoneFileUpload = ({
   selectedFiles,
   maxFiles = 1,
   mode = FileUploadMode.attach,
-  locale
+  locale,
+  multiple = false
 }: DzFileUploadProps): ReactElement => {
   const initialFiles = (value as FileType[]) || selectedFiles || []
   const initialMaxFiles = initialFiles.length >= maxFiles ? 0 : maxFiles - initialFiles.length
@@ -33,7 +34,7 @@ export const DropzoneFileUpload = ({
   const translation = getDropzoneLocale(locale)
 
   const onDrop = (fileAccepted: File[], fileRejections: FileRejection[]) => {
-    if (initialMaxFiles === 0) {
+    if (initialMaxFiles === 0 && !multiple) {
       setErrors([{ code: ErrorCode.TooManyFiles, message: '' }])
       return
     }
@@ -48,8 +49,8 @@ export const DropzoneFileUpload = ({
     onDrop,
     accept: areaContent.acceptTypes,
     maxSize,
-    maxFiles: initialMaxFiles,
-    multiple: initialMaxFiles > 1
+    maxFiles: multiple ? 0 : initialMaxFiles,
+    multiple
   })
 
   const removeFile = (fileName: string) => {
