@@ -1,3 +1,10 @@
+## [1.6.5](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.4...1.6.5) (2025-02-12)
+
+
+### Bug Fixes
+
+* change select component search visibility min count ([e5277d5](https://github.com/hrmuilibrary/hrm_ui_library/commit/e5277d53d4a598db0bfc2a57ef0aeda69a8d345c))
+
 ## [1.6.4](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.3...1.6.4) (2025-02-07)
 
 
