@@ -1,3 +1,10 @@
+## [1.6.6](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.5...1.6.6) (2025-02-17)
+
+
+### Bug Fixes
+
+* add months localization, fix locale issues ([7034793](https://github.com/hrmuilibrary/hrm_ui_library/commit/7034793323347a87e37879e7977df08c2c4e8f7e))
+
 ## [1.6.5](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.4...1.6.5) (2025-02-12)
 
 
