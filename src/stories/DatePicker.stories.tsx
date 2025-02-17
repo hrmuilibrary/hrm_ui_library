@@ -11,7 +11,8 @@ export default {
   title: 'DatePicker',
   component: _RangeDatePicker,
   argTypes: {
-    dayjsLocale: { control: 'radio', options: ['en', 'ru', 'hy-am'] }
+    dayjsLocale: { control: 'radio', options: ['en', 'ru', 'hy-am'] },
+    locale: { control: 'radio', options: ['en', 'ru', 'hy'] }
   }
 }
 
@@ -79,7 +80,10 @@ const SimplePicker: StoryFn<ISimpleDatePickerProps> = (args) => {
     </div>
   )
 }
-export const SimpleDatePicker = SimplePicker.bind({})
+export const SimpleDatePicker = SimplePicker.bind({
+  locale: 'en',
+  dayjsLocale: 'en'
+})
 
 const TimeDatePicker = (): React.ReactElement => {
   const [value1, setValue1] = useState<Date>(new Date())

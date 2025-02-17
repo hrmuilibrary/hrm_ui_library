@@ -7,7 +7,6 @@ import { isSameDay } from '../../../utils/helpers'
 import IconCalendarRight from '../../SVGIcons/IconCalendarRight'
 import { Modal } from '../../Modal'
 import { CustomHeader } from '../CustomHeader/CustomHeader'
-import { MONTHS } from '../../../consts'
 import { formatDate } from '../../../helpers'
 
 export const RangeDatePickerMobile = forwardRef(
@@ -26,7 +25,6 @@ export const RangeDatePickerMobile = forwardRef(
       dayjsLocale = 'hy-am',
       disabled,
       placeholderText,
-      months = MONTHS,
       dataIdPrefix,
       modalOptions,
       ...rest
@@ -147,7 +145,7 @@ export const RangeDatePickerMobile = forwardRef(
             renderCustomHeader={(props) => (
               <CustomHeader
                 {...props}
-                months={months}
+                locale={locale}
                 startYear={startYear}
                 endYear={endYear}
                 dataPrefix={dataIdPrefix}

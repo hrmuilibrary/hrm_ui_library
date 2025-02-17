@@ -1,23 +1,21 @@
 import React, { ReactElement } from 'react'
-
 import { ReactDatePickerCustomHeaderProps } from 'react-datepicker'
 import { ButtonSelect } from '../../Select'
-
 import { getYearOptions, noop } from '../../../utils/helpers'
 import IconChevronLeft from '../../SVGIcons/IconChevronLeft'
 import IconChevronRight from '../../SVGIcons/IconChevronRight'
+import { generateMonthOptions } from './helpers'
 
 interface TProps extends ReactDatePickerCustomHeaderProps {
-  months: TSelectOptions
   startYear: number
   endYear: number
   dataPrefix?: string
   isMobile?: boolean
+  locale?: string
 }
 
 export const CustomHeader = (props: TProps): ReactElement => {
   const {
-    months,
     date,
     dataPrefix,
     changeYear,
@@ -28,8 +26,11 @@ export const CustomHeader = (props: TProps): ReactElement => {
     endYear,
     prevMonthButtonDisabled,
     nextMonthButtonDisabled,
+    locale,
     isMobile = false
   } = props
+
+  const months = generateMonthOptions(locale)
 
   const getMonthLabel = (month: number) => {
     const selectMonth = months.find((item) => item.value === month)

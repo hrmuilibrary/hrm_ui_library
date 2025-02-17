@@ -1,14 +1,10 @@
 import React, { ReactElement, useRef } from 'react'
 import dayjs from 'dayjs'
 import DatePicker from 'react-datepicker'
-
 import { Input } from '../../Input'
 import { Label } from '../../../helperComponents'
 import { CustomHeader } from '../CustomHeader/CustomHeader'
-
-import { MONTHS } from '../../../consts'
 import { useImportFilesDynamically } from '../hooks'
-
 import { ISimpleDatePickerProps } from '../types'
 import IconCalendarRight from '../../SVGIcons/IconCalendarRight'
 
@@ -28,7 +24,6 @@ export const SimpleDatePickerDesktop = (props: ISimpleDatePickerProps): ReactEle
     dataId,
     hasError,
     placeholderText,
-    months = MONTHS,
     minDate,
     maxDate,
     dataIdPrefix,
@@ -95,7 +90,7 @@ export const SimpleDatePickerDesktop = (props: ISimpleDatePickerProps): ReactEle
         renderCustomHeader={(props) => (
           <CustomHeader
             {...props}
-            months={months}
+            locale={locale}
             startYear={startYear}
             endYear={endYear}
             dataPrefix={dataIdPrefix}
