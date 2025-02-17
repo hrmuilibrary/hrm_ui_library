@@ -10,12 +10,12 @@ export interface TDatepickerBaseProps extends DatePickerDefaultProps {
   label?: ReactNode
   format?: string
   inline?: boolean
-  months?: TSelectOptions
   modalOptions?: {
     title?: string
     btnConfirmText?: string
     btnCancelText?: string
   }
+  locale?: string
 }
 
 export interface ISimpleDatePickerProps extends TDatepickerBaseProps {

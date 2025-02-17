@@ -5,7 +5,6 @@ import dayjs from 'dayjs'
 import { ISimpleDatePickerProps } from '../types'
 import { useImportFilesDynamically } from '../hooks'
 import { Modal } from '../../Modal'
-import { MONTHS } from '../../../consts'
 import { CustomHeader } from '../CustomHeader/CustomHeader'
 import DatePicker from 'react-datepicker'
 import { Label } from '../../../helperComponents'
@@ -23,9 +22,8 @@ export const SimpleDatePickerMobile = (props: ISimpleDatePickerProps): ReactElem
     currentDate,
     minDate,
     maxDate,
-    locale,
+    locale = 'hy',
     dataIdPrefix,
-    months = MONTHS,
     modalOptions,
     name,
     changeHandler,
@@ -97,7 +95,7 @@ export const SimpleDatePickerMobile = (props: ISimpleDatePickerProps): ReactElem
           renderCustomHeader={(props) => (
             <CustomHeader
               {...props}
-              months={months}
+              locale={locale}
               startYear={startYear}
               endYear={endYear}
               dataPrefix={dataIdPrefix}
