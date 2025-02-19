@@ -17,16 +17,12 @@ export const FilterSelect = (props: TFilterProps): ReactElement | null => {
     isOpen,
     setFieldValue,
     name,
-    footerButtonProps = {
-      confirm: {
-        buttonText: 'Apply'
-      },
-      cancel: { buttonText: 'Cancel' }
-    },
+    footerButtonProps,
     selectedItems,
     setSelectedItems,
     closeHandler,
     parentRef,
+    language = 'en',
     ...rest
   } = props
 
@@ -131,6 +127,7 @@ export const FilterSelect = (props: TFilterProps): ReactElement | null => {
                 buttonProps={footerButtonProps}
                 onCancel={cancelSelectedItems}
                 onApply={applySelectedItems}
+                language={language}
               />
             )}
           </div>

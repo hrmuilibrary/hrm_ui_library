@@ -4,7 +4,7 @@ import { MultiSelectGrouped } from './MultiSelectGrouped/MultiSelectGrouped'
 import { MultiBase } from './MultiBase/MultiBase'
 import { MultiSelectWithTabs } from './MultiSelectWithTabs/MultiSelectWithTabs'
 import { getStringWidth } from '../../../utils/helpers'
-import { SELECTED_VISIBLE_MIN_COUNT, TRANSLATIONS_DEFAULT_VALUES } from '../constants'
+import { SELECTED_VISIBLE_MIN_COUNT } from '../constants'
 import { useGetElemSizes, useGetHasBottomSpace, useGetHasTopSpace } from '../../../hooks'
 import { TSelectTranslations } from '../types'
 import { useIsMobile } from '../../../hooks/useGetIsMobile'
@@ -24,13 +24,13 @@ type TProps = {
   setSelectedValues: (values: TSelectedValue[]) => void
   isMobileFullScreen: boolean
 }
+
 export const OptionsWrapper = (props: TProps): ReactElement => {
   const {
     isLoading,
     withTabs,
     isGrouped,
     isOpen,
-    translations,
     containerRef,
     options,
     selectedValues,
@@ -41,8 +41,6 @@ export const OptionsWrapper = (props: TProps): ReactElement => {
     ...rest
   } = props
   const { width } = useGetElemSizes(containerRef)
-
-  const localizations = { ...TRANSLATIONS_DEFAULT_VALUES, ...translations }
 
   const inputRef = useRef<HTMLInputElement | null>(null)
 
@@ -103,7 +101,6 @@ export const OptionsWrapper = (props: TProps): ReactElement => {
       isOpen={isOpen}
       isMobile={isMobile}
       hasBottomSpace={hasBottomSpace}
-      translations={localizations}
       selectedValues={selectedValues}
       onItemSelect={onItemSelect}
       onItemDeselect={onItemDeselect}

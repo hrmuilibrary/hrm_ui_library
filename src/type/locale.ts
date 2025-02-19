@@ -5,7 +5,7 @@
 }
 
 export enum DayJSLocale {
-  'en-US' = 'en',
-  'hy-AM' = 'hy-am',
-  'ru-RU' = 'ru'
+  'en' = 'en',
+  'hy' = 'hy-am',
+  'ru' = 'ru'
 }

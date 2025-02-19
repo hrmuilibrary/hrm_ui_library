@@ -22,14 +22,15 @@ export const RangeDatePickerMobile = forwardRef(
       maxDate,
       minDate,
       locale = 'hy',
-      dayjsLocale = 'hy-am',
       disabled,
       placeholderText,
       dataIdPrefix,
       modalOptions,
       ...rest
     } = props
-    useImportFilesDynamically(dayjsLocale)
+
+    useImportFilesDynamically(locale)
+
     const startYear = minDate ? minDate.getFullYear() : 1900
     const endYear = maxDate ? maxDate.getFullYear() : new Date().getFullYear() + 5
 

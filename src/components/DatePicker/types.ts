@@ -26,7 +26,6 @@ export interface ISimpleDatePickerProps extends TDatepickerBaseProps {
   minDate?: Date | null
   maxDate?: Date | null
   required?: boolean
-  dayjsLocale?: string
   value?: Date
   size?: 'large' | 'small'
 }
@@ -35,7 +34,6 @@ export interface ITimePickerProps extends TDatepickerBaseProps {
   changeHandler?: (date: Date) => void
   required?: boolean
   filterTime?: (date: Date) => boolean
-  dayjsLocale?: string
   value?: Date
   size?: 'large' | 'small'
   modalApplyButtonText?: string
@@ -45,7 +43,6 @@ export interface IRangeDatePickerProps extends TDatepickerBaseProps {
   currentDates?: TRangePickerValues
   changeHandler: (date: TRangePickerValues) => void
   maxDate?: Date | undefined
-  dayjsLocale?: string
   value?: [Date, Date]
 }
 

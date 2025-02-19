@@ -11,7 +11,6 @@ export default {
   title: 'DatePicker',
   component: _RangeDatePicker,
   argTypes: {
-    dayjsLocale: { control: 'radio', options: ['en', 'ru', 'hy-am'] },
     locale: { control: 'radio', options: ['en', 'ru', 'hy'] }
   }
 }
@@ -68,7 +67,7 @@ const SimplePicker: StoryFn<ISimpleDatePickerProps> = (args) => {
           title: 'Select date'
         }}
         changeHandler={setValue}
-        format="DD"
+        format="DD, MMMM YYYY"
         // label="ddd"
         placeholderText="Select date"
         size="small"
@@ -81,8 +80,7 @@ const SimplePicker: StoryFn<ISimpleDatePickerProps> = (args) => {
   )
 }
 export const SimpleDatePicker = SimplePicker.bind({
-  locale: 'en',
-  dayjsLocale: 'en'
+  locale: 'en'
 })
 
 const TimeDatePicker = (): React.ReactElement => {
@@ -118,7 +116,6 @@ const RangePicker: StoryFn<IRangeDatePickerProps> = (args) => {
         {...args}
         value={value}
         changeHandler={setValue}
-        locale={'en'}
         label={'Range Label'}
         modalOptions={{ title: 'Select date', btnConfirmText: 'Apply', btnCancelText: 'Cancel' }}
         filterDate={(date) => date.getDay() !== 0 && date.getDay() !== 6}
@@ -130,5 +127,5 @@ export const RangeDatePicker = RangePicker.bind({})
 
 RangeDatePicker.args = {
   label: 'Range Date Picker',
-  format: 'DD/MM/YYYY'
+  format: 'DD, MMMM YYYY'
 }

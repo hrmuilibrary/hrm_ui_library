@@ -17,7 +17,6 @@ export const SimpleDatePickerMobile = (props: ISimpleDatePickerProps): ReactElem
     label,
     placeholderText,
     format = 'M/D/YYYY',
-    dayjsLocale = 'hy-am',
     value,
     currentDate,
     minDate,
@@ -37,7 +36,7 @@ export const SimpleDatePickerMobile = (props: ISimpleDatePickerProps): ReactElem
   const endYear = maxDate ? maxDate.getFullYear() : new Date().getFullYear() + 5
 
   const [isCalendarOpen, setIsCalendarOpen] = React.useState(false)
-  useImportFilesDynamically(dayjsLocale)
+  useImportFilesDynamically(locale)
 
   const selectedDate =
     value !== undefined && Object.prototype.toString.call(value) === '[object Date]'

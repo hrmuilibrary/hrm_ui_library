@@ -20,7 +20,6 @@ export const TimePickerDesktop = (props: ITimePickerProps): React.ReactElement =
     required,
     format = 'HH:mm',
     locale = 'hy',
-    dayjsLocale = 'hy-am',
     placeholderText,
     hasError,
     ...rest
@@ -34,7 +33,7 @@ export const TimePickerDesktop = (props: ITimePickerProps): React.ReactElement =
     setOpen: (isOpen: boolean) => void | null
   }>(null)
 
-  useImportFilesDynamically(dayjsLocale)
+  useImportFilesDynamically(locale)
 
   const onChange = (date: Date) => {
     if (changeHandler) {

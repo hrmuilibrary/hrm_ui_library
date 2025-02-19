@@ -2,12 +2,12 @@ import React, { ReactElement, useCallback, useMemo, useState } from 'react'
 import { Empty } from '../../../Empty'
 import { OptionItem } from '../../../../helperComponents'
 import { ContentTop } from '../../SharedComponents'
-import { TMultySingleTabPropTypes } from '../../types'
+import { TMultiSingleTabPropTypes } from '../../types'
 import { FixedSizeList as List } from 'react-window'
 import { DROPDOWN_HEIGHT, DROPDOWN_WIDTH, ITEM_SIZE, ITEM_SIZE_MOBILE } from '../../constants'
 import classNames from 'classnames'
 
-export const MultiBase = (props: TMultySingleTabPropTypes): ReactElement | null => {
+export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null => {
   const {
     isMobile,
     closeDropdown,
@@ -30,7 +30,7 @@ export const MultiBase = (props: TMultySingleTabPropTypes): ReactElement | null 
     dropdownWidth
   } = props
 
-  const { emptyListMainMessage, emptyListSecondaryMessage } = translations
+  const { emptyListMainMessage, emptyListSecondaryMessage } = translations || {}
 
   const [searchValue, setSearchValue] = useState('')
   const [isAllSelected, setAllSelected] = useState(false)

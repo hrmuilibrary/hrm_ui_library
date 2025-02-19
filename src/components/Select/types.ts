@@ -25,6 +25,7 @@ interface TSelectBaseProps {
   size?: 'small' | 'large' | 'medium'
   className?: string
   dropdownWidth?: number
+  language?: string
 }
 export interface TNestedSelectProps {
   options: TSelectOptions
@@ -41,13 +42,15 @@ export interface TNestedSelectProps {
 }
 
 export type TSelectTranslations = {
-  emptyListMainMessage: string
+  emptyListMainMessage?: string
   overflowText?: string
   searchInputPlaceHolder?: string
   emptyListSecondaryMessage?: string
   selectAllLabel?: string
   clearAllLabel?: string
   innerLabel?: string
+  confirmButtonText?: string
+  cancelButtonText?: string
 }
 
 interface TMultiSelectCompProps extends IFormCompProps, TSelectBaseProps {
@@ -65,7 +68,7 @@ interface TMultiSelectCompProps extends IFormCompProps, TSelectBaseProps {
   closeDropdown: () => void
 }
 
-export interface TMultySingleTabPropTypes extends TMultiSelectCompProps {
+export interface TMultiSingleTabPropTypes extends TMultiSelectCompProps {
   options: TSelectOptions
 }
 
@@ -89,7 +92,7 @@ export interface TMultiSelectPropTypes extends IFormCompProps, TSelectBaseProps 
   isGrouped?: boolean
   checkboxInfo?: TCheckboxInfo
   selectedItems?: TSelectedValue[]
-  translations: TSelectTranslations
+  translations?: TSelectTranslations
   options: TSelectOptions | TSelectGroupOptions
   setSelectedItems?: (items: TSelectedValue[], isChecked: boolean) => void
   footerButtonProps?: {
@@ -153,9 +156,8 @@ export interface ISingleSelectResponsiveProps {
   avatar?: string
   currentSelection: TItemValue | undefined
   isRequiredField?: boolean
-  translations?: {
-    emptyListMainMessage: string
-  }
+  translations?: TSelectTranslations
+  language?: string
 }
 
 export type ISingleSelectMobileProps = ISingleSelectResponsiveProps
@@ -172,12 +174,13 @@ export interface ISingleSelectDesktopProps extends ISingleSelectResponsiveProps 
 export type TSelectFooterPropTypes = {
   checkboxInfo?: TCheckboxInfo
   hasChange?: boolean
-  buttonProps: {
+  buttonProps?: {
     cancel: TButtonPropTypes
     confirm: TButtonPropTypes
   }
   onCancel: () => void
   onApply: (isChecked: boolean) => void
+  language: string
 }
 
 export interface TFilterProps extends IFormCompProps, TSelectBaseProps {

@@ -3,20 +3,15 @@ import React, { ReactElement, useEffect, useId, useMemo, useState } from 'react'
 import { OptionsWrapper } from './OptionsWrapper'
 import { Footer, InputSelectWrapper, ButtonSelectWrapper } from '../SharedComponents'
 import { useOnOutsideClick } from '../../../hooks'
-import { TRANSLATIONS_DEFAULT_VALUES } from '../constants'
 import { TMultiSelectPropTypes } from '../types'
 import { useIsMobile } from '../../../hooks/useGetIsMobile'
+import { SELECT_TRANSLATIONS } from '../localization'
 
 export const MultiSelect = (props: TMultiSelectPropTypes): ReactElement => {
   const {
     isMobileFullScreen = true,
     options,
-    footerButtonProps = {
-      confirm: {
-        buttonText: 'Apply'
-      },
-      cancel: { buttonText: 'Cancel' }
-    },
+    footerButtonProps,
     selectedItems,
     setSelectedItems,
     name,
@@ -35,6 +30,7 @@ export const MultiSelect = (props: TMultiSelectPropTypes): ReactElement => {
     checkboxInfo,
     translations,
     hasError,
+    language = 'en',
     ...rest
   } = props
 
@@ -95,9 +91,8 @@ export const MultiSelect = (props: TMultiSelectPropTypes): ReactElement => {
 
   const WrapperComponent = isButtonSelect ? ButtonSelectWrapper : InputSelectWrapper
 
-  const localizations = { ...TRANSLATIONS_DEFAULT_VALUES, ...translations }
+  const localizations = { ...SELECT_TRANSLATIONS[language], ...translations }
 
-  const { overflowText } = localizations
   const isMobile = useIsMobile()
 
   return (
@@ -118,7 +113,7 @@ export const MultiSelect = (props: TMultiSelectPropTypes): ReactElement => {
       placeHolder={placeHolder}
       selectedValues={selectedValues}
       isRequiredField={isRequiredField}
-      overflowText={overflowText}
+      overflowText={localizations.overflowText}
       hasError={hasError}
       applySelectedItems={applySelectedItems}
       isMobile={isMobile && isMobileFullScreen}
@@ -129,7 +124,7 @@ export const MultiSelect = (props: TMultiSelectPropTypes): ReactElement => {
           // @ts-ignore
           options={options}
           isOpen={isOpen}
-          translations={translations}
+          translations={localizations}
           setIsOpen={setIsOpen}
           dropdownRef={dropdownRef}
           openDropdown={openDropdown}
@@ -147,6 +142,7 @@ export const MultiSelect = (props: TMultiSelectPropTypes): ReactElement => {
             buttonProps={footerButtonProps}
             onCancel={cancelSelectedItems}
             onApply={applySelectedItems}
+            language={language}
           />
         ) : null}
       </>
