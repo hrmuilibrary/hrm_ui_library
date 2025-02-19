@@ -29,9 +29,12 @@ export const Empty = (props: TEmptyProps): React.ReactElement => {
         <Image imagePath={illustration} />
       </div>
       <div className="no-result__content">
-        <Text size={size == 'large' ? 'large' : 'small'} weight="bold">
-          {mainMessage}
-        </Text>
+        {mainMessage ? (
+          <Text size={size == 'large' ? 'large' : 'small'} weight="bold">
+            {mainMessage}
+          </Text>
+        ) : null}
+
         {paragraphMessage ? (
           <Text size={size == 'large' ? 'small' : 'xsmall'}>{paragraphMessage}</Text>
         ) : null}

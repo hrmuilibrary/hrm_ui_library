@@ -62,7 +62,8 @@ export default {
     size: {
       options: ['large', 'small'],
       control: { type: 'radio' }
-    }
+    },
+    language: { control: 'radio', options: ['en', 'ru', 'hy'] }
   }
 }
 
@@ -13437,12 +13438,6 @@ const MultiSelectTemplate: StoryFn<TMultiSelectPropTypes> = (args) => {
             }}
           />
         )}
-        translations={{
-          emptyListMainMessage: '',
-          innerLabel: 'Group name',
-          clearAllLabel: 'Clear All',
-          selectAllLabel: 'Select All'
-        }}
         optionRightIconComponent={() => <ButtonMenu />}
       />
     </div>

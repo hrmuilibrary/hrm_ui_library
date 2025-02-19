@@ -14,12 +14,7 @@ import { useChangePositionsOnScroll } from '../../../../hooks/useChangePositions
 import { Empty } from '../../../Empty'
 import { Text } from '../../../Text'
 import { Loading } from '../../SharedComponents'
-import {
-  DROPDOWN_HEIGHT,
-  DROPDOWN_WIDTH,
-  ITEM_SIZE,
-  TRANSLATIONS_DEFAULT_VALUES
-} from '../../constants'
+import { DROPDOWN_HEIGHT, DROPDOWN_WIDTH, ITEM_SIZE } from '../../constants'
 import { ISingleSelectDesktopProps } from '../../types'
 import { filterOptions } from '../helpers'
 
@@ -170,13 +165,7 @@ export const SelectDesktop = (props: ISingleSelectDesktopProps): ReactElement | 
                   </List>
                 )}
                 {filteredData.length === 0 ? (
-                  <Empty
-                    size="small"
-                    mainMessage={
-                      translations?.emptyListMainMessage ||
-                      TRANSLATIONS_DEFAULT_VALUES.emptyListMainMessage
-                    }
-                  />
+                  <Empty size="small" mainMessage={translations?.emptyListMainMessage} />
                 ) : null}
               </div>
             </>

@@ -3,7 +3,7 @@ import { OptionItem } from '../../../../helperComponents'
 import { Empty } from '../../../Empty'
 import { Modal } from '../../../Modal'
 import { Text } from '../../../Text'
-import { ITEM_SIZE_MOBILE, TRANSLATIONS_DEFAULT_VALUES } from '../../constants'
+import { ITEM_SIZE_MOBILE } from '../../constants'
 import { Loading } from '../../SharedComponents'
 import { ISingleSelectMobileProps } from '../../types'
 import { filterOptions } from '../helpers'
@@ -109,13 +109,7 @@ export const SelectMobile = (props: ISingleSelectMobileProps): ReactElement => {
             )}
 
             {filteredData.length === 0 ? (
-              <Empty
-                size="small"
-                mainMessage={
-                  translations?.emptyListMainMessage ||
-                  TRANSLATIONS_DEFAULT_VALUES.emptyListMainMessage
-                }
-              />
+              <Empty size="small" mainMessage={translations?.emptyListMainMessage} />
             ) : null}
           </div>
         )}

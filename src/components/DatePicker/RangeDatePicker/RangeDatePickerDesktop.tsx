@@ -21,7 +21,6 @@ export const RangeDatePickerDesktop = forwardRef(
       maxDate,
       minDate,
       locale = 'hy',
-      dayjsLocale = 'hy-am',
       disabled,
       placeholderText,
       label,
@@ -30,7 +29,7 @@ export const RangeDatePickerDesktop = forwardRef(
       ...rest
     } = props
 
-    useImportFilesDynamically(dayjsLocale)
+    useImportFilesDynamically(locale)
 
     const dateInitialValue = value !== undefined && Array.isArray(value) ? value : currentDates
     const [rangeArray, setRangeDate] = useState(dateInitialValue)

@@ -8,6 +8,7 @@ import ru from 'date-fns/locale/ru'
 import 'dayjs/locale/hy-am'
 import 'dayjs/locale/ru'
 import 'dayjs/locale/en'
+import { DayJSLocale } from '../../type'
 
 registerLocale('hy', hy)
 registerLocale('en', en)
@@ -20,7 +21,7 @@ export function useImportFilesDynamically(dayjsLocale: string): void {
     if (dayjsLocale) {
       ;(async () => {
         setIsFilesLoaded(false)
-        locale(dayjsLocale)
+        locale(DayJSLocale[dayjsLocale as keyof typeof DayJSLocale])
         setTimeout(() => {
           setIsFilesLoaded(true)
         }, 0)

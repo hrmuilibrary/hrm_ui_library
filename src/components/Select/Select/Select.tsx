@@ -9,6 +9,7 @@ import { SELECTED_VISIBLE_MIN_COUNT } from '../constants'
 import { SelectMobile } from './SelectMobile'
 import { IconCaretUpFilled } from '../../SVGIcons/IconCaretUpFilled'
 import { IconCaretDownFilled } from '../../SVGIcons/IconCaretDownFilled'
+import { SELECT_TRANSLATIONS } from '../localization'
 
 export const Select = (props: TSingleSelectPropTypes): ReactElement | null => {
   const {
@@ -39,6 +40,8 @@ export const Select = (props: TSingleSelectPropTypes): ReactElement | null => {
     selectedItem,
     value,
     isMobileFullScreen = true,
+    language = 'en',
+    translations,
     ...rest
   } = props
   const isMobile = useIsMobile()
@@ -99,6 +102,7 @@ export const Select = (props: TSingleSelectPropTypes): ReactElement | null => {
   const onItemDeselect = () => onItemSelect(null)
 
   const currentSelection = (value as TItemValue) || selectedItem
+  const localizations = { ...SELECT_TRANSLATIONS[language], ...translations }
 
   return (
     <div
@@ -139,6 +143,7 @@ export const Select = (props: TSingleSelectPropTypes): ReactElement | null => {
           isRequiredField={isRequiredField}
           onItemDeselect={onItemDeselect}
           onItemSelect={onItemSelect}
+          translations={localizations}
         />
       ) : (
         <SelectDesktop
@@ -155,6 +160,7 @@ export const Select = (props: TSingleSelectPropTypes): ReactElement | null => {
           setSelectedOption={setSelectedOption}
           searchValue={searchValue}
           setSearchValue={setSearchValue}
+          translations={localizations}
         />
       )}
     </div>

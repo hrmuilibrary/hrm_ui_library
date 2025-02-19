@@ -26,7 +26,9 @@ const DESKTOP_ANIMATION = {
   }
 }
 
-export const MOBILE_ANIMATION = (isFullScreen?: boolean) => {
+export const MOBILE_ANIMATION = (
+  isFullScreen?: boolean
+): { [key: string]: { [key: string]: string | number } } => {
   return {
     initial: {
       height: 0,

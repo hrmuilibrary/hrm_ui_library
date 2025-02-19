@@ -19,7 +19,6 @@ export const SimpleDatePickerDesktop = (props: ISimpleDatePickerProps): ReactEle
     locale = 'hy',
     changeHandler,
     format = 'M/D/YYYY',
-    dayjsLocale = 'hy-am',
     required = false,
     dataId,
     hasError,
@@ -39,7 +38,7 @@ export const SimpleDatePickerDesktop = (props: ISimpleDatePickerProps): ReactEle
     setOpen: (isOpen: boolean) => void | null
   }>(null)
 
-  useImportFilesDynamically(dayjsLocale)
+  useImportFilesDynamically(locale)
 
   const selectedDate =
     value !== undefined && Object.prototype.toString.call(value) === '[object Date]'

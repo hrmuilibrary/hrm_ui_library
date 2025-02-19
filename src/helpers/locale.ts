@@ -10,6 +10,7 @@ export const getTranslationLocale = (): string => {
 }
 
 export const getDayJSLocale = (): string => {
+  // Todo: need to check if it is works correctly when change language
   const activeLangCode = getActiveLanguageCode()
-  return DayJSLocale[activeLangCode as keyof typeof DayJSLocale] || 'en'
+  return DayJSLocale[TranslationLocale[activeLangCode as keyof typeof TranslationLocale]] || 'en'
 }
