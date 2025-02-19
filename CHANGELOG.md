@@ -1,3 +1,10 @@
+## [1.6.7](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.6...1.6.7) (2025-02-19)
+
+
+### Bug Fixes
+
+* add date picker and select/multiselect localizations ([67bddc1](https://github.com/hrmuilibrary/hrm_ui_library/commit/67bddc1dbf87364193656920597d94bfe42b036e))
+
 ## [1.6.6](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.5...1.6.6) (2025-02-17)
 
 
