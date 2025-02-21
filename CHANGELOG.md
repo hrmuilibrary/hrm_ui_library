@@ -1,3 +1,10 @@
+## [1.6.8](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.7...1.6.8) (2025-02-21)
+
+
+### Bug Fixes
+
+* add `xlarge` size for avatar ([4317093](https://github.com/hrmuilibrary/hrm_ui_library/commit/43170937691d12ed36e6acae87fc2f871b8c27ff))
+
 ## [1.6.7](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.6...1.6.7) (2025-02-19)
 
 
