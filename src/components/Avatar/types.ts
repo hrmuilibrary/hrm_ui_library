@@ -9,7 +9,7 @@ export interface TAvatarProps extends IFormCompProps {
   initials?: string | ReactElement
   color?: 'default' | 'purple' | 'blue' | 'green' | 'red'
   type?: 'count'
-  size?: 'xlarge' | 'large' | 'medium' | 'small' | 'xsmall' | 'xxsmall'
+  size?: 'xxlarge' | 'xlarge' | 'large' | 'medium' | 'small' | 'xsmall' | 'xxsmall'
   className?: string
   isEditable?: boolean
   onAvatarChange?: (file: File) => void

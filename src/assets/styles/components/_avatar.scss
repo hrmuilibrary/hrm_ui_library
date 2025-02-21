@@ -3,6 +3,7 @@
 .avatar {
   $this: &;
 
+  --ds-avatar-size-xxl: var(--ds-size-115);
   --ds-avatar-size-xl: var(--ds-size-80);
   --ds-avatar-size-lg: var(--ds-size-56);
   --ds-avatar-size-md: var(--ds-size-40);
@@ -67,6 +68,12 @@
   background: no-repeat center;
   background-size: cover;
 
+  &--xxlarge {
+    width: var(--ds-avatar-size-xxl);
+    min-width: var(--ds-avatar-size-xxl);
+    height: var(--ds-avatar-size-xxl);
+    font-size: var(--ds-avatar-font-size-xl);
+  }
   &--xlarge {
     width: var(--ds-avatar-size-xl);
     min-width: var(--ds-avatar-size-xl);
