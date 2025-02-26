@@ -5,6 +5,7 @@ export type TCollapseTitleColor = 'selected' | 'primary'
 export interface ICollapseTitleProps {
   size?: 'small' | 'medium'
   color?: TCollapseTitleColor
+  weight?: 'regular' | 'semibold' | 'bold' | 'bolder'
 }
 
 interface TCollapseItemTitle extends ICollapseTitleProps {

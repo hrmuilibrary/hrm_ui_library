@@ -11,7 +11,7 @@ import { generateDataTestId } from '../../../utils/helpers'
 
 export const CollapseItem = (props: TCollapseProps): React.ReactElement => {
   const {
-    title: { text, size = 'medium', color },
+    title: { text, weight = 'bolder', size = 'medium', color },
     className,
     isOpen,
     toggle,
@@ -25,7 +25,7 @@ export const CollapseItem = (props: TCollapseProps): React.ReactElement => {
 
   const title =
     typeof text === 'string' ? (
-      <Text size={size} type={color} weight="bolder" dataId={generateDataTestId('title', dataId)}>
+      <Text size={size} type={color} weight={weight} dataId={generateDataTestId('title', dataId)}>
         {text}
       </Text>
     ) : (
