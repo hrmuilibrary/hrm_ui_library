@@ -1,3 +1,10 @@
+## [1.6.10](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.9...1.6.10) (2025-02-26)
+
+
+### Bug Fixes
+
+* add check authorization helper function ([c5a6a08](https://github.com/hrmuilibrary/hrm_ui_library/commit/c5a6a0818be789687e3198dcb3d267e8444ef69d))
+
 ## [1.6.9](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.8...1.6.9) (2025-02-26)
 
 
