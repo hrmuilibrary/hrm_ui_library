@@ -1,3 +1,10 @@
+## [1.6.9](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.8...1.6.9) (2025-02-26)
+
+
+### Bug Fixes
+
+* add font weight prop for collapse title ([7b1767f](https://github.com/hrmuilibrary/hrm_ui_library/commit/7b1767f3ed721642c42fc237a9745187cef06461))
+
 ## [1.6.8](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.7...1.6.8) (2025-02-21)
 
 
