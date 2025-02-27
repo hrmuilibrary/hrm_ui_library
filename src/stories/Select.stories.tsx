@@ -39,6 +39,7 @@ type TSelectOption = {
   meta?: string
   disabled?: boolean
   children?: TSelectOption[]
+  avatar?: string
 }
 
 type TSelectOptions = TSelectOption[]
@@ -180,16 +181,22 @@ const MOCK_DATA: TSelectOptions = [
   {
     value: 1,
     label: 'Zhanna Yeghiazaryan',
-    meta: 'Junior Dev'
+    meta: 'Junior Dev',
+    avatar:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxctjU21pUENIsGN1F4qY21P7GfdEbhTMp2g&s'
   },
   {
     value: 2,
     label: 'Marta Kostumyan',
-    meta: 'Senior Dev'
+    meta: 'Senior Dev',
+    avatar:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxctjU21pUENIsGN1F4qY21P7GfdEbhTMp2g&s'
   },
   {
     value: 3,
-    label: 'Lilit Matinyan'
+    label: 'Lilit Matinyan',
+    avatar:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxctjU21pUENIsGN1F4qY21P7GfdEbhTMp2g&s'
   },
   {
     value: 4,
@@ -13168,7 +13175,9 @@ const MOCK_DATA: TSelectOptions = [
 const OPTIONS_CITIES: TSelectOptions = [
   {
     value: 'yerevan',
-    label: 'Yerevan'
+    label: 'Yerevan',
+    avatar:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxctjU21pUENIsGN1F4qY21P7GfdEbhTMp2g&s'
   },
   {
     value: 'rome',
@@ -13401,7 +13410,6 @@ Select.args = {
   isLoading: false,
   options: OPTIONS,
   label: 'country',
-  avatar: image.src,
   placeHolder: 'Select country',
   labelAddons: <IconInfo size={'xsmall'} type={'information'} className={'ml-4'} />
 }
@@ -13450,7 +13458,6 @@ MultiSelect.args = {
   isLoading: false,
   label: 'Select',
   options: MOCK_DATA,
-  avatar: image.src,
   placeHolder: 'Select country',
   helperText: 'To be filled in only for USA, Canada and European countries.',
   labelAddons: <IconInfo size={'xsmall'} type={'information'} className={'ml-4'} />

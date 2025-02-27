@@ -11,7 +11,6 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
   const {
     isMobile,
     closeDropdown,
-    avatar,
     scrollableContentStyle,
     options,
     helperText,
@@ -76,13 +75,12 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
 
   const optionProps = useMemo(() => {
     return {
-      avatar,
       isCheckbox: true,
       labelLeftIconProps,
       optionRightIconComponent,
       labelRightIconComponent
     }
-  }, [avatar, labelLeftIconProps, optionRightIconComponent, labelRightIconComponent])
+  }, [labelLeftIconProps, optionRightIconComponent, labelRightIconComponent])
 
   return (
     <>

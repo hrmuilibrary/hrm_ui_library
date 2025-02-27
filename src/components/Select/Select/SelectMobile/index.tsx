@@ -14,7 +14,6 @@ export const SelectMobile = (props: ISingleSelectMobileProps): ReactElement => {
   const {
     translations,
     currentSelection,
-    avatar,
     isOpen,
     closeDropdown,
     isLoading,
@@ -97,7 +96,6 @@ export const SelectMobile = (props: ISingleSelectMobileProps): ReactElement => {
                       labelLeftIconProps={labelLeftIconProps}
                       OptionRightIconComponent={optionRightIconComponent}
                       LabelRightIconComponent={labelRightIconComponent}
-                      avatar={avatar}
                       disabled={item.disabled}
                       isSelected={isSelected}
                       dataId={item.dataId}

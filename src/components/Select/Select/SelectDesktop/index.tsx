@@ -21,7 +21,6 @@ import { filterOptions } from '../helpers'
 export const SelectDesktop = (props: ISingleSelectDesktopProps): ReactElement | null => {
   const {
     currentSelection,
-    avatar,
     options,
     isLoading,
     dataId = '',
@@ -154,7 +153,6 @@ export const SelectDesktop = (props: ISingleSelectDesktopProps): ReactElement | 
                           labelLeftIconProps={labelLeftIconProps}
                           OptionRightIconComponent={optionRightIconComponent}
                           LabelRightIconComponent={labelRightIconComponent}
-                          avatar={avatar}
                           disabled={item.disabled}
                           isSelected={isSelected}
                           dataId={item.dataId}

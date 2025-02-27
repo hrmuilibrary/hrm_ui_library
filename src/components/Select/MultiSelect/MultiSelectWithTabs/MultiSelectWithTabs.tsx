@@ -10,7 +10,6 @@ import { DROPDOWN_MAX_HEIGHT } from '../../constants'
 
 export const MultiSelectWithTabs = (props: TMultiSelectGroupedProps): React.ReactElement => {
   const {
-    avatar,
     options,
     scrollableContentStyle,
     selectedValues,
@@ -100,12 +99,11 @@ export const MultiSelectWithTabs = (props: TMultiSelectGroupedProps): React.Reac
   const optionProps = useMemo(() => {
     return {
       isCheckbox: true,
-      avatar,
       labelLeftIconProps,
       optionRightIconComponent,
       labelRightIconComponent
     }
-  }, [avatar, labelLeftIconProps, optionRightIconComponent, labelRightIconComponent])
+  }, [labelLeftIconProps, optionRightIconComponent, labelRightIconComponent])
 
   return (
     <>

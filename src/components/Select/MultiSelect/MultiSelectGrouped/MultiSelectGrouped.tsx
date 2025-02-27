@@ -13,7 +13,6 @@ import IconCaretDownFilled from '../../../SVGIcons/IconCaretDownFilled'
 export const MultiSelectGrouped = (props: TMultiSelectGroupedProps): React.ReactElement | null => {
   const {
     isMobile,
-    avatar,
     options,
     helperText,
     translations,
@@ -121,13 +120,12 @@ export const MultiSelectGrouped = (props: TMultiSelectGroupedProps): React.React
   const optionProps = useMemo(() => {
     return {
       isCheckbox: true,
-      avatar,
       labelLeftIconProps,
       optionRightIconComponent,
       labelRightIconComponent,
       className: 'group-item__option'
     }
-  }, [avatar, labelLeftIconProps, optionRightIconComponent, labelRightIconComponent])
+  }, [labelLeftIconProps, optionRightIconComponent, labelRightIconComponent])
   const hasTopContent = isSearchAvailable || helperText
 
   return (

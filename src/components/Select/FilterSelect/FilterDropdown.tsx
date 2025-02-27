@@ -11,8 +11,7 @@ export const FilterDropdownContent = (props: TFilterDropdownContentProps): React
     onItemDeselect,
     labelLeftIconProps,
     optionRightIconComponent,
-    labelRightIconComponent,
-    avatar
+    labelRightIconComponent
   } = props
 
   const filteredOptions = useMemo(() => {
@@ -34,7 +33,6 @@ export const FilterDropdownContent = (props: TFilterDropdownContentProps): React
             labelLeftIconProps={labelLeftIconProps}
             OptionRightIconComponent={optionRightIconComponent}
             LabelRightIconComponent={labelRightIconComponent}
-            avatar={avatar}
             isCheckbox={true}
             disabled={item.disabled}
             isSelected={isSelected}
