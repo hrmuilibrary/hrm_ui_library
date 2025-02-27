@@ -11,7 +11,6 @@ const LEVEL_LEFT_MARGIN = 10
 export const NestedSelect = (props: TNestedSelectProps): React.ReactElement | null => {
   const {
     label,
-    avatar,
     options,
     selected,
     placeHolder,
@@ -76,7 +75,6 @@ export const NestedSelect = (props: TNestedSelectProps): React.ReactElement | nu
             key={value}
             isSelected={isSelected}
             onClick={() => onSelect({ value, label: option.label }, !!children)}
-            avatar={avatar}
             disabled={disabled}
             OptionRightIconComponent={optionRightIconComponent}
             LabelRightIconComponent={labelRightIconComponent}

@@ -12,7 +12,6 @@ export const OptionItem = (props: TSelectItemProps): React.ReactElement => {
     data,
     onClick,
     disabled,
-    avatar,
     isSelected,
     labelLeftIconProps,
     LabelRightIconComponent,
@@ -24,7 +23,7 @@ export const OptionItem = (props: TSelectItemProps): React.ReactElement => {
     style = {}
   } = props
 
-  const { label, meta, value, optionLeftIcon } = data
+  const { label, meta, value, optionLeftIcon, avatar } = data
 
   const handleClick = useCallback(
     (e: TClickEventType) => {

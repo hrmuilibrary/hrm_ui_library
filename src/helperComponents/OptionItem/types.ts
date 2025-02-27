@@ -9,7 +9,6 @@ export type TSelectItemProps = {
   labelLeftIconProps?: TSelectIconProps
   OptionRightIconComponent?: (value: TItemValue) => ReactElement
   LabelRightIconComponent?: (value: TItemValue) => ReactElement
-  avatar?: string
   disabled?: boolean
   isCheckbox?: boolean
   tooltipAddons?: TTooltipProps

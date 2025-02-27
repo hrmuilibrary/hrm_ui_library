@@ -21,7 +21,6 @@ export const ButtonSelect = (props: TButtonSelectPropTypes): ReactElement => {
     labelLeftIconProps,
     tooltipAddons,
     dropdownWidth,
-    avatar,
     labelRightIconComponent,
     optionRightIconComponent,
     align = 'left',
@@ -112,7 +111,6 @@ export const ButtonSelect = (props: TButtonSelectPropTypes): ReactElement => {
                   labelLeftIconProps={labelLeftIconProps}
                   OptionRightIconComponent={optionRightIconComponent}
                   LabelRightIconComponent={labelRightIconComponent}
-                  avatar={avatar}
                   disabled={item.disabled}
                   isSelected={isSelected}
                 />

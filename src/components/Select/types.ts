@@ -21,7 +21,6 @@ interface TSelectBaseProps {
   labelRightIconComponent?: (value: TItemValue) => ReactElement
   selectRightIconProps?: TSelectIconProps
   selectRightIconOpenedProps?: TSelectIconProps
-  avatar?: string
   size?: 'small' | 'large' | 'medium'
   className?: string
   dropdownWidth?: number
@@ -37,7 +36,6 @@ export interface TNestedSelectProps {
   selected?: TSelectOption | null
   optionRightIconComponent?: (value: TItemValue) => ReactElement
   labelRightIconComponent?: (value: TItemValue) => ReactElement
-  avatar?: string
   labelAddons?: ReactElement
 }
 
@@ -153,7 +151,6 @@ export interface ISingleSelectResponsiveProps {
   onItemSelect: (item: TItemValue) => void
   onItemDeselect: () => void
   options: TSelectOptions
-  avatar?: string
   currentSelection: TItemValue | undefined
   isRequiredField?: boolean
   translations?: TSelectTranslations
@@ -206,7 +203,6 @@ export interface TFilterDropdownContentProps extends IFormCompProps {
     className?: string
     onClick?: TClickHandler
   }
-  avatar?: string
   footerButtonProps?: {
     cancel: TButtonPropTypes
     confirm: TButtonPropTypes
@@ -227,7 +223,6 @@ export interface TFilterGroupDropdownContentProps extends IFormCompProps {
     className?: string
     onClick?: TClickHandler
   }
-  avatar?: string
   footerButtonProps?: {
     cancel: TButtonPropTypes
     confirm: TButtonPropTypes
