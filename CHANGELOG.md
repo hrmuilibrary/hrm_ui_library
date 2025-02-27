@@ -1,3 +1,10 @@
+## [1.6.11](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.10...1.6.11) (2025-02-27)
+
+
+### Bug Fixes
+
+* make option avatar separated for each option ([5e10117](https://github.com/hrmuilibrary/hrm_ui_library/commit/5e101171906022ff7481852b8dc51e97ee433d19))
+
 ## [1.6.10](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.9...1.6.10) (2025-02-26)
 
 
