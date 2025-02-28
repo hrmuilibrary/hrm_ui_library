@@ -1,3 +1,11 @@
+## [1.6.12](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.11...1.6.12) (2025-02-28)
+
+
+### Bug Fixes
+
+* add deep equal helper ([ea39d29](https://github.com/hrmuilibrary/hrm_ui_library/commit/ea39d292a179c7c40504bc981e114cc65a14b47e))
+* eslint fix ([fbe7087](https://github.com/hrmuilibrary/hrm_ui_library/commit/fbe70877a0cb7dd96fae2dbb74c08eb5a019e503))
+
 ## [1.6.11](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.10...1.6.11) (2025-02-27)
 
 
