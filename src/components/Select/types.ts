@@ -155,9 +155,13 @@ export interface ISingleSelectResponsiveProps {
   isRequiredField?: boolean
   translations?: TSelectTranslations
   language?: string
+  setSelectedOption: (item: TSelectOption | null) => void
 }
 
-export type ISingleSelectMobileProps = ISingleSelectResponsiveProps
+export interface ISingleSelectMobileProps extends ISingleSelectResponsiveProps {
+  withSearch: boolean
+}
+
 export interface ISingleSelectDesktopProps extends ISingleSelectResponsiveProps {
   searchValue: string
   setSearchValue: (value: string) => void
