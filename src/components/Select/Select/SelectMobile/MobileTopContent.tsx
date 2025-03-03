@@ -8,8 +8,14 @@ type TProps = {
   searchValue: string
   setSearchValue: (value: string) => void
   onBack: () => void
+  withSearch: boolean
 }
-export const MobileTopContent = ({ onBack, setSearchValue, searchValue }: TProps): ReactElement => {
+export const MobileTopContent = ({
+  onBack,
+  setSearchValue,
+  searchValue,
+  withSearch
+}: TProps): ReactElement => {
   const onSearch = (e: TChangeEventType) => {
     setSearchValue(e.target.value)
   }
@@ -20,17 +26,19 @@ export const MobileTopContent = ({ onBack, setSearchValue, searchValue }: TProps
   return (
     <div className="flexbox mobile_top_content">
       <IconChevronLeft onClick={onBack} size="large" />
-      <Input
-        currentValue={searchValue}
-        handleChange={onSearch}
-        className="ml-8"
-        size="small"
-        rightIconProps={{
-          Component: searchValue ? IconDismissFilled : IconSearchFilled,
-          size: searchValue ? 'xsmall' : 'small',
-          onClick: removeFilter
-        }}
-      />
+      {withSearch && (
+        <Input
+          currentValue={searchValue}
+          handleChange={onSearch}
+          className="ml-8"
+          size="small"
+          rightIconProps={{
+            Component: searchValue ? IconDismissFilled : IconSearchFilled,
+            size: searchValue ? 'xsmall' : 'small',
+            onClick: removeFilter
+          }}
+        />
+      )}
     </div>
   )
 }

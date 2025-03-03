@@ -7,8 +7,8 @@ import { Input } from '../../Input'
 import { noop } from '../../../utils/helpers'
 import { SELECTED_VISIBLE_MIN_COUNT } from '../constants'
 import { SelectMobile } from './SelectMobile'
-import { IconCaretUpFilled } from '../../SVGIcons/IconCaretUpFilled'
-import { IconCaretDownFilled } from '../../SVGIcons/IconCaretDownFilled'
+import { IconChevronUp } from '../../SVGIcons/IconChevronUp'
+import { IconChevronDown } from '../../SVGIcons/IconChevronDown'
 import { SELECT_TRANSLATIONS } from '../localization'
 
 export const Select = (props: TSingleSelectPropTypes): ReactElement | null => {
@@ -25,15 +25,15 @@ export const Select = (props: TSingleSelectPropTypes): ReactElement | null => {
     isRequiredField,
     placeHolder,
     selectRightIconProps = {
-      Component: IconCaretDownFilled,
+      Component: IconChevronDown,
       size: 'xsmall'
     },
     selectRightIconOpenedProps = {
-      Component: IconCaretUpFilled,
+      Component: IconChevronUp,
       size: 'xsmall'
     },
     options,
-    withSearch,
+    withSearch = false,
     setSelectedItem,
     setFieldValue,
     name,
@@ -144,6 +144,8 @@ export const Select = (props: TSingleSelectPropTypes): ReactElement | null => {
           onItemDeselect={onItemDeselect}
           onItemSelect={onItemSelect}
           translations={localizations}
+          setSelectedOption={setSelectedOption}
+          withSearch={withSearch}
         />
       ) : (
         <SelectDesktop

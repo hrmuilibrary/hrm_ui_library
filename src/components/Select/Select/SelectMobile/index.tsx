@@ -1,4 +1,4 @@
-import React, { ReactElement, useMemo, useState } from 'react'
+import React, { ReactElement, useCallback, useEffect, useMemo, useState } from 'react'
 import { OptionItem } from '../../../../helperComponents'
 import { Empty } from '../../../Empty'
 import { Modal } from '../../../Modal'
@@ -26,13 +26,24 @@ export const SelectMobile = (props: ISingleSelectMobileProps): ReactElement => {
     tooltipAddons,
     labelLeftIconProps,
     optionRightIconComponent,
-    labelRightIconComponent
+    labelRightIconComponent,
+    setSelectedOption,
+    withSearch
   } = props
   const [searchValue, setSearchValue] = useState<string>('')
 
   const filteredData = useMemo(() => {
     return filterOptions(options, searchValue)
   }, [searchValue, options])
+
+  const setCurrentSelectedLabel = useCallback(() => {
+    const selectedItem = options.find((item) => item.value === currentSelection) as TSelectOption
+    setSelectedOption(selectedItem)
+  }, [currentSelection, options])
+
+  useEffect(() => {
+    setCurrentSelectedLabel()
+  }, [setCurrentSelectedLabel])
 
   const clickHandler =
     (isSelected: boolean) =>
@@ -59,6 +70,7 @@ export const SelectMobile = (props: ISingleSelectMobileProps): ReactElement => {
         searchValue={searchValue}
         setSearchValue={setSearchValue}
         onBack={closeModal}
+        withSearch={withSearch}
       />
       <div className="mobile_options_content">
         {innerHelperText ? (
