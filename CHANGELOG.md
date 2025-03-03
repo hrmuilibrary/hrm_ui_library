@@ -1,3 +1,10 @@
+## [1.6.13](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.12...1.6.13) (2025-03-03)
+
+
+### Bug Fixes
+
+* change select right icon ([651c3e1](https://github.com/hrmuilibrary/hrm_ui_library/commit/651c3e1203909830704b574f0af2483a9552f4b7))
+
 ## [1.6.12](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.11...1.6.12) (2025-02-28)
 
 
