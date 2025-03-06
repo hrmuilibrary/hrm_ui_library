@@ -19,7 +19,7 @@ export const Menu = (props: TMenuProps): ReactElement | null => {
     isOpen,
     position = 'bottom-right',
     className = '',
-    children
+    children = null
   } = props
   const [menuRef, setMenuRef] = useState<HTMLDivElement | null>(null)
   useOnOutsideClick(menuRef, onClose, isOpen, useId())
