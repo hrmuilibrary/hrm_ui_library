@@ -19,7 +19,7 @@ export const Menu = (props: TMenuProps): ReactElement | null => {
     isOpen,
     position = 'bottom-right',
     className = '',
-    children
+    children = null
   } = props
   const [menuRef, setMenuRef] = useState<HTMLDivElement | null>(null)
   useOnOutsideClick(menuRef, onClose, isOpen, useId())
@@ -65,35 +65,32 @@ export const Menu = (props: TMenuProps): ReactElement | null => {
           ref={setMenuRef}
         >
           <>
-            {children ? (
-              children
-            ) : (
-              <>
-                {menuItems.map(
-                  ({ label, meta, value, handler, iconProps, disabled, dataId }: TMenuItem) => {
-                    return (
-                      <OptionItem
-                        dataId={dataId}
-                        disabled={disabled}
-                        key={value}
-                        data={{
-                          label,
-                          value,
-                          meta
-                        }}
-                        labelLeftIconProps={iconProps}
-                        onClick={() => {
-                          onClose()
-                          if (handler) {
-                            handler()
-                          }
-                        }}
-                      />
-                    )
-                  }
-                )}
-              </>
-            )}
+            {children}
+            <>
+              {menuItems?.map(
+                ({ label, meta, value, handler, iconProps, disabled, dataId }: TMenuItem) => {
+                  return (
+                    <OptionItem
+                      dataId={dataId}
+                      disabled={disabled}
+                      key={value}
+                      data={{
+                        label,
+                        value,
+                        meta
+                      }}
+                      labelLeftIconProps={iconProps}
+                      onClick={() => {
+                        onClose()
+                        if (handler) {
+                          handler()
+                        }
+                      }}
+                    />
+                  )
+                }
+              )}
+            </>
           </>
         </div>,
         parentRef
