@@ -1,3 +1,11 @@
+## [1.6.14](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.13...1.6.14) (2025-03-06)
+
+
+### Bug Fixes
+
+* add default value for menu children prop ([107d629](https://github.com/hrmuilibrary/hrm_ui_library/commit/107d629ca05d4f9ae94128821ac26b23edad505c))
+* change menu component children prop logic ([ca8aace](https://github.com/hrmuilibrary/hrm_ui_library/commit/ca8aace61c9e06f499d45350e80a47a01e1e463e))
+
 ## [1.6.13](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.12...1.6.13) (2025-03-03)
 
 
