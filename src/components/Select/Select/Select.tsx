@@ -1,4 +1,5 @@
-import React, { ReactElement, useRef, useState } from 'react'
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import React, { forwardRef, ReactElement, useRef, useState } from 'react'
 import { TSingleSelectPropTypes } from '../types'
 import { useIsMobile } from '../../../hooks/useGetIsMobile'
 import { SelectDesktop } from './SelectDesktop'
@@ -11,7 +12,7 @@ import { IconChevronUp } from '../../SVGIcons/IconChevronUp'
 import { IconChevronDown } from '../../SVGIcons/IconChevronDown'
 import { SELECT_TRANSLATIONS } from '../localization'
 
-export const Select = (props: TSingleSelectPropTypes): ReactElement | null => {
+export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactElement | null => {
   const {
     labelAddons,
     dataId,
@@ -167,4 +168,6 @@ export const Select = (props: TSingleSelectPropTypes): ReactElement | null => {
       )}
     </div>
   )
-}
+})
+
+Select.displayName = 'Select'

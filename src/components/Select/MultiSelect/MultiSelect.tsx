@@ -1,4 +1,5 @@
-import React, { ReactElement, useEffect, useId, useMemo, useState } from 'react'
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import React, { ReactElement, useEffect, useId, useMemo, useState, forwardRef } from 'react'
 
 import { OptionsWrapper } from './OptionsWrapper'
 import { Footer, InputSelectWrapper, ButtonSelectWrapper } from '../SharedComponents'
@@ -7,7 +8,7 @@ import { TMultiSelectPropTypes } from '../types'
 import { useIsMobile } from '../../../hooks/useGetIsMobile'
 import { SELECT_TRANSLATIONS } from '../localization'
 
-export const MultiSelect = (props: TMultiSelectPropTypes): ReactElement => {
+export const MultiSelect = forwardRef((props: TMultiSelectPropTypes, _ref): ReactElement => {
   const {
     isMobileFullScreen = true,
     options,
@@ -148,4 +149,6 @@ export const MultiSelect = (props: TMultiSelectPropTypes): ReactElement => {
       </>
     </WrapperComponent>
   )
-}
+})
+
+MultiSelect.displayName = 'MultiSelect'

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useMemo } from 'react'
 import { ErrorMessage, Label } from '../../helperComponents'
 import { TTextAreaTypeProps } from './types'
@@ -23,6 +24,8 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TTextAreaTypeProps
       successMessage,
       dataId = '',
       labelAddons,
+      isValid,
+      setFieldValue,
       ...rest
     },
     ref
