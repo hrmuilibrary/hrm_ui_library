@@ -1,3 +1,10 @@
+## [1.6.15](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.14...1.6.15) (2025-03-20)
+
+
+### Bug Fixes
+
+* fixes forward ref warnings in few components ([1619bbf](https://github.com/hrmuilibrary/hrm_ui_library/commit/1619bbf452f26b545487201b74c04dc7fa2be82a))
+
 ## [1.6.14](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.13...1.6.14) (2025-03-06)
 
 
