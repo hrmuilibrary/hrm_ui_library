@@ -3,6 +3,7 @@ import { type StoryFn } from '@storybook/react'
 import { Alert as AlertComp } from '../index'
 import { TAlertProps } from '../components/Alert/types'
 
+
 export default {
   title: 'Alert',
   component: AlertComp,
