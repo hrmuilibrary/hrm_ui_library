@@ -1,4 +1,5 @@
-﻿import React, { forwardRef, ReactElement, useEffect, useState } from 'react'
+﻿/* eslint-disable @typescript-eslint/no-unused-vars */
+import React, { forwardRef, ReactElement, useEffect, useState } from 'react'
 import DatePicker from 'react-datepicker'
 import { Input } from '../../Input'
 import { DateFormat, IRangeDatePickerProps, TRangePickerValues } from '../types'
@@ -10,7 +11,7 @@ import { CustomHeader } from '../CustomHeader/CustomHeader'
 import { formatDate } from '../../../helpers'
 
 export const RangeDatePickerMobile = forwardRef(
-  (props: IRangeDatePickerProps): ReactElement | null => {
+  (props: IRangeDatePickerProps, _ref): ReactElement | null => {
     const {
       value,
       currentDates = [],

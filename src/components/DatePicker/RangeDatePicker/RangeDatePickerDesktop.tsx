@@ -9,7 +9,8 @@ import { Label } from '../../../helperComponents'
 import IconCalendarRight from '../../SVGIcons/IconCalendarRight'
 
 export const RangeDatePickerDesktop = forwardRef(
-  (props: IRangeDatePickerProps): ReactElement | null => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  (props: IRangeDatePickerProps, _ref): ReactElement | null => {
     const {
       value,
       currentDates = [],

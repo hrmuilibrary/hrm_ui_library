@@ -1,6 +1,12 @@
 import React from 'react'
 import * as yup from 'yup'
-import { FormField, FormContainer as _FormContainer, Button, MultiSelect, Input } from '../index'
+import {
+  FormField,
+  FormContainer as _FormContainer,
+  Button,
+  DropzoneFileUpload,
+  SimpleDatePicker
+} from '../index'
 
 export default {
   title: 'Form Container',
@@ -143,7 +149,7 @@ const OPTIONS_COUNTRIES: TSelectOptions = [
 
 const VALIDATION_SCHEME = yup.object({
   // conditions: yup.string().required('validation').nullable()
-  firstname: yup.string().required('validation').nullable()
+  firstname: yup.string().required('validation')
 })
 
 const Template = (): React.ReactElement => {
@@ -159,25 +165,10 @@ const Template = (): React.ReactElement => {
         initialValues={INITIAL_VALUES}
       >
         <>
-          <FormField name="firstname" As={(props) => <Input {...props} />} />
-          {/*<FormField*/}
-          {/*  name="multiselect"*/}
-          {/*  As={(props) => (*/}
-          {/*    <MultiSelect*/}
-          {/*      {...props}*/}
-          {/*      isGrouped*/}
-          {/*      translations={{*/}
-          {/*        innerLabel: 'Selected employees',*/}
-          {/*        clearAllLabel: 'Clear All',*/}
-          {/*        overflowText: '%s selected',*/}
-          {/*        emptyListMainMessage: "Sorry, we couldn't find any results"*/}
-          {/*      }}*/}
-          {/*      helperText="helperText"*/}
-          {/*      options={OPTIONS_GROUPED}*/}
-          {/*      isSearchAvailable*/}
-          {/*    />*/}
-          {/*  )}*/}
-          {/*/>*/}
+          <FormField name="firstname" As={(props) => <DropzoneFileUpload {...props} />} />
+          {/*// @ts-ignore*/}
+          <FormField name="date" As={(props) => <SimpleDatePicker {...props} />} />
+
           <Button buttonActionType="submit" buttonText={'Ok'} />
         </>
       </_FormContainer>
