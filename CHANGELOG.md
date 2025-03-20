@@ -1,3 +1,10 @@
+## [1.6.16](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.15...1.6.16) (2025-03-20)
+
+
+### Bug Fixes
+
+* Update slack-notification.yml ([5720b83](https://github.com/hrmuilibrary/hrm_ui_library/commit/5720b8360afa549b7a2d69667b0b10119a8f8742))
+
 ## [1.6.15](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.14...1.6.15) (2025-03-20)
 
 
