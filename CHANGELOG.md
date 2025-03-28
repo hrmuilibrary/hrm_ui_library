@@ -1,3 +1,14 @@
+## [1.6.18](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.17...1.6.18) (2025-03-28)
+
+
+### Bug Fixes
+
+* add avatar initial for optionItems ([ab0e53e](https://github.com/hrmuilibrary/hrm_ui_library/commit/ab0e53e579bd6a28722f359b685abb8ba5e66ca1))
+* add background for status component ([b063173](https://github.com/hrmuilibrary/hrm_ui_library/commit/b063173be32d50d89aeadd526a8acaf915b805dc))
+* change options avatar type ([4ebe6e2](https://github.com/hrmuilibrary/hrm_ui_library/commit/4ebe6e205fcfba1cb098dccc588edf0e9a5e3aae))
+* foundation update ([1063482](https://github.com/hrmuilibrary/hrm_ui_library/commit/1063482f480aadc558da99e529d4b1ac3814fe16))
+* spaces ([d6c2fe2](https://github.com/hrmuilibrary/hrm_ui_library/commit/d6c2fe2e17b45df51f0f4478773ba1fb0e5a8d4f))
+
 ## [1.6.17](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.16...1.6.17) (2025-03-28)
 
 

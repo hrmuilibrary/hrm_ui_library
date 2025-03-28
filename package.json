@@ -1,7 +1,7 @@
 {
   "homepage": "https://github.com/hrmuilibrary/hrm_ui_library",
   "name": "hrm_ui_lib",
-  "version": "1.6.17",
+  "version": "1.6.18",
   "description": "UI library for Dino",
   "private": false,
   "main": "index.js",
