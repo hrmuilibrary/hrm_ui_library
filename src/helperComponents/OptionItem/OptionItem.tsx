@@ -62,13 +62,16 @@ export const OptionItem = (props: TSelectItemProps): React.ReactElement => {
         {optionLeftIcon && optionLeftIcon.Component ? (
           <optionLeftIcon.Component {...optionLeftIcon} size="small" className="mr-8" />
         ) : null}
-        {avatar ? (
+
+        {avatar && (
           <Avatar
             size={size === 'small' ? 'xxsmall' : 'medium'}
-            imagePath={avatar}
+            imagePath={avatar.url}
             className="mr-4"
+            initials={avatar.initials}
           />
-        ) : null}
+        )}
+
         {labelLeftIconProps?.Component ? (
           <labelLeftIconProps.Component
             size="xsmall"

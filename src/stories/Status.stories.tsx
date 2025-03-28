@@ -32,16 +32,7 @@ export default {
 const Template: StoryFn<TStatusProps> = (args) => {
   return (
     <>
-      <_Status {...args} type={'danger'}>
-        <Text type={'secondary'} size={'small'}>
-          Status subtext
-        </Text>
-      </_Status>
-      <_Status {...args} type={'information'}>
-        <Text type={'information'} size={'small'}>
-          Status subtext
-        </Text>
-      </_Status>
+      <_Status {...args}>{/*<Text size={'small'}>Status subtext</Text>*/}</_Status>
     </>
   )
 }
@@ -49,23 +40,12 @@ const Template: StoryFn<TStatusProps> = (args) => {
 export const Status = Template.bind({})
 
 Status.args = {
-  text: 'Status text',
-  type: 'primary',
+  text: 'Status',
+  type: 'discovery',
   size: 'large',
-  withCircle: true,
+  withCircle: false,
+  withBackground: true,
   leftIconProps: {
     Component: IconPerson
-  },
-  rightIconProps: (
-    <Popover
-      linkAddons={{ url: 'link', beforeLink: 'text before link' }}
-      id="beneficiary-tooltip"
-      text={'data'}
-      position="top-center"
-    >
-      <div id="beneficiary-tooltip">
-        <IconInfo type="information" size="xsmall" className={'ml-4 pointer'} />
-      </div>
-    </Popover>
-  )
+  }
 }

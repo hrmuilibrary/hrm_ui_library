@@ -6,7 +6,7 @@
   --ds-status-circle-size-lg: var(--ds-size-8);
   --ds-status-circle-size-sm: var(--ds-size-6);
 
-  --ds-status-circle-bg-primary: var(--ds-color-icon-primary);
+  --ds-status-circle-bg-primary: var(--color-700);
   --ds-status-circle-bg-information: var(--ds-color-icon-info);
   --ds-status-circle-bg-brand: var(--ds-color-icon-brand);
   --ds-status-circle-bg-danger: var(--ds-color-icon-danger);
@@ -14,6 +14,17 @@
   --ds-status-circle-bg-success: var(--ds-color-icon-success);
   --ds-status-circle-bg-discovery: var(--ds-color-icon-discovery);
   --ds-status-circle-bg-disabled: var(--ds-color-icon-disabled);
+
+
+  --ds-status-withBackground-bg-primary: var(--ds-color-bg-disabled);
+  --ds-status-withBackground-bg-information: var(--ds-color-bg-info-lighter);
+  --ds-status-withBackground-bg-brand: var(--ds-color-bg-brand-lighter);
+  --ds-status-withBackground-bg-danger: var(--red-20);
+  --ds-status-withBackground-bg-warning:var(--ds-color-bg-warning-lighter);
+  --ds-status-withBackground-bg-success: var(--ds-color-bg-success-lighter);
+  --ds-status-withBackground-bg-discovery:var(--ds-color-bg-discovery-lighter);
+  --ds-status-withBackground-bg-disabled:var(--ds-color-bg-container-lighter);
+
 
   @include mixin.inline-flex;
   @include mixin.align-items(center);
@@ -48,6 +59,43 @@
   }
   &__circle--disabled {
     background-color: var(--ds-status-circle-bg-disabled);
+  }
+
+  &__withBackground{
+    padding: 4px 12px 4px 10px;
+    border-radius: var(--ds-border-radius-3xl)
+  }
+  &__withBackground--primary {
+    background-color: var(--ds-status-withBackground-bg-primary);
+    border: var(--border-size-1) solid var(--ds-color-bg-grey-darker);
+  }
+  &__withBackground--information {
+    background-color: var(--ds-status-withBackground-bg-information);
+    border: var(--border-size-1) solid var(--ds-color-bg-info-dark);
+  }
+  &__withBackground--brand {
+    background-color: var(--ds-status-withBackground-bg-brand);
+    border: var(--border-size-1) solid var(--ds-color-bg-brand);
+  }
+  &__withBackground--danger {
+    background-color: var(--ds-status-withBackground-bg-danger);
+    border: var(--border-size-1) solid var(--red-500);
+  }
+  &__withBackground--success {
+    background-color: var(--ds-status-withBackground-bg-success);
+    border: var(--border-size-1) solid var(--ds-color-border-success)
+  }
+  &__withBackground--warning {
+    background-color: var(--ds-status-withBackground-bg-warning);
+    border: var(--border-size-1) solid var(--yellow-500);
+  }
+  &__withBackground--discovery {
+    background-color: var(--ds-status-withBackground-bg-discovery);
+    border: var(--border-size-1) solid var(--ds-color-border-discovery);
+  }
+  &__withBackground--disabled {
+    background-color: var(--ds-status-withBackground-bg-disabled);
+    border: var(--border-size-1) solid var(--ds-color-border-disabled);
   }
 
   &--small {

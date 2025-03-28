@@ -19,25 +19,32 @@ export const Status = (props: TStatusProps): ReactElement => {
     leftIconProps,
     rightIconProps,
     withCircle = true,
+    withBackground = false,
     dataId
   } = props
 
   return (
-    <div className={classNames(`status status--${size}`, className)}>
-      {leftIconProps?.Component ? (
-        <leftIconProps.Component size="xsmall" type={type} className="mr-6" {...leftIconProps} />
-      ) : null}
-      {withCircle && !leftIconProps?.Component ? (
+    <div
+      className={classNames(`status status--${size}`, className, {
+        status__withBackground: withBackground,
+        [`status__withBackground--${type}`]: withBackground
+      })}
+    >
+      {withCircle ? (
         <span
-          className={classNames('status__circle', 'mr-8', {
+          className={classNames('status__circle', 'mr-6', {
             [`status__circle--${type}`]: true
           })}
         />
       ) : null}
+      {leftIconProps?.Component ? (
+        <leftIconProps.Component size="xsmall" type={type} className="mr-6" {...leftIconProps} />
+      ) : null}
       <div className="status__label">
         <Text
           dataId={`${dataId}-text`}
-          type={!withCircle ? type : 'primary'}
+          weight={withBackground ? 'semibold' : 'regular'}
+          type={!withCircle || withBackground ? type : 'primary'}
           size={StatusTextSize[size]}
         >
           {text}

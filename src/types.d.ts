@@ -116,7 +116,10 @@ declare type TSelectOption = {
   children?: TSelectOption[]
   dataId?: string
   optionLeftIcon?: TSelectIconProps
-  avatar?: string
+  avatar?: {
+    url: string
+    initials?: string
+  }
 }
 
 declare type TSelectOptions = TSelectOption[]
