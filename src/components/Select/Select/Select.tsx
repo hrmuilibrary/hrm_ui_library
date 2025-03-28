@@ -11,6 +11,7 @@ import { SelectMobile } from './SelectMobile'
 import { IconChevronUp } from '../../SVGIcons/IconChevronUp'
 import { IconChevronDown } from '../../SVGIcons/IconChevronDown'
 import { SELECT_TRANSLATIONS } from '../localization'
+import { Button } from '../../Button'
 
 export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactElement | null => {
   const {
@@ -43,6 +44,7 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
     isMobileFullScreen = true,
     language = 'en',
     translations,
+    isButtonSelect,
     ...rest
   } = props
   const isMobile = useIsMobile()
@@ -104,7 +106,6 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
 
   const currentSelection = (value as TItemValue) || selectedItem
   const localizations = { ...SELECT_TRANSLATIONS[language], ...translations }
-
   return (
     <div
       data-id={`${dataId}-content`}
@@ -113,27 +114,41 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
       })}
       ref={containerRef}
     >
-      <Input
-        onClick={disabled ? noop : onOpenOptions}
-        size={size === 'large' ? 'large' : 'small'}
-        dataId={dataId}
-        hasError={hasError}
-        className="select__input"
-        label={label}
-        onChange={onSearch}
-        required={isRequiredField}
-        leftIconProps={leftIconProps}
-        rightIconProps={isOpen ? selectRightIconOpenedProps : selectRightIconProps}
-        readonly={!isWithSearch}
-        placeholder={placeHolder}
-        currentValue={searchValue || selectedOption?.label.toString() || ''}
-        isValid={isValid}
-        disabled={disabled}
-        helperText={isOpen ? '' : outerHelperText}
-        ref={inputRef}
-        labelAddons={labelAddons}
-        autoComplete="false"
-      />
+      {!isButtonSelect && (
+        <Input
+          onClick={disabled ? noop : onOpenOptions}
+          size={size === 'large' ? 'large' : 'small'}
+          dataId={dataId}
+          hasError={hasError}
+          className="select__input"
+          label={label}
+          onChange={onSearch}
+          required={isRequiredField}
+          leftIconProps={leftIconProps}
+          rightIconProps={isOpen ? selectRightIconOpenedProps : selectRightIconProps}
+          readonly={!isWithSearch}
+          placeholder={placeHolder}
+          currentValue={searchValue || selectedOption?.label.toString() || ''}
+          isValid={isValid}
+          disabled={disabled}
+          helperText={isOpen ? '' : outerHelperText}
+          ref={inputRef}
+          labelAddons={labelAddons}
+          autoComplete="false"
+        />
+      )}
+      {/*// TODO add buttonSelect option for desktop view*/}
+      {isButtonSelect && (
+        <Button
+          size={size}
+          type="secondary"
+          dataId={dataId}
+          iconProps={selectRightIconProps}
+          buttonText={placeHolder || ''}
+          onClick={disabled ? noop : openDropdown}
+          className="select_button"
+        />
+      )}
       {isMobile && isMobileFullScreen ? (
         <SelectMobile
           {...rest}
