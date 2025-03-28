@@ -39,8 +39,10 @@ type TSelectOption = {
   meta?: string
   disabled?: boolean
   children?: TSelectOption[]
-  avatar?: string
-  avatarInitials?: string
+  avatar?: {
+    url: string
+    initials?: string
+  }
 }
 
 type TSelectOptions = TSelectOption[]
@@ -183,26 +185,29 @@ const MOCK_DATA: TSelectOptions = [
     value: 1,
     label: 'Zhanna Yeghiazaryan',
     meta: 'Junior Dev',
-    avatar:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxctjU21pUENIsGN1F4qY21P7GfdEbhTMp2g&s'
+    avatar: {
+      url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxctjU21pUENIsGN1F4qY21P7GfdEbhTMp2g&s'
+    }
   },
   {
     value: 2,
     label: 'Marta Kostumyan',
     meta: 'Senior Dev',
-    avatar:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxctjU21pUENIsGN1F4qY21P7GfdEbhTMp2g&s'
+    avatar: {
+      url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxctjU21pUENIsGN1F4qY21P7GfdEbhTMp2g&s'
+    }
   },
   {
     value: 3,
     label: 'Lilit Matinyan',
-    avatar:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxctjU21pUENIsGN1F4qY21P7GfdEbhTMp2g&s'
+    avatar: {
+      url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxctjU21pUENIsGN1F4qY21P7GfdEbhTMp2g&s'
+    }
   },
   {
     value: 4,
     label: 'Luiza Stepanyan',
-    avatarInitials: 'LS'
+    avatar: { url: '', initials: 'LS' }
   },
   {
     value: 5,
@@ -13178,8 +13183,9 @@ const OPTIONS_CITIES: TSelectOptions = [
   {
     value: 'yerevan',
     label: 'Yerevan',
-    avatar:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxctjU21pUENIsGN1F4qY21P7GfdEbhTMp2g&s'
+    avatar: {
+      url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxctjU21pUENIsGN1F4qY21P7GfdEbhTMp2g&s'
+    }
   },
   {
     value: 'rome',
