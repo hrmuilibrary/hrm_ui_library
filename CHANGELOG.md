@@ -1,3 +1,10 @@
+## [1.6.17](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.16...1.6.17) (2025-03-28)
+
+
+### Bug Fixes
+
+* add button select option for single select ([faa96a4](https://github.com/hrmuilibrary/hrm_ui_library/commit/faa96a43aec60ca1880d47a8ed4212b7a73b1af0))
+
 ## [1.6.16](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.15...1.6.16) (2025-03-20)
 
 
