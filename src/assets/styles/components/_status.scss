@@ -19,9 +19,9 @@
   --ds-status-withBackground-bg-primary: var(--ds-color-bg-disabled);
   --ds-status-withBackground-bg-information: var(--ds-color-bg-info-lighter);
   --ds-status-withBackground-bg-brand: var(--ds-color-bg-brand-lighter);
-  --ds-status-withBackground-bg-danger: #FFF2F0; // TODO add this color in tokens
+  --ds-status-withBackground-bg-danger: var(--red-20);
   --ds-status-withBackground-bg-warning:var(--ds-color-bg-warning-lighter);
-  --ds-status-withBackground-bg-success: var(--ds-color-bg-success-lighter); // #E0FAEC; // TODO add this color in tokens
+  --ds-status-withBackground-bg-success: var(--ds-color-bg-success-lighter);
   --ds-status-withBackground-bg-discovery:var(--ds-color-bg-discovery-lighter);
   --ds-status-withBackground-bg-disabled:var(--ds-color-bg-container-lighter);
 
@@ -83,7 +83,7 @@
   }
   &__withBackground--success {
     background-color: var(--ds-status-withBackground-bg-success);
-    border: var(--border-size-1) solid var(--ds-color-border-success) // TODO add color
+    border: var(--border-size-1) solid var(--ds-color-border-success)
   }
   &__withBackground--warning {
     background-color: var(--ds-status-withBackground-bg-warning);
