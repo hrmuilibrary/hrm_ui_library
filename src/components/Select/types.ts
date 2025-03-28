@@ -120,6 +120,7 @@ export interface TButtonSelectPropTypes extends IFormCompProps, TSelectBaseProps
 }
 
 export interface TSingleSelectPropTypes extends IFormCompProps, TSelectBaseProps {
+  isButtonSelect?: boolean
   isMobileFullScreen?: boolean
   options: TSelectOptions
   selectedItem?: TItemValue
