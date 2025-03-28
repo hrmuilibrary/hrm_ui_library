@@ -117,6 +117,7 @@ declare type TSelectOption = {
   dataId?: string
   optionLeftIcon?: TSelectIconProps
   avatar?: string
+  avatarInitials?: string
 }
 
 declare type TSelectOptions = TSelectOption[]

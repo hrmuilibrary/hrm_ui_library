@@ -23,7 +23,7 @@ export const OptionItem = (props: TSelectItemProps): React.ReactElement => {
     style = {}
   } = props
 
-  const { label, meta, value, optionLeftIcon, avatar } = data
+  const { label, meta, value, optionLeftIcon, avatar, avatarInitials = '' } = data
 
   const handleClick = useCallback(
     (e: TClickEventType) => {
@@ -62,13 +62,14 @@ export const OptionItem = (props: TSelectItemProps): React.ReactElement => {
         {optionLeftIcon && optionLeftIcon.Component ? (
           <optionLeftIcon.Component {...optionLeftIcon} size="small" className="mr-8" />
         ) : null}
-        {avatar ? (
-          <Avatar
-            size={size === 'small' ? 'xxsmall' : 'medium'}
-            imagePath={avatar}
-            className="mr-4"
-          />
-        ) : null}
+
+        <Avatar
+          size={size === 'small' ? 'xxsmall' : 'medium'}
+          imagePath={avatar}
+          className="mr-4"
+          initials={avatarInitials}
+        />
+
         {labelLeftIconProps?.Component ? (
           <labelLeftIconProps.Component
             size="xsmall"

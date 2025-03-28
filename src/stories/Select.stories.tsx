@@ -40,6 +40,7 @@ type TSelectOption = {
   disabled?: boolean
   children?: TSelectOption[]
   avatar?: string
+  avatarInitials?: string
 }
 
 type TSelectOptions = TSelectOption[]
@@ -200,7 +201,8 @@ const MOCK_DATA: TSelectOptions = [
   },
   {
     value: 4,
-    label: 'Luiza Stepanyan'
+    label: 'Luiza Stepanyan',
+    avatarInitials: 'LS'
   },
   {
     value: 5,
