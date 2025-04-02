@@ -1,3 +1,10 @@
+## [1.6.19](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.18...1.6.19) (2025-04-02)
+
+
+### Bug Fixes
+
+* update framer motion ([ca502c0](https://github.com/hrmuilibrary/hrm_ui_library/commit/ca502c0aff20b8e3b4f84d7c2aa6514d7e374fa5))
+
 ## [1.6.18](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.17...1.6.18) (2025-03-28)
 
 
