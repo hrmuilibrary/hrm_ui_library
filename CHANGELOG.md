@@ -1,3 +1,10 @@
+## [1.6.20](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.19...1.6.20) (2025-04-03)
+
+
+### Bug Fixes
+
+* fix status circle color for primary type ([0cf4651](https://github.com/hrmuilibrary/hrm_ui_library/commit/0cf46515876d102d3c415f633caaa6e96ff49a37))
+
 ## [1.6.19](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.18...1.6.19) (2025-04-02)
 
 
