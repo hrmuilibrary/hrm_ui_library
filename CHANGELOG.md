@@ -1,3 +1,10 @@
+## [1.6.21](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.20...1.6.21) (2025-04-12)
+
+
+### Bug Fixes
+
+* minor ui fix for status text ([3807fe7](https://github.com/hrmuilibrary/hrm_ui_library/commit/3807fe7923d41c645bb7d3f283fd609430fb86bb))
+
 ## [1.6.20](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.19...1.6.20) (2025-04-03)
 
 
