@@ -42,6 +42,7 @@ export const Status = (props: TStatusProps): ReactElement => {
       ) : null}
       <div className="status__label">
         <Text
+          className="status__label-text"
           dataId={`${dataId}-text`}
           weight={withBackground ? 'semibold' : 'regular'}
           type={!withCircle || withBackground ? type : 'primary'}

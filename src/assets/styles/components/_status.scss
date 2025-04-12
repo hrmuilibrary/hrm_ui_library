@@ -28,7 +28,11 @@
 
   @include mixin.inline-flex;
   @include mixin.align-items(center);
-
+  &__label{
+   .status__label-text{
+     white-space: nowrap;
+   }
+  }
   &__circle {
     display: block;
     border-radius: var(--ds-border-radius-full);
