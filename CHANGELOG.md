@@ -1,3 +1,10 @@
+## [1.6.22](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.21...1.6.22) (2025-04-23)
+
+
+### Bug Fixes
+
+* update framer motion version ([288e7f6](https://github.com/hrmuilibrary/hrm_ui_library/commit/288e7f6bc199e24d063b96bfb1f9a9becbcb214b))
+
 ## [1.6.21](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.20...1.6.21) (2025-04-12)
 
 
