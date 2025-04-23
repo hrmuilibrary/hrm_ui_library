@@ -121,8 +121,9 @@
     "@types/react-input-mask": "^3.0.2",
     "classnames": "^2.3.2",
     "dayjs": "^1.11.10",
-    "framer-motion": "12.6.3",
+    "framer-motion": "12.8.0",
     "react-datepicker": "^4.25.0",
+    "react-dropzone": "^11.4.2",
     "react-hook-form": "^7.50.0",
     "react-input-mask": "^2.0.4",
     "react-number-format": "^5.3.1",
@@ -132,8 +133,7 @@
     "react-toastify": "10.0.5",
     "react-window": "^1.8.10",
     "sass": "^1.56.1",
-    "storybook-design-token": "^2.8.2",
-    "react-dropzone": "^11.4.2"
+    "storybook-design-token": "^2.8.2"
   },
   "husky": {
     "hooks": {
