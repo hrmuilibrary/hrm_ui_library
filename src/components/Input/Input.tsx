@@ -125,9 +125,9 @@ export const Input = React.forwardRef<HTMLInputElement, InputCustomProps>(
         ref={ref}
         type={type}
         placeholder={placeHolder}
-        onChange={changeHandler}
         data-id={dataId}
         {...rest}
+        onChange={changeHandler}
         {...(currentValue !== undefined ? { value: currentValue } : {})}
       />
     )
