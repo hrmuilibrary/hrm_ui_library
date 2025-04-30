@@ -1,3 +1,10 @@
+## [1.6.23](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.22...1.6.23) (2025-04-30)
+
+
+### Bug Fixes
+
+* use custom onchange fn instead of form field ([8f06f79](https://github.com/hrmuilibrary/hrm_ui_library/commit/8f06f79aff5dbb1dab5de24705e80993bc056683))
+
 ## [1.6.22](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.21...1.6.22) (2025-04-23)
 
 
