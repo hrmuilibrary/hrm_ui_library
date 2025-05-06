@@ -1,3 +1,10 @@
+## [1.6.24](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.23...1.6.24) (2025-05-06)
+
+
+### Bug Fixes
+
+* single select search issue ([b02c09c](https://github.com/hrmuilibrary/hrm_ui_library/commit/b02c09c30cf7c2c56175cdf8947def9d57c1fa86))
+
 ## [1.6.23](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.22...1.6.23) (2025-04-30)
 
 
