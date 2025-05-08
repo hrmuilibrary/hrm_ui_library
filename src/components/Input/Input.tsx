@@ -43,6 +43,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputCustomProps>(
       labelAddons,
       witUpperCase = false,
       isAllowed,
+      onChange,
       ...rest
     },
     ref
@@ -56,6 +57,9 @@ export const Input = React.forwardRef<HTMLInputElement, InputCustomProps>(
 
       if (eventValue.length - 1 === maxCount) {
         return
+      }
+      if (onChange) {
+        onChange(event)
       }
       if (setFieldValue && name) {
         setFieldValue(name, valueWithoutSeparator)
