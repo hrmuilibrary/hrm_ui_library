@@ -1,3 +1,10 @@
+## [1.6.26](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.25...1.6.26) (2025-05-14)
+
+
+### Bug Fixes
+
+* auth improvements ([fc06fcc](https://github.com/hrmuilibrary/hrm_ui_library/commit/fc06fccbe0b6d206db97d3bfdb124ca3d02b9928))
+
 ## [1.6.25](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.24...1.6.25) (2025-05-08)
 
 
