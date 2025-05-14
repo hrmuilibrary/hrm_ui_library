@@ -30,17 +30,20 @@ export const checkAuthorization = (statusCode: STATUS_CODE): void => {
   if (statusCode === STATUS_CODE.UNAUTHORIZED) {
     const currentUrl = `${window.location.pathname}${window.location.search}`
     const encodedReturnUrl = encodeURIComponent(currentUrl)
-    fetch(ROUTE_CONFIGS.authorization.session)
+
+    const appPrefix = window.location.pathname.split('/')[1]
+
+    fetch(`${window.location.origin}/${appPrefix}${ROUTE_CONFIGS.authorization.session}`)
       .then((res) => res.json())
       .then((res) => {
         if (res?.isAuthenticated) {
-          window.location.href = ROUTE_CONFIGS.authorization.logout
+          window.location.href = `${window.location.origin}/${appPrefix}${ROUTE_CONFIGS.authorization.logout}`
         } else {
-          window.location.href = `${ROUTE_CONFIGS.authorization.login}?returnUrl=${encodedReturnUrl}`
+          window.location.href = `${window.location.origin}/${appPrefix}${ROUTE_CONFIGS.authorization.login}?returnUrl=${encodedReturnUrl}`
         }
       })
       .catch(() => {
-        window.location.href = `${ROUTE_CONFIGS.authorization.login}?returnUrl=${encodedReturnUrl}`
+        window.location.href = `${window.location.origin}/${appPrefix}${ROUTE_CONFIGS.authorization.login}?returnUrl=${encodedReturnUrl}`
       })
   }
   if (statusCode === STATUS_CODE.PERMISSION_DENIED) {
