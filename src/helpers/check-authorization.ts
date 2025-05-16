@@ -1,6 +1,7 @@
 import { notify } from '../components/Snackbar'
 import { STATUS_CODE, MESSAGE_TYPE } from '../type'
 import { getTranslationLocale } from './locale'
+import { getModulePrefix } from './get-module-prefix'
 
 const ROUTE_CONFIGS = {
   authorization: {
@@ -31,19 +32,19 @@ export const checkAuthorization = (statusCode: STATUS_CODE): void => {
     const currentUrl = `${window.location.pathname}${window.location.search}`
     const encodedReturnUrl = encodeURIComponent(currentUrl)
 
-    const appPrefix = window.location.pathname.split('/')[1]
+    const appPrefix = getModulePrefix()
 
-    fetch(`${window.location.origin}/${appPrefix}${ROUTE_CONFIGS.authorization.session}`)
+    fetch(`${window.location.origin}${appPrefix}${ROUTE_CONFIGS.authorization.session}`)
       .then((res) => res.json())
       .then((res) => {
         if (res?.isAuthenticated) {
-          window.location.href = `${window.location.origin}/${appPrefix}${ROUTE_CONFIGS.authorization.logout}`
+          window.location.href = `${window.location.origin}${appPrefix}${ROUTE_CONFIGS.authorization.logout}`
         } else {
-          window.location.href = `${window.location.origin}/${appPrefix}${ROUTE_CONFIGS.authorization.login}?returnUrl=${encodedReturnUrl}`
+          window.location.href = `${window.location.origin}${appPrefix}${ROUTE_CONFIGS.authorization.login}?returnUrl=${encodedReturnUrl}`
         }
       })
       .catch(() => {
-        window.location.href = `${window.location.origin}/${appPrefix}${ROUTE_CONFIGS.authorization.login}?returnUrl=${encodedReturnUrl}`
+        window.location.href = `${window.location.origin}${appPrefix}${ROUTE_CONFIGS.authorization.login}?returnUrl=${encodedReturnUrl}`
       })
   }
   if (statusCode === STATUS_CODE.PERMISSION_DENIED) {
