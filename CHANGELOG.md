@@ -1,3 +1,10 @@
+## [1.6.27](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.26...1.6.27) (2025-05-16)
+
+
+### Bug Fixes
+
+* add new helper ([45e4ee3](https://github.com/hrmuilibrary/hrm_ui_library/commit/45e4ee3fb26db836be6454c757c5c370a99f99d8))
+
 ## [1.6.26](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.25...1.6.26) (2025-05-14)
 
 
