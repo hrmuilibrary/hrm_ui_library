@@ -1,3 +1,10 @@
+## [1.6.28](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.27...1.6.28) (2025-05-23)
+
+
+### Bug Fixes
+
+* add new svg icons ([05f33df](https://github.com/hrmuilibrary/hrm_ui_library/commit/05f33df45228534c8a3196fc2248ff516d93caec))
+
 ## [1.6.27](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.26...1.6.27) (2025-05-16)
 
 
