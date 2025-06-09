@@ -1,3 +1,10 @@
+## [1.6.30](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.29...1.6.30) (2025-06-09)
+
+
+### Bug Fixes
+
+* show correct formatted time in mobile view ([2fcdf31](https://github.com/hrmuilibrary/hrm_ui_library/commit/2fcdf31b4c7a3a5f380a201eb9db63c43f32021d))
+
 ## [1.6.29](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.28...1.6.29) (2025-06-09)
 
 
