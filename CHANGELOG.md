@@ -1,3 +1,10 @@
+## [1.6.29](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.28...1.6.29) (2025-06-09)
+
+
+### Bug Fixes
+
+* add readonly property in select component (mobile view input autofocus issue) ([82f46ed](https://github.com/hrmuilibrary/hrm_ui_library/commit/82f46ed855720590551f5cb7a158d25cfad27681))
+
 ## [1.6.28](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.27...1.6.28) (2025-05-23)
 
 
