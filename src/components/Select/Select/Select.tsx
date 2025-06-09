@@ -135,6 +135,7 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
           ref={inputRef}
           labelAddons={labelAddons}
           autoComplete="false"
+          readOnly={isMobile && isMobileFullScreen}
         />
       )}
       {/*// TODO add buttonSelect option for desktop view*/}
