@@ -10,7 +10,7 @@ export const TimePickerMobile = (props: ITimePickerProps): ReactElement => {
   const {
     value,
     currentTime,
-    format,
+    format = 'HH:mm',
     label,
     required,
     hasError,
