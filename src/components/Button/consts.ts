@@ -13,6 +13,6 @@ export const ICON_TYPE_MAPPING: { [key: string]: TSVGIconType } = {
   secondary: 'secondary',
   tertiary: 'primary',
   danger: 'inverse',
-  text: 'selected',
+  text: 'information',
   link: 'selected'
 }
