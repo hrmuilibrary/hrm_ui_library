@@ -15,15 +15,15 @@
   --brand-30: #DBEFD1;
   --brand-20: #EDF7E8;
 
-  --green-900: #265B25;
-  --green-800: #357939;
-  --green-700: #3D8B46;
+  --green-900: #0B4627;
+  --green-800: #0F5C33;
+  --green-700: #147D46;
   --green-600: #199754;
-  --green-500: #4DAA5B;
-  --green-400: #5DB773;
-  --green-300: #7AC48B;
-  --green-200: #9FD4AC;
-  --green-100: #C5E5CC;
+  --green-500: #1FC16B;
+  --green-400: #5ED495;
+  --green-300: #83DFAE;
+  --green-200: #AEEACB;
+  --green-100: #D0F5E1;
   --green-50: #E0FAEC;
 
   --blue-900: #2443B8;
@@ -59,17 +59,17 @@
   --pink-100: #FEA8C9;
   --pink-50: #FFD4E4;
 
-  --red-900: #A41300;
-  --red-800: #E61B00;
-  --red-700: #FF2103;
-  --red-600: #FF391F;
-  --red-500: #FF523B;
-  --red-400: #FF6B57;
-  --red-300: #FF8373;
-  --red-200: #FF9C8F;
-  --red-100: #FFB5AB;
-  --red-50: #FFE0DC;
-  --red-20: #FFF2F0;
+  --red-900: #8B1822;
+  --red-800: #AD1F2B;
+  --red-700: #D02533;
+  --red-600: #E93544;
+  --red-500: #FB3748;
+  --red-400: #FF6875;
+  --red-300: #FF97A0;
+  --red-200: #FFC0C5;
+  --red-100: #FFD5D8;
+  --red-50: #FFEBEC;
+  --red-20: #FFF4F4;
 
   --yellow-900: #EB7520;
   --yellow-800: #ED912A;
@@ -82,19 +82,20 @@
   --yellow-100: #FAEBB9;
   --yellow-50: #FDF7E4;
 
-  --grey-900: #222222;
-  --grey-800: #333333;
-  --grey-700: #555555;
-  --grey-600: #666666;
-  --grey-500: #888888;
-  --grey-400: #AAAAAA;
-  --grey-300: #BBBBBB;
-  --grey-200: #CCCCCC;
-  --grey-100: #DDDDDD;
-  --grey-50: #ECECEC;
-  --grey-40: #F4F5F4;
-  --grey-30: #F7F8F7;
-  --grey-20: #fafafa;
+  --grey-900: #0E121B;
+  --grey-800: #222530;
+  --grey-700: #2B303B;
+  --grey-600: #525866;
+  --grey-500: #717784;
+  --grey-400: #99A0AE;
+  --grey-300: #CACFD8;
+  --grey-200: #E1E4EA;
+  --grey-100: #F2F5F8;
+  --grey-50: #F5F7FA;
+  --grey-40: #F4F5F4; // Todo review
+  --grey-30: #F7F8F7; // Todo review
+  --grey-20: #fafafa; // Todo review
+  --grey-0: #FFFFFF;
 
   --white: #FEFEFE;
 
@@ -124,7 +125,8 @@
   --ds-color-bg-brand-lighter: var(--brand-20);
 
   --ds-color-bg-danger: var(--red-700);
-  --ds-color-bg-danger-dark: var(--red-800);
+  --ds-color-bg-danger-dark: var(--red-600);
+  --ds-color-bg-danger-dark-hover: var(--red-500);
   --ds-color-bg-danger-darker: var(--red-900);
   --ds-color-bg-danger-light: var(--red-100);
   --ds-color-bg-danger-lighter: var(--red-50);
@@ -161,9 +163,9 @@
 
   //text colors
   --ds-color-text-primary: var(--grey-900);
-  --ds-color-text-secondary: var(--grey-700);
-  --ds-color-text-tertiary: var(--grey-500);
-  --ds-color-text-disabled: var(--grey-700);
+  --ds-color-text-secondary: var(--grey-800);
+  --ds-color-text-tertiary: var(--grey-600);
+  --ds-color-text-disabled: var(--grey-400);
   --ds-color-text-selected: var(--brand-500);
   --ds-color-text-inverse: var(--white);
   --ds-color-text-brand: var(--brand-700);
