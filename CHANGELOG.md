@@ -1,3 +1,10 @@
+## [1.6.31](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.30...1.6.31) (2025-06-12)
+
+
+### Bug Fixes
+
+* update button components colors ([ccc93b4](https://github.com/hrmuilibrary/hrm_ui_library/commit/ccc93b4dc33378c76acbdd2aa4ba5e940daba40f))
+
 ## [1.6.30](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.29...1.6.30) (2025-06-09)
 
 
