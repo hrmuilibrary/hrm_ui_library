@@ -126,7 +126,6 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
           required={isRequiredField}
           leftIconProps={leftIconProps}
           rightIconProps={isOpen ? selectRightIconOpenedProps : selectRightIconProps}
-          readonly={!isWithSearch}
           placeholder={placeHolder}
           currentValue={searchValue || selectedOption?.label.toString() || ''}
           isValid={isValid}
@@ -135,7 +134,7 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
           ref={inputRef}
           labelAddons={labelAddons}
           autoComplete="false"
-          readOnly={isMobile && isMobileFullScreen}
+          readOnly={(isMobile && isMobileFullScreen) || !isWithSearch}
         />
       )}
       {/*// TODO add buttonSelect option for desktop view*/}

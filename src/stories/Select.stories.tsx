@@ -64,7 +64,7 @@ export default {
   component: _Select,
   argTypes: {
     size: {
-      options: ['large', 'small'],
+      options: ['large', 'medium', 'small'],
       control: { type: 'radio' }
     },
     language: { control: 'radio', options: ['en', 'ru', 'hy'] }
