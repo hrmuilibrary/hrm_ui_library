@@ -1,3 +1,13 @@
+## [1.6.32](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.31...1.6.32) (2025-06-13)
+
+
+### Bug Fixes
+
+* change input default size ([bc2f06d](https://github.com/hrmuilibrary/hrm_ui_library/commit/bc2f06d2c31055fbe7526a3b1af368554d406fb5))
+* run build ([d707eaf](https://github.com/hrmuilibrary/hrm_ui_library/commit/d707eafa17bf428fb1fb705af9fe2d270ce1c4a4))
+* update chevron icons, update input colors ([e20c59f](https://github.com/hrmuilibrary/hrm_ui_library/commit/e20c59f8033d2c9845cfdd10aaf922f7b58bc9cb))
+* update select components ui ([862450d](https://github.com/hrmuilibrary/hrm_ui_library/commit/862450d97f4f886b0fba35722aa719ae30dd5fe2))
+
 ## [1.6.31](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.30...1.6.31) (2025-06-12)
 
 
