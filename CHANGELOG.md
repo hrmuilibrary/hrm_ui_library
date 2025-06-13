@@ -1,3 +1,10 @@
+## [1.6.33](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.32...1.6.33) (2025-06-13)
+
+
+### Bug Fixes
+
+* improve input readonly property cases ([a724f21](https://github.com/hrmuilibrary/hrm_ui_library/commit/a724f21b79701a2bfad4a0476a445c108c9355d7))
+
 ## [1.6.32](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.31...1.6.32) (2025-06-13)
 
 
