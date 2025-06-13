@@ -90,19 +90,10 @@
 
     & + #{$this}__icon {
       color: var(--ds-color-text-disabled);
-
-      path {
-        fill: var(--ds-color-text-disabled);
-
-      }
     }
 
     & + #{$this}__icon + #{$this}__icon {
       color: var(--grey-500);
-
-      path {
-        fill: var(--grey-500);
-      }
     }
 
     &:hover {
@@ -125,10 +116,6 @@
 
       & + #{$this}__icon {
         color: var(--grey-600);
-
-        path {
-          fill: var(--grey-600);
-        }
       }
 
       & + #{$this}__icon + #{$this}__icon {
@@ -166,10 +153,6 @@
         color: var(--grey-300);
         pointer-events: none;
         cursor: default;
-
-        path {
-          fill: var(--grey-300);
-        }
       }
     }
 
@@ -198,9 +181,6 @@
 
       & + #{$this}__icon {
         color: var(--ds-input-body-icon-invalid);
-        path {
-          fill: var(--ds-input-body-icon-invalid);
-        }
       }
     }
   }
