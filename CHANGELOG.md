@@ -1,3 +1,10 @@
+## [1.6.34](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.33...1.6.34) (2025-06-13)
+
+
+### Bug Fixes
+
+* revert input svg ui changes ([d546702](https://github.com/hrmuilibrary/hrm_ui_library/commit/d5467020d187b4ab00423ff2e255e6c036bf36a9))
+
 ## [1.6.33](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.32...1.6.33) (2025-06-13)
 
 
