@@ -13,7 +13,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputCustomProps>(
     {
       datePlaceHolderText,
       className,
-      size = 'large',
+      size = 'medium',
       error,
       hasError,
       label,
