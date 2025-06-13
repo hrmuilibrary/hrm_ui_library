@@ -5,11 +5,11 @@ import { useGetElemSizes, useGetHasBottomSpace } from '../../../../hooks'
 import { getStringWidth, noop, setTranslationValue } from '../../../../utils/helpers'
 
 import { useChangePositionsOnScroll } from '../../../../hooks/useChangePositionsOnScroll'
-import { IconCaretDownFilled } from '../../../SVGIcons/IconCaretDownFilled'
-import { IconCaretUpFilled } from '../../../SVGIcons/IconCaretUpFilled'
 import { TSelectWrapperProps } from '../../types'
 import { MobileWrapper } from '../../MultiSelect/MobileWrapper'
 import { DesktopWrapper } from '../../MultiSelect/DesktopWrapper'
+import { IconChevronUp } from '../../../SVGIcons/IconChevronUp'
+import { IconChevronDown } from '../../../SVGIcons/IconChevronDown'
 
 export const InputSelectWrapper = (props: TSelectWrapperProps): ReactElement | null => {
   const {
@@ -97,8 +97,8 @@ export const InputSelectWrapper = (props: TSelectWrapperProps): ReactElement | n
           required={isRequiredField}
           currentValue={selectedItemsLabels}
           rightIconProps={{
-            Component: isOpen ? IconCaretUpFilled : IconCaretDownFilled,
-            size: 'xsmall'
+            Component: isOpen ? IconChevronUp : IconChevronDown,
+            size: 'small'
           }}
           labelAddons={labelAddons}
           disabled={disabled}
