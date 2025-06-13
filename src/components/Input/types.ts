@@ -10,7 +10,7 @@ export interface InputCustomProps
   maskChar?: string | null
   maskPlaceholder?: string | null
   className?: string
-  size?: 'large' | 'small'
+  size?: 'large' | 'medium' | 'small'
   currentValue?: string
   error?: string | ReactElement
   label?: string | ReactElement

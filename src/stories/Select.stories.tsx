@@ -13325,7 +13325,7 @@ const Template: StoryFn<TSingleSelectPropTypes> = (args) => {
         outerHelperText="helper text"
         selectedItem={selectedValue}
         setSelectedItem={setSelectedValue}
-        withSearch={true}
+        // withSearch={true}
         innerHelperText="Results"
         optionRightIconComponent={() => {
           return (
