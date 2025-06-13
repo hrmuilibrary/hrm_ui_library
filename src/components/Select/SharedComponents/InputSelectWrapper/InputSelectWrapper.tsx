@@ -8,8 +8,8 @@ import { useChangePositionsOnScroll } from '../../../../hooks/useChangePositions
 import { TSelectWrapperProps } from '../../types'
 import { MobileWrapper } from '../../MultiSelect/MobileWrapper'
 import { DesktopWrapper } from '../../MultiSelect/DesktopWrapper'
-import {IconChevronUp} from "../../../SVGIcons/IconChevronUp";
-import {IconChevronDown} from "../../../SVGIcons/IconChevronDown";
+import { IconChevronUp } from '../../../SVGIcons/IconChevronUp'
+import { IconChevronDown } from '../../../SVGIcons/IconChevronDown'
 
 export const InputSelectWrapper = (props: TSelectWrapperProps): ReactElement | null => {
   const {
