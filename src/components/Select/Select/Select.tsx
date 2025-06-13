@@ -28,11 +28,11 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
     placeHolder,
     selectRightIconProps = {
       Component: IconChevronDown,
-      size: 'xsmall'
+      size: 'small'
     },
     selectRightIconOpenedProps = {
       Component: IconChevronUp,
-      size: 'xsmall'
+      size: 'small'
     },
     options,
     withSearch = false,

@@ -3,8 +3,8 @@ import { Input } from '../../Input'
 import { OptionItem } from '../../../helperComponents'
 import { useGetElemPositions, useGetElemSizes, useOnOutsideClick } from '../../../hooks'
 import { TNestedSelectProps } from '../types'
-import IconCaretUpFilled from '../../SVGIcons/IconCaretUpFilled'
-import IconCaretDownFilled from '../../SVGIcons/IconCaretDownFilled'
+import {IconChevronUp} from '../../SVGIcons/IconChevronUp'
+import {IconChevronDown} from '../../SVGIcons/IconChevronDown'
 
 const LEVEL_LEFT_MARGIN = 10
 
@@ -79,7 +79,7 @@ export const NestedSelect = (props: TNestedSelectProps): React.ReactElement | nu
             OptionRightIconComponent={optionRightIconComponent}
             LabelRightIconComponent={labelRightIconComponent}
             labelLeftIconProps={
-              children ? { Component: IconCaretDownFilled, size: 'xxsmall' } : undefined
+              children ? { Component: IconChevronDown, size: 'xsmall' } : undefined
             }
           />
         </div>
@@ -100,8 +100,8 @@ export const NestedSelect = (props: TNestedSelectProps): React.ReactElement | nu
           label={label}
           required={isRequiredField}
           rightIconProps={{
-            Component: isDropdownOpen ? IconCaretUpFilled : IconCaretDownFilled,
-            size: 'xsmall'
+            Component: isDropdownOpen ? IconChevronUp : IconChevronDown,
+            size: 'small'
           }}
           placeholder={placeHolder}
           currentValue={selected?.label.toString() || ''}

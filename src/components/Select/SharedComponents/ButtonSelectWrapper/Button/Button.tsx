@@ -1,7 +1,8 @@
 import React, { LegacyRef, ReactElement } from 'react'
 import classnames from 'classnames'
 import { Text } from '../../../../Text'
-import { IconCaretDownFilled, IconCaretUpFilled } from '../../../../SVGIcons'
+import {IconChevronUp} from "../../../../SVGIcons/IconChevronUp";
+import {IconChevronDown} from "../../../../SVGIcons/IconChevronDown";
 
 type TProps = {
   buttonText: string
@@ -44,8 +45,8 @@ export const Button = (props: TProps): ReactElement => {
           {`${buttonText}${selectedItemsLabels ? '  |' : ''}`}
         </Text>
 
-        {selectedItemsLabels ? <Text className="btn__text ml-4">{selectedItemsLabels}</Text> : null}
-        {isOpen ? <IconCaretUpFilled size="xsmall" /> : <IconCaretDownFilled size="xsmall" />}
+        {selectedItemsLabels ? <Text className="btn__text ml-4 mr-4">{selectedItemsLabels}</Text> : null}
+        {isOpen ? <IconChevronUp size="small" /> : <IconChevronDown size="small" />}
       </>
     </button>
   )
