@@ -153,6 +153,10 @@
         color: var(--grey-300);
         pointer-events: none;
         cursor: default;
+        
+        svg path {
+          fill: var(--grey-400);
+        }
       }
     }
 
