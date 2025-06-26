@@ -1,3 +1,10 @@
+## [1.6.35](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.34...1.6.35) (2025-06-26)
+
+
+### Bug Fixes
+
+* add utc format helper, update input disabled state icon colors ([faa2110](https://github.com/hrmuilibrary/hrm_ui_library/commit/faa2110d1f822bae6d4978191b256cdbd1618773))
+
 ## [1.6.34](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.33...1.6.34) (2025-06-13)
 
 
