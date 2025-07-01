@@ -1,3 +1,11 @@
+## [1.6.37](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.36...1.6.37) (2025-07-01)
+
+
+### Bug Fixes
+
+* eslint ([643f635](https://github.com/hrmuilibrary/hrm_ui_library/commit/643f635a21a3b5425796ce54edd8243a8852af1d))
+* improve chips onClick handler logic ([c6d45e0](https://github.com/hrmuilibrary/hrm_ui_library/commit/c6d45e08de5ed95c92afe70abae3e2576087d011))
+
 ## [1.6.36](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.35...1.6.36) (2025-07-01)
 
 
