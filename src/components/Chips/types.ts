@@ -20,8 +20,9 @@ export interface TChipsProps extends IFormCompProps {
   disabled?: boolean
   withAction?: boolean
   onClick?: (e: TClickEventType) => void
+  onRemove?: (e: TClickEventType) => void
   dataId?: string
-  id?: string | number
+  id?: string
 }
 
 export enum ChipCustomType {
