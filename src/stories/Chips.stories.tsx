@@ -3,7 +3,7 @@ import { Chips as _Chips } from '../components/Chips'
 import IconPerson from '../components/SVGIcons/IconPerson'
 import { StoryFn } from '@storybook/react'
 import { TChipsProps } from '../components/Chips/types'
-import {Popover} from "../components/Popover";
+import { Popover } from '../components/Popover'
 
 export default {
   title: 'Chips',
@@ -25,10 +25,12 @@ export default {
 }
 
 const Template: StoryFn<TChipsProps> = (args) => {
-  return <>
-    <_Chips {...args} />
-    <Popover text={'Chips'} id={"test"}/>
-  </>
+  return (
+    <>
+      <_Chips {...args} />
+      <Popover text={'Chips'} id={'test'} />
+    </>
+  )
 }
 
 export const Chips = Template.bind({})

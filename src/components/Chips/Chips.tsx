@@ -18,7 +18,7 @@ export const Chips = (props: TChipsProps): ReactElement => {
     onClick,
     onRemove,
     dataId = '',
-    id = '',
+    id = ''
   } = props
 
   const customType = disabled
@@ -32,7 +32,7 @@ export const Chips = (props: TChipsProps): ReactElement => {
     event.stopPropagation()
     onClick?.(event)
   }
-  
+
   const handleRemove = (event: TClickEventType) => {
     event.preventDefault()
     event.stopPropagation()
