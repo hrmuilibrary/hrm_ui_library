@@ -25,7 +25,7 @@ export const PopoverMobile = (props: TPopoverMobileProps): ReactElement | null =
               </Link>
             ) : (
               <Text
-                dataId={`${dataId}-text`}
+                dataId={dataId ? `${dataId}-popover-text` : ''}
                 type="primary"
                 weight="regular"
                 lineHeight="medium"

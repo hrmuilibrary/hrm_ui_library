@@ -32,7 +32,7 @@ export const PopoverDesktop = (props: TPopoverDesktopProps): ReactElement => {
     <>
       {clicked && (
         <div
-          data-id={`${dataId}-content`}
+          data-id={dataId ? `${dataId}-popover-content` : ''}
           className={classNames(`popover popover--${popoverPosition}`, className)}
           ref={setPopoverRef}
           style={popoverStyles}
@@ -51,11 +51,12 @@ export const PopoverDesktop = (props: TPopoverDesktopProps): ReactElement => {
               </Link>
             ) : (
               <Text
-                dataId={`${dataId}-text`}
+                dataId={dataId ? `${dataId}-popover-text` : ''}
                 type="primary"
                 weight="regular"
                 lineHeight="medium"
                 size="small"
+                as="div"
               >
                 {text}
               </Text>

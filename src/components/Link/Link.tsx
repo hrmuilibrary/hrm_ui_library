@@ -25,7 +25,7 @@ export const Link = (props: LinkPropTypes): ReactElement => {
         }}
         href={url}
         className={'link'}
-        data-id={`${dataId}-link`}
+        data-id={dataId ? `${dataId}-link` : ''}
         target={target}
       >
         {children}
@@ -42,7 +42,7 @@ export const Link = (props: LinkPropTypes): ReactElement => {
       }}
       href={url}
       className={classNames(`link ${className}`)}
-      data-id={`${dataId}-link`}
+      data-id={dataId ? `${dataId}-link` : ''}
       target={target}
     >
       {children}
