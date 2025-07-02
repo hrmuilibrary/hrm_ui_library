@@ -1,3 +1,10 @@
+## [1.6.38](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.37...1.6.38) (2025-07-02)
+
+
+### Bug Fixes
+
+* validateDOMNesting issue in popover ([8c6e5a0](https://github.com/hrmuilibrary/hrm_ui_library/commit/8c6e5a0c174798a2b1a3b6f5988a57433753e2b2))
+
 ## [1.6.37](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.36...1.6.37) (2025-07-01)
 
 
