@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Checkbox as _Checkbox } from '../index'
-import { StoryFn } from '@storybook/react'
+import {StoryFn, type StoryObj} from '@storybook/react'
 import { TCheckboxProps } from '../components/Checkbox/types'
 
 export default {
@@ -25,7 +25,7 @@ const Template: StoryFn<TCheckboxProps> = (args) => {
   )
 }
 
-export const Checkbox = Template.bind({})
+export const Checkbox: StoryObj<TCheckboxProps> = Template.bind({})
 
 Checkbox.args = {
   dataId: 'id',

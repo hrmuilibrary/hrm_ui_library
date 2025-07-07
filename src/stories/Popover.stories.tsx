@@ -1,6 +1,6 @@
 import React from 'react'
 import { Popover as _Popover } from '../index'
-import { StoryFn } from '@storybook/react'
+import {StoryFn, type StoryObj} from '@storybook/react'
 import { TPopoverProps } from '../components/Popover/types'
 
 export default {
@@ -43,7 +43,7 @@ const Template: StoryFn<TPopoverProps> = (args) => {
   )
 }
 
-export const Popover = Template.bind({})
+export const Popover: StoryObj<TPopoverProps> = Template.bind({})
 
 Popover.args = {
   linkAddons: {

@@ -6,11 +6,15 @@ import fs from 'fs'
 import path from 'path'
 import { exec } from 'child_process'
 import babel from 'rollup-plugin-babel'
-import pkg from './package.json'
+import pkg from './package.json' with { type: 'json' };
 import generatePackageJson from 'rollup-plugin-generate-package-json'
 import image from '@rollup/plugin-image'
 import postcss from 'rollup-plugin-postcss'
 import * as sass from 'sass'
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const extensions = ['.ts', '.tsx', '.js', '.jsx']
 const ignoreExtensions = ['.stories.tsx', '.stories.d.ts']
@@ -126,6 +130,7 @@ export default [
     },
     external,
     plugins: [
+      json(),
       ...plugins,
       dtsGenerator(),
       generatePackageJson({

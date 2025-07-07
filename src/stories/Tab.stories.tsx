@@ -1,7 +1,7 @@
 import React, { ReactElement, useState } from 'react'
 import { Tab as _Tab } from '../index'
 import IconDismissCircle from '../components/SVGIcons/IconDismissCircle'
-import { StoryFn } from '@storybook/react'
+import {StoryFn, StoryObj} from '@storybook/react'
 import { TTabProps } from '../components/Tab/types'
 import IconHome from '../components/SVGIcons/IconHome'
 import IconApple from '../components/SVGIcons/IconApple'
@@ -26,7 +26,7 @@ const Template: StoryFn<TTabProps> = (args) => {
   return <_Tab {...args} selectedValue={selectedTab} onSelect={onTabSelect} />
 }
 
-export const Tab = Template.bind({})
+export const Tab: StoryObj<TTabProps> = Template.bind({})
 
 // @ts-ignore
 Tab.args = {

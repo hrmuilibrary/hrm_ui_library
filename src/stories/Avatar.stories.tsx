@@ -1,10 +1,9 @@
 import React from 'react'
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import imageFile from '../assets/images/avatar.jpg'
 import { Avatar as _Avatar, AvatarGroup as _AvatarGroup } from '../index'
 import { TAvatarGroupProps, TAvatarProps } from '../components/Avatar/types'
-import type { StoryFn } from '@storybook/react'
+import { type StoryFn, type StoryObj } from '@storybook/react'
 
 const image = {
   src: imageFile,
@@ -32,7 +31,7 @@ export default {
 
 const Template: StoryFn<TAvatarProps> = (args) => <_Avatar {...args} />
 
-export const Avatar = Template.bind({})
+export const Avatar: StoryObj<TAvatarProps> = Template.bind({})
 
 Avatar.args = {
   initials: 'AG',
@@ -88,7 +87,7 @@ const AvatarGroupTemplate: StoryFn<TAvatarGroupProps> = (args) => {
   return <_AvatarGroup {...args} />
 }
 
-export const AvatarGroup = AvatarGroupTemplate.bind({})
+export const AvatarGroup: StoryObj<TAvatarGroupProps> = AvatarGroupTemplate.bind({})
 
 AvatarGroup.args = {
   maxCount: 0,

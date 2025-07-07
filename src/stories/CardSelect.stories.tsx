@@ -5,7 +5,7 @@ import { Popover } from '../components/Popover'
 import { CARD_SELECT_TYPES } from '../consts'
 import imageFile from '../assets/images/illustrations.svg'
 import IconInfo from '../components/SVGIcons/IconInfo'
-import type { StoryFn } from '@storybook/react'
+import type {StoryFn, StoryObj} from '@storybook/react'
 import { TCardSelectGroupProps, TCardSelectProps } from '../components/CardSelect/types'
 import IconQuestion from '../components/SVGIcons/IconQuestion'
 
@@ -141,7 +141,7 @@ const Template: StoryFn<TCardSelectProps> = (args) => {
   )
 }
 
-export const CardSelect = Template.bind({})
+export const CardSelect: StoryObj<TCardSelectProps> = Template.bind({})
 
 CardSelect.args = {
   type: CARD_SELECT_TYPES.card,
@@ -189,4 +189,4 @@ const CardSelectGroupTemplate: StoryFn<TCardSelectGroupProps> = (args) => {
   )
 }
 
-export const CardSelectGroup = CardSelectGroupTemplate.bind({})
+export const CardSelectGroup: StoryObj<TCardSelectGroupProps> = CardSelectGroupTemplate.bind({})

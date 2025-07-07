@@ -1,5 +1,5 @@
 import React from 'react'
-import { type StoryFn } from '@storybook/react'
+import {type StoryFn, type StoryObj} from '@storybook/react'
 import { Alert as AlertComp } from '../index'
 import { TAlertProps } from '../components/Alert/types'
 
@@ -31,7 +31,7 @@ const Template: StoryFn<TAlertProps> = (args) => (
   />
 )
 
-export const Alert = Template.bind({})
+export const Alert: StoryObj<TAlertProps> = Template.bind({})
 
 Alert.args = {
   type: 'information',

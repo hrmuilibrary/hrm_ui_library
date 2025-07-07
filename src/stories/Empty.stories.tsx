@@ -1,7 +1,7 @@
 import React from 'react'
 import { Empty as _Empty } from '../index'
 import IconAdd from '../components/SVGIcons/IconAdd'
-import { StoryFn } from '@storybook/react'
+import {StoryFn, type StoryObj} from '@storybook/react'
 import { TEmptyProps } from '../components/Empty/types'
 
 export default {
@@ -18,7 +18,7 @@ const Template: StoryFn<TEmptyProps> = (args) => {
   return <_Empty {...args} />
 }
 
-export const Empty = Template.bind({})
+export const Empty: StoryObj<TEmptyProps> = Template.bind({})
 
 Empty.args = {
   size: 'large',

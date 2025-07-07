@@ -46,7 +46,7 @@ const CustomToast = ({ actionProps, toastId, type = 'information', text }: TToas
 export const notify = (toastProps: TToastProps): void => {
   const { toastId, closeSnackbar, actionProps, duration = DEFAULT_DURATION } = toastProps
   toast(() => CustomToast(toastProps), {
-    bodyClassName: '__body',
+    // bodyClassName: '__body',
     className: '_container',
     toastId,
     autoClose: actionProps ? false : duration

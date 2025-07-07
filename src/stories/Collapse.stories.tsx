@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { CollapseItem as _CollapseItem, CollapseGroup as _CollapseGroup } from '../index'
 import IconChevronDown from '../components/SVGIcons/IconChevronDown'
-import { StoryFn } from '@storybook/react'
+import {StoryFn, type StoryObj} from '@storybook/react'
 import { TCollapseGroupProps, TCollapseProps } from '../components/Collapse/types'
 import { str } from 'ajv'
 
@@ -31,7 +31,7 @@ const Template: StoryFn<TCollapseProps & { textTitle: string }> = (args) => {
   )
 }
 
-export const CollapseItem = Template.bind({})
+export const CollapseItem: StoryObj<TCollapseProps & { textTitle: string }> = Template.bind({})
 
 CollapseItem.args = {
   textTitle: 'Collapse'
@@ -64,6 +64,6 @@ const Template1: StoryFn<TCollapseGroupProps> = (args: any) => {
   return <_CollapseGroup {...args} items={CollapseItems} titleColor="selected" />
 }
 
-export const CollapseGroup = Template1.bind({})
+export const CollapseGroup: StoryObj<TCollapseGroupProps> = Template1.bind({})
 
 CollapseGroup.args = {}

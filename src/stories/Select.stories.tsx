@@ -15,7 +15,7 @@ import imageFile from '../assets/images/avatar.jpg'
 import IconPerson from '../components/SVGIcons/IconPerson'
 import IconInfo from '../components/SVGIcons/IconInfo'
 import IconMore from '../components/SVGIcons/IconMore'
-import { StoryFn } from '@storybook/react'
+import {StoryFn, StoryObj} from '@storybook/react'
 import {
   TButtonSelectPropTypes,
   TMultiSelectPropTypes,
@@ -13346,7 +13346,7 @@ const Template: StoryFn<TSingleSelectPropTypes> = (args) => {
     </div>
   )
 }
-export const Select = Template.bind({})
+export const Select: StoryObj<TSingleSelectPropTypes> = Template.bind({})
 
 // -----------ButtonSelect---------
 const Template2: StoryFn<TButtonSelectPropTypes> = (args) => {
@@ -13377,7 +13377,7 @@ const Template2: StoryFn<TButtonSelectPropTypes> = (args) => {
     </div>
   )
 }
-export const ButtonSelect = Template2.bind({})
+export const ButtonSelect: StoryObj<TButtonSelectPropTypes> = Template2.bind({})
 
 const ButtonMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -13458,7 +13458,7 @@ const MultiSelectTemplate: StoryFn<TMultiSelectPropTypes> = (args) => {
     </div>
   )
 }
-export const MultiSelect = MultiSelectTemplate.bind({})
+export const MultiSelect: StoryObj<TMultiSelectPropTypes>= MultiSelectTemplate.bind({})
 
 // @ts-ignore
 MultiSelect.args = {
@@ -13539,7 +13539,7 @@ const LanguageSelectTemplate: StoryFn<TSingleSelectPropTypes> = (args) => {
     </div>
   )
 }
-export const LanguageSelect = LanguageSelectTemplate.bind({})
+export const LanguageSelect: StoryObj<TSingleSelectPropTypes> = LanguageSelectTemplate.bind({})
 
 // ----------PROFILE DROPDOWN---------------
 

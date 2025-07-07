@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Snackbar as _Snackbar, notify } from '../index'
-import { StoryFn } from '@storybook/react'
+import {StoryFn, StoryObj} from '@storybook/react'
 
 export default {
   title: 'Snackbar',
@@ -13,7 +13,11 @@ export default {
   }
 }
 
-const Template: StoryFn<{ type: string }> = (args) => {
+interface SnackbarProps {
+  type: string
+}
+
+const Template: StoryFn<SnackbarProps> = (args) => {
   const [infoMessages, setInfoMessages] = useState<any[]>([])
 
   const removeMessage = (id: number | string) => {
@@ -65,7 +69,7 @@ const Template: StoryFn<{ type: string }> = (args) => {
     </div>
   )
 }
-export const Snackbar = Template.bind({})
+export const Snackbar: StoryObj<SnackbarProps> = Template.bind({})
 
 Snackbar.args = {
   type: 'information'

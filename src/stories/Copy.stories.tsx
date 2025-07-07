@@ -1,6 +1,6 @@
 import React from 'react'
 import { Copy as _Copy } from '../index'
-import { StoryFn } from '@storybook/react'
+import {StoryFn, type StoryObj} from '@storybook/react'
 import { TCopyProps } from '../components/Copy/types'
 
 export default {
@@ -11,7 +11,7 @@ export default {
 
 const Template: StoryFn<TCopyProps> = (args) => <_Copy {...args} />
 
-export const Copy = Template.bind({})
+export const Copy: StoryObj<TCopyProps> = Template.bind({})
 
 Copy.args = {
   textAfterCopy: 'Copied'

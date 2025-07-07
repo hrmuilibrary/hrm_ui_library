@@ -1,5 +1,5 @@
 import React from 'react'
-import { Meta, StoryFn } from '@storybook/react'
+import {Meta, StoryFn, type StoryObj} from '@storybook/react'
 import { Image as _Image } from '../index'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -33,7 +33,7 @@ const Template: StoryFn<ImagePropTypes> = (args) => (
   </div>
 )
 
-export const Image = Template.bind({})
+export const Image:StoryObj<ImagePropTypes> = Template.bind({})
 Image.args = {
   imagePath: image.src,
   isBackgroundImage: false,

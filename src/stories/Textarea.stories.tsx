@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Textarea as _Textarea } from '../index'
 import IconInfo from '../components/SVGIcons/IconInfo'
-import { StoryFn } from '@storybook/react'
+import { type StoryFn, type StoryObj } from '@storybook/react'
 import { TTextAreaTypeProps } from '../components/Textarea/types'
 
 type TChangeEventType = React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>
@@ -22,7 +22,7 @@ const Template: StoryFn<TTextAreaTypeProps> = (args) => {
     </div>
   )
 }
-export const Textarea = Template.bind({})
+export const Textarea: StoryObj<TTextAreaTypeProps> = Template.bind({});
 // @ts-ignore
 Textarea.args = {
   label: 'Label',

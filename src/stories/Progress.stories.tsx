@@ -1,6 +1,6 @@
 import React from 'react'
 import { Progress as _Progress } from '../index'
-import { StoryFn } from '@storybook/react'
+import {StoryFn, type StoryObj} from '@storybook/react'
 import { TProgressPropTypes } from '../components/Progress/types'
 
 export default {
@@ -22,7 +22,7 @@ const Template: StoryFn<TProgressPropTypes> = (args) => {
   return <_Progress {...args} />
 }
 
-export const Progress = Template.bind({})
+export const Progress: StoryObj<TProgressPropTypes> = Template.bind({})
 Progress.args = {
   type: 'linear',
   size: 'large',

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Radio as _Radio, RadioGroup as _RadioGroup } from '../index'
 import IconInfo from '../components/SVGIcons/IconInfo'
-import { StoryFn } from '@storybook/react'
+import {StoryFn, type StoryObj} from '@storybook/react'
 import { TRadioGroupProps, TRadioProps } from '../components/Radio/types'
 
 const RADIO_OPTIONS = [
@@ -32,7 +32,7 @@ const Template: StoryFn<TRadioProps> = (args) => {
   return <_Radio {...args} isSelected={isChecked} onClick={setIsChecked} />
 }
 
-export const Radio = Template.bind({})
+export const Radio: StoryObj<TRadioProps> = Template.bind({})
 
 Radio.args = {
   disabled: false,
@@ -44,7 +44,7 @@ const RadioGroupTemplate: StoryFn<TRadioGroupProps> = (args) => {
   const [selected, setSelected] = useState<string | number>(RADIO_OPTIONS[0].value)
   return <_RadioGroup {...args} selected={selected} handleChange={setSelected} />
 }
-export const RadioGroup = RadioGroupTemplate.bind({})
+export const RadioGroup: StoryObj<TRadioGroupProps> = RadioGroupTemplate.bind({})
 
 RadioGroup.args = {
   options: RADIO_OPTIONS,

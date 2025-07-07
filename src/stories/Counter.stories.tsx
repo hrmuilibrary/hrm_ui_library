@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Counter as _Counter } from '../index'
-import { StoryFn } from '@storybook/react'
+import {StoryFn, type StoryObj} from '@storybook/react'
 import { ICounterProps } from '../components/Counter/types'
 
 export default {
@@ -18,7 +18,7 @@ const Template: StoryFn<ICounterProps> = (args) => {
   return <_Counter {...args} handleChange={onChange} counter={count} dataId={'counter'} />
 }
 
-export const Counter = Template.bind({})
+export const Counter: StoryObj<ICounterProps> = Template.bind({})
 Counter.args = {
   max: 999,
   min: 5,

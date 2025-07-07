@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Input as _Input, Popover } from '../index'
 import IconInfo from '../components/SVGIcons/IconInfo'
-import { StoryFn } from '@storybook/react'
+import {StoryFn, type StoryObj} from '@storybook/react'
 import { InputCustomProps } from '../components/Input/types'
 import IconCalendarRight from '../components/SVGIcons/IconCalendarRight'
 
@@ -35,7 +35,7 @@ const Template: StoryFn<InputCustomProps> = (args) => {
   )
 }
 
-export const Input = Template.bind({})
+export const Input:StoryObj<InputCustomProps> = Template.bind({})
 
 Input.args = {
   type: 'text',
