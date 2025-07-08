@@ -46,8 +46,8 @@
     "yup": "^1.2.0"
   },
   "devDependencies": {
-    "@babel/preset-react": "7.24.1",
     "@babel/preset-env": "7.24.1",
+    "@babel/preset-react": "7.24.1",
     "@babel/preset-typescript": "7.24.1",
     "@commitlint/cli": "^19.4.1",
     "@commitlint/config-conventional": "^19.4.1",
