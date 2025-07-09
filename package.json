@@ -46,6 +46,7 @@
     "yup": "^1.2.0"
   },
   "devDependencies": {
+    "@ncdai/react-wheel-picker": "^1.0.14",
     "@babel/preset-env": "7.24.1",
     "@babel/preset-react": "7.24.1",
     "@babel/preset-typescript": "7.24.1",

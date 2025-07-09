@@ -4,7 +4,7 @@ import { Label } from '../../../helperComponents'
 import { Input } from '../../Input'
 import IconCalendarRight from '../../SVGIcons/IconCalendarRight'
 import dayjs from 'dayjs'
-import { MobileModalContent } from './MobileComponents/MobileModalContent'
+import { MobileModalContent } from './MobileModalContent'
 
 export const TimePickerMobile = (props: ITimePickerProps): ReactElement => {
   const {
@@ -42,7 +42,6 @@ export const TimePickerMobile = (props: ITimePickerProps): ReactElement => {
   }
 
   const onApply = (selectedTime: Date) => {
-    console.log('selectedTime', selectedTime)
     onChange(selectedTime)
     closeTimePicker()
   }
