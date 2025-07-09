@@ -1,3 +1,11 @@
+# [1.7.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.39...1.7.0) (2025-07-09)
+
+
+### Features
+
+* final ui ([8b7117a](https://github.com/hrmuilibrary/hrm_ui_library/commit/8b7117a79f721d56f63ad3fcd569192a2a0e6269))
+* implement time picker in mobile view like ios ([fb49eb9](https://github.com/hrmuilibrary/hrm_ui_library/commit/fb49eb9fd5413b8b41e817254ce7f2d774db3647))
+
 ## [1.6.39](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.38...1.6.39) (2025-07-08)
 
 
