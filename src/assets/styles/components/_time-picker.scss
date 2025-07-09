@@ -1,0 +1,55 @@
+.time-picker-mobile {
+  .modal__content {
+    padding: 16px 0;
+  }
+}
+
+.mobile_time_picker {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--ds-size-8);
+
+  &-wheel-picker {
+    justify-content: center !important;
+
+    &-item {
+      font-weight: var(--font-weight-500) !important;
+      color: var(--grey-500) !important;
+      width: max-content !important;
+      font-size: var(--font-size-16) !important;
+
+      &__hour {
+        left: unset !important;
+        right: 18px !important;
+      }
+
+      &__minute {
+        left: 18px !important;
+      }
+    }
+
+    &-highlight {
+      background-color: var(--grey-100) !important;
+
+      &-item {
+        &__hour {
+          font-size: var(--font-size-20) !important;
+          font-weight: var(--font-weight-600) !important;
+          color: var(--grey-900) !important;
+          justify-content: flex-end !important;
+          margin-right: var(--ds-size-16);
+        }
+
+        &__minute {
+          font-size: var(--font-size-20) !important;
+          font-weight: var(--font-weight-600) !important;
+          color: var(--grey-900) !important;
+          justify-content: flex-start !important;
+          margin-left: var(--ds-size-16);
+        }
+      }
+    }
+  }
+}
