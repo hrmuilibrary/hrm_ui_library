@@ -1,3 +1,23 @@
+# [2.0.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.7.0...2.0.0) (2025-07-10)
+
+
+* Merge pull request [#43](https://github.com/hrmuilibrary/hrm_ui_library/issues/43) from hrmuilibrary/update-all-libraries ([6539af5](https://github.com/hrmuilibrary/hrm_ui_library/commit/6539af5e0725ffd3b1648b68acf6f5afa2a58729))
+
+
+### Bug Fixes
+
+* merge with master ([f12426f](https://github.com/hrmuilibrary/hrm_ui_library/commit/f12426f01e78d45cce3085c55f7ef7b81ec4868b))
+
+
+### Features
+
+* update all libraries ([fb71103](https://github.com/hrmuilibrary/hrm_ui_library/commit/fb71103aaa05e02f66d0ca366d185626d5315334))
+
+
+### BREAKING CHANGES
+
+* update all libraries
+
 # [1.7.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.39...1.7.0) (2025-07-09)
 
 

@@ -1,7 +1,7 @@
 {
   "homepage": "https://github.com/hrmuilibrary/hrm_ui_library",
   "name": "hrm_ui_lib",
-  "version": "1.7.0",
+  "version": "2.0.0",
   "description": "UI library for Dino",
   "private": false,
   "type": "module",
@@ -49,7 +49,7 @@
   },
   "devDependencies": {
     "@ncdai/react-wheel-picker": "^1.0.14",
-    "@types/react-dom": "^18.3.7", 
+    "@types/react-dom": "^18.3.7",
     "@rollup/plugin-babel": "^6.0.4",
     "@babel/preset-react": "7.27.1",
     "@babel/preset-env": "7.28.0",
