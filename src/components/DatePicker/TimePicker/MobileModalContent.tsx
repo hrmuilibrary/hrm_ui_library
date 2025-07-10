@@ -1,9 +1,8 @@
 import React, { ReactElement, useState } from 'react'
-import { Text } from '../../Text'
-import { IconChevronDown } from '../../SVGIcons/IconChevronDown'
-import { IconChevronUp } from '../../SVGIcons/IconChevronUp'
 import { Modal } from '../../Modal'
-import { formatHour, formatMinute } from './helpers'
+import { HOUR_OPTIONS, MINUTE_OPTIONS } from './consts'
+import { WheelPicker, WheelPickerWrapper } from '@ncdai/react-wheel-picker'
+import '@ncdai/react-wheel-picker/style.css'
 
 type TProps = {
   mobileTitle?: string
@@ -13,6 +12,7 @@ type TProps = {
   dateInitialValue: Date | undefined
   modalApplyButtonText?: string
 }
+
 export const MobileModalContent = ({
   onApply,
   isOpen,
@@ -21,52 +21,21 @@ export const MobileModalContent = ({
   closeTimePicker,
   dateInitialValue = new Date()
 }: TProps): ReactElement => {
-  const [selectedHour, setSelectedHour] = useState<number>(dateInitialValue.getHours())
-
-  const [selectedMinute, setSelectedMinute] = useState<number>(dateInitialValue.getMinutes())
-  const decrementHour = () => {
-    setSelectedHour((_hour) => {
-      if (_hour === 1) {
-        return 24
-      }
-      return _hour - 1
-    })
-  }
-  const incrementHour = () => {
-    setSelectedHour((_hour) => {
-      if (_hour === 24) {
-        return 1
-      }
-      return _hour + 1
-    })
-  }
-  const decrementMinute = () => {
-    setSelectedMinute((_minute) => {
-      if (_minute === 0) {
-        return 59
-      }
-      return _minute - 1
-    })
-  }
-  const incrementMinute = () => {
-    setSelectedMinute((_minute) => {
-      if (_minute === 59) {
-        return 0
-      }
-      return _minute + 1
-    })
-  }
+  const [selectedHour, setSelectedHour] = useState<string>(`${dateInitialValue.getHours()}`)
+  const [selectedMinute, setSelectedMinute] = useState<string>(`${dateInitialValue.getMinutes()}`)
 
   const applyDate = () => {
     const selectedDate = new Date()
-    selectedDate.setHours(selectedHour, selectedMinute, 0)
+    selectedDate.setHours(+selectedHour, +selectedMinute, 0)
     onApply(selectedDate)
   }
+
   return (
     <Modal
       isOpen={isOpen}
       title={mobileTitle}
       onClose={closeTimePicker}
+      className="time-picker-mobile"
       buttonProps={{
         confirm: {
           buttonText: modalApplyButtonText,
@@ -77,22 +46,36 @@ export const MobileModalContent = ({
       closeIcon={true}
     >
       <div className="mobile_time_picker">
-        <div className="flexbox flexbox align-items--center justify-content--center picker_items">
-          <div className="date_item_picker_container">
-            <IconChevronUp size="medium" onClick={decrementHour} />
-            <Text size="large" weight="bolder" className="m-16">
-              {formatHour(selectedHour)}
-            </Text>
-            <IconChevronDown size="medium" onClick={incrementHour} />
-          </div>
-          <div className="date_item_picker_container">
-            <IconChevronUp size="medium" onClick={decrementMinute} />
-            <Text size="large" weight="bolder" className="m-16">
-              {formatMinute(selectedMinute)}
-            </Text>
-            <IconChevronDown size="medium" onClick={incrementMinute} />
-          </div>
-        </div>
+        <WheelPickerWrapper className="mobile_time_picker-wheel-picker">
+          <WheelPicker
+            value={`${selectedHour}`}
+            options={HOUR_OPTIONS}
+            infinite
+            classNames={{
+              optionItem:
+                'mobile_time_picker-wheel-picker-item mobile_time_picker-wheel-picker-item__hour',
+              highlightWrapper: 'mobile_time_picker-wheel-picker-highlight',
+              highlightItem: 'mobile_time_picker-wheel-picker-highlight-item__hour'
+            }}
+            onValueChange={(hour: string) => {
+              setSelectedHour(hour)
+            }}
+          />
+          <WheelPicker
+            value={`${selectedMinute}`}
+            options={MINUTE_OPTIONS}
+            infinite
+            classNames={{
+              optionItem:
+                'mobile_time_picker-wheel-picker-item mobile_time_picker-wheel-picker-item__minute',
+              highlightWrapper: 'mobile_time_picker-wheel-picker-highlight',
+              highlightItem: 'mobile_time_picker-wheel-picker-highlight-item__minute'
+            }}
+            onValueChange={(minute: string) => {
+              setSelectedMinute(minute)
+            }}
+          />
+        </WheelPickerWrapper>
       </div>
     </Modal>
   )

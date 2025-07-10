@@ -1,3 +1,25 @@
+# [1.7.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.39...1.7.0) (2025-07-09)
+
+
+### Features
+
+* final ui ([8b7117a](https://github.com/hrmuilibrary/hrm_ui_library/commit/8b7117a79f721d56f63ad3fcd569192a2a0e6269))
+* implement time picker in mobile view like ios ([fb49eb9](https://github.com/hrmuilibrary/hrm_ui_library/commit/fb49eb9fd5413b8b41e817254ce7f2d774db3647))
+
+## [1.6.39](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.38...1.6.39) (2025-07-08)
+
+
+### Bug Fixes
+
+* format date utc issue ([44069fa](https://github.com/hrmuilibrary/hrm_ui_library/commit/44069faf9046adb505499bc1b90f8e434c09127a))
+
+## [1.6.38](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.37...1.6.38) (2025-07-02)
+
+
+### Bug Fixes
+
+* validateDOMNesting issue in popover ([8c6e5a0](https://github.com/hrmuilibrary/hrm_ui_library/commit/8c6e5a0c174798a2b1a3b6f5988a57433753e2b2))
+
 ## [1.6.37](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.6.36...1.6.37) (2025-07-01)
 
 

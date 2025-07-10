@@ -10,7 +10,7 @@ export const formatDate = (
   defaultValue = ''
 ): string => {
   const isValid = dayjs(value).isValid()
-  if (!isValid) {
+  if (!isValid || !value) {
     return defaultValue
   }
 
@@ -23,7 +23,7 @@ export const formatDateUTC = (
   defaultValue = ''
 ): string => {
   const isValid = dayjs(value).isValid()
-  if (!isValid) {
+  if (!isValid || !value) {
     return defaultValue
   }
 
