@@ -61,7 +61,6 @@ export const TimePickerDesktop = (props: ITimePickerProps): React.ReactElement =
         showTimeSelect
         showTimeSelectOnly
         dateFormat={format}
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         ref={calendarRef}
         {...rest}

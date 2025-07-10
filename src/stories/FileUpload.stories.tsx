@@ -8,7 +8,7 @@ import {
   TFileUploadProps
 } from '../components/FileUpload'
 import IconInfo from '../components/SVGIcons/IconInfo'
-import {StoryFn, type StoryObj} from '@storybook/react'
+import { StoryFn, type StoryObj } from '@storybook/react'
 import { FileTypeEnum } from '../type'
 
 export default {

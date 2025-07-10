@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text as _Text } from '../index'
-import {StoryFn, StoryObj} from '@storybook/react'
+import { StoryFn, StoryObj } from '@storybook/react'
 import { TextPropTypes } from '../components/Text/types'
 
 export default {

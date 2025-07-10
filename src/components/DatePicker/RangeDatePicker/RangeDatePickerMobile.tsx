@@ -1,5 +1,4 @@
-﻿/* eslint-disable @typescript-eslint/no-unused-vars */
-// @ts-nocheck
+﻿// @ts-nocheck
 import React, { forwardRef, ReactElement, useEffect, useState } from 'react'
 import DatePicker from 'react-datepicker'
 import { Input } from '../../Input'
@@ -108,8 +107,6 @@ export const RangeDatePickerMobile = forwardRef<any, IRangeDatePickerProps>(
           dataId={dataId}
           disabled={disabled}
           placeholder={placeholderText}
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          // @ts-ignore
           currentValue={renderCurrentSelectedDate(rangeArray)}
           rightIconProps={{ Component: IconCalendarRight, onClick: openDatepicker }}
         />

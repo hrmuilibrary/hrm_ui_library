@@ -1,7 +1,7 @@
 import { FILE_UPLOAD_ERRORS } from '../../consts'
 import { FileTypeEnum } from '../../type'
 import { Dispatch, SetStateAction } from 'react'
-import {Accept, DropzoneOptions} from 'react-dropzone'
+import { Accept, DropzoneOptions } from 'react-dropzone'
 
 export interface TFileUploadProps extends IFormCompProps {
   allowedTypes?: string

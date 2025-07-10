@@ -4,7 +4,6 @@ import { Label } from '../../helperComponents'
 import { TSwitcherProps } from './types'
 import IconCheckmark from '../SVGIcons/IconCheckmark'
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const Switcher = forwardRef((props: TSwitcherProps, ref): React.ReactElement => {
   const {
     onClick,

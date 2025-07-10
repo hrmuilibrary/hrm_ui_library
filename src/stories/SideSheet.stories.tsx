@@ -15,7 +15,7 @@ import IconCaretDownFilled from '../components/SVGIcons/IconCaretDownFilled'
 import IconSelectAllOff from '../components/SVGIcons/IconSelectAllOff'
 import IconPerson from '../components/SVGIcons/IconPerson'
 import IconInfo from '../components/SVGIcons/IconInfo'
-import {StoryFn, type StoryObj} from '@storybook/react'
+import { StoryFn, type StoryObj } from '@storybook/react'
 import { TSideSheetPropTypes } from '../components/SideSheet/types'
 
 export default {

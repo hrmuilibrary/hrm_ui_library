@@ -1,5 +1,5 @@
 import { CardItem as _TCardItem, IconDelete, IconEdit, IconInfo, IconPerson } from '../index'
-import type {StoryFn, StoryObj} from '@storybook/react'
+import type { StoryFn, StoryObj } from '@storybook/react'
 import { TCardItemProps } from '../components/Cards/types'
 import imageFile1 from '../assets/images/ArCa.svg'
 import { Button } from '../components/Button'

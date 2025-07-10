@@ -9,10 +9,10 @@ import { useIsMobile } from '../../hooks/useGetIsMobile'
 import classNames from 'classnames'
 
 const DESKTOP_ANIMATION: {
-  initial: {opacity: number, scale: number},
-  animate: {opacity: number, scale: number[]},
-  exit: {opacity: number, scale: number, transition: {duration: number}},
-  transition: {duration: number, type: AnimationGeneratorName, damping:number, stiffness: number},
+  initial: { opacity: number; scale: number }
+  animate: { opacity: number; scale: number[] }
+  exit: { opacity: number; scale: number; transition: { duration: number } }
+  transition: { duration: number; type: AnimationGeneratorName; damping: number; stiffness: number }
 } = {
   initial: { opacity: 0.5, scale: 0.65 },
   animate: { opacity: 1, scale: [0.95, 1] },
@@ -25,7 +25,7 @@ const DESKTOP_ANIMATION: {
   },
   transition: {
     duration: 0.4,
-    type: "spring",
+    type: 'spring',
     damping: 55,
     stiffness: 700
   }

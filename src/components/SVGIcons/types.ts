@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { LegacyRef, MouseEvent } from 'react'
 
 export type TSVGIconSize =

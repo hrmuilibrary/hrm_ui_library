@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Breadcrumb as _Breadcrumb } from '../index'
-import type {StoryFn, StoryObj} from '@storybook/react'
+import type { StoryFn, StoryObj } from '@storybook/react'
 import { TBreadCrumbProps } from '../components/Breadcrumb/types'
 import { noop } from '../utils/helpers'
 

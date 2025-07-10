@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { forwardRef, ReactElement, useCallback, useState } from 'react'
 import { ErrorCode, FileError, FileRejection, useDropzone } from 'react-dropzone'
 import IconUpload from '../../SVGIcons/IconUpload'
@@ -14,7 +13,8 @@ import { uniqueFiles as _uniqueFiles } from '../../../utils/helpers'
 export const DropzoneFileUpload = forwardRef(
   (
     {
-      maxSize = 10 * 1024 * 1024, allowedTypes = [FileTypeEnum.IMAGE, FileTypeEnum.PDF, FileTypeEnum.DOC],
+      maxSize = 10 * 1024 * 1024,
+      allowedTypes = [FileTypeEnum.IMAGE, FileTypeEnum.PDF, FileTypeEnum.DOC],
       name,
       setFiles,
       setFieldValue,

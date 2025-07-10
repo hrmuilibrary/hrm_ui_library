@@ -1,6 +1,6 @@
 import { Text } from '../components/Text'
 import * as Icons from '../components/SVGIcons'
-import {StoryFn, StoryObj} from '@storybook/react'
+import { StoryFn, StoryObj } from '@storybook/react'
 import { ISVGIconProps } from '../components/SVGIcons/types'
 
 export default {

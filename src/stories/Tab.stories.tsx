@@ -1,7 +1,7 @@
 import React, { ReactElement, useState } from 'react'
 import { Tab as _Tab } from '../index'
 import IconDismissCircle from '../components/SVGIcons/IconDismissCircle'
-import {StoryFn, StoryObj} from '@storybook/react'
+import { StoryFn, StoryObj } from '@storybook/react'
 import { TTabProps } from '../components/Tab/types'
 import IconHome from '../components/SVGIcons/IconHome'
 import IconApple from '../components/SVGIcons/IconApple'

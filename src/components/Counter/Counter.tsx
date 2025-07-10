@@ -28,11 +28,11 @@ export const Counter = forwardRef((props: ICounterProps, ref): React.ReactElemen
 
   const customChangeHandler = (inputedValue: number | string) => {
     if (handleChange) {
-      +inputedValue > max
+      ;+inputedValue > max
         ? handleChange(max)
         : +inputedValue < min
-        ? handleChange(min)
-        : handleChange(inputedValue)
+          ? handleChange(min)
+          : handleChange(inputedValue)
     }
     if (setFieldValue && name) {
       setFieldValue(name, inputedValue, { shouldValidate: hasError })

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Table as _Table } from '../index'
 import { TColumn, TTableProps, TTableState } from '../components/Table/types'
-import {StoryFn, StoryObj} from '@storybook/react'
+import { StoryFn, StoryObj } from '@storybook/react'
 
 const data: any[] = [
   {

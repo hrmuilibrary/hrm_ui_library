@@ -1,7 +1,7 @@
 import React from 'react'
 import { Empty as _Empty } from '../index'
 import IconAdd from '../components/SVGIcons/IconAdd'
-import {StoryFn, type StoryObj} from '@storybook/react'
+import { StoryFn, type StoryObj } from '@storybook/react'
 import { TEmptyProps } from '../components/Empty/types'
 
 export default {

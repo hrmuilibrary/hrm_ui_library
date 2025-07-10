@@ -12,7 +12,7 @@ import {
 import IconEdit from '../components/SVGIcons/IconEdit'
 import IconAddFilled from '../components/SVGIcons/IconAddFilled'
 import IconMore from '../components/SVGIcons/IconMore'
-import {StoryFn, type StoryObj} from '@storybook/react'
+import { StoryFn, type StoryObj } from '@storybook/react'
 import { LinkPropTypes } from '../components/Link/types'
 
 export default {

@@ -15,7 +15,6 @@ function handleMouseDownEvent(event: MouseEvent) {
     return
   }
   const { ref, callback, shouldRemoveCallback } = callbackObject
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   if (ref && !ref.contains(event.target)) {
     if (shouldRemoveCallback) {

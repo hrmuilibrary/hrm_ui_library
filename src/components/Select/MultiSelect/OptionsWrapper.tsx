@@ -66,7 +66,6 @@ export const OptionsWrapper = (props: TProps): ReactElement => {
 
   const optionsCount = useMemo(() => {
     if (isGrouped || withTabs) {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       const typed_options = options as TSelectGroupOptions
       return typed_options.reduce((acc: number, option: TSelectGroupOption) => {
@@ -95,7 +94,6 @@ export const OptionsWrapper = (props: TProps): ReactElement => {
 
   return (
     <SelectComp
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       options={options}
       isOpen={isOpen}

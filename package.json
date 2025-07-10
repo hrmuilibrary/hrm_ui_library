@@ -4,6 +4,7 @@
   "version": "1.7.0",
   "description": "UI library for Dino",
   "private": false,
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "version": "echo $npm_package_version",
@@ -15,11 +16,12 @@
     "build-storybook": "storybook build",
     "lint": "eslint \"./src/**/*.{js,jsx,ts,tsx}\"",
     "prettier": "prettier --write \"./{src,stories}/**/**.{js,jsx,ts,tsx}\"",
-    "check": "pnpm run prettier",
+    "check": "npm run prettier && npm run lint && tsc",
     "install-latest": "pnpm install",
     "import-all-svg-components": "node ./bin/import_all_svg_components.js",
-    "publish-alpha-version": "cd \"./dist/\" && npm publish --tag alpha",
-    "generate-svg-component": "node ./bin/generate_svg_component.js && npm run import-all-svg-components && npm run check"
+    "publish-alpha-version": "cd \"./dist/\" && pnpm publish --tag alpha",
+    "generate-svg-component": "node ./bin/generate_svg_component.js && npm run import-all-svg-components && npm run check",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -133,6 +135,12 @@
     "react-window": "^1.8.11",
     "sass": "^1.89.2",
     "date-fns": "^4.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run check",
+      "commit-msg": "commitlint --edit $1"
+    }
   },
   "repository": {
     "type": "git",

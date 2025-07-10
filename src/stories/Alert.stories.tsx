@@ -1,5 +1,5 @@
 import React from 'react'
-import {type StoryFn, type StoryObj} from '@storybook/react'
+import { type StoryFn, type StoryObj } from '@storybook/react'
 import { Alert as AlertComp } from '../index'
 import { TAlertProps } from '../components/Alert/types'
 

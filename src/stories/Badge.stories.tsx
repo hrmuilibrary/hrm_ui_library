@@ -1,6 +1,6 @@
 import React from 'react'
 import { Badge as _Badge } from '../index'
-import type {StoryFn, StoryObj} from '@storybook/react'
+import type { StoryFn, StoryObj } from '@storybook/react'
 import { TBadgeProps } from '../components/Badge/types'
 
 export default {

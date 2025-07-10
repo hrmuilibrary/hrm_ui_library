@@ -15,7 +15,7 @@ import imageFile from '../assets/images/avatar.jpg'
 import IconPerson from '../components/SVGIcons/IconPerson'
 import IconInfo from '../components/SVGIcons/IconInfo'
 import IconMore from '../components/SVGIcons/IconMore'
-import {StoryFn, StoryObj} from '@storybook/react'
+import { StoryFn, StoryObj } from '@storybook/react'
 import {
   TButtonSelectPropTypes,
   TMultiSelectPropTypes,
@@ -13458,7 +13458,7 @@ const MultiSelectTemplate: StoryFn<TMultiSelectPropTypes> = (args) => {
     </div>
   )
 }
-export const MultiSelect: StoryObj<TMultiSelectPropTypes>= MultiSelectTemplate.bind({})
+export const MultiSelect: StoryObj<TMultiSelectPropTypes> = MultiSelectTemplate.bind({})
 
 // @ts-ignore
 MultiSelect.args = {

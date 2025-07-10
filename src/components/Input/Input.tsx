@@ -83,12 +83,10 @@ export const Input = React.forwardRef<HTMLInputElement, InputCustomProps>(
     }, [rest, currentValue])
 
     const input = mask ? (
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       <InputMask
         name={name}
         mask={mask}
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         ref={() => ref && ref()}
         {...rest}
@@ -102,7 +100,6 @@ export const Input = React.forwardRef<HTMLInputElement, InputCustomProps>(
         maskPlaceholder={maskPlaceholder}
       />
     ) : type === 'numeric' ? (
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       <NumericFormat
         {...rest}
@@ -120,7 +117,6 @@ export const Input = React.forwardRef<HTMLInputElement, InputCustomProps>(
         {...(currentValue !== undefined ? { value: currentValue } : {})}
       />
     ) : (
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       <input
         readOnly={readonly}

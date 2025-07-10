@@ -1,6 +1,6 @@
 import React from 'react'
 import { Popover as _Popover } from '../index'
-import {StoryFn, type StoryObj} from '@storybook/react'
+import { StoryFn, type StoryObj } from '@storybook/react'
 import { TPopoverProps } from '../components/Popover/types'
 
 export default {

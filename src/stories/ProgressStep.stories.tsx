@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Button, ProgressStep as _ProgressStep } from '../index'
 import { TProgressStepProps, TSteps, TStepValue } from '../components/ProgressStep/types'
 import { PROGRESS_STATUSES } from '../components/ProgressStep/consts'
-import {StoryFn, type StoryObj} from '@storybook/react'
+import { StoryFn, type StoryObj } from '@storybook/react'
 
 const STEPS = [
   {

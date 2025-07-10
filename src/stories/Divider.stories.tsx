@@ -1,5 +1,5 @@
 import React from 'react'
-import {Meta, StoryFn, type StoryObj} from '@storybook/react'
+import { Meta, StoryFn, type StoryObj } from '@storybook/react'
 import { Divider as _Divider } from '../index'
 import { TDividerProps } from '../components/Divider/types'
 
@@ -22,7 +22,7 @@ const Template: StoryFn<TDividerProps> = (args) => {
   )
 }
 
-export const Divider:StoryObj<TDividerProps> = Template.bind({})
+export const Divider: StoryObj<TDividerProps> = Template.bind({})
 
 Divider.args = {
   type: 'primary',

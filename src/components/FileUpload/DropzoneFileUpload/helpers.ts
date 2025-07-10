@@ -29,7 +29,7 @@ export const formatFileSize = (sizeInBytes: number, fractionDigits = 0): string 
 }
 
 export const generateAreaContent = ({
-                                      allowedTypes,
+  allowedTypes,
   maxSize,
   locale
 }: {
@@ -41,7 +41,7 @@ export const generateAreaContent = ({
   const translation = getDropzoneLocale(locale)
 
   const acceptTypesMessage =
-      allowedTypes.length === 1
+    allowedTypes.length === 1
       ? allowedTypes[0]
       : allowedTypes.reduce((acc, currentValue, _index, _arr) => {
           if (_index === _arr.length - 1) {

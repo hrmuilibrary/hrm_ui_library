@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Radio as _Radio, RadioGroup as _RadioGroup } from '../index'
 import IconInfo from '../components/SVGIcons/IconInfo'
-import {StoryFn, type StoryObj} from '@storybook/react'
+import { StoryFn, type StoryObj } from '@storybook/react'
 import { TRadioGroupProps, TRadioProps } from '../components/Radio/types'
 
 const RADIO_OPTIONS = [

@@ -1,6 +1,6 @@
 import React from 'react'
 import { CardBody as _TCardBody } from '../index'
-import {StoryFn, type StoryObj} from '@storybook/react'
+import { StoryFn, type StoryObj } from '@storybook/react'
 import { TCardBodyProps } from '../components/CardBody/types'
 // @ts-ignore
 import cardImg from '../assets/images/cards-img.png'

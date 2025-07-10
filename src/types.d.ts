@@ -36,7 +36,6 @@ interface HTMLInputEvent extends Event {
 }
 
 declare type TFormData = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any
 }
 
@@ -58,7 +57,6 @@ type FieldError = {
 }
 
 declare type FieldErrors = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: FieldError | Merge<FieldError, FieldErrorsImpl<any>> | undefined
 }
 

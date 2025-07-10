@@ -1,6 +1,6 @@
 import React from 'react'
 import { Tooltip as _Tooltip } from '../index'
-import {StoryFn, StoryObj} from '@storybook/react'
+import { StoryFn, StoryObj } from '@storybook/react'
 import { TTooltipProps } from '../components/Tooltip/types'
 
 export default {

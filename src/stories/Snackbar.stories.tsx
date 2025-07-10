@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Snackbar as _Snackbar, notify } from '../index'
-import {StoryFn, StoryObj} from '@storybook/react'
+import { StoryFn, StoryObj } from '@storybook/react'
 
 export default {
   title: 'Snackbar',

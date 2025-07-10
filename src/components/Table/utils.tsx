@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react'
 import { Column, Hooks } from 'react-table'
 import { IndeterminateCheckbox } from './IndeterminateCheckbox'

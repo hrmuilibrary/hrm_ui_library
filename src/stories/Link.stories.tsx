@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link as _Link } from '../index'
-import {StoryFn, type StoryObj} from '@storybook/react'
+import { StoryFn, type StoryObj } from '@storybook/react'
 import { LinkPropTypes } from '../components/Link/types'
 
 export default {
@@ -12,7 +12,7 @@ const Template: StoryFn<LinkPropTypes> = (args) => {
   return <_Link {...args} />
 }
 
-export const Link:StoryObj<LinkPropTypes> = Template.bind({})
+export const Link: StoryObj<LinkPropTypes> = Template.bind({})
 Link.args = {
   children: 'Bro',
   url: '/',

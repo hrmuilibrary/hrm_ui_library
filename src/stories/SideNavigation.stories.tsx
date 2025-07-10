@@ -18,7 +18,7 @@ import IconWallet from '../components/SVGIcons/IconWallet'
 import IconAlertBadge from '../components/SVGIcons/IconAlertBadge'
 import IconMail from '../components/SVGIcons/IconMail'
 import IconArrowExit from '../components/SVGIcons/IconArrowExit'
-import {StoryFn, type StoryObj} from '@storybook/react'
+import { StoryFn, type StoryObj } from '@storybook/react'
 import { TSideNavigationPropTypes } from '../components/SideNavigation/types'
 
 export default {

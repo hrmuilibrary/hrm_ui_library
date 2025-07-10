@@ -1,7 +1,7 @@
 import React from 'react'
 import { Chips as _Chips } from '../components/Chips'
 import IconPerson from '../components/SVGIcons/IconPerson'
-import {StoryFn, type StoryObj} from '@storybook/react'
+import { StoryFn, type StoryObj } from '@storybook/react'
 import { TChipsProps } from '../components/Chips/types'
 import { Popover } from '../components/Popover'
 

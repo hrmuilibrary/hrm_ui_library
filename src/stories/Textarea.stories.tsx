@@ -22,7 +22,7 @@ const Template: StoryFn<TTextAreaTypeProps> = (args) => {
     </div>
   )
 }
-export const Textarea: StoryObj<TTextAreaTypeProps> = Template.bind({});
+export const Textarea: StoryObj<TTextAreaTypeProps> = Template.bind({})
 // @ts-ignore
 Textarea.args = {
   label: 'Label',
