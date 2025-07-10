@@ -1,6 +1,6 @@
 import React from 'react'
 import { Tooltip as _Tooltip } from '../index'
-import { StoryFn } from '@storybook/react'
+import { StoryFn, StoryObj } from '@storybook/react'
 import { TTooltipProps } from '../components/Tooltip/types'
 
 export default {
@@ -51,7 +51,7 @@ const Template: StoryFn<TTooltipProps> = (args) => {
   )
 }
 
-export const Tooltip = Template.bind({})
+export const Tooltip: StoryObj<TTooltipProps> = Template.bind({})
 
 Tooltip.args = {
   text: 'Prompt text Prompt text Prompt text Prompt text Prompt text Prompt text Prompt text Prompt text Prompt text Prompt text Prompt text Prompt text',

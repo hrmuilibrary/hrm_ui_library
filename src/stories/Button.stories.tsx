@@ -1,5 +1,5 @@
 import React from 'react'
-import { type StoryFn } from '@storybook/react'
+import { type StoryFn, type StoryObj } from '@storybook/react'
 
 import { Button as _Button, IconChevronDown } from '../index'
 import { TButtonPropTypes } from '../components/Button/types'
@@ -59,7 +59,7 @@ const Template: StoryFn<TButtonPropTypes> = (args) => (
   </div>
 )
 
-export const Button = Template.bind({})
+export const Button: StoryObj<TButtonPropTypes> = Template.bind({})
 Button.args = {
   iconProps: {
     Component: IconChevronDown

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { ReactElement, useMemo } from 'react'
 import classNames from 'classnames'
 import { Row as RowType, CellValue } from 'react-table'

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Modal as _Modal } from '../index'
 import { ModalConfirmation as _ModalConfirmation } from '../index'
-import { StoryFn } from '@storybook/react'
+import { StoryFn, type StoryObj } from '@storybook/react'
 import { TModalConfirmationPropTypes, TModalPropTypes } from '../components/Modal/types'
 import IconDelete from '../components/SVGIcons/IconDelete'
 
@@ -44,7 +44,7 @@ const Template: StoryFn<TModalPropTypes> = (args) => {
     </div>
   )
 }
-export const Modal = Template.bind({})
+export const Modal: StoryObj<TModalPropTypes> = Template.bind({})
 
 Modal.args = {
   size: 'medium',
@@ -84,7 +84,8 @@ const ModalConfirmationTemplate: StoryFn<TModalConfirmationPropTypes> = (args) =
     </div>
   )
 }
-export const ModalConfirmation = ModalConfirmationTemplate.bind({})
+export const ModalConfirmation: StoryObj<TModalConfirmationPropTypes> =
+  ModalConfirmationTemplate.bind({})
 
 ModalConfirmation.args = {
   size: 'small',

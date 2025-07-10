@@ -1,6 +1,6 @@
 import React from 'react'
 import { Badge as _Badge } from '../index'
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn, StoryObj } from '@storybook/react'
 import { TBadgeProps } from '../components/Badge/types'
 
 export default {
@@ -20,7 +20,7 @@ export default {
 
 const Template: StoryFn<TBadgeProps> = (args) => <_Badge {...args} />
 
-export const Badge = Template.bind({})
+export const Badge: StoryObj<TBadgeProps> = Template.bind({})
 
 Badge.args = {
   text: '999+',

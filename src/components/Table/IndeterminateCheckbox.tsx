@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { ForwardedRef, forwardRef, useEffect, useRef } from 'react'
 import { Checkbox } from '../Checkbox'
 

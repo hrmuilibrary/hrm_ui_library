@@ -4,7 +4,6 @@ import { TRadioGroupProps, TRadioOptionItem } from './types'
 import { Label } from '../../helperComponents'
 import classnames from 'classnames'
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const RadioGroup = forwardRef((props: TRadioGroupProps, ref): React.ReactElement => {
   const {
     isHorizontal = false,

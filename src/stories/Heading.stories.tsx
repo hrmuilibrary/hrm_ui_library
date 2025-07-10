@@ -1,6 +1,6 @@
 import React from 'react'
 import { Heading as _Heading } from '../index'
-import { StoryFn } from '@storybook/react'
+import { StoryFn, type StoryObj } from '@storybook/react'
 import { HeadingPropTypes } from '../components/Heading/types'
 
 export default {
@@ -32,7 +32,7 @@ const Template: StoryFn<HeadingPropTypes & { text: string }> = (args) => (
   </_Heading>
 )
 
-export const Heading = Template.bind({})
+export const Heading: StoryObj<HeadingPropTypes & { text: string }> = Template.bind({})
 Heading.args = {
   type: 'h1',
   size: 'small',

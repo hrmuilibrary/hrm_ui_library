@@ -1,6 +1,6 @@
 import React from 'react'
 import { Pagination as _Pagination } from '../index'
-import { StoryFn } from '@storybook/react'
+import { StoryFn, type StoryObj } from '@storybook/react'
 import { TPaginationProps } from '../components/Pagination/types'
 
 export default {
@@ -25,7 +25,7 @@ const Template: StoryFn<TPaginationProps> = ({ pageSize, ...args }) => (
   />
 )
 
-export const Pagination = Template.bind({})
+export const Pagination: StoryObj<TPaginationProps> = Template.bind({})
 
 // @ts-ignore
 Pagination.args = {

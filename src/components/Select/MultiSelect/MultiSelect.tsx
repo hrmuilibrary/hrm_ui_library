@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { ReactElement, useEffect, useId, useMemo, useState, forwardRef } from 'react'
 
 import { OptionsWrapper } from './OptionsWrapper'
@@ -121,7 +120,6 @@ export const MultiSelect = forwardRef((props: TMultiSelectPropTypes, _ref): Reac
     >
       <>
         <OptionsWrapper
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore
           options={options}
           isOpen={isOpen}

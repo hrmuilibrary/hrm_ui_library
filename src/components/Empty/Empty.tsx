@@ -4,7 +4,6 @@ import { Image } from '../Image'
 import { Button } from '../Button'
 import { TEmptyProps } from './types'
 import classNames from 'classnames'
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import noResultImage from '../../assets/images/no-result.svg'
 

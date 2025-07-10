@@ -8,9 +8,8 @@ import { isSameDay } from '../../../utils/helpers'
 import { Label } from '../../../helperComponents'
 import IconCalendarRight from '../../SVGIcons/IconCalendarRight'
 
-export const RangeDatePickerDesktop = forwardRef(
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  (props: IRangeDatePickerProps, _ref): ReactElement | null => {
+export const RangeDatePickerDesktop = forwardRef<any, IRangeDatePickerProps>(
+  (props, _ref): ReactElement | null => {
     const {
       value,
       currentDates = [],
@@ -103,7 +102,6 @@ export const RangeDatePickerDesktop = forwardRef(
           disabled={disabled}
           onChange={onChange}
           onClickOutside={checkRange}
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore
           ref={calendarRef}
           customInput={
@@ -112,7 +110,6 @@ export const RangeDatePickerDesktop = forwardRef(
                 dataId={dataId}
                 disabled={disabled}
                 placeholder={placeholderText}
-                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                 // @ts-ignore
                 currentValue={renderCurrentSelectedDate(rangeArray)}
                 rightIconProps={{ Component: IconCalendarRight, onClick: openDatepicker }}

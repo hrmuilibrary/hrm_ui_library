@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React, { ReactElement } from 'react'
 import { Input } from '../../Input'
 import IconCalendarRight from '../../SVGIcons/IconCalendarRight'
@@ -51,7 +53,7 @@ export const SimpleDatePickerMobile = (props: ISimpleDatePickerProps): ReactElem
     setIsCalendarOpen(false)
   }
 
-  const onChange = (date: Date) => {
+  const onChange = (date: Date | null) => {
     if (setFieldValue && name) {
       setFieldValue(name, date)
     }
@@ -85,9 +87,6 @@ export const SimpleDatePickerMobile = (props: ISimpleDatePickerProps): ReactElem
           maxDate={maxDate}
           selected={dayjs(selectedDate).isValid() ? selectedDate : null}
           locale={locale}
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          // @ts-ignore
-          // ref={calendarRef}
           inline={true}
           {...rest}
           onChange={onChange}

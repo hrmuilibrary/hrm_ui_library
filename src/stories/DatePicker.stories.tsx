@@ -4,7 +4,7 @@ import {
   TimePicker as _TimePicker,
   RangeDatePicker as _RangeDatePicker
 } from '../index'
-import { StoryFn } from '@storybook/react'
+import { StoryFn, type StoryObj } from '@storybook/react'
 import { IRangeDatePickerProps, ISimpleDatePickerProps } from '../components/DatePicker/types'
 
 export default {
@@ -74,12 +74,12 @@ const SimplePicker: StoryFn<ISimpleDatePickerProps> = (args) => {
         // excludeDates={getAllLastDays()}
         // minDate={new Date(new Date().setDate(new Date().getDate() + 15))}
         // maxDate={new Date(new Date().setDate(new Date().getDate() + 60))}
-        filterDate={(date) => isWeekday(date, publicHolidays)}
+        filterDate={(date: Date) => isWeekday(date, publicHolidays)}
       />
     </div>
   )
 }
-export const SimpleDatePicker = SimplePicker.bind({
+export const SimpleDatePicker: StoryObj<ISimpleDatePickerProps> = SimplePicker.bind({
   locale: 'en'
 })
 
@@ -118,12 +118,12 @@ const RangePicker: StoryFn<IRangeDatePickerProps> = (args) => {
         changeHandler={setValue}
         label={'Range Label'}
         modalOptions={{ title: 'Select date', btnConfirmText: 'Apply', btnCancelText: 'Cancel' }}
-        filterDate={(date) => date.getDay() !== 0 && date.getDay() !== 6}
+        filterDate={(date: Date) => date.getDay() !== 0 && date.getDay() !== 6}
       />
     </div>
   )
 }
-export const RangeDatePicker = RangePicker.bind({})
+export const RangeDatePicker: StoryObj<IRangeDatePickerProps> = RangePicker.bind({})
 
 RangeDatePicker.args = {
   label: 'Range Date Picker',

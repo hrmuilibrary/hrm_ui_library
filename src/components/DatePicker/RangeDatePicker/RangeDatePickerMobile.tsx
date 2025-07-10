@@ -1,4 +1,4 @@
-﻿/* eslint-disable @typescript-eslint/no-unused-vars */
+﻿// @ts-nocheck
 import React, { forwardRef, ReactElement, useEffect, useState } from 'react'
 import DatePicker from 'react-datepicker'
 import { Input } from '../../Input'
@@ -10,8 +10,8 @@ import { Modal } from '../../Modal'
 import { CustomHeader } from '../CustomHeader/CustomHeader'
 import { formatDate } from '../../../helpers'
 
-export const RangeDatePickerMobile = forwardRef(
-  (props: IRangeDatePickerProps, _ref): ReactElement | null => {
+export const RangeDatePickerMobile = forwardRef<any, IRangeDatePickerProps>(
+  (props, _ref): ReactElement | null => {
     const {
       value,
       currentDates = [],
@@ -38,7 +38,7 @@ export const RangeDatePickerMobile = forwardRef(
     const dateInitialValue =
       value !== undefined && Array.isArray(value) ? value : (currentDates as TRangePickerValues)
 
-    const [rangeArray, setRangeDate] = useState<TRangePickerValues>(dateInitialValue)
+    const [rangeArray, setRangeDate] = useState(dateInitialValue)
     const [isCalendarOpen, setIsCalendarOpen] = useState<boolean>(false)
     const [isApplied, setIsApplied] = useState<boolean>(false)
 
@@ -107,8 +107,6 @@ export const RangeDatePickerMobile = forwardRef(
           dataId={dataId}
           disabled={disabled}
           placeholder={placeholderText}
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          // @ts-ignore
           currentValue={renderCurrentSelectedDate(rangeArray)}
           rightIconProps={{ Component: IconCalendarRight, onClick: openDatepicker }}
         />

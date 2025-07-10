@@ -1,6 +1,6 @@
 import React from 'react'
 import { CardBody as _TCardBody } from '../index'
-import { StoryFn } from '@storybook/react'
+import { StoryFn, type StoryObj } from '@storybook/react'
 import { TCardBodyProps } from '../components/CardBody/types'
 // @ts-ignore
 import cardImg from '../assets/images/cards-img.png'
@@ -17,7 +17,7 @@ const Template: StoryFn<TCardBodyProps> = (args) => {
   )
 }
 
-export const CardBody = Template.bind({})
+export const CardBody: StoryObj<TCardBodyProps> = Template.bind({})
 
 CardBody.args = {
   illustration: cardImg,

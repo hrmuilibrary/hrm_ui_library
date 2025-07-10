@@ -2,7 +2,7 @@ import React from 'react'
 import { Popover, Status as _Status, Text } from '../index'
 import IconPerson from '../components/SVGIcons/IconPerson'
 import IconInfo from '../components/SVGIcons/IconInfo'
-import { StoryFn } from '@storybook/react'
+import { StoryFn, StoryObj } from '@storybook/react'
 import { TStatusProps } from '../components/Status/types'
 
 export default {
@@ -37,7 +37,7 @@ const Template: StoryFn<TStatusProps> = (args) => {
   )
 }
 
-export const Status = Template.bind({})
+export const Status: StoryObj<TStatusProps> = Template.bind({})
 
 Status.args = {
   text: 'Status',

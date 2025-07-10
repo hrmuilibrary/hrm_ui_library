@@ -1,7 +1,7 @@
 import React from 'react'
 import { Table as _Table } from '../index'
 import { TColumn, TTableProps, TTableState } from '../components/Table/types'
-import { StoryFn } from '@storybook/react'
+import { StoryFn, StoryObj } from '@storybook/react'
 
 const data: any[] = [
   {
@@ -86,7 +86,7 @@ export default {
   component: _Table
 }
 
-export const Table = Template.bind({})
+export const Table: StoryObj<TTableProps> = Template.bind({})
 
 Table.args = {
   fixedHeader: { y: 500 },

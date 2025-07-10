@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Breadcrumb as _Breadcrumb } from '../index'
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn, StoryObj } from '@storybook/react'
 import { TBreadCrumbProps } from '../components/Breadcrumb/types'
 import { noop } from '../utils/helpers'
 
@@ -14,7 +14,7 @@ const Template: StoryFn<TBreadCrumbProps> = (args) => {
   return <_Breadcrumb {...args} selectedValue={selectedTab} onSelect={onTabSelect} />
 }
 
-export const Breadcrumb = Template.bind({})
+export const Breadcrumb: StoryObj<TBreadCrumbProps> = Template.bind({})
 
 Breadcrumb.args = {
   breadCrumbItems: [

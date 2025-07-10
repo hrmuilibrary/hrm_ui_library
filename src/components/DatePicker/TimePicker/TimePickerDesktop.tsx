@@ -35,7 +35,7 @@ export const TimePickerDesktop = (props: ITimePickerProps): React.ReactElement =
 
   useImportFilesDynamically(locale)
 
-  const onChange = (date: Date) => {
+  const onChange = (date: Date | null) => {
     if (changeHandler) {
       changeHandler(date)
     }
@@ -61,7 +61,6 @@ export const TimePickerDesktop = (props: ITimePickerProps): React.ReactElement =
         showTimeSelect
         showTimeSelectOnly
         dateFormat={format}
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         ref={calendarRef}
         {...rest}

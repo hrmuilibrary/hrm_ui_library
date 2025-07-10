@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { forwardRef, ReactElement, useCallback, useState } from 'react'
 import { ErrorCode, FileError, FileRejection, useDropzone } from 'react-dropzone'
 import IconUpload from '../../SVGIcons/IconUpload'
@@ -15,7 +14,7 @@ export const DropzoneFileUpload = forwardRef(
   (
     {
       maxSize = 10 * 1024 * 1024,
-      accept = [FileTypeEnum.IMAGE, FileTypeEnum.PDF, FileTypeEnum.DOC],
+      allowedTypes = [FileTypeEnum.IMAGE, FileTypeEnum.PDF, FileTypeEnum.DOC],
       name,
       setFiles,
       setFieldValue,
@@ -32,7 +31,7 @@ export const DropzoneFileUpload = forwardRef(
     const initialMaxFiles = initialFiles.length >= maxFiles ? 0 : maxFiles - initialFiles.length
     const [errors, setErrors] = useState<FileError[]>([])
     const areaContent = generateAreaContent({
-      accept,
+      allowedTypes,
       maxSize
     })
 
@@ -101,7 +100,7 @@ export const DropzoneFileUpload = forwardRef(
             </Text>
             <Text size="small">
               {`${areaContent.acceptTypesMessage} ${
-                areaContent.acceptTypes.length === 1 ? translation.format : translation.formats
+                allowedTypes?.length === 1 ? translation.format : translation.formats
               }, ${translation.maxSize.replace('$1', areaContent.maxSizeFormatted)}`}
             </Text>
           </div>

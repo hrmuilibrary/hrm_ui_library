@@ -7,7 +7,7 @@ import imageFile3 from '../assets/images/Visa.svg'
 import IconCheckmark from '../components/SVGIcons/IconCheckmark'
 import IconAmd from '../components/SVGIcons/IconAmd'
 import { TItemSelectGroupProps, TItemSelectProps } from '../components/ItemSelect/types'
-import { StoryFn } from '@storybook/react'
+import { StoryFn, type StoryObj } from '@storybook/react'
 import IconQuestion from '../components/SVGIcons/IconQuestion'
 
 export default {
@@ -53,7 +53,7 @@ const Template: StoryFn<TItemSelectProps> = (args) => {
   )
 }
 
-export const ItemSelect = Template.bind({})
+export const ItemSelect: StoryObj<TItemSelectProps> = Template.bind({})
 
 ItemSelect.args = {
   leftIconProps: <IconAmd size={'small'} />,
@@ -84,7 +84,7 @@ const ItemSelectGroupTemplate: StoryFn<TItemSelectGroupProps> = (args) => {
   )
 }
 
-export const ItemSelectGroup = ItemSelectGroupTemplate.bind({})
+export const ItemSelectGroup: StoryObj<TItemSelectGroupProps> = ItemSelectGroupTemplate.bind({})
 
 ItemSelectGroup.args = {
   isHorizontal: false,

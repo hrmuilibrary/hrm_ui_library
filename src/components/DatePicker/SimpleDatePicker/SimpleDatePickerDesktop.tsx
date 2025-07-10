@@ -52,7 +52,7 @@ export const SimpleDatePickerDesktop = (props: ISimpleDatePickerProps): ReactEle
     }
   }
 
-  const onChange = (date: Date) => {
+  const onChange = (date: Date | null) => {
     if (setFieldValue && name) {
       setFieldValue(name, date)
     }
@@ -70,7 +70,6 @@ export const SimpleDatePickerDesktop = (props: ISimpleDatePickerProps): ReactEle
         maxDate={maxDate}
         selected={dayjs(selectedDate).isValid() ? selectedDate : null}
         locale={locale}
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         ref={calendarRef}
         customInput={

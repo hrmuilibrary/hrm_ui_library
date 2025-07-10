@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { forwardRef, ReactElement, useRef, useState } from 'react'
 import { TSingleSelectPropTypes } from '../types'
 import { useIsMobile } from '../../../hooks/useGetIsMobile'

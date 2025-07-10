@@ -6,7 +6,6 @@ import { noop } from '../../utils/helpers'
 import IconAdd from '../SVGIcons/IconAdd'
 import IconSubtract from '../SVGIcons/IconSubtract'
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const Counter = forwardRef((props: ICounterProps, ref): React.ReactElement => {
   const {
     max = 99999999,
@@ -29,11 +28,11 @@ export const Counter = forwardRef((props: ICounterProps, ref): React.ReactElemen
 
   const customChangeHandler = (inputedValue: number | string) => {
     if (handleChange) {
-      inputedValue > max
+      ;+inputedValue > max
         ? handleChange(max)
-        : inputedValue < min
-        ? handleChange(min)
-        : handleChange(inputedValue)
+        : +inputedValue < min
+          ? handleChange(min)
+          : handleChange(inputedValue)
     }
     if (setFieldValue && name) {
       setFieldValue(name, inputedValue, { shouldValidate: hasError })

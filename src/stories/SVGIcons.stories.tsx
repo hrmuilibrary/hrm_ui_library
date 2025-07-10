@@ -1,6 +1,6 @@
 import { Text } from '../components/Text'
 import * as Icons from '../components/SVGIcons'
-import { StoryFn } from '@storybook/react'
+import { StoryFn, StoryObj } from '@storybook/react'
 import { ISVGIconProps } from '../components/SVGIcons/types'
 
 export default {
@@ -66,7 +66,7 @@ const Template: StoryFn<ISVGIconProps & { filled: string }> = (args) => {
   )
 }
 
-export const SVGIcons = Template.bind({})
+export const SVGIcons: StoryObj<ISVGIconProps & { filled: string }> = Template.bind({})
 
 SVGIcons.args = {
   size: 'medium',

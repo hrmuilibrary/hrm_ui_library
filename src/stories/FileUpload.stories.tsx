@@ -8,7 +8,7 @@ import {
   TFileUploadProps
 } from '../components/FileUpload'
 import IconInfo from '../components/SVGIcons/IconInfo'
-import { StoryFn } from '@storybook/react'
+import { StoryFn, type StoryObj } from '@storybook/react'
 import { FileTypeEnum } from '../type'
 
 export default {
@@ -35,7 +35,7 @@ const Template: StoryFn<TFileUploadProps> = (args) => {
     </div>
   )
 }
-export const FileUpload = Template.bind({})
+export const FileUpload: StoryObj<TFileUploadProps> = Template.bind({})
 
 FileUpload.args = {
   label: 'Label',
