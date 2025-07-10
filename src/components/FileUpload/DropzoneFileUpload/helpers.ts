@@ -29,21 +29,21 @@ export const formatFileSize = (sizeInBytes: number, fractionDigits = 0): string 
 }
 
 export const generateAreaContent = ({
-  accept,
+                                      allowedTypes,
   maxSize,
   locale
 }: {
-  accept: FileTypeEnum[]
+  allowedTypes: FileTypeEnum[]
   maxSize: number
   locale?: string
 }): AreaContentDTO => {
-  const acceptTypes = accept.map((type: FileTypeEnum) => FILE_ACCEPT_TYPE[type]).flat()
+  const acceptTypes: any = allowedTypes.map((type: FileTypeEnum) => FILE_ACCEPT_TYPE[type]).flat()
   const translation = getDropzoneLocale(locale)
 
   const acceptTypesMessage =
-    accept.length === 1
-      ? accept[0]
-      : accept.reduce((acc, currentValue, _index, _arr) => {
+      allowedTypes.length === 1
+      ? allowedTypes[0]
+      : allowedTypes.reduce((acc, currentValue, _index, _arr) => {
           if (_index === _arr.length - 1) {
             return `${acc} ${translation.or} ${currentValue}`
           }

@@ -8,9 +8,9 @@ import { isSameDay } from '../../../utils/helpers'
 import { Label } from '../../../helperComponents'
 import IconCalendarRight from '../../SVGIcons/IconCalendarRight'
 
-export const RangeDatePickerDesktop = forwardRef(
+export const RangeDatePickerDesktop = forwardRef<any, IRangeDatePickerProps>(
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  (props: IRangeDatePickerProps, _ref): ReactElement | null => {
+  (props, _ref): ReactElement | null => {
     const {
       value,
       currentDates = [],

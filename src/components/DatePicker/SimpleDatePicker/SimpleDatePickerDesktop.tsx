@@ -52,7 +52,7 @@ export const SimpleDatePickerDesktop = (props: ISimpleDatePickerProps): ReactEle
     }
   }
 
-  const onChange = (date: Date) => {
+  const onChange = (date: Date | null) => {
     if (setFieldValue && name) {
       setFieldValue(name, date)
     }

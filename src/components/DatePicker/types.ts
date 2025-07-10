@@ -1,8 +1,8 @@
-import { ReactDatePickerProps } from 'react-datepicker'
+import { DatePickerProps } from 'react-datepicker'
 import { ReactNode } from 'react'
 
 type DatePickerDefaultProps = Omit<IFormCompProps, 'value'> &
-  Omit<ReactDatePickerProps, 'onChange' | 'value'>
+  Omit<DatePickerProps, 'onChange' | 'value'>
 
 export interface TDatepickerBaseProps extends DatePickerDefaultProps {
   dataId?: string
@@ -21,17 +21,15 @@ export interface TDatepickerBaseProps extends DatePickerDefaultProps {
 export interface ISimpleDatePickerProps extends TDatepickerBaseProps {
   helperText?: string
   currentDate?: Date | undefined
-  changeHandler?: (date: Date) => void
+  changeHandler?: (date: Date | null) => void
   excludeDates?: Date[]
-  minDate?: Date | null
-  maxDate?: Date | null
   required?: boolean
   value?: Date
   size?: 'large' | 'small'
 }
 export interface ITimePickerProps extends TDatepickerBaseProps {
   currentTime?: Date | undefined
-  changeHandler?: (date: Date) => void
+  changeHandler?: (date: Date | null) => void
   required?: boolean
   filterTime?: (date: Date) => boolean
   value?: Date

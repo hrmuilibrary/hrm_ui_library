@@ -35,7 +35,7 @@ export const TimePickerDesktop = (props: ITimePickerProps): React.ReactElement =
 
   useImportFilesDynamically(locale)
 
-  const onChange = (date: Date) => {
+  const onChange = (date: Date | null) => {
     if (changeHandler) {
       changeHandler(date)
     }
