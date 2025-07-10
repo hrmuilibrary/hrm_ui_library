@@ -136,12 +136,6 @@
     "sass": "^1.89.2",
     "date-fns": "^4.1.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run check",
-      "commit-msg": "commitlint --edit $1"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/hrmuilibrary/hrm_ui_library.git"
