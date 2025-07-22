@@ -1,3 +1,14 @@
+## [2.0.1](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.0.0...2.0.1) (2025-07-22)
+
+
+### Bug Fixes
+
+* add new icon ([0d202d2](https://github.com/hrmuilibrary/hrm_ui_library/commit/0d202d2f00478ec3c79a167ab786c911e8e7d335))
+* remove unused components, add new icons ([dfc9ec0](https://github.com/hrmuilibrary/hrm_ui_library/commit/dfc9ec053001e178497df65a530a3361a980d408))
+* remove unused package ([fa27000](https://github.com/hrmuilibrary/hrm_ui_library/commit/fa270000ec4cef22b1af7ca88e2a5aa519ad3162))
+* update lock file ([af580f7](https://github.com/hrmuilibrary/hrm_ui_library/commit/af580f7e8d3fa0b1ece456bd58e6f7913c5c68e6))
+* update readme ([e6aa823](https://github.com/hrmuilibrary/hrm_ui_library/commit/e6aa8238b053c4e66f90e6301381f3c667bc7ad1))
+
 # [2.0.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/1.7.0...2.0.0) (2025-07-10)
 
 
