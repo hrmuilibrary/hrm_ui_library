@@ -1,6 +1,6 @@
 # People Space UI Tools
 
-See [UI library]([https://github.com/hrmuilibrary/hrm_ui_library]) for live demos and comprehensive docs.
+See [UI library]([https://hrmuilibrary.github.io/hrm_ui_library]) for live demos and comprehensive docs.
 
 # Installation and usage
 ```
