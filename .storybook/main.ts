@@ -22,7 +22,7 @@ const config: StorybookConfig = {
             include: path.resolve(__dirname, '../')
         }, {
             test: /\.css$/,
-            use: ["style-loader", "css-loader"],
+            use: ['style-loader', 'css-loader'],
             include: path.resolve(__dirname, '../'),
             exclude: /node_modules/,
         });
