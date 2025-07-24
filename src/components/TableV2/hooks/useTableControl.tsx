@@ -126,11 +126,11 @@ export function useTableControl<TData>({
 
     setSorting(newSorting)
 
-    const sortingEvent: SortingUpdateEvent[] = newSorting.map(sort => ({
+    const sortingEvent: SortingUpdateEvent[] = newSorting.map((sort) => ({
       column: sort.id ?? '',
       direction: sort.desc ? 'desc' : sort.id ? 'asc' : false,
       timestamp: Date.now()
-    }));
+    }))
     onSortChange?.(sortingEvent)
   }
 

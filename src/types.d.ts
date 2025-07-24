@@ -1,11 +1,3 @@
-import { TableOptions } from '@tanstack/react-table';
-
-declare module '@tanstack/react-table' {
-  interface TableOptions<TData> {
-    isMultiSortEvent?: (e: unknown) => boolean;
-  }
-}
-
 declare type TIconSize = 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge'
 
 declare type TColor =
