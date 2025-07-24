@@ -1,4 +1,4 @@
-import { InputHTMLAttributes, ReactElement, RefObject } from 'react'
+import { InputHTMLAttributes, ReactElement, RefObject, FocusEvent } from 'react'
 import { ISVGIconProps } from '../SVGIcons/types'
 export interface InputCustomProps
   extends IFormCompProps,
@@ -29,6 +29,7 @@ export interface InputCustomProps
   successMessage?: string
   maxCount?: number
   onFocus?: (event: TClickEventType) => void
+  handleBlurEvent?: (e: FocusEvent<HTMLInputElement>) => void
   hideCounter?: boolean
   allowNegative?: boolean
   currencySymbol?: string
