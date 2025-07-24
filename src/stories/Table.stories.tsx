@@ -11,12 +11,11 @@ import {
   IconDelete,
   IconEdit,
   IconAdd,
-  Chips,
+  Chips
 } from '../index'
 import { ColumnDef } from '@tanstack/react-table'
 import classnames from 'classnames'
 import { IndeterminateCheckbox } from '../components/TableV2/IndeterminateCheckbox'
-
 
 const data: any[] = [
   {

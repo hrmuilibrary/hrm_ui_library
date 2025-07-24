@@ -162,7 +162,11 @@ export function Table<TData>({
       })}
     >
       {header}
-      <div className={classnames('advanced-table__inner scrollbar scrollbar--horizontal scrollbar--vertical')}>
+      <div
+        className={classnames(
+          'advanced-table__inner scrollbar scrollbar--horizontal scrollbar--vertical'
+        )}
+      >
         <DndContext
           sensors={sensors}
           collisionDetection={closestCenter}
@@ -204,61 +208,61 @@ export function Table<TData>({
                   <tbody>
                     {isLoading
                       ? skeletonRowSize.map((_, i) => (
-                        <tr key={`skeleton-row-${i}`}>
-                          {table.getVisibleFlatColumns().map((column) => (
-                            <td
-                              className={classnames({
-                                'with-checkbox': column.id === ColumnId.Select,
-                                'pinned-cell': column.getIsPinned(),
-                                'action-column':
-                                  column.id === ColumnId.Actions && !isActionsVisible
-                              })}
-                              key={column.id}
-                              style={{ ...getCommonPinningStyles(column) }}
-                            >
-                              <Skeleton />
-                            </td>
-                          ))}
-                        </tr>
-                      ))
-                      : table.getRowModel().rows.map((row) => (
-                        <React.Fragment key={row.id}>
-                          <tr className={classnames({ selected: row.getIsSelected() })}>
-                            {row.getVisibleCells().map((cell) => (
+                          <tr key={`skeleton-row-${i}`}>
+                            {table.getVisibleFlatColumns().map((column) => (
                               <td
                                 className={classnames({
-                                  'with-checkbox': cell.column.id === ColumnId.Select,
-                                  'pinned-cell': cell.column.getIsPinned(),
+                                  'with-checkbox': column.id === ColumnId.Select,
+                                  'pinned-cell': column.getIsPinned(),
                                   'action-column':
-                                    cell.column.id === ColumnId.Actions && !isActionsVisible,
-                                  'expand-column': cell.column.id === ColumnId.Expand
+                                    column.id === ColumnId.Actions && !isActionsVisible
                                 })}
-                                id={cell.id}
-                                key={cell.id}
-                                onClick={() => handleRowClick(cell.column, row)}
-                                style={{ ...getCommonPinningStyles(cell.column) }}
+                                key={column.id}
+                                style={{ ...getCommonPinningStyles(column) }}
                               >
-                                {cell.column.id === ColumnId.Actions && !isActionsVisible ? (
-                                  <div className={classnames('actions-list__right')}>
-                                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                                  </div>
-                                ) : (
-                                  flexRender(cell.column.columnDef.cell, cell.getContext())
-                                )}
+                                <Skeleton />
                               </td>
                             ))}
                           </tr>
-                          {collapsibleRows &&
-                            expandedRows.has(row.id) &&
-                            renderExpandedContent && (
-                              <tr className={classnames('advanced-table__expanded-row')}>
-                                <td colSpan={row.getVisibleCells().length}>
-                                  {renderExpandedContent(row)}
+                        ))
+                      : table.getRowModel().rows.map((row) => (
+                          <React.Fragment key={row.id}>
+                            <tr className={classnames({ selected: row.getIsSelected() })}>
+                              {row.getVisibleCells().map((cell) => (
+                                <td
+                                  className={classnames({
+                                    'with-checkbox': cell.column.id === ColumnId.Select,
+                                    'pinned-cell': cell.column.getIsPinned(),
+                                    'action-column':
+                                      cell.column.id === ColumnId.Actions && !isActionsVisible,
+                                    'expand-column': cell.column.id === ColumnId.Expand
+                                  })}
+                                  id={cell.id}
+                                  key={cell.id}
+                                  onClick={() => handleRowClick(cell.column, row)}
+                                  style={{ ...getCommonPinningStyles(cell.column) }}
+                                >
+                                  {cell.column.id === ColumnId.Actions && !isActionsVisible ? (
+                                    <div className={classnames('actions-list__right')}>
+                                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                                    </div>
+                                  ) : (
+                                    flexRender(cell.column.columnDef.cell, cell.getContext())
+                                  )}
                                 </td>
-                              </tr>
-                            )}
-                        </React.Fragment>
-                      ))}
+                              ))}
+                            </tr>
+                            {collapsibleRows &&
+                              expandedRows.has(row.id) &&
+                              renderExpandedContent && (
+                                <tr className={classnames('advanced-table__expanded-row')}>
+                                  <td colSpan={row.getVisibleCells().length}>
+                                    {renderExpandedContent(row)}
+                                  </td>
+                                </tr>
+                              )}
+                          </React.Fragment>
+                        ))}
                   </tbody>
                 </>
               )}
@@ -269,7 +273,10 @@ export function Table<TData>({
               <table style={{ width: activeHeader.getSize() }}>
                 <thead>
                   <tr>
-                    <th className={classnames('draggable-col')} style={{ width: activeHeader.getSize() }}>
+                    <th
+                      className={classnames('draggable-col')}
+                      style={{ width: activeHeader.getSize() }}
+                    >
                       <Text weight={'bold'}>
                         {flexRender(
                           activeHeader.column.columnDef.header,
