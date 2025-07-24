@@ -44,6 +44,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputCustomProps>(
       witUpperCase = false,
       isAllowed,
       onChange,
+      handleBlurEvent,
       ...rest
     },
     ref
@@ -82,6 +83,11 @@ export const Input = React.forwardRef<HTMLInputElement, InputCustomProps>(
       return 0
     }, [rest, currentValue])
 
+    const onBlurCallback = (e: React.FocusEvent<HTMLInputElement>) => {
+      rest?.onBlur?.(e as any)
+      handleBlurEvent?.(e)
+    }
+
     const input = mask ? (
       // @ts-ignore
       <InputMask
@@ -91,6 +97,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputCustomProps>(
         ref={() => ref && ref()}
         {...rest}
         placeholder={placeHolder}
+        onBlur={onBlurCallback}
         onChange={changeHandler}
         disabled={disabled}
         data-id={dataId}
@@ -114,6 +121,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputCustomProps>(
         inputMode={'numeric'}
         disabled={disabled}
         isAllowed={isAllowed}
+        onBlur={onBlurCallback}
         {...(currentValue !== undefined ? { value: currentValue } : {})}
       />
     ) : (
@@ -127,6 +135,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputCustomProps>(
         placeholder={placeHolder}
         data-id={dataId}
         {...rest}
+        onBlur={onBlurCallback}
         onChange={changeHandler}
         {...(currentValue !== undefined ? { value: currentValue } : {})}
       />

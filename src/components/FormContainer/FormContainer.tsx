@@ -74,7 +74,8 @@ export const FormContainer = (props: FormPropTypes): React.ReactElement => {
           setError,
           dirtyFields,
           getFieldState,
-          unregister
+          unregister,
+          onSubmit: () => handleSubmit(customSubmit)()
         }}
       >
         <>

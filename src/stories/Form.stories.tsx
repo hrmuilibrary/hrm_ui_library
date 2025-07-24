@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import * as yup from 'yup'
 import {
   FormField,
   FormContainer as _FormContainer,
   Button,
   DropzoneFileUpload,
-  SimpleDatePicker
+  SimpleDatePicker,
+  Input,
+  useFormProps
 } from '../index'
 
 export default {
@@ -152,6 +154,23 @@ const VALIDATION_SCHEME = yup.object({
   firstname: yup.string().required('validation')
 })
 
+const CustomInput = () => {
+  const { trigger, onSubmit } = useFormProps()
+
+  const handleBlurEvent = async (event: React.FocusEvent<HTMLInputElement>) => {
+    const isValid = await trigger?.('firstname')
+    if (isValid && onSubmit) {
+      onSubmit()
+    }
+  }
+  return (
+    <FormField
+      name="firstname"
+      As={(props) => <Input handleBlurEvent={handleBlurEvent}  {...props} />}
+    />
+  )
+}
+
 const Template = (): React.ReactElement => {
   const INITIAL_VALUES = {
     firstname: ''
@@ -165,11 +184,11 @@ const Template = (): React.ReactElement => {
         initialValues={INITIAL_VALUES}
       >
         <>
-          <FormField name="firstname" As={(props) => <DropzoneFileUpload {...props} />} />
+          <CustomInput />
           {/*// @ts-ignore*/}
-          <FormField name="date" As={(props) => <SimpleDatePicker {...props} />} />
+          {/*<FormField name="date" As={(props) => <SimpleDatePicker {...props} />} />*/}
 
-          <Button buttonActionType="submit" buttonText={'Ok'} />
+          <Button buttonActionType="submit" buttonText={'Ok'} className="mt-16" />
         </>
       </_FormContainer>
     </div>

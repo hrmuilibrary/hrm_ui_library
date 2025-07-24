@@ -31,6 +31,7 @@ export type TFormContextProps = {
   trigger?: UseFormTrigger<TFormData>
   getFieldState?: UseFormGetFieldState<TFormData>
   unregister?: UseFormUnregister<TFormData>
+  onSubmit?: () => void
 }
 
 export const FormContext = createContext<TFormContextProps>({
