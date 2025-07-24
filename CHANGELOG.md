@@ -1,3 +1,16 @@
+# [2.1.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.0.3...2.1.0) (2025-07-24)
+
+
+### Bug Fixes
+
+* build errors ([d2848ac](https://github.com/hrmuilibrary/hrm_ui_library/commit/d2848acbb6c9c5db3a9e3b1fa705df610b1179c0))
+* fix type issue ([3c6fdb9](https://github.com/hrmuilibrary/hrm_ui_library/commit/3c6fdb9083426ef4266641a79d4fa4ec3bb5d989))
+
+
+### Features
+
+* add new table: ([1156b4b](https://github.com/hrmuilibrary/hrm_ui_library/commit/1156b4b76bcc1b71295f59a376ac2d7ec8bb36b9))
+
 ## [2.0.3](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.0.2...2.0.3) (2025-07-24)
 
 
