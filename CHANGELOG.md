@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.0.2...2.0.3) (2025-07-24)
+
+
+### Bug Fixes
+
+* add blur event handler ([4192fa0](https://github.com/hrmuilibrary/hrm_ui_library/commit/4192fa09b05d6cb930d55fab4b13384f2cca1b46))
+
 ## [2.0.2](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.0.1...2.0.2) (2025-07-22)
 
 
