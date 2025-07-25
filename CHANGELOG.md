@@ -1,3 +1,10 @@
+## [2.2.1](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.2.0...2.2.1) (2025-07-25)
+
+
+### Bug Fixes
+
+* change props in  new badge component ([c22abab](https://github.com/hrmuilibrary/hrm_ui_library/commit/c22ababd8a27f8a0a0e7a89885eb639c286ce3f5))
+
 # [2.2.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.1.1...2.2.0) (2025-07-25)
 
 
