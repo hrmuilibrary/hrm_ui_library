@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.1.1...2.2.0) (2025-07-25)
+
+
+### Features
+
+* add new badge component: ([bccca8e](https://github.com/hrmuilibrary/hrm_ui_library/commit/bccca8e0cfa6df4313f3077fcfebf71f2b97b8b3))
+
 ## [2.1.1](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.1.0...2.1.1) (2025-07-25)
 
 
