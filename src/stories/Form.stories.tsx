@@ -166,7 +166,7 @@ const CustomInput = () => {
   return (
     <FormField
       name="firstname"
-      As={(props) => <Input handleBlurEvent={handleBlurEvent}  {...props} />}
+      As={(props) => <Input handleBlurEvent={handleBlurEvent} {...props} />}
     />
   )
 }
