@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.1.0...2.1.1) (2025-07-25)
+
+
+### Bug Fixes
+
+* update storybook ([1e18920](https://github.com/hrmuilibrary/hrm_ui_library/commit/1e18920fa8d0684c00b9ab88d251f43c39474c64))
+
 # [2.1.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.0.3...2.1.0) (2025-07-24)
 
 
