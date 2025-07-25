@@ -1,38 +1,24 @@
-import { TSVGIconType } from "../SVGIcons/types"
+import { ReactNode } from 'react'
+import { TSVGIconType } from '../SVGIcons/types'
 
 export interface TBadgeProps extends IFormCompProps {
-  text?: number | string
-  type?: BadgeType //'primary' | 'secondary' | 'tertiary'
+  text?: number | string | ReactNode
+  type?:
+    | 'gray'
+    | 'blue'
+    | 'orange'
+    | 'red'
+    | 'green'
+    | 'yellow'
+    | 'purple'
+    | 'sky'
+    | 'pink'
+    | 'teal'
+    | 'empty'
   size?: 'large' | 'small'
-  style?: BadgeStyle
+  style?: 'filled' | 'light' | 'lighter' | 'stroke'
   iconProps?: TIconProps
   className?: string
-}
-
-export enum BadgeStyle {
-  filled = 'filled',
-  light = 'light',
-  lighter = 'lighter',
-  stroke = 'stroke'
-}
-
-export enum BadgeType {
-  gray = 'gray',
-  blue = 'blue',
-  orange = 'orange',
-  red = 'red',
-  green = 'green',
-  yellow = 'yellow',
-  purple = 'purple',
-  sky = 'sky',
-  pink = 'pink',
-  teal = 'teal',
-  empty = 'empty'
-}
-
-export enum IconAlignment {
-  left = 'left',
-  right = 'right'
 }
 
 export enum BadgeSize {
@@ -42,6 +28,6 @@ export enum BadgeSize {
 export interface TIconProps {
   size?: TIconSize
   type?: TSVGIconType
-  alignment?: IconAlignment
+  alignment?: 'left' | 'right'
   Component: TSVGIconComponent
 }

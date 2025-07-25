@@ -3,7 +3,7 @@ import { Badge as _Badge } from '../index'
 import { BadgeV2 as _BadgeV2 } from '../index'
 import type { StoryFn, StoryObj } from '@storybook/react'
 import { TBadgeProps } from '../components/Badge/types'
-import { BadgeStyle, BadgeType, TBadgeProps as TBadgePropsV2 } from '../components/BadgeV2/types'
+import { TBadgeProps as TBadgePropsV2 } from '../components/BadgeV2/types'
 
 export default {
   title: 'Badge',
@@ -36,14 +36,26 @@ export const BadgeV2: StoryObj<TBadgePropsV2> = TemplateV2.bind({})
 
 BadgeV2.args = {
   text: '999+',
-  style: BadgeStyle.filled,
-  type: BadgeType.blue,
+  style: 'filled',
+  type: 'blue',
   size: 'large'
 }
 
 BadgeV2.argTypes = {
   type: {
-    options: ['gray', 'blue', 'orange', 'red', 'green', 'yellow', 'purple', 'sky', 'pink', 'teal', 'empty'],
+    options: [
+      'gray',
+      'blue',
+      'orange',
+      'red',
+      'green',
+      'yellow',
+      'purple',
+      'sky',
+      'pink',
+      'teal',
+      'empty'
+    ],
     control: { type: 'select' }
   },
   style: {
