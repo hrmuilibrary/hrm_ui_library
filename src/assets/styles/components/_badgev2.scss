@@ -1,0 +1,144 @@
+@use "../helpers/mixin";
+
+.badge {
+  $this: &;
+
+  --ds-badge-primary-bg: var(--pink-500);
+  --ds-badge-secondary-bg: var(--grey-50);
+  --ds-badge-tertiary-bg: var(--green-500);
+
+  --ds-badge-border-radius: var(--ds-border-radius-4xl);
+  --ds-badge-padding-lg: var(--ds-space-6);
+  --ds-badge-padding-sm: var(--ds-space-4);
+  --ds-badge-inner-padding-lg: 0 var(--ds-space-2);
+  --ds-badge-inner-padding-sm: 0 var(--ds-space-4);
+  --ds-badge-font: var(--ds-font-weight-default) var(--ds-paragraph-xs)/0.8 var(--ds-font-family);
+
+  @include mixin.inline-flex;
+  @include mixin.align-items(center);
+  border-radius: var(--ds-badge-border-radius);
+
+  &__inner {
+    font: var(--ds-badge-font);
+  }
+
+  &--filled {
+    color: var(--white);
+
+    p {
+      color: var(--white);
+    }
+
+    &#{$this}--gray {
+      background-color: var(--grey-400);
+    }
+
+    &#{$this}--blue {
+      background-color: var(--blue-800);
+    }
+
+    &#{$this}--orange {
+      background-color: var(--yellow-900);
+    }
+
+    &#{$this}--red {
+      background-color: var(--red-500);
+    }
+
+    &#{$this}--green {
+      background-color: var(--brand-500);
+    }
+
+    &#{$this}--yellow {
+      background-color: var(--ds-badge-primary-bg);
+    }
+
+    &#{$this}--purple {
+      background-color: var(--ds-badge-primary-bg);
+    }
+
+    &#{$this}--sky {
+      background-color: var(--ds-badge-primary-bg);
+    }
+
+    &#{$this}--pink {
+      background-color: var(--ds-badge-primary-bg);
+    }
+
+    &#{$this}--teal {
+      background-color: var(--ds-badge-primary-bg);
+    }
+
+    &#{$this}--empty {
+      background-color: var(--ds-badge-primary-bg);
+    }
+  }
+
+  &--light {
+    color: var(--grey-900);
+
+    p {
+      color: var(--grey-900);
+    }
+
+    &#{$this}--gray {
+      background-color: var(--grey-400);
+    }
+
+    &#{$this}--blue {
+      background-color: var(--blue-800);
+    }
+
+    &#{$this}--orange {
+      background-color: var(--ds-badge-primary-bg);
+    }
+
+    &#{$this}--red {
+      background-color: var(--red-500);
+    }
+
+    &#{$this}--green {
+      background-color: var(--brand-500);
+    }
+
+    &#{$this}--yellow {
+      background-color: var(--ds-badge-primary-bg);
+    }
+
+    &#{$this}--purple {
+      background-color: var(--ds-badge-primary-bg);
+    }
+
+    &#{$this}--sky {
+      background-color: var(--ds-badge-primary-bg);
+    }
+
+    &#{$this}--pink {
+      background-color: var(--ds-badge-primary-bg);
+    }
+
+    &#{$this}--teal {
+      background-color: var(--ds-badge-primary-bg);
+    }
+
+    &#{$this}--empty {
+      background-color: var(--ds-badge-primary-bg);
+    }
+  }
+
+  &--large {
+    padding: var(--ds-badge-padding-lg);
+
+    #{$this}__inner {
+      padding: var(--ds-badge-inner-padding-lg);
+    }
+  }
+
+  &--small {
+    padding: var(--ds-badge-padding-sm);
+
+    #{$this}__inner {
+      padding: var(--ds-badge-inner-padding-sm);
+    }
+  }
+}
