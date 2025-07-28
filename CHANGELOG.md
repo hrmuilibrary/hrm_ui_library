@@ -1,3 +1,10 @@
+## [2.2.2](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.2.1...2.2.2) (2025-07-28)
+
+
+### Bug Fixes
+
+* add new purple color ([26888a7](https://github.com/hrmuilibrary/hrm_ui_library/commit/26888a713e6b51d4eaff96bc717e28640bdeec44))
+
 ## [2.2.1](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.2.0...2.2.1) (2025-07-25)
 
 
