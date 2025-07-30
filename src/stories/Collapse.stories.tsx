@@ -1,14 +1,18 @@
 import React, { useState } from 'react'
-import { CollapseItem as _CollapseItem, CollapseGroup as _CollapseGroup } from '../index'
-import IconChevronDown from '../components/SVGIcons/IconChevronDown'
+import {
+  CollapseItem as _CollapseItem,
+  CollapseGroup as _CollapseGroup,
+  Collapse as _CollapseV2
+} from '../index'
 import { StoryFn, type StoryObj } from '@storybook/react'
-import { TCollapseGroupProps, TCollapseProps } from '../components/Collapse/types'
-import { str } from 'ajv'
+import { TCollapseGroupProps, TCollapseProps, TCollapseV2Props } from '../components/Collapse/types'
+import { boolean, string } from 'yup'
 
 export default {
   title: 'Collapse',
   component: _CollapseItem,
-  argTypes: {}
+  argTypes: {},
+  args: {}
 }
 
 const Template: StoryFn<TCollapseProps & { textTitle: string }> = (args) => {
@@ -67,3 +71,34 @@ const Template1: StoryFn<TCollapseGroupProps> = (args: any) => {
 export const CollapseGroup: StoryObj<TCollapseGroupProps> = Template1.bind({})
 
 CollapseGroup.args = {}
+
+const Template2: StoryFn<TCollapseV2Props> = (args) => <_CollapseV2 {...args} />
+
+const CollapseV2Story = {
+  title: 'Collapse',
+  component: _CollapseV2,
+  argTypes: {}
+}
+
+export const CollapseV2: StoryObj<TCollapseV2Props> = Template2.bind(CollapseV2Story)
+
+CollapseV2.args = {
+  isOpen: true,
+  title: { text: 'Collapse Title' },
+  iconAlignment: 'right',
+  hasIconBorder: true,
+  children: 'Lorem ipsum ...'
+}
+
+CollapseV2.argTypes = {
+  title: {
+    text: string
+  },
+  isOpen: boolean,
+  iconAlignment: {
+    control: { type: 'radio' },
+    options: ['left', 'right'],
+    description: 'Chevron Icon should be on the left or right side of title'
+  },
+  hasIconBorder: boolean
+}

@@ -8,9 +8,10 @@ export interface ICollapseTitleProps {
   weight?: 'regular' | 'semibold' | 'bold' | 'bolder'
 }
 
-interface TCollapseItemTitle extends ICollapseTitleProps {
+export interface TCollapseItemTitle extends ICollapseTitleProps {
   text: string | ReactNode
 }
+
 export type TCollapseProps = {
   isOpen: boolean
   toggle: () => void
@@ -40,5 +41,21 @@ export type TCollapseGroupProps = {
   items: TCollapseItem[]
   singleSelection?: boolean
   titleProps?: ICollapseTitleProps
+  className?: string
+}
+
+export interface TCollapseItemTitleV2 extends ICollapseTitleProps {
+  text?: string | ReactNode
+}
+
+export type TCollapseV2Props = {
+  isOpen?: boolean
+  toggle?: (isOpen: boolean) => void
+  children: ReactNode
+  title: TCollapseItemTitleV2
+  iconAlignment?: 'left' | 'right'
+  hasIconBorder?: boolean
+  dataId?: string | undefined
+  id?: string | number
   className?: string
 }

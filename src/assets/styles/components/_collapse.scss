@@ -20,7 +20,7 @@
     overflow: hidden;
 
     &--opened {
-        #{$this}__header{
+        #{$this}__header {
             &__icon {
                 transition: transform 300ms ease 0s, color 300ms ease-in-out 0s;
                 transform: rotate(90deg);
@@ -28,7 +28,7 @@
         }
     }
 
-    &__header{
+    &__header {
         height: var(--ds-collapse-header-size);
         padding: var(--ds-collapse-header-space);
         cursor: pointer;
@@ -46,6 +46,29 @@
 
     &__divider {
         margin: var(--ds-collapse-divider-space);
+    }
+}
+
+.collapse-icon {
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 6px;
+    justify-content: center;
+    align-items: center;
+    top: -7px;
+    position: relative;
+
+    >svg {
+        font-size: var(--size-24);
+    }
+
+    &.icon-border {
+        border-color: var(--grey-300);
+    }
+
+    &.icon-open {
+        background-color: var(--grey-200);
+        border-color: var(--grey-200);
     }
 }
 
