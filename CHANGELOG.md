@@ -1,3 +1,11 @@
+## [2.2.3](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.2.2...2.2.3) (2025-07-30)
+
+
+### Bug Fixes
+
+* add pnpm lock file ([ffa2917](https://github.com/hrmuilibrary/hrm_ui_library/commit/ffa2917c69862085d488dadd642fa5068b07f6be))
+* move wheel-picker lib from devDeps to dev ([2d94953](https://github.com/hrmuilibrary/hrm_ui_library/commit/2d949534b9a5d607eae4f2d16187277741c2514d))
+
 ## [2.2.2](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.2.1...2.2.2) (2025-07-28)
 
 
