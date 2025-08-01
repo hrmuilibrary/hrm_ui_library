@@ -468,11 +468,11 @@ $space-prefixes: (
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: var(--grey-50);
+    background-color: var(--grey-200);
     border-radius: var(--border-radius-100);
 
     &:hover {
-      background-color: var(--grey-100);
+      background-color: var(--grey-300);
     }
   }
 
@@ -496,7 +496,7 @@ $space-prefixes: (
       margin: 0 var(--ds-space-8);
     }
     &::-webkit-scrollbar {
-      height: var(--ds-size-4);
+      height: var(--ds-size-10);
     }
   }
 }
