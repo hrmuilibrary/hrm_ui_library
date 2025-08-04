@@ -1,3 +1,10 @@
+## [2.3.1](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.3.0...2.3.1) (2025-08-04)
+
+
+### Bug Fixes
+
+* show design tokens ([1175310](https://github.com/hrmuilibrary/hrm_ui_library/commit/117531026537267d940593263208f5bfc879cc0f))
+
 # [2.3.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.2.4...2.3.0) (2025-08-04)
 
 
