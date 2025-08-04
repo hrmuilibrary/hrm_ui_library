@@ -1,3 +1,17 @@
+# [2.3.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.2.4...2.3.0) (2025-08-04)
+
+
+### Features
+
+* add new Card component ([12df3d2](https://github.com/hrmuilibrary/hrm_ui_library/commit/12df3d2de9140fdfa6ba10cd585c19fc6730dad3))
+
+## [2.2.4](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.2.3...2.2.4) (2025-08-04)
+
+
+### Bug Fixes
+
+* update table scroll bar UI ([8912da0](https://github.com/hrmuilibrary/hrm_ui_library/commit/8912da077cefe9b91f7b60ca46ab9582b055099f))
+
 ## [2.2.3](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.2.2...2.2.3) (2025-07-30)
 
 

@@ -1,0 +1,148 @@
+.card {
+    $this: &;
+
+    border: 1px solid var(--grey-200);
+    border-radius: var(--size-8);
+    display: flex;
+    position: relative;
+    height: 56px;
+
+    &--expanded {
+        height: auto;
+
+        .card__content {
+            &--header {
+                height: auto;
+            }
+        }
+    }
+
+    &--title--alignment {
+        &__body {
+            border: 1px solid var(--grey-200);
+        }
+
+        &--left {
+            flex-direction: row;
+
+            .card__body {
+                border-top-right-radius: var(--size-8);
+                border-bottom-right-radius: var(--size-8);
+            }
+
+            .card__title {
+                writing-mode: sideways-lr;
+                border-top-left-radius: var(--size-8);
+                border-bottom-left-radius: var(--size-8);
+            }
+        }
+
+        &--right {
+            flex-direction: row-reverse;
+
+            .card__body {
+                border-top-left-radius: var(--size-8);
+                border-bottom-left-radius: var(--size-8);
+            }
+
+            .card__title {
+                writing-mode: sideways-rl;
+                border-top-right-radius: var(--size-8);
+                border-bottom-right-radius: var(--size-8);
+            }
+        }
+
+        &--top {
+            flex-direction: column;
+
+            .card__body {
+                border-bottom-left-radius: var(--size-8);
+                border-bottom-right-radius: var(--size-8);
+            }
+
+            .card__title {
+                border-top-left-radius: var(--size-8);
+                border-top-right-radius: var(--size-8);
+            }
+        }
+
+        &--bottom {
+            flex-direction: column-reverse;
+
+            .card__body {
+                border-top-right-radius: var(--size-8);
+                border-top-left-radius: var(--size-8);
+            }
+
+            .card__title {
+                border-bottom-left-radius: var(--size-8);
+                border-bottom-right-radius: var(--size-8);
+            }
+        }
+    }
+
+    &__title {
+        font-size: var(--font-size-12);
+        font-weight: var(--font-weight-700);
+        text-transform: capitalize;
+        text-align: center;
+        line-height: 16px;
+
+        &--blue {
+            color: var(--blue-900);
+            background-color: var(--blue-100);
+            border: 1px solid var(--blue-100);
+        }
+
+        &--purple {
+            color: var(--purple-900);
+            background-color: var(--purple-100);
+            border: 1px solid var(--purple-100);
+        }
+
+        &--yellow {
+            color: var(--yellow-900);
+            background-color: var(--yellow-100);
+            border: 1px solid var(--yellow-100);
+        }
+
+        &--pink {
+            color: var(--pink-900);
+            background-color: var(--pink-100);
+            border: 1px solid var(--pink-100);
+        }
+
+        &--green {
+            color: var(--green-900);
+            background-color: var(--green-100);
+            border: 1px solid var(--green-100);
+        }
+
+        &--grey {
+            color: var(--grey-900);
+            background-color: var(--grey-100);
+            border: 1px solid var(--grey-100);
+        }
+    }
+
+    &__content {
+        flex-grow: 1;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        &--header {
+            display: flex;
+            justify-content: space-between;
+            flex: auto;
+
+            &--expand {
+                align-content: center;
+            }
+        }
+
+        .card__divider {
+            background-color: var(--grey-200);
+        }
+    }
+}
