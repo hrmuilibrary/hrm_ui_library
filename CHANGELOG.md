@@ -1,3 +1,10 @@
+## [2.3.2](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.3.1...2.3.2) (2025-08-04)
+
+
+### Bug Fixes
+
+* add time picker placeholder ([56e95f7](https://github.com/hrmuilibrary/hrm_ui_library/commit/56e95f7e5e491dda91cc23a386b8f4c13135002f))
+
 ## [2.3.1](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.3.0...2.3.1) (2025-08-04)
 
 
