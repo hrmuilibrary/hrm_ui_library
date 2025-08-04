@@ -9,7 +9,7 @@ const config: StorybookConfig = {
         reactDocgen: 'react-docgen',
     },
     addons: [
-        { name: 'storybook-design-token', options: { preserveCSSVars: true } },
+        'storybook-design-token',
         '@storybook/addon-viewport',
         '@storybook/addon-controls',
         '@storybook/addon-links'
