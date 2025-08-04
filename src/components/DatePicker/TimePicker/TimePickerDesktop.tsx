@@ -20,7 +20,6 @@ export const TimePickerDesktop = (props: ITimePickerProps): React.ReactElement =
     required,
     format = 'HH:mm',
     locale = 'hy',
-    placeholderText,
     hasError,
     ...rest
   } = props
@@ -70,7 +69,6 @@ export const TimePickerDesktop = (props: ITimePickerProps): React.ReactElement =
             disabled={rest.disabled}
             dataId={dataId}
             size={size}
-            placeholder={placeholderText}
             rightIconProps={{ Component: IconClock, onClick: openDatepicker }}
           />
         }
