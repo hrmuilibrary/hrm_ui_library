@@ -1,3 +1,10 @@
+## [2.2.4](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.2.3...2.2.4) (2025-08-04)
+
+
+### Bug Fixes
+
+* update table scroll bar UI ([8912da0](https://github.com/hrmuilibrary/hrm_ui_library/commit/8912da077cefe9b91f7b60ca46ab9582b055099f))
+
 ## [2.2.3](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.2.2...2.2.3) (2025-07-30)
 
 
