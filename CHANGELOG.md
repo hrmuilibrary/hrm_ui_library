@@ -1,3 +1,10 @@
+## [2.3.3](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.3.2...2.3.3) (2025-08-05)
+
+
+### Bug Fixes
+
+* update Collapse ([fa54656](https://github.com/hrmuilibrary/hrm_ui_library/commit/fa54656d49f9d8ecd92d20332d5bf1b42e6a7702))
+
 ## [2.3.2](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.3.1...2.3.2) (2025-08-04)
 
 
