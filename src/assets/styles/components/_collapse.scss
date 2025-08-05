@@ -16,7 +16,6 @@
 
     border-radius: var(--ds-collapse-border-radius);
     border: var(--ds-collapse-border);
-    background-color: var(--ds-collapse-bg);
     overflow: hidden;
 
     &--opened {
@@ -51,8 +50,8 @@
 
 .collapse-icon {
     border: 1px solid transparent;
-    border-radius: 8px;
-    padding: 6px;
+    border-radius: var(--size-8);
+    padding: var(--size-4);
     justify-content: center;
     align-items: center;
     top: -7px;

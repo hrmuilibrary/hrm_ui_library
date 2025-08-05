@@ -3,7 +3,7 @@ import { ReactElement, ReactNode } from 'react'
 export type TCollapseTitleColor = 'selected' | 'primary'
 
 export interface ICollapseTitleProps {
-  size?: 'small' | 'medium'
+  size?: 'xxsmall' | 'xsmall' | 'small' | 'standard' | 'medium' | 'large'
   color?: TCollapseTitleColor
   weight?: 'regular' | 'semibold' | 'bold' | 'bolder'
 }
