@@ -18,6 +18,10 @@
     border: var(--ds-collapse-border);
     overflow: hidden;
 
+    &--v2 {
+        --ds-collapse-bg: transparent;
+    }
+
     &--opened {
         #{$this}__header {
             &__icon {
