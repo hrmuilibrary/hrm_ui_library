@@ -1,3 +1,10 @@
+## [2.3.4](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.3.3...2.3.4) (2025-08-06)
+
+
+### Bug Fixes
+
+* improve Card component ([a41601a](https://github.com/hrmuilibrary/hrm_ui_library/commit/a41601a4a2d73fbff75c4d23c210608c273810ea))
+
 ## [2.3.3](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.3.2...2.3.3) (2025-08-05)
 
 
