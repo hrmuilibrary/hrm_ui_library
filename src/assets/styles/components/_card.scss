@@ -136,6 +136,11 @@
             justify-content: space-between;
             flex: auto;
 
+
+            &--expandable {
+                cursor: pointer;
+            }
+
             &--expand {
                 align-content: center;
             }

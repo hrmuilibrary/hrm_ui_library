@@ -31,7 +31,7 @@ export const Collapse = (props: TCollapseV2Props): React.ReactElement => {
 
   return (
     <div
-      className={classNames('collapse', { 'collapse--opened': isOpen }, className)}
+      className={classNames('collapse collapse--v2', { 'collapse--opened': isOpen }, className)}
       id={`${id || ''}`}
       data-id={generateDataTestId('collapse-item', dataId)}
     >

@@ -1,6 +1,8 @@
 import React, { useCallback } from 'react'
 import { useCardContext } from '../CardContext'
 import { IconChevronDown, IconChevronRight } from '../../SVGIcons'
+import classNames from 'classnames'
+import { noop } from '../../../utils/helpers'
 
 export const CardHead = ({ children }: { children: React.ReactNode }) => {
   const { toggleIsExpanded, onExpand, isExpandable, isExpanded } = useCardContext()
@@ -14,10 +16,15 @@ export const CardHead = ({ children }: { children: React.ReactNode }) => {
   }, [])
 
   return (
-    <div className="card__content--header">
+    <div
+      className={classNames('card__content--header', {
+        'card__content--header--expandable': isExpandable
+      })}
+      onClick={isExpandable ? onToggleExpand : noop}
+    >
       {children}
       {isExpandable && (
-        <div className="card__content--header--expand" onClick={onToggleExpand}>
+        <div className="card__content--header--expand">
           {isExpanded ? <IconChevronRight /> : <IconChevronDown />}
         </div>
       )}
