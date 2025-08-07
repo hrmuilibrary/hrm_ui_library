@@ -2,27 +2,41 @@
     $this: &;
 
     --ds-divider-bg-color: var(--ds-color-divider);
+    --ds-divider-bg-color-grey: var(--ds-color-divider-grey);
 
     border: none;
 
-    &--horizontal{
+    &--horizontal {
         height: 1px;
         width: 100%;
     }
-    &--vertical{
+
+    &--vertical {
         width: 1px;
         height: 100%;
     }
 
     &--primary {
         background-color: var(--ds-divider-bg-color);
+
+        &.divider--grey {
+            background-color: var(--ds-divider-bg-color-grey);
+        }
     }
 
     &--secondary {
-        background: repeating-linear-gradient(90deg,var(--ds-divider-bg-color),var(--ds-divider-bg-color) 4px,transparent 6px,transparent 8px);
+        background: repeating-linear-gradient(90deg, var(--ds-divider-bg-color), var(--ds-divider-bg-color) 4px, transparent 6px, transparent 8px);
 
         &#{$this}--vertical {
-            background: repeating-linear-gradient(0deg,var(--ds-divider-bg-color),var(--ds-divider-bg-color) 4px,transparent 6px,transparent 8px);
+            background: repeating-linear-gradient(0deg, var(--ds-divider-bg-color), var(--ds-divider-bg-color) 4px, transparent 6px, transparent 8px);
+        }
+
+        &.divider--grey {
+            background: repeating-linear-gradient(90deg, var(--ds-divider-bg-color-grey), var(--ds-divider-bg-color-grey) 4px, transparent 6px, transparent 8px);
+
+            &.divider--vertical {
+                background: repeating-linear-gradient(0deg, var(--ds-divider-bg-color-grey), var(--ds-divider-bg-color-grey) 4px, transparent 6px, transparent 8px);
+            }
         }
     }
 }

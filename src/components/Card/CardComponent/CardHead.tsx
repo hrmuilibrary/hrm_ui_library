@@ -25,7 +25,7 @@ export const CardHead = ({ children }: { children: React.ReactNode }) => {
       {children}
       {isExpandable && (
         <div className="card__content--header--expand">
-          {isExpanded ? <IconChevronRight /> : <IconChevronDown />}
+          {isExpanded ? <IconChevronDown /> : <IconChevronRight />}
         </div>
       )}
     </div>
