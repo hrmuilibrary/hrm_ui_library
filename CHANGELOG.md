@@ -1,3 +1,10 @@
+## [2.3.6](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.3.5...2.3.6) (2025-08-07)
+
+
+### Bug Fixes
+
+* add divider new color ([982a50c](https://github.com/hrmuilibrary/hrm_ui_library/commit/982a50c9c9725893801d96c1e6ad29cc44db673a))
+
 ## [2.3.5](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.3.4...2.3.5) (2025-08-07)
 
 
