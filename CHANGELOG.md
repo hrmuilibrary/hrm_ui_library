@@ -1,3 +1,10 @@
+## [2.3.5](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.3.4...2.3.5) (2025-08-07)
+
+
+### Bug Fixes
+
+* add xlarge size to Text ([3b24a98](https://github.com/hrmuilibrary/hrm_ui_library/commit/3b24a9850baa3a208007b256b1b4f03ee4f8cfbe))
+
 ## [2.3.4](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.3.3...2.3.4) (2025-08-06)
 
 
