@@ -10,6 +10,10 @@ export default {
     type: {
       options: ['primary', 'secondary'],
       control: { type: 'radio' }
+    },
+    color: {
+      options: ['light-grey', 'grey'],
+      control: { type: 'radio' }
     }
   }
 } as Meta
