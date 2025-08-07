@@ -345,6 +345,7 @@ $space-prefixes: (
 
 .body {
   $body-type: (
+    xlarge: var(--ds-paragraph-xlg),
     large: var(--ds-paragraph-lg),
     medium: var(--ds-paragraph-md),
     standard: var(--ds-paragraph-std),

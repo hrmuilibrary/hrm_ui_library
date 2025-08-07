@@ -14,7 +14,7 @@ type TTextTypes =
   | 'information'
   | 'discovery'
 
-type TTextSize = 'xxsmall' | 'xsmall' | 'small' | 'standard' | 'medium' | 'large'
+type TTextSize = 'xxsmall' | 'xsmall' | 'small' | 'standard' | 'medium' | 'large' | 'xlarge'
 type TTextWeight = 'regular' | 'semibold' | 'bold' | 'bolder'
 type TTextLineHeight = 'xsmall' | 'small' | 'medium' | 'large'
 
