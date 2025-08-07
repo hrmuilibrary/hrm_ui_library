@@ -25,7 +25,7 @@ export default {
       control: { type: 'radio' }
     },
     size: {
-      options: ['xxsmall', 'xsmall', 'small', 'standard', 'medium', 'large'],
+      options: ['xxsmall', 'xsmall', 'small', 'standard', 'medium', 'large', 'xlarge'],
       control: { type: 'radio' }
     },
     as: {
