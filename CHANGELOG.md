@@ -1,3 +1,11 @@
+# [2.4.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.3.7...2.4.0) (2025-08-11)
+
+
+### Features
+
+* add button group component ([737b01c](https://github.com/hrmuilibrary/hrm_ui_library/commit/737b01c4a53bcc4846ff2ce8f8574c3ace9c880d))
+* types updates ([f7c9ef8](https://github.com/hrmuilibrary/hrm_ui_library/commit/f7c9ef867ac9612c8f85240e981c1169b8fd7f43))
+
 ## [2.3.7](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.3.6...2.3.7) (2025-08-11)
 
 
