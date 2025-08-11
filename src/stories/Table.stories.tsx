@@ -11,7 +11,8 @@ import {
   IconDelete,
   IconEdit,
   IconAdd,
-  Chips
+  Chips,
+  Text
 } from '../index'
 import { ColumnDef } from '@tanstack/react-table'
 import classnames from 'classnames'
@@ -230,7 +231,10 @@ const Template1: StoryFn<TTableV2Props<any>> = (args) => {
     {
       id: 'user',
       header: 'User',
-      accessorKey: 'user'
+      accessorKey: 'user',
+      enablePinning: true,
+      enableSorting: false,
+      cell: ({ getValue }) => <Text weight="bolder">{`${getValue()}`}</Text>
     },
     {
       header: 'Status',
@@ -241,7 +245,8 @@ const Template1: StoryFn<TTableV2Props<any>> = (args) => {
     {
       id: 'age',
       accessorKey: 'age',
-      header: 'Age'
+      header: 'Age',
+      size: 50
     },
     {
       header: 'Profile Progress',
@@ -283,6 +288,7 @@ const Template1: StoryFn<TTableV2Props<any>> = (args) => {
       header: 'Actions',
       id: 'actions',
       accessorKey: 'actions',
+      size: 30,
       cell: () => (
         <div className="flexbox align-items--center">
           <Button className="mr-8" iconProps={{ Component: IconAdd }} type="secondary" />
@@ -304,7 +310,7 @@ const Template1: StoryFn<TTableV2Props<any>> = (args) => {
           persistColumnSettings: 'localStorage'
         }}
         columns={columns}
-        defaultHiddenColumns={['user']}
+        // defaultHiddenColumns={['user']}
         emptyTitle="Empty title"
         emptySubTitle="Please try to reload the page or use another keyword."
         renderHeader={(table) => (
@@ -400,20 +406,20 @@ const meta = {
     layout: 'fullscreen'
   },
   argTypes: {
-    collapsibleRows: {
-      control: 'boolean',
-      description: 'Enable row-level collapsible functionality'
-    }
+    // collapsibleRows: {
+    //   control: 'boolean',
+    //   description: 'Enable row-level collapsible functionality'
+    // }
   }
 } as const
 
 export const TableV2 = Template1.bind({})
 TableV2.args = {
-  withSelect: true,
-  withBorder: true,
-  isActionsVisible: false,
+  // withSelect: true,
+  // withBorder: true,
+  isActionsVisible: true,
   isLoading: false,
-  collapsibleRows: true,
+  // collapsibleRows: true,
   onSortChange: (state) => console.log(state),
   onRowSelection: (state) => console.log(state),
   onPaginationChange: (state) => console.log(state),
