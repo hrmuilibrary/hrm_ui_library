@@ -21,6 +21,5 @@ export interface IButtonGroupItem extends IButtonGroupBase {
 export interface IButtonGroup extends IButtonGroupBase {
   buttons: IButtonGroupItem[]
   activeIndex: number
-  handleTabChange?: (index: number) => void
-  onChange?: (index: number) => void
+  onTabChange?: (index: number) => void
 }

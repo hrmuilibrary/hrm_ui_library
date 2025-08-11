@@ -10,14 +10,14 @@ export const ButtonGroup = ({
   type,
   size,
   disabled,
-  onChange
+  onTabChange
 }: IButtonGroup) => {
   const [activeItem, setActiveItem] = useState(activeIndex)
 
-  const handleClick = (index: number) => {
+  const handleItemClick = (index: number) => {
     if (disabled || activeItem === index) return
     setActiveItem(index)
-    onChange?.(index)
+    onTabChange?.(index)
   }
 
   return (
@@ -31,7 +31,7 @@ export const ButtonGroup = ({
             size={size}
             isActive={activeItem === index}
             disabled={disabled}
-            onClick={() => handleClick(index)}
+            onClick={() => handleItemClick(index)}
           />
         )
       })}
