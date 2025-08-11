@@ -5,7 +5,7 @@ import type {
   OnChangeFn,
   ColumnSizingState,
   PaginationState,
-  VisibilityState
+  VisibilityState, ColumnPinningState,
 } from '@tanstack/react-table'
 import {
   useReactTable,
@@ -50,7 +50,7 @@ export function useTableControl<TData>({
   const savedSettings =
     shouldPersistToStorage && tableName
       ? loadTableSettings(tableName)
-      : { columnVisibility: {}, columnSizing: {}, columnOrder: [] }
+      : { columnVisibility: {}, columnSizing: {}, columnOrder: [], columnPinning: {} }
 
   const [activeId, setActiveId] = useState<string | null>(null)
   const [sorting, setSorting] = useState<SortingState>([])
@@ -162,7 +162,20 @@ export function useTableControl<TData>({
     acc[key] = false
     return acc
   }, {})
-
+  
+  const columnPinning: ColumnPinningState = useMemo(() => {
+    const left: string[] = [];
+    memoizedColumns.forEach((col) => {
+      if (col.enablePinning && col.id) {
+        left.push(col.id);
+      }
+    })
+    return {
+        left,
+        right: ['actions']
+    }
+  }, [memoizedColumns])
+  
   const table = useReactTable({
     data,
     columns: reorderedColumns,
@@ -177,15 +190,7 @@ export function useTableControl<TData>({
         ...hiddenColumns,
         ...columnVisibility
       },
-      columnPinning: {
-        left: ['select'],
-        right: ['actions']
-      }
-    },
-    defaultColumn: {
-      minSize: 200,
-      size: 150,
-      maxSize: 400
+      columnPinning
     },
     onPaginationChange: handlePaginationChange,
     onColumnSizingChange: handleColumnSizingChange,
