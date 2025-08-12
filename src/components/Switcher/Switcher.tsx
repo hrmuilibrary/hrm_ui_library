@@ -2,7 +2,6 @@ import React, { forwardRef } from 'react'
 import classnames from 'classnames'
 import { Label } from '../../helperComponents'
 import { TSwitcherProps } from './types'
-import IconCheckmark from '../SVGIcons/IconCheckmark'
 
 export const Switcher = forwardRef((props: TSwitcherProps, ref): React.ReactElement => {
   const {
@@ -63,7 +62,7 @@ export const Switcher = forwardRef((props: TSwitcherProps, ref): React.ReactElem
         />
         <span className="controller__icon">
           <span className="controller__icon__inner">
-            <IconCheckmark size="xsmall" className="controller__mark" />
+            <span className="controller__mark" />
           </span>
         </span>
       </label>
