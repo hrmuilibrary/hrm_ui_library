@@ -1,3 +1,10 @@
+## [2.4.1](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.0...2.4.1) (2025-08-12)
+
+
+### Bug Fixes
+
+* update switch component colors ([164df7d](https://github.com/hrmuilibrary/hrm_ui_library/commit/164df7dab5981cf192f53c492c3e83866127eacf))
+
 # [2.4.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.3.7...2.4.0) (2025-08-11)
 
 
