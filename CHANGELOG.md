@@ -1,3 +1,10 @@
+## [2.4.2](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.1...2.4.2) (2025-08-13)
+
+
+### Bug Fixes
+
+* update badge colors and dot logic ([7bddcf7](https://github.com/hrmuilibrary/hrm_ui_library/commit/7bddcf7f1af70936fbb4dae36c701becefe24d71))
+
 ## [2.4.1](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.0...2.4.1) (2025-08-12)
 
 
