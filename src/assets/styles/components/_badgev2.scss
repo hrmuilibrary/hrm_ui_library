@@ -1,32 +1,22 @@
 @use "../helpers/mixin";
 
-.badge {
+.badge-v2 {
   $this: &;
-
-  --ds-badge-primary-bg: var(--pink-500);
-  --ds-badge-secondary-bg: var(--grey-50);
-  --ds-badge-tertiary-bg: var(--green-500);
-
-  --ds-badge-border-radius: var(--ds-border-radius-4xl);
-  --ds-badge-padding-lg: var(--ds-space-6);
-  --ds-badge-padding-sm: var(--ds-space-4);
-  --ds-badge-inner-padding-lg: 0 var(--ds-space-2);
-  --ds-badge-inner-padding-sm: 0 var(--ds-space-4);
-  --ds-badge-font: var(--ds-font-weight-default) var(--ds-paragraph-xs)/0.8 var(--ds-font-family);
-
+  $this__inner: #{$this}__inner;
   @include mixin.inline-flex;
   @include mixin.align-items(center);
-  border-radius: var(--ds-badge-border-radius);
+  border-radius: var(--ds-border-radius-4xl);
+  gap: var(--ds-size-2);
 
   &__inner {
-    font: var(--ds-badge-font);
+    font: var(--ds-font-weight-default) var(--ds-paragraph-xs)/0.8 var(--ds-font-family)
   }
 
   &--filled {
-    color: var(--white);
+    color: var(--grey-0);
 
-    p {
-      color: var(--white);
+    > #{$this__inner} {
+      color: var(--grey-0);
     }
 
     &#{$this}--gray {
@@ -38,7 +28,7 @@
     }
 
     &#{$this}--orange {
-      background-color: var(--yellow-900);
+      background-color: var(--yellow-800);
     }
 
     &#{$this}--red {
@@ -50,95 +40,449 @@
     }
 
     &#{$this}--yellow {
-      background-color: var(--ds-badge-primary-bg);
+      background-color: var(--yellow-500);
     }
 
     &#{$this}--purple {
-      background-color: var(--ds-badge-primary-bg);
+      background-color: var(--purple-400);
     }
 
     &#{$this}--sky {
-      background-color: var(--ds-badge-primary-bg);
+      background-color: var(--blue-500);
     }
 
     &#{$this}--pink {
-      background-color: var(--ds-badge-primary-bg);
+      background-color: var(--pink-200);
     }
 
     &#{$this}--teal {
-      background-color: var(--ds-badge-primary-bg);
+      background-color: var(--green-500);
     }
 
-    &#{$this}--empty {
-      background-color: var(--ds-badge-primary-bg);
+    &#{$this}--with-dot {
+      background: var(--grey-0);
     }
   }
 
   &--light {
-    color: var(--grey-900);
+    color: var(--grey-800);
 
-    p {
-      color: var(--grey-900);
+    > #{$this__inner} {
+      color: var(--grey-800);
     }
 
     &#{$this}--gray {
-      background-color: var(--grey-400);
+      background-color: var(--grey-200);
+
+      #{$this}--with-dot {
+        background-color: var(--grey-800);
+      }
     }
 
     &#{$this}--blue {
-      background-color: var(--blue-800);
+      background-color: var(--blue-100);
+
+      #{$this}--with-dot {
+        background-color: var(--grey-800);
+      }
     }
 
     &#{$this}--orange {
-      background-color: var(--ds-badge-primary-bg);
+      background-color: var(--yellow-400);
+
+      #{$this}--with-dot {
+        background-color: var(--grey-800);
+      }
     }
 
     &#{$this}--red {
-      background-color: var(--red-500);
+      background-color: var(--red-200);
+
+      > #{$this__inner} {
+        color: var(--red-900);
+      }
+
+      #{$this}--with-dot {
+        background-color: var(--red-900);
+      }
     }
 
     &#{$this}--green {
-      background-color: var(--brand-500);
+      background-color: var(--brand-20);
+
+      > #{$this__inner} {
+        color: var(--brand-800);
+      }
+
+      #{$this}--with-dot {
+        background-color: var(--brand-800);
+      }
     }
 
     &#{$this}--yellow {
-      background-color: var(--ds-badge-primary-bg);
+      background-color: var(--yellow-100);
+
+      > #{$this__inner} {
+        color: var(--yellow-900);
+      }
+
+      #{$this}--with-dot {
+        background-color: var(--yellow-900);
+      }
     }
 
     &#{$this}--purple {
-      background-color: var(--ds-badge-primary-bg);
+      background-color: var(--purple-100);
+
+      > #{$this__inner} {
+        color: var(--purple-900);
+      }
+
+      #{$this}--with-dot {
+        background-color: var(--purple-900);
+      }
     }
 
     &#{$this}--sky {
-      background-color: var(--ds-badge-primary-bg);
+      background-color: var(--blue-100);
+
+      > #{$this__inner} {
+        color: var(--blue-900);
+      }
+
+      #{$this}--with-dot {
+        background-color: var(--blue-900);
+      }
     }
 
     &#{$this}--pink {
-      background-color: var(--ds-badge-primary-bg);
+      background-color: var(--pink-100);
+
+      > #{$this__inner} {
+        color: var(--pink-900);
+      }
+
+      #{$this}--with-dot {
+        background-color: var(--pink-900);
+      }
     }
 
     &#{$this}--teal {
-      background-color: var(--ds-badge-primary-bg);
+      background-color: var(--green-100);
+
+      > #{$this__inner} {
+        color: var(--green-900);
+      }
+
+      #{$this}--with-dot {
+        background-color: var(--green-900);
+      }
+    }
+  }
+
+  &--lighter {
+    color: var(--grey-400);
+
+    > &#{$this__inner} {
+      color: var(--grey-400);
     }
 
-    &#{$this}--empty {
-      background-color: var(--ds-badge-primary-bg);
+    &#{$this}--gray {
+      background-color: var(--grey-100);
+
+      #{$this}--with-dot {
+        background-color: var(--grey-400);
+      }
+    }
+
+    &#{$this}--blue {
+      background-color: var(--blue-50);
+
+      > #{$this__inner} {
+        color: var(--blue-800);
+      }
+
+      #{$this}--with-dot {
+        background-color: var(--blue-800);
+      }
+    }
+
+    &#{$this}--orange {
+      background-color: var(--yellow-50);
+
+      > #{$this__inner} {
+        color: var(--yellow-800);
+      }
+
+      #{$this}--with-dot {
+        background-color: var(--yellow-800);
+      }
+    }
+
+    &#{$this}--red {
+      background-color: var(--red-20);
+
+      > #{$this__inner} {
+        color: var(--red-500);
+      }
+
+      #{$this}--with-dot {
+        background-color: var(--red-500);
+      }
+    }
+
+    &#{$this}--green {
+      background-color: var(--green-50);
+
+      > #{$this__inner} {
+        color: var(--brand-600);
+      }
+
+      #{$this}--with-dot {
+        background-color: var(--brand-600);
+      }
+    }
+
+    &#{$this}--yellow {
+      background-color: var(--yellow-50);
+
+      > #{$this__inner} {
+        color: var(--yellow-600);
+      }
+
+      #{$this}--with-dot {
+        background-color: var(--yellow-600);
+      }
+    }
+
+    &#{$this}--purple {
+      background-color: var(--purple-50);
+
+      > #{$this__inner} {
+        color: var(--purple-400);
+      }
+
+      #{$this}--with-dot {
+        background-color: var(--purple-400);
+      }
+    }
+
+    &#{$this}--sky {
+      background-color: var(--blue-50);
+
+      > #{$this__inner} {
+        color: var(--blue-500);
+      }
+
+      #{$this}--with-dot {
+        background-color: var(--blue-500);
+      }
+    }
+
+    &#{$this}--pink {
+      background-color: var(--pink-50);
+
+      > #{$this__inner} {
+        color: var(--pink-300);
+      }
+
+      #{$this}--with-dot {
+        background-color: var(--pink-300);
+      }
+    }
+
+    &#{$this}--teal {
+      background-color: var(--green-50);
+
+      > #{$this__inner} {
+        color: var(--green-500);
+      }
+
+      #{$this}--with-dot {
+        background-color: var(--green-500);
+      }
+    }
+  }
+
+  &--stroke {
+    color: var(--grey-400);
+    border: 1px solid var(--grey-400);
+    background-color: var(--grey-0);
+
+    > &#{$this__inner} {
+      color: var(--grey-400);
+    }
+
+    &#{$this}--gray {
+      background-color: var(--grey-0);
+
+      #{$this}--with-dot {
+        background-color: var(--grey-400);
+      }
+    }
+
+    &#{$this}--blue {
+      border-color: var(--blue-600);
+
+      > #{$this__inner} {
+        color: var(--blue-800);
+      }
+
+      #{$this}--with-dot {
+        background-color: var(--blue-800);
+      }
+    }
+
+    &#{$this}--orange {
+      border-color: var(--yellow-800);
+
+      > #{$this__inner} {
+        color: var(--yellow-800);
+      }
+
+      #{$this}--with-dot {
+        background-color: var(--yellow-800);
+      }
+    }
+
+    &#{$this}--red {
+      border-color: var(--red-500);
+
+      > #{$this__inner} {
+        color: var(--red-500);
+      }
+
+      #{$this}--with-dot {
+        background-color: var(--red-500);
+      }
+    }
+
+    &#{$this}--green {
+      border-color: var(--brand-500);
+
+      > #{$this__inner} {
+        color: var(--brand-500);
+      }
+
+      #{$this}--with-dot {
+        background-color: var(--brand-500);
+      }
+    }
+
+    &#{$this}--yellow {
+      border-color: var(--yellow-500);
+
+      > #{$this__inner} {
+        color: var(--yellow-500);
+      }
+
+      #{$this}--with-dot {
+        background-color: var(--yellow-500);
+      }
+    }
+
+    &#{$this}--purple {
+      border-color: var(--purple-400);
+
+      > #{$this__inner} {
+        color: var(--purple-400);
+      }
+
+      #{$this}--with-dot {
+        background-color: var(--purple-400);
+      }
+    }
+
+    &#{$this}--sky {
+      border-color: var(--blue-50);
+
+      > #{$this__inner} {
+        color: var(--blue-500);
+      }
+
+      #{$this}--with-dot {
+        background-color: var(--blue-500);
+      }
+    }
+
+    &#{$this}--pink {
+      border-color: var(--pink-200);
+
+      > #{$this__inner} {
+        color: var(--pink-200);
+      }
+
+      #{$this}--with-dot {
+        background-color: var(--pink-200);
+      }
+    }
+
+    &#{$this}--teal {
+      border-color: var(--green-500);
+
+      > #{$this__inner} {
+        color: var(--green-500);
+      }
+
+      #{$this}--with-dot {
+        background-color: var(--green-500);
+      }
     }
   }
 
   &--large {
-    padding: var(--ds-badge-padding-lg);
+    height: var(--ds-size-20);
+    padding: var(--ds-size-2) var(--ds-size-8);;
 
     #{$this}__inner {
-      padding: var(--ds-badge-inner-padding-lg);
+      padding: 0 var(--ds-space-2);
+    }
+
+    &#{$this}--dot {
+      width: var(--ds-size-12);
+      height: var(--ds-size-12);
+    }
+
+    &#{$this}--with-dot {
+      width: var(--ds-size-6);
+      height: var(--ds-size-6);
     }
   }
 
   &--small {
-    padding: var(--ds-badge-padding-sm);
+    height: var(--ds-size-16);
+    padding: var(--ds-size-2) var(--ds-size-8);
 
     #{$this}__inner {
-      padding: var(--ds-badge-inner-padding-sm);
+      padding: 0 var(--ds-space-4);
+    }
+
+    &#{$this}--dot {
+      width: var(--ds-size-8);
+      height: var(--ds-size-8);
+    }
+
+    &#{$this}--with-dot {
+      width: var(--ds-size-6);
+      height: var(--ds-size-6);
+    }
+  }
+
+  &--dot {
+    border-radius: 50%;
+    padding: 0;
+  }
+
+  &#{$this}--disabled {
+    border: 1px solid var(--grey-200);
+    background-color: var(--grey-0);
+
+    > #{$this__inner} {
+      color: var(--grey-200);
+    }
+
+    &#{$this}--with-dot {
+      background-color: var(--grey-300);
     }
   }
 }

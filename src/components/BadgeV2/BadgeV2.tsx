@@ -1,39 +1,55 @@
 import React, { ReactElement } from 'react'
 import { Text } from '../Text'
-import { BadgeSize, TBadgeProps } from './types'
+import { BadgeSize, TBadgeV2Props } from './types'
 import classNames from 'classnames'
 
-export const BadgeV2 = (props: TBadgeProps): ReactElement => {
+export const BadgeV2 = (props: TBadgeV2Props): ReactElement => {
   const {
     type = 'blue',
     style = 'filled',
     size = BadgeSize.large,
     text,
     className = '',
-    iconProps
+    iconProps,
+    withDot,
+    dot,
+    disabled
   } = props
   const {
     size: iconSize = 'small',
     type: iconType,
-    alignment: iconAlignment = 'left',
-    Component
+    alignment: iconAlignment = 'left'
   } = iconProps ?? {}
 
+  const baseClassName = classNames(
+    `badge-v2 badge-v2--${type} badge-v2--${style} badge-v2--${size}`,
+    { 'badge-v2--disabled': disabled },
+    className
+  )
+
+  if (dot) {
+    return <div className={classNames(baseClassName, 'badge-v2--dot')} />
+  }
+
   return (
-    <div className={classNames(`badge badge--${type} badge--${style} badge--${size}`, className)}>
-      {iconProps && iconAlignment === 'left' && (
+    <div className={baseClassName}>
+      {withDot ? (
+        <div className={classNames(baseClassName, 'badge-v2--dot badge-v2--with-dot')} />
+      ) : null}
+
+      {!withDot && iconProps && iconAlignment === 'left' ? (
         <iconProps.Component size={iconSize} type={iconType} />
-      )}
+      ) : null}
       {typeof text === 'string' || typeof text === 'number' ? (
-        <Text size="xsmall" className="badge__inner">
-          <>{text}</>
+        <Text size="xsmall" className="badge-v2__inner">
+          {text}
         </Text>
       ) : React.isValidElement(text) ? (
         text
       ) : null}
-      {iconProps && iconAlignment === 'right' && (
+      {!withDot && iconProps && iconAlignment === 'right' ? (
         <iconProps.Component size={iconSize} type={iconType} />
-      )}
+      ) : null}
     </div>
   )
 }

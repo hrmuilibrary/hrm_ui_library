@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import { TSVGIconType } from '../SVGIcons/types'
 
-export interface TBadgeProps extends IFormCompProps {
+export interface TBadgeV2Props extends IFormCompProps {
   text?: number | string | ReactNode
   type?:
     | 'gray'
@@ -14,11 +14,13 @@ export interface TBadgeProps extends IFormCompProps {
     | 'sky'
     | 'pink'
     | 'teal'
-    | 'empty'
   size?: 'large' | 'small'
   style?: 'filled' | 'light' | 'lighter' | 'stroke'
   iconProps?: TIconProps
   className?: string
+  disabled?: boolean
+  dot?: boolean
+  withDot?: boolean
 }
 
 export enum BadgeSize {
