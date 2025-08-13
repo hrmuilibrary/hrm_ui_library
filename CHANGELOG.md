@@ -1,3 +1,10 @@
+## [2.4.3](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.2...2.4.3) (2025-08-13)
+
+
+### Bug Fixes
+
+* add prop to controll Card component expanded state from parent ([52d4cbc](https://github.com/hrmuilibrary/hrm_ui_library/commit/52d4cbcebe42af3687bef5b6a28b7354ab09df68))
+
 ## [2.4.2](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.1...2.4.2) (2025-08-13)
 
 
