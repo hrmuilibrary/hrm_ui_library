@@ -3,7 +3,12 @@ import { ButtonGroup as _ButtonGroup } from '../components/ButtonGroup'
 import type { StoryFn } from '@storybook/react'
 import React from 'react'
 import { IButtonGroup } from '../components/ButtonGroup/types'
-import { IconOnlyEmployee, IconProjectProduct, IconUnitsEmployee } from '../components/SVGIcons'
+import {
+  IconOnlyEmployee,
+  IconPeopleList,
+  IconProjectProduct,
+  IconUnitsEmployee
+} from '../components/SVGIcons'
 import { noop } from '../utils/helpers'
 
 export default {
@@ -38,7 +43,7 @@ const buttons = [
   {
     buttonText: 'Only Employee',
     icons: {
-      left: { Component: IconOnlyEmployee }
+      left: { Component: IconPeopleList }
     },
     onClick: noop,
     id: 'onlyEmployee'
@@ -54,10 +59,12 @@ const buttons = [
 ]
 
 const Template: StoryFn<IButtonGroup> = (args) => {
+  const [index, setIndex] = React.useState(1)
   const onChange = (index: number) => {
     console.log(`Active button index: ${index}`)
+    setIndex(index)
   }
-  return <_ButtonGroup {...args} buttons={buttons} activeIndex={1} onChange={onChange} />
+  return <_ButtonGroup {...args} buttons={buttons} activeIndex={index} onTabChange={onChange} />
 }
 
 export const ButtonGroup: StoryObj<IButtonGroup> = Template.bind({})
