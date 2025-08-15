@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useMemo} from 'react'
 import { IButtonGroupItem } from './types'
 import { Text } from '../Text'
 import classNames from 'classnames'
@@ -19,6 +19,16 @@ export const ButtonGroupItem = ({
     event.stopPropagation()
     onClick?.()
   }
+  
+  const iconType = useMemo(() => {
+    if(disabled){
+      return 'disabled'
+    }
+    if(isActive) {
+      return 'primary'
+    }
+    return 'tertiary'
+  }, [disabled, isActive])
 
   return (
     <div
@@ -34,14 +44,14 @@ export const ButtonGroupItem = ({
       {icons?.left?.Component ? (
         <icons.left.Component
           size={ICON_SIZE_MAPPING[size]}
-          type={disabled ? 'disabled' : 'primary'}
+          type={iconType}
         />
       ) : null}
-      <Text size={TEXT_SIZE_MAPPING[size]}>{buttonText}</Text>
+      <Text size={TEXT_SIZE_MAPPING[size]} type={iconType}>{buttonText}</Text>
       {icons?.right?.Component ? (
         <icons.right.Component
           size={ICON_SIZE_MAPPING[size]}
-          type={disabled ? 'disabled' : 'primary'}
+          type={iconType}
         />
       ) : null}
     </div>

@@ -15,7 +15,7 @@
   &--filled {
     color: var(--grey-0);
 
-    > #{$this__inner} {
+    & > #{$this__inner} {
       color: var(--grey-0);
     }
 
@@ -67,7 +67,7 @@
   &--light {
     color: var(--grey-800);
 
-    > #{$this__inner} {
+    & > #{$this__inner} {
       color: var(--grey-800);
     }
 
@@ -98,7 +98,7 @@
     &#{$this}--red {
       background-color: var(--red-200);
 
-      > #{$this__inner} {
+      & > #{$this__inner} {
         color: var(--red-900);
       }
 
@@ -110,7 +110,7 @@
     &#{$this}--green {
       background-color: var(--brand-20);
 
-      > #{$this__inner} {
+      & > #{$this__inner} {
         color: var(--brand-800);
       }
 
@@ -122,7 +122,7 @@
     &#{$this}--yellow {
       background-color: var(--yellow-100);
 
-      > #{$this__inner} {
+      & > #{$this__inner} {
         color: var(--yellow-900);
       }
 
@@ -134,7 +134,7 @@
     &#{$this}--purple {
       background-color: var(--purple-100);
 
-      > #{$this__inner} {
+      & > #{$this__inner} {
         color: var(--purple-900);
       }
 
@@ -146,7 +146,7 @@
     &#{$this}--sky {
       background-color: var(--blue-100);
 
-      > #{$this__inner} {
+      & > #{$this__inner} {
         color: var(--blue-900);
       }
 
@@ -158,7 +158,7 @@
     &#{$this}--pink {
       background-color: var(--pink-100);
 
-      > #{$this__inner} {
+      & > #{$this__inner} {
         color: var(--pink-900);
       }
 
@@ -170,7 +170,7 @@
     &#{$this}--teal {
       background-color: var(--green-100);
 
-      > #{$this__inner} {
+      & > #{$this__inner} {
         color: var(--green-900);
       }
 
@@ -183,7 +183,7 @@
   &--lighter {
     color: var(--grey-400);
 
-    > &#{$this__inner} {
+    & > &#{$this__inner} {
       color: var(--grey-400);
     }
 
@@ -198,7 +198,7 @@
     &#{$this}--blue {
       background-color: var(--blue-50);
 
-      > #{$this__inner} {
+      & > #{$this__inner} {
         color: var(--blue-800);
       }
 
@@ -210,7 +210,7 @@
     &#{$this}--orange {
       background-color: var(--yellow-50);
 
-      > #{$this__inner} {
+      & > #{$this__inner} {
         color: var(--yellow-800);
       }
 
@@ -222,7 +222,7 @@
     &#{$this}--red {
       background-color: var(--red-20);
 
-      > #{$this__inner} {
+      & > #{$this__inner} {
         color: var(--red-500);
       }
 
@@ -234,7 +234,7 @@
     &#{$this}--green {
       background-color: var(--green-50);
 
-      > #{$this__inner} {
+      & > #{$this__inner} {
         color: var(--brand-600);
       }
 
@@ -246,7 +246,7 @@
     &#{$this}--yellow {
       background-color: var(--yellow-50);
 
-      > #{$this__inner} {
+      & > #{$this__inner} {
         color: var(--yellow-600);
       }
 
@@ -258,7 +258,7 @@
     &#{$this}--purple {
       background-color: var(--purple-50);
 
-      > #{$this__inner} {
+      & > #{$this__inner} {
         color: var(--purple-400);
       }
 
@@ -270,7 +270,7 @@
     &#{$this}--sky {
       background-color: var(--blue-50);
 
-      > #{$this__inner} {
+      & > #{$this__inner} {
         color: var(--blue-500);
       }
 
@@ -282,7 +282,7 @@
     &#{$this}--pink {
       background-color: var(--pink-50);
 
-      > #{$this__inner} {
+      & > #{$this__inner} {
         color: var(--pink-300);
       }
 
@@ -294,7 +294,7 @@
     &#{$this}--teal {
       background-color: var(--green-50);
 
-      > #{$this__inner} {
+      & > #{$this__inner} {
         color: var(--green-500);
       }
 
@@ -309,7 +309,7 @@
     border: 1px solid var(--grey-400);
     background-color: var(--grey-0);
 
-    > &#{$this__inner} {
+    & > &#{$this__inner} {
       color: var(--grey-400);
     }
 
@@ -324,7 +324,7 @@
     &#{$this}--blue {
       border-color: var(--blue-600);
 
-      > #{$this__inner} {
+      & > #{$this__inner} {
         color: var(--blue-800);
       }
 
@@ -336,7 +336,7 @@
     &#{$this}--orange {
       border-color: var(--yellow-800);
 
-      > #{$this__inner} {
+      & > #{$this__inner} {
         color: var(--yellow-800);
       }
 
@@ -348,7 +348,7 @@
     &#{$this}--red {
       border-color: var(--red-500);
 
-      > #{$this__inner} {
+      & > #{$this__inner} {
         color: var(--red-500);
       }
 
@@ -360,7 +360,7 @@
     &#{$this}--green {
       border-color: var(--brand-500);
 
-      > #{$this__inner} {
+      & > #{$this__inner} {
         color: var(--brand-500);
       }
 
@@ -372,7 +372,7 @@
     &#{$this}--yellow {
       border-color: var(--yellow-500);
 
-      > #{$this__inner} {
+      & > #{$this__inner} {
         color: var(--yellow-500);
       }
 
@@ -384,7 +384,7 @@
     &#{$this}--purple {
       border-color: var(--purple-400);
 
-      > #{$this__inner} {
+      & > #{$this__inner} {
         color: var(--purple-400);
       }
 
@@ -396,7 +396,7 @@
     &#{$this}--sky {
       border-color: var(--blue-50);
 
-      > #{$this__inner} {
+      & > #{$this__inner} {
         color: var(--blue-500);
       }
 
@@ -408,7 +408,7 @@
     &#{$this}--pink {
       border-color: var(--pink-200);
 
-      > #{$this__inner} {
+      & > #{$this__inner} {
         color: var(--pink-200);
       }
 
@@ -420,7 +420,7 @@
     &#{$this}--teal {
       border-color: var(--green-500);
 
-      > #{$this__inner} {
+      & > #{$this__inner} {
         color: var(--green-500);
       }
 
@@ -477,7 +477,7 @@
     border: 1px solid var(--grey-200);
     background-color: var(--grey-0);
 
-    > #{$this__inner} {
+    & > #{$this__inner} {
       color: var(--grey-200);
     }
 
