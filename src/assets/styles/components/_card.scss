@@ -7,6 +7,10 @@
     position: relative;
     height: 56px;
 
+    &--noBorder {
+        border: none;
+    }
+
     &--expanded {
         height: auto;
 
@@ -135,6 +139,8 @@
             display: flex;
             justify-content: space-between;
             flex: auto;
+            min-height: 56px;
+            align-items: center;
 
 
             &--expandable {
