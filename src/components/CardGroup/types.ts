@@ -1,18 +1,13 @@
 import { ReactNode } from 'react'
 
-export type TCardTitle = {
+export type TCardGroupTitle = {
   alignment?: 'top' | 'bottom' | 'left' | 'right'
   text: string
   color: 'blue' | 'purple' | 'yellow' | 'pink' | 'green' | 'grey'
 }
 
-export type TCardProps = {
-  title?: TCardTitle
-  isExpandable?: boolean
-  isExpanded?: boolean
-  isExpandedFromParent?: boolean
-  noBorder?: boolean
-  onExpand?: (isExpanded: boolean) => void
+export type TCardGroupProps = {
+  title?: TCardGroupTitle
   children: ReactNode
   className?: string
   id?: string
