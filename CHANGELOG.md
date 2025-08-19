@@ -1,3 +1,10 @@
+## [2.4.5](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.4...2.4.5) (2025-08-19)
+
+
+### Bug Fixes
+
+* add CardGroup component ([dbf7847](https://github.com/hrmuilibrary/hrm_ui_library/commit/dbf78475c34c08980aec85bcf0154d8822a77e64))
+
 ## [2.4.4](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.3...2.4.4) (2025-08-15)
 
 
