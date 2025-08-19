@@ -65,7 +65,9 @@
             min-height: 56px;
 
             &--component {
-                align-items: center;
+                align-content: center;
+                padding-left: var(--size-8);
+                padding-right: var(--size-8);
             }
 
             .card--group__title {
