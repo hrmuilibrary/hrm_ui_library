@@ -1,3 +1,10 @@
+## [2.4.6](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.5...2.4.6) (2025-08-19)
+
+
+### Bug Fixes
+
+* resolve key of CardGroup component ([482c141](https://github.com/hrmuilibrary/hrm_ui_library/commit/482c141fdb668f85ee7a2524914ea8697f82906c))
+
 ## [2.4.5](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.4...2.4.5) (2025-08-19)
 
 
