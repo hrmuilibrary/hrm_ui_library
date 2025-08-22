@@ -1,3 +1,10 @@
+## [2.4.14](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.13...2.4.14) (2025-08-22)
+
+
+### Bug Fixes
+
+* update react date picker style issues ([476df97](https://github.com/hrmuilibrary/hrm_ui_library/commit/476df9747ad1a3fcd311c39220c697abe4916a24))
+
 ## [2.4.13](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.12...2.4.13) (2025-08-22)
 
 
