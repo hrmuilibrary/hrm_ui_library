@@ -1,3 +1,10 @@
+## [2.4.8](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.7...2.4.8) (2025-08-22)
+
+
+### Bug Fixes
+
+* fix table key errors in react ([4e26b8d](https://github.com/hrmuilibrary/hrm_ui_library/commit/4e26b8d473bcabb16a7d4ea92e58943e1d488fb8))
+
 ## [2.4.7](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.6...2.4.7) (2025-08-21)
 
 
