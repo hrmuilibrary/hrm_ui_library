@@ -1,4 +1,5 @@
 {
+  "homepage": "https://github.com/hrmuilibrary/hrm_ui_library",
   "name": "hrm_ui_lib",
   "version": "2.4.10",
   "description": "UI library for Dino",
@@ -22,16 +23,98 @@
     "generate-svg-component": "node ./bin/generate_svg_component.js && npm run import-all-svg-components && npm run check",
     "prepare": "husky"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/hrmuilibrary/hrm_ui_library.git"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
   },
-  "homepage": "https://github.com/hrmuilibrary/hrm_ui_library",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "peerDependencies": {
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0",
     "yup": ">=1.0.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "7.28.0",
+    "@babel/preset-react": "7.27.1",
+    "@babel/preset-typescript": "7.27.1",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-dynamic-import-vars": "^2.1.5",
+    "@rollup/plugin-image": "^3.0.3",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.3",
+    "@semantic-release/npm": "^12.0.2",
+    "@storybook/addon-actions": "^8.6.14",
+    "@storybook/addon-essentials": "^8.6.14",
+    "@storybook/addon-interactions": "^8.6.14",
+    "@storybook/addon-links": "^9.0.18",
+    "@storybook/node-logger": "^8.6.14",
+    "@storybook/react": "^9.0.18",
+    "@storybook/react-webpack5": "^9.0.18",
+    "@types/node": "^24.0.10",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.7",
+    "@types/react-input-mask": "^3.0.6",
+    "@types/react-syntax-highlighter": "^15.5.13",
+    "@types/react-table": "^7.7.20",
+    "@types/react-window": "^1.8.8",
+    "@types/styled-components": "^5.1.34",
+    "@typescript-eslint/eslint-plugin": "^8.35.1",
+    "@typescript-eslint/parser": "^8.35.1",
+    "ajv": "8.17.1",
+    "css-loader": "^7.1.2",
+    "eslint": "^9.30.1",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-storybook": "^9.0.18",
+    "extract-loader": "^5.1.0",
+    "file-loader": "^6.2.0",
+    "husky": "^9.1.7",
+    "less": "^4.3.0",
+    "less-loader": "^12.3.0",
+    "mini-css-extract-plugin": "^2.9.2",
+    "postcss": "^8.5.6",
+    "postcss-import": "16.1.1",
+    "prettier": "^3.6.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1",
+    "rollup": "^4.44.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-generate-package-json": "^3.2.0",
+    "rollup-plugin-ignore-import": "^1.3.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "sass-loader": "^16.0.5",
+    "semantic-release": "^24.2.6",
+    "storybook": "^9.1.0",
+    "storybook-design-token": "^4.1.0",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.3"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",
@@ -44,7 +127,7 @@
     "classnames": "^2.5.1",
     "date-fns": "^4.1.0",
     "dayjs": "^1.11.13",
-    "framer-motion": "12.23.12",
+    "framer-motion": "12.23.0",
     "react-datepicker": "^8.4.0",
     "react-dropzone": "^14.3.8",
     "react-hook-form": "^7.59.0",
@@ -58,33 +141,8 @@
     "react-window": "^1.8.11",
     "sass": "^1.89.2"
   },
-  "devDependencies": {
-    "@babel/preset-env": "7.28.0",
-    "@babel/preset-react": "7.27.1",
-    "@babel/preset-typescript": "7.27.1",
-    "@commitlint/cli": "^19.8.1",
-    "@commitlint/config-conventional": "^19.8.1",
-    "@rollup/plugin-babel": "^6.0.4",
-    "@rollup/plugin-commonjs": "^28.0.6",
-    "@rollup/plugin-node-resolve": "^16.0.1",
-    "@rollup/plugin-terser": "^0.4.4",
-    "@types/node": "^24.0.10",
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
-    "@typescript-eslint/eslint-plugin": "^8.35.1",
-    "@typescript-eslint/parser": "^8.35.1",
-    "eslint": "^9.30.1",
-    "eslint-config-prettier": "^10.1.5",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "husky": "^9.1.7",
-    "prettier": "^3.6.2",
-    "rollup": "^4.44.1",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-typescript2": "^0.36.0",
-    "typescript": "^5.8.3",
-    "react": ">=18.0.0",
-    "react-dom": ">=18.0.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hrmuilibrary/hrm_ui_library.git"
   }
 }
