@@ -11,12 +11,14 @@ type Props = {
   withSelect: boolean
   tableWidth: number
   headerGroup: HeaderGroup
+  uniqueKey: string
 }
 
 export function Header({
   headerGroup,
   tableWidth,
   withSelect,
+  uniqueKey,
   fixedHeader = false
 }: Props): ReactElement {
   return (
@@ -57,7 +59,7 @@ export function Header({
 
           return (
             <th
-              key={i}
+              key={`table_head_${uniqueKey}_${i}`}
               {...getHeaderProps(columnProps?.sortable ? getSortByToggleProps() : undefined)}
               className={classNames({
                 fixed_column_left: fixed === 'left',

@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect, useMemo, useRef, useState } from 'react'
+import React, { ReactElement, useEffect, useMemo, useRef, useState, useId } from 'react'
 import {
   useSortBy,
   useTable,
@@ -28,6 +28,7 @@ export function Table({
 }: TTableProps): ReactElement {
   const tableRef = useRef<HTMLTableElement | null>(null)
   const [tableWidth, setTableWidth] = useState(400)
+  const uniqueKey = useId()
 
   const dispatchScrollEvent = useDispatchEventOnScroll()
 
@@ -106,11 +107,12 @@ export function Table({
         <thead>
           {headerGroups.map((headerGroup: HeaderGroup, i) => (
             <Header
-              key={i}
+              key={`table_head_${uniqueKey}_${i}`}
               withSelect={withSelect}
               fixedHeader={Boolean(fixedHeader)}
               headerGroup={headerGroup}
               tableWidth={tableWidth}
+              uniqueKey={uniqueKey}
             />
           ))}
         </thead>
@@ -123,7 +125,8 @@ export function Table({
                 withSelect={withSelect}
                 selectedFlatRows={selectedFlatRows}
                 row={row}
-                key={row.id}
+                key={`table_row_${uniqueKey}_${row.id}`}
+                uniqueKey={uniqueKey}
               />
             )
           })}

@@ -8,9 +8,16 @@ type Props = {
   handleRowClick?: (row: any) => void
   withSelect: boolean
   selectedFlatRows: RowType[]
+  uniqueKey: string
 }
 
-export function Row({ row, selectedFlatRows, withSelect, handleRowClick }: Props): ReactElement {
+export function Row({
+  row,
+  selectedFlatRows,
+  withSelect,
+  uniqueKey,
+  handleRowClick
+}: Props): ReactElement {
   const isRowSelected = useMemo(
     () => selectedFlatRows.find((r) => r.id === row.id),
     [selectedFlatRows]
@@ -26,7 +33,7 @@ export function Row({ row, selectedFlatRows, withSelect, handleRowClick }: Props
         const isSelection = column.id === CHECKBOX_HEADER_ID
         return (
           <td
-            key={i}
+            key={`table_cell_${uniqueKey}_${i}`}
             {...getCellProps()}
             style={{
               left:
