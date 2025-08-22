@@ -57,10 +57,13 @@ export function Header({
             ...(!isSelection && width ? { width } : {})
           }
 
+          const { key: keyHead, ...headProps } = getHeaderProps(
+            columnProps?.sortable ? getSortByToggleProps() : undefined
+          )
           return (
             <th
               key={`table_head_${uniqueKey}_${i}`}
-              {...getHeaderProps(columnProps?.sortable ? getSortByToggleProps() : undefined)}
+              {...headProps}
               className={classNames({
                 fixed_column_left: fixed === 'left',
                 fixed_column_right: fixed === 'right',
