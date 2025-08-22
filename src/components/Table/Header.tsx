@@ -21,11 +21,10 @@ export function Header({
   uniqueKey,
   fixedHeader = false
 }: Props): ReactElement {
+  const { key: keyheaderGroup, ...headerGroupProps } = headerGroup.getHeaderGroupProps()
+
   return (
-    <tr
-      {...headerGroup.getHeaderGroupProps()}
-      className={classNames({ fixed_header: fixedHeader })}
-    >
+    <tr {...headerGroupProps} className={classNames({ fixed_header: fixedHeader })}>
       {headerGroup.headers.map(
         (
           {
