@@ -1,3 +1,10 @@
+## [2.4.13](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.12...2.4.13) (2025-08-22)
+
+
+### Bug Fixes
+
+* test build issue ([08219de](https://github.com/hrmuilibrary/hrm_ui_library/commit/08219dec7b03a8a9a5a8575e847ecd4f20c6f171))
+
 ## [2.4.12](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.11...2.4.12) (2025-08-22)
 
 
