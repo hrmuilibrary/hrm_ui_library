@@ -23,18 +23,21 @@ export function Row({
     [selectedFlatRows]
   )
 
+  const { key: keyRow, ...rowProps } = row.getRowProps()
+
   return (
     <tr
-      {...row.getRowProps()}
+      {...rowProps}
       className={classNames({ selected: Boolean(isRowSelected) })}
       onClick={() => handleRowClick?.(row.original)}
     >
       {row.cells.map(({ getCellProps, column, render }: CellValue, i, arr: CellValue[]) => {
         const isSelection = column.id === CHECKBOX_HEADER_ID
+        const { key: keycell, ...cellProps } = getCellProps()
         return (
           <td
             key={`table_cell_${uniqueKey}_${i}`}
-            {...getCellProps()}
+            {...cellProps}
             style={{
               left:
                 !isSelection && withSelect && column?.fixed === 'left' ? CHECKBOX_DEFAULT_WIDTH : 0
