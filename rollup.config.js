@@ -144,7 +144,6 @@ export default [
           author: pkg.author,
           license: pkg.license,
           repository: pkg.repository,
-          peerDependencies: pkg.peerDependencies,
           dependencies: pkg.dependencies,
           sideEffects: false,
           homepage: pkg.homepage
