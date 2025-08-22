@@ -45,7 +45,8 @@
   "peerDependencies": {
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0",
-    "yup": ">=1.0.0"
+    "yup": ">=1.0.0",
+    "date-fns": ">=4.1.0"
   },
   "devDependencies": {
     "@babel/preset-env": "7.28.0",
@@ -125,7 +126,6 @@
     "@ncdai/react-wheel-picker": "^1.0.14",
     "@tanstack/react-table": "^8.21.3",
     "classnames": "^2.5.1",
-    "date-fns": "^4.1.0",
     "dayjs": "^1.11.13",
     "framer-motion": "12.23.0",
     "react-datepicker": "^8.4.0",
