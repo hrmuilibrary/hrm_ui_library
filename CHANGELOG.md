@@ -1,3 +1,10 @@
+## [2.4.10](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.9...2.4.10) (2025-08-22)
+
+
+### Bug Fixes
+
+* fix table key errors ([41982c1](https://github.com/hrmuilibrary/hrm_ui_library/commit/41982c12676715f4d6521ae75405de25c79c288d))
+
 ## [2.4.9](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.8...2.4.9) (2025-08-22)
 
 
