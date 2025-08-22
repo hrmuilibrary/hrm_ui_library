@@ -1,3 +1,11 @@
+## [2.4.11](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.10...2.4.11) (2025-08-22)
+
+
+### Bug Fixes
+
+* test build issue ([1ad5979](https://github.com/hrmuilibrary/hrm_ui_library/commit/1ad5979f75375f2002970b12ecd6f2e029811d08))
+* update package json ([47d3708](https://github.com/hrmuilibrary/hrm_ui_library/commit/47d37087f693a13b6a24d42649aa04a703d7822e))
+
 ## [2.4.10](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.9...2.4.10) (2025-08-22)
 
 
