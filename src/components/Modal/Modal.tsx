@@ -1,6 +1,6 @@
 import React, { ReactElement, useId, useState } from 'react'
 import classnames from 'classnames'
-import { motion, AnimationGeneratorName } from 'framer-motion'
+import { motion, AnimationGeneratorType } from 'motion/react'
 import { AnimatePresenceWrapper } from '../../helperComponents/AnimatePresenceWrapper'
 import { useHideBodyScroll, useOnOutsideClick } from '../../hooks'
 import { TModalPropTypes } from './types'
@@ -12,7 +12,7 @@ const DESKTOP_ANIMATION: {
   initial: { opacity: number; scale: number }
   animate: { opacity: number; scale: number[] }
   exit: { opacity: number; scale: number; transition: { duration: number } }
-  transition: { duration: number; type: AnimationGeneratorName; damping: number; stiffness: number }
+  transition: { duration: number; type: AnimationGeneratorType; damping: number; stiffness: number }
 } = {
   initial: { opacity: 0.5, scale: 0.65 },
   animate: { opacity: 1, scale: [0.95, 1] },

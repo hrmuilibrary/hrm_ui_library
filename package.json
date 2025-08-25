@@ -127,7 +127,7 @@
     "classnames": "^2.5.1",
     "dayjs": "^1.11.13",
     "date-fns": "^4.1.0",
-    "framer-motion": "12.23.0",
+    "motion": "^12.23.12",
     "react-datepicker": "^8.4.0",
     "react-dropzone": "^14.3.8",
     "react-hook-form": "^7.59.0",

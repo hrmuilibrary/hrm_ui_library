@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useId, useRef, useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 import classnames from 'classnames'
 import { useHideBodyScroll, useOnOutsideClick } from '../../hooks'
 import { AnimatePresenceWrapper } from '../../helperComponents/AnimatePresenceWrapper'

@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 import { Divider } from '../../Divider'
 import { AnimatePresenceWrapper } from '../../../helperComponents/AnimatePresenceWrapper'
 import { TCollapseV2Props } from '../types'
