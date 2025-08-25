@@ -1,3 +1,10 @@
+## [2.4.16](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.15...2.4.16) (2025-08-25)
+
+
+### Bug Fixes
+
+* build issue in rollup config ([ae824c5](https://github.com/hrmuilibrary/hrm_ui_library/commit/ae824c50d6baf3ceb08541d7842df00a57f2f65f))
+
 ## [2.4.15](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.14...2.4.15) (2025-08-25)
 
 
