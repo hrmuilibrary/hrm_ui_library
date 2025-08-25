@@ -1,3 +1,10 @@
+## [2.4.15](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.14...2.4.15) (2025-08-25)
+
+
+### Bug Fixes
+
+* update framer-motion library ([fa73925](https://github.com/hrmuilibrary/hrm_ui_library/commit/fa7392577074c85faaba604e7db007cfd184a0fe))
+
 ## [2.4.14](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.13...2.4.14) (2025-08-22)
 
 
