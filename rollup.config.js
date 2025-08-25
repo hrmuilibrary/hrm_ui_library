@@ -19,11 +19,6 @@ const __dirname = path.dirname(__filename);
 const extensions = ['.ts', '.tsx', '.js', '.jsx']
 const ignoreExtensions = ['.stories.tsx', '.stories.d.ts']
 
-const external = [
-  ...Object.keys(pkg.peerDependencies || {}),
-  ...Object.keys(pkg.dependencies || {})
-]
-
 // create input config for rollup for each folder
 const getInputOptions = (localPath = 'src', currentInputOptions = {}) => {
   return fs.readdirSync(path.join(__dirname, localPath)).reduce((initial, current) => {
@@ -128,7 +123,12 @@ export default [
       assetFileNames: '[name][extname]',
       sourcemap: false
     },
-    external,
+    external: (id) => {
+      return (
+          [...Object.keys(pkg.dependencies || {}), ...Object.keys(pkg.peerDependencies || {})]
+              .some(dep => id === dep || id.startsWith(dep + '/'))
+      )
+    },
     plugins: [
       json(),
       ...plugins,
@@ -144,6 +144,7 @@ export default [
           author: pkg.author,
           license: pkg.license,
           repository: pkg.repository,
+          peerDependencies: pkg.peerDependencies,
           dependencies: pkg.dependencies,
           sideEffects: false,
           homepage: pkg.homepage
