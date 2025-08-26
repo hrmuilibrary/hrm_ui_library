@@ -1,3 +1,10 @@
+## [2.4.18](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.17...2.4.18) (2025-08-26)
+
+
+### Bug Fixes
+
+* fix table styles ([efd9dc0](https://github.com/hrmuilibrary/hrm_ui_library/commit/efd9dc0983f45bb4d9ec52d3a83da5d32195b659))
+
 ## [2.4.17](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.16...2.4.17) (2025-08-26)
 
 
