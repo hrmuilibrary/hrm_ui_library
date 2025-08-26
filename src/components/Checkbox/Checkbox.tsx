@@ -33,7 +33,10 @@ export const Checkbox = forwardRef(
     const inputRef = ref && Object.keys(ref).length ? ref : localRef
     const isChecked = !!value || selectedValue
 
-    const changeHandler = () => {
+    const changeHandler = (
+      e: React.MouseEvent<HTMLInputElement> | React.ChangeEvent<HTMLInputElement>
+    ) => {
+      e.stopPropagation()
       if (name && setFieldValue) {
         setFieldValue(name, !isChecked, { shouldValidate: !isChecked })
       }
@@ -50,10 +53,7 @@ export const Checkbox = forwardRef(
             type="information"
             size="xsmall"
             className={'ml-4 pointer'}
-            onClick={(e) => {
-              e.stopPropagation()
-              changeHandler()
-            }}
+            onClick={changeHandler}
           />
         </div>
       </Popover>
