@@ -1,3 +1,10 @@
+## [2.4.17](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.16...2.4.17) (2025-08-26)
+
+
+### Bug Fixes
+
+* resolve table styles regarding dimensions ([0fd5eca](https://github.com/hrmuilibrary/hrm_ui_library/commit/0fd5ecaa8b3812dd3ad1c13d3668f070196a3e8a))
+
 ## [2.4.16](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.15...2.4.16) (2025-08-25)
 
 
