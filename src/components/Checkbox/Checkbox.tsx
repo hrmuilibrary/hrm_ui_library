@@ -99,6 +99,7 @@ export const Checkbox = forwardRef(
             'controller--error': isInvalid,
             [className]: !!className
           })}
+          onClick={(e) => e.stopPropagation()}
         >
           <input
             data-id={dataId}
