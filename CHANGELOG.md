@@ -1,3 +1,10 @@
+## [2.4.19](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.18...2.4.19) (2025-08-26)
+
+
+### Bug Fixes
+
+* resolve row click issue on table ([d3bb5ac](https://github.com/hrmuilibrary/hrm_ui_library/commit/d3bb5acd0549b08a342509fc85b3f350f7db73dd))
+
 ## [2.4.18](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.17...2.4.18) (2025-08-26)
 
 
