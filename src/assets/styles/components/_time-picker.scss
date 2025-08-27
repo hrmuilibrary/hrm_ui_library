@@ -39,7 +39,7 @@
           font-weight: var(--font-weight-600) !important;
           color: var(--grey-900) !important;
           justify-content: flex-end !important;
-          margin-right: var(--ds-size-16);
+          margin-right: var(--ds-size-16) !important;
         }
 
         &__minute {
@@ -47,7 +47,7 @@
           font-weight: var(--font-weight-600) !important;
           color: var(--grey-900) !important;
           justify-content: flex-start !important;
-          margin-left: var(--ds-size-16);
+          margin-left: var(--ds-size-16) !important;
         }
       }
     }
