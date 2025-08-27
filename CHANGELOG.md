@@ -1,3 +1,10 @@
+## [2.4.20](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.19...2.4.20) (2025-08-27)
+
+
+### Bug Fixes
+
+* time picker mobile ui issue ([797ec90](https://github.com/hrmuilibrary/hrm_ui_library/commit/797ec902b9dd1d93847c67dfebeb9a1ad4d6d05e))
+
 ## [2.4.19](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.18...2.4.19) (2025-08-26)
 
 
