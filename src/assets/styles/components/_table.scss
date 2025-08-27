@@ -88,9 +88,9 @@
   .fixed_checkbox {
     @include mixin.sticky(unset, unset, unset, 0);
     table-layout: fixed;
-    width: 25px;
-    max-width: 25px;
-    min-width: 25px;
+    width: 50px;
+    max-width: 50px;
+    min-width: 50px;
 
     &+th,
     &+td {
