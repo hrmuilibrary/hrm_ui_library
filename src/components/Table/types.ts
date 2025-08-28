@@ -29,6 +29,7 @@ export type TTableProps = {
   handleRowClick?: (row: any) => void
   onChange?: (state: TableState) => void
   containerRefHandler?: (ref: HTMLDivElement) => void
+  disableCheckbox?: (rowData: any) => boolean
 }
 
 export type SortBy = {

@@ -27,10 +27,18 @@ const data: any[] = [
     progress: 'fdfsdfsdfsd',
     status: 'Active'
   },
-  ...Array(13).fill({
+  ...Array(3).fill({
     user: 'John Doe',
     age: 30,
-    id: 'dsfsdf',
+    id: 'disabledId',
+    visits: [4, 5, 6],
+    progress: 'divv',
+    status: 'Active'
+  }),
+  ...Array(5).fill({
+    user: 'John Doe',
+    age: 30,
+    id: 'sdfsf',
     visits: [4, 5, 6],
     progress: 'divv',
     status: 'Active'
@@ -93,7 +101,17 @@ const Template: StoryFn<TTableProps> = (args) => {
     console.log(state)
   }
 
-  return <_Table {...args} data={data} onChange={handleChange} columns={columns} />
+  const disableCheckbox = (rowData) => rowData.id === 'disabledId'
+
+  return (
+    <_Table
+      disableCheckbox={disableCheckbox}
+      {...args}
+      data={data}
+      onChange={handleChange}
+      columns={columns}
+    />
+  )
 }
 
 export default {

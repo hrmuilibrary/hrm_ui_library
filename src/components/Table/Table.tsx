@@ -24,7 +24,8 @@ export function Table({
   withSelect = false,
   handleRowClick,
   className,
-  containerRefHandler
+  containerRefHandler,
+  disableCheckbox
 }: TTableProps): ReactElement {
   const tableRef = useRef<HTMLTableElement | null>(null)
   const [tableWidth, setTableWidth] = useState(400)
@@ -69,7 +70,7 @@ export function Table({
     },
     useSortBy,
     useRowSelect,
-    (hooks: Hooks) => setSelectedRows(hooks, withSelect)
+    (hooks: Hooks) => setSelectedRows(hooks, withSelect, disableCheckbox)
   ) as TableInstance & { selectedFlatRows: RowType[] }
 
   useEffect(() => {
