@@ -1,3 +1,13 @@
+## [2.4.22](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.21...2.4.22) (2025-09-01)
+
+
+### Bug Fixes
+
+* add row selection functionality ([9e50339](https://github.com/hrmuilibrary/hrm_ui_library/commit/9e503393ab00704505dbe1309a29a52d4f04b5f2))
+* add selected rows some styles ([6775b22](https://github.com/hrmuilibrary/hrm_ui_library/commit/6775b229318950bf186917f731d402e4c937eafc))
+* disable row checkbox if needed ([17ae816](https://github.com/hrmuilibrary/hrm_ui_library/commit/17ae816e3673051f129eb66bf67c7a3dd0e1c2ed))
+* resolve some small issues ([5f28df7](https://github.com/hrmuilibrary/hrm_ui_library/commit/5f28df7ed7340748ce1fd91e59ddeee3fef64823))
+
 ## [2.4.21](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.20...2.4.21) (2025-08-27)
 
 
