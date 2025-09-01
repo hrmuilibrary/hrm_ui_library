@@ -75,6 +75,14 @@
       }
     }
   }
+  
+  &__selected-rows {
+    display:  flex;
+    align-items: center;
+    background-color: var(--grey-50);
+    padding: var(--size-8) var(--size-24);
+    border-radius: var(--size-40);
+  }
 
   .fixed_header {
     @include mixin.sticky(0, unset, unset, unset);

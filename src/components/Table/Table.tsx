@@ -117,7 +117,7 @@ export function Table({
       style={{ maxHeight: fixedHeader?.y }}
     >
       {withSelect && selectedFlatRows.length > 0 && (
-        <div className="flexbox align-items--center full-width">
+        <div className="table-wrapper__selected-rows">
           <Button
             buttonText={setTranslationValue(
               TABLE_LOCALIZATION[language].n_selected || '',
