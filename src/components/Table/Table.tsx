@@ -1,4 +1,12 @@
-import React, { ReactElement, useEffect, useMemo, useRef, useState, useId } from 'react'
+import React, {
+  ReactElement,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  useId,
+  useCallback
+} from 'react'
 import {
   useSortBy,
   useTable,
@@ -31,9 +39,8 @@ export function Table({
   className,
   language = 'en',
   containerRefHandler,
-  submitButton
+  submitButtons
 }: TTableProps): ReactElement {
-  console.log(language)
   const tableRef = useRef<HTMLTableElement | null>(null)
   const [tableWidth, setTableWidth] = useState(400)
   const uniqueKey = useId()
@@ -81,11 +88,15 @@ export function Table({
     (hooks: Hooks) => setSelectedRows(hooks, withSelect)
   ) as TableInstance & { selectedFlatRows: RowType[]; toggleAllRowsSelected: (c: boolean) => void }
 
-  const handleResize = () => {
+  const handleResize = useCallback(() => {
     if (tableRef.current) {
       setTableWidth(tableRef.current?.offsetWidth)
     }
-  }
+  }, [tableRef.current])
+
+  useEffect(() => {
+    onChange?.(state)
+  }, [JSON.stringify(state)])
 
   useEffect(() => {
     window.addEventListener('resize', handleResize)
@@ -98,13 +109,9 @@ export function Table({
     }
   }, [tableRef.current])
 
-  const onClearSelectedRows = () => {
+  const onClearSelectedRows = useCallback(() => {
     toggleAllRowsSelected(false)
-  }
-
-  const onSubmitSelectedRows = () => {
-    onChange?.({ state, callback: onClearSelectedRows })
-  }
+  }, [])
 
   return (
     <div
@@ -124,19 +131,23 @@ export function Table({
               selectedFlatRows.length
             )}
             onClick={onClearSelectedRows}
-            disabled={submitButton?.isLoading}
             type="tertiary"
             size="medium"
             iconProps={{ alignment: 'left', Component: IconDismiss }}
           />
-          <Button
-            iconProps={{ alignment: 'left', Component: IconCheckmark }}
-            onClick={onSubmitSelectedRows}
-            buttonText={submitButton?.buttonText || 'Submit'}
-            type="secondary"
-            size="medium"
-            isLoading={submitButton?.isLoading}
-          />
+          {submitButtons?.map(({ buttonText, isLoading, onClick }) => (
+            <Button
+              iconProps={{ alignment: 'left', Component: IconCheckmark }}
+              onClick={(event) => {
+                onClick(event, state, onClearSelectedRows)
+              }}
+              buttonText={buttonText || 'Submit'}
+              type="secondary"
+              size="medium"
+              className="mr-8"
+              isLoading={isLoading}
+            />
+          ))}
         </div>
       )}
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { ReactEventHandler, useState } from 'react'
 import { Table as _Table } from '../index'
 import { TColumn, TTableProps } from '../components/Table/types'
 import { TTableProps as TTableV2Props } from '../components/TableV2/types'
@@ -102,15 +102,8 @@ const Template: StoryFn<TTableProps> = (args) => {
     }
   ]
 
-  const handleChange = ({ state, callback }: { state: TableState; callback: () => void }) => {
+  const handleChange = (state: TableState) => {
     console.log(state)
-    setIsLoading(true)
-    setTimeout(() => {
-      setIsLoading(false)
-      setTableData(data.map((d) => ({ ...d, enableSelection: false }))) // Simulate data update
-      callback() // Call the callback to update the table state
-      console.log('Data updated')
-    }, 2000)
   }
 
   return (
@@ -119,10 +112,24 @@ const Template: StoryFn<TTableProps> = (args) => {
       data={tableData}
       onChange={handleChange}
       columns={columns}
-      submitButton={{
-        buttonText: 'Approve all',
-        isLoading
-      }}
+      submitButtons={[
+        {
+          buttonText: 'Approve all',
+          isLoading,
+          onClick: function (event: ReactEventHandler, data: any, callback): void {
+            console.log(data)
+            callback && callback()
+          }
+        },
+        {
+          buttonText: 'Decline all',
+          isLoading,
+          onClick: function (event: ReactEventHandler, data: any, callback): void {
+            console.log(data)
+            callback && callback()
+          }
+        }
+      ]}
     />
   )
 }

@@ -21,6 +21,10 @@ export type TColumnFields = {
 
 export type TColumn = Column & TColumnFields
 
+export interface IButtonPropTypes extends Omit<TButtonPropTypes, 'onClick'> {
+  onClick: (event: TClickEventType, data: any, clearRowSelection?: () => void) => void
+}
+
 export type TTableProps = {
   className?: string
   columns: TColumn[]
@@ -28,10 +32,10 @@ export type TTableProps = {
   withSelect?: boolean
   fixedHeader?: { y: number }
   handleRowClick?: (row: any) => void
-  onChange?: (props: { state: TableState; callback: () => void }) => void
+  onChange?: (state: TableState) => void
   containerRefHandler?: (ref: HTMLDivElement) => void
   language?: string
-  submitButton?: TButtonPropTypes
+  submitButtons?: IButtonPropTypes[]
 }
 
 export type SortBy = {

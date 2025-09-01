@@ -12,7 +12,7 @@ export function setSelectedRows(hooks: Hooks, withSelect: boolean): void {
         id: CHECKBOX_HEADER_ID,
         Header: ({ getToggleAllRowsSelectedProps, rows, state, toggleRowSelected }: any) => {
           const allEnabledRows: Row[] = rows.filter((row: Row) =>
-            'enableSelection' in row.original ? row.original.enableSelection : false
+            'enableSelection' in row.original ? row.original.enableSelection : true
           )
           const allSelected = allEnabledRows.every((row) => state.selectedRowIds[row.id])
           const someSelected = allEnabledRows.some((row) => state.selectedRowIds[row.id])
