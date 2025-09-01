@@ -52,32 +52,36 @@
 
     tbody {
       tr {
-        &:nth-child(1n) {
-          td {
-            background-color: var(--ds-table-td-bg-color);
-          }
-        }
-
-        &:nth-child(2n) {
-          td {
-            background-color: var(--ds-table-td-bg-color-dark);
-          }
-        }
-
         &.selected {
           td {
-            border-bottom-color: var(--ds-table-td-border-bottom-color-selected);
+            border-bottom-color: var(--grey-100);
+            background: var(--grey-100);
+          }
+        }
+        &:hover {
+          td {
+            cursor: pointer;
+            background-color: var(--grey-50);
           }
         }
 
         td {
-          border-bottom: 1px solid var(--ds-table-td-border-bottom-color);
+          border-bottom: 1px solid var(--grey-200);
           height: var(--ds-table-td-height);
           padding: var(--ds-table-td-padding);
           vertical-align: middle;
+          background-color: var(--grey-0);
         }
       }
     }
+  }
+  
+  &__selected-rows {
+    display:  flex;
+    align-items: center;
+    background-color: var(--grey-50);
+    padding: var(--size-8) var(--size-24);
+    border-radius: var(--size-40);
   }
 
   .fixed_header {

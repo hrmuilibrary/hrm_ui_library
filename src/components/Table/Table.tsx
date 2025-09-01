@@ -1,4 +1,12 @@
-import React, { ReactElement, useEffect, useMemo, useRef, useState, useId } from 'react'
+import React, {
+  ReactElement,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  useId,
+  useCallback
+} from 'react'
 import {
   useSortBy,
   useTable,
@@ -15,6 +23,11 @@ import { Row } from './Row'
 import { Header } from './Header'
 import classNames from 'classnames'
 import { useDispatchEventOnScroll } from '../../hooks/useDispatchEventOnScroll'
+import { Button } from '../Button'
+import { TABLE_LOCALIZATION } from './localization'
+import { setTranslationValue } from '../../utils/helpers'
+import IconCheckmark from '../SVGIcons/IconCheckmark'
+import IconDismiss from '../SVGIcons/IconDismiss'
 
 export function Table({
   columns,
@@ -24,7 +37,9 @@ export function Table({
   withSelect = false,
   handleRowClick,
   className,
-  containerRefHandler
+  language = 'en',
+  containerRefHandler,
+  submitButtons
 }: TTableProps): ReactElement {
   const tableRef = useRef<HTMLTableElement | null>(null)
   const [tableWidth, setTableWidth] = useState(400)
@@ -61,6 +76,7 @@ export function Table({
     headerGroups,
     rows,
     prepareRow,
+    toggleAllRowsSelected,
     state
   } = useTable(
     {
@@ -70,17 +86,17 @@ export function Table({
     useSortBy,
     useRowSelect,
     (hooks: Hooks) => setSelectedRows(hooks, withSelect)
-  ) as TableInstance & { selectedFlatRows: RowType[] }
+  ) as TableInstance & { selectedFlatRows: RowType[]; toggleAllRowsSelected: (c: boolean) => void }
+
+  const handleResize = useCallback(() => {
+    if (tableRef.current) {
+      setTableWidth(tableRef.current?.offsetWidth)
+    }
+  }, [tableRef.current])
 
   useEffect(() => {
     onChange?.(state)
   }, [JSON.stringify(state)])
-
-  const handleResize = () => {
-    if (tableRef.current) {
-      setTableWidth(tableRef.current?.offsetWidth)
-    }
-  }
 
   useEffect(() => {
     window.addEventListener('resize', handleResize)
@@ -93,6 +109,10 @@ export function Table({
     }
   }, [tableRef.current])
 
+  const onClearSelectedRows = useCallback(() => {
+    toggleAllRowsSelected(false)
+  }, [])
+
   return (
     <div
       onScroll={dispatchScrollEvent}
@@ -103,6 +123,34 @@ export function Table({
       )}
       style={{ maxHeight: fixedHeader?.y }}
     >
+      {withSelect && selectedFlatRows.length > 0 && (
+        <div className="table-wrapper__selected-rows">
+          <Button
+            buttonText={setTranslationValue(
+              TABLE_LOCALIZATION[language].n_selected || '',
+              selectedFlatRows.length
+            )}
+            onClick={onClearSelectedRows}
+            type="tertiary"
+            size="medium"
+            iconProps={{ alignment: 'left', Component: IconDismiss }}
+          />
+          {submitButtons?.map(({ buttonText, isLoading, onClick }) => (
+            <Button
+              iconProps={{ alignment: 'left', Component: IconCheckmark }}
+              onClick={(event) => {
+                onClick(event, state, onClearSelectedRows)
+              }}
+              buttonText={buttonText || 'Submit'}
+              type="secondary"
+              size="medium"
+              className="mr-8"
+              isLoading={isLoading}
+            />
+          ))}
+        </div>
+      )}
+
       <table {...getTableProps()} ref={tableRef}>
         <thead>
           {headerGroups.map((headerGroup: HeaderGroup, i) => (

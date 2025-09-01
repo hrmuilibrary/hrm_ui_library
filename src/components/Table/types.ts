@@ -1,4 +1,5 @@
 import { Column, TableState } from 'react-table'
+import { TButtonPropTypes } from '../Button/types'
 
 type Enumerate<N extends number, Acc extends number[] = []> = Acc['length'] extends N
   ? Acc[number]
@@ -20,6 +21,10 @@ export type TColumnFields = {
 
 export type TColumn = Column & TColumnFields
 
+export interface IButtonPropTypes extends Omit<TButtonPropTypes, 'onClick'> {
+  onClick: (event: TClickEventType, data: any, clearRowSelection?: () => void) => void
+}
+
 export type TTableProps = {
   className?: string
   columns: TColumn[]
@@ -29,6 +34,8 @@ export type TTableProps = {
   handleRowClick?: (row: any) => void
   onChange?: (state: TableState) => void
   containerRefHandler?: (ref: HTMLDivElement) => void
+  language?: string
+  submitButtons?: IButtonPropTypes[]
 }
 
 export type SortBy = {
