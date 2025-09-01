@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Table as _Table } from '../index'
-import { TColumn, TTableProps, TTableState } from '../components/Table/types'
+import { TColumn, TTableProps } from '../components/Table/types'
 import { TTableProps as TTableV2Props } from '../components/TableV2/types'
 import { StoryFn, StoryObj } from '@storybook/react'
 import {
@@ -17,6 +17,7 @@ import {
 import { ColumnDef } from '@tanstack/react-table'
 import classnames from 'classnames'
 import { IndeterminateCheckbox } from '../components/TableV2/IndeterminateCheckbox'
+import { TableState } from 'react-table'
 
 const data: any[] = [
   {
@@ -25,7 +26,8 @@ const data: any[] = [
     id: 'fffffffsdf',
     visits: [7, 8, 9],
     progress: 'fdfsdfsdfsd',
-    status: 'Active'
+    status: 'Active',
+    enableSelection: false
   },
   ...Array(3).fill({
     user: 'John Doe',
@@ -33,7 +35,8 @@ const data: any[] = [
     id: 'disabledId',
     visits: [4, 5, 6],
     progress: 'divv',
-    status: 'Active'
+    status: 'Active',
+    enableSelection: true
   }),
   ...Array(5).fill({
     user: 'John Doe',
@@ -62,6 +65,8 @@ const data: any[] = [
 ]
 
 const Template: StoryFn<TTableProps> = (args) => {
+  const [isLoading, setIsLoading] = useState(false)
+  const [tableData, setTableData] = useState(data)
   const columns: TColumn[] = [
     {
       Header: 'User',
@@ -97,19 +102,27 @@ const Template: StoryFn<TTableProps> = (args) => {
     }
   ]
 
-  const handleChange = (state: TTableState) => {
+  const handleChange = ({ state, callback }: { state: TableState; callback: () => void }) => {
     console.log(state)
+    setIsLoading(true)
+    setTimeout(() => {
+      setIsLoading(false)
+      setTableData(data.map((d) => ({ ...d, enableSelection: false }))) // Simulate data update
+      callback() // Call the callback to update the table state
+      console.log('Data updated')
+    }, 2000)
   }
-
-  const disableCheckbox = (rowData) => rowData.id === 'disabledId'
 
   return (
     <_Table
-      disableCheckbox={disableCheckbox}
       {...args}
-      data={data}
+      data={tableData}
       onChange={handleChange}
       columns={columns}
+      submitButton={{
+        buttonText: 'Approve all',
+        isLoading
+      }}
     />
   )
 }
@@ -125,7 +138,15 @@ Table.args = {
   fixedHeader: { y: 500 },
   withSelect: true,
   data: [],
-  columns: []
+  columns: [],
+  language: 'en'
+}
+
+Table.argTypes = {
+  language: {
+    options: ['en', 'ru', 'hy'],
+    control: { type: 'select' }
+  }
 }
 
 const dataV2: any[] = [
@@ -250,7 +271,7 @@ const Template1: StoryFn<TTableV2Props<any>> = (args) => {
       id: 'user',
       header: 'User',
       accessorKey: 'user',
-      enablePinning: true,
+      enablePinning: false,
       enableSorting: false,
       cell: ({ getValue }) => <Text weight="bolder">{`${getValue()}`}</Text>
     },

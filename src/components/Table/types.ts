@@ -1,4 +1,5 @@
 import { Column, TableState } from 'react-table'
+import { TButtonPropTypes } from '../Button/types'
 
 type Enumerate<N extends number, Acc extends number[] = []> = Acc['length'] extends N
   ? Acc[number]
@@ -27,9 +28,10 @@ export type TTableProps = {
   withSelect?: boolean
   fixedHeader?: { y: number }
   handleRowClick?: (row: any) => void
-  onChange?: (state: TableState) => void
+  onChange?: (props: { state: TableState; callback: () => void }) => void
   containerRefHandler?: (ref: HTMLDivElement) => void
-  disableCheckbox?: (rowData: any) => boolean
+  language?: string
+  submitButton?: TButtonPropTypes
 }
 
 export type SortBy = {

@@ -15,6 +15,11 @@ import { Row } from './Row'
 import { Header } from './Header'
 import classNames from 'classnames'
 import { useDispatchEventOnScroll } from '../../hooks/useDispatchEventOnScroll'
+import { Button } from '../Button'
+import { TABLE_LOCALIZATION } from './localization'
+import { setTranslationValue } from '../../utils/helpers'
+import IconCheckmark from '../SVGIcons/IconCheckmark'
+import IconDismiss from '../SVGIcons/IconDismiss'
 
 export function Table({
   columns,
@@ -24,9 +29,11 @@ export function Table({
   withSelect = false,
   handleRowClick,
   className,
+  language = 'en',
   containerRefHandler,
-  disableCheckbox
+  submitButton
 }: TTableProps): ReactElement {
+  console.log(language)
   const tableRef = useRef<HTMLTableElement | null>(null)
   const [tableWidth, setTableWidth] = useState(400)
   const uniqueKey = useId()
@@ -62,6 +69,7 @@ export function Table({
     headerGroups,
     rows,
     prepareRow,
+    toggleAllRowsSelected,
     state
   } = useTable(
     {
@@ -70,12 +78,8 @@ export function Table({
     },
     useSortBy,
     useRowSelect,
-    (hooks: Hooks) => setSelectedRows(hooks, withSelect, disableCheckbox)
-  ) as TableInstance & { selectedFlatRows: RowType[] }
-
-  useEffect(() => {
-    onChange?.(state)
-  }, [JSON.stringify(state)])
+    (hooks: Hooks) => setSelectedRows(hooks, withSelect)
+  ) as TableInstance & { selectedFlatRows: RowType[]; toggleAllRowsSelected: (c: boolean) => void }
 
   const handleResize = () => {
     if (tableRef.current) {
@@ -94,6 +98,14 @@ export function Table({
     }
   }, [tableRef.current])
 
+  const onClearSelectedRows = () => {
+    toggleAllRowsSelected(false)
+  }
+
+  const onSubmitSelectedRows = () => {
+    onChange?.({ state, callback: onClearSelectedRows })
+  }
+
   return (
     <div
       onScroll={dispatchScrollEvent}
@@ -104,6 +116,30 @@ export function Table({
       )}
       style={{ maxHeight: fixedHeader?.y }}
     >
+      {withSelect && selectedFlatRows.length > 0 && (
+        <div className="flexbox align-items--center full-width">
+          <Button
+            buttonText={setTranslationValue(
+              TABLE_LOCALIZATION[language].n_selected || '',
+              selectedFlatRows.length
+            )}
+            onClick={onClearSelectedRows}
+            disabled={submitButton?.isLoading}
+            type="tertiary"
+            size="medium"
+            iconProps={{ alignment: 'left', Component: IconDismiss }}
+          />
+          <Button
+            iconProps={{ alignment: 'left', Component: IconCheckmark }}
+            onClick={onSubmitSelectedRows}
+            buttonText={submitButton?.buttonText || 'Submit'}
+            type="secondary"
+            size="medium"
+            isLoading={submitButton?.isLoading}
+          />
+        </div>
+      )}
+
       <table {...getTableProps()} ref={tableRef}>
         <thead>
           {headerGroups.map((headerGroup: HeaderGroup, i) => (
