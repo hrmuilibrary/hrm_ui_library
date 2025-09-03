@@ -1,3 +1,10 @@
+## [2.4.23](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.22...2.4.23) (2025-09-03)
+
+
+### Bug Fixes
+
+* set event.stopPropogation on row selection, to not handle row click ([45d969a](https://github.com/hrmuilibrary/hrm_ui_library/commit/45d969a29901e83ba60e3aea49a5d1058fe27224))
+
 ## [2.4.22](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.21...2.4.22) (2025-09-01)
 
 
