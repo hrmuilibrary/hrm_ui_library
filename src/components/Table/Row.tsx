@@ -47,6 +47,10 @@ export function Row({
               fixed_column_right: column?.fixed === 'right',
               fixed_checkbox: isSelection && arr[i + 1].column?.fixed === 'left'
             })}
+            onClick={(event) => {
+              if (isSelection) event.stopPropagation()
+              cellProps.onClick(event)
+            }}
           >
             {render('Cell')}
           </td>
