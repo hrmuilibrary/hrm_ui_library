@@ -26,7 +26,8 @@ export const Checkbox = forwardRef(
       afterLink,
       helperText = '',
       popoverAddons,
-      isInvalid
+      isInvalid,
+      stopPropagation = false
     } = props
 
     const localRef = useRef(null)
@@ -36,7 +37,7 @@ export const Checkbox = forwardRef(
     const changeHandler = (
       e: React.MouseEvent<HTMLInputElement> | React.ChangeEvent<HTMLInputElement>
     ) => {
-      e.stopPropagation()
+      stopPropagation && e.stopPropagation()
       if (name && setFieldValue) {
         setFieldValue(name, !isChecked, { shouldValidate: !isChecked })
       }
@@ -99,7 +100,7 @@ export const Checkbox = forwardRef(
             'controller--error': isInvalid,
             [className]: !!className
           })}
-          onClick={(e) => e.stopPropagation()}
+          onClick={(e) => stopPropagation && e.stopPropagation()}
         >
           <input
             data-id={dataId}
