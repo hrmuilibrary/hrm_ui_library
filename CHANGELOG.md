@@ -1,3 +1,10 @@
+## [2.4.24](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.23...2.4.24) (2025-09-15)
+
+
+### Bug Fixes
+
+* call stopPropogation on checkbox if need, not always ([e8ea775](https://github.com/hrmuilibrary/hrm_ui_library/commit/e8ea77562d0e3870e2171eb397be2801076947c2))
+
 ## [2.4.23](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.22...2.4.23) (2025-09-03)
 
 
