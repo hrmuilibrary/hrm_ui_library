@@ -7,22 +7,24 @@ export const Tab = (props: TTabProps): ReactElement => {
   const { selectedValue, tabItems, onSelect, className, ...rest } = props
 
   return (
-    <div className={classNames('tabs-container', className)}>
-      {tabItems.map((tabInfo) => {
-        return (
-          <TabItem
-            label={tabInfo.label}
-            badgeProps={tabInfo.badgeProps}
-            onClick={() => onSelect(tabInfo.value)}
-            key={tabInfo.value}
-            val={tabInfo.value}
-            isSelected={selectedValue === tabInfo.value}
-            dataId={tabInfo?.dataId || ''}
-            disabled={tabInfo.disabled}
-            {...rest}
-          />
-        )
-      })}
+    <div className="tabs-container">
+      <div className={classNames('tabs-header-container', className)}>
+        {tabItems.map((tabInfo) => {
+          return (
+            <TabItem
+              label={tabInfo.label}
+              badgeProps={tabInfo.badgeProps}
+              onClick={() => onSelect(tabInfo.value)}
+              key={tabInfo.value}
+              val={tabInfo.value}
+              isSelected={selectedValue === tabInfo.value}
+              dataId={tabInfo?.dataId || ''}
+              disabled={tabInfo.disabled}
+              {...rest}
+            />
+          )
+        })}
+      </div>
     </div>
   )
 }
