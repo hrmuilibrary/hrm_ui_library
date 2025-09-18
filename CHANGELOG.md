@@ -1,3 +1,10 @@
+## [2.4.25](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.24...2.4.25) (2025-09-18)
+
+
+### Bug Fixes
+
+* update styles of Tab component ([f0813c1](https://github.com/hrmuilibrary/hrm_ui_library/commit/f0813c19a27fbaab1bfb2255927c0d6fe69edfed))
+
 ## [2.4.24](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.23...2.4.24) (2025-09-15)
 
 
