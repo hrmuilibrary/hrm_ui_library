@@ -3,7 +3,7 @@
 .tab {
   $this: &;
 
-  --ds-tab-color-default: var(--ds-color-text-secondary);
+  --ds-tab-color-default: var(--ds-color-text-tertiary);
   --ds-tab-color-hover: var(--ds-color-text-tertiary);
   --ds-tab-color-disabled: var(--ds-color-text-disabled);
   --ds-tab-color-selected: var(--ds-color-text-primary);
@@ -25,8 +25,6 @@
   --ds-tab-border-default: var(--ds-color-border-tertiary);
   --ds-tab-border-selected: var(--ds-color-border-brand);
 
-  --ds-tab-margin: 0 var(--ds-space-24) 0 0;
-
   @include mixin.inline-flex;
   @include mixin.align-items(center);
   position: relative;
@@ -35,15 +33,19 @@
   border-width: var(--ds-tab-border-size);
   border-style: solid;
   border-color: var(--ds-tab-border-default);
-  margin: var(--ds-tab-margin);
+  padding: 0 var(--ds-space-24);
+  box-sizing: border-box;
 
   &:after {
     content: '';
     position: absolute;
     bottom: -1px;
-    height: 2px;
+    left: 0;
+    height: 4px;
     width: 0;
     background-color: var(--ds-tab-border-selected);
+    border-top-right-radius: var(--ds-size-8);
+    border-top-left-radius: var(--ds-size-8);
     transition: width .3s linear;
   }
 
@@ -57,6 +59,7 @@
 
   &__label {
     font: var(--ds-tab-font);
+    color: var(--ds-tab-color-default);
   }
 
   &:hover {
@@ -138,13 +141,16 @@
 }
 
 .tabs-container {
-  --ds-tabs-border-size: 0 0 1px 0;
-  --ds-tabs-border-default: var(--ds-color-divider);
-
-  @include mixin.inline-flex;
-  @include mixin.align-items(flex-end);
-  border-width: var(--ds-tabs-border-size);
-  border-style: solid;
-  border-color: var(--ds-tabs-border-default);
   width: 100%;
+
+  .tabs-header-container {
+    --ds-tabs-border-size: 0 0 1px 0;
+    --ds-tabs-border-default: var(--ds-color-divider);
+
+    @include mixin.inline-flex;
+    @include mixin.align-items(flex-end);
+    border-width: var(--ds-tabs-border-size);
+    border-style: solid;
+    border-color: var(--ds-tabs-border-default);
+  }
 }
