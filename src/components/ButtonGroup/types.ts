@@ -10,7 +10,7 @@ interface IButtonGroupBase {
 export interface IButtonGroupItem extends IButtonGroupBase {
   buttonText: string
   isActive?: boolean
-  id?: string | number
+  id: string | number
   onClick?: () => void
   icons?: {
     left?: ISVGIconProps
@@ -20,6 +20,6 @@ export interface IButtonGroupItem extends IButtonGroupBase {
 
 export interface IButtonGroup extends IButtonGroupBase {
   buttons: IButtonGroupItem[]
-  activeIndex: number
-  onTabChange?: (index: number) => void
+  activeIndex: number | string
+  onTabChange?: (index: number | string) => void
 }
