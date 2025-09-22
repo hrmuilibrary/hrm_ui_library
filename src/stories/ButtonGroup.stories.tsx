@@ -59,12 +59,19 @@ const buttons = [
 ]
 
 const Template: StoryFn<IButtonGroup> = (args) => {
-  const [index, setIndex] = React.useState(1)
-  const onChange = (index: number) => {
+  const [index, setIndex] = React.useState<number | string>(1)
+  const onChange = (index: number | string) => {
     console.log(`Active button index: ${index}`)
     setIndex(index)
   }
-  return <_ButtonGroup {...args} buttons={buttons} activeIndex={index} onTabChange={onChange} />
+  return (
+    <_ButtonGroup
+      {...args}
+      buttons={buttons}
+      activeIndex={'projectProduct'}
+      onTabChange={onChange}
+    />
+  )
 }
 
 export const ButtonGroup: StoryObj<IButtonGroup> = Template.bind({})
