@@ -1,3 +1,10 @@
+## [2.4.26](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.25...2.4.26) (2025-09-22)
+
+
+### Bug Fixes
+
+* change ButtonGroup to work with item.id ([2b91b73](https://github.com/hrmuilibrary/hrm_ui_library/commit/2b91b735e8aa4cb2e098d06970098a84072b8b5f))
+
 ## [2.4.25](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.24...2.4.25) (2025-09-18)
 
 
