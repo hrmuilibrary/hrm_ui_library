@@ -1,3 +1,10 @@
+## [2.4.28](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.27...2.4.28) (2025-09-23)
+
+
+### Bug Fixes
+
+* resolve table celcellProps.onClick issue ([7c8e079](https://github.com/hrmuilibrary/hrm_ui_library/commit/7c8e079e74b31bdd76ae33d3a6ece0735ee3d065))
+
 ## [2.4.27](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.26...2.4.27) (2025-09-23)
 
 
