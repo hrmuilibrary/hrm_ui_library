@@ -8,4 +8,6 @@ export interface TSwitcherProps extends IFormCompProps {
   id?: string
   label?: string
   labelAddons?: React.ReactElement
+  orientation?: 'left' | 'right'
+  hasSpaceBetween?: boolean
 }

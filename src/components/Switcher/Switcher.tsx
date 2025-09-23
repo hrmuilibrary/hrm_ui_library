@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useMemo } from 'react'
 import classnames from 'classnames'
 import { Label } from '../../helperComponents'
 import { TSwitcherProps } from './types'
@@ -17,7 +17,9 @@ export const Switcher = forwardRef((props: TSwitcherProps, ref): React.ReactElem
     setFieldValue,
     selectedValue,
     className = '',
-    labelAddons
+    labelAddons,
+    orientation = 'right',
+    hasSpaceBetween = true
   } = props
   const isChecked = !!value || !!selectedValue
 
@@ -31,17 +33,27 @@ export const Switcher = forwardRef((props: TSwitcherProps, ref): React.ReactElem
     }
   }
 
+  const labelComponent = useMemo(
+    () => (
+      <Label
+        text={label}
+        disabled={disabled}
+        labelAddons={labelAddons}
+        size={inlineType ? 'standard' : size}
+        className="switcher__label"
+      />
+    ),
+    [label, disabled, labelAddons, inlineType, size]
+  )
+
   return (
-    <div className={classnames('switcher', { 'switcher--inline': inlineType })}>
-      {label && (
-        <Label
-          text={label}
-          disabled={disabled}
-          labelAddons={labelAddons}
-          size={inlineType ? 'standard' : size}
-          className="switcher__label"
-        />
-      )}
+    <div
+      className={classnames('switcher', {
+        'switcher--inline': inlineType,
+        'switcher--space-between': hasSpaceBetween
+      })}
+    >
+      {label && orientation === 'right' && labelComponent}
       <label
         id={id}
         className={classnames(
@@ -66,6 +78,7 @@ export const Switcher = forwardRef((props: TSwitcherProps, ref): React.ReactElem
           </span>
         </span>
       </label>
+      {label && orientation === 'left' && labelComponent}
     </div>
   )
 })
