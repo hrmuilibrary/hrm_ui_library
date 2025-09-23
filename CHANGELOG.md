@@ -1,3 +1,10 @@
+## [2.4.27](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.26...2.4.27) (2025-09-23)
+
+
+### Bug Fixes
+
+* add left/right orientation to switcher ([0a7a612](https://github.com/hrmuilibrary/hrm_ui_library/commit/0a7a6124694d3544ce2292b228d6fde7038e7482))
+
 ## [2.4.26](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.25...2.4.26) (2025-09-22)
 
 
