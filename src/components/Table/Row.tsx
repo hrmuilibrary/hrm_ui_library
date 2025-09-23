@@ -49,7 +49,7 @@ export function Row({
             })}
             onClick={(event) => {
               if (isSelection) event.stopPropagation()
-              cellProps.onClick(event)
+              cellProps.onClick && cellProps.onClick(event)
             }}
           >
             {render('Cell')}
