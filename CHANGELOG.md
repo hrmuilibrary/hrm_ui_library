@@ -1,3 +1,10 @@
+## [2.4.29](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.28...2.4.29) (2025-09-29)
+
+
+### Bug Fixes
+
+* tooltip design and props improvements ([4ff86a5](https://github.com/hrmuilibrary/hrm_ui_library/commit/4ff86a5e6e067d59401a443edfbf9d090b451126))
+
 ## [2.4.28](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.27...2.4.28) (2025-09-23)
 
 
