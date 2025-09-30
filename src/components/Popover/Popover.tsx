@@ -5,14 +5,14 @@ import { PopoverMobile } from './PopoverMobile'
 import { PopoverDesktop } from './PopoverDesktop'
 
 export const Popover = (props: TPopoverProps): ReactElement | null => {
-  const { elemRef, id, clicked, stopPropagation, ...rest } = props
+  const { elemRef, id, clicked = false, stopPropagation, ...rest } = props
   const isMobile = useIsMobile()
 
-  const [isClicked, setIsClicked] = useState(false)
+  const [isClicked, setIsClicked] = useState(clicked)
   const [parent, setElement] = useState<HTMLElement | null>(elemRef || null)
 
   const showMessage = (evnt: Event) => {
-    if (stopPropagation) evnt.stopPropagation()
+    if (stopPropagation) evnt.stopImmediatePropagation()
     setIsClicked(true)
   }
 
