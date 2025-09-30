@@ -1,3 +1,10 @@
+## [2.4.30](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.29...2.4.30) (2025-09-30)
+
+
+### Bug Fixes
+
+* add stopPropagation to Popover ([0e7c1e5](https://github.com/hrmuilibrary/hrm_ui_library/commit/0e7c1e5d8a8169d49cae2e0778c7ec21590b66b8))
+
 ## [2.4.29](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.28...2.4.29) (2025-09-29)
 
 
