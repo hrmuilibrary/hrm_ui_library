@@ -20,10 +20,11 @@ export interface TPopoverProps extends IFormCompProps {
   elemRef?: HTMLElement
   id?: string | number
   mobileTitle?: string
+  stopPropagation?: boolean
 }
 
 export interface TPopoverDesktopProps extends TPopoverProps {
-  showMessage: () => void
+  showMessage: (evnt: Event) => void
   hideMessage: () => void
   parent: HTMLElement | null
 }
