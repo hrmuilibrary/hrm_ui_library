@@ -1,3 +1,10 @@
+## [2.4.32](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.31...2.4.32) (2025-09-30)
+
+
+### Bug Fixes
+
+* resolve Popover text cutting ([a5c0853](https://github.com/hrmuilibrary/hrm_ui_library/commit/a5c0853ce687c58f94eafb5d357c06964bb84941))
+
 ## [2.4.31](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.30...2.4.31) (2025-09-30)
 
 
