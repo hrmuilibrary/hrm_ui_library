@@ -1,3 +1,10 @@
+## [2.4.31](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.30...2.4.31) (2025-09-30)
+
+
+### Bug Fixes
+
+* resolve Popover clicked state ([f915f78](https://github.com/hrmuilibrary/hrm_ui_library/commit/f915f78cbab7910bad41a3ac6bcfaccba5f8e1fa))
+
 ## [2.4.30](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.29...2.4.30) (2025-09-30)
 
 
