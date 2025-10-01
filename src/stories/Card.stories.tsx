@@ -50,5 +50,6 @@ Card.args = {
     color: 'yellow'
   },
   isExpandable: true,
+  noDivider: true,
   isExpanded: false
 }

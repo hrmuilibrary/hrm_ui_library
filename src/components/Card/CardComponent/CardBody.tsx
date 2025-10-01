@@ -5,7 +5,7 @@ import { Divider } from '../../Divider'
 import { AnimatePresenceWrapper } from '../../../helperComponents/AnimatePresenceWrapper'
 
 export const CardBody = ({ children }: { children: React.ReactNode }) => {
-  const { isExpanded } = useCardContext()
+  const { isExpanded, noDivider } = useCardContext()
 
   return (
     <AnimatePresenceWrapper initial={false}>
@@ -17,7 +17,7 @@ export const CardBody = ({ children }: { children: React.ReactNode }) => {
           transition={{ type: 'spring', duration: 0.5, bounce: 0 }}
         >
           <div className="card__content--body">
-            <Divider type="primary" isHorizontal className="card__divider" />
+            {!noDivider && <Divider type="primary" isHorizontal className="card__divider" />}
             {children}
           </div>
         </motion.div>
