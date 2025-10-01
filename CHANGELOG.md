@@ -1,3 +1,10 @@
+## [2.4.34](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.33...2.4.34) (2025-10-01)
+
+
+### Bug Fixes
+
+* add no divider support ([8043c36](https://github.com/hrmuilibrary/hrm_ui_library/commit/8043c360f932a6c6ad65a011ce84d53ec7175f18))
+
 ## [2.4.33](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.32...2.4.33) (2025-10-01)
 
 
