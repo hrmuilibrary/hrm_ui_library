@@ -12,6 +12,7 @@ export type TCardProps = {
   isExpanded?: boolean
   isExpandedFromParent?: boolean
   noBorder?: boolean
+  noDivider?: boolean
   onExpand?: (isExpanded: boolean) => void
   children: ReactNode
   className?: string

@@ -12,4 +12,5 @@ export type TCardGroupProps = {
   className?: string
   id?: string
   dataId?: string
+  noDivider?: boolean
 }
