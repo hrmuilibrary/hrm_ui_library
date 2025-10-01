@@ -1,3 +1,10 @@
+## [2.4.33](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.32...2.4.33) (2025-10-01)
+
+
+### Bug Fixes
+
+* add card component motion animation ([fedb50a](https://github.com/hrmuilibrary/hrm_ui_library/commit/fedb50a2098ffef15b8c3595ca73f919d0986600))
+
 ## [2.4.32](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.31...2.4.32) (2025-09-30)
 
 
