@@ -21,31 +21,25 @@ export default {
     },
     isExpandable: boolean,
     isExpanded: boolean
-  },
-  render: (args) => {
-    return (
-      <_Card {...args}>
-        <_Card.Head>Head is here</_Card.Head>
-        <_Card.Body>Body is here</_Card.Body>
-      </_Card>
-    )
   }
 }
 
-const Template: StoryFn<TCardProps> = (args) => (
-  <_Card {...args}>
-    <_Card.Head>Head is here</_Card.Head>
-    <_Card.Body>
-      <div>
-        <br />
-        <br />
-        <Text>Card Body is here</Text>
-        <br />
-        <Text>lorem ipsum</Text>
-      </div>
-    </_Card.Body>
-  </_Card>
-)
+const Template: StoryFn<TCardProps> = (args) => {
+  return (
+    <_Card {...args}>
+      <_Card.Head>Head is here</_Card.Head>
+      <_Card.Body>
+        <div>
+          <br />
+          <br />
+          <Text>Card Body is here</Text>
+          <br />
+          <Text>lorem ipsum</Text>
+        </div>
+      </_Card.Body>
+    </_Card>
+  )
+}
 
 export const Card: StoryObj<TCardProps> = Template.bind({})
 
@@ -56,5 +50,5 @@ Card.args = {
     color: 'yellow'
   },
   isExpandable: true,
-  isExpanded: true
+  isExpanded: false
 }

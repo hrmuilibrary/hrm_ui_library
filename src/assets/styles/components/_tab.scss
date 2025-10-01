@@ -68,6 +68,7 @@
     #{$this}__icon {
       color: var(--ds-tab-icon-color-hover);
     }
+
     #{$this}__label {
       color: var(--ds-tab-color-hover);
     }
@@ -80,13 +81,16 @@
       #{$this}__icon {
         color: var(--ds-tab-icon-color-disabled);
       }
+
       #{$this}__label {
         color: var(--ds-tab-color-disabled);
       }
     }
+
     #{$this}__icon {
       color: var(--ds-tab-icon-color-disabled);
     }
+
     #{$this}__label {
       color: var(--ds-tab-color-disabled);
     }
@@ -99,6 +103,7 @@
       #{$this}__icon {
         color: var(--ds-tab-icon-color-selected);
       }
+
       #{$this}__label {
         color: var(--ds-tab-color-selected);
       }
@@ -124,6 +129,7 @@
       font-size: var(--ds-tab-font-size-lg);
     }
   }
+
   &--medium {
     height: var(--ds-tab-size-md);
 
@@ -131,6 +137,7 @@
       font-size: var(--ds-tab-font-size-md);
     }
   }
+
   &--small {
     height: var(--ds-tab-size-sm);
 
@@ -142,6 +149,7 @@
 
 .tabs-container {
   width: 100%;
+  display: flex;
 
   .tabs-header-container {
     --ds-tabs-border-size: 0 0 1px 0;
@@ -152,5 +160,13 @@
     border-width: var(--ds-tabs-border-size);
     border-style: solid;
     border-color: var(--ds-tabs-border-default);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tabs-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
   }
 }

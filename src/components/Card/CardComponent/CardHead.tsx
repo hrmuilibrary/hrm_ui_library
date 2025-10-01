@@ -3,6 +3,7 @@ import { useCardContext } from '../CardContext'
 import { IconChevronDown, IconChevronRight } from '../../SVGIcons'
 import classNames from 'classnames'
 import { noop } from '../../../utils/helpers'
+import { Button } from '../../Button'
 
 export const CardHead = ({ children }: { children: React.ReactNode }) => {
   const { toggleIsExpanded, onExpand, isExpandable, isExpanded } = useCardContext()
@@ -25,7 +26,13 @@ export const CardHead = ({ children }: { children: React.ReactNode }) => {
       {children}
       {isExpandable && (
         <div className="card__content--header--expand">
-          {isExpanded ? <IconChevronDown /> : <IconChevronRight />}
+          <Button
+            iconProps={{
+              Component: isExpanded ? IconChevronDown : IconChevronRight
+            }}
+            type="tertiary"
+            size="medium"
+          />
         </div>
       )}
     </div>
