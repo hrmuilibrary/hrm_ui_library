@@ -30,6 +30,7 @@ export const CardHead = ({ children }: { children: React.ReactNode }) => {
             iconProps={{
               Component: isExpanded ? IconChevronDown : IconChevronRight
             }}
+            className={classNames({ 'card__content--header--expand--icon': isExpanded })}
             type="tertiary"
             size="medium"
           />

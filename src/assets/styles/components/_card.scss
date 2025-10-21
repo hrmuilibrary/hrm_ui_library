@@ -124,6 +124,7 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    padding: 0 8px;
 
     &--header {
       display: flex;
@@ -139,7 +140,16 @@
 
       &--expand {
         align-content: center;
+
+        &--icon {
+          background-color: var(--ds-button-tertiary-bg-pressed);
+        }
       }
+    }
+
+    &--footer {
+      border-top: 1px solid var(--grey-200);
+      background-color: #fff;
     }
 
     .card__divider {

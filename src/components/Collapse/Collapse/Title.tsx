@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
 import { generateDataTestId } from '../../../utils/helpers'
-import { IconChevronDown, IconChevronLeft, IconChevronRight, IconChevronUp } from '../../SVGIcons'
+import { IconChevronDown, IconChevronUp } from '../../SVGIcons'
 import { Text } from '../../Text'
 import { TCollapseItemTitleV2 } from '../types'
 import classNames from 'classnames'

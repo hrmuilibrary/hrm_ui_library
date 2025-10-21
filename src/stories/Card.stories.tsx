@@ -37,6 +37,9 @@ const Template: StoryFn<TCardProps> = (args) => {
           <Text>lorem ipsum</Text>
         </div>
       </_Card.Body>
+      <_Card.Footer>
+        <Text>Footer text here</Text>
+      </_Card.Footer>
     </_Card>
   )
 }
