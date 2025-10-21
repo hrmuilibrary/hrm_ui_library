@@ -1,3 +1,10 @@
+## [2.4.35](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.34...2.4.35) (2025-10-21)
+
+
+### Bug Fixes
+
+* add Card.Footer component ([39b57b9](https://github.com/hrmuilibrary/hrm_ui_library/commit/39b57b9f2904110fa4257dd44e22ac7718f155b2))
+
 ## [2.4.34](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.33...2.4.34) (2025-10-01)
 
 
