@@ -4,6 +4,7 @@ import { CardContext } from './CardContext'
 import { Card as _Card } from './CardComponent/Card'
 import { CardHead } from './CardComponent/CardHead'
 import { CardBody } from './CardComponent/CardBody'
+import { CardFooter } from './CardComponent/CardFooter'
 import { noop } from '../../utils/helpers'
 
 const CardComponent = ({
@@ -29,5 +30,6 @@ const CardComponent = ({
 
 export const Card = Object.assign(CardComponent, {
   Head: CardHead,
-  Body: CardBody
+  Body: CardBody,
+  Footer: CardFooter
 })

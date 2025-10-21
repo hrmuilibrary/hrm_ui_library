@@ -7,7 +7,9 @@
   "prettier.semi": false,
   "eslint.validate": [
     "javascript",
-    "javascriptreact"
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
   ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
