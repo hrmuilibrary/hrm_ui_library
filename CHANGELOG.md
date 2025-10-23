@@ -1,3 +1,10 @@
+## [2.4.37](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.36...2.4.37) (2025-10-23)
+
+
+### Bug Fixes
+
+* show only number of selected items on Button MultiSelect ([3020dc0](https://github.com/hrmuilibrary/hrm_ui_library/commit/3020dc07b82baa41318633f1e70ed2cbe6968ac3))
+
 ## [2.4.36](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.35...2.4.36) (2025-10-23)
 
 
