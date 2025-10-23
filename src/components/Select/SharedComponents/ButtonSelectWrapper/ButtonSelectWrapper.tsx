@@ -43,8 +43,9 @@ export const ButtonSelectWrapper = (props: TSelectWrapperProps): ReactElement =>
   })
 
   const selectedItemsLabels = useMemo(() => {
-    if (!selectedValues) return ''
-    if (selectedValues?.length === 0) return ''
+    if (isMobile)
+      return selectedValues && selectedValues.length > 0 ? selectedValues.length.toString() : ''
+    if (!selectedValues || selectedValues?.length === 0) return ''
     if (selectedValues?.length === 1) return `${selectedValues[0].label}`
 
     return ` ${selectedValues[0].label} +${selectedValues.length - 1}`
