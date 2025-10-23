@@ -1,3 +1,10 @@
+## [2.4.36](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.35...2.4.36) (2025-10-23)
+
+
+### Bug Fixes
+
+* remove animation from Card.Footer ([6a25bbc](https://github.com/hrmuilibrary/hrm_ui_library/commit/6a25bbcfd9c3c88445c7b01083aefe30929cd513))
+
 ## [2.4.35](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.34...2.4.35) (2025-10-21)
 
 
