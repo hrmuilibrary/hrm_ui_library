@@ -1,3 +1,10 @@
+## [2.4.38](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.37...2.4.38) (2025-10-28)
+
+
+### Bug Fixes
+
+* resolve scroll issue on popover ([fa53721](https://github.com/hrmuilibrary/hrm_ui_library/commit/fa537211e9d1de8ed4c81c1a47ba3555ad84ed3d))
+
 ## [2.4.37](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.36...2.4.37) (2025-10-23)
 
 
