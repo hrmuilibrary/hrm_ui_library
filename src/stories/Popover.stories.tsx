@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Popover as _Popover } from '../index'
 import { StoryFn, type StoryObj } from '@storybook/react'
 import { TPopoverProps } from '../components/Popover/types'
@@ -24,9 +24,14 @@ export default {
 }
 
 const Template: StoryFn<TPopoverProps> = (args) => {
+  const parentRef = useRef<HTMLDivElement | null>(null)
   return (
-    <>
-      <_Popover {...args} id="popover_test" />
+    <div ref={parentRef}>
+      <_Popover
+        {...args}
+        id="popover_test"
+        elemRef={(parentRef.current as HTMLElement) ?? undefined}
+      />
       <div
         style={{
           position: 'absolute',
@@ -39,7 +44,7 @@ const Template: StoryFn<TPopoverProps> = (args) => {
       >
         <div id="popover_test">Click on me</div>
       </div>
-    </>
+    </div>
   )
 }
 

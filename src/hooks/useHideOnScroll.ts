@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import { CUSTOM_SCROLL_NAME, CUSTOM_SCROLL_MESSAGE } from '../consts'
 
-export const useHideOnScroll = (hide: () => void, elementRef?: HTMLElement | null): null => {
-  const scrollElement = elementRef ?? document
+export const useHideOnScroll = (hide: () => void, parent?: HTMLElement | null): null => {
+  const scrollElement = parent ?? document
   useEffect(() => {
     scrollElement.addEventListener('scroll', hide)
     return () => {
