@@ -25,7 +25,7 @@ export const PopoverDesktop = (props: TPopoverDesktopProps): ReactElement => {
     initialPosition: position
   })
 
-  useHideOnScroll(hideMessage)
+  useHideOnScroll(hideMessage, parent)
   useOnOutsideClick(popoverRef, hideMessage, clicked, useId())
 
   return (

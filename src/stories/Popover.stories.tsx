@@ -30,10 +30,10 @@ const Template: StoryFn<TPopoverProps> = (args) => {
       <div
         style={{
           position: 'absolute',
-          left: 300,
-          top: 50,
+          left: 500,
+          top: 200,
           width: 100,
-          height: 500,
+          height: 100,
           background: 'red'
         }}
       >
@@ -56,5 +56,6 @@ Popover.args = {
     )
   },
   text: <div>Test</div>,
+  position: 'top-right',
   clicked: true
 }
