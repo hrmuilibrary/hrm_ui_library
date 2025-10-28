@@ -1,3 +1,10 @@
+## [2.4.39](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.38...2.4.39) (2025-10-28)
+
+
+### Bug Fixes
+
+* resolve parentRef property on Popover ([0259c67](https://github.com/hrmuilibrary/hrm_ui_library/commit/0259c6772b43fa571f1d71e8d7026a25a028422b))
+
 ## [2.4.38](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.37...2.4.38) (2025-10-28)
 
 
