@@ -1,0 +1,35 @@
+import React, { ReactElement } from 'react'
+import { ISVGIconProps } from './types'
+import classNames from 'classnames'
+
+export const IconLibraryFilled = ({
+  size,
+  type,
+  className = '',
+  onClick,
+  refHandler,
+  id,
+  dataId
+}: ISVGIconProps): ReactElement => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className={classNames('svg-icon', {
+      [`svg-icon__size-${size}`]: size,
+      [`svg-icon__type-${type}`]: type,
+      [className]: className
+    })}
+    viewBox="0 0 24 24"
+    fill="none"
+    onClick={onClick}
+    ref={refHandler}
+    id={id}
+    data-id={dataId ? `${dataId}-svg-icon` : ''}
+  >
+    <path
+      d="M5.5 3C6.328 3 7 3.672 7 4.5V19.5C7 20.328 6.328 21 5.5 21H3.5C2.672 21 2 20.328 2 19.5V4.5C2 3.672 2.672 3 3.5 3H5.5ZM11.5 3C12.328 3 13 3.672 13 4.5V19.5C13 20.328 12.328 21 11.5 21H9.5C8.672 21 8 20.328 8 19.5V4.5C8 3.672 8.672 3 9.5 3H11.5ZM18.781 6.1238L21.995 18.6428C22.201 19.4448 21.718 20.2628 20.915 20.4688L19.039 20.9498C18.236 21.1558 17.419 20.6728 17.213 19.8698L13.999 7.3528C13.793 6.5498 14.276 5.7328 15.079 5.5268L16.955 5.0438C17.758 4.8388 18.575 5.3228 18.781 6.1238Z"
+      fill="#222222"
+    />
+  </svg>
+)
+
+export default IconLibraryFilled
