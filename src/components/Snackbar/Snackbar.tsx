@@ -5,7 +5,7 @@ import { Text } from '../Text'
 import { Button } from '../Button'
 import { TSnackbarProps, TToastProps } from './types'
 import { DEFAULT_DURATION, ICONS_MAPPING, TYPE_MAPPING } from './consts'
-import { IconDynamicComponent } from '../../helperComponents'
+import { IconDynamicComponent } from '../IconDynamicComponent'
 import 'react-toastify/dist/ReactToastify.css'
 
 const CustomToast = ({ actionProps, toastId, type = 'information', text }: TToastProps) => {

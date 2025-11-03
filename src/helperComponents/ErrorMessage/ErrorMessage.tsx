@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react'
 import { TErrorMessageProps } from './types'
 import { Text } from '../../components/Text'
-import { IconDynamicComponent } from '../IconDynamicComponent'
+import { IconDynamicComponent } from '../../components/IconDynamicComponent'
 import { generateDataTestId } from '../../utils/helpers'
 import classnames from 'classnames'
 
