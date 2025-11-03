@@ -1,3 +1,11 @@
+# [2.5.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.39...2.5.0) (2025-11-03)
+
+
+### Features
+
+* add icon dynamic component to extract icon by name ([34d4286](https://github.com/hrmuilibrary/hrm_ui_library/commit/34d428679825e314ec7971f2ac498ba3cf06330f))
+* add more improvements ([4e90fd3](https://github.com/hrmuilibrary/hrm_ui_library/commit/4e90fd3508083731828c89cfd09bf27d69c432a4))
+
 ## [2.4.39](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.38...2.4.39) (2025-10-28)
 
 
