@@ -1,8 +1,9 @@
 import React, { lazy, ReactElement, Suspense } from 'react'
 import { ISVGIconProps } from '../SVGIcons/types'
+import type { TIconName } from '../SVGIcons/icon-names'
 
 interface IconDynamicComponentProps extends ISVGIconProps {
-  componentName: string
+  componentName: TIconName
 }
 
 export const IconDynamicComponent = ({
@@ -11,10 +12,6 @@ export const IconDynamicComponent = ({
 }: IconDynamicComponentProps): ReactElement | null => {
   if (!componentName) {
     return null
-  }
-
-  const aliasMap: Record<string, string> = {
-    us: 'Gb'
   }
 
   const toPascalCase = (value: string): string =>
@@ -26,7 +23,7 @@ export const IconDynamicComponent = ({
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
       .join('')
 
-  const resolvedName = aliasMap[componentName] ?? toPascalCase(componentName)
+  const resolvedName = toPascalCase(componentName)
   const exportName = `Icon${resolvedName}`
 
   // Dynamically load the component based on the componentName prop
