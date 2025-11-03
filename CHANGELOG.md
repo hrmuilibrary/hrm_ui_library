@@ -1,3 +1,10 @@
+## [2.5.1](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.5.0...2.5.1) (2025-11-03)
+
+
+### Bug Fixes
+
+* add new icons ([c3881eb](https://github.com/hrmuilibrary/hrm_ui_library/commit/c3881eb7bdabac83274190466003f6ce7c1b8bd4))
+
 # [2.5.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.4.39...2.5.0) (2025-11-03)
 
 
