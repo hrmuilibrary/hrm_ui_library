@@ -1,3 +1,10 @@
+## [2.5.3](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.5.2...2.5.3) (2025-11-10)
+
+
+### Bug Fixes
+
+* align page content center ([20da368](https://github.com/hrmuilibrary/hrm_ui_library/commit/20da3681719bf1901c239697aa6a2e86a7520905))
+
 ## [2.5.2](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.5.1...2.5.2) (2025-11-10)
 
 
