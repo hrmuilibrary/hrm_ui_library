@@ -4,6 +4,9 @@
   $this: &;
   height: 100%;
   width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 
   &__content {
     @include mixin.flexbox;
@@ -12,7 +15,7 @@
     @include mixin.flex-direction(column);
     text-align: center;
     max-width: 590px;
-    margin: auto;
+    margin: 0 auto;
   }
 
   &__icon {
@@ -20,7 +23,7 @@
     padding: var(--ds-space-24);
     align-items: center;
     gap: var(--ds-space-12);
-    margin: auto;
+    margin: 0 auto;
     background-color: var(--green-20);
     border-radius: 50%;
   }
