@@ -1,3 +1,10 @@
+## [2.5.2](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.5.1...2.5.2) (2025-11-10)
+
+
+### Bug Fixes
+
+* add UnderConstruction page ([1f0e907](https://github.com/hrmuilibrary/hrm_ui_library/commit/1f0e907764f262dfc75a4557db56849dbca1a2d6))
+
 ## [2.5.1](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.5.0...2.5.1) (2025-11-03)
 
 
