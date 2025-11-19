@@ -1,3 +1,10 @@
+## [2.5.4](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.5.3...2.5.4) (2025-11-19)
+
+
+### Bug Fixes
+
+* prevent a lot of rerenders in snackbar ([61139dd](https://github.com/hrmuilibrary/hrm_ui_library/commit/61139dd17e1730eeb02fbafc929b714cdb81fb13))
+
 ## [2.5.3](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.5.2...2.5.3) (2025-11-10)
 
 
