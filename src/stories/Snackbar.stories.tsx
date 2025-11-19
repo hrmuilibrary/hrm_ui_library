@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Snackbar as _Snackbar, notify } from '../index'
+import { Button, Snackbar as _Snackbar } from '../index'
+import { notify } from '../components/Snackbar'
 import { StoryFn, StoryObj } from '@storybook/react'
 
 export default {
@@ -27,7 +28,7 @@ const Template: StoryFn<SnackbarProps> = (args) => {
   }
 
   const addMessage = () => {
-    const __id = Math.random()
+    const __id = new Date().getTime()
 
     setInfoMessages((_infoMessages: any) => [
       ..._infoMessages,
@@ -47,12 +48,12 @@ const Template: StoryFn<SnackbarProps> = (args) => {
         text: message,
         type,
         toastId: toastId,
-        actionProps: {
-          buttonText: 'close',
-          onClick: () => {
-            removeMessage(toastId)
-          }
-        },
+        // actionProps: {
+        //   buttonText: 'close',
+        //   onClick: () => {
+        //     removeMessage(toastId)
+        //   }
+        // },
         closeSnackbar: (_id) => {
           removeMessage(_id)
         }
