@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import dayjs from 'dayjs'
 import DatePicker from 'react-datepicker'
 import { Input } from '../../Input'
@@ -23,6 +23,7 @@ export const TimePickerDesktop = (props: ITimePickerProps): React.ReactElement =
     hasError,
     ...rest
   } = props
+  const [time, setTime] = useState<string>()
   const dateInitialValue =
     value !== undefined && Object.prototype.toString.call(value) === '[object Date]'
       ? value
@@ -50,6 +51,35 @@ export const TimePickerDesktop = (props: ITimePickerProps): React.ReactElement =
     }
   }
 
+  const formatAndSetTime = () => {
+    const _date = new Date()
+    _date.setHours(0, 0)
+    if (!time) {
+      onChange(_date)
+      return
+    }
+
+    if (time.includes(':') && time[2] !== ':') {
+      onChange(_date)
+      return
+    }
+
+    const t = time.replace(':', '')
+
+    if (t.length === 4) {
+      const hours = Number(t.slice(0, 2))
+      const minutes = Number(t.slice(2, 4))
+      if (hours < 24 && minutes < 60) {
+        _date.setHours(hours, minutes)
+      }
+    }
+
+    onChange(_date)
+  }
+  const onInputChange = (e: TChangeEventType) => {
+    setTime(e.target.value)
+  }
+
   return (
     <div className="picker-container input__inner">
       <Label text={label} required={required} invalid={hasError} />
@@ -66,6 +96,8 @@ export const TimePickerDesktop = (props: ITimePickerProps): React.ReactElement =
         onChange={onChange}
         customInput={
           <Input
+            handleChange={onInputChange}
+            handleBlurEvent={formatAndSetTime}
             disabled={rest.disabled}
             dataId={dataId}
             size={size}
