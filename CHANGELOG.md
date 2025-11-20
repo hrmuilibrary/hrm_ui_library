@@ -1,3 +1,10 @@
+## [2.5.5](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.5.4...2.5.5) (2025-11-20)
+
+
+### Bug Fixes
+
+* empty commit ([4fe2d27](https://github.com/hrmuilibrary/hrm_ui_library/commit/4fe2d27f4f467dfc4c9a9da4200306ef4e87fc06))
+
 ## [2.5.4](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.5.3...2.5.4) (2025-11-19)
 
 
