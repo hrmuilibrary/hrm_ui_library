@@ -69,7 +69,6 @@ export const TimePickerDesktop = (props: ITimePickerProps): React.ReactElement =
     if (t.length === 4) {
       const hours = Number(t.slice(0, 2))
       const minutes = Number(t.slice(2, 4))
-
       if (hours < 24 && minutes < 60) {
         _date.setHours(hours, minutes)
       }
