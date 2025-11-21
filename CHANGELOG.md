@@ -1,3 +1,10 @@
+## [2.5.6](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.5.5...2.5.6) (2025-11-21)
+
+
+### Bug Fixes
+
+* add hideSelectedOptions property to Select, ho always see empty input if option selected ([8242e01](https://github.com/hrmuilibrary/hrm_ui_library/commit/8242e01f92262847c25c667c5feaced81162bb5e))
+
 ## [2.5.5](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.5.4...2.5.5) (2025-11-20)
 
 
