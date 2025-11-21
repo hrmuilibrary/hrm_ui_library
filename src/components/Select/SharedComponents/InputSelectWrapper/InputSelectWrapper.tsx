@@ -35,7 +35,8 @@ export const InputSelectWrapper = (props: TSelectWrapperProps): ReactElement | n
     overflowText,
     hasError,
     modalApplyButtonText,
-    applySelectedItems
+    applySelectedItems,
+    hideSelectedOptions = false
   } = props
 
   const inputRef = useRef<HTMLInputElement | null>(null)
@@ -95,7 +96,7 @@ export const InputSelectWrapper = (props: TSelectWrapperProps): ReactElement | n
           className="select__input"
           placeholder={placeHolder}
           required={isRequiredField}
-          currentValue={selectedItemsLabels}
+          currentValue={hideSelectedOptions ? '' : selectedItemsLabels}
           rightIconProps={{
             Component: isOpen ? IconChevronUp : IconChevronDown,
             size: 'small'
