@@ -100,6 +100,7 @@ export interface TMultiSelectPropTypes extends IFormCompProps, TSelectBaseProps 
   labelAddons?: React.ReactElement
   className?: string
   isButtonSelect?: boolean
+  hideSelectedOptions?: boolean
 }
 
 export interface TButtonSelectPropTypes extends IFormCompProps, TSelectBaseProps {
@@ -271,6 +272,7 @@ export type TSelectWrapperProps = {
   dataId?: string
   type?: 'primary' | 'secondary' | 'tertiary'
   modalApplyButtonText?: string
+  hideSelectedOptions?: boolean
 }
 
 declare type TNavItemValue = {

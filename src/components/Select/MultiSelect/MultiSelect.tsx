@@ -31,6 +31,7 @@ export const MultiSelect = forwardRef((props: TMultiSelectPropTypes, _ref): Reac
     translations,
     hasError,
     language = 'en',
+    hideSelectedOptions = false,
     ...rest
   } = props
 
@@ -117,6 +118,7 @@ export const MultiSelect = forwardRef((props: TMultiSelectPropTypes, _ref): Reac
       hasError={hasError}
       applySelectedItems={applySelectedItems}
       isMobile={isMobile && isMobileFullScreen}
+      hideSelectedOptions={hideSelectedOptions}
     >
       <>
         <OptionsWrapper

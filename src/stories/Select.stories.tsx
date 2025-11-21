@@ -13466,6 +13466,7 @@ MultiSelect.args = {
   label: 'Select',
   options: MOCK_DATA,
   placeHolder: 'Select country',
+  hideSelectedOptions: true,
   helperText: 'To be filled in only for USA, Canada and European countries.',
   labelAddons: <IconInfo size={'xsmall'} type={'information'} className={'ml-4'} />
   // disabled: true
