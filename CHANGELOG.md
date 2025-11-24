@@ -1,3 +1,10 @@
+## [2.5.7](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.5.6...2.5.7) (2025-11-24)
+
+
+### Bug Fixes
+
+* resolve bug onBlur for timepicker ([42720c0](https://github.com/hrmuilibrary/hrm_ui_library/commit/42720c059d5bb35174282be8721716b312ec415d))
+
 ## [2.5.6](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.5.5...2.5.6) (2025-11-21)
 
 
