@@ -36,6 +36,7 @@ export const TimePickerDesktop = (props: ITimePickerProps): React.ReactElement =
   useImportFilesDynamically(locale)
 
   const onChange = (date: Date | null) => {
+    setTime(date ? dayjs(date).format('HH:mm') : '')
     if (changeHandler) {
       changeHandler(date)
     }
@@ -54,16 +55,10 @@ export const TimePickerDesktop = (props: ITimePickerProps): React.ReactElement =
   const formatAndSetTime = () => {
     const _date = new Date()
     _date.setHours(0, 0)
-    if (!time) {
+    if (!time || (time.includes(':') && time[2] !== ':')) {
       onChange(_date)
       return
     }
-
-    if (time.includes(':') && time[2] !== ':') {
-      onChange(_date)
-      return
-    }
-
     const t = time.replace(':', '')
 
     if (t.length === 4) {
