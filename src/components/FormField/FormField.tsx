@@ -13,7 +13,8 @@ export const FormField = (props: TFormFieldPropTypes): ReactElement | null => {
     className = '',
     dataId = '',
     hideErrorMessage = false,
-    errorMessageIcon
+    errorMessageIcon,
+    defaultValue
   } = props
   const { register, errors, setValue, control } = useContext(FormContext)
 
@@ -28,6 +29,7 @@ export const FormField = (props: TFormFieldPropTypes): ReactElement | null => {
       <Controller
         control={control}
         name={name}
+        {...(defaultValue ? { defaultValue } : {})}
         render={({ field, fieldState }) => {
           return (
             <>
