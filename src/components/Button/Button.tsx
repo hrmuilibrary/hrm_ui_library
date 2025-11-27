@@ -13,6 +13,7 @@ export const Button = (props: TButtonPropTypes): ReactElement => {
     iconProps,
     buttonActionType = 'button',
     disabled,
+    pressed,
     isLoading,
     formId,
     dataId = '',
@@ -25,7 +26,7 @@ export const Button = (props: TButtonPropTypes): ReactElement => {
   const justIcon = !buttonText && !children && iconProps !== undefined
 
   const clickHandler = (e: TClickEventType) => {
-    if (disabled || isLoading) {
+    if (pressed || disabled || isLoading) {
       return
     }
 
@@ -43,6 +44,7 @@ export const Button = (props: TButtonPropTypes): ReactElement => {
         `btn--${type}`,
         `btn--${size}`,
         {
+          'pressed':pressed,
           'btn--icon': justIcon,
           [`btn--icon-${iconProps?.alignment || 'left'}`]:
             !isLoading && !justIcon && iconProps?.Component
