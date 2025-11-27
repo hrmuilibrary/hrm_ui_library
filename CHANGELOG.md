@@ -1,3 +1,10 @@
+## [2.5.8](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.5.7...2.5.8) (2025-11-27)
+
+
+### Bug Fixes
+
+* linter ([9f38fa3](https://github.com/hrmuilibrary/hrm_ui_library/commit/9f38fa3e9d0be795e254404ac9713ca156e348c1))
+
 ## [2.5.7](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.5.6...2.5.7) (2025-11-24)
 
 
