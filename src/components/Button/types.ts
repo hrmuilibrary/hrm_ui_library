@@ -5,6 +5,7 @@ export interface TButtonPropTypes
   extends PropsWithChildren<Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type' | 'children'>> {
   id?: string
   disabled?: boolean
+  pressed?: boolean
   buttonActionType?: 'submit' | 'button' | 'reset'
   buttonText?: string | ReactElement
   className?: string

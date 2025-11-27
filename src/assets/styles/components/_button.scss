@@ -126,6 +126,9 @@
     background-color: var(--ds-button-primary-bg);
     color: var(--ds-button-primary-text-default);
 
+    &.pressed {
+      background-color: var(--ds-button-primary-bg-pressed);
+    }
     &:not(#{$this}--loading) {
       &:hover {
         background-color: var(--ds-button-primary-bg-hover);
@@ -157,7 +160,10 @@
     background-color: var(--ds-button-secondary-bg);
     color: var(--ds-button-secondary-text-default);
     border: var(--ds-button-secondary-border);
-
+    &.pressed {
+      background-color: var(--ds-button-secondary-bg-pressed);
+    }
+    
     &:not(#{$this}--loading) {
       &:hover {
         background-color: var(--ds-button-secondary-bg-hover);
@@ -192,7 +198,9 @@
   &--tertiary {
     background-color: var(--ds-button-tertiary-bg);
     color: var(--ds-button-tertiary-text-default);
-
+    &.pressed {
+      background-color: var(--ds-button-tertiary-bg-pressed);
+    }
     &:not(#{$this}--loading) {
       &:hover {
         background-color: var(--ds-button-tertiary-bg-hover);
@@ -224,7 +232,9 @@
   &--danger {
     background-color: var(--ds-button-danger-bg);
     color: var(--ds-button-danger-text-default);
-
+    &.pressed {
+      background-color: var(--ds-button-danger-bg-pressed);
+    }
     &:not(#{$this}--loading) {
       &:hover {
         background-color: var(--ds-button-danger-bg-hover);
