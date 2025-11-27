@@ -44,7 +44,7 @@ export const Button = (props: TButtonPropTypes): ReactElement => {
         `btn--${type}`,
         `btn--${size}`,
         {
-          'pressed':pressed,
+          pressed: pressed,
           'btn--icon': justIcon,
           [`btn--icon-${iconProps?.alignment || 'left'}`]:
             !isLoading && !justIcon && iconProps?.Component
