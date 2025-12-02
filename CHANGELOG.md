@@ -1,3 +1,10 @@
+## [2.5.9](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.5.8...2.5.9) (2025-12-02)
+
+
+### Bug Fixes
+
+* memoize dynamic component to prevent re-renders ([f46b745](https://github.com/hrmuilibrary/hrm_ui_library/commit/f46b745007145c9905fa0a54f623fa23b19c3575))
+
 ## [2.5.8](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.5.7...2.5.8) (2025-11-27)
 
 
