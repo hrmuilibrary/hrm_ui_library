@@ -1,3 +1,11 @@
+## [2.5.10](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.5.9...2.5.10) (2025-12-03)
+
+
+### Bug Fixes
+
+* add defaultValue to FormField ([eb81986](https://github.com/hrmuilibrary/hrm_ui_library/commit/eb81986950b8cf5d24940241a8ccafcc18dda31d))
+* add fetchPriority property to img tag to minimize load time ([4be49a7](https://github.com/hrmuilibrary/hrm_ui_library/commit/4be49a7079b440a5d87ecf75b787adc1e247a77d))
+
 ## [2.5.9](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.5.8...2.5.9) (2025-12-02)
 
 
