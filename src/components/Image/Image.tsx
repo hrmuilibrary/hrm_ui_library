@@ -27,6 +27,7 @@ export const Image = (props: ImagePropTypes): React.ReactElement => {
       className={`image ${className}`}
       src={imagePath}
       alt={name}
+      fetchPriority="low"
       style={{
         aspectRatio: ratio,
         width: isFullWidth ? '100%' : '',
