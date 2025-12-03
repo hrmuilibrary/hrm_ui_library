@@ -18,4 +18,5 @@ export interface FormPropTypes {
   mode?: keyof ValidationMode
   reValidateMode?: 'onChange' | 'onSubmit' | 'onBlur' | undefined
   formId?: string
+  language?: string
 }
