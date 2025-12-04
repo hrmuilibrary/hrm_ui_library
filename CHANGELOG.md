@@ -1,3 +1,10 @@
+## [2.5.11](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.5.10...2.5.11) (2025-12-04)
+
+
+### Bug Fixes
+
+* revalidate form after language change ([000783d](https://github.com/hrmuilibrary/hrm_ui_library/commit/000783d42fe61bd1b733366a4bab27d4a3a83320))
+
 ## [2.5.10](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.5.9...2.5.10) (2025-12-03)
 
 
