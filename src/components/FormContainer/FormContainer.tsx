@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import classnames from 'classnames'
@@ -17,6 +17,7 @@ export const FormContainer = (props: FormPropTypes): React.ReactElement => {
     validationScheme,
     buttonConfigs,
     formId,
+    language,
     onSubmit
   } = props
 
@@ -50,6 +51,15 @@ export const FormContainer = (props: FormPropTypes): React.ReactElement => {
       onSubmit(data, formState, dirtyFields)
     }
   }
+
+  useEffect(() => {
+    if (formState.isSubmitted) {
+      const fieldsWithErrors = Object.keys(formState.errors)
+      if (fieldsWithErrors.length > 0) {
+        trigger(fieldsWithErrors) // only revalidate fields that have errors
+      }
+    }
+  }, [language])
 
   return (
     <form
