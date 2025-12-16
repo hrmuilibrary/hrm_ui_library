@@ -30,7 +30,6 @@ export const FilePreview = ({ preview, type }: IFilePreviewProps): ReactElement 
         <img
           src={hasError ? filePreviewSVG : preview}
           alt="Preview"
-          fetchPriority="low"
           onLoad={handleImageOnLoad}
           onError={handleImageOnError}
           className={classnames('dz-file-upload__files--item__preview--image', {
@@ -45,7 +44,6 @@ export const FilePreview = ({ preview, type }: IFilePreviewProps): ReactElement 
     <img
       src={filePreviewSVG}
       alt="Preview"
-      fetchPriority="low"
       className="dnd-file-upload__files--item__preview--image dnd-file-upload__files--item__preview--image_default"
     />
   )
