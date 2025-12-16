@@ -1,3 +1,10 @@
+## [2.5.12](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.5.11...2.5.12) (2025-12-16)
+
+
+### Bug Fixes
+
+* resolve error in react there is not fetchPriority prop ([d14f4d3](https://github.com/hrmuilibrary/hrm_ui_library/commit/d14f4d35e551200f44581cf04038ece98f9bf89b))
+
 ## [2.5.11](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.5.10...2.5.11) (2025-12-04)
 
 
