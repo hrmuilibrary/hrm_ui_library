@@ -1,5 +1,5 @@
 import React, { ReactElement, useCallback, useEffect, useMemo, useState } from 'react'
-import { OptionItem } from '../../../../helperComponents'
+import { OptionItem } from '../../../../helperComponents/OptionItem'
 import { Empty } from '../../../Empty'
 import { Modal } from '../../../Modal'
 import { Text } from '../../../Text'

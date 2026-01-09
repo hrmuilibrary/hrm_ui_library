@@ -9,7 +9,7 @@ import { useImportFilesDynamically } from '../hooks'
 import { Modal } from '../../Modal'
 import { CustomHeader } from '../CustomHeader/CustomHeader'
 import DatePicker from 'react-datepicker'
-import { Label } from '../../../helperComponents'
+import { Label } from '../../../helperComponents/Label'
 
 export const SimpleDatePickerMobile = (props: ISimpleDatePickerProps): ReactElement => {
   const {

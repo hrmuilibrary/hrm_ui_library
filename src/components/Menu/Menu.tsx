@@ -7,7 +7,7 @@ import {
   useGetElemPositions,
   useHideOnScroll
 } from '../../hooks'
-import { OptionItem } from '../../helperComponents'
+import { OptionItem } from '../../helperComponents/OptionItem'
 import { TMenuProps, TMenuItem } from './types'
 import classNames from 'classnames'
 

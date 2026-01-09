@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react'
-import { ErrorMessage, Label } from '../../helperComponents'
+import { ErrorMessage } from '../../helperComponents/ErrorMessage'
+import { Label } from '../../helperComponents/Label'
 import { TTextAreaTypeProps } from './types'
 import { Text } from '../Text'
 import classNames from 'classnames'

@@ -1,6 +1,6 @@
 import React, { ReactElement, useCallback, useMemo, useState } from 'react'
 import { Empty } from '../../../Empty'
-import { OptionItem } from '../../../../helperComponents'
+import { OptionItem } from '../../../../helperComponents/OptionItem'
 import { ContentTop } from '../../SharedComponents'
 import { TMultiSingleTabPropTypes } from '../../types'
 import { FixedSizeList as List } from 'react-window'

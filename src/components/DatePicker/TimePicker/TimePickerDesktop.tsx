@@ -3,7 +3,7 @@ import dayjs from 'dayjs'
 import DatePicker from 'react-datepicker'
 import { Input } from '../../Input'
 import { ITimePickerProps } from '../types'
-import { Label } from '../../../helperComponents'
+import { Label } from '../../../helperComponents/Label'
 import { useImportFilesDynamically } from '../hooks'
 import IconClock from '../../SVGIcons/IconClock'
 

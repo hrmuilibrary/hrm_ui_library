@@ -12,12 +12,13 @@ import image from '@rollup/plugin-image'
 import postcss from 'rollup-plugin-postcss'
 import * as sass from 'sass'
 import { fileURLToPath } from 'url';
+import { visualizer } from 'rollup-plugin-visualizer';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const extensions = ['.ts', '.tsx', '.js', '.jsx']
-const ignoreExtensions = ['.stories.tsx', '.stories.d.ts']
+const ignoreExtensions = ['.stories.tsx', '.stories.d.ts', 'types.ts']
 
 // create input config for rollup for each folder
 const getInputOptions = (localPath = 'src', currentInputOptions = {}) => {
@@ -88,11 +89,11 @@ const plugins = [
   json(),
   resolve({ extensions }),
   babel({
-    babelrc: true,
     extensions,
     runtimeHelpers: true,
     exclude: 'node_modules/**',
-    presets: ['@babel/preset-env']
+    'presets': ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
+    'plugins': ['@babel/plugin-transform-runtime']
   }),
   commonjs({ include: 'node_modules/**' }),
   postcss({
@@ -112,7 +113,8 @@ const plugins = [
     flatten: false
   }),
   image(),
-  writeCSS()
+  writeCSS(),
+  visualizer({ open: true , template: 'treemap'})
 ]
 
 export default [
@@ -130,7 +132,6 @@ export default [
       )
     },
     plugins: [
-      json(),
       ...plugins,
       dtsGenerator(),
       generatePackageJson({

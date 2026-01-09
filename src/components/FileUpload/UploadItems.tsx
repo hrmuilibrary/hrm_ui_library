@@ -3,7 +3,7 @@ import { Text } from '../Text'
 import { IUploadItemPropTypes } from './types'
 import { useFormProps } from '../../hooks'
 import { openFileInNewWindow } from '../../utils/helpers'
-import { ErrorMessage } from '../../helperComponents'
+import { ErrorMessage } from '../../helperComponents/ErrorMessage'
 import { Button } from '../Button'
 import IconDelete from '../SVGIcons/IconDelete'
 

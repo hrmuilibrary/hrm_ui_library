@@ -1,6 +1,6 @@
 import React, { useCallback, useId, useRef, useState } from 'react'
 import { Input } from '../../Input'
-import { OptionItem } from '../../../helperComponents'
+import { OptionItem } from '../../../helperComponents/OptionItem'
 import { useGetElemPositions, useGetElemSizes, useOnOutsideClick } from '../../../hooks'
 import { TNestedSelectProps } from '../types'
 import { IconChevronUp } from '../../SVGIcons/IconChevronUp'

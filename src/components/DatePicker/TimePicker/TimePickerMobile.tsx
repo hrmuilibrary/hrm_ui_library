@@ -1,6 +1,6 @@
 import React, { ReactElement, useState } from 'react'
 import { ITimePickerProps } from '../types'
-import { Label } from '../../../helperComponents'
+import { Label } from '../../../helperComponents/Label'
 import { Input } from '../../Input'
 import IconCalendarRight from '../../SVGIcons/IconCalendarRight'
 import dayjs from 'dayjs'

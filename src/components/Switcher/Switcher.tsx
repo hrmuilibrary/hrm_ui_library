@@ -1,6 +1,6 @@
 import React, { forwardRef, useMemo } from 'react'
 import classnames from 'classnames'
-import { Label } from '../../helperComponents'
+import { Label } from '../../helperComponents/Label'
 import { TSwitcherProps } from './types'
 
 export const Switcher = forwardRef((props: TSwitcherProps, ref): React.ReactElement => {

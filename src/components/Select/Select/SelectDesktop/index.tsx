@@ -2,7 +2,7 @@ import classNames from 'classnames'
 import React, { ReactElement, useCallback, useEffect, useId, useMemo, useState } from 'react'
 import { FixedSizeList as List } from 'react-window'
 import { DROPDOWN_AND_INPUT_GAP } from '../../../../consts'
-import { OptionItem } from '../../../../helperComponents'
+import { OptionItem } from '../../../../helperComponents/OptionItem'
 import {
   useGetElemPositions,
   useGetElemSizes,

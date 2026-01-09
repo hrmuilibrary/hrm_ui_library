@@ -3,7 +3,7 @@ import { type StoryFn, type StoryObj } from '@storybook/react'
 
 import { Button as _Button, IconChevronDown } from '../index'
 import { TButtonPropTypes } from '../components/Button/types'
-import { CodeBlock } from '../helperComponents'
+import { CodeBlock } from '../helperComponents/CodeBlock'
 
 export default {
   title: 'Button',

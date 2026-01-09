@@ -5,7 +5,7 @@ import { Input } from '../../Input'
 import { DateFormat, IRangeDatePickerProps, TRangePickerValues } from '../types'
 import { useImportFilesDynamically } from '../hooks'
 import { isSameDay } from '../../../utils/helpers'
-import { Label } from '../../../helperComponents'
+import { Label } from '../../../helperComponents/Label'
 import IconCalendarRight from '../../SVGIcons/IconCalendarRight'
 
 export const RangeDatePickerDesktop = forwardRef<any, IRangeDatePickerProps>(
