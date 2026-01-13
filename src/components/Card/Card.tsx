@@ -13,7 +13,7 @@ const CardComponent = ({
   isExpandedFromParent,
   ...rest
 }: TCardProps): React.ReactElement => {
-  const [isCardExpanded, toggleIsExpanded] = useState(isExpanded ?? false)
+  const [isCardExpanded, toggleIsExpanded] = useState<boolean>(isExpanded ?? false)
 
   useEffect(
     () =>
