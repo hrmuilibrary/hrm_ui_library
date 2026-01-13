@@ -1,3 +1,13 @@
+# [3.0.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.6.0...3.0.0) (2026-01-13)
+
+
+* Merge pull request [#125](https://github.com/hrmuilibrary/hrm_ui_library/issues/125) from hrmuilibrary/breaking-change ([32716e8](https://github.com/hrmuilibrary/hrm_ui_library/commit/32716e8acbb50a7e06cd3f9acc689841346f454c))
+
+
+### BREAKING CHANGES
+
+* integrate vite
+
 # [2.6.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.5.12...2.6.0) (2026-01-13)
 
 
