@@ -39,7 +39,7 @@ export const RangeDatePickerMobile = forwardRef<any, IRangeDatePickerProps>(
       value !== undefined && Array.isArray(value) ? value : (currentDates as TRangePickerValues)
 
     const [rangeArray, setRangeDate] = useState(dateInitialValue)
-    const [isCalendarOpen, setIsCalendarOpen] = useState<boolean>(false)
+    const [isCalendarOpen, setIsCalendarOpen] = useState(false)
     const [isApplied, setIsApplied] = useState<boolean>(false)
 
     const onChange = (date: TRangePickerValues): void => {
