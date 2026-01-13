@@ -1,3 +1,10 @@
+# [2.6.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.5.12...2.6.0) (2026-01-13)
+
+
+### Features
+
+* initial commit ([d57f0dc](https://github.com/hrmuilibrary/hrm_ui_library/commit/d57f0dcdd4757497af929bfb277800d4798c8274))
+
 ## [2.5.12](https://github.com/hrmuilibrary/hrm_ui_library/compare/2.5.11...2.5.12) (2025-12-16)
 
 
