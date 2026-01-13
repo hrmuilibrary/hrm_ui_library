@@ -1,3 +1,10 @@
+## [3.0.4](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.0.3...3.0.4) (2026-01-13)
+
+
+### Bug Fixes
+
+* test publish ([5979055](https://github.com/hrmuilibrary/hrm_ui_library/commit/5979055edfb4070ecb4e5f0bdfcea2c8f86b58dd))
+
 ## [3.0.3](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.0.2...3.0.3) (2026-01-13)
 
 
