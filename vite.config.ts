@@ -9,7 +9,6 @@ import pkg from './package.json' with { type: 'json' }
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = resolve(__filename, '..')
-
 const extensions = ['.ts', '.tsx', '.js', '.jsx']
 const ignoreExtensions = ['.stories.tsx', '.stories.d.ts', 'types.ts']
 
