@@ -18,8 +18,7 @@ export const Avatar = ({
   fileAllowedSize,
   onAvatarChange
 }: TAvatarProps): ReactElement => {
-  
-  const [image, setImage] = useState<string>(imagePath)
+  const [image, setImage] = useState(imagePath)
   const getFiles = (files: File[]) => {
     if (files && files[0]) {
       setImage(URL.createObjectURL(files[0]))
