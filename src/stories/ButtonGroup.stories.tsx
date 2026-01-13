@@ -1,14 +1,11 @@
-import type { StoryObj } from '@storybook/react-webpack5'
+import type { StoryObj } from '@storybook/react-vite'
 import { ButtonGroup as _ButtonGroup } from '../components/ButtonGroup'
 import type { StoryFn } from '@storybook/react'
 import React from 'react'
 import { IButtonGroup } from '../components/ButtonGroup/types'
-import {
-  IconOnlyEmployee,
-  IconPeopleList,
-  IconProjectProduct,
-  IconUnitsEmployee
-} from '../components/SVGIcons'
+import IconPeopleList from '../components/SVGIcons/IconPeopleList'
+import IconProjectProduct from '../components/SVGIcons/IconProjectProduct'
+import IconUnitsEmployee from '../components/SVGIcons/IconUnitsEmployee'
 import { noop } from '../utils/helpers'
 
 export default {

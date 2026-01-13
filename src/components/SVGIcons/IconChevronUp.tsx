@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react'
 import { ISVGIconProps } from './types'
 import classNames from 'classnames'
 
-export const IconChevronUp = ({
+const IconChevronUp = ({
   size,
   type,
   className = '',

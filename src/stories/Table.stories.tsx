@@ -8,9 +8,6 @@ import {
   AdvancedPagination,
   ColumnSettings,
   Button,
-  IconDelete,
-  IconEdit,
-  IconAdd,
   Chips,
   Text
 } from '../index'
@@ -18,6 +15,9 @@ import { ColumnDef } from '@tanstack/react-table'
 import classnames from 'classnames'
 import { IndeterminateCheckbox } from '../components/TableV2/IndeterminateCheckbox'
 import { TableState } from 'react-table'
+import IconDelete from '../components/SVGIcons/IconDelete'
+import IconEdit from '../components/SVGIcons/IconEdit'
+import IconAdd from '../components/SVGIcons/IconAdd'
 
 const data: any[] = [
   {

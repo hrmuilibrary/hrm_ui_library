@@ -1,6 +1,6 @@
 import React, { ReactElement, useContext } from 'react'
 import { ErrorMessage as ReactHookFormErrorMessage } from '@hookform/error-message'
-import { ErrorMessage } from '../../helperComponents'
+import { ErrorMessage } from '../../helperComponents/ErrorMessage'
 import { FormContext } from '../../context'
 import { Controller } from 'react-hook-form'
 import { TFormFieldPropTypes } from './types'

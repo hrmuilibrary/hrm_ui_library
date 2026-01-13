@@ -1,9 +1,10 @@
 import React, { useCallback } from 'react'
 import { useCardContext } from '../CardContext'
-import { IconChevronDown, IconChevronRight } from '../../SVGIcons'
 import classNames from 'classnames'
 import { noop } from '../../../utils/helpers'
 import { Button } from '../../Button'
+import IconChevronDown from '../../SVGIcons/IconChevronDown'
+import IconChevronRight from '../../SVGIcons/IconChevronRight'
 
 export const CardHead = ({ children }: { children: React.ReactNode }) => {
   const { toggleIsExpanded, onExpand, isExpandable, isExpanded } = useCardContext()

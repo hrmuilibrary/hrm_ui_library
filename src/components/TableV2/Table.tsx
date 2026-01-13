@@ -12,8 +12,8 @@ import { Text } from '../Text'
 import classnames from 'classnames'
 import { Empty } from '../Empty'
 import { Button } from '../Button'
-import { IconChevronDown } from '../SVGIcons/IconChevronDown'
-import { IconChevronUp } from '../SVGIcons/IconChevronUp'
+import IconChevronDown from '../SVGIcons/IconChevronDown'
+import IconChevronUp from '../SVGIcons/IconChevronUp'
 import 'react-loading-skeleton/dist/skeleton.css'
 
 enum ColumnId {

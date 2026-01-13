@@ -1,5 +1,3 @@
-import { TButtonPropTypes } from '../Button/types'
-
 export interface TUnderConstructionProps {
   size?: string
   className?: string

@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react'
-import { IconChevronLeft } from '../../../SVGIcons/IconChevronLeft'
+import IconChevronLeft from '../../../SVGIcons/IconChevronLeft'
 import { Input } from '../../../Input'
 import IconDismissFilled from '../../../SVGIcons/IconDismissFilled'
 import IconSearchFilled from '../../../SVGIcons/IconSearchFilled'

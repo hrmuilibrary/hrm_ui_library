@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react'
 import { Radio } from './Radio'
 import { TRadioGroupProps, TRadioOptionItem } from './types'
-import { Label } from '../../helperComponents'
+import { Label } from '../../helperComponents/Label'
 import classnames from 'classnames'
 
 export const RadioGroup = forwardRef((props: TRadioGroupProps, ref): React.ReactElement => {

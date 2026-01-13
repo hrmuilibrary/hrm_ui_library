@@ -3,8 +3,7 @@ import { Text } from '../Text'
 import { Image } from '../Image'
 import { TUnderConstructionProps } from './types'
 import classNames from 'classnames'
-// @ts-ignore
-import noResultImage from '../../assets/images/under-construction.svg'
+import noResultImage from '../../assets/images/under-construction.webp'
 import { SELECT_TRANSLATIONS } from './localization'
 
 export const UnderConstruction = (props: TUnderConstructionProps): React.ReactElement => {

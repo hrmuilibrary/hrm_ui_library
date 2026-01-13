@@ -10,7 +10,7 @@ import {
 import { TMenuItem, TNestedMenuProps } from './types'
 import classNames from 'classnames'
 import { CollapseGroup } from '../Collapse'
-import { OptionItem } from '../../helperComponents'
+import { OptionItem } from '../../helperComponents/OptionItem'
 
 export const NestedMenu = ({
   menuItems = [],

@@ -1,6 +1,6 @@
 import React, { ReactElement, useRef, useId, useState } from 'react'
 import classNames from 'classnames'
-import { OptionItem } from '../../../helperComponents'
+import { OptionItem } from '../../../helperComponents/OptionItem'
 import { useGetElemSizes, useOnOutsideClick } from '../../../hooks'
 import { Loading, ButtonSelectWrapper } from '../SharedComponents'
 import { TButtonSelectPropTypes } from '../types'

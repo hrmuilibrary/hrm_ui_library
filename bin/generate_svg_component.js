@@ -45,7 +45,7 @@ function generateReactComponent(componentName, svgPath) {
 import {ISVGIconProps} from './types';
 import classNames from 'classnames'
 
-export const ${componentName} = ({size, type, className = '', onClick, refHandler, id, dataId }: ISVGIconProps): ReactElement => (
+const ${componentName} = ({size, type, className = '', onClick, refHandler, id, dataId }: ISVGIconProps): ReactElement => (
   <svg
       xmlns="http://www.w3.org/2000/svg"
       className={classNames('svg-icon', {

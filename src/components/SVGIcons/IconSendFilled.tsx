@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react'
 import { ISVGIconProps } from './types'
 import classNames from 'classnames'
 
-export const IconSendFilled = ({
+const IconSendFilled = ({
   size,
   type,
   className = '',

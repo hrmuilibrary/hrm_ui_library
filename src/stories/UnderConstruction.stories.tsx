@@ -11,7 +11,8 @@ export default {
     size: {
       options: ['large', 'small'],
       control: { type: 'radio' }
-    }
+    },
+    language: { control: 'radio', options: ['en', 'ru', 'hy'] }
   }
 }
 const Template: StoryFn<TUnderConstructionProps> = (args) => {

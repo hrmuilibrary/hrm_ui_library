@@ -1,19 +1,15 @@
 import React, { useState } from 'react'
-import {
-  Menu as _Menu,
-  Button,
-  IconArrowExit,
-  IconCheckmark,
-  IconSettings,
-  IconPeople,
-  NestedMenu as _NestedMenu,
-  IconBeach
-} from '../index'
+import { Menu as _Menu, Button, NestedMenu as _NestedMenu } from '../index'
 import IconEdit from '../components/SVGIcons/IconEdit'
 import IconAddFilled from '../components/SVGIcons/IconAddFilled'
 import IconMore from '../components/SVGIcons/IconMore'
 import { StoryFn, type StoryObj } from '@storybook/react'
 import { LinkPropTypes } from '../components/Link/types'
+import IconArrowExit from '../components/SVGIcons/IconArrowExit'
+import IconCheckmark from '../components/SVGIcons/IconCheckmark'
+import IconSettings from '../components/SVGIcons/IconSettings'
+import IconPeople from '../components/SVGIcons/IconSettings'
+import IconBeach from '../components/SVGIcons/IconBeach'
 
 export default {
   title: 'Menu',
