@@ -1,7 +1,8 @@
 import React from 'react'
 import { type StoryFn, type StoryObj } from '@storybook/react'
 
-import { Button as _Button, IconChevronDown } from '../index'
+import { Button as _Button } from '../index'
+import IconChevronDown from '../components/SVGIcons/IconChevronDown'
 import { TButtonPropTypes } from '../components/Button/types'
 import { CodeBlock } from '../helperComponents/CodeBlock'
 

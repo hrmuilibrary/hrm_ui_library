@@ -1,8 +1,8 @@
 import React, { LegacyRef, ReactElement } from 'react'
 import classnames from 'classnames'
 import { Text } from '../../../../Text'
-import { IconChevronUp } from '../../../../SVGIcons/IconChevronUp'
-import { IconChevronDown } from '../../../../SVGIcons/IconChevronDown'
+import IconChevronUp from '../../../../SVGIcons/IconChevronUp'
+import IconChevronDown from '../../../../SVGIcons/IconChevronDown'
 
 type TProps = {
   buttonText: string

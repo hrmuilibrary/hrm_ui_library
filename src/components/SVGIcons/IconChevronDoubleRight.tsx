@@ -3,7 +3,7 @@ import React from 'react'
 import type { ISVGIconProps } from './types'
 import classNames from 'classnames'
 
-export const IconChevronDoubleRight = ({
+const IconChevronDoubleRight = ({
   size,
   type,
   className = '',

@@ -193,3 +193,8 @@ declare type TCallBackFn = () => void
 declare type TDirtyFields = Partial<Readonly<{ [x: string]: unknown }>>
 
 declare module '*.svg'
+
+declare module '*.webp' {
+  const src: string
+  export default src
+}

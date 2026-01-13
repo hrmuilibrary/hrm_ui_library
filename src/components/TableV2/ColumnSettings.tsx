@@ -1,7 +1,7 @@
 import type { Column, Table } from '@tanstack/react-table'
 import React, { useState } from 'react'
 import { Button } from '../Button'
-import { IconSettings } from '../SVGIcons'
+import IconSettings from '../SVGIcons/IconSettings'
 import { Switcher } from '../Switcher'
 import { Menu } from '../Menu'
 import { Tooltip } from '../Tooltip'

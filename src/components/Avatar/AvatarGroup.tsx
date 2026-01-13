@@ -5,7 +5,7 @@ import { TAvatarGroupProps } from './types'
 import { useScreenSize } from '../../hooks'
 import classNames from 'classnames'
 import { Positions } from '../Tooltip/types'
-import { IconAdd } from '../SVGIcons/IconAdd'
+import IconAdd from '../SVGIcons/IconAdd'
 
 const VISIBLE_AVATARS_AMOUNT = {
   small: 2,

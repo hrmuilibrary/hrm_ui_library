@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react'
 import { ISVGIconProps } from './types'
 import classNames from 'classnames'
 
-export const IconArrowExportLeftToRight = ({
+const IconArrowExportLeftToRight = ({
   size,
   type,
   className = '',

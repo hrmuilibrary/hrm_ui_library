@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react'
 import { ISVGIconProps } from './types'
 import classNames from 'classnames'
 
-export const IconCaretDownFilled = ({
+const IconCaretDownFilled = ({
   size,
   type,
   className = '',

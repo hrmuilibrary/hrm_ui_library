@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react'
 import { ISVGIconProps } from './types'
 import classNames from 'classnames'
 
-export const IconShareFilled = ({
+const IconShareFilled = ({
   size,
   type,
   className = '',

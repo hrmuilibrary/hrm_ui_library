@@ -8,7 +8,7 @@ import IconDismissFilled from '../../SVGIcons/IconDismissFilled'
 import IconSearchFilled from '../../SVGIcons/IconSearchFilled'
 import IconSelectAllOff from '../../SVGIcons/IconSelectAllOff'
 import { useIsMobile } from '../../../hooks/useGetIsMobile'
-import { IconChevronLeft } from '../../SVGIcons'
+import IconChevronLeft from '../../SVGIcons/IconChevronLeft'
 
 type TProps = {
   searchValue?: string

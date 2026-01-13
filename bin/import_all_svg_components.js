@@ -14,9 +14,13 @@ fs.readdir(svgDirectory, (err, files) => {
 
     const outputPath = path.join(svgDirectory, 'index.ts');
 
-    const content = files.reduce((acc, file) => {
-        return file.includes('Icon') ? `${acc};export * from './${file.replace('.tsx', '')}';` : acc;
-    }, '');
+    const content = files
+        .filter(file => file.includes('Icon') && file.endsWith('.tsx'))
+        .map(file => {
+            const componentName = file.replace('.tsx', '');
+            return `export { default as ${componentName} } from './${componentName}';`;
+        })
+        .join('\n');
 
     fs.writeFile(outputPath, content, err => {
         if (err) {

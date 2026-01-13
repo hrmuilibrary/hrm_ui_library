@@ -1,9 +1,10 @@
 import React, { useMemo } from 'react'
 import { generateDataTestId } from '../../../utils/helpers'
-import { IconChevronDown, IconChevronUp } from '../../SVGIcons'
 import { Text } from '../../Text'
 import { TCollapseItemTitleV2 } from '../types'
 import classNames from 'classnames'
+import IconChevronDown from '../../SVGIcons/IconChevronDown'
+import IconChevronUp from '../../SVGIcons/IconChevronUp'
 
 interface ITitleProps {
   dataId: string

@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "dist",
-//    "target": "es5",
+    "rootDir": "src",
     "lib": [
       "dom",
       "dom.iterable",
@@ -15,16 +15,14 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": false,
     "jsx": "react-jsx",
     "declaration": true,
     "declarationDir": "dist",
-
     "target": "es6",
-//    "lib": ["dom", "es6"],
   },
   "include": [
     "src",

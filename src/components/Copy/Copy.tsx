@@ -2,7 +2,7 @@ import React, { useState, useRef, ReactElement } from 'react'
 import { Button } from '../Button'
 import { Popover } from '../Popover'
 import { TCopyProps } from './types'
-import { IconCopy } from '../SVGIcons/IconCopy'
+import IconCopy from '../SVGIcons/IconCopy'
 
 export const Copy = ({ textAfterCopy, className = '', text, dataId }: TCopyProps): ReactElement => {
   const [isTooltipVisible, setTooltipVisibility] = useState(false)

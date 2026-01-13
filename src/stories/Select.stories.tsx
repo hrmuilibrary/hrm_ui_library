@@ -10,7 +10,6 @@ import {
   Avatar,
   Badge
 } from '../index'
-// @ts-ignore
 import imageFile from '../assets/images/avatar.jpg'
 import IconPerson from '../components/SVGIcons/IconPerson'
 import IconInfo from '../components/SVGIcons/IconInfo'
@@ -21,7 +20,6 @@ import {
   TMultiSelectPropTypes,
   TSingleSelectPropTypes
 } from '../components/Select/types'
-import { Positions } from '../components/Tooltip/types'
 import IconSignOut from '../components/SVGIcons/IconSignOut'
 import IconQuestion from '../components/SVGIcons/IconQuestion'
 import IconChatMultiple from '../components/SVGIcons/IconChatMultiple'

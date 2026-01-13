@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react'
 import { ISVGIconProps } from './types'
 import classNames from 'classnames'
 
-export const IconCubeTree = ({
+const IconCubeTree = ({
   size,
   type,
   className = '',

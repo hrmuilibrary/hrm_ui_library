@@ -3,8 +3,8 @@ import { Input } from '../../Input'
 import { OptionItem } from '../../../helperComponents/OptionItem'
 import { useGetElemPositions, useGetElemSizes, useOnOutsideClick } from '../../../hooks'
 import { TNestedSelectProps } from '../types'
-import { IconChevronUp } from '../../SVGIcons/IconChevronUp'
-import { IconChevronDown } from '../../SVGIcons/IconChevronDown'
+import IconChevronUp from '../../SVGIcons/IconChevronUp'
+import IconChevronDown from '../../SVGIcons/IconChevronDown'
 
 const LEVEL_LEFT_MARGIN = 10
 

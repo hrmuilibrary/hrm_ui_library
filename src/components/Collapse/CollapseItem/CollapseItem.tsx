@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'motion/react'
 import { Text } from '../../Text'
-import { IconChevronRight } from '../../SVGIcons/IconChevronRight'
+import IconChevronRight from '../../SVGIcons/IconChevronRight'
 import { Divider } from '../../Divider'
 import { AnimatePresenceWrapper } from '../../../helperComponents/AnimatePresenceWrapper'
 import { TCollapseProps } from '../types'
