@@ -1,3 +1,10 @@
+## [3.0.6](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.0.5...3.0.6) (2026-01-14)
+
+
+### Bug Fixes
+
+* add `logout` fn in ui-lib helpers ([b43157a](https://github.com/hrmuilibrary/hrm_ui_library/commit/b43157ac9d77b086bdac1869f7fe983c44b6bd1a))
+
 ## [3.0.5](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.0.4...3.0.5) (2026-01-13)
 
 
