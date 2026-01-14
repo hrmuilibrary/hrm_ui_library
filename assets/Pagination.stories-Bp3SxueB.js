@@ -1,6 +1,0 @@
-import{j as s}from"./jsx-runtime-oQqas1I7.js";import"./iframe-DYBRI1wp.js";import"./DropzoneFileUpload-CKaDWd0o.js";import{P as i}from"./UnderConstruction-BP18KISM.js";import"./types-DQ6VAzuE.js";import"./ButtonGroup-D-oAr9WM.js";import"./Chips-CBc4N0zw.js";import"./Text-Ervgr_He.js";import"./IconYoutube-Ckr_0WrR.js";import"./IconInfo-D81pZUPg.js";import"./IconPerson-BIEUOdwe.js";import"./IconUnitsEmployee-DtJhYD3s.js";import"./preload-helper-Dp1pzeXC.js";import"./IconDynamicComponent-BzOHAEqy.js";import"./index-Bw1HxFsN.js";import"./index-DJWDk8xS.js";const T={title:"Pagination",component:i,argTypes:{size:{options:["large","medium","small"],control:{type:"radio"}}}},m=({pageSize:p,...r})=>s.jsx(i,{pageSize:10,...r,handleChangePage:n=>{console.log(n)},totalCount:286,classname:""}),o=m.bind({});o.args={size:"large",totalCount:100};var t,a,e;o.parameters={...o.parameters,docs:{...(t=o.parameters)==null?void 0:t.docs,source:{originalSource:`({
-  pageSize,
-  ...args
-}) => <_Pagination pageSize={10} {...args} handleChangePage={item => {
-  console.log(item);
-}} totalCount={286} classname="" />`,...(e=(a=o.parameters)==null?void 0:a.docs)==null?void 0:e.source}}};const b=["Pagination"];export{o as Pagination,b as __namedExportsOrder,T as default};

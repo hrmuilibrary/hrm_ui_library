@@ -1,0 +1,7 @@
+import{j as p}from"./jsx-runtime-uGtigUhx.js";import{r as i}from"./iframe-CCpZ0RzU.js";import"./DropzoneFileUpload-B6UIcAcl.js";import{k as e}from"./UnderConstruction-A_PNalYn.js";import"./types-DQfykHh9.js";import"./ButtonGroup-CujBHiIl.js";import"./Chips-DjPG7KFe.js";import"./Text-CGJlnosw.js";import"./IconYoutube-oOrWhdz0.js";import"./IconInfo-DaPyXjYs.js";import"./IconPerson-N3kFoPbx.js";import"./IconUnitsEmployee-CIp6I4TM.js";import"./preload-helper-Dp1pzeXC.js";import"./IconDynamicComponent-DqSFy7yo.js";import"./index-31GdvHSE.js";import"./index-DZFHmqbk.js";const $={title:"Counter",component:e},d=s=>{const[a,m]=i.useState(6),u=c=>{m(c)};return p.jsx(e,{...s,handleChange:u,counter:a,dataId:"counter"})},t=d.bind({});t.args={max:999,min:5,label:"Counter label",customError:""};var o,r,n;t.parameters={...t.parameters,docs:{...(o=t.parameters)==null?void 0:o.docs,source:{originalSource:`args => {
+  const [count, setCount] = useState(6);
+  const onChange = (count: string | number | undefined) => {
+    setCount(count as number);
+  };
+  return <_Counter {...args} handleChange={onChange} counter={count} dataId={'counter'} />;
+}`,...(n=(r=t.parameters)==null?void 0:r.docs)==null?void 0:n.source}}};const q=["Counter"];export{t as Counter,q as __namedExportsOrder,$ as default};
