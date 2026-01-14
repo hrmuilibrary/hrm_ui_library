@@ -1,4 +1,5 @@
 import dayjs from 'dayjs'
+import { STORE_KEYS } from '../consts'
 
 export const noop = (): void => {
   return undefined
@@ -97,4 +98,10 @@ export const generateDataTestId = (postfix: string, dataId?: string): string => 
     return ''
   }
   return `${dataId}-${postfix}`
+}
+
+export const clearStorage = () => {
+  for (const key in STORE_KEYS) {
+    localStorage.removeItem(key)
+  }
 }

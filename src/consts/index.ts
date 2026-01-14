@@ -95,3 +95,15 @@ export const FILE_ACCEPT_TYPE = {
     '.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document'
   ]
 }
+
+export enum STORE_KEYS {
+  selectedLanguage = 'selectedLanguage',
+  userActiveRole = 'userActiveRole',
+  roleInfo = 'roleInfo',
+  userInfo = 'userInfo',
+  navigationInfo = 'navigationInfo',
+  isNavMenuExpanded = 'isNavMenuExpanded',
+  isAuthenticated = 'isAuthenticated',
+  personId = 'personId',
+  isMobile = 'isMobile'
+}
