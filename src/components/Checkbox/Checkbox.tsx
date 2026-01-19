@@ -5,7 +5,8 @@ import { Link } from '../Link'
 import { Text } from '../Text'
 import { TCheckboxProps } from './types'
 import IconInfo from '../SVGIcons/IconInfo'
-import { IconDynamicComponent } from '../IconDynamicComponent'
+import { ICONS_MAPPING } from './consts'
+import { IconDynamicComponent } from '../../helperComponents/IconDynamicComponent'
 
 export const Checkbox = forwardRef(
   (props: TCheckboxProps, ref: ForwardedRef<HTMLInputElement>): ReactElement | null => {
@@ -113,7 +114,7 @@ export const Checkbox = forwardRef(
           />
           <span className="controller__icon">
             <IconDynamicComponent
-              componentName={iconProps.name}
+              Component={ICONS_MAPPING[iconProps.name]}
               size="xxsmall"
               type={disabled ? 'disabled' : 'inverse'}
               className="controller__mark"

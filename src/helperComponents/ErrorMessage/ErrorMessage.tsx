@@ -1,13 +1,14 @@
 import React, { ReactElement } from 'react'
 import { TErrorMessageProps } from './types'
 import { Text } from '../../components/Text'
-import { IconDynamicComponent } from '../../components/IconDynamicComponent'
 import { generateDataTestId } from '../../utils/helpers'
 import classnames from 'classnames'
+import { ICONS_MAPPING } from './consts'
+import { IconDynamicComponent } from '../IconDynamicComponent'
 
 export const ErrorMessage = ({
   message,
-  icon,
+  icon = 'infoFilled',
   dataId,
   className
 }: TErrorMessageProps): ReactElement => {
@@ -19,9 +20,12 @@ export const ErrorMessage = ({
       dataId={generateDataTestId('error-message', dataId)}
     >
       <>
-        {icon && (
-          <IconDynamicComponent componentName={icon} className="mr-4" size="xsmall" type="danger" />
-        )}
+        <IconDynamicComponent
+          Component={ICONS_MAPPING[icon]}
+          className="mr-4"
+          size="xsmall"
+          type="danger"
+        />
         <span>{message}</span>
       </>
     </Text>

@@ -1,5 +1,5 @@
 import { TTextSize } from '../Text/types'
-import { TSVGIconSize } from '../SVGIcons/types'
+import { TSVGIconSize } from '../../type'
 
 export const TEXT_SIZE_MAPPING: { [key: string]: TTextSize } = {
   large: 'standard',

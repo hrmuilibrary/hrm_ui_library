@@ -1,4 +1,4 @@
-import { LegacyRef, MouseEvent } from 'react'
+﻿import { LegacyRef, MouseEvent } from 'react'
 
 export type TSVGIconSize =
   | 'xxsmall'

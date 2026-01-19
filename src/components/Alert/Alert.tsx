@@ -5,7 +5,7 @@ import { Text } from '../Text'
 import { Button } from '../Button'
 import { TAlertProps } from './types'
 import IconDismissFilled from '../SVGIcons/IconDismissFilled'
-import { IconDynamicComponent } from '../IconDynamicComponent'
+import { IconDynamicComponent } from '../../helperComponents/IconDynamicComponent'
 
 export const Alert = (props: TAlertProps): ReactElement => {
   const {
@@ -23,7 +23,7 @@ export const Alert = (props: TAlertProps): ReactElement => {
     <div className={classnames('alert', `alert--${type} alert--${position}`, className)}>
       <div className="alert__content">
         <IconDynamicComponent
-          componentName={ICONS_MAPPING[type]}
+          Component={ICONS_MAPPING[type]}
           size="small"
           type={TYPE_MAPPING[type]}
         />

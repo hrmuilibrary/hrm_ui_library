@@ -2,3 +2,4 @@
 export * from './file-upload'
 export * from './notification'
 export * from './status-code'
+export * from './svg-icons'

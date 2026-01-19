@@ -1,4 +1,4 @@
-import { ISVGIconProps } from '../SVGIcons/types'
+import { ISVGIconProps } from '../../type'
 
 interface IButtonGroupBase {
   type?: 'primary'

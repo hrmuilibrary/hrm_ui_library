@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { TSVGIconType } from '../SVGIcons/types'
+import { TSVGIconType } from '../../type'
 
 export interface TBadgeV2Props extends IFormCompProps {
   text?: number | string | ReactNode

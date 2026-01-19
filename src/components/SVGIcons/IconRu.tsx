@@ -1,9 +1,10 @@
 import React, { ReactElement } from 'react'
-import { ISVGIconProps } from './types'
+import { ISVGIconProps } from '../../type'
 import classNames from 'classnames'
 
 const IconRu = ({
   size,
+  type,
   className = '',
   onClick,
   refHandler,
@@ -14,6 +15,7 @@ const IconRu = ({
     xmlns="http://www.w3.org/2000/svg"
     className={classNames('svg-icon', {
       [`svg-icon__size-${size}`]: size,
+      [`svg-icon__type-${type}`]: type,
       [className]: className
     })}
     viewBox="0 0 24 24"
