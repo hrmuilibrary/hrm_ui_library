@@ -1,6 +1,6 @@
 import React from 'react'
 // @ts-ignore
-import imageFile from '../assets/images/avatar.jpg'
+import imageFile from '../assets/images/under-construction.webp'
 import { Avatar as _Avatar, AvatarGroup as _AvatarGroup } from '../index'
 import { TAvatarGroupProps, TAvatarProps } from '../components/Avatar/types'
 import { type StoryFn, type StoryObj } from '@storybook/react'

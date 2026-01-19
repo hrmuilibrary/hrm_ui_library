@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react'
-import { ISVGIconProps } from './types'
 import classNames from 'classnames'
+import { ISVGIconProps } from '../../type'
 
 const IconChevronRightFilled = ({
   size,

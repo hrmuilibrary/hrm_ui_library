@@ -1,7 +1,6 @@
-import type { ReactElement } from 'react'
-import React from 'react'
-import type { ISVGIconProps } from './types'
+import React, { ReactElement } from 'react'
 import classNames from 'classnames'
+import { ISVGIconProps } from '../../type'
 
 const IconChevronDoubleLeft = ({
   size,

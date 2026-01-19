@@ -1,4 +1,4 @@
-import { TSVGIconSize } from '../SVGIcons/types'
+import { TSVGIconSize } from '../../type'
 
 export const PAGE_RANGE_DISPLAYED = 3
 

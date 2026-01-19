@@ -10,7 +10,6 @@ import {
   Avatar,
   Badge
 } from '../index'
-import imageFile from '../assets/images/avatar.jpg'
 import IconPerson from '../components/SVGIcons/IconPerson'
 import IconInfo from '../components/SVGIcons/IconInfo'
 import IconMore from '../components/SVGIcons/IconMore'
@@ -51,11 +50,6 @@ type TSelectGroupOption = {
 }
 
 type TSelectGroupOptions = TSelectGroupOption[]
-
-const image = {
-  src: imageFile,
-  alt: 'my image'
-}
 
 export default {
   title: 'Select',

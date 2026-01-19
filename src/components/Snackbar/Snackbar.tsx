@@ -5,7 +5,7 @@ import { Text } from '../Text'
 import { Button } from '../Button'
 import { TSnackbarProps, TToastProps } from './types'
 import { DEFAULT_DURATION, ICONS_MAPPING, TYPE_MAPPING } from './consts'
-import { IconDynamicComponent } from '../IconDynamicComponent'
+import { IconDynamicComponent } from '../../helperComponents/IconDynamicComponent/IconDynamicComponent'
 import 'react-toastify/dist/ReactToastify.css'
 
 const CustomToast = ({ actionProps, toastId, type = 'information', text }: TToastProps) => {
@@ -13,7 +13,7 @@ const CustomToast = ({ actionProps, toastId, type = 'information', text }: TToas
     <div data-id={`${type}-toast-message`} className="snackbar" key={toastId}>
       <div className="snackbar__content">
         <IconDynamicComponent
-          componentName={ICONS_MAPPING[type]}
+          Component={ICONS_MAPPING[type]}
           type={TYPE_MAPPING[type]}
           size="medium"
         />

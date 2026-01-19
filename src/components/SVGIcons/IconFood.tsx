@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react'
-import { ISVGIconProps } from './types'
+import { ISVGIconProps } from '../../type'
 import classNames from 'classnames'
 
 const IconFood = ({

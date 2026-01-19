@@ -44,7 +44,6 @@ export * from './components/TableV2'
 export * from './components/Text'
 export * from './components/Textarea'
 export * from './components/Tooltip'
-export * from './components/SVGIcons'
 export * from './components/UnderConstruction'
 export * from './helperComponents/OptionItem'
 

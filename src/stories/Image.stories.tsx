@@ -2,9 +2,8 @@ import React from 'react'
 import { Meta, StoryFn, type StoryObj } from '@storybook/react'
 import { Image as _Image } from '../index'
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import imageFile from '../assets/images/avatar.jpg'
+import imageFile from '../assets/images/under-construction.webp'
 import { ImagePropTypes } from '../components/Image/types'
 
 const image = {
