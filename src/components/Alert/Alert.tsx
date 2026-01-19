@@ -5,7 +5,7 @@ import { Text } from '../Text'
 import { Button } from '../Button'
 import { TAlertProps } from './types'
 import IconDismissFilled from '../SVGIcons/IconDismissFilled'
-import { IconDynamicComponent } from '../../helperComponents/IconDynamicComponent/IconDynamicComponent'
+import { IconDynamicComponent } from '../../helperComponents/IconDynamicComponent'
 
 export const Alert = (props: TAlertProps): ReactElement => {
   const {

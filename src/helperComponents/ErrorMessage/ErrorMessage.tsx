@@ -4,7 +4,7 @@ import { Text } from '../../components/Text'
 import { generateDataTestId } from '../../utils/helpers'
 import classnames from 'classnames'
 import { ICONS_MAPPING } from './consts'
-import { IconDynamicComponent } from '../IconDynamicComponent/IconDynamicComponent'
+import { IconDynamicComponent } from '../IconDynamicComponent'
 
 export const ErrorMessage = ({
   message,
