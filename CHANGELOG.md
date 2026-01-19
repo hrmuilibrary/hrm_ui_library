@@ -1,3 +1,11 @@
+# [3.1.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.0.6...3.1.0) (2026-01-19)
+
+
+### Features
+
+* Improve icons imports, reduce bundle size ([7e26b6b](https://github.com/hrmuilibrary/hrm_ui_library/commit/7e26b6b1ba18aa4e3a116aa029a6693c6f2e18ca))
+* improve import path ([574c38c](https://github.com/hrmuilibrary/hrm_ui_library/commit/574c38c1fd3640e6b0843782a44ca9db677ed5e9))
+
 ## [3.0.6](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.0.5...3.0.6) (2026-01-14)
 
 
