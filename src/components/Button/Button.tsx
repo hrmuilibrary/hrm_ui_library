@@ -27,6 +27,7 @@ export const Button = (props: TButtonPropTypes): ReactElement => {
 
   const clickHandler = (e: TClickEventType) => {
     if (pressed || disabled || isLoading) {
+      e.preventDefault()
       return
     }
 
