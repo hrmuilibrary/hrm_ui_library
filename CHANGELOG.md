@@ -1,3 +1,10 @@
+## [3.1.1](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.0...3.1.1) (2026-01-20)
+
+
+### Bug Fixes
+
+* prevent button submit after form submission ([6f35f07](https://github.com/hrmuilibrary/hrm_ui_library/commit/6f35f071c6dbc26d72255b7522389d0631ee6dbd))
+
 # [3.1.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.0.6...3.1.0) (2026-01-19)
 
 
