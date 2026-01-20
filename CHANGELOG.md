@@ -1,3 +1,10 @@
+## [3.1.2](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.1...3.1.2) (2026-01-20)
+
+
+### Bug Fixes
+
+* filter disabled options from multi select when select all ([c434cc1](https://github.com/hrmuilibrary/hrm_ui_library/commit/c434cc16c9dc7e2c5ee4cb7c51ea94f5726583fc))
+
 ## [3.1.1](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.0...3.1.1) (2026-01-20)
 
 
