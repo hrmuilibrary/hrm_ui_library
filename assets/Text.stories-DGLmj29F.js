@@ -1,0 +1,8 @@
+import{T as a,j as t}from"./Text-BCy2auDT.js";import"./iframe-DbuX508q.js";import"./DropzoneFileUpload-CwB8h4Ko.js";import"./UnderConstruction-yQIFCI6E.js";import"./types-B_RHM9mB.js";import"./ButtonGroup-oSe1aLcB.js";import"./Chips-bt-0p-g_.js";import"./preload-helper-Dp1pzeXC.js";import"./IconInfo-D2MfdYuB.js";import"./IconChevronDoubleRight-BJ7fJSHq.js";import"./IconDismissCircleFilled-C_WNxUpC.js";import"./index-CaVCUHbj.js";const v={title:"Text",component:a,argTypes:{type:{options:["primary","secondary","tertiary","disabled","inverse","selected","brand","danger","warning","success","information","discovery"],control:{type:"radio"}},size:{options:["xxsmall","xsmall","small","standard","medium","large","xlarge"],control:{type:"radio"}},as:{options:["p","span","div","h1"],control:{type:"radio"}},lineHeight:{options:["xsmall","small","medium","large"],control:{type:"radio"}},weight:{options:["regular","semibold","bold","bolder"],control:{type:"radio"}}}},n=r=>t.jsx("div",{style:{padding:"20px",backgroundColor:`${r.type=="inverse"?"#919191":""}`},children:t.jsx(a,{...r,children:r.text})}),e=n.bind({});e.args={type:"primary",as:"p",size:"standard",lineHeight:"large",weight:"regular",text:"Lorem Ipsum is simply dummy text of the printing and typesetting industry."};var o,i,s;e.parameters={...e.parameters,docs:{...(o=e.parameters)==null?void 0:o.docs,source:{originalSource:`args => {
+  return <div style={{
+    padding: '20px',
+    backgroundColor: \`\${args.type == 'inverse' ? '#919191' : ''}\`
+  }}>
+      <_Text {...args}>{args.text}</_Text>
+    </div>;
+}`,...(s=(i=e.parameters)==null?void 0:i.docs)==null?void 0:s.source}}};const _=["Text"];export{e as Text,_ as __namedExportsOrder,v as default};
