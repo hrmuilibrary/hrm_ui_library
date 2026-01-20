@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import * as yup from 'yup'
 import {
   FormField,
@@ -176,10 +176,19 @@ const Template = (): React.ReactElement => {
     firstname: ''
   }
 
+  const [isLoading, setIsLoading] = useState(false)
+
+  const onSubmit = (data: any) => {
+    setIsLoading(true)
+    console.log(data)
+  }
+
+  console.log(isLoading)
+
   return (
     <div style={{ maxWidth: 300 }}>
       <_FormContainer
-        onSubmit={(data) => console.log('data', data)}
+        onSubmit={onSubmit}
         validationScheme={VALIDATION_SCHEME}
         initialValues={INITIAL_VALUES}
       >
@@ -188,7 +197,12 @@ const Template = (): React.ReactElement => {
           {/*// @ts-ignore*/}
           {/*<FormField name="date" As={(props) => <SimpleDatePicker {...props} />} />*/}
 
-          <Button buttonActionType="submit" buttonText={'Ok'} className="mt-16" />
+          <Button
+            buttonActionType="submit"
+            buttonText={'Ok'}
+            className="mt-16"
+            isLoading={isLoading}
+          />
         </>
       </_FormContainer>
     </div>
