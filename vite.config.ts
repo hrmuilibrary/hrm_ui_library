@@ -1,16 +1,16 @@
-import { defineConfig } from 'vite'
+import {defineConfig} from 'vite'
 import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
-import { fileURLToPath } from 'url'
-import { readdirSync, statSync, existsSync, mkdirSync, writeFileSync, readFileSync, rmSync } from 'fs'
-import { exec } from 'child_process'
-import { minify } from 'terser'
-import pkg from './package.json' with { type: 'json' }
+import {resolve} from 'path'
+import {fileURLToPath} from 'url'
+import {existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync} from 'fs'
+import {exec} from 'child_process'
+import {minify} from 'terser'
+import pkg from './package.json' with {type: 'json'}
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = resolve(__filename, '..')
-const extensions = ['.ts', '.tsx', '.js', '.jsx']
-const ignoreExtensions = ['.stories.tsx', '.stories.d.ts', 'types.ts']
+const extensions = ['.ts', '.tsx', '.js', '.jsx', '.scss']
+const ignoreExtensions = ['.stories.tsx', '.stories.d.ts', 'types.d.ts']
 
 // Create input config for each file (similar to rollup config)
 const getInputOptions = (localPath = 'src', currentInputOptions: Record<string, string> = {}): Record<string, string> => {
@@ -241,15 +241,7 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: (() => {
-        const inputs = getInputOptions()
-        // Add main index.ts as 'index' entry point if it exists
-        const indexPath = resolve(__dirname, 'src/index.ts')
-        if (existsSync(indexPath)) {
-          inputs['index'] = indexPath
-        }
-        return inputs
-      })(),
+      entry: getInputOptions(),
     },
     rollupOptions: {
       // Externalize dependencies and peer dependencies
@@ -270,7 +262,7 @@ export default defineConfig({
           assetFileNames: (assetInfo) => {
             // Output CSS to assets/styles/styles.css
             const fileName = assetInfo.names?.[0] || assetInfo.originalFileNames?.[0]
-            if (fileName && fileName.endsWith('.css')) {
+            if (fileName && fileName.endsWith('.scss')) {
               return 'assets/styles/styles.css'
             }
             // Only handle actual asset files (images, fonts, etc.), not JS files
