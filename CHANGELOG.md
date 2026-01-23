@@ -1,3 +1,10 @@
+## [3.1.3](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.2...3.1.3) (2026-01-23)
+
+
+### Bug Fixes
+
+* remove unnecessary files and imports, update vite config ([c1a15f8](https://github.com/hrmuilibrary/hrm_ui_library/commit/c1a15f8901c4cecfa98e4fc5101051d2838df1f6))
+
 ## [3.1.2](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.1...3.1.2) (2026-01-20)
 
 
