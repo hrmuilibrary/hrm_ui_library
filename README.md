@@ -11,9 +11,7 @@ Then use it in your app:
 ```jsx
 import React from 'react';
 import { Button } from 'hrm_ui_lib/components/Button';
-import 'hrm_ui_lib/assets/styles/styles.scss'; 
-// Or you can import the styles.css file
-// import 'hrm_ui_lib/assets/styles/styles.css';
+import 'hrm_ui_lib/assets/styles/styles.css'; 
 
 const App = () => {
   return <Button>Click me</Button>;
