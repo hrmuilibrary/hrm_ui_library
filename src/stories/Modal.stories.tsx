@@ -25,7 +25,7 @@ const Template: StoryFn<TModalPropTypes> = (args) => {
       <p onClick={openModal}>click here </p>
       <_Modal
         {...args}
-        titleSize='medium'
+        titleSize="medium"
         onClose={closeModal}
         isOpen={isOpen}
         onSubmit={() => {

@@ -24,8 +24,8 @@ type TProps = {
     cancel?: TButtonPropTypes
     confirm: TButtonPropTypes
   }
-  onSubmit?: () => void,
-  titleSize?:TTitleSize
+  onSubmit?: () => void
+  titleSize?: TTitleSize
 }
 export const ModalContent = ({
   title,
@@ -38,7 +38,7 @@ export const ModalContent = ({
   confirmBtnTooltipText,
   buttonProps,
   onSubmit,
-  titleSize='large'
+  titleSize = 'large'
 }: TProps): ReactElement => {
   return (
     <>
