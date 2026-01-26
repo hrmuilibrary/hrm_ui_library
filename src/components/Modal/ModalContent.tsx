@@ -8,6 +8,7 @@ import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 import { TButtonPropTypes } from '../Button/types'
 import { noop } from '../../utils/helpers'
+import { TTitleSize } from './types'
 
 type TProps = {
   title?: string
@@ -23,7 +24,8 @@ type TProps = {
     cancel?: TButtonPropTypes
     confirm: TButtonPropTypes
   }
-  onSubmit?: () => void
+  onSubmit?: () => void,
+  titleSize?:TTitleSize
 }
 export const ModalContent = ({
   title,
@@ -35,7 +37,8 @@ export const ModalContent = ({
   withFooter = true,
   confirmBtnTooltipText,
   buttonProps,
-  onSubmit
+  onSubmit,
+  titleSize='large'
 }: TProps): ReactElement => {
   return (
     <>
@@ -44,7 +47,7 @@ export const ModalContent = ({
           <div>
             <Text
               lineHeight="large"
-              size="large"
+              size={titleSize}
               weight={'bolder'}
               dataId={dataIdPrefix ? `${dataIdPrefix}-modal-title` : ''}
             >
