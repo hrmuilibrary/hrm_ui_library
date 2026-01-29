@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 import { TButtonPropTypes } from '../Button/types'
-
+export type TTitleSize = 'medium' | 'large'
 export interface TModalPropTypes {
   dataIdPrefix?: string
   closeOnOutsideClick?: boolean
@@ -10,6 +10,7 @@ export interface TModalPropTypes {
   title?: string
   subtitle?: string
   size?: 'small' | 'medium' | 'large' | 'xlarge'
+  titleSize?: TTitleSize
   withFooter?: boolean
   buttonProps?: {
     cancel?: TButtonPropTypes

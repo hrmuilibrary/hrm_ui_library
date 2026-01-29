@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { Modal as _Modal } from '../index'
-import { ModalConfirmation as _ModalConfirmation } from '../index'
+import { Modal as _Modal } from '../components/Modal'
+import { ModalConfirmation as _ModalConfirmation } from '../components/Modal'
 import { StoryFn, type StoryObj } from '@storybook/react'
 import { TModalConfirmationPropTypes, TModalPropTypes } from '../components/Modal/types'
 import IconDelete from '../components/SVGIcons/IconDelete'
@@ -25,6 +25,7 @@ const Template: StoryFn<TModalPropTypes> = (args) => {
       <p onClick={openModal}>click here </p>
       <_Modal
         {...args}
+        titleSize="medium"
         onClose={closeModal}
         isOpen={isOpen}
         onSubmit={() => {
