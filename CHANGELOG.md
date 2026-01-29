@@ -1,3 +1,10 @@
+## [3.1.4](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.3...3.1.4) (2026-01-29)
+
+
+### Bug Fixes
+
+* add modal title size prop ([017c223](https://github.com/hrmuilibrary/hrm_ui_library/commit/017c22381ee3ab6ad27e1eb87a54245cf502f536))
+
 ## [3.1.3](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.2...3.1.3) (2026-01-23)
 
 
