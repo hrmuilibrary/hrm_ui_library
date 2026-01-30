@@ -1,5 +1,5 @@
 import React from 'react'
-import { More as _More } from '../index'
+import { More as _More } from '../components/More'
 
 export default {
   title: 'More',

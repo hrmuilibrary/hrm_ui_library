@@ -1,15 +1,12 @@
 import React, { useMemo, useRef, useState } from 'react'
-import {
-  Button,
-  Select as _Select,
-  MultiSelect as _MultiSelect,
+import { Select as _Select, MultiSelect as _MultiSelect,
   NestedSelect as _NestedSelect,
   ButtonSelect as _ButtonSelect,
-  ProfileDropdown as _ProfileDropdown,
-  Menu,
-  Avatar,
-  Badge
-} from '../index'
+  ProfileDropdown as _ProfileDropdown, } from '../components/Select'
+import {Button} from "../components/Button"
+import {Menu} from "../components/Menu"
+import {Avatar} from "../components/Avatar"
+import {Badge} from "../components/Badge"
 import IconPerson from '../components/SVGIcons/IconPerson'
 import IconInfo from '../components/SVGIcons/IconInfo'
 import IconMore from '../components/SVGIcons/IconMore'

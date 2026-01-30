@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Textarea as _Textarea } from '../index'
+import { Textarea as _Textarea } from '../components/Textarea'
 import IconInfo from '../components/SVGIcons/IconInfo'
 import { type StoryFn, type StoryObj } from '@storybook/react'
 import { TTextAreaTypeProps } from '../components/Textarea/types'

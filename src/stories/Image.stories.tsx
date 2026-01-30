@@ -1,6 +1,6 @@
 import React from 'react'
 import { Meta, StoryFn, type StoryObj } from '@storybook/react'
-import { Image as _Image } from '../index'
+import { Image as _Image } from '../components/Image'
 
 // @ts-ignore
 import imageFile from '../assets/images/under-construction.webp'

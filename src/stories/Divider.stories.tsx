@@ -1,6 +1,6 @@
 import React from 'react'
 import { Meta, StoryFn, type StoryObj } from '@storybook/react'
-import { Divider as _Divider } from '../index'
+import { Divider as _Divider } from '../components/Divider'
 import { TDividerProps } from '../components/Divider/types'
 
 export default {

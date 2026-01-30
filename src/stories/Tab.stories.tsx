@@ -1,5 +1,5 @@
 import React, { ReactElement, useState } from 'react'
-import { Tab as _Tab } from '../index'
+import { Tab as _Tab } from '../components/Tab'
 import IconDismissCircle from '../components/SVGIcons/IconDismissCircle'
 import { StoryFn, StoryObj } from '@storybook/react'
 import { TTabProps } from '../components/Tab/types'

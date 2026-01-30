@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { Input as _Input, Popover } from '../index'
+import { Input as _Input } from '../components/Input'
+import { Popover } from '../components/Popover'
 import IconInfo from '../components/SVGIcons/IconInfo'
 import { StoryFn, type StoryObj } from '@storybook/react'
 import { InputCustomProps } from '../components/Input/types'

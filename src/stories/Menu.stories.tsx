@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { Menu as _Menu, Button, NestedMenu as _NestedMenu } from '../index'
+import { Menu as _Menu, NestedMenu as _NestedMenu } from '../components/Menu'
+import { Button } from '../components/Button'
 import IconEdit from '../components/SVGIcons/IconEdit'
 import IconAddFilled from '../components/SVGIcons/IconAddFilled'
 import IconMore from '../components/SVGIcons/IconMore'

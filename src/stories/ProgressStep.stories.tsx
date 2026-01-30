@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { Button, ProgressStep as _ProgressStep } from '../index'
+import { Button } from '../components/Button'
+import { ProgressStep as _ProgressStep } from '../components/ProgressStep'
 import { TProgressStepProps, TSteps, TStepValue } from '../components/ProgressStep/types'
 import { PROGRESS_STATUSES } from '../components/ProgressStep/consts'
 import { StoryFn, type StoryObj } from '@storybook/react'

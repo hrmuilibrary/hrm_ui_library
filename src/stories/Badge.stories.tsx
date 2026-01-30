@@ -1,6 +1,6 @@
 import React from 'react'
-import { Badge as _Badge } from '../index'
-import { BadgeV2 as _BadgeV2 } from '../index'
+import { Badge as _Badge } from '../components/Badge'
+import { BadgeV2 as _BadgeV2 } from '../components/BadgeV2'
 import type { StoryFn, StoryObj } from '@storybook/react'
 import { TBadgeProps } from '../components/Badge/types'
 import { TBadgeV2Props } from '../components/BadgeV2/types'

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Snackbar as _Snackbar } from '../index'
+import { Button } from '../components/Button'
+import { Snackbar as _Snackbar } from '../components/Snackbar'
 import { notify } from '../components/Snackbar'
 import { StoryFn, StoryObj } from '@storybook/react'
 

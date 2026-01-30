@@ -1,5 +1,7 @@
 import React from 'react'
-import { CardGroup as _CardGroup, Card, Text } from '../index'
+import { CardGroup as _CardGroup } from '../components/CardGroup'
+import {  Card } from '../components/Card'
+import {  Text } from '../components/Text'
 import type { StoryFn, StoryObj } from '@storybook/react'
 import { TCardGroupProps } from '../components/CardGroup/types'
 

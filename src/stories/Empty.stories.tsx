@@ -1,5 +1,5 @@
 import React from 'react'
-import { Empty as _Empty } from '../index'
+import { Empty as _Empty } from '../components/Empty'
 import IconAdd from '../components/SVGIcons/IconAdd'
 import { StoryFn, type StoryObj } from '@storybook/react'
 import { TEmptyProps } from '../components/Empty/types'

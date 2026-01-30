@@ -1,11 +1,9 @@
 import React, { useRef, useState } from 'react'
-import {
-  Button,
-  Modal,
-  SideSheet as _SideSheet,
-  FormContainer,
-  MultiSelect as _MultiSelect
-} from '../index'
+import { Button } from '../components/Button'
+import { Modal } from '../components/Modal'
+import { FormContainer } from '../components/FormContainer'
+import { MultiSelect as _MultiSelect } from '../components/Select'
+import { SideSheet as _SideSheet, } from '../components/SideSheet'
 import * as yup from 'yup'
 import IconDismissFilled from '../components/SVGIcons/IconDismissFilled'
 import IconArrowLeft from '../components/SVGIcons/IconArrowLeft'

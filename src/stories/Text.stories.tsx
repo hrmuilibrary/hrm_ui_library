@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text as _Text } from '../index'
+import { Text as _Text } from '../components/Text'
 import { StoryFn, StoryObj } from '@storybook/react'
 import { TextPropTypes } from '../components/Text/types'
 

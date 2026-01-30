@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Counter as _Counter } from '../index'
+import { Counter as _Counter } from '../components/Counter'
 import { StoryFn, type StoryObj } from '@storybook/react'
 import { ICounterProps } from '../components/Counter/types'
 

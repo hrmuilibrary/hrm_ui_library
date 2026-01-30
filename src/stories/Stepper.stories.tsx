@@ -1,5 +1,5 @@
 import React from 'react'
-import { Stepper as _Stepper } from '../index'
+import { Stepper as _Stepper } from '../components/Stepper'
 
 export default {
   title: 'Stepper',

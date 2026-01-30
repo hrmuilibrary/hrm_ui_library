@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { Popover as _Popover } from '../index'
+import { Popover as _Popover } from '../components/Popover'
 import { StoryFn, type StoryObj } from '@storybook/react'
 import { TPopoverProps } from '../components/Popover/types'
 

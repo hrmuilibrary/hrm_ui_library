@@ -3,7 +3,7 @@ import {
   CollapseItem as _CollapseItem,
   CollapseGroup as _CollapseGroup,
   Collapse as _CollapseV2
-} from '../index'
+} from '../components/Collapse'
 import { StoryFn, type StoryObj } from '@storybook/react'
 import { TCollapseGroupProps, TCollapseProps, TCollapseV2Props } from '../components/Collapse/types'
 import { boolean, string } from 'yup'
