@@ -1,5 +1,0 @@
-import{j as r}from"./Text-BCy2auDT.js";import"./iframe-DbuX508q.js";import"./DropzoneFileUpload-CwB8h4Ko.js";import{n as a,i as m}from"./UnderConstruction-yQIFCI6E.js";import"./types-B_RHM9mB.js";import"./ButtonGroup-oSe1aLcB.js";import"./Chips-bt-0p-g_.js";import"./preload-helper-Dp1pzeXC.js";import"./IconInfo-D2MfdYuB.js";import"./IconChevronDoubleRight-BJ7fJSHq.js";import"./IconDismissCircleFilled-C_WNxUpC.js";import"./index-CaVCUHbj.js";const n={src:m},_={title:"Image",component:a,argTypes:{backgroundSize:{options:["cover","contain"],control:{type:"radio"}},ratio:{options:["1/1","2/1","3/1","4/3","16/9","1/1.618","2/3"],control:{type:"radio"}}}},p=s=>r.jsx("div",{style:{width:300},children:r.jsx(a,{...s})}),o=p.bind({});o.args={imagePath:n.src,isBackgroundImage:!1,backgroundSize:"contain",isFullWidth:!1,isFullHeight:!1,ratio:"1/1"};var t,e,i;o.parameters={...o.parameters,docs:{...(t=o.parameters)==null?void 0:t.docs,source:{originalSource:`args => <div style={{
-  width: 300
-}}>
-    <_Image {...args} />
-  </div>`,...(i=(e=o.parameters)==null?void 0:e.docs)==null?void 0:i.source}}};const b=["Image"];export{o as Image,b as __namedExportsOrder,_ as default};
