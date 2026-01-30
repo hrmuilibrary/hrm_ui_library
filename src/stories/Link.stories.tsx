@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link as _Link } from '../index'
+import { Link as _Link } from '../components/Link'
 import { StoryFn, type StoryObj } from '@storybook/react'
 import { LinkPropTypes } from '../components/Link/types'
 

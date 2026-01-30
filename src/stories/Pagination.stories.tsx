@@ -1,5 +1,5 @@
 import React from 'react'
-import { Pagination as _Pagination } from '../index'
+import { Pagination as _Pagination } from '../components/Pagination'
 import { StoryFn, type StoryObj } from '@storybook/react'
 import { TPaginationProps } from '../components/Pagination/types'
 

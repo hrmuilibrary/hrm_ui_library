@@ -1,5 +1,8 @@
 import React from 'react'
-import { Text, Container as _Container, Button } from '../index'
+import { Container as _Container } from '../components/Container'
+import { Text } from '../components/Text'
+import { Button } from '../components/Button'
+
 import { noop } from '../utils/helpers'
 
 export default {

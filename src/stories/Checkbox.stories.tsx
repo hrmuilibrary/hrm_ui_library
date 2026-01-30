@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Checkbox as _Checkbox } from '../index'
+import { Checkbox as _Checkbox } from '../components/Checkbox'
 import { StoryFn, type StoryObj } from '@storybook/react'
 import { TCheckboxProps } from '../components/Checkbox/types'
 

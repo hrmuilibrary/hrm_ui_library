@@ -3,7 +3,7 @@ import {
   SimpleDatePicker as _SimpleDatePicker,
   TimePicker as _TimePicker,
   RangeDatePicker as _RangeDatePicker
-} from '../index'
+} from '../components/DatePicker'
 import { StoryFn, type StoryObj } from '@storybook/react'
 import { IRangeDatePickerProps, ISimpleDatePickerProps } from '../components/DatePicker/types'
 

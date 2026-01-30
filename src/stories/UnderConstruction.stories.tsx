@@ -1,6 +1,5 @@
 import React from 'react'
-import { UnderConstruction as _UnderConstruction } from '../index'
-import IconAdd from '../components/SVGIcons/IconAdd'
+import { UnderConstruction as _UnderConstruction } from '../components/UnderConstruction'
 import { StoryFn, type StoryObj } from '@storybook/react'
 import { TUnderConstructionProps } from '../components/UnderConstruction/types'
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Switcher as _Switcher } from '../index'
+import { Switcher as _Switcher } from '../components/Switcher'
 import IconInfo from '../components/SVGIcons/IconInfo'
 import { StoryFn, StoryObj } from '@storybook/react'
 import { TSwitcherProps } from '../components/Switcher/types'

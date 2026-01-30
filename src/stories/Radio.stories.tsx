@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Radio as _Radio, RadioGroup as _RadioGroup } from '../index'
+import { Radio as _Radio, RadioGroup as _RadioGroup } from '../components/Radio'
 import IconInfo from '../components/SVGIcons/IconInfo'
 import { StoryFn, type StoryObj } from '@storybook/react'
 import { TRadioGroupProps, TRadioProps } from '../components/Radio/types'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Progress as _Progress } from '../index'
+import { Progress as _Progress } from '../components/Progress'
 import { StoryFn, type StoryObj } from '@storybook/react'
 import { TProgressPropTypes } from '../components/Progress/types'
 

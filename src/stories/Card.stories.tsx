@@ -1,5 +1,6 @@
 import React from 'react'
-import { Card as _Card, Text } from '../index'
+import { Card as _Card } from '../components/Card'
+import { Text } from '../components/Text'
 import type { StoryFn, StoryObj } from '@storybook/react'
 import { TCardProps } from '../components/Card/types'
 import { boolean } from 'yup'

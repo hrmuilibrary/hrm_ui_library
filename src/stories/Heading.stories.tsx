@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading as _Heading } from '../index'
+import { Heading as _Heading } from '../components/Heading'
 import { StoryFn, type StoryObj } from '@storybook/react'
 import { HeadingPropTypes } from '../components/Heading/types'
 

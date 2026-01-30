@@ -1,5 +1,5 @@
 import React from 'react'
-import { Copy as _Copy } from '../index'
+import { Copy as _Copy } from '../components/Copy'
 import { StoryFn, type StoryObj } from '@storybook/react'
 import { TCopyProps } from '../components/Copy/types'
 

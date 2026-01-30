@@ -1,7 +1,8 @@
 import React from 'react'
-import { Popover, Status as _Status, Text } from '../index'
+import { Popover } from '../components/Popover'
+import { Text } from '../components/Text'
+import { Status as _Status } from '../components/Status'
 import IconPerson from '../components/SVGIcons/IconPerson'
-import IconInfo from '../components/SVGIcons/IconInfo'
 import { StoryFn, StoryObj } from '@storybook/react'
 import { TStatusProps } from '../components/Status/types'
 
