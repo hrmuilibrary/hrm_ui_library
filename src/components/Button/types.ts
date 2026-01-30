@@ -1,8 +1,9 @@
 import { ButtonHTMLAttributes, LegacyRef, PropsWithChildren, ReactElement } from 'react'
-import { TSVGIconType } from '../../type'
+import { ICommon, TSVGIconType } from '../../type'
 
 export interface TButtonPropTypes
-  extends PropsWithChildren<Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type' | 'children'>> {
+  extends PropsWithChildren<Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type' | 'children'>>,
+    ICommon {
   id?: string
   disabled?: boolean
   pressed?: boolean

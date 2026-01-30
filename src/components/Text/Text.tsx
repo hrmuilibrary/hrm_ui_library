@@ -15,6 +15,7 @@ export const Text = (props: TextPropTypes): ReactElement => {
     dataId = '',
     onClick = noop,
     id = '',
+    theme = 'light',
     title
   } = props
   return (
@@ -22,6 +23,7 @@ export const Text = (props: TextPropTypes): ReactElement => {
       id={id}
       title={title}
       data-id={dataId}
+      data-theme={theme}
       onClick={onClick}
       className={classNames(
         'body',

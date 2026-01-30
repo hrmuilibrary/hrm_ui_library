@@ -19,6 +19,7 @@ export const Button = (props: TButtonPropTypes): ReactElement => {
     dataId = '',
     onClick,
     refHandler = null,
+    theme = 'light',
     children,
     ...rest
   } = props
@@ -40,6 +41,7 @@ export const Button = (props: TButtonPropTypes): ReactElement => {
       data-id={dataId}
       disabled={disabled}
       type={buttonActionType}
+      data-theme={theme}
       className={classnames(
         'btn',
         `btn--${type}`,

@@ -5,17 +5,7 @@ import { TAlertProps } from '../components/Alert/types'
 
 export default {
   title: 'Alert',
-  component: AlertComp,
-  argTypes: {
-    type: {
-      options: ['information', 'success', 'error', 'warning', 'discovery'],
-      control: { type: 'radio' }
-    },
-    position: {
-      options: ['inline', 'sticky'],
-      control: { type: 'radio' }
-    }
-  }
+  component: AlertComp
 }
 
 const Template: StoryFn<TAlertProps> = (args) => (
@@ -36,6 +26,7 @@ export const Alert: StoryObj<TAlertProps> = Template.bind({})
 Alert.args = {
   type: 'information',
   position: 'inline',
+  theme: 'light',
   text: 'Alert line which displays the main function or reason of the alert.',
   subtext: 'Become a legendary UX/UI designer through real world and practical courses.',
   closeIcon: true

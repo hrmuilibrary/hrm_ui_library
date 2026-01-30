@@ -1,4 +1,5 @@
 import { ElementType, MouseEvent, ReactNode } from 'react'
+import { ICommon } from '../../type'
 
 type TTextTypes =
   | 'primary'
@@ -18,7 +19,7 @@ export type TTextSize = 'xxsmall' | 'xsmall' | 'small' | 'standard' | 'medium' |
 type TTextWeight = 'regular' | 'semibold' | 'bold' | 'bolder'
 type TTextLineHeight = 'xsmall' | 'small' | 'medium' | 'large'
 
-export interface TextPropTypes {
+export interface TextPropTypes extends ICommon {
   id?: string
   as?: ElementType
   title?: string

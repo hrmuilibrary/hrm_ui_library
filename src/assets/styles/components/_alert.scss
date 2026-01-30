@@ -2,30 +2,12 @@
 
 .alert {
   $this: &;
-
-  --ds-alert-border-radius: var(--ds-border-radius-md);
-  --ds-alert-padding: var(--ds-space-12) var(--ds-space-20);
-
-  --ds-alert-information-bg: var(--ds-color-bg-info-lighter);
-  --ds-alert-information-border-color: var(--ds-color-border-info);
-
-  --ds-alert-success-bg: var(--ds-color-bg-success-lighter);
-  --ds-alert-success-border-color: var(--ds-color-border-success);
-
-  --ds-alert-warning-bg: var(--ds-color-bg-warning-lighter);
-  --ds-alert-warning-border-color: var(--ds-color-border-warning);
-
-  --ds-alert-danger-bg: var(--ds-color-bg-danger-lighter);
-  --ds-alert-danger-border-color: var(--ds-color-border-danger);
-
-  --ds-alert-discovery-bg: var(--ds-color-bg-discovery-lighter);
-  --ds-alert-discovery-border-color: var(--ds-color-border-discovery);
-
-  padding: var(--ds-alert-padding);
+  
+  padding: var(--ds-space-12) var(--ds-space-20);
 
   &--inline {
     border: 1px solid;
-    border-radius: var(--ds-alert-border-radius);
+    border-radius: var(--ds-border-radius-md);
 
     #{$this}__content {
       @include mixin.align-items(flex-start);
@@ -51,28 +33,28 @@
   }
 
   &--information {
-    background-color: var(--ds-alert-information-bg);
-    border-color: var(--ds-alert-information-border-color)
+    background-color: var(--blue-50);
+    border-color: var(--blue-600);
   }
 
   &--discovery {
-    background-color: var(--ds-alert-discovery-bg);
-    border-color: var(--ds-alert-discovery-border-color)
+    background-color: var(--purple-50);
+    border-color: var(--purple-400);
   }
 
   &--success {
-    background-color: var(--ds-alert-success-bg);
-    border-color: var(--ds-alert-success-border-color)
+    background-color: var(--green-50);
+    border-color: var(--green-600);
   }
 
   &--warning {
-    background-color: var(--ds-alert-warning-bg);
-    border-color: var(--ds-alert-warning-border-color)
+    background-color: var(--yellow-50);
+    border-color: var(--yellow-800);
   }
 
   &--error {
-    background-color: var(--ds-alert-danger-bg);
-    border-color: var(--ds-alert-danger-border-color)
+    background-color: var(--red-50);
+    border-color:  var(--red-800);
   }
 
   &__content {
