@@ -3,14 +3,10 @@ import { Table as _Table } from '../components/Table'
 import { TColumn, TTableProps } from '../components/Table/types'
 import { TTableProps as TTableV2Props } from '../components/TableV2/types'
 import { StoryFn, StoryObj } from '@storybook/react'
-import {
-  AdvancedPagination,
-  TableV2 as _TableV2,
-  ColumnSettings,
-} from '../components/TableV2'
-import {Button}  from '../components/Button'
-import {Chips}  from '../components/Chips'
-import {Text}  from '../components/Text'
+import { AdvancedPagination, TableV2 as _TableV2, ColumnSettings } from '../components/TableV2'
+import { Button } from '../components/Button'
+import { Chips } from '../components/Chips'
+import { Text } from '../components/Text'
 import { ColumnDef } from '@tanstack/react-table'
 import classnames from 'classnames'
 import { IndeterminateCheckbox } from '../components/TableV2/IndeterminateCheckbox'

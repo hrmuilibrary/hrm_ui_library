@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import * as yup from 'yup'
-import {
-  FormContainer as _FormContainer,
-} from '../components/FormContainer'
-import {FormField}  from '../components/FormField'
-import {Button}  from '../components/Button'
-import {DropzoneFileUpload}  from '../components/FileUpload'
-import {SimpleDatePicker}  from '../components/DatePicker'
-import {Input}  from '../components/Input'
-import {useFormProps}  from '../hooks'
+import { FormContainer as _FormContainer } from '../components/FormContainer'
+import { FormField } from '../components/FormField'
+import { Button } from '../components/Button'
+import { DropzoneFileUpload } from '../components/FileUpload'
+import { SimpleDatePicker } from '../components/DatePicker'
+import { Input } from '../components/Input'
+import { useFormProps } from '../hooks'
 
 export default {
   title: 'Form Container',

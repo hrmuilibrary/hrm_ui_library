@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container as _Container } from '../components/Container'
-import {  Text } from '../components/Text'
-import {  Button } from '../components/Button'
+import { Text } from '../components/Text'
+import { Button } from '../components/Button'
 
 import { noop } from '../utils/helpers'
 
