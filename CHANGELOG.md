@@ -1,3 +1,11 @@
+## [3.1.5](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.4...3.1.5) (2026-01-30)
+
+
+### Bug Fixes
+
+* fix path issues ([7abfc5a](https://github.com/hrmuilibrary/hrm_ui_library/commit/7abfc5a5720fbbeead4a70ccba9ccb00fd539d6b))
+* run linter ([b010324](https://github.com/hrmuilibrary/hrm_ui_library/commit/b010324efeb96fe6c6faff1775f197286beabcae))
+
 ## [3.1.4](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.3...3.1.4) (2026-01-29)
 
 
