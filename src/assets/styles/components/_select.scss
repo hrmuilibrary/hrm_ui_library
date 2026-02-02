@@ -88,7 +88,9 @@
     border-width: var(--ds-select-options-border-size);
     border-style: solid;
     border-color: var(--ds-select-options-border-color);
-
+    .option--active {
+      background: var(--ds-select-option-bg-hover);
+    }
     &__scroll {
       max-height: var(--ds-select-scroll-max-height);
       min-height: var(--ds-select-scroll-min-height);
