@@ -1,3 +1,10 @@
+## [3.1.7](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.6...3.1.7) (2026-02-02)
+
+
+### Bug Fixes
+
+* table row should have pointer on it if clickable ([a6c11f7](https://github.com/hrmuilibrary/hrm_ui_library/commit/a6c11f787065b8dc138e428a1a1aa7ccef212ee2))
+
 ## [3.1.6](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.5...3.1.6) (2026-02-02)
 
 
