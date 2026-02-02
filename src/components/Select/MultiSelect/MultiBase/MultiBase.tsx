@@ -33,55 +33,49 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
 
   const [searchValue, setSearchValue] = useState('')
   const [isAllSelected, setAllSelected] = useState(false)
-  const [activeIndex, setActiveIndex] = useState(0);
-  const listRef = useRef<List>(null);
+  const [activeIndex, setActiveIndex] = useState(0)
+  const listRef = useRef<List>(null)
   const [dropdownRef, setDropdownRef] = useState<HTMLDivElement | null>(null)
   const handleKeyDown = (e: React.KeyboardEvent) => {
     switch (e.key) {
-      case "ArrowDown":
-        e.preventDefault();
-        setActiveIndex((prev) =>
-          Math.min(prev + 1, options.length - 1)
-        );
-        break;
+      case 'ArrowDown':
+        e.preventDefault()
+        setActiveIndex((prev) => Math.min(prev + 1, options.length - 1))
+        break
 
-      case "ArrowUp":
-        e.preventDefault();
-        setActiveIndex((prev) =>
-          Math.max(prev - 1, 0)
-        );
-        break;
+      case 'ArrowUp':
+        e.preventDefault()
+        setActiveIndex((prev) => Math.max(prev - 1, 0))
+        break
 
-      case "Enter":
-        e.preventDefault();
-        const item=filteredData[activeIndex]
-        if(!item){
+      case 'Enter':
+        e.preventDefault()
+        const item = filteredData[activeIndex]
+        if (!item) {
           return
         }
-        const isSelected=checkIsSelected(item.value)
-        if(isSelected){
+        const isSelected = checkIsSelected(item.value)
+        if (isSelected) {
           onDeselect(item)
-          
-        }else {
+        } else {
           onItemSelect(item)
         }
-        break;
+        break
 
-      case "Escape":
-        closeDropdown();
-        break;
+      case 'Escape':
+        closeDropdown()
+        break
     }
-  };
+  }
 
   useEffect(() => {
     if (listRef.current) {
-      listRef.current.scrollToItem(activeIndex, "smart");
+      listRef.current.scrollToItem(activeIndex, 'smart')
     }
-  }, [activeIndex]);
-
+  }, [activeIndex])
 
   useEffect(() => {
-    if(dropdownRef ){
+    if (dropdownRef) {
       dropdownRef.focus()
     }
   }, [dropdownRef])
@@ -181,7 +175,7 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
             {({ index, style }) => {
               const item = filteredData[index]
               const isSelected = checkIsSelected(item.value)
-              const isActive = index===activeIndex
+              const isActive = index === activeIndex
               return (
                 <OptionItem
                   size={isMobile ? 'large' : 'small'}
@@ -193,8 +187,8 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
                   }
                   isSelected={isSelected}
                   style={style}
-                  className={classNames("option", {
-                    "option--active": isActive,
+                  className={classNames('option', {
+                    'option--active': isActive
                   })}
                   {...optionProps}
                 />

@@ -1,5 +1,13 @@
 import classNames from 'classnames'
-import React, { ReactElement, useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
+import React, {
+  ReactElement,
+  useCallback,
+  useEffect,
+  useId,
+  useMemo,
+  useRef,
+  useState
+} from 'react'
 import { FixedSizeList as List } from 'react-window'
 import { DROPDOWN_AND_INPUT_GAP } from '../../../../consts'
 import { OptionItem } from '../../../../helperComponents/OptionItem'
@@ -42,48 +50,44 @@ export const SelectDesktop = (props: ISingleSelectDesktopProps): ReactElement | 
     setSearchValue,
     translations
   } = props
-  const listRef = useRef<List>(null);
+  const listRef = useRef<List>(null)
   const [dropdownRef, setDropdownRef] = useState<HTMLDivElement | null>(null)
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0)
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (!isOpen) return;
+    if (!isOpen) return
 
     switch (e.key) {
-      case "ArrowDown":
-        e.preventDefault();
-        setActiveIndex((prev) =>
-          Math.min(prev + 1, options.length - 1)
-        );
-        break;
+      case 'ArrowDown':
+        e.preventDefault()
+        setActiveIndex((prev) => Math.min(prev + 1, options.length - 1))
+        break
 
-      case "ArrowUp":
-        e.preventDefault();
-        setActiveIndex((prev) =>
-          Math.max(prev - 1, 0)
-        );
-        break;
+      case 'ArrowUp':
+        e.preventDefault()
+        setActiveIndex((prev) => Math.max(prev - 1, 0))
+        break
 
-      case "Enter":
-        e.preventDefault();
-        onItemSelect(options[activeIndex].value);
-        closeDropdown();
-        break;
+      case 'Enter':
+        e.preventDefault()
+        onItemSelect(options[activeIndex].value)
+        closeDropdown()
+        break
 
-      case "Escape":
-        closeDropdown();
-        break;
+      case 'Escape':
+        closeDropdown()
+        break
     }
-  };
+  }
 
   useEffect(() => {
     if (listRef.current) {
-      listRef.current.scrollToItem(activeIndex, "smart");
+      listRef.current.scrollToItem(activeIndex, 'smart')
     }
-  }, [activeIndex]);
-  
+  }, [activeIndex])
+
   const setCurrentSelectedLabel = useCallback(() => {
-    const selectedItemIndex = options.findIndex((item) => item.value === currentSelection) 
+    const selectedItemIndex = options.findIndex((item) => item.value === currentSelection)
     setSelectedOption(options[selectedItemIndex])
     setActiveIndex(selectedItemIndex)
   }, [currentSelection, options])
@@ -91,9 +95,9 @@ export const SelectDesktop = (props: ISingleSelectDesktopProps): ReactElement | 
   useEffect(() => {
     setCurrentSelectedLabel()
   }, [setCurrentSelectedLabel])
-  
+
   useEffect(() => {
-    if(dropdownRef && isOpen){
+    if (dropdownRef && isOpen) {
       dropdownRef.focus()
     }
   }, [dropdownRef, isOpen])
@@ -205,8 +209,8 @@ export const SelectDesktop = (props: ISingleSelectDesktopProps): ReactElement | 
                           isSelected={isSelected}
                           dataId={item.dataId}
                           style={style}
-                          className={classNames("option", {
-                            "option--active": isActive,
+                          className={classNames('option', {
+                            'option--active': isActive
                           })}
                         />
                       )
