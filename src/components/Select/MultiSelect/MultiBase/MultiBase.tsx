@@ -1,4 +1,4 @@
-import React, { ReactElement, useCallback, useMemo, useState } from 'react'
+import React, { ReactElement, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Empty } from '../../../Empty'
 import { OptionItem } from '../../../../helperComponents/OptionItem'
 import { ContentTop } from '../../SharedComponents'
@@ -33,6 +33,58 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
 
   const [searchValue, setSearchValue] = useState('')
   const [isAllSelected, setAllSelected] = useState(false)
+  const [activeIndex, setActiveIndex] = useState(0);
+  const listRef = useRef<List>(null);
+  const [dropdownRef, setDropdownRef] = useState<HTMLDivElement | null>(null)
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    switch (e.key) {
+      case "ArrowDown":
+        e.preventDefault();
+        setActiveIndex((prev) =>
+          Math.min(prev + 1, options.length - 1)
+        );
+        break;
+
+      case "ArrowUp":
+        e.preventDefault();
+        setActiveIndex((prev) =>
+          Math.max(prev - 1, 0)
+        );
+        break;
+
+      case "Enter":
+        e.preventDefault();
+        const item=filteredData[activeIndex]
+        if(!item){
+          return
+        }
+        const isSelected=checkIsSelected(item.value)
+        if(isSelected){
+          onDeselect(item)
+          
+        }else {
+          onItemSelect(item)
+        }
+        break;
+
+      case "Escape":
+        closeDropdown();
+        break;
+    }
+  };
+
+  useEffect(() => {
+    if (listRef.current) {
+      listRef.current.scrollToItem(activeIndex, "smart");
+    }
+  }, [activeIndex]);
+
+
+  useEffect(() => {
+    if(dropdownRef ){
+      dropdownRef.focus()
+    }
+  }, [dropdownRef])
 
   const clearAll = useCallback(() => {
     setAllSelected(false)
@@ -106,10 +158,14 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
         className={classNames('select__options__scroll scrollbar', {
           select__options__scroll_mobile: isMobile
         })}
+        tabIndex={0}
+        onKeyDown={handleKeyDown}
         style={scrollableContentStyle}
+        ref={setDropdownRef}
       >
         {filteredData.length > 0 && (
           <List
+            ref={listRef}
             height={
               isMobile
                 ? window.innerHeight - 80 - 73 - 24
@@ -125,6 +181,7 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
             {({ index, style }) => {
               const item = filteredData[index]
               const isSelected = checkIsSelected(item.value)
+              const isActive = index===activeIndex
               return (
                 <OptionItem
                   size={isMobile ? 'large' : 'small'}
@@ -136,6 +193,9 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
                   }
                   isSelected={isSelected}
                   style={style}
+                  className={classNames("option", {
+                    "option--active": isActive,
+                  })}
                   {...optionProps}
                 />
               )

@@ -66,6 +66,7 @@ export const ModalContent = ({
               iconProps={{ Component: IconDismiss }}
               onClick={onClose}
               type="tertiary"
+              size={titleSize === 'medium' ? 'small' : 'large'}
             />
           ) : null}
         </div>
