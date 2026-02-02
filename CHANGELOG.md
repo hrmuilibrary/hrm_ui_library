@@ -1,3 +1,11 @@
+## [3.1.6](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.5...3.1.6) (2026-02-02)
+
+
+### Bug Fixes
+
+* add keyboard navigation for select and multiselect ([dc94ccd](https://github.com/hrmuilibrary/hrm_ui_library/commit/dc94ccd41aa10ebc9f7f7ed567a4f99277cc2cf0))
+* prettier ([b3aadd2](https://github.com/hrmuilibrary/hrm_ui_library/commit/b3aadd2b46551deae24fd55d979fc85bd26eeac0))
+
 ## [3.1.5](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.4...3.1.5) (2026-01-30)
 
 
