@@ -119,7 +119,8 @@ export function Table({
       ref={containerRefHandler}
       className={classNames(
         'table-wrapper scrollbar scrollbar--horizontal scrollbar--vertical',
-        className
+        className,
+        { 'table-row-clickable': !!handleRowClick }
       )}
       style={{ maxHeight: fixedHeader?.y }}
     >

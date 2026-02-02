@@ -16,6 +16,13 @@
   --ds-table-td-bg-color: var(--ds-color-bg-white);
   --ds-table-td-bg-color-dark: var(--ds-color-bg-container-lighter);
 
+  &.table-row-clickable {
+    tbody tr:hover {
+      td {
+        cursor: pointer;
+      }
+    }
+  }
   table {
     border-collapse: separate;
     border-spacing: 0;
@@ -60,7 +67,6 @@
         }
         &:hover {
           td {
-            cursor: pointer;
             background-color: var(--grey-50);
           }
         }
@@ -75,7 +81,7 @@
       }
     }
   }
-  
+
   &__selected-rows {
     display:  flex;
     align-items: center;
