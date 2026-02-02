@@ -1,0 +1,13 @@
+import{j as r}from"./jsx-runtime-BDEaKAMA.js";import{r as o}from"./iframe-BOuOQg3k.js";import{I as l}from"./Input-D33_iJFf.js";import{P as f}from"./Popover-Cb7VPDZF.js";import{I as s}from"./IconInfo-ChiCLdqx.js";import{I as h}from"./IconCalendarRight-C4WkG0kQ.js";import"./preload-helper-Dp1pzeXC.js";import"./index-C_VFKIAh.js";import"./index-Dw5nglbG.js";import"./ErrorMessage-IndItNd2.js";import"./Text-BvG8_rry.js";import"./helpers-C8DjUGPs.js";import"./IconDynamicComponent-CrkN1pLp.js";import"./Label-DMVM9JFS.js";import"./IconCheckmarkCircleFilled-OFy7S2cb.js";import"./ModalConfirmation-BQq7Vjk1.js";import"./AnimatePresenceWrapper-C3FCwRhG.js";import"./types-Cqtluz6G.js";import"./IconDismiss-DgCwl4oo.js";import"./Tooltip-C4qDR7jW.js";import"./index-DYDl_GcV.js";import"./Button-CG9KLHj8.js";import"./Link-D9mwOH43.js";const U={title:"Input",component:l,argTypes:{size:{options:["large","small"],control:{type:"radio"}}}},g=p=>{const[t,m]=o.useState(""),[u,c]=o.useState(!1),d=(I,x)=>{m(x),c(!0)};return r.jsx("div",{style:{maxWidth:300},children:r.jsx(l,{...p,error:!t&&u?"requeired field":"",currentValue:t,handleChange:d})})},e=g.bind({});e.args={type:"text",label:"Some text",size:"large",mask:"",maskChar:"",leftIconProps:{Component:s},rightIconProps:{Component:h},disabled:!1,required:!0,maxCount:15,witUpperCase:!1,placeholder:"Some text",labelAddons:r.jsx(f,{linkAddons:{url:"link",beforeLink:"text before link"},id:"beneficiary-tooltip",text:"data",position:"top-center",children:r.jsx("div",{id:"beneficiary-tooltip",children:r.jsx(s,{type:"information",size:"xsmall",className:"ml-4 pointer"})})}),helperText:"This is your helper text",successMessage:"Success message"};var i,a,n;e.parameters={...e.parameters,docs:{...(i=e.parameters)==null?void 0:i.docs,source:{originalSource:`args => {
+  const [value, setValue] = useState('');
+  const [isErrorVisible, setIsErrorVisible] = useState(false);
+  const changeHandler = (e: TChangeEventType, value: string) => {
+    setValue(value);
+    setIsErrorVisible(true);
+  };
+  return <div style={{
+    maxWidth: 300
+  }}>
+      <_Input {...args} error={!value && isErrorVisible ? 'requeired field' : ''} currentValue={value} handleChange={changeHandler} />
+    </div>;
+}`,...(n=(a=e.parameters)==null?void 0:a.docs)==null?void 0:n.source}}};const $=["Input"];export{e as Input,$ as __namedExportsOrder,U as default};
