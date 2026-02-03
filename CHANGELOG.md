@@ -1,3 +1,11 @@
+## [3.1.8](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.7...3.1.8) (2026-02-03)
+
+
+### Bug Fixes
+
+* fix keyboard navigation in case of search ([b20baf8](https://github.com/hrmuilibrary/hrm_ui_library/commit/b20baf8f6996717308287f39f380460c36914867))
+* prettier fix ([025db5e](https://github.com/hrmuilibrary/hrm_ui_library/commit/025db5e9b5a2f7b7afb9707b3f99b98e9ebbdbc3))
+
 ## [3.1.7](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.6...3.1.7) (2026-02-02)
 
 
