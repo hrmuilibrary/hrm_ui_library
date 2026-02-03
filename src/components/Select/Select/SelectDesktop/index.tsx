@@ -24,12 +24,10 @@ import { Text } from '../../../Text'
 import { Loading } from '../../SharedComponents'
 import { DROPDOWN_HEIGHT, DROPDOWN_WIDTH, ITEM_SIZE } from '../../constants'
 import { ISingleSelectDesktopProps } from '../../types'
-import { filterOptions } from '../helpers'
 
 export const SelectDesktop = (props: ISingleSelectDesktopProps): ReactElement | null => {
   const {
     currentSelection,
-    options,
     isLoading,
     dataId = '',
     innerHelperText,
@@ -41,67 +39,44 @@ export const SelectDesktop = (props: ISingleSelectDesktopProps): ReactElement | 
     dropdownWidth,
     isOpen,
     closeDropdown,
-    setSelectedOption,
     inputRef,
     containerRef,
     onItemSelect,
     onItemDeselect,
     searchValue,
     setSearchValue,
-    translations
+    translations,
+    filteredData,
+    activeIndex,
+    setActiveIndex,
+    setCurrentSelectedLabel
   } = props
   const listRef = useRef<List>(null)
   const [dropdownRef, setDropdownRef] = useState<HTMLDivElement | null>(null)
-  const [activeIndex, setActiveIndex] = useState(0)
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (!isOpen) return
-
-    switch (e.key) {
-      case 'ArrowDown':
-        e.preventDefault()
-        setActiveIndex((prev) => Math.min(prev + 1, options.length - 1))
-        break
-
-      case 'ArrowUp':
-        e.preventDefault()
-        setActiveIndex((prev) => Math.max(prev - 1, 0))
-        break
-
-      case 'Enter':
-        e.preventDefault()
-        onItemSelect(options[activeIndex].value)
-        closeDropdown()
-        break
-
-      case 'Escape':
-        closeDropdown()
-        break
+  const setFocusForKeyboardNavigation = () => {
+    
+    if (dropdownRef && isOpen) {
+      dropdownRef.focus()
     }
   }
-
+  
   useEffect(() => {
     if (listRef.current) {
       listRef.current.scrollToItem(activeIndex, 'smart')
     }
   }, [activeIndex])
-
-  const setCurrentSelectedLabel = useCallback(() => {
-    const selectedItemIndex = options.findIndex((item) => item.value === currentSelection)
-    setSelectedOption(options[selectedItemIndex])
-    setActiveIndex(selectedItemIndex)
-  }, [currentSelection, options])
-
-  useEffect(() => {
-    setCurrentSelectedLabel()
-  }, [setCurrentSelectedLabel])
+  
 
   useEffect(() => {
     if (dropdownRef && isOpen) {
-      dropdownRef.focus()
+      setFocusForKeyboardNavigation()
     }
   }, [dropdownRef, isOpen])
+  
 
+  useEffect(() => {
+    setActiveIndex(0)
+  }, [searchValue])
   const handleOutsideClick = () => {
     if (!searchValue && isRequiredField) {
       setCurrentSelectedLabel()
@@ -113,10 +88,6 @@ export const SelectDesktop = (props: ISingleSelectDesktopProps): ReactElement | 
 
   const { bottom, left, top } = useGetElemPositions(inputRef)
   const { width } = useGetElemSizes(containerRef)
-
-  const filteredData = useMemo(() => {
-    return filterOptions(options, searchValue)
-  }, [searchValue, options])
 
   const clickHandler =
     (isSelected: boolean) =>
@@ -147,6 +118,7 @@ export const SelectDesktop = (props: ISingleSelectDesktopProps): ReactElement | 
     <>
       {isOpen && (
         <div
+          
           className="select__options"
           style={{
             left,
@@ -156,14 +128,13 @@ export const SelectDesktop = (props: ISingleSelectDesktopProps): ReactElement | 
               : { bottom: window.innerHeight - top + DROPDOWN_AND_INPUT_GAP })
           }}
           ref={setDropdownRef}
-          tabIndex={0}
-          onKeyDown={handleKeyDown}
         >
           {isLoading ? (
             <Loading />
           ) : (
             <>
               <div
+                
                 data-id={`${dataId}-options-content`}
                 className={classNames('select__options__scroll', 'scrollbar')}
               >

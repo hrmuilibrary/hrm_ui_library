@@ -1,4 +1,4 @@
-import React, { forwardRef, ReactElement, useRef, useState } from 'react'
+import React, { forwardRef, ReactElement, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { TSingleSelectPropTypes } from '../types'
 import { useIsMobile } from '../../../hooks/useGetIsMobile'
 import { SelectDesktop } from './SelectDesktop'
@@ -11,6 +11,7 @@ import IconChevronUp from '../../SVGIcons/IconChevronUp'
 import IconChevronDown from '../../SVGIcons/IconChevronDown'
 import { SELECT_TRANSLATIONS } from '../localization'
 import { Button } from '../../Button'
+import { filterOptions } from './helpers'
 
 export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactElement | null => {
   const {
@@ -52,7 +53,7 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const [searchValue, setSearchValue] = useState<string>('')
   const [selectedOption, setSelectedOption] = useState<TSelectOption | null>(null)
-
+  const [activeIndex, setActiveIndex] = useState(0)
   const openDropdown = () => setIsOpen(true)
   const closeDropdown = () => {
     setIsOpen(false)
@@ -105,6 +106,53 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
 
   const currentSelection = (value as TItemValue) || selectedItem
   const localizations = { ...SELECT_TRANSLATIONS[language], ...translations }
+
+  const filteredData = useMemo(() => {
+    return filterOptions(options, searchValue)
+  }, [searchValue, options])
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    
+    if (!isOpen) return
+
+    switch (e.key) {
+      case 'ArrowDown':
+        e.preventDefault()
+        setActiveIndex((prev) =>
+          Math.min(prev + 1, filteredData.length - 1)
+        )
+        break
+
+      case 'ArrowUp':
+        e.preventDefault()
+        setActiveIndex((prev) => Math.max(prev - 1, 0))
+        break
+
+      case 'Enter':
+        e.preventDefault()
+        const activeItem = filteredData[activeIndex]
+        if (!activeItem?.disabled) {
+          onItemSelect(activeItem.value)
+          closeDropdown()
+        }
+        break
+
+      case 'Escape':
+        closeDropdown()
+        break
+    }
+  }
+
+  
+  const setCurrentSelectedLabel = useCallback(() => {
+    const selectedItemIndex = options.findIndex((item) => item.value === currentSelection)
+    setSelectedOption(options[selectedItemIndex])
+    setActiveIndex(selectedItemIndex)
+  }, [currentSelection, options])
+
+  useEffect(() => {
+    setCurrentSelectedLabel()
+  }, [setCurrentSelectedLabel])
+  
   return (
     <div
       data-id={`${dataId}-content`}
@@ -134,6 +182,7 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
           labelAddons={labelAddons}
           autoComplete="false"
           readOnly={(isMobile && isMobileFullScreen) || !isWithSearch}
+          onKeyDown={handleKeyDown}
         />
       )}
       {/*// TODO add buttonSelect option for desktop view*/}
@@ -151,15 +200,14 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
       {isMobile && isMobileFullScreen ? (
         <SelectMobile
           {...rest}
-          options={options}
           isOpen={isOpen}
+          filteredData={filteredData}
           closeDropdown={closeDropdown}
           currentSelection={currentSelection}
           isRequiredField={isRequiredField}
           onItemDeselect={onItemDeselect}
           onItemSelect={onItemSelect}
           translations={localizations}
-          setSelectedOption={setSelectedOption}
           withSearch={withSearch}
         />
       ) : (
@@ -169,15 +217,17 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
           onItemSelect={onItemSelect}
           currentSelection={currentSelection}
           isRequiredField={isRequiredField}
-          options={options}
+          filteredData={filteredData}
           inputRef={inputRef.current}
           containerRef={containerRef.current}
           isOpen={isOpen}
           closeDropdown={closeDropdown}
-          setSelectedOption={setSelectedOption}
+          setCurrentSelectedLabel={setCurrentSelectedLabel}
           searchValue={searchValue}
           setSearchValue={setSearchValue}
           translations={localizations}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
         />
       )}
     </div>

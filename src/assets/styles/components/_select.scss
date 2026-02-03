@@ -89,7 +89,7 @@
     border-style: solid;
     border-color: var(--ds-select-options-border-color);
     .option--active {
-      background: var(--ds-select-option-bg-hover);
+      background: var(--grey-100);
     }
     &__scroll {
       max-height: var(--ds-select-scroll-max-height);

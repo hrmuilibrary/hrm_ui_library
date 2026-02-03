@@ -1140,6 +1140,7 @@ const Template: StoryFn<TSingleSelectPropTypes> = (args) => {
         dataId={'single-select'}
         // tooltipAddons={{ position: Positions.TOP_LEFT, text: '' }}
         // isRequiredField
+        withSearch
         options={MOCK_DATA}
         outerHelperText="helper text"
         selectedItem={selectedValue}
@@ -1342,7 +1343,7 @@ const LanguageSelectTemplate: StoryFn<TSingleSelectPropTypes> = (args) => {
   const [selectedValue, setSelectedValue] = useState<TItemValue | undefined>(null)
 
   return (
-    <div style={{ display: 'flex', height: '100vh', justifyContent: 'center', width: '20vw' }}>
+    <div style={{ display: 'flex', height: '100vh', justifyContengt: 'center', width: '20vw' }}>
       <_Select
         {...args}
         options={languagesOptions}
