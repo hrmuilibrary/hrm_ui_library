@@ -35,7 +35,7 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
   const [isAllSelected, setAllSelected] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0)
   const listRef = useRef<List>(null)
-  const [dropdownRef, setDropdownRef] = useState<HTMLDivElement | null>(null)
+
   const handleKeyDown = (e: React.KeyboardEvent) => {
     switch (e.key) {
       case 'ArrowDown':
@@ -73,12 +73,6 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
       listRef.current.scrollToItem(activeIndex, 'smart')
     }
   }, [activeIndex])
-
-  useEffect(() => {
-    if (dropdownRef) {
-      dropdownRef.focus()
-    }
-  }, [dropdownRef])
 
   const clearAll = useCallback(() => {
     setAllSelected(false)
@@ -146,16 +140,14 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
         setSearchValue={setSearchValue}
         searchValue={searchValue}
         translations={translations}
+        handleKeyDown={handleKeyDown}
       />
 
       <div
         className={classNames('select__options__scroll scrollbar', {
           select__options__scroll_mobile: isMobile
         })}
-        tabIndex={0}
-        onKeyDown={handleKeyDown}
         style={scrollableContentStyle}
-        ref={setDropdownRef}
       >
         {filteredData.length > 0 && (
           <List

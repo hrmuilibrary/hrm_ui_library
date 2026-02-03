@@ -147,17 +147,16 @@ export interface ISingleSelectResponsiveProps {
     className?: string
     onClick?: TClickHandler
   }
+  filteredData: TSelectOptions
   labelRightIconComponent?: (value: TItemValue) => ReactElement
   optionRightIconComponent?: (value: TItemValue) => ReactElement
   tooltipAddons?: TTooltipProps
   onItemSelect: (item: TItemValue) => void
   onItemDeselect: () => void
-  options: TSelectOptions
   currentSelection: TItemValue | undefined
   isRequiredField?: boolean
   translations?: TSelectTranslations
   language?: string
-  setSelectedOption: (item: TSelectOption | null) => void
 }
 
 export interface ISingleSelectMobileProps extends ISingleSelectResponsiveProps {
@@ -171,7 +170,9 @@ export interface ISingleSelectDesktopProps extends ISingleSelectResponsiveProps 
   dropdownWidth?: number
   inputRef: HTMLInputElement | null
   containerRef: HTMLDivElement | null
-  setSelectedOption: (item: TSelectOption | null) => void
+  setCurrentSelectedLabel: () => void
+  activeIndex: number
+  setActiveIndex: (index: number) => void
 }
 
 export type TSelectFooterPropTypes = {

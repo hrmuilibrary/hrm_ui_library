@@ -19,7 +19,7 @@ export const SelectMobile = (props: ISingleSelectMobileProps): ReactElement => {
     isLoading,
     dataId,
     innerHelperText,
-    options,
+    filteredData,
     isRequiredField,
     onItemSelect,
     onItemDeselect,
@@ -27,24 +27,9 @@ export const SelectMobile = (props: ISingleSelectMobileProps): ReactElement => {
     labelLeftIconProps,
     optionRightIconComponent,
     labelRightIconComponent,
-    setSelectedOption,
     withSearch
   } = props
   const [searchValue, setSearchValue] = useState<string>('')
-
-  const filteredData = useMemo(() => {
-    return filterOptions(options, searchValue)
-  }, [searchValue, options])
-
-  const setCurrentSelectedLabel = useCallback(() => {
-    const selectedItem = options.find((item) => item.value === currentSelection) as TSelectOption
-    setSelectedOption(selectedItem)
-  }, [currentSelection, options])
-
-  useEffect(() => {
-    setCurrentSelectedLabel()
-  }, [setCurrentSelectedLabel])
-
   const clickHandler =
     (isSelected: boolean) =>
     ({ value }: TSelectedValue) => {

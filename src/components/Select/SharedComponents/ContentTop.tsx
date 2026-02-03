@@ -9,6 +9,7 @@ import IconSearchFilled from '../../SVGIcons/IconSearchFilled'
 import IconSelectAllOff from '../../SVGIcons/IconSelectAllOff'
 import { useIsMobile } from '../../../hooks/useGetIsMobile'
 import IconChevronLeft from '../../SVGIcons/IconChevronLeft'
+import { noop } from '../../../utils/helpers'
 
 type TProps = {
   searchValue?: string
@@ -24,6 +25,7 @@ type TProps = {
   menuOptions?: TMenuItem[]
   dataIdPrefix?: string
   closeDropdown?: () => void
+  handleKeyDown?: (e: React.KeyboardEvent) => void
 }
 
 export const ContentTop = React.memo<TProps>((props: TProps): React.ReactElement => {
@@ -40,7 +42,8 @@ export const ContentTop = React.memo<TProps>((props: TProps): React.ReactElement
     isSelectAllDisabled = false,
     menuOptions = [],
     dataIdPrefix,
-    closeDropdown
+    closeDropdown,
+    handleKeyDown
   } = props
   const inputRef = useRef<HTMLInputElement>(null)
 
@@ -113,6 +116,7 @@ export const ContentTop = React.memo<TProps>((props: TProps): React.ReactElement
         {isMobile && <IconChevronLeft onClick={onBack} size="large" />}
         {isSearchAvailable && (
           <Input
+            onKeyDown={handleKeyDown || noop}
             ref={inputRef}
             className="content-top__search"
             size="small"
