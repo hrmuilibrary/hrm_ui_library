@@ -35,7 +35,7 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
   const [isAllSelected, setAllSelected] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0)
   const listRef = useRef<List>(null)
-  
+
   const handleKeyDown = (e: React.KeyboardEvent) => {
     switch (e.key) {
       case 'ArrowDown':
@@ -73,7 +73,6 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
       listRef.current.scrollToItem(activeIndex, 'smart')
     }
   }, [activeIndex])
-  
 
   const clearAll = useCallback(() => {
     setAllSelected(false)

@@ -54,25 +54,22 @@ export const SelectDesktop = (props: ISingleSelectDesktopProps): ReactElement | 
   const listRef = useRef<List>(null)
   const [dropdownRef, setDropdownRef] = useState<HTMLDivElement | null>(null)
   const setFocusForKeyboardNavigation = () => {
-    
     if (dropdownRef && isOpen) {
       dropdownRef.focus()
     }
   }
-  
+
   useEffect(() => {
     if (listRef.current) {
       listRef.current.scrollToItem(activeIndex, 'smart')
     }
   }, [activeIndex])
-  
 
   useEffect(() => {
     if (dropdownRef && isOpen) {
       setFocusForKeyboardNavigation()
     }
   }, [dropdownRef, isOpen])
-  
 
   useEffect(() => {
     setActiveIndex(0)
@@ -118,7 +115,6 @@ export const SelectDesktop = (props: ISingleSelectDesktopProps): ReactElement | 
     <>
       {isOpen && (
         <div
-          
           className="select__options"
           style={{
             left,
@@ -134,7 +130,6 @@ export const SelectDesktop = (props: ISingleSelectDesktopProps): ReactElement | 
           ) : (
             <>
               <div
-                
                 data-id={`${dataId}-options-content`}
                 className={classNames('select__options__scroll', 'scrollbar')}
               >

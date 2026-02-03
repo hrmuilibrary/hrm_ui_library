@@ -1,4 +1,12 @@
-import React, { forwardRef, ReactElement, useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import React, {
+  forwardRef,
+  ReactElement,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState
+} from 'react'
 import { TSingleSelectPropTypes } from '../types'
 import { useIsMobile } from '../../../hooks/useGetIsMobile'
 import { SelectDesktop } from './SelectDesktop'
@@ -111,15 +119,12 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
     return filterOptions(options, searchValue)
   }, [searchValue, options])
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    
     if (!isOpen) return
 
     switch (e.key) {
       case 'ArrowDown':
         e.preventDefault()
-        setActiveIndex((prev) =>
-          Math.min(prev + 1, filteredData.length - 1)
-        )
+        setActiveIndex((prev) => Math.min(prev + 1, filteredData.length - 1))
         break
 
       case 'ArrowUp':
@@ -142,7 +147,6 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
     }
   }
 
-  
   const setCurrentSelectedLabel = useCallback(() => {
     const selectedItemIndex = options.findIndex((item) => item.value === currentSelection)
     setSelectedOption(options[selectedItemIndex])
@@ -152,7 +156,7 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
   useEffect(() => {
     setCurrentSelectedLabel()
   }, [setCurrentSelectedLabel])
-  
+
   return (
     <div
       data-id={`${dataId}-content`}

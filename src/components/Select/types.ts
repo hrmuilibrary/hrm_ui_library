@@ -171,9 +171,8 @@ export interface ISingleSelectDesktopProps extends ISingleSelectResponsiveProps 
   inputRef: HTMLInputElement | null
   containerRef: HTMLDivElement | null
   setCurrentSelectedLabel: () => void
-  activeIndex:number
+  activeIndex: number
   setActiveIndex: (index: number) => void
-  
 }
 
 export type TSelectFooterPropTypes = {

@@ -25,7 +25,7 @@ type TProps = {
   menuOptions?: TMenuItem[]
   dataIdPrefix?: string
   closeDropdown?: () => void
-  handleKeyDown?: (e:React.KeyboardEvent) => void
+  handleKeyDown?: (e: React.KeyboardEvent) => void
 }
 
 export const ContentTop = React.memo<TProps>((props: TProps): React.ReactElement => {
@@ -116,7 +116,7 @@ export const ContentTop = React.memo<TProps>((props: TProps): React.ReactElement
         {isMobile && <IconChevronLeft onClick={onBack} size="large" />}
         {isSearchAvailable && (
           <Input
-            onKeyDown={handleKeyDown||noop}
+            onKeyDown={handleKeyDown || noop}
             ref={inputRef}
             className="content-top__search"
             size="small"
