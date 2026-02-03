@@ -1,3 +1,10 @@
+## [3.1.9](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.8...3.1.9) (2026-02-03)
+
+
+### Bug Fixes
+
+* multiselect focus when select is not with search ([adebdc9](https://github.com/hrmuilibrary/hrm_ui_library/commit/adebdc9f544e7352bf6b65870829e7fa0850940e))
+
 ## [3.1.8](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.7...3.1.8) (2026-02-03)
 
 
