@@ -6,6 +6,7 @@ import { TMultiSingleTabPropTypes } from '../../types'
 import { FixedSizeList as List } from 'react-window'
 import { DROPDOWN_HEIGHT, DROPDOWN_WIDTH, ITEM_SIZE, ITEM_SIZE_MOBILE } from '../../constants'
 import classNames from 'classnames'
+import { noop } from '../../../../utils/helpers'
 
 export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null => {
   const {
@@ -34,6 +35,7 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
   const [searchValue, setSearchValue] = useState('')
   const [isAllSelected, setAllSelected] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0)
+  const dropdownRef = useRef<HTMLDivElement | null>(null)
   const listRef = useRef<List>(null)
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -111,6 +113,11 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
     onItemDeselect(item)
   }
 
+  useEffect(() => {
+    if (dropdownRef && dropdownRef.current && !isSearchAvailable) {
+      dropdownRef.current.focus()
+    }
+  }, [dropdownRef.current])
   const checkIsSelected = (itemValue: TItemValue) => {
     return selectedValues.find((item) => item.value === itemValue) !== undefined
   }
@@ -148,6 +155,9 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
           select__options__scroll_mobile: isMobile
         })}
         style={scrollableContentStyle}
+        ref={dropdownRef}
+        tabIndex={0}
+        onKeyDown={isSearchAvailable ? noop : handleKeyDown}
       >
         {filteredData.length > 0 && (
           <List
