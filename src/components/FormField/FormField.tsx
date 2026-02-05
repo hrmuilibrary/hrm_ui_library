@@ -49,7 +49,7 @@ export const FormField = (props: TFormFieldPropTypes): ReactElement | null => {
               })}
               {!hideErrorMessage ? (
                 <ReactHookFormErrorMessage
-                  name={name}
+                  name={errors?.[name]?.root ? `${name}.root` : name}
                   errors={errors}
                   render={({ message }: { message: string }) => {
                     return (
