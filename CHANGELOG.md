@@ -1,3 +1,10 @@
+## [3.1.10](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.9...3.1.10) (2026-02-05)
+
+
+### Bug Fixes
+
+* fix error handling in case of array schemas ([0967a05](https://github.com/hrmuilibrary/hrm_ui_library/commit/0967a05336471713f5395262909bdfb76ef0964b))
+
 ## [3.1.9](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.8...3.1.9) (2026-02-03)
 
 
