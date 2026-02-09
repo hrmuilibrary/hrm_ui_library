@@ -156,7 +156,7 @@ export interface ISingleSelectResponsiveProps {
   currentSelection: TItemValue | undefined
   isRequiredField?: boolean
   translations?: TSelectTranslations
-  language?: string,
+  language?: string
   searchValue: string
   setSearchValue: (value: string) => void
 }

@@ -31,7 +31,7 @@ export const SelectMobile = (props: ISingleSelectMobileProps): ReactElement => {
     searchValue,
     setSearchValue
   } = props
-  
+
   const clickHandler =
     (isSelected: boolean) =>
     ({ value }: TSelectedValue) => {
