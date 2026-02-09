@@ -27,9 +27,11 @@ export const SelectMobile = (props: ISingleSelectMobileProps): ReactElement => {
     labelLeftIconProps,
     optionRightIconComponent,
     labelRightIconComponent,
-    withSearch
+    withSearch,
+    searchValue,
+    setSearchValue
   } = props
-  const [searchValue, setSearchValue] = useState<string>('')
+  
   const clickHandler =
     (isSelected: boolean) =>
     ({ value }: TSelectedValue) => {

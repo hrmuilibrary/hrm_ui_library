@@ -156,7 +156,7 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
   useEffect(() => {
     setCurrentSelectedLabel()
   }, [setCurrentSelectedLabel])
-
+  
   return (
     <div
       data-id={`${dataId}-content`}
@@ -213,6 +213,8 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
           onItemSelect={onItemSelect}
           translations={localizations}
           withSearch={withSearch}
+          searchValue={searchValue}
+          setSearchValue={setSearchValue}
         />
       ) : (
         <SelectDesktop
