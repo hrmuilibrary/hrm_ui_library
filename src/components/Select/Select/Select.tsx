@@ -213,6 +213,8 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
           onItemSelect={onItemSelect}
           translations={localizations}
           withSearch={withSearch}
+          searchValue={searchValue}
+          setSearchValue={setSearchValue}
         />
       ) : (
         <SelectDesktop

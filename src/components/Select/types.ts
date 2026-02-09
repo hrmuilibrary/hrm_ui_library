@@ -157,6 +157,8 @@ export interface ISingleSelectResponsiveProps {
   isRequiredField?: boolean
   translations?: TSelectTranslations
   language?: string
+  searchValue: string
+  setSearchValue: (value: string) => void
 }
 
 export interface ISingleSelectMobileProps extends ISingleSelectResponsiveProps {
@@ -164,8 +166,6 @@ export interface ISingleSelectMobileProps extends ISingleSelectResponsiveProps {
 }
 
 export interface ISingleSelectDesktopProps extends ISingleSelectResponsiveProps {
-  searchValue: string
-  setSearchValue: (value: string) => void
   withSearch?: boolean
   dropdownWidth?: number
   inputRef: HTMLInputElement | null

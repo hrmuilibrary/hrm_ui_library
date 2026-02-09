@@ -42,7 +42,7 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
     switch (e.key) {
       case 'ArrowDown':
         e.preventDefault()
-        setActiveIndex((prev) => Math.min(prev + 1, options.length - 1))
+        setActiveIndex((prev) => Math.min(prev + 1, filteredData.length - 1))
         break
 
       case 'ArrowUp':
