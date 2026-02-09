@@ -1,3 +1,11 @@
+## [3.1.11](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.10...3.1.11) (2026-02-09)
+
+
+### Bug Fixes
+
+* prettier ([a1bec01](https://github.com/hrmuilibrary/hrm_ui_library/commit/a1bec01a20a79300f7d382658401169bf5fa6bbc))
+* select mobile search ([95b8b6b](https://github.com/hrmuilibrary/hrm_ui_library/commit/95b8b6bcfb6f7e59ca5e596d4770bf6b9f177c56))
+
 ## [3.1.10](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.9...3.1.10) (2026-02-05)
 
 
