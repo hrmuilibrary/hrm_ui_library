@@ -20,7 +20,8 @@ export const TimePickerMobile = (props: ITimePickerProps): ReactElement => {
     changeHandler,
     setFieldValue,
     modalOptions,
-    name
+    name,
+    theme = 'light'
   } = props
   const selectedTime =
     value !== undefined && Object.prototype.toString.call(value) === '[object Date]'
@@ -48,7 +49,7 @@ export const TimePickerMobile = (props: ITimePickerProps): ReactElement => {
 
   return (
     <>
-      <Label text={label} required={required} invalid={hasError} />
+      <Label text={label} required={required} invalid={hasError} theme={theme} />
       <Input
         size={size}
         onClick={openTimePicker}
@@ -57,8 +58,10 @@ export const TimePickerMobile = (props: ITimePickerProps): ReactElement => {
         datePlaceHolderText={label ? '' : placeholderText}
         rightIconProps={{ Component: IconCalendarRight, onClick: openTimePicker }}
         currentValue={selectedTime ? dayjs(selectedTime.toString()).format(format) : ''}
+        theme={theme}
       />
       <MobileModalContent
+        theme={theme}
         dateInitialValue={selectedTime}
         onApply={onApply}
         mobileTitle={modalOptions?.title}

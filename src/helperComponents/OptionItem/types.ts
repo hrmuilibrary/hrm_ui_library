@@ -1,7 +1,8 @@
 import { CSSProperties, ReactElement } from 'react'
 import { TTooltipProps } from '../../components/Tooltip/types'
+import { ICommon } from '../../type'
 
-export type TSelectItemProps = {
+export interface TSelectItemProps extends ICommon {
   isSelected?: boolean
   data: TSelectOption
   className?: string

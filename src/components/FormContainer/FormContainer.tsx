@@ -13,6 +13,7 @@ export const FormContainer = (props: FormPropTypes): React.ReactElement => {
     shouldUnregister,
     shouldFocusError = true,
     mode = 'onBlur',
+    theme = 'light',
     initialValues,
     validationScheme,
     buttonConfigs,
@@ -66,6 +67,7 @@ export const FormContainer = (props: FormPropTypes): React.ReactElement => {
       onSubmit={handleSubmit(customSubmit)}
       id={formId}
       className={classnames('form-container', className)}
+      data-theme={theme}
     >
       <FormContext.Provider
         value={{

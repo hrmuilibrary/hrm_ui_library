@@ -49,7 +49,7 @@ export const Checkbox = forwardRef(
     }
 
     const checkboxLabelPopover = popoverAddons ? (
-      <Popover id={`${popoverAddons.id}`} {...popoverAddons}>
+      <Popover id={`${popoverAddons.id}`} theme={theme} {...popoverAddons}>
         <div id={`${popoverAddons.id}`}>
           <IconInfo
             dataId={`${dataId}-icon`}
@@ -84,10 +84,10 @@ export const Checkbox = forwardRef(
         )
       }
       return (
-        <Text type={disabled ? 'disabled' : 'primary'} className="controller__label">
+        <Text type={disabled ? 'disabled' : 'primary'} className="controller__label" theme={theme}>
           <>
             {beforeLink && <span className="mr-4">{beforeLink}</span>}
-            <Link dataId={dataId} url={link} target="_blank">
+            <Link dataId={dataId} url={link} target="_blank" theme={theme}>
               {label}
             </Link>
             {afterLink && <span className="ml-4">{afterLink}</span>}

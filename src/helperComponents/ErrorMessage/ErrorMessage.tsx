@@ -10,7 +10,8 @@ export const ErrorMessage = ({
   message,
   icon = 'infoFilled',
   dataId,
-  className
+  className,
+  theme = 'light'
 }: TErrorMessageProps): ReactElement => {
   return (
     <Text
@@ -18,6 +19,7 @@ export const ErrorMessage = ({
       size="small"
       type="danger"
       dataId={generateDataTestId('error-message', dataId)}
+      theme={theme}
     >
       <>
         <IconDynamicComponent

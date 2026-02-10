@@ -60,6 +60,7 @@ export const Modal = (props: TModalPropTypes): ReactElement => {
     size = 'medium',
     closeOnOutsideClick = true,
     isMobileFullScreen,
+    theme = 'light',
     ...rest
   } = props
 
@@ -82,6 +83,7 @@ export const Modal = (props: TModalPropTypes): ReactElement => {
           }}
           exit={{ opacity: 0 }}
           transition={{ duration: isMobile ? 0 : 0.4 }}
+          data-theme={theme}
         >
           <motion.div
             className={classNames('modal__container', {
@@ -90,7 +92,7 @@ export const Modal = (props: TModalPropTypes): ReactElement => {
             ref={setContainerRef}
             {...(isMobile ? MOBILE_ANIMATION(isMobileFullScreen) : DESKTOP_ANIMATION)}
           >
-            <ModalContent {...rest} onClose={onClose} />
+            <ModalContent {...rest} onClose={onClose} theme={theme} />
           </motion.div>
         </motion.div>
       ) : null}

@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
+import { ICommon } from '../../type'
 
-export interface LabelPropTypes {
+export interface LabelPropTypes extends ICommon {
   required?: boolean
   disabled?: boolean
   invalid?: boolean

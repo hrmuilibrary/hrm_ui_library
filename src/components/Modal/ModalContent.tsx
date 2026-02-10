@@ -9,8 +9,9 @@ import { Tooltip } from '../Tooltip'
 import { TButtonPropTypes } from '../Button/types'
 import { noop } from '../../utils/helpers'
 import { TTitleSize } from './types'
+import { ICommon } from '../../type'
 
-type TProps = {
+interface TProps extends ICommon {
   title?: string
   subtitle?: string
   dataIdPrefix?: string
@@ -38,6 +39,7 @@ export const ModalContent = ({
   confirmBtnTooltipText,
   buttonProps,
   onSubmit,
+  theme = 'light',
   titleSize = 'large'
 }: TProps): ReactElement => {
   return (
@@ -50,11 +52,16 @@ export const ModalContent = ({
               size={titleSize}
               weight={'bolder'}
               dataId={dataIdPrefix ? `${dataIdPrefix}-modal-title` : ''}
+              theme={theme}
             >
               {title}
             </Text>
             {subtitle ? (
-              <Text className={'mt-12'} dataId={dataIdPrefix ? `${dataIdPrefix}-modal-title` : ''}>
+              <Text
+                className={'mt-12'}
+                dataId={dataIdPrefix ? `${dataIdPrefix}-modal-title` : ''}
+                theme={theme}
+              >
                 {subtitle}
               </Text>
             ) : null}
@@ -66,6 +73,7 @@ export const ModalContent = ({
               iconProps={{ Component: IconDismiss }}
               onClick={onClose}
               type="tertiary"
+              theme={theme}
             />
           ) : null}
         </div>
@@ -80,6 +88,7 @@ export const ModalContent = ({
               className="modal__footer__btn mr-16"
               onClick={onClose}
               dataId={dataIdPrefix ? `${dataIdPrefix}-modal-cancel-button` : ''}
+              theme={theme}
               {...(buttonProps.cancel || {})}
             />
           )}
@@ -88,6 +97,7 @@ export const ModalContent = ({
               text={confirmBtnTooltipText as string}
               id={'confirm-btn-tooltip'}
               position={Positions.TOP_CENTER}
+              theme={theme}
             />
           ) : null}
           <Button
@@ -96,6 +106,7 @@ export const ModalContent = ({
             type="primary"
             onClick={onSubmit ? onSubmit : noop}
             dataId={dataIdPrefix ? `${dataIdPrefix}-modal-confirm-button` : ''}
+            theme={theme}
             {...buttonProps.confirm}
           />
         </div>

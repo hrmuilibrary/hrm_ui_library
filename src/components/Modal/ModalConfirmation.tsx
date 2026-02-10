@@ -37,7 +37,8 @@ export const ModalConfirmation = (props: TModalConfirmationPropTypes): ReactElem
     dataIdPrefix,
     closeOnOutsideClick = true,
     iconProps,
-    subtitle
+    subtitle,
+    theme = 'light'
   } = props
 
   const [containerRef, setContainerRef] = useState<HTMLDivElement | null>(null)
@@ -57,6 +58,7 @@ export const ModalConfirmation = (props: TModalConfirmationPropTypes): ReactElem
           }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.4 }}
+          data-theme={theme}
         >
           <div
             className="modal__container text-center"
@@ -74,6 +76,7 @@ export const ModalConfirmation = (props: TModalConfirmationPropTypes): ReactElem
                   weight="bolder"
                   lineHeight="large"
                   size="large"
+                  theme={theme}
                   dataId={dataIdPrefix ? `${dataIdPrefix}-modal-title` : ''}
                 >
                   {title}
@@ -87,6 +90,7 @@ export const ModalConfirmation = (props: TModalConfirmationPropTypes): ReactElem
                     type="secondary"
                     className="modal__footer__btn mr-16"
                     onClick={onClose}
+                    theme={theme}
                     dataId={dataIdPrefix ? `${dataIdPrefix}-modal-cancel-button` : ''}
                     {...(buttonProps.cancel || {})}
                   />
@@ -94,6 +98,7 @@ export const ModalConfirmation = (props: TModalConfirmationPropTypes): ReactElem
                     type="danger"
                     className={'modal__footer__btn'}
                     onClick={onSubmit}
+                    theme={theme}
                     dataId={dataIdPrefix ? `${dataIdPrefix}-modal-confirm-button` : ''}
                     {...buttonProps.confirm}
                   />

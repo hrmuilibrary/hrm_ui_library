@@ -27,7 +27,7 @@ export const Empty = (props: TEmptyProps): React.ReactElement => {
       data-theme={theme}
     >
       <div className="no-result__icon">
-        <Image imagePath={illustration} />
+        <Image imagePath={illustration} theme={theme} />
       </div>
       <div className="no-result__content">
         {mainMessage ? (

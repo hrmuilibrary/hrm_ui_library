@@ -1,7 +1,8 @@
 import { ReactNode } from 'react'
 import { TButtonPropTypes } from '../Button/types'
+import { ICommon } from '../../type'
 export type TTitleSize = 'medium' | 'large'
-export interface TModalPropTypes {
+export interface TModalPropTypes extends ICommon {
   dataIdPrefix?: string
   closeOnOutsideClick?: boolean
   isOpen: boolean
@@ -23,7 +24,7 @@ export interface TModalPropTypes {
   isMobileFullScreen?: boolean
 }
 
-export interface TModalConfirmationPropTypes {
+export interface TModalConfirmationPropTypes extends ICommon {
   dataIdPrefix?: string
   closeOnOutsideClick?: boolean
   isOpen: boolean

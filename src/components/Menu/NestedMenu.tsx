@@ -18,6 +18,7 @@ export const NestedMenu = ({
   onClose,
   isOpen,
   position = 'bottom-right',
+  theme = 'light',
   className = ''
 }: TNestedMenuProps): ReactElement | null => {
   const [menuRef, setMenuRef] = useState<HTMLDivElement | null>(null)
@@ -91,7 +92,12 @@ export const NestedMenu = ({
   return (
     <>
       {createPortal(
-        <div className={classNames('nested-menu', className)} style={menuStyles} ref={setMenuRef}>
+        <div
+          className={classNames('nested-menu', className)}
+          style={menuStyles}
+          ref={setMenuRef}
+          data-theme={theme}
+        >
           <CollapseGroup items={_menuItems} />
         </div>,
         parentRef

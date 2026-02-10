@@ -21,6 +21,7 @@ export const TimePickerDesktop = (props: ITimePickerProps): React.ReactElement =
     format = 'HH:mm',
     locale = 'hy',
     hasError,
+    theme = 'light',
     ...rest
   } = props
   const [time, setTime] = useState<string>()
@@ -76,8 +77,8 @@ export const TimePickerDesktop = (props: ITimePickerProps): React.ReactElement =
   }
 
   return (
-    <div className="picker-container input__inner">
-      <Label text={label} required={required} invalid={hasError} />
+    <div className="picker-container input__inner" data-theme={theme}>
+      <Label text={label} required={required} invalid={hasError} theme={theme} />
 
       <DatePicker
         selected={dayjs(dateInitialValue).isValid() ? dateInitialValue : null}
@@ -85,6 +86,7 @@ export const TimePickerDesktop = (props: ITimePickerProps): React.ReactElement =
         showTimeSelect
         showTimeSelectOnly
         dateFormat={format}
+        theme={theme}
         // @ts-ignore
         ref={calendarRef}
         {...rest}
@@ -97,6 +99,7 @@ export const TimePickerDesktop = (props: ITimePickerProps): React.ReactElement =
             dataId={dataId}
             size={size}
             rightIconProps={{ Component: IconClock, onClick: openDatepicker }}
+            theme={theme}
           />
         }
       />

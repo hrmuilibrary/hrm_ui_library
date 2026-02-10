@@ -20,7 +20,8 @@ export const OptionItem = (props: TSelectItemProps): React.ReactElement => {
     className = '',
     tooltipAddons,
     dataId = '',
-    style = {}
+    style = {},
+    theme = 'light'
   } = props
 
   const { label, meta, value, optionLeftIcon, avatar } = data
@@ -49,6 +50,7 @@ export const OptionItem = (props: TSelectItemProps): React.ReactElement => {
         },
         className
       )}
+      data-theme={theme}
       onClick={handleClick}
       style={style}
     >
@@ -112,7 +114,7 @@ export const OptionItem = (props: TSelectItemProps): React.ReactElement => {
 
   return tooltipAddons ? (
     <>
-      <Tooltip {...tooltipAddons} text={`${label}`} id={`${value}`} />
+      <Tooltip {...tooltipAddons} text={`${label}`} id={`${value}`} theme={theme} />
       {optionContent}
     </>
   ) : (

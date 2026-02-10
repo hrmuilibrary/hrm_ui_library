@@ -14,7 +14,8 @@ export const FormField = (props: TFormFieldPropTypes): ReactElement | null => {
     dataId = '',
     hideErrorMessage = false,
     errorMessageIcon,
-    defaultValue
+    defaultValue,
+    theme = 'light'
   } = props
   const { register, errors, setValue, control } = useContext(FormContext)
 
@@ -25,7 +26,7 @@ export const FormField = (props: TFormFieldPropTypes): ReactElement | null => {
   const registerOptions = register(name)
 
   return (
-    <div className={classnames('form-container__field', className, name)}>
+    <div className={classnames('form-container__field', className, name)} data-theme={theme}>
       <Controller
         control={control}
         name={name}
@@ -58,6 +59,7 @@ export const FormField = (props: TFormFieldPropTypes): ReactElement | null => {
                         message={message || ''}
                         className="full-width"
                         icon={errorMessageIcon}
+                        theme={theme}
                       />
                     )
                   }}

@@ -9,7 +9,8 @@ export const Label: React.FC<LabelPropTypes> = (props: LabelPropTypes) => {
     required = false,
     disabled = false,
     className = '',
-    labelAddons
+    labelAddons,
+    theme = 'light'
   } = props
   if (!text) {
     return null
@@ -20,6 +21,7 @@ export const Label: React.FC<LabelPropTypes> = (props: LabelPropTypes) => {
       weight={'semibold'}
       type={disabled ? 'disabled' : 'primary'}
       className={`label flexbox align-items--start mb-8 ${className}`}
+      theme={theme}
     >
       <>
         {text}

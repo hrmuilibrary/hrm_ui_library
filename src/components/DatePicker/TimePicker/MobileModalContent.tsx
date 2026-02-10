@@ -3,8 +3,9 @@ import { Modal } from '../../Modal'
 import { HOUR_OPTIONS, MINUTE_OPTIONS } from './consts'
 import { WheelPicker, WheelPickerWrapper } from '@ncdai/react-wheel-picker'
 import '@ncdai/react-wheel-picker/style.css'
+import { ICommon } from '../../../type'
 
-type TProps = {
+interface TProps extends ICommon {
   mobileTitle?: string
   isOpen: boolean
   onApply: (selectedDate: Date) => void
@@ -19,6 +20,7 @@ export const MobileModalContent = ({
   mobileTitle,
   modalApplyButtonText = 'Apply',
   closeTimePicker,
+  theme = 'light',
   dateInitialValue = new Date()
 }: TProps): ReactElement => {
   const [selectedHour, setSelectedHour] = useState<string>(`${dateInitialValue.getHours()}`)
@@ -44,8 +46,9 @@ export const MobileModalContent = ({
         }
       }}
       closeIcon={true}
+      theme={theme}
     >
-      <div className="mobile_time_picker">
+      <div className="mobile_time_picker" data-theme={theme}>
         <WheelPickerWrapper className="mobile_time_picker-wheel-picker">
           <WheelPicker
             value={`${selectedHour}`}

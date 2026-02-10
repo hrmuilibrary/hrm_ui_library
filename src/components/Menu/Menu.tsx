@@ -81,6 +81,7 @@ export const Menu = (props: TMenuProps): ReactElement | null => {
                         value,
                         meta
                       }}
+                      theme={theme}
                       labelLeftIconProps={iconProps}
                       onClick={() => {
                         onClose()

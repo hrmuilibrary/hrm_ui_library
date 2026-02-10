@@ -38,6 +38,7 @@ export const Copy = ({
           elemRef={copyIconRef.current as HTMLElement}
           text={textAfterCopy || 'Copied'}
           position={'top-center'}
+          theme={theme}
         />
       ) : null}
     </div>

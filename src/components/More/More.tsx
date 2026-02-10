@@ -29,6 +29,7 @@ export const More = (props: TMorePropTypes): React.ReactElement => {
     <Text {...textProps} className={'more'} theme={theme}>
       {`${isExpanded ? expandedText : collapsedText}`}
       <Button
+        theme={theme}
         className={'more__btn ml-4'}
         type="link"
         buttonText={isExpanded ? buttonText.collapse : buttonText.expand}
