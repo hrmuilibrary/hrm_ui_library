@@ -11,7 +11,8 @@ export const More = (props: TMorePropTypes): React.ReactElement => {
     buttonText = {
       expand: 'Ավելին',
       collapse: 'Փակել'
-    }
+    },
+    theme = 'light'
   } = props
   const [isExpanded, setIsExpanded] = useState(false)
 
@@ -25,7 +26,7 @@ export const More = (props: TMorePropTypes): React.ReactElement => {
   }
 
   return (
-    <Text {...textProps} className={'more'}>
+    <Text {...textProps} className={'more'} theme={theme}>
       {`${isExpanded ? expandedText : collapsedText}`}
       <Button
         className={'more__btn ml-4'}

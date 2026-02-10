@@ -16,7 +16,8 @@ export const Progress = (props: TProgressPropTypes): React.ReactElement => {
     noText = false,
     dimension,
     className = '',
-    loop = false
+    loop = false,
+    theme = 'light'
   } = props
   const _dimension = dimension ? dimension : CIRCLE_SIZES[size]
   const r = _dimension - 5
@@ -30,6 +31,7 @@ export const Progress = (props: TProgressPropTypes): React.ReactElement => {
       className={`progress-bar progress-bar--${type} progress-bar--${size} ${className}${
         loop ? ' progress-bar--loop' : ''
       }`}
+      data-theme={theme}
       style={
         type == 'circle'
           ? {

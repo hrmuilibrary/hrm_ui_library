@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import { ICommon } from '../../type'
 
 export type TCardTitle = {
   alignment?: 'top' | 'bottom' | 'left' | 'right'
@@ -6,7 +7,7 @@ export type TCardTitle = {
   color: 'blue' | 'purple' | 'yellow' | 'pink' | 'green' | 'grey'
 }
 
-export type TCardProps = {
+export type TCardProps = ICommon & {
   title?: TCardTitle
   isExpandable?: boolean
   isExpanded?: boolean

@@ -10,7 +10,8 @@ export const Image = (props: ImagePropTypes): React.ReactElement => {
     className = '',
     isFullWidth,
     isFullHeight,
-    ratio
+    ratio,
+    theme = 'light'
   } = props
 
   return isBackgroundImage ? (
@@ -21,6 +22,7 @@ export const Image = (props: ImagePropTypes): React.ReactElement => {
         backgroundSize: backgroundSize,
         aspectRatio: ratio
       }}
+      data-theme={theme}
     />
   ) : (
     <img
@@ -32,6 +34,7 @@ export const Image = (props: ImagePropTypes): React.ReactElement => {
         width: isFullWidth ? '100%' : '',
         height: isFullHeight ? '100%' : ''
       }}
+      data-theme={theme}
     />
   )
 }

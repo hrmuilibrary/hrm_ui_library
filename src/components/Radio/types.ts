@@ -1,6 +1,7 @@
 import { ReactElement } from 'react'
+import { ICommon } from '../../type'
 
-export interface TRadioProps extends IFormCompProps {
+export interface TRadioProps extends IFormCompProps, ICommon {
   showRadioIcon?: boolean
   label?: string | ReactElement
   helperText?: string | ReactElement
@@ -18,7 +19,7 @@ export type TRadioOptionItem = {
   dataId?: string
 }
 
-export interface TRadioGroupProps extends IFormCompProps {
+export interface TRadioGroupProps extends IFormCompProps, ICommon {
   label?: string | ReactElement
   className?: string
   isHorizontal?: boolean

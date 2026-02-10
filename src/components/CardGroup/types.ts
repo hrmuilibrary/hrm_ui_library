@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import { ICommon } from '../../type'
 
 export type TCardGroupTitle = {
   alignment?: 'top' | 'bottom' | 'left' | 'right'
@@ -6,7 +7,7 @@ export type TCardGroupTitle = {
   color: 'blue' | 'purple' | 'yellow' | 'pink' | 'green' | 'grey'
 }
 
-export type TCardGroupProps = {
+export type TCardGroupProps = ICommon & {
   title?: TCardGroupTitle
   children: ReactNode
   className?: string

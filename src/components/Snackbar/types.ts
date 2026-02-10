@@ -1,4 +1,5 @@
 import { TButtonPropTypes } from '../Button/types'
+import { ICommon } from '../../type'
 
 export type TSnackbarTypes = 'success' | 'error' | 'warning' | 'information'
 
@@ -10,7 +11,7 @@ export interface TToastProps {
   text: string | React.ReactElement
   actionProps?: TButtonPropTypes
 }
-export interface TSnackbarProps extends IFormCompProps {
+export interface TSnackbarProps extends IFormCompProps, ICommon {
   duration?: number
   position:
     | 'top-center'

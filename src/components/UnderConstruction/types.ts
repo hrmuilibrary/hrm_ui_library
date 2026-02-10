@@ -1,4 +1,6 @@
-export interface TUnderConstructionProps {
+import { ICommon } from '../../type'
+
+export interface TUnderConstructionProps extends ICommon {
   size?: string
   className?: string
   mainMessage?: string

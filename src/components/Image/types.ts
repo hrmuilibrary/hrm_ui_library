@@ -1,4 +1,6 @@
-export interface ImagePropTypes {
+import { ICommon } from '../../type'
+
+export interface ImagePropTypes extends ICommon {
   name?: string
   imagePath?: string
   className?: string

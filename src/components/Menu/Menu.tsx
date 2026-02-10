@@ -19,7 +19,8 @@ export const Menu = (props: TMenuProps): ReactElement | null => {
     isOpen,
     position = 'bottom-right',
     className = '',
-    children = null
+    children = null,
+    theme = 'light'
   } = props
   const [menuRef, setMenuRef] = useState<HTMLDivElement | null>(null)
   useOnOutsideClick(menuRef, onClose, isOpen, useId())
@@ -63,6 +64,7 @@ export const Menu = (props: TMenuProps): ReactElement | null => {
           className={classNames('select', 'select--menu', className)}
           style={menuStyles}
           ref={setMenuRef}
+          data-theme={theme}
         >
           <>
             {children}

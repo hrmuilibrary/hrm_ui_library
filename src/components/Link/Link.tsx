@@ -11,10 +11,11 @@ export const Link = (props: LinkPropTypes): ReactElement => {
     url,
     dataId = '',
     target,
-    onclick
+    onclick,
+    theme = 'light'
   } = props
   return beforeLink || afterLink ? (
-    <span className={className}>
+    <span className={className} data-theme={theme}>
       {beforeLink}
       <a
         onClick={(e) => {
@@ -27,6 +28,7 @@ export const Link = (props: LinkPropTypes): ReactElement => {
         className={'link'}
         data-id={dataId ? `${dataId}-link` : ''}
         target={target}
+        data-theme={theme}
       >
         {children}
       </a>
@@ -44,6 +46,7 @@ export const Link = (props: LinkPropTypes): ReactElement => {
       className={classNames(`link ${className}`)}
       data-id={dataId ? `${dataId}-link` : ''}
       target={target}
+      data-theme={theme}
     >
       {children}
     </a>

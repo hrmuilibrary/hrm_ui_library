@@ -1,7 +1,8 @@
 import { InputHTMLAttributes, ReactElement, RefObject, FocusEvent } from 'react'
-import { ISVGIconProps } from '../../type'
+import { ISVGIconProps, ICommon } from '../../type'
 export interface InputCustomProps
   extends IFormCompProps,
+    ICommon,
     Omit<
       InputHTMLAttributes<HTMLInputElement>,
       'size' | 'onFocus' | 'value' | 'onChange' | 'autoComplete'

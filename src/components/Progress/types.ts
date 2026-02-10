@@ -1,4 +1,6 @@
-export interface TProgressPropTypes {
+import { ICommon } from '../../type'
+
+export interface TProgressPropTypes extends ICommon {
   percent?: number
   stepCount?: number
   currentStep?: number

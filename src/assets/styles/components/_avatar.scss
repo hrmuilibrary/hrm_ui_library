@@ -47,24 +47,16 @@
   --ds-avatar-image-border: var(--ds-border-thin) solid var(--grey-200);
 
   --ds--avtar-border-radius: var(--ds-border-radius-full);
-  --ds-avatar-font: var(--ds-font-weight-default) var(--ds-headline-sm)/1 var(--ds-font-family);
-  --ds-avatar-transition: background-color .3s linear, color .3s linear;
-
-  --ds-avatar-icon-size: var(--ds-size-24);
-  --ds-avatar-icon-shadow: var(--ds-shadow-1);
-  --ds-avatar-icon-border-radius: var(--ds-border-radius-full);
-  --ds-avatar-icon-bg: var(--ds-color-bg-white);
-  --ds-avatar-icon-position:  5px 5px;
 
   @include mixin.flexbox;
   @include mixin.align-items(center);
   @include mixin.justify-content(center);
   position: relative;
   text-transform: capitalize;
-  font: var(--ds-avatar-font);
+  font: var(--ds-font-weight-default) var(--ds-headline-sm)/1 var(--ds-font-family);
   border-radius: var(--ds--avtar-border-radius);
   cursor: pointer;
-  transition: var(--ds-avatar-transition);
+  transition: background-color .3s linear, color .3s linear;
   background: no-repeat center;
   background-size: cover;
 

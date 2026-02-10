@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import { ICommon } from '../../type'
 
 export type TMenuItem = {
   label: TItemLabel
@@ -10,7 +11,7 @@ export type TMenuItem = {
   meta?: string
 }
 
-export type TMenuProps = {
+export type TMenuProps = ICommon & {
   className?: string
   menuItems?: TMenuItem[]
   parentRef: HTMLElement | null
@@ -27,7 +28,7 @@ export type TNestedMenuItemProps = {
   iconProps?: TSelectIconProps
 }
 
-export type TNestedMenuProps = {
+export type TNestedMenuProps = ICommon & {
   menuItems: TNestedMenuItemProps[]
   parentRef: HTMLElement
   onClose: TCallBackFn

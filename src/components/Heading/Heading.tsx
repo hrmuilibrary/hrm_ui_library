@@ -12,7 +12,8 @@ export const Heading = (props: HeadingPropTypes): ReactElement => {
     type: As = 'h1',
     weight = 'regular',
     onClick = noop,
-    dataId = ''
+    dataId = '',
+    theme = 'light'
   } = props
 
   return (
@@ -26,6 +27,7 @@ export const Heading = (props: HeadingPropTypes): ReactElement => {
         lineHeight && `lh-${lineHeight}`,
         className
       )}
+      data-theme={theme}
     >
       {children}
     </As>

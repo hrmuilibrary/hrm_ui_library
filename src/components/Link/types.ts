@@ -1,4 +1,6 @@
-export interface LinkPropTypes {
+import { ICommon } from '../../type'
+
+export interface LinkPropTypes extends ICommon {
   children?: string | React.ReactElement
   className?: string
   url?: string

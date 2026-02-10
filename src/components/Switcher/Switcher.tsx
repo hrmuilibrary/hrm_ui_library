@@ -19,7 +19,8 @@ export const Switcher = forwardRef((props: TSwitcherProps, ref): React.ReactElem
     className = '',
     labelAddons,
     orientation = 'right',
-    hasSpaceBetween = true
+    hasSpaceBetween = true,
+    theme = 'light'
   } = props
   const isChecked = !!value || !!selectedValue
 
@@ -52,6 +53,7 @@ export const Switcher = forwardRef((props: TSwitcherProps, ref): React.ReactElem
         'switcher--inline': inlineType,
         'switcher--space-between': hasSpaceBetween
       })}
+      data-theme={theme}
     >
       {label && orientation === 'right' && labelComponent}
       <label

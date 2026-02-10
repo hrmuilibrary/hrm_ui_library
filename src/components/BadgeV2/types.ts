@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
-import { TSVGIconType } from '../../type'
+import { ICommon, TSVGIconType } from '../../type'
 
-export interface TBadgeV2Props extends IFormCompProps {
+export interface TBadgeV2Props extends IFormCompProps, ICommon {
   text?: number | string | ReactNode
   type?:
     | 'gray'

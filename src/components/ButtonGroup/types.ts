@@ -1,6 +1,6 @@
-import { ISVGIconProps } from '../../type'
+import { ISVGIconProps, ICommon } from '../../type'
 
-interface IButtonGroupBase {
+interface IButtonGroupBase extends ICommon {
   type?: 'primary'
   size?: 'small' | 'medium' | 'large'
   disabled?: boolean

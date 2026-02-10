@@ -27,7 +27,8 @@ export const SideSheet = (props: TSideSheetPropTypes): React.ReactElement | null
     scrollToTopOptions,
     children,
     closeOnOutsideClick = true,
-    checkboxInfo
+    checkboxInfo,
+    theme = 'light'
   } = props
   const [containerRef, setContainerRef] = useState<HTMLDivElement | null>(null)
   const [isShownScrollIcon, setIsShownScrollIcon] = useState<boolean>(false)
@@ -75,6 +76,7 @@ export const SideSheet = (props: TSideSheetPropTypes): React.ReactElement | null
       {isOpen ? (
         <motion.div
           className="side-sheet"
+          data-theme={theme}
           initial={{
             opacity: 0
           }}
@@ -118,6 +120,7 @@ export const SideSheet = (props: TSideSheetPropTypes): React.ReactElement | null
                   weight="bolder"
                   lineHeight="large"
                   size="medium"
+                  theme={theme}
                 >
                   {title}
                 </Text>

@@ -14,7 +14,8 @@ export const Tooltip = (props: TTooltipProps): React.ReactElement | null => {
     dataId = '',
     id,
     elemRef,
-    hovered = false
+    hovered = false,
+    theme = 'light'
   } = props
 
   const [isHovered, setIsHovered] = useState(hovered)
@@ -71,6 +72,7 @@ export const Tooltip = (props: TTooltipProps): React.ReactElement | null => {
       style={tooltipStyles}
       data-id={dataId}
       className={classNames(`tooltip tooltip--${size} tooltip--${tooltipPosition}`, className)}
+      data-theme={theme}
       ref={tooltipRef}
     >
       <Text
@@ -80,6 +82,7 @@ export const Tooltip = (props: TTooltipProps): React.ReactElement | null => {
         weight="regular"
         lineHeight="small"
         size={`${size == 'small' ? 'xsmall' : 'small'}`}
+        theme={theme}
       >
         {text}
       </Text>

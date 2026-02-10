@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
 import { TButtonPropTypes } from '../Button/types'
+import { ICommon } from '../../type'
 
 export type TSideSheetSize = 'small' | 'large' | 'mobile'
 
@@ -8,7 +9,7 @@ export type TCheckboxInfo = {
   isChecked: boolean
 }
 
-export interface TSideSheetPropTypes {
+export interface TSideSheetPropTypes extends ICommon {
   closeOnOutsideClick?: boolean
   shouldRemoveCallback?: boolean
   size?: TSideSheetSize

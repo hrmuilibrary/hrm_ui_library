@@ -1,4 +1,6 @@
-export interface TSwitcherProps extends IFormCompProps {
+import { ICommon } from '../../type'
+
+export interface TSwitcherProps extends IFormCompProps, ICommon {
   onClick?: (isChecked: boolean) => void
   className?: string
   disabled?: boolean

@@ -28,7 +28,8 @@ export const Checkbox = forwardRef(
       helperText = '',
       popoverAddons,
       isInvalid,
-      stopPropagation = false
+      stopPropagation = false,
+      theme = 'light'
     } = props
 
     const localRef = useRef(null)
@@ -70,7 +71,11 @@ export const Checkbox = forwardRef(
       }
       if (!link) {
         return (
-          <Text type={disabled ? 'disabled' : 'primary'} className="controller__label">
+          <Text
+            type={disabled ? 'disabled' : 'primary'}
+            className="controller__label"
+            theme={theme}
+          >
             <>
               {label}
               {required && <sup>*</sup>}
@@ -101,6 +106,7 @@ export const Checkbox = forwardRef(
             'controller--error': isInvalid,
             [className]: !!className
           })}
+          data-theme={theme}
           onClick={(e) => stopPropagation && e.stopPropagation()}
         >
           <input
@@ -127,7 +133,7 @@ export const Checkbox = forwardRef(
                 {checkboxLabelPopover}
               </div>
               {helperText ? (
-                <Text size="small" type={disabled ? 'disabled' : 'secondary'}>
+                <Text size="small" type={disabled ? 'disabled' : 'secondary'} theme={theme}>
                   {helperText}
                 </Text>
               ) : null}

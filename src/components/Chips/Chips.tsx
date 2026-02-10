@@ -18,7 +18,8 @@ export const Chips = (props: TChipsProps): ReactElement => {
     onClick,
     onRemove,
     dataId = '',
-    id = ''
+    id = '',
+    theme = 'light'
   } = props
 
   const customType = disabled
@@ -47,6 +48,7 @@ export const Chips = (props: TChipsProps): ReactElement => {
       )}
       id={id}
       onClick={handleClick}
+      data-theme={theme}
     >
       {leftIconProps?.Component ? (
         <leftIconProps.Component
@@ -63,6 +65,7 @@ export const Chips = (props: TChipsProps): ReactElement => {
           type={customType}
           size={TEXT_SIZE_MAPPING[size]}
           className="chips__label"
+          theme={theme}
         >
           <>{text}</>
         </Text>

@@ -1,7 +1,8 @@
 import { ReactElement } from 'react'
 import { FILE_UPLOAD_ERRORS } from '../../consts'
+import { ICommon } from '../../type'
 
-export interface TAvatarProps extends IFormCompProps {
+export interface TAvatarProps extends IFormCompProps, ICommon {
   allowedTypes?: string
   id?: string
   dataId?: string
@@ -18,7 +19,7 @@ export interface TAvatarProps extends IFormCompProps {
   fileAllowedSize?: number
 }
 
-export interface TAvatarGroupProps {
+export interface TAvatarGroupProps extends ICommon {
   dataId?: string
   avatarGroup: TAvatarProps[]
   onAddUser?: () => void

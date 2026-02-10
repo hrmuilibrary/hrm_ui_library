@@ -13,7 +13,8 @@ export const BadgeV2 = (props: TBadgeV2Props): ReactElement => {
     iconProps,
     withDot,
     dot,
-    disabled
+    disabled,
+    theme = 'light'
   } = props
   const {
     size: iconSize = 'small',
@@ -28,11 +29,11 @@ export const BadgeV2 = (props: TBadgeV2Props): ReactElement => {
   )
 
   if (dot) {
-    return <div className={classNames(baseClassName, 'badge-v2--dot')} />
+    return <div className={classNames(baseClassName, 'badge-v2--dot')} data-theme={theme} />
   }
 
   return (
-    <div className={baseClassName}>
+    <div className={baseClassName} data-theme={theme}>
       {withDot ? (
         <div className={classNames(baseClassName, 'badge-v2--dot badge-v2--with-dot')} />
       ) : null}

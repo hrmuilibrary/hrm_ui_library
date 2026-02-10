@@ -2,8 +2,9 @@ import { LegacyRef, ReactElement, ReactNode } from 'react'
 import { TButtonPropTypes } from '../Button/types'
 import { TMenuItem } from '../Menu/types'
 import { TTooltipProps } from '../Tooltip/types'
+import { ICommon } from '../../type'
 
-interface TSelectBaseProps {
+interface TSelectBaseProps extends ICommon {
   dataIdPrefix?: string
   error?: string
   isLoading?: boolean

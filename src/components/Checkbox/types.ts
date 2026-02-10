@@ -1,6 +1,7 @@
 import { TPopoverProps } from '../Popover/types'
+import { ICommon } from '../../type'
 
-export interface TCheckboxProps extends IFormCompProps {
+export interface TCheckboxProps extends IFormCompProps, ICommon {
   label?: string | React.ReactElement
   beforeLink?: string | React.ReactElement
   afterLink?: string | React.ReactElement

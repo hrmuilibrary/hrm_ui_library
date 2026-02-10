@@ -46,6 +46,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputCustomProps>(
       isAllowed,
       onChange,
       handleBlurEvent,
+      theme = 'light',
       ...rest
     },
     ref
@@ -151,6 +152,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputCustomProps>(
           'input--valid': isValid,
           'input--disabled': disabled
         })}
+        data-theme={theme}
       >
         <Label
           text={label}

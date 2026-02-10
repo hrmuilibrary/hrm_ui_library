@@ -39,7 +39,8 @@ export function Table({
   className,
   language = 'en',
   containerRefHandler,
-  submitButtons
+  submitButtons,
+  theme = 'light'
 }: TTableProps): ReactElement {
   const tableRef = useRef<HTMLTableElement | null>(null)
   const [tableWidth, setTableWidth] = useState(400)
@@ -122,6 +123,7 @@ export function Table({
         className
       )}
       style={{ maxHeight: fixedHeader?.y }}
+      data-theme={theme}
     >
       {withSelect && selectedFlatRows.length > 0 && (
         <div className="table-wrapper__selected-rows">
@@ -134,6 +136,7 @@ export function Table({
             type="tertiary"
             size="medium"
             iconProps={{ alignment: 'left', Component: IconDismiss }}
+            theme={theme}
           />
           {submitButtons?.map(({ buttonText, isLoading, onClick }) => (
             <Button
@@ -146,6 +149,7 @@ export function Table({
               size="medium"
               className="mr-8"
               isLoading={isLoading}
+              theme={theme}
             />
           ))}
         </div>

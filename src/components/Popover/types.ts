@@ -1,7 +1,8 @@
 import { ReactElement, ReactNode } from 'react'
 import { LinkPropTypes } from '../Link/types'
+import { ICommon } from '../../type'
 
-export interface TPopoverProps extends IFormCompProps {
+export interface TPopoverProps extends IFormCompProps, ICommon {
   clicked?: boolean
   text?: string | ReactElement
   linkAddons?: LinkPropTypes

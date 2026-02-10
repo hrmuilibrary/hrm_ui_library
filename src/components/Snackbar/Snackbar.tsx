@@ -58,12 +58,13 @@ export const notify = (toastProps: TToastProps): void => {
 }
 
 export const Snackbar = (props: TSnackbarProps): ReactElement => {
-  const { duration = 1000, position = 'bottom-center' } = props
+  const { duration = 1000, position = 'bottom-center', theme = 'light' } = props
 
   return (
     <ToastContainer
       className={'snackbar-wrapper'}
-      theme="light"
+      theme={theme}
+      data-theme={theme}
       hideProgressBar
       transition={Slide}
       position={position}

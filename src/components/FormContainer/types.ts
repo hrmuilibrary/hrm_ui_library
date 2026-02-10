@@ -2,10 +2,11 @@ import { ReactNode } from 'react'
 import { FormState, ValidationMode } from 'react-hook-form'
 import { AnyObjectSchema } from 'yup'
 import { TButtonPropTypes } from '../Button/types'
+import { ICommon } from '../../type'
 
 export type TDirtyFields = Partial<Readonly<{ [x: string]: unknown }>>
 
-export interface FormPropTypes {
+export interface FormPropTypes extends ICommon {
   className?: string
   onSubmit?: (data: TFormData, formState: FormState<TFormData>, dirtyFields?: TDirtyFields) => void
   children?: ReactNode

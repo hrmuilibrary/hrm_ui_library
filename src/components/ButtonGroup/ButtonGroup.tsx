@@ -10,7 +10,8 @@ export const ButtonGroup = ({
   type,
   size,
   disabled,
-  onTabChange
+  onTabChange,
+  theme = 'light'
 }: IButtonGroup) => {
   const [activeItem, setActiveItem] = useState<number | string>(activeIndex)
 
@@ -21,7 +22,7 @@ export const ButtonGroup = ({
   }
 
   return (
-    <div className={classNames('button-group', className)}>
+    <div className={classNames('button-group', className)} data-theme={theme}>
       {buttons.map((button) => {
         return (
           <ButtonGroupItem

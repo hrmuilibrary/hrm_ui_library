@@ -34,7 +34,8 @@ export const FileUpload = (props: TFileUploadProps): React.ReactElement | null =
     labelAddons,
     onError,
     fileAllowedSize,
-    mode = FileUploadMode.attach
+    mode = FileUploadMode.attach,
+    theme = 'light'
   } = props
   const files = (value as File[]) || uploadedFiles || []
   const fileInputRef = useRef<HTMLInputElement>(null)
@@ -110,7 +111,7 @@ export const FileUpload = (props: TFileUploadProps): React.ReactElement | null =
   )
 
   return (
-    <div className="file-upload">
+    <div className="file-upload" data-theme={theme}>
       <Label text={label} required={required} disabled={disabled} labelAddons={labelAddons} />
       <div className="file-upload__inner">
         <input

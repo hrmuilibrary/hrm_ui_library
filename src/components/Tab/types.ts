@@ -1,4 +1,5 @@
 import { TBadgeProps } from '../Badge/types'
+import { ICommon } from '../../type'
 
 export type TTabItem = {
   value: number | string
@@ -17,7 +18,7 @@ export type TTabItem = {
     Component?: TSVGIconComponent
   }
 }
-export interface TTabProps extends IFormCompProps {
+export interface TTabProps extends IFormCompProps, ICommon {
   tabItems: TTabItem[]
   type?: 'primary' | 'secondary'
   size?: 'large' | 'medium' | 'small'

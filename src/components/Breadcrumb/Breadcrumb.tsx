@@ -2,10 +2,10 @@ import React, { ReactElement } from 'react'
 import { TBreadCrumbItem, TBreadCrumbProps } from './types'
 
 export const Breadcrumb = (props: TBreadCrumbProps): ReactElement | null => {
-  const { selectedValue, breadCrumbItems, className = '', onSelect } = props
+  const { selectedValue, breadCrumbItems, className = '', onSelect, theme = 'light' } = props
 
   return (
-    <div className={`breadcrumb ${className}`}>
+    <div className={`breadcrumb ${className}`} data-theme={theme}>
       {breadCrumbItems.map((itemInfo: TBreadCrumbItem) => {
         return (
           <span className="breadcrumb__item" key={itemInfo.value}>

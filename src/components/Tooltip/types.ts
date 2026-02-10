@@ -1,4 +1,5 @@
 import { ReactElement } from 'react'
+import { ICommon } from '../../type'
 
 export enum Positions {
   BOTTOM_LEFT = 'bottom-left',
@@ -11,7 +12,7 @@ export enum Positions {
   TOP_CENTER = 'top-center'
 }
 
-export interface TTooltipProps extends IFormCompProps {
+export interface TTooltipProps extends IFormCompProps, ICommon {
   text: string | ReactElement
   position?: Positions
   size?: 'large' | 'small'

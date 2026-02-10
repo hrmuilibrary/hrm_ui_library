@@ -15,7 +15,8 @@ export const Radio = forwardRef((props: TRadioProps, _ref): ReactElement | null 
     className = '',
     onClick,
     dataId = '',
-    iconProps
+    iconProps,
+    theme = 'light'
   } = props
   const isChecked = !!value || !!isSelected
   const iconElement = iconProps ? iconProps : <span className="controller__icon"></span>
@@ -34,6 +35,7 @@ export const Radio = forwardRef((props: TRadioProps, _ref): ReactElement | null 
       className={classnames('controller', 'controller--radio', className, {
         'controller--disabled': disabled
       })}
+      data-theme={theme}
     >
       <input
         data-id={dataId}
@@ -46,11 +48,15 @@ export const Radio = forwardRef((props: TRadioProps, _ref): ReactElement | null 
       {iconElement}
       {label ? (
         <div className="controller__right">
-          <Text type={disabled ? 'disabled' : 'primary'} className="controller__label">
+          <Text
+            type={disabled ? 'disabled' : 'primary'}
+            className="controller__label"
+            theme={theme}
+          >
             {label}
           </Text>
           {helperText ? (
-            <Text size="small" type={disabled ? 'disabled' : 'secondary'}>
+            <Text size="small" type={disabled ? 'disabled' : 'secondary'} theme={theme}>
               {helperText}
             </Text>
           ) : null}

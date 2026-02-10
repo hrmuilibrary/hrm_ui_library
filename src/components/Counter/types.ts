@@ -1,4 +1,6 @@
-export interface ICounterProps extends IFormCompProps {
+import { ICommon } from '../../type'
+
+export interface ICounterProps extends IFormCompProps, ICommon {
   min?: number
   max?: number
   handleChange?: (value: number | string | undefined) => void

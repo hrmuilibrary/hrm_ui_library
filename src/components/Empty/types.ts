@@ -1,6 +1,7 @@
 import { TButtonPropTypes } from '../Button/types'
+import { ICommon } from '../../type'
 
-export interface TEmptyProps {
+export interface TEmptyProps extends ICommon {
   size?: string
   className?: string
   mainMessage?: string

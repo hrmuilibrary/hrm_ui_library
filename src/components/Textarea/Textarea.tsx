@@ -26,6 +26,7 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TTextAreaTypeProps
       labelAddons,
       isValid,
       setFieldValue,
+      theme = 'light',
       ...rest
     },
     ref
@@ -51,7 +52,10 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TTextAreaTypeProps
     }, [rest, currentValue])
 
     return (
-      <div className={classNames('textarea', className, { 'textarea--invalid': hasError })}>
+      <div
+        className={classNames('textarea', className, { 'textarea--invalid': hasError })}
+        data-theme={theme}
+      >
         <Label text={label} required={required} disabled={disabled} labelAddons={labelAddons} />
         <div className="textarea__inner">
           {/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -71,7 +75,12 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TTextAreaTypeProps
           <div className="textarea__message mt-8">
             {error && <ErrorMessage message={error} icon="infoFilled" dataId={dataId} />}
             {successMessage ? (
-              <Text size="small" type="success" className="flexbox align-items--center">
+              <Text
+                size="small"
+                type="success"
+                className="flexbox align-items--center"
+                theme={theme}
+              >
                 <>
                   <IconCheckmarkCircleFilled type="success" size="xsmall" />
                   <span className="ml-4">{successMessage}</span>
@@ -79,7 +88,7 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TTextAreaTypeProps
               </Text>
             ) : null}
             {helperText && !successMessage ? (
-              <Text size="small" type={disabled ? 'disabled' : 'secondary'}>
+              <Text size="small" type={disabled ? 'disabled' : 'secondary'} theme={theme}>
                 {helperText}
               </Text>
             ) : null}
@@ -89,6 +98,7 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TTextAreaTypeProps
                 size="small"
                 type={disabled ? 'disabled' : 'secondary'}
                 className="textarea__counter"
+                theme={theme}
               >
                 {`${currentLength}/${maxCount}`}
               </Text>

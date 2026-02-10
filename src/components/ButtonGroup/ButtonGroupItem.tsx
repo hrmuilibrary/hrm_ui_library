@@ -12,7 +12,8 @@ export const ButtonGroupItem = ({
   disabled,
   onClick,
   className,
-  icons
+  icons,
+  theme = 'light'
 }: IButtonGroupItem) => {
   const onClickHandler = (event: React.MouseEvent<HTMLDivElement>) => {
     event.preventDefault()
@@ -39,12 +40,13 @@ export const ButtonGroupItem = ({
         { active: isActive, disabled },
         className
       )}
+      data-theme={theme}
       onClick={onClickHandler}
     >
       {icons?.left?.Component ? (
         <icons.left.Component size={ICON_SIZE_MAPPING[size]} type={iconType} />
       ) : null}
-      <Text size={TEXT_SIZE_MAPPING[size]} type={iconType}>
+      <Text size={TEXT_SIZE_MAPPING[size]} type={iconType} theme={theme}>
         {buttonText}
       </Text>
       {icons?.right?.Component ? (

@@ -1,4 +1,5 @@
 import { PROGRESS_STATUSES } from './consts'
+import { ICommon } from '../../type'
 
 export type TStepValue = number | string
 export interface TStep {
@@ -10,7 +11,7 @@ export interface TStep {
 export type TStepType = 'number' | 'dot'
 export type TSteps = TStep[]
 
-export type TProgressStepProps = {
+export type TProgressStepProps = ICommon & {
   steps: TSteps
   stepType: TStepType
   stepDirection: 'horizontal' | 'vertical'

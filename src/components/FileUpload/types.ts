@@ -1,9 +1,9 @@
 import { FILE_UPLOAD_ERRORS } from '../../consts'
-import { FileTypeEnum } from '../../type'
+import { FileTypeEnum, ICommon } from '../../type'
 import { Dispatch, SetStateAction } from 'react'
 import { Accept, DropzoneOptions } from 'react-dropzone'
 
-export interface TFileUploadProps extends IFormCompProps {
+export interface TFileUploadProps extends IFormCompProps, ICommon {
   allowedTypes?: string
   label?: string | React.ReactElement
   buttonText?: string | React.ReactElement
@@ -49,7 +49,7 @@ export type AreaContentDTO = {
   acceptTypesMessage: string
 }
 
-export interface DzFileUploadProps extends DropzoneOptions, IFormCompProps {
+export interface DzFileUploadProps extends DropzoneOptions, IFormCompProps, ICommon {
   allowedTypes?: FileTypeEnum[]
   setFiles?: Dispatch<SetStateAction<FileType[]>>
   selectedFiles?: FileType[]

@@ -1,5 +1,6 @@
 import { Column, TableState } from 'react-table'
 import { TButtonPropTypes } from '../Button/types'
+import { ICommon } from '../../type'
 
 type Enumerate<N extends number, Acc extends number[] = []> = Acc['length'] extends N
   ? Acc[number]
@@ -25,7 +26,7 @@ export interface IButtonPropTypes extends Omit<TButtonPropTypes, 'onClick'> {
   onClick: (event: TClickEventType, data: any, clearRowSelection?: () => void) => void
 }
 
-export type TTableProps = {
+export type TTableProps = ICommon & {
   className?: string
   columns: TColumn[]
   data: any[]

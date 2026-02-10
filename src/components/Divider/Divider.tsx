@@ -3,7 +3,7 @@ import { TDividerProps } from './types'
 import classnames from 'classnames'
 
 export const Divider = (props: TDividerProps): React.ReactElement => {
-  const { type = 'primary', isHorizontal, className, color = 'light-grey' } = props
+  const { type = 'primary', isHorizontal, className, color = 'light-grey', theme = 'light' } = props
   return (
     <hr
       className={classnames(
@@ -16,6 +16,7 @@ export const Divider = (props: TDividerProps): React.ReactElement => {
         },
         className
       )}
+      data-theme={theme}
     />
   )
 }

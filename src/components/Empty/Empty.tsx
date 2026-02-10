@@ -14,7 +14,8 @@ export const Empty = (props: TEmptyProps): React.ReactElement => {
     paragraphMessage,
     buttonProps,
     className,
-    illustration = noResultImage
+    illustration = noResultImage,
+    theme = 'light'
   } = props
 
   return (
@@ -23,21 +24,26 @@ export const Empty = (props: TEmptyProps): React.ReactElement => {
         `no-result ${size == 'large' ? 'no-result--large' : 'no-result--small'}`,
         className
       )}
+      data-theme={theme}
     >
       <div className="no-result__icon">
         <Image imagePath={illustration} />
       </div>
       <div className="no-result__content">
         {mainMessage ? (
-          <Text size={size == 'large' ? 'large' : 'small'} weight="bold">
+          <Text size={size == 'large' ? 'large' : 'small'} weight="bold" theme={theme}>
             {mainMessage}
           </Text>
         ) : null}
 
         {paragraphMessage ? (
-          <Text size={size == 'large' ? 'small' : 'xsmall'}>{paragraphMessage}</Text>
+          <Text size={size == 'large' ? 'small' : 'xsmall'} theme={theme}>
+            {paragraphMessage}
+          </Text>
         ) : null}
-        {buttonProps ? <Button {...buttonProps} size="medium" className="mt-4" /> : null}
+        {buttonProps ? (
+          <Button {...buttonProps} size="medium" className="mt-4" theme={theme} />
+        ) : null}
       </div>
     </div>
   )

@@ -4,10 +4,10 @@ import { TabItem } from './TabItem'
 import classNames from 'classnames'
 
 export const Tab = (props: TTabProps): ReactElement => {
-  const { selectedValue, tabItems, onSelect, className, ...rest } = props
+  const { selectedValue, tabItems, onSelect, className, theme = 'light', ...rest } = props
 
   return (
-    <div className="tabs-container">
+    <div className="tabs-container" data-theme={theme}>
       <div className={classNames('tabs-header-container', className)}>
         {tabItems.map((tabInfo) => {
           return (

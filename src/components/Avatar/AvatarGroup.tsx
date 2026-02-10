@@ -18,6 +18,7 @@ export const AvatarGroup = ({
   onAddUser,
   size = 'medium',
   maxCount = 0,
+  theme = 'light',
   dataId
 }: TAvatarGroupProps): ReactElement => {
   const screenSize = useScreenSize()
@@ -28,7 +29,7 @@ export const AvatarGroup = ({
     avatarGroup.length - visibleAvatarsAmount > 0 ? avatarGroup.length - visibleAvatarsAmount : 0
 
   return (
-    <div className={classNames(`avatar-group avatar-group--${size}`)}>
+    <div className={classNames(`avatar-group avatar-group--${size}`)} data-theme={theme}>
       {visibleAvatars.map((avatar, index) => {
         return (
           <div className={'avatar-group__item'} key={index}>
@@ -37,6 +38,7 @@ export const AvatarGroup = ({
                 text={avatar.tooltipContent}
                 id={`${index}`}
                 position={Positions.TOP_CENTER}
+                theme={theme}
               />
             ) : null}
             <Avatar
@@ -45,6 +47,7 @@ export const AvatarGroup = ({
               size={size}
               initials={avatar.initials}
               imagePath={avatar.imagePath}
+              theme={theme}
             />
           </div>
         )

@@ -17,6 +17,7 @@ export const Pagination = (props: TPaginationProps): React.ReactElement | null =
     pageSize,
     disableInitialCallback = false,
     page,
+    theme = 'light',
     breakLabel = <IconMore size={ICON_SIZE_MAPPING[size]} />,
     labels = {
       previous: <IconChevronLeft size={ICON_SIZE_MAPPING[size]} />,
@@ -29,7 +30,7 @@ export const Pagination = (props: TPaginationProps): React.ReactElement | null =
   }
 
   return (
-    <div className="pagination-wrapper flexbox">
+    <div className="pagination-wrapper flexbox" data-theme={theme}>
       <ReactPaginate
         pageCount={Math.ceil(totalCount / pageSize)}
         disableInitialCallback={disableInitialCallback}

@@ -1,4 +1,6 @@
-export interface TTextAreaTypeProps extends IFormCompProps {
+import { ICommon } from '../../type'
+
+export interface TTextAreaTypeProps extends IFormCompProps, ICommon {
   className?: string
   name?: string
   error?: string

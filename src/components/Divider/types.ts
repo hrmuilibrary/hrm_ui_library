@@ -1,4 +1,6 @@
-export interface TDividerProps {
+import { ICommon } from '../../type'
+
+export interface TDividerProps extends ICommon {
   type: 'primary' | 'secondary'
   isHorizontal?: boolean
   className?: string

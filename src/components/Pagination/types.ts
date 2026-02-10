@@ -1,6 +1,7 @@
 import { ReactElement } from 'react'
+import { ICommon } from '../../type'
 
-export type TPaginationProps = {
+export type TPaginationProps = ICommon & {
   labels?: {
     next: string | ReactElement
     previous: string | ReactElement

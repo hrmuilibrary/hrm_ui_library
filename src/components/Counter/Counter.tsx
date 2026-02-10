@@ -19,6 +19,7 @@ export const Counter = forwardRef((props: ICounterProps, ref): React.ReactElemen
     required = false,
     value,
     hasError = false,
+    theme = 'light',
     ...rest
   } = props
 
@@ -74,6 +75,7 @@ export const Counter = forwardRef((props: ICounterProps, ref): React.ReactElemen
       name={name}
       value={counterValue}
       onChange={onInputChange}
+      theme={theme}
     />
   )
 })
