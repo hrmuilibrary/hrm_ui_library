@@ -2,12 +2,12 @@ import React, { useCallback, useState } from 'react'
 import { motion } from 'motion/react'
 import { Divider } from '../../Divider'
 import { AnimatePresenceWrapper } from '../../../helperComponents/AnimatePresenceWrapper'
-import { TCollapseV2Props } from '../types'
+import { ICollapseV2Props } from '../types'
 import classNames from 'classnames'
 import { generateDataTestId } from '../../../utils/helpers'
 import { Title } from './Title'
 
-export const Collapse = (props: TCollapseV2Props): React.ReactElement => {
+export const Collapse = (props: ICollapseV2Props): React.ReactElement => {
   const {
     title,
     className,
@@ -17,7 +17,8 @@ export const Collapse = (props: TCollapseV2Props): React.ReactElement => {
     toggle,
     dataId,
     children,
-    id
+    id,
+    theme = 'light'
   } = props
 
   const [isOpen, toggleIsOpen] = useState(isCollapseOpen)
@@ -34,6 +35,7 @@ export const Collapse = (props: TCollapseV2Props): React.ReactElement => {
       className={classNames('collapse collapse--v2', { 'collapse--opened': isOpen }, className)}
       id={`${id || ''}`}
       data-id={generateDataTestId('collapse-item', dataId)}
+      data-theme={theme}
     >
       <div className="collapse__header" onClick={onToggle}>
         <Title
@@ -42,6 +44,7 @@ export const Collapse = (props: TCollapseV2Props): React.ReactElement => {
           isOpen={isOpen}
           dataId={dataId as string}
           title={title}
+          theme={theme}
         />
       </div>
       <AnimatePresenceWrapper initial={false}>
@@ -53,7 +56,7 @@ export const Collapse = (props: TCollapseV2Props): React.ReactElement => {
             transition={{ type: 'spring', duration: 0.5, bounce: 0 }}
           >
             <div className="collapse__content">
-              <Divider type="primary" isHorizontal className={'collapse__divider'} />
+              <Divider type="primary" isHorizontal className={'collapse__divider'} theme={theme} />
               {children}
             </div>
           </motion.div>

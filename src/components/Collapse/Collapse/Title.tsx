@@ -5,21 +5,35 @@ import { TCollapseItemTitleV2 } from '../types'
 import classNames from 'classnames'
 import IconChevronDown from '../../SVGIcons/IconChevronDown'
 import IconChevronUp from '../../SVGIcons/IconChevronUp'
+import { ICommon } from '../../../type'
 
-interface ITitleProps {
+interface ITitleProps extends ICommon {
   dataId: string
   isOpen: boolean
   iconAlignment: 'left' | 'right'
   hasIconBorder: boolean
   title: TCollapseItemTitleV2
 }
-export const Title = ({ dataId, title, isOpen, iconAlignment, hasIconBorder }: ITitleProps) => {
+export const Title = ({
+  dataId,
+  title,
+  isOpen,
+  iconAlignment,
+  hasIconBorder,
+  theme = 'light'
+}: ITitleProps) => {
   const { text = '', weight = 'bolder', size = 'medium', color } = title
 
   const titleText = useMemo(
     () =>
       typeof text === 'string' ? (
-        <Text size={size} type={color} weight={weight} dataId={generateDataTestId('title', dataId)}>
+        <Text
+          size={size}
+          type={color}
+          weight={weight}
+          dataId={generateDataTestId('title', dataId)}
+          theme={theme}
+        >
           {text}
         </Text>
       ) : (
@@ -43,7 +57,7 @@ export const Title = ({ dataId, title, isOpen, iconAlignment, hasIconBorder }: I
   )
 
   return (
-    <div className="collapse__header__inner flexbox justify-content--between">
+    <div className="collapse__header__inner flexbox justify-content--between" data-theme={theme}>
       {iconAlignment === 'left' ? (
         <>
           {icon}

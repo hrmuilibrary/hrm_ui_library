@@ -2,7 +2,7 @@ import React from 'react'
 import { Card as _Card } from '../components/Card'
 import { Text } from '../components/Text'
 import type { StoryFn, StoryObj } from '@storybook/react'
-import { TCardProps } from '../components/Card/types'
+import { ICardProps } from '../components/Card/types'
 import { boolean } from 'yup'
 
 export default {
@@ -25,7 +25,7 @@ export default {
   }
 }
 
-const Template: StoryFn<TCardProps> = (args) => {
+const Template: StoryFn<ICardProps> = (args) => {
   return (
     <_Card {...args}>
       <_Card.Head>Head is here</_Card.Head>
@@ -45,7 +45,7 @@ const Template: StoryFn<TCardProps> = (args) => {
   )
 }
 
-export const Card: StoryObj<TCardProps> = Template.bind({})
+export const Card: StoryObj<ICardProps> = Template.bind({})
 
 Card.args = {
   title: {

@@ -3,14 +3,16 @@ import { motion } from 'motion/react'
 import { useCardContext } from '../CardContext'
 import { Divider } from '../../Divider'
 import { AnimatePresenceWrapper } from '../../../helperComponents/AnimatePresenceWrapper'
+import { ICardProps } from '../types'
 
-export const CardBody = ({ children }: { children: React.ReactNode }) => {
+export const CardBody = ({ children, theme = 'light' }: ICardProps) => {
   const { isExpanded, noDivider } = useCardContext()
 
   return (
     <AnimatePresenceWrapper initial={false}>
       {isExpanded && (
         <motion.div
+          data-theme={theme}
           initial={{ height: 0 }}
           animate={{ height: 'auto' }}
           exit={{ height: 0 }}

@@ -22,11 +22,7 @@ export const Alert = (props: TAlertProps): ReactElement => {
 
   return (
     <div
-      className={classnames(
-        'alert',
-        `alert--${type} alert--${position} alert--${theme}`,
-        className
-      )}
+      className={classnames('alert', `alert--${type} alert--${position}`, className)}
       data-theme={theme}
     >
       <div className="alert__content">

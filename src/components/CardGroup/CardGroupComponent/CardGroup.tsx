@@ -1,15 +1,16 @@
-import React from 'react'
-import { TCardGroupProps } from '../types'
+import React, { ReactElement } from 'react'
+import { ICardGroupProps } from '../types'
 import classNames from 'classnames'
 import { generateDataTestId } from '../../../utils/helpers'
 import { useCardGroupContext } from '../CardGroupContext'
 
-export const CardGroup = ({ children }: { children: React.ReactNode }): React.ReactElement => {
+export const CardGroup = ({ children, theme = 'light' }: ICardGroupProps): ReactElement => {
   const { className, title, dataId, id } = useCardGroupContext()
   const { alignment } = title ?? { alignment: 'left' }
 
   return (
     <div
+      data-theme={theme}
       className={classNames(
         'card--group',
         { [`card--group--title--alignment--${alignment}`]: title },

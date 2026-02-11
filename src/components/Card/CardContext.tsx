@@ -1,7 +1,7 @@
 import { createContext, useContext } from 'react'
-import { TCardProps } from './types'
+import { ICardProps } from './types'
 
-interface ICardContext extends Omit<TCardProps, 'children'> {
+interface ICardContext extends Omit<ICardProps, 'children'> {
   toggleIsExpanded?: React.Dispatch<React.SetStateAction<boolean>>
 }
 

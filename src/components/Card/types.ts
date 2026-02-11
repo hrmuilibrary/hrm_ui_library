@@ -7,7 +7,7 @@ export type TCardTitle = {
   color: 'blue' | 'purple' | 'yellow' | 'pink' | 'green' | 'grey'
 }
 
-export type TCardProps = ICommon & {
+export interface ICardProps extends ICommon {
   title?: TCardTitle
   isExpandable?: boolean
   isExpanded?: boolean

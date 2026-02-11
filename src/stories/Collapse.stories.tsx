@@ -5,7 +5,7 @@ import {
   Collapse as _CollapseV2
 } from '../components/Collapse'
 import { StoryFn, type StoryObj } from '@storybook/react'
-import { TCollapseGroupProps, TCollapseProps, TCollapseV2Props } from '../components/Collapse/types'
+import { ICollapseGroupProps, ICollapseProps, ICollapseV2Props } from '../components/Collapse/types'
 import { boolean, string } from 'yup'
 
 export default {
@@ -15,7 +15,7 @@ export default {
   args: {}
 }
 
-const Template: StoryFn<TCollapseProps & { textTitle: string }> = (args) => {
+const Template: StoryFn<ICollapseProps & { textTitle: string }> = (args) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const open = () => setIsOpen(true)
@@ -35,7 +35,7 @@ const Template: StoryFn<TCollapseProps & { textTitle: string }> = (args) => {
   )
 }
 
-export const CollapseItem: StoryObj<TCollapseProps & { textTitle: string }> = Template.bind({})
+export const CollapseItem: StoryObj<ICollapseProps & { textTitle: string }> = Template.bind({})
 
 CollapseItem.args = {
   textTitle: 'Collapse'
@@ -64,15 +64,15 @@ const CollapseItems = [
   }
 ]
 
-const Template1: StoryFn<TCollapseGroupProps> = (args: any) => {
+const Template1: StoryFn<ICollapseGroupProps> = (args: any) => {
   return <_CollapseGroup {...args} items={CollapseItems} titleColor="selected" />
 }
 
-export const CollapseGroup: StoryObj<TCollapseGroupProps> = Template1.bind({})
+export const CollapseGroup: StoryObj<ICollapseGroupProps> = Template1.bind({})
 
 CollapseGroup.args = {}
 
-const Template2: StoryFn<TCollapseV2Props> = (args) => <_CollapseV2 {...args} />
+const Template2: StoryFn<ICollapseV2Props> = (args) => <_CollapseV2 {...args} />
 
 const CollapseV2Story = {
   title: 'Collapse',
@@ -80,7 +80,7 @@ const CollapseV2Story = {
   argTypes: {}
 }
 
-export const CollapseV2: StoryObj<TCollapseV2Props> = Template2.bind(CollapseV2Story)
+export const CollapseV2: StoryObj<ICollapseV2Props> = Template2.bind(CollapseV2Story)
 
 CollapseV2.args = {
   isOpen: true,

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { TCardProps } from './types'
+import { ICardProps } from './types'
 import { CardContext } from './CardContext'
 import { Card as _Card } from './CardComponent/Card'
 import { CardHead } from './CardComponent/CardHead'
@@ -12,7 +12,7 @@ const CardComponent = ({
   isExpanded,
   isExpandedFromParent,
   ...rest
-}: TCardProps): React.ReactElement => {
+}: ICardProps): React.ReactElement => {
   const [isCardExpanded, toggleIsExpanded] = useState<boolean>(isExpanded ?? false)
 
   useEffect(

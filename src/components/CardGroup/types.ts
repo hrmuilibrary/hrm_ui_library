@@ -7,7 +7,7 @@ export type TCardGroupTitle = {
   color: 'blue' | 'purple' | 'yellow' | 'pink' | 'green' | 'grey'
 }
 
-export type TCardGroupProps = ICommon & {
+export interface ICardGroupProps extends ICommon {
   title?: TCardGroupTitle
   children: ReactNode
   className?: string

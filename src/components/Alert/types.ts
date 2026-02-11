@@ -1,10 +1,10 @@
 import { TButtonPropTypes } from '../Button/types'
-import { ICommon } from '../../type'
+import { ICommon, IFormProps } from '../../type'
 
 export type TAlertTypes = 'success' | 'error' | 'warning' | 'information' | 'discovery'
 export type TAlertPosition = 'inline' | 'sticky'
 
-export interface TAlertProps extends IFormCompProps, ICommon {
+export interface TAlertProps extends IFormProps, ICommon {
   type?: TAlertTypes
   position?: TAlertPosition
   text: string | React.ReactElement

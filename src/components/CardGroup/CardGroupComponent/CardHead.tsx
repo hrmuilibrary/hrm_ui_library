@@ -1,12 +1,13 @@
 import React from 'react'
 import { useCardGroupContext } from '../CardGroupContext'
 import classNames from 'classnames'
+import { ICardGroupProps } from '../types'
 
-export const CardGroupHead = ({ children }: { children: React.ReactNode }) => {
+export const CardGroupHead = ({ children, theme = 'light' }: ICardGroupProps) => {
   const { title } = useCardGroupContext()
 
   return (
-    <div className="card--group__content--header">
+    <div className="card--group__content--header" data-theme={theme}>
       {title && (
         <div
           className={classNames('card--group__title', {

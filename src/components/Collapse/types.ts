@@ -1,4 +1,5 @@
 import { ReactElement, ReactNode } from 'react'
+import { ICommon } from '../../type'
 
 export type TCollapseTitleColor = 'selected' | 'primary'
 
@@ -12,7 +13,7 @@ export interface TCollapseItemTitle extends ICollapseTitleProps {
   text: string | ReactNode
 }
 
-export type TCollapseProps = {
+export interface ICollapseProps extends ICommon {
   isOpen: boolean
   toggle: () => void
   children: ReactNode
@@ -37,7 +38,7 @@ export type TCollapseItem = {
   id?: string | number
 }
 
-export type TCollapseGroupProps = {
+export interface ICollapseGroupProps extends ICommon {
   items: TCollapseItem[]
   singleSelection?: boolean
   titleProps?: ICollapseTitleProps
@@ -48,7 +49,7 @@ export interface TCollapseItemTitleV2 extends ICollapseTitleProps {
   text?: string | ReactNode
 }
 
-export type TCollapseV2Props = {
+export interface ICollapseV2Props extends ICommon {
   isOpen?: boolean
   toggle?: (isOpen: boolean) => void
   children: ReactNode

@@ -4,12 +4,12 @@ import { Text } from '../../Text'
 import IconChevronRight from '../../SVGIcons/IconChevronRight'
 import { Divider } from '../../Divider'
 import { AnimatePresenceWrapper } from '../../../helperComponents/AnimatePresenceWrapper'
-import { TCollapseProps } from '../types'
+import { ICollapseProps } from '../types'
 import classNames from 'classnames'
 import IconChevronDown from '../../SVGIcons/IconChevronDown'
 import { generateDataTestId } from '../../../utils/helpers'
 
-export const CollapseItem = (props: TCollapseProps): React.ReactElement => {
+export const CollapseItem = (props: ICollapseProps): React.ReactElement => {
   const {
     title: { text, weight = 'bolder', size = 'medium', color },
     className,
@@ -20,12 +20,19 @@ export const CollapseItem = (props: TCollapseProps): React.ReactElement => {
     reverse = false,
     additionalInfo,
     labelLeftIconProps,
-    id
+    id,
+    theme = 'light'
   } = props
 
   const title =
     typeof text === 'string' ? (
-      <Text size={size} type={color} weight={weight} dataId={generateDataTestId('title', dataId)}>
+      <Text
+        size={size}
+        type={color}
+        weight={weight}
+        dataId={generateDataTestId('title', dataId)}
+        theme={theme}
+      >
         {text}
       </Text>
     ) : (
@@ -37,6 +44,7 @@ export const CollapseItem = (props: TCollapseProps): React.ReactElement => {
       className={classNames('collapse', { 'collapse--opened': isOpen }, className)}
       id={`${id || ''}`}
       data-id={generateDataTestId('collapse-item', dataId)}
+      data-theme={theme}
     >
       <div className="collapse__header flexbox justify-content--between" onClick={toggle}>
         {reverse ? (
@@ -77,7 +85,7 @@ export const CollapseItem = (props: TCollapseProps): React.ReactElement => {
             transition={{ type: 'spring', duration: 0.5, bounce: 0 }}
           >
             <div className="collapse__content">
-              <Divider type="primary" isHorizontal className={'collapse__divider'} />
+              <Divider type="primary" isHorizontal className={'collapse__divider'} theme={theme} />
               {children}
             </div>
           </motion.div>

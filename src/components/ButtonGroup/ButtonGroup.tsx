@@ -33,6 +33,7 @@ export const ButtonGroup = ({
             isActive={activeItem === button.id}
             disabled={disabled}
             onClick={() => handleItemClick(button.id)}
+            theme={theme}
           />
         )
       })}

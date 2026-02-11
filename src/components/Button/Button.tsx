@@ -59,7 +59,11 @@ export const Button = (props: TButtonPropTypes): ReactElement => {
       {...rest}
     >
       {isLoading ? (
-        <Loader size={size} type={LITE_LOADER_TYPES.indexOf(type) === -1 ? 'dark' : 'lite'} />
+        <Loader
+          size={size}
+          type={LITE_LOADER_TYPES.indexOf(type) === -1 ? 'dark' : 'lite'}
+          theme={theme}
+        />
       ) : (
         <>
           {iconProps?.Component ? (

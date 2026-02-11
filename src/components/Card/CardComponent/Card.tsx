@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { ReactNode, ReactElement } from 'react'
 import classNames from 'classnames'
 import { useCardContext } from '../CardContext'
 import { generateDataTestId } from '../../../utils/helpers'
+import { ICommon } from '../../../type'
+import { ICardProps } from '../types'
 
-export const Card = ({ children }: { children: React.ReactNode }): React.ReactElement => {
+export const Card = ({ children, theme = 'light' }: ICardProps): ReactElement => {
   const { isExpanded, className, title, dataId, id, noBorder } = useCardContext()
   const { alignment, color, text } = title ?? { alignment: 'left', color: 'blue' }
 
@@ -18,6 +20,7 @@ export const Card = ({ children }: { children: React.ReactNode }): React.ReactEl
         },
         className
       )}
+      data-theme={theme}
       id={`${id || ''}`}
       data-id={generateDataTestId('card-item', dataId)}
     >

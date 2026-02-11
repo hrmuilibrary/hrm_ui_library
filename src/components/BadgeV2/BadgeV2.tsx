@@ -42,7 +42,7 @@ export const BadgeV2 = (props: TBadgeV2Props): ReactElement => {
         <iconProps.Component size={iconSize} type={iconType} />
       ) : null}
       {typeof text === 'string' || typeof text === 'number' ? (
-        <Text size="xsmall" className="badge-v2__inner">
+        <Text size="xsmall" className="badge-v2__inner" theme={theme}>
           {text}
         </Text>
       ) : React.isValidElement(text) ? (

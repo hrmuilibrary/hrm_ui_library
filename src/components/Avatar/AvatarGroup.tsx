@@ -56,12 +56,18 @@ export const AvatarGroup = ({
       {invisibleAvatarsAmount ? (
         <div className="avatar-group__item">
           {/*Todo please fix tooltip*/}
-          <Tooltip text={'Name Surname'} id={'amountTooltip'} position={Positions.TOP_CENTER} />
+          <Tooltip
+            text={'Name Surname'}
+            id={'amountTooltip'}
+            position={Positions.TOP_CENTER}
+            theme={theme}
+          />
           <Avatar
             type={'count'}
             size={size}
             id={'amountTooltip'}
             initials={`+${invisibleAvatarsAmount}`}
+            theme={theme}
           />
         </div>
       ) : null}
