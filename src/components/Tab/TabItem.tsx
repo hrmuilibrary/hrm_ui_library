@@ -16,11 +16,13 @@ export const TabItem = (props: TTabItemProps): React.ReactElement | null => {
     rightIconProps,
     val,
     onClick,
+    theme = 'light',
     dataId
   } = props
 
   return (
     <div
+      data-theme={theme}
       onClick={disabled ? noop : onClick}
       className={classNames(
         'tab',
@@ -54,7 +56,13 @@ export const TabItem = (props: TTabItemProps): React.ReactElement | null => {
         />
       ) : null}
       {badgeProps?.text ? (
-        <Badge className="tab__badge ml-8" size="small" type="secondary" {...badgeProps} />
+        <Badge
+          className="tab__badge ml-8"
+          size="small"
+          type="secondary"
+          theme={theme}
+          {...badgeProps}
+        />
       ) : null}
     </div>
   )

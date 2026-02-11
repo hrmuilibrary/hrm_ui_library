@@ -28,7 +28,7 @@ export interface TTabProps extends IFormCompProps, ICommon {
   onSelect: (value: string | number) => void
 }
 
-export type TTabItemProps = {
+export type TTabItemProps = ICommon & {
   dataId?: string
   label?: string | React.ReactElement
   size?: 'large' | 'medium' | 'small'

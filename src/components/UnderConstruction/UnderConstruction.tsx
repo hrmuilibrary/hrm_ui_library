@@ -13,7 +13,8 @@ export const UnderConstruction = (props: TUnderConstructionProps): React.ReactEl
     paragraphMessage,
     className,
     illustration = noResultImage,
-    language = 'en'
+    language = 'en',
+    theme = 'light'
   } = props
 
   const localizations = SELECT_TRANSLATIONS[language]
@@ -24,15 +25,16 @@ export const UnderConstruction = (props: TUnderConstructionProps): React.ReactEl
         `under-construction ${size === 'large' ? 'under-construction--large' : 'under-construction--small'}`,
         className
       )}
+      data-theme={theme}
     >
       <div className="under-construction__icon">
-        <Image imagePath={illustration} />
+        <Image imagePath={illustration} theme={theme} />
       </div>
       <div className="under-construction__content">
-        <Text size={size == 'large' ? 'large' : 'medium'} weight="bold">
+        <Text size={size == 'large' ? 'large' : 'medium'} weight="bold" theme={theme}>
           {mainMessage ?? localizations.mainMessage}
         </Text>
-        <Text size={size == 'large' ? 'standard' : 'small'}>
+        <Text size={size == 'large' ? 'standard' : 'small'} theme={theme}>
           {paragraphMessage ?? localizations.paragraphMessage}
         </Text>
       </div>
