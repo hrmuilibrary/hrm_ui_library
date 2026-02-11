@@ -1,7 +1,8 @@
 import React, { ReactElement } from 'react'
 import { Modal } from '../../Modal'
+import { ICommon } from '../../../type'
 
-type TProps = {
+type TProps = ICommon & {
   isOpen: boolean
   children: ReactElement
   closeDrodown: () => void
@@ -15,7 +16,8 @@ export const MobileWrapper = (props: TProps): ReactElement => {
     isOpen,
     closeDrodown,
     children,
-    modalApplyButtonText = 'Apply'
+    modalApplyButtonText = 'Apply',
+    theme = 'light'
   } = props
 
   const submitSelection = () => {
@@ -29,6 +31,7 @@ export const MobileWrapper = (props: TProps): ReactElement => {
       onSubmit={submitSelection}
       isMobileFullScreen
       className={'select__modal'}
+      theme={theme}
       buttonProps={{
         confirm: {
           buttonText: modalApplyButtonText

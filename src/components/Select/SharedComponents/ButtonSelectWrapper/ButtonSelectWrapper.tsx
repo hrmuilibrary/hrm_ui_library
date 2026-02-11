@@ -30,7 +30,8 @@ export const ButtonSelectWrapper = (props: TSelectWrapperProps): ReactElement =>
     modalApplyButtonText,
     type = 'secondary',
     applySelectedItems,
-    isMobile
+    isMobile,
+    theme = 'light'
   } = props
 
   const buttonRef = useRef<HTMLButtonElement>(null)
@@ -54,7 +55,11 @@ export const ButtonSelectWrapper = (props: TSelectWrapperProps): ReactElement =>
   useChangePositionsOnScroll(buttonRef?.current, dropdownRef, hasBottomSpace)
 
   return (
-    <div className={classNames(`select select--${size}`, className)} ref={setContainerRef}>
+    <div
+      className={classNames(`select select--${size}`, className)}
+      ref={setContainerRef}
+      data-theme={theme}
+    >
       <Button
         size={size}
         type={type}
@@ -65,6 +70,7 @@ export const ButtonSelectWrapper = (props: TSelectWrapperProps): ReactElement =>
         onClick={disabled ? noop : openDropdown}
         refHandler={buttonRef}
         className="select_button"
+        theme={theme}
       />
 
       <>
@@ -74,6 +80,7 @@ export const ButtonSelectWrapper = (props: TSelectWrapperProps): ReactElement =>
             isOpen={isOpen}
             closeDrodown={() => setIsOpen(false)}
             modalApplyButtonText={modalApplyButtonText}
+            theme={theme}
           >
             {children}
           </MobileWrapper>
@@ -87,6 +94,7 @@ export const ButtonSelectWrapper = (props: TSelectWrapperProps): ReactElement =>
             inputRef={buttonRef.current}
             dropdownRef={dropdownRef}
             containerRef={containerRef}
+            theme={theme}
           >
             {children}
           </DesktopWrapper>

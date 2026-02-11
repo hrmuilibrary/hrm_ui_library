@@ -18,7 +18,8 @@ export const RadioGroup = forwardRef((props: TRadioGroupProps, ref): React.React
     className,
     labelAddons,
     hasError,
-    selected
+    selected,
+    theme = 'light'
   } = props
 
   const onSelect = (selected: number | string) => {
@@ -40,10 +41,12 @@ export const RadioGroup = forwardRef((props: TRadioGroupProps, ref): React.React
         },
         className
       )}
+      data-theme={theme}
     >
       <Label
         className="radio-group__label"
         text={label}
+        theme={theme}
         invalid={hasError}
         required={required}
         disabled={disabled}
@@ -57,6 +60,7 @@ export const RadioGroup = forwardRef((props: TRadioGroupProps, ref): React.React
               helperText={radioOption.helperText}
               key={radioOption.value}
               name={name}
+              theme={theme}
               disabled={disabled}
               className="radio-group__item"
               isSelected={radioOption.value === value || radioOption.value === selected}

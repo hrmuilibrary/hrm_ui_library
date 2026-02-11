@@ -19,7 +19,8 @@ export const NestedSelect = (props: TNestedSelectProps): React.ReactElement | nu
     initialSelectedFolderIds,
     optionRightIconComponent,
     labelRightIconComponent,
-    labelAddons
+    labelAddons,
+    theme = 'light'
   } = props
 
   const [isDropdownOpen, setIsOpen] = useState(false)
@@ -71,6 +72,7 @@ export const NestedSelect = (props: TNestedSelectProps): React.ReactElement | nu
       acc.push(
         <div style={{ paddingLeft: LEVEL_LEFT_MARGIN * level }}>
           <OptionItem
+            theme={theme}
             data={option}
             key={value}
             isSelected={isSelected}
@@ -92,7 +94,7 @@ export const NestedSelect = (props: TNestedSelectProps): React.ReactElement | nu
     }, [])
 
   return (
-    <div className="select select--multi" ref={setContainerRef}>
+    <div className="select select--multi" ref={setContainerRef} data-theme={theme}>
       <div onClick={toggleDropdown}>
         <Input
           ref={inputRef}
@@ -107,6 +109,7 @@ export const NestedSelect = (props: TNestedSelectProps): React.ReactElement | nu
           currentValue={selected?.label.toString() || ''}
           readonly={true}
           labelAddons={labelAddons}
+          theme={theme}
         />
       </div>
 

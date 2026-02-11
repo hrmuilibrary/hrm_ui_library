@@ -8,16 +8,20 @@ import { formatFileSize, shortenFileName } from './helpers'
 import IconArrowDownloadFilled from '../../SVGIcons/IconArrowDownloadFilled'
 import classnames from 'classnames'
 import { downloadFile } from '../../../helpers'
+import { ICommon } from '../../../type'
+
+interface IPreviewItemProps extends ICommon {
+  file: FileType
+  onRemove: () => void
+  mode: FileUploadMode
+}
 
 export const PreviewItem = ({
   file,
   onRemove,
-  mode
-}: {
-  file: FileType
-  onRemove: () => void
-  mode: FileUploadMode
-}): ReactElement => {
+  mode,
+  theme = 'light'
+}: IPreviewItemProps): ReactElement => {
   const type = file.type.split('/')[0]
 
   const preview = useMemo(() => {
@@ -41,19 +45,23 @@ export const PreviewItem = ({
       className={classnames('dz-file-upload__files--item', {
         'dz-file-upload__files--item--view': mode === FileUploadMode.view
       })}
+      data-theme={theme}
       onClick={handleItemClick}
     >
       <div className={'dz-file-upload__files--item__preview'}>
-        <FilePreview preview={preview} type={type} />
+        <FilePreview preview={preview} type={type} theme={theme} />
       </div>
       <div className={'dz-file-upload__files--item__info'}>
         <div className="dz-file-upload__files--item__info-title">
-          <Text weight="semibold">{shortenFileName(file.name, 40)}</Text>
+          <Text weight="semibold" theme={theme}>
+            {shortenFileName(file.name, 40)}
+          </Text>
           {mode === FileUploadMode.attach && (
             <Button
               size="small"
               type="tertiary"
               onClick={onRemove}
+              theme={theme}
               iconProps={{ Component: IconDelete }}
             />
           )}
@@ -62,12 +70,15 @@ export const PreviewItem = ({
               size="small"
               type="tertiary"
               onClick={onFileDownload}
+              theme={theme}
               iconProps={{ Component: IconArrowDownloadFilled }}
             />
           )}
         </div>
         <div className="dz-file-upload__files--item__info-size">
-          <Text size="small">{formatFileSize(file.size)}</Text>
+          <Text size="small" theme={theme}>
+            {formatFileSize(file.size)}
+          </Text>
         </div>
       </div>
     </div>

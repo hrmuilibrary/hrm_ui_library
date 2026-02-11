@@ -3,8 +3,9 @@ import { ErrorCode } from 'react-dropzone'
 import { Alert } from '../../Alert'
 import { AreaContentDTO } from '../types'
 import { getDropzoneLocale } from './helpers'
+import { ICommon } from '../../../type'
 
-interface IErrorItemProps {
+interface IErrorItemProps extends ICommon {
   code: string
   areaContent: AreaContentDTO
   onRemove: () => void
@@ -15,7 +16,8 @@ export const ErrorItem = ({
   code,
   onRemove,
   areaContent,
-  locale
+  locale,
+  theme = 'light'
 }: IErrorItemProps): ReactElement | null => {
   const errorMessage = useMemo(() => {
     const translation = getDropzoneLocale(locale)
@@ -31,6 +33,6 @@ export const ErrorItem = ({
   }, [code])
 
   return errorMessage ? (
-    <Alert type="error" text={errorMessage} closeIcon onClose={onRemove} />
+    <Alert type="error" text={errorMessage} closeIcon onClose={onRemove} theme={theme} />
   ) : null
 }

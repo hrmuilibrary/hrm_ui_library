@@ -5,8 +5,9 @@ import { getYearOptions, noop } from '../../../utils/helpers'
 import IconChevronLeft from '../../SVGIcons/IconChevronLeft'
 import IconChevronRight from '../../SVGIcons/IconChevronRight'
 import { generateMonthOptions } from './helpers'
+import { ICommon } from '../../../type'
 
-interface TProps extends ReactDatePickerCustomHeaderProps {
+interface TProps extends ReactDatePickerCustomHeaderProps, ICommon {
   startYear: number
   endYear: number
   dataPrefix?: string
@@ -27,7 +28,8 @@ export const CustomHeader = (props: TProps): ReactElement => {
     prevMonthButtonDisabled,
     nextMonthButtonDisabled,
     locale,
-    isMobile = false
+    isMobile = false,
+    theme = 'light'
   } = props
 
   const months = generateMonthOptions(locale)
@@ -41,7 +43,7 @@ export const CustomHeader = (props: TProps): ReactElement => {
   const year = date?.getFullYear()
 
   return (
-    <div className="flexbox custom_header_container">
+    <div className="flexbox custom_header_container" data-theme={theme}>
       <IconChevronLeft
         size="small"
         className="cursor-pointer"
@@ -62,6 +64,7 @@ export const CustomHeader = (props: TProps): ReactElement => {
           setSelectedItem={(m) => changeMonth(m as number)}
           dropdownWidth={150}
           isRequiredField
+          theme={theme}
         />
         <ButtonSelect
           type="tertiary"
@@ -75,6 +78,7 @@ export const CustomHeader = (props: TProps): ReactElement => {
           setSelectedItem={(y) => changeYear(y as number)}
           dropdownWidth={100}
           isRequiredField
+          theme={theme}
         />
       </div>
       <IconChevronRight

@@ -11,8 +11,9 @@ import IconChevronRight from '../SVGIcons/IconChevronRight'
 import IconChevronDoubleLeft from '../SVGIcons/IconChevronDoubleLeft'
 import IconChevronDoubleRight from '../SVGIcons/IconChevronDoubleRight'
 import IconMore from '../SVGIcons/IconMore'
+import { ICommon } from '../../type'
 
-interface PaginationProps<T> {
+interface PaginationProps<T> extends ICommon {
   table: Table<T>
   totalCount: number
   buttonText?: string
@@ -21,7 +22,8 @@ interface PaginationProps<T> {
 export function AdvancedPagination<TData>({
   table,
   totalCount,
-  buttonText
+  buttonText,
+  theme = 'light'
 }: PaginationProps<TData>) {
   const [navigatePage, setNavigatePage] = useState<string>('1')
   const pageIndex = table.getState().pagination.pageIndex
@@ -83,15 +85,16 @@ export function AdvancedPagination<TData>({
   }, [table.getPageCount(), table.getState().pagination])
 
   return (
-    <div className="advanced-table__pagination">
+    <div className="advanced-table__pagination" data-theme={theme}>
       <Select
         setSelectedItem={(value) => onRowCountChange(value)}
         selectedItem={`${pageSize}`}
         className={'no-border'}
         options={OPTIONS}
+        theme={theme}
       />
       <div className={'advanced-table__pagination__right'}>
-        <Text type={'tertiary'}>
+        <Text type={'tertiary'} theme={theme}>
           {pageIndex * pageSize + 1} - {(pageIndex + 1) * pageSize} / {totalCount}
         </Text>
         <div className="flexbox align-items--center">
@@ -100,12 +103,14 @@ export function AdvancedPagination<TData>({
             size="small"
             onChange={(e) => onNavigateToPage(e.target.value)}
             className="advanced-table__pagination__right__input mr-8"
+            theme={theme}
           />
           <Button
             onClick={onGoToPage}
             type="secondary"
             size="medium"
             buttonText={buttonText ?? 'Go to page'}
+            theme={theme}
           />
         </div>
         <ul className="pagination">

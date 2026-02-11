@@ -3,8 +3,9 @@ import IconChevronLeft from '../../../SVGIcons/IconChevronLeft'
 import { Input } from '../../../Input'
 import IconDismissFilled from '../../../SVGIcons/IconDismissFilled'
 import IconSearchFilled from '../../../SVGIcons/IconSearchFilled'
+import { ICommon } from '../../../../type'
 
-type TProps = {
+type TProps = ICommon & {
   searchValue: string
   setSearchValue: (value: string) => void
   onBack: () => void
@@ -14,7 +15,8 @@ export const MobileTopContent = ({
   onBack,
   setSearchValue,
   searchValue,
-  withSearch
+  withSearch,
+  theme = 'light'
 }: TProps): ReactElement => {
   const onSearch = (e: TChangeEventType) => {
     setSearchValue(e.target.value)
@@ -37,6 +39,7 @@ export const MobileTopContent = ({
             size: searchValue ? 'xsmall' : 'small',
             onClick: removeFilter
           }}
+          theme={theme}
         />
       )}
     </div>

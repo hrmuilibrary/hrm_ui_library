@@ -20,7 +20,7 @@ export type TProgressStepProps = ICommon & {
   setActiveStep: (v: TStepValue) => void
 }
 
-export type TStepProps = {
+export interface IStepProps extends ICommon {
   width: string
   step: TStep
   stepSize?: 'large' | 'small'

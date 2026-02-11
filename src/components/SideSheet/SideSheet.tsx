@@ -127,16 +127,29 @@ export const SideSheet = (props: TSideSheetPropTypes): React.ReactElement | null
               </div>
               <div className="side-sheet__header__right">
                 {headerButtons?.pin ? (
-                  <Button size="small" type="tertiary" {...headerButtons.pin} className="mr-8" />
+                  <Button
+                    size="small"
+                    type="tertiary"
+                    theme={theme}
+                    {...headerButtons.pin}
+                    className="mr-8"
+                  />
                 ) : null}
                 {headerButtons?.close ? (
-                  <Button size="small" type="tertiary" {...headerButtons.close} onClick={onClose} />
+                  <Button
+                    size="small"
+                    type="tertiary"
+                    theme={theme}
+                    {...headerButtons.close}
+                    onClick={onClose}
+                  />
                 ) : (
                   <Button
                     size="small"
                     type="tertiary"
                     iconProps={{ Component: IconDismissFilled }}
                     onClick={onClose}
+                    theme={theme}
                   />
                 )}
               </div>
@@ -147,6 +160,7 @@ export const SideSheet = (props: TSideSheetPropTypes): React.ReactElement | null
                   iconProps={{ Component: IconCaretUp }}
                   className={`side-sheet__header__scroll-top side-sheet__header__scroll-top__${size}`}
                   onClick={handleScrollToTop}
+                  theme={theme}
                 />
               )}
             </div>
@@ -162,6 +176,7 @@ export const SideSheet = (props: TSideSheetPropTypes): React.ReactElement | null
               onClose={onClose}
               onSubmit={onSubmit}
               checkboxInfo={checkboxInfo}
+              theme={theme}
             />
           </motion.div>
         </motion.div>

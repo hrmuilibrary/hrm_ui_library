@@ -1,19 +1,19 @@
 import classNames from 'classnames'
 import React, { ReactElement, useMemo } from 'react'
 import { Text } from '../Text'
-import { StepTypes, TStepProps } from './types'
+import { StepTypes, IStepProps } from './types'
 import { PROGRESS_STATUSES } from './consts'
 import IconDismissCircle from '../SVGIcons/IconDismissCircle'
 import IconCheckmarkCircle from '../SVGIcons/IconCheckmarkCircle'
 
-export const Step = (props: TStepProps): ReactElement => {
+export const Step = (props: IStepProps): ReactElement => {
   const {
     width,
     step,
     stepSize = 'large',
     index,
     activeStep,
-
+    theme = 'light',
     stepType,
     onStepClick
   } = props
@@ -43,6 +43,7 @@ export const Step = (props: TStepProps): ReactElement => {
     if (stepType === StepTypes.number) {
       return (
         <Text
+          theme={theme}
           type={textType}
           size={stepSize == 'large' ? 'medium' : 'small'}
           weight={stepSize == 'large' ? 'semibold' : 'regular'}
@@ -62,7 +63,7 @@ export const Step = (props: TStepProps): ReactElement => {
       }
     }
     return null
-  }, [index, stepType, stepSize, isCompleted, isActive, isRejected, textType])
+  }, [index, stepType, stepSize, isCompleted, isActive, isRejected, textType, theme])
 
   return (
     <div
@@ -74,12 +75,14 @@ export const Step = (props: TStepProps): ReactElement => {
       })}
       style={{ width }}
       onClick={onClick}
+      data-theme={theme}
     >
       <div className="step__top">
         <div className="step__circle">{stepItemContent}</div>
       </div>
       <div className="step__label">
         <Text
+          theme={theme}
           size={stepSize == 'large' ? 'standard' : 'small'}
           weight="semibold"
           lineHeight={'large'}
@@ -87,7 +90,11 @@ export const Step = (props: TStepProps): ReactElement => {
         >
           {label}
         </Text>
-        <Text size={stepSize == 'large' ? 'small' : 'xsmall'} className="text-truncate">
+        <Text
+          theme={theme}
+          size={stepSize == 'large' ? 'small' : 'xsmall'}
+          className="text-truncate"
+        >
           {subText}
         </Text>
       </div>

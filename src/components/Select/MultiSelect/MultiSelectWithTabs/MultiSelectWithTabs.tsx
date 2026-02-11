@@ -25,7 +25,8 @@ export const MultiSelectWithTabs = (props: TMultiSelectGroupedProps): React.Reac
     maxSelectCount,
     menuOptions,
     dataIdPrefix,
-    closeDropdown
+    closeDropdown,
+    theme = 'light'
   } = props
 
   const { emptyListMainMessage, emptyListSecondaryMessage } = translations
@@ -108,9 +109,18 @@ export const MultiSelectWithTabs = (props: TMultiSelectGroupedProps): React.Reac
   return (
     <>
       <div className="tab_container" style={{ padding: '0 20px', width: '100%' }}>
-        {<Tab selectedValue={activeTab} tabItems={tabs} onSelect={onTabSelect} size="small" />}
+        {
+          <Tab
+            theme={theme}
+            selectedValue={activeTab}
+            tabItems={tabs}
+            onSelect={onTabSelect}
+            size="small"
+          />
+        }
       </div>
       <ContentTop
+        theme={theme}
         closeDropdown={closeDropdown}
         dataIdPrefix={dataIdPrefix}
         menuOptions={menuOptions}
@@ -142,18 +152,20 @@ export const MultiSelectWithTabs = (props: TMultiSelectGroupedProps): React.Reac
                   onClick={onDeselect}
                   disabled={selectedItem.disabled}
                   isSelected={true}
+                  theme={theme}
                   {...optionProps}
                 />
               )
             })}
           </div>
         )}
-        <Divider type="primary" isHorizontal />
+        <Divider type="primary" isHorizontal theme={theme} />
         {filteredData.map((item: TSelectOption) => {
           const isSelected = selectedValues.findIndex((s) => s.value === item.value) !== -1
 
           return (
             <OptionItem
+              theme={theme}
               data={item}
               dataId={item.dataId}
               key={item.value}
@@ -166,6 +178,7 @@ export const MultiSelectWithTabs = (props: TMultiSelectGroupedProps): React.Reac
         })}
         {filteredData.length === 0 ? (
           <Empty
+            theme={theme}
             size="small"
             mainMessage={emptyListMainMessage}
             paragraphMessage={emptyListSecondaryMessage}

@@ -3,7 +3,7 @@ import { ICommon } from '../../type'
 
 export type TSnackbarTypes = 'success' | 'error' | 'warning' | 'information'
 
-export interface TToastProps {
+export interface TToastProps extends ICommon {
   duration?: number
   type?: TSnackbarTypes
   toastId: number | string

@@ -67,7 +67,8 @@ export function Table<TData>({
   tableSettings,
   onRowSelection,
   onColumnSizing,
-  onPaginationChange
+  onPaginationChange,
+  theme = 'light'
 }: TTableProps<TData>) {
   const [expandedRows, setExpandedRows] = useState<Set<string>>(new Set())
 
@@ -160,6 +161,7 @@ export function Table<TData>({
       className={classnames('advanced-table', {
         'with-border': withBorder
       })}
+      data-theme={theme}
     >
       {header}
       <div
@@ -181,6 +183,7 @@ export function Table<TData>({
                   mainMessage={emptyTitle}
                   paragraphMessage={emptySubTitle}
                   illustration={emptyIllustration}
+                  theme={theme}
                 />
               ) : (
                 <>
@@ -198,6 +201,7 @@ export function Table<TData>({
                                 pinnedStyles={{ ...getCommonPinningStyles(header.column) }}
                                 key={header.id}
                                 header={header}
+                                theme={theme}
                               />
                             )
                           })}
@@ -227,7 +231,10 @@ export function Table<TData>({
                         ))
                       : table.getRowModel().rows.map((row) => (
                           <React.Fragment key={row.id}>
-                            <tr className={classnames({ selected: row.getIsSelected() })}>
+                            <tr
+                              className={classnames({ selected: row.getIsSelected() })}
+                              data-theme={theme}
+                            >
                               {row.getVisibleCells().map((cell) => (
                                 <td
                                   className={classnames({
@@ -277,7 +284,7 @@ export function Table<TData>({
                       className={classnames('draggable-col')}
                       style={{ width: activeHeader.getSize() }}
                     >
-                      <Text weight={'bold'}>
+                      <Text weight={'bold'} theme={theme}>
                         {flexRender(
                           activeHeader.column.columnDef.header,
                           activeHeader.getContext()

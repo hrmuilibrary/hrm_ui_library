@@ -23,7 +23,8 @@ export const DropzoneFileUpload = forwardRef(
       maxFiles = 1,
       mode = FileUploadMode.attach,
       locale,
-      multiple = false
+      multiple = false,
+      theme = 'light'
     }: DzFileUploadProps,
     _ref
   ): ReactElement => {
@@ -84,7 +85,7 @@ export const DropzoneFileUpload = forwardRef(
     )
 
     return (
-      <div className="dz-file-upload">
+      <div className="dz-file-upload" data-theme={theme}>
         {mode !== FileUploadMode.view ? (
           <div
             {...getRootProps()}
@@ -95,10 +96,10 @@ export const DropzoneFileUpload = forwardRef(
           >
             <IconUpload className="mb-20" size="xlarge" />
             <input {...getInputProps()} name={name} />
-            <Text type="primary" weight="semibold" className="mb-6">
+            <Text type="primary" weight="semibold" className="mb-6" theme={theme}>
               {translation.title}
             </Text>
-            <Text size="small">
+            <Text size="small" theme={theme}>
               {`${areaContent.acceptTypesMessage} ${
                 allowedTypes?.length === 1 ? translation.format : translation.formats
               }, ${translation.maxSize.replace('$1', areaContent.maxSizeFormatted)}`}
@@ -110,6 +111,7 @@ export const DropzoneFileUpload = forwardRef(
           {errors.map(({ code }, index) => {
             return (
               <ErrorItem
+                theme={theme}
                 key={index}
                 code={code}
                 areaContent={areaContent}
@@ -121,6 +123,7 @@ export const DropzoneFileUpload = forwardRef(
           {initialFiles.map((file, index) => {
             return (
               <PreviewItem
+                theme={theme}
                 key={index}
                 file={file}
                 onRemove={() => removeFile(file.name)}

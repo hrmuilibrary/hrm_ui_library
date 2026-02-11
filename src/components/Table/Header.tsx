@@ -5,6 +5,7 @@ import { calcColumnWidth, CHECKBOX_DEFAULT_WIDTH, CHECKBOX_HEADER_ID } from './u
 import { Text } from '../Text'
 import IconArrowDown from '../SVGIcons/IconArrowDown'
 import IconArrowUp from '../SVGIcons/IconArrowUp'
+import { TThemeMode } from '../../type'
 
 type Props = {
   fixedHeader?: boolean
@@ -12,6 +13,7 @@ type Props = {
   tableWidth: number
   headerGroup: HeaderGroup
   uniqueKey: string
+  theme?: TThemeMode
 }
 
 export function Header({
@@ -19,12 +21,17 @@ export function Header({
   tableWidth,
   withSelect,
   uniqueKey,
-  fixedHeader = false
+  fixedHeader = false,
+  theme = 'light'
 }: Props): ReactElement {
   const { key: keyheaderGroup, ...headerGroupProps } = headerGroup.getHeaderGroupProps()
 
   return (
-    <tr {...headerGroupProps} className={classNames({ fixed_header: fixedHeader })}>
+    <tr
+      {...headerGroupProps}
+      className={classNames({ fixed_header: fixedHeader })}
+      data-theme={theme}
+    >
       {headerGroup.headers.map(
         (
           {
@@ -72,7 +79,7 @@ export function Header({
               style={style}
             >
               <div className="flexbox align-items--center">
-                <Text weight="bold" className="table-header-title">
+                <Text weight="bold" className="table-header-title" theme={theme}>
                   {render('Header')}
                 </Text>
                 {isSorted && isSortedDesc && <IconArrowDown size="xsmall" className="ml-4" />}

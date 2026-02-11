@@ -27,7 +27,7 @@ interface TSelectBaseProps extends ICommon {
   dropdownWidth?: number
   language?: string
 }
-export interface TNestedSelectProps {
+export interface TNestedSelectProps extends ICommon {
   options: TSelectOptions
   isRequiredField?: boolean
   label?: string | ReactElement
@@ -137,7 +137,7 @@ export interface TSingleSelectPropTypes extends IFormCompProps, TSelectBaseProps
   }
 }
 
-export interface ISingleSelectResponsiveProps {
+export interface ISingleSelectResponsiveProps extends ICommon {
   isOpen: boolean
   closeDropdown: () => void
   isLoading?: boolean
@@ -175,7 +175,7 @@ export interface ISingleSelectDesktopProps extends ISingleSelectResponsiveProps 
   setSelectedOption: (item: TSelectOption | null) => void
 }
 
-export type TSelectFooterPropTypes = {
+export type TSelectFooterPropTypes = ICommon & {
   checkboxInfo?: TCheckboxInfo
   hasChange?: boolean
   buttonProps?: {
@@ -203,7 +203,7 @@ export interface TFilterProps extends IFormCompProps, TSelectBaseProps {
   parentRef: HTMLElement
 }
 
-export interface TFilterDropdownContentProps extends IFormCompProps {
+export interface TFilterDropdownContentProps extends IFormCompProps, ICommon {
   options: TSelectOptions
   labelLeftIconProps?: {
     size?: TIconSize
@@ -223,7 +223,7 @@ export interface TFilterDropdownContentProps extends IFormCompProps {
   checkIsSelected: (item: TItemValue) => boolean
 }
 
-export interface TFilterGroupDropdownContentProps extends IFormCompProps {
+export interface TFilterGroupDropdownContentProps extends IFormCompProps, ICommon {
   options: TSelectGroupOptions
   labelLeftIconProps?: {
     size?: TIconSize
@@ -242,7 +242,7 @@ export interface TFilterGroupDropdownContentProps extends IFormCompProps {
   checkIsSelected: (item: TItemValue) => boolean
 }
 
-export type TSelectWrapperProps = {
+export type TSelectWrapperProps = ICommon & {
   isMobile: boolean
   applySelectedItems: (isChecked: boolean) => void
   hasError?: boolean
@@ -284,7 +284,7 @@ declare type TNavItemValue = {
   rightInfoProps?: ReactElement
   children: ReactNode
 }
-export type TProfileDropdownProps = {
+export type TProfileDropdownProps = ICommon & {
   avatar: ReactElement
   email: string
   name: string

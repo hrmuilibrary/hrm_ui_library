@@ -66,6 +66,7 @@ export const NestedMenu = ({
             ({ label, meta, value, handler, iconProps, disabled, dataId }: TMenuItem) => {
               return (
                 <OptionItem
+                  theme={theme}
                   dataId={dataId}
                   disabled={disabled}
                   key={`${index}-${value}`}
@@ -98,7 +99,7 @@ export const NestedMenu = ({
           ref={setMenuRef}
           data-theme={theme}
         >
-          <CollapseGroup items={_menuItems} />
+          <CollapseGroup items={_menuItems} theme={theme} />
         </div>,
         parentRef
       )}

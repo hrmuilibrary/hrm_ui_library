@@ -26,6 +26,7 @@ export const RangeDatePickerDesktop = forwardRef<any, IRangeDatePickerProps>(
       label,
       hasError,
       required,
+      theme = 'light',
       ...rest
     } = props
 
@@ -89,8 +90,8 @@ export const RangeDatePickerDesktop = forwardRef<any, IRangeDatePickerProps>(
     }
 
     return (
-      <div className="picker-container input__inner">
-        <Label text={label} required={required} invalid={hasError} />
+      <div className="picker-container input__inner" data-theme={theme}>
+        <Label text={label} required={required} invalid={hasError} theme={theme} />
         <DatePicker
           {...rest}
           locale={locale}
@@ -107,6 +108,7 @@ export const RangeDatePickerDesktop = forwardRef<any, IRangeDatePickerProps>(
           customInput={
             <div className="date-picker_input-container">
               <Input
+                theme={theme}
                 dataId={dataId}
                 disabled={disabled}
                 placeholder={placeholderText}

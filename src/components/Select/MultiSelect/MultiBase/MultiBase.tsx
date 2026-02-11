@@ -26,7 +26,8 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
     maxSelectCount,
     menuOptions,
     dataIdPrefix,
-    dropdownWidth
+    dropdownWidth,
+    theme = 'light'
   } = props
 
   const { emptyListMainMessage, emptyListSecondaryMessage } = translations || {}
@@ -100,6 +101,7 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
         setSearchValue={setSearchValue}
         searchValue={searchValue}
         translations={translations}
+        theme={theme}
       />
 
       <div
@@ -107,6 +109,7 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
           select__options__scroll_mobile: isMobile
         })}
         style={scrollableContentStyle}
+        data-theme={theme}
       >
         {filteredData.length > 0 && (
           <List
@@ -148,6 +151,7 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
           size="small"
           mainMessage={emptyListMainMessage}
           paragraphMessage={emptyListSecondaryMessage}
+          theme={theme}
         />
       ) : null}
     </>

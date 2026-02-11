@@ -32,6 +32,7 @@ export const ProgressStep = (props: TProgressStepProps): ReactElement | null => 
             onStepClick={setActiveStep}
             stepType={stepType}
             stepSize={stepSize}
+            theme={theme}
           />
         )
       })}

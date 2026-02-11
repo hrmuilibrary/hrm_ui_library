@@ -4,13 +4,14 @@ import { Menu } from '../../Menu'
 import { Text } from '../../Text'
 import { TMenuItem } from '../../Menu/types'
 import IconMore from '../../SVGIcons/IconMore'
+import { ICommon } from '../../../type'
 
-type TProps = {
+type TProps = ICommon & {
   selectActions: TMenuItem[]
   innerLabel?: string
 }
 export const Actions = (props: TProps): React.ReactElement | null => {
-  const { selectActions, innerLabel } = props
+  const { selectActions, innerLabel, theme = 'light' } = props
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [buttonRef, setButtonRef] = useState<HTMLDivElement | null>(null)
@@ -19,14 +20,20 @@ export const Actions = (props: TProps): React.ReactElement | null => {
   const close = () => setIsMenuOpen(false)
 
   return selectActions.length ? (
-    <div className="action-bar">
+    <div className="action-bar" data-theme={theme}>
       {innerLabel ? (
-        <Text size="xsmall" type="secondary" className="action-bar__label">
+        <Text size="xsmall" type="secondary" className="action-bar__label" theme={theme}>
           {innerLabel}
         </Text>
       ) : null}
       <div ref={setButtonRef} className="action-bar__right">
-        <Button type="tertiary" onClick={open} iconProps={{ Component: IconMore }} size="small" />
+        <Button
+          type="tertiary"
+          onClick={open}
+          iconProps={{ Component: IconMore }}
+          size="small"
+          theme={theme}
+        />
         {buttonRef ? (
           <Menu
             menuItems={selectActions}
@@ -34,6 +41,7 @@ export const Actions = (props: TProps): React.ReactElement | null => {
             onClose={close}
             position="bottom-left"
             isOpen={isMenuOpen}
+            theme={theme}
           />
         ) : null}
       </div>

@@ -28,6 +28,7 @@ export const SimpleDatePickerDesktop = (props: ISimpleDatePickerProps): ReactEle
     dataIdPrefix,
     helperText,
     inline,
+    theme = 'light',
     ...rest
   } = props
 
@@ -62,8 +63,8 @@ export const SimpleDatePickerDesktop = (props: ISimpleDatePickerProps): ReactEle
   }
 
   return (
-    <div className="picker-container">
-      <Label text={label} required={required} invalid={hasError} />
+    <div className="picker-container" data-theme={theme}>
+      <Label text={label} required={required} invalid={hasError} theme={theme} />
 
       <DatePicker
         minDate={minDate}
@@ -74,6 +75,7 @@ export const SimpleDatePickerDesktop = (props: ISimpleDatePickerProps): ReactEle
         ref={calendarRef}
         customInput={
           <Input
+            theme={theme}
             size={size}
             dataId={dataId}
             helperText={helperText}
@@ -88,6 +90,7 @@ export const SimpleDatePickerDesktop = (props: ISimpleDatePickerProps): ReactEle
         renderCustomHeader={(props) => (
           <CustomHeader
             {...props}
+            theme={theme}
             locale={locale}
             startYear={startYear}
             endYear={endYear}

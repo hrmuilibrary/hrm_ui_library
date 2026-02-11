@@ -36,7 +36,8 @@ export const InputSelectWrapper = (props: TSelectWrapperProps): ReactElement | n
     hasError,
     modalApplyButtonText,
     applySelectedItems,
-    hideSelectedOptions = false
+    hideSelectedOptions = false,
+    theme = 'light'
   } = props
 
   const inputRef = useRef<HTMLInputElement | null>(null)
@@ -86,7 +87,11 @@ export const InputSelectWrapper = (props: TSelectWrapperProps): ReactElement | n
   useChangePositionsOnScroll(inputRef?.current, dropdownRef, hasBottomSpace)
 
   return (
-    <div className={classNames('select select--multi', className)} ref={setContainerRef}>
+    <div
+      className={classNames('select select--multi', className)}
+      ref={setContainerRef}
+      data-theme={theme}
+    >
       <div onClick={disabled ? noop : toggleDropdown}>
         <Input
           readonly
@@ -104,6 +109,7 @@ export const InputSelectWrapper = (props: TSelectWrapperProps): ReactElement | n
           labelAddons={labelAddons}
           disabled={disabled}
           size={size === 'large' ? 'large' : 'small'}
+          theme={theme}
         />
       </div>
 

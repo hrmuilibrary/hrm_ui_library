@@ -6,8 +6,9 @@ import { Switcher } from '../Switcher'
 import { Menu } from '../Menu'
 import { Tooltip } from '../Tooltip'
 import { Positions } from '../Tooltip/types'
+import { ICommon } from '../../type'
 
-interface ColumnSettingsProps<T> {
+interface ColumnSettingsProps<T> extends ICommon {
   table: Table<T>
   tooltipText?: string
   hiddenColumns?: string[]
@@ -20,7 +21,8 @@ export function ColumnSettings<T>({
   table,
   tooltipText,
   hiddenColumns = [],
-  allToggleText = 'All'
+  allToggleText = 'All',
+  theme = 'light'
 }: ColumnSettingsProps<T>) {
   const [ref, setRef] = useState<HTMLDivElement | null>(null)
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -39,13 +41,14 @@ export function ColumnSettings<T>({
   const hiddenColumnSettings = defaultHiddenColumnSettings.concat(hiddenColumns)
 
   return (
-    <div ref={setRef}>
+    <div ref={setRef} data-theme={theme}>
       <Button
         type="secondary"
         iconProps={{
           Component: IconSettings
         }}
         onClick={() => setIsOpen((prev: boolean) => !prev)}
+        theme={theme}
       />
       <Menu
         className="settings-menu"
@@ -53,11 +56,13 @@ export function ColumnSettings<T>({
         onClose={closeUserMenu}
         isOpen={isOpen}
         parentRef={ref}
+        theme={theme}
       >
         <div className="settings-menu__dropdown">
           <div className="relative">
             <div className="settings-menu__dropdown__option sticky">
               <Switcher
+                theme={theme}
                 label={allToggleText}
                 selectedValue={table.getIsAllColumnsVisible()}
                 onClick={() => table.toggleAllColumnsVisible()}
@@ -80,9 +85,11 @@ export function ColumnSettings<T>({
                         position={Positions.TOP_CENTER}
                         text={tooltipText}
                         id={column.columnDef.id}
+                        theme={theme}
                       />
                     )}
                     <Switcher
+                      theme={theme}
                       label={label}
                       id={column.columnDef.id}
                       selectedValue={column.getIsVisible()}

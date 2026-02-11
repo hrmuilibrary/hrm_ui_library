@@ -11,7 +11,8 @@ export const FilterDropdownContent = (props: TFilterDropdownContentProps): React
     onItemDeselect,
     labelLeftIconProps,
     optionRightIconComponent,
-    labelRightIconComponent
+    labelRightIconComponent,
+    theme = 'light'
   } = props
 
   const filteredOptions = useMemo(() => {

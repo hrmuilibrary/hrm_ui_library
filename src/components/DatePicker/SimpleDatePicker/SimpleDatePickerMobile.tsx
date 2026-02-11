@@ -31,6 +31,7 @@ export const SimpleDatePickerMobile = (props: ISimpleDatePickerProps): ReactElem
     setFieldValue,
     required,
     hasError,
+    theme = 'light',
     ...rest
   } = props
 
@@ -64,7 +65,7 @@ export const SimpleDatePickerMobile = (props: ISimpleDatePickerProps): ReactElem
   }
   return (
     <>
-      <Label text={label} required={required} invalid={hasError} />
+      <Label text={label} required={required} invalid={hasError} them={theme} />
       <Input
         size={size}
         onClick={openDatepicker}
@@ -74,6 +75,7 @@ export const SimpleDatePickerMobile = (props: ISimpleDatePickerProps): ReactElem
         datePlaceHolderText={label ? '' : placeholderText}
         rightIconProps={{ Component: IconCalendarRight, onClick: openDatepicker }}
         currentValue={selectedDate ? dayjs(selectedDate.toString()).format(format) : ''}
+        them={theme}
       />
       <Modal
         isOpen={isCalendarOpen}
@@ -81,6 +83,7 @@ export const SimpleDatePickerMobile = (props: ISimpleDatePickerProps): ReactElem
         onClose={closeDatepicker}
         withFooter={false}
         closeIcon={true}
+        them={theme}
       >
         <DatePicker
           minDate={minDate}
@@ -98,6 +101,7 @@ export const SimpleDatePickerMobile = (props: ISimpleDatePickerProps): ReactElem
               endYear={endYear}
               dataPrefix={dataIdPrefix}
               isMobile
+              them={theme}
             />
           )}
         />

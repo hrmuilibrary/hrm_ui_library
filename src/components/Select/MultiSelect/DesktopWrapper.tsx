@@ -6,8 +6,9 @@ import {
   useGetHasBottomSpace,
   useGetHasTopSpace
 } from '../../../hooks'
+import { ICommon } from '../../../type'
 
-type TProps = {
+type TProps = ICommon & {
   isOpen: boolean
   children: ReactElement
   setDropdownRef: LegacyRef<HTMLDivElement>
@@ -32,7 +33,8 @@ export const DesktopWrapper = (props: TProps): ReactElement | null => {
     inputRef,
     dropdownRef,
     containerRef,
-    dropdownWidth
+    dropdownWidth,
+    theme = 'light'
   } = props
 
   const { bottom, left, top, right } = useGetElemPositions(inputRef)
@@ -60,6 +62,7 @@ export const DesktopWrapper = (props: TProps): ReactElement | null => {
           ? { top: offsets?.top || bottom }
           : { bottom: window.innerHeight - top + DROPDOWN_AND_INPUT_GAP })
       }}
+      data-theme={theme}
     >
       {children}
     </div>

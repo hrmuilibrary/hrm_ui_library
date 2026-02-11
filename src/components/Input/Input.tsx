@@ -160,6 +160,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputCustomProps>(
           disabled={disabled}
           labelAddons={labelAddons}
           dataId={dataId}
+          theme={theme}
         />
         <div className="input__inner">
           {input}
@@ -186,10 +187,15 @@ export const Input = React.forwardRef<HTMLInputElement, InputCustomProps>(
         {error || successMessage || helperText || maxCount ? (
           <div className="input__message mt-8">
             {isErrorVisible && error ? (
-              <ErrorMessage message={error} icon="infoFilled" dataId={dataId} />
+              <ErrorMessage message={error} icon="infoFilled" dataId={dataId} theme={theme} />
             ) : null}
             {successMessage ? (
-              <Text size="small" type="success" className="flexbox align-items--center">
+              <Text
+                size="small"
+                type="success"
+                className="flexbox align-items--center"
+                theme={theme}
+              >
                 <>
                   <IconCheckmarkCircleFilled type="success" size="xsmall" />
                   <span className="ml-4">{successMessage}</span>
@@ -197,7 +203,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputCustomProps>(
               </Text>
             ) : null}
             {helperText && !successMessage && !(isErrorVisible || error) ? (
-              <Text size="small" type={disabled ? 'disabled' : 'secondary'}>
+              <Text size="small" type={disabled ? 'disabled' : 'secondary'} theme={theme}>
                 {helperText}
               </Text>
             ) : null}
@@ -207,6 +213,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputCustomProps>(
                 size="small"
                 type={disabled ? 'disabled' : 'secondary'}
                 className="input__counter"
+                theme={theme}
               >
                 {`${currentLength}/${maxCount}`}
               </Text>

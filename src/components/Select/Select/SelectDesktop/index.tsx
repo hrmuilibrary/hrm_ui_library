@@ -40,7 +40,8 @@ export const SelectDesktop = (props: ISingleSelectDesktopProps): ReactElement | 
     onItemDeselect,
     searchValue,
     setSearchValue,
-    translations
+    translations,
+    theme = 'light'
   } = props
 
   const [dropdownRef, setDropdownRef] = useState<HTMLDivElement | null>(null)
@@ -108,9 +109,10 @@ export const SelectDesktop = (props: ISingleSelectDesktopProps): ReactElement | 
               : { bottom: window.innerHeight - top + DROPDOWN_AND_INPUT_GAP })
           }}
           ref={setDropdownRef}
+          data-theme={theme}
         >
           {isLoading ? (
-            <Loading />
+            <Loading theme={theme} />
           ) : (
             <>
               <div
@@ -119,7 +121,12 @@ export const SelectDesktop = (props: ISingleSelectDesktopProps): ReactElement | 
               >
                 {innerHelperText ? (
                   <div className="content-top">
-                    <Text size="xsmall" type="secondary" className="content-top__label">
+                    <Text
+                      size="xsmall"
+                      type="secondary"
+                      className="content-top__label"
+                      theme={theme}
+                    >
                       {innerHelperText}
                     </Text>
                   </div>
@@ -157,13 +164,18 @@ export const SelectDesktop = (props: ISingleSelectDesktopProps): ReactElement | 
                           isSelected={isSelected}
                           dataId={item.dataId}
                           style={style}
+                          theme={theme}
                         />
                       )
                     }}
                   </List>
                 )}
                 {filteredData.length === 0 ? (
-                  <Empty size="small" mainMessage={translations?.emptyListMainMessage} />
+                  <Empty
+                    size="small"
+                    mainMessage={translations?.emptyListMainMessage}
+                    theme={theme}
+                  />
                 ) : null}
               </div>
             </>

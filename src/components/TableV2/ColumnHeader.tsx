@@ -8,14 +8,19 @@ import IconArrowSort from '../SVGIcons/IconArrowSort'
 import IconArrowUp from '../SVGIcons/IconArrowUp'
 import { Text } from '../Text'
 import classnames from 'classnames'
+import { ICommon } from '../../type'
 
-interface DraggableColumnHeaderProps<TData> {
+interface DraggableColumnHeaderProps<TData> extends ICommon {
   header: Header<TData, unknown>
   isPinned?: boolean
   pinnedStyles: CSSProperties
 }
 
-export function ColumnHeader<TData>({ header, pinnedStyles }: DraggableColumnHeaderProps<TData>) {
+export function ColumnHeader<TData>({
+  header,
+  pinnedStyles,
+  theme = 'light'
+}: DraggableColumnHeaderProps<TData>) {
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({
     id: header.id
   })
@@ -44,13 +49,14 @@ export function ColumnHeader<TData>({ header, pinnedStyles }: DraggableColumnHea
         ['cursor-pointer']: header.column.getCanSort()
       })}
       {...attributes}
+      data-theme={theme}
     >
       <div
         onClick={header.column.getToggleSortingHandler()}
         className="flexbox align-items--center"
       >
         <div {...listeners}>
-          <Text className="text-left" weight={'bold'}>
+          <Text className="text-left" weight={'bold'} theme={theme}>
             {flexRender(header.column.columnDef.header, header.getContext())}
           </Text>
         </div>

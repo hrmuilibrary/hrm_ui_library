@@ -3,8 +3,9 @@ import classnames from 'classnames'
 import { Text } from '../../../../Text'
 import IconChevronUp from '../../../../SVGIcons/IconChevronUp'
 import IconChevronDown from '../../../../SVGIcons/IconChevronDown'
+import { ICommon } from '../../../../../type'
 
-type TProps = {
+type TProps = ICommon & {
   buttonText: string
   size?: 'small' | 'medium' | 'large'
   className?: string
@@ -28,7 +29,8 @@ export const Button = (props: TProps): ReactElement => {
     dataId = '',
     onClick,
     refHandler = null,
-    selectedItemsLabels
+    selectedItemsLabels,
+    theme = 'light'
   } = props
 
   return (
@@ -39,15 +41,18 @@ export const Button = (props: TProps): ReactElement => {
       disabled={disabled}
       className={classnames('btn', `btn--${type}`, `btn--${size}`, `btn--${size}`, className)}
       onClick={onClick}
+      data-theme={theme}
     >
       <>
-        <Text className="btn__text mr-4" type={selectedItemsLabels ? 'tertiary' : 'secondary'}>
+        <Text
+          className="btn__text mr-4"
+          type={selectedItemsLabels ? 'tertiary' : 'secondary'}
+          theme={theme}
+        >
           {`${buttonText}${selectedItemsLabels ? '  |' : ''}`}
         </Text>
 
-        {selectedItemsLabels ? (
-          <Text className="btn__text ml-4 mr-4">{selectedItemsLabels}</Text>
-        ) : null}
+        {selectedItemsLabels ? <Text className="btn__text ml-4 mr-4" theme={theme} /> : null}
         {isOpen ? <IconChevronUp size="small" /> : <IconChevronDown size="small" />}
       </>
     </button>

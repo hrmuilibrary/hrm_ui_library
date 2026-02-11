@@ -55,7 +55,7 @@ export const OptionItem = (props: TSelectItemProps): React.ReactElement => {
       style={style}
     >
       {isCheckbox ? (
-        <Checkbox className="mr-8" selectedValue={isSelected} disabled={disabled} />
+        <Checkbox theme={theme} className="mr-8" selectedValue={isSelected} disabled={disabled} />
       ) : null}
       {!isCheckbox && isSelected ? (
         <IconCheckmark size="xsmall" type={disabled ? 'disabled' : 'brand'} className="mr-8" />
@@ -67,6 +67,7 @@ export const OptionItem = (props: TSelectItemProps): React.ReactElement => {
 
         {avatar && (
           <Avatar
+            theme={theme}
             size={size === 'small' ? 'xxsmall' : 'medium'}
             imagePath={avatar.url}
             className="mr-4"

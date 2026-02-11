@@ -28,7 +28,8 @@ export const SelectMobile = (props: ISingleSelectMobileProps): ReactElement => {
     optionRightIconComponent,
     labelRightIconComponent,
     setSelectedOption,
-    withSearch
+    withSearch,
+    theme = 'light'
   } = props
   const [searchValue, setSearchValue] = useState<string>('')
 
@@ -65,16 +66,22 @@ export const SelectMobile = (props: ISingleSelectMobileProps): ReactElement => {
   const windowHeight = window.innerHeight
   const windowWidth = window.innerWidth
   return (
-    <Modal isOpen={isOpen} onClose={closeDropdown} isMobileFullScreen>
+    <Modal isOpen={isOpen} onClose={closeDropdown} isMobileFullScreen theme={theme}>
       <MobileTopContent
         searchValue={searchValue}
         setSearchValue={setSearchValue}
         onBack={closeModal}
         withSearch={withSearch}
+        theme={theme}
       />
       <div className="mobile_options_content">
         {innerHelperText ? (
-          <Text size="xsmall" type="secondary" className="mobile_options_content__label">
+          <Text
+            size="xsmall"
+            type="secondary"
+            className="mobile_options_content__label"
+            theme={theme}
+          >
             {innerHelperText}
           </Text>
         ) : null}

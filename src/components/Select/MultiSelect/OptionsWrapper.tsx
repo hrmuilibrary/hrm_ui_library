@@ -7,6 +7,7 @@ import { getStringWidth } from '../../../utils/helpers'
 import { SELECTED_VISIBLE_MIN_COUNT } from '../constants'
 import { useGetElemSizes, useGetHasBottomSpace, useGetHasTopSpace } from '../../../hooks'
 import { TSelectTranslations } from '../types'
+import { TThemeMode } from '../../../type'
 import { useIsMobile } from '../../../hooks/useGetIsMobile'
 
 type TProps = {
@@ -23,6 +24,7 @@ type TProps = {
   selectedValues: TSelectedValue[]
   setSelectedValues: (values: TSelectedValue[]) => void
   isMobileFullScreen: boolean
+  theme?: TThemeMode
 }
 
 export const OptionsWrapper = (props: TProps): ReactElement => {
@@ -38,6 +40,7 @@ export const OptionsWrapper = (props: TProps): ReactElement => {
     setIsOpen,
     dropdownRef,
     isMobileFullScreen,
+    theme = 'light',
     ...rest
   } = props
   const { width } = useGetElemSizes(containerRef)
@@ -109,6 +112,7 @@ export const OptionsWrapper = (props: TProps): ReactElement => {
       scrollableContentStyle={{
         ...(!hasBottomSpace && !hasTopSpace ? { maxHeight: bottomSpace - 65 - 56 } : {})
       }} // 65 - height of the top content, 56 - height of the footer
+      theme={theme}
       {...rest}
     />
   )

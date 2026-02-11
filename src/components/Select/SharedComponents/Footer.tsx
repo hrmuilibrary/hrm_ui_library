@@ -5,7 +5,15 @@ import { Checkbox } from '../../Checkbox'
 import { SELECT_TRANSLATIONS } from '../localization'
 
 export const Footer = (props: TSelectFooterPropTypes): React.ReactElement => {
-  const { language, buttonProps, onApply, onCancel, hasChange = true, checkboxInfo } = props
+  const {
+    language,
+    buttonProps,
+    onApply,
+    onCancel,
+    hasChange = true,
+    checkboxInfo,
+    theme = 'light'
+  } = props
   const [isSelected, setIsSelected] = React.useState(checkboxInfo?.isChecked || false)
 
   const confirmButtonProps = {
@@ -18,10 +26,15 @@ export const Footer = (props: TSelectFooterPropTypes): React.ReactElement => {
   }
 
   return (
-    <div className="select__footer">
+    <div className="select__footer" data-theme={theme}>
       <div>
         {checkboxInfo ? (
-          <Checkbox label={checkboxInfo.label} selectedValue={isSelected} onClick={setIsSelected} />
+          <Checkbox
+            label={checkboxInfo.label}
+            selectedValue={isSelected}
+            onClick={setIsSelected}
+            theme={theme}
+          />
         ) : null}
       </div>
       <div className={'select__footer__right flexbox'}>
@@ -31,6 +44,7 @@ export const Footer = (props: TSelectFooterPropTypes): React.ReactElement => {
           size="medium"
           className="mr-12"
           onClick={onCancel}
+          theme={theme}
         />
         <Button
           disabled={!hasChange && isSelected === !!checkboxInfo?.isChecked}
@@ -38,6 +52,7 @@ export const Footer = (props: TSelectFooterPropTypes): React.ReactElement => {
           type="primary"
           size="medium"
           onClick={() => onApply(isSelected)}
+          theme={theme}
         />
       </div>
     </div>

@@ -112,7 +112,13 @@ export const FileUpload = (props: TFileUploadProps): React.ReactElement | null =
 
   return (
     <div className="file-upload" data-theme={theme}>
-      <Label text={label} required={required} disabled={disabled} labelAddons={labelAddons} />
+      <Label
+        text={label}
+        required={required}
+        disabled={disabled}
+        labelAddons={labelAddons}
+        theme={theme}
+      />
       <div className="file-upload__inner">
         <input
           name={name}
@@ -145,6 +151,7 @@ export const FileUpload = (props: TFileUploadProps): React.ReactElement | null =
             iconProps={{ Component: IconAttach }}
             onClick={onUploadClick}
             buttonText={buttonText}
+            theme={theme}
           />
         )}
 
@@ -153,6 +160,7 @@ export const FileUpload = (props: TFileUploadProps): React.ReactElement | null =
           onRemove={handleFileRemove}
           files={files}
           withFilePreview={withFilePreview}
+          theme={theme}
         />
       </div>
     </div>

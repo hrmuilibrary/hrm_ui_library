@@ -1,5 +1,5 @@
 import { ReactElement, ReactNode } from 'react'
-import { ISVGIconProps } from '../../type'
+import { ICommon, ISVGIconProps } from '../../type'
 
 export type TStatusTypes =
   | 'primary'
@@ -11,7 +11,7 @@ export type TStatusTypes =
   | 'information'
   | 'discovery'
 
-export interface TStatusProps extends IFormCompProps {
+export interface TStatusProps extends IFormCompProps, ICommon {
   text?: string
   children?: ReactNode
   leftIconProps?: ISVGIconProps

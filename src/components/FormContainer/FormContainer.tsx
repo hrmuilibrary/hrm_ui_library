@@ -95,7 +95,7 @@ export const FormContainer = (props: FormPropTypes): React.ReactElement => {
           {buttonConfigs && (
             <div className="form-container__buttons">
               {buttonConfigs.map((buttonConfig, index) => {
-                return <Button {...buttonConfig} key={index} />
+                return <Button theme={theme} {...buttonConfig} key={index} />
               })}
             </div>
           )}

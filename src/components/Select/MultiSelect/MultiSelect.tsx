@@ -32,6 +32,7 @@ export const MultiSelect = forwardRef((props: TMultiSelectPropTypes, _ref): Reac
     hasError,
     language = 'en',
     hideSelectedOptions = false,
+    theme = 'light',
     ...rest
   } = props
 
@@ -119,6 +120,7 @@ export const MultiSelect = forwardRef((props: TMultiSelectPropTypes, _ref): Reac
       applySelectedItems={applySelectedItems}
       isMobile={isMobile && isMobileFullScreen}
       hideSelectedOptions={hideSelectedOptions}
+      theme={theme}
     >
       <>
         <OptionsWrapper
@@ -134,10 +136,12 @@ export const MultiSelect = forwardRef((props: TMultiSelectPropTypes, _ref): Reac
           containerRef={containerRef}
           dropdownWidth={dropdownWidth}
           isMobileFullScreen={isMobileFullScreen}
+          theme={theme}
           {...rest}
         />
         {options.length && !(isMobile && isMobileFullScreen) ? (
           <Footer
+            theme={theme}
             checkboxInfo={checkboxInfo}
             hasChange={hasChange}
             buttonProps={footerButtonProps}

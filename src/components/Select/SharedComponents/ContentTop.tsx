@@ -9,8 +9,9 @@ import IconSearchFilled from '../../SVGIcons/IconSearchFilled'
 import IconSelectAllOff from '../../SVGIcons/IconSelectAllOff'
 import { useIsMobile } from '../../../hooks/useGetIsMobile'
 import IconChevronLeft from '../../SVGIcons/IconChevronLeft'
+import { ICommon } from '../../../type'
 
-type TProps = {
+type TProps = ICommon & {
   searchValue?: string
   helperText?: string
   selectAll?: TCallBackFn
@@ -40,7 +41,8 @@ export const ContentTop = React.memo<TProps>((props: TProps): React.ReactElement
     isSelectAllDisabled = false,
     menuOptions = [],
     dataIdPrefix,
-    closeDropdown
+    closeDropdown,
+    theme = 'light'
   } = props
   const inputRef = useRef<HTMLInputElement>(null)
 
@@ -103,9 +105,9 @@ export const ContentTop = React.memo<TProps>((props: TProps): React.ReactElement
   }
 
   return (
-    <div className="content-top">
+    <div className="content-top" data-theme={theme}>
       {helperText && !isMobile ? (
-        <Text size="xsmall" type="secondary" className="content-top__label">
+        <Text size="xsmall" type="secondary" className="content-top__label" theme={theme}>
           {helperText}
         </Text>
       ) : null}
@@ -124,6 +126,7 @@ export const ContentTop = React.memo<TProps>((props: TProps): React.ReactElement
               size: searchValue ? 'xsmall' : 'small',
               onClick: removeFilter
             }}
+            theme={theme}
           />
         )}
       </div>

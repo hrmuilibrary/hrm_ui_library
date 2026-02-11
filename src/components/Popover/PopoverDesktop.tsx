@@ -15,7 +15,8 @@ export const PopoverDesktop = (props: TPopoverDesktopProps): ReactElement => {
     children,
     hideMessage,
     parent,
-    clicked = false
+    clicked = false,
+    theme = 'light'
   } = props
   const [popoverRef, setPopoverRef] = useState<HTMLElement | null>(null)
 
@@ -36,10 +37,12 @@ export const PopoverDesktop = (props: TPopoverDesktopProps): ReactElement => {
           className={classNames(`popover popover--${popoverPosition}`, className)}
           ref={setPopoverRef}
           style={popoverStyles}
+          data-theme={theme}
         >
           <div className="popover__inner scrollbar scrollbar--vertical pr-8">
             {linkAddons ? (
               <Link
+                theme={theme}
                 dataId={linkAddons.dataId}
                 url={linkAddons.url}
                 beforeLink={linkAddons.beforeLink}
@@ -51,6 +54,7 @@ export const PopoverDesktop = (props: TPopoverDesktopProps): ReactElement => {
               </Link>
             ) : (
               <Text
+                theme={theme}
                 dataId={dataId ? `${dataId}-popover-text` : ''}
                 type="primary"
                 weight="regular"

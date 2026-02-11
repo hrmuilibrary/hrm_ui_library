@@ -29,7 +29,7 @@ export enum FileUploadMode {
   view = 'view'
 }
 
-export interface IUploadItemPropTypes {
+export interface IUploadItemPropTypes extends ICommon {
   name?: string
   onRemove: (file: File, index: number) => void
   fileType?: string

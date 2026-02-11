@@ -73,7 +73,9 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TTextAreaTypeProps
 
         {error || successMessage || helperText || maxCount ? (
           <div className="textarea__message mt-8">
-            {error && <ErrorMessage message={error} icon="infoFilled" dataId={dataId} />}
+            {error && (
+              <ErrorMessage theme={theme} message={error} icon="infoFilled" dataId={dataId} />
+            )}
             {successMessage ? (
               <Text
                 size="small"

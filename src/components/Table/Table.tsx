@@ -86,7 +86,7 @@ export function Table({
     },
     useSortBy,
     useRowSelect,
-    (hooks: Hooks) => setSelectedRows(hooks, withSelect)
+    (hooks: Hooks) => setSelectedRows(hooks, withSelect, theme)
   ) as TableInstance & { selectedFlatRows: RowType[]; toggleAllRowsSelected: (c: boolean) => void }
 
   const handleResize = useCallback(() => {
@@ -165,6 +165,7 @@ export function Table({
               headerGroup={headerGroup}
               tableWidth={tableWidth}
               uniqueKey={uniqueKey}
+              theme={theme}
             />
           ))}
         </thead>
@@ -179,6 +180,7 @@ export function Table({
                 row={row}
                 key={`table_row_${uniqueKey}_${row.id}`}
                 uniqueKey={uniqueKey}
+                theme={theme}
               />
             )
           })}

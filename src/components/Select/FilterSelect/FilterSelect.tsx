@@ -23,6 +23,7 @@ export const FilterSelect = (props: TFilterProps): ReactElement | null => {
     closeHandler,
     parentRef,
     language = 'en',
+    theme = 'light',
     ...rest
   } = props
 
@@ -86,7 +87,7 @@ export const FilterSelect = (props: TFilterProps): ReactElement | null => {
   return (
     <>
       {createPortal(
-        <div className="select filter">
+        <div className="select filter" data-theme={theme}>
           <div className="select__options" ref={setContainerRef}>
             <Input
               onChange={onFilter}
@@ -98,6 +99,7 @@ export const FilterSelect = (props: TFilterProps): ReactElement | null => {
                 Component: filterValue === '' ? IconSearchFilled : IconDismissFilled,
                 onClick: removeFilterValue
               }}
+              theme={theme}
             />
             <div className={'select__options__scroll scrollbar scrollbar--vertical '}>
               {isLoading ? (

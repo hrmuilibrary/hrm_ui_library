@@ -8,7 +8,7 @@ import { Button } from '../Button'
 import IconDelete from '../SVGIcons/IconDelete'
 
 export const UploadItems = (props: IUploadItemPropTypes): React.ReactElement => {
-  const { files, onRemove, withFilePreview, handleFileClick } = props
+  const { files, onRemove, withFilePreview, handleFileClick, theme = 'light' } = props
   const { errors } = useFormProps()
   const filesErrors = errors && errors.files && errors.files.length > 0
 
@@ -26,6 +26,7 @@ export const UploadItems = (props: IUploadItemPropTypes): React.ReactElement => 
               <div className="upload-item__content mb-2">
                 <div className="upload-item__content__inner pr-8">
                   <Text
+                    theme={theme}
                     size="small"
                     lineHeight="medium"
                     className="upload-item__text"
@@ -40,9 +41,12 @@ export const UploadItems = (props: IUploadItemPropTypes): React.ReactElement => 
                   >
                     {file.name}
                   </Text>
-                  {filesErrors && <ErrorMessage message={errors.files[index]?.message} />}
+                  {filesErrors && (
+                    <ErrorMessage message={errors.files[index]?.message} theme={theme} />
+                  )}
                 </div>
                 <Button
+                  theme={theme}
                   type="tertiary"
                   size="small"
                   iconProps={{ Component: IconDelete }}

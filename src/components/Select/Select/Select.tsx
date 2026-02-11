@@ -44,6 +44,7 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
     language = 'en',
     translations,
     isButtonSelect,
+    theme = 'light',
     ...rest
   } = props
   const isMobile = useIsMobile()
@@ -112,6 +113,7 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
         'select--opened': isOpen
       })}
       ref={containerRef}
+      data-theme={theme}
     >
       {!isButtonSelect && (
         <Input
@@ -134,6 +136,7 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
           labelAddons={labelAddons}
           autoComplete="false"
           readOnly={(isMobile && isMobileFullScreen) || !isWithSearch}
+          theme={theme}
         />
       )}
       {/*// TODO add buttonSelect option for desktop view*/}
@@ -146,11 +149,13 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
           buttonText={placeHolder || ''}
           onClick={disabled ? noop : openDropdown}
           className="select_button"
+          theme={theme}
         />
       )}
       {isMobile && isMobileFullScreen ? (
         <SelectMobile
           {...rest}
+          theme={theme}
           options={options}
           isOpen={isOpen}
           closeDropdown={closeDropdown}
@@ -165,6 +170,7 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
       ) : (
         <SelectDesktop
           {...rest}
+          theme={theme}
           onItemDeselect={onItemDeselect}
           onItemSelect={onItemSelect}
           currentSelection={currentSelection}

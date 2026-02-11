@@ -28,7 +28,6 @@ export const Link = (props: LinkPropTypes): ReactElement => {
         className={'link'}
         data-id={dataId ? `${dataId}-link` : ''}
         target={target}
-        data-theme={theme}
       >
         {children}
       </a>

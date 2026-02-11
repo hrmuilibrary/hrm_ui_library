@@ -2,6 +2,7 @@ import React, { ReactElement, useMemo } from 'react'
 import classNames from 'classnames'
 import { Row as RowType, CellValue } from 'react-table'
 import { CHECKBOX_DEFAULT_WIDTH, CHECKBOX_HEADER_ID } from './utils'
+import { TThemeMode } from '../../type'
 
 type Props = {
   row: RowType
@@ -9,6 +10,7 @@ type Props = {
   withSelect: boolean
   selectedFlatRows: RowType[]
   uniqueKey: string
+  theme?: TThemeMode
 }
 
 export function Row({
@@ -16,7 +18,8 @@ export function Row({
   selectedFlatRows,
   withSelect,
   uniqueKey,
-  handleRowClick
+  handleRowClick,
+  theme = 'light'
 }: Props): ReactElement {
   const isRowSelected = useMemo(
     () => selectedFlatRows.find((r) => r.id === row.id),
@@ -30,6 +33,7 @@ export function Row({
       {...rowProps}
       className={classNames({ selected: Boolean(isRowSelected) })}
       onClick={() => handleRowClick?.(row.original)}
+      data-theme={theme}
     >
       {row.cells.map(({ getCellProps, column, render }: CellValue, i, arr: CellValue[]) => {
         const isSelection = column.id === CHECKBOX_HEADER_ID

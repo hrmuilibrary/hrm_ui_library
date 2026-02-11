@@ -27,6 +27,7 @@ export const RangeDatePickerMobile = forwardRef<any, IRangeDatePickerProps>(
       placeholderText,
       dataIdPrefix,
       modalOptions,
+      theme = 'light',
       ...rest
     } = props
 
@@ -102,6 +103,7 @@ export const RangeDatePickerMobile = forwardRef<any, IRangeDatePickerProps>(
     return (
       <>
         <Input
+          theme={theme}
           readOnly
           onClick={openDatepicker}
           dataId={dataId}
@@ -124,11 +126,12 @@ export const RangeDatePickerMobile = forwardRef<any, IRangeDatePickerProps>(
               onClick: closeDatepicker
             }
           }}
+          theme={theme}
           closeIcon={true}
         >
           <div className="flexbox justify-content--between mb-16 gap-16">
-            <Input readOnly value={formatDate(startDate, format)} />
-            <Input readOnly value={formatDate(endDate, format)} />
+            <Input readOnly value={formatDate(startDate, format)} theme={theme} />
+            <Input readOnly value={formatDate(endDate, format)} theme={theme} />
           </div>
           <DatePicker
             {...rest}
@@ -145,6 +148,7 @@ export const RangeDatePickerMobile = forwardRef<any, IRangeDatePickerProps>(
             renderCustomHeader={(props) => (
               <CustomHeader
                 {...props}
+                theme={theme}
                 locale={locale}
                 startYear={startYear}
                 endYear={endYear}

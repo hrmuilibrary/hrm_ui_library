@@ -2,13 +2,18 @@ import React, { ReactElement, useState } from 'react'
 import { Progress } from '../../Progress'
 import filePreviewSVG from '../../../assets/images/file-preview.svg'
 import classnames from 'classnames'
+import { ICommon } from '../../../type'
 
-interface IFilePreviewProps {
+interface IFilePreviewProps extends ICommon {
   preview?: string
   type: string
 }
 
-export const FilePreview = ({ preview, type }: IFilePreviewProps): ReactElement => {
+export const FilePreview = ({
+  preview,
+  type,
+  theme = 'light'
+}: IFilePreviewProps): ReactElement => {
   const [loading, setLoading] = useState(true)
   const [hasError, setHasError] = useState(false)
 
@@ -26,7 +31,17 @@ export const FilePreview = ({ preview, type }: IFilePreviewProps): ReactElement 
   if (type === 'image') {
     return (
       <>
-        {loading && <Progress size="small" loop noText percent={30} type="circle" dimension={20} />}
+        {loading && (
+          <Progress
+            size="small"
+            loop
+            noText
+            percent={30}
+            type="circle"
+            dimension={20}
+            theme={theme}
+          />
+        )}
         <img
           src={hasError ? filePreviewSVG : preview}
           alt="Preview"

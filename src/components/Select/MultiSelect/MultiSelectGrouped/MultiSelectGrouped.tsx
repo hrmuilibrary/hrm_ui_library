@@ -28,7 +28,8 @@ export const MultiSelectGrouped = (props: TMultiSelectGroupedProps): React.React
     maxSelectCount,
     menuOptions,
     dataIdPrefix,
-    closeDropdown
+    closeDropdown,
+    theme = 'light'
   } = props
 
   const { emptyListMainMessage, emptyListSecondaryMessage } = translations
@@ -132,6 +133,7 @@ export const MultiSelectGrouped = (props: TMultiSelectGroupedProps): React.React
     <>
       {hasTopContent ? (
         <ContentTop
+          theme={theme}
           closeDropdown={closeDropdown}
           dataIdPrefix={dataIdPrefix}
           menuOptions={menuOptions}
@@ -160,6 +162,7 @@ export const MultiSelectGrouped = (props: TMultiSelectGroupedProps): React.React
               {selectedOptions.map((selectedItem: TSelectOption) => {
                 return (
                   <OptionItem
+                    theme={theme}
                     isSelected
                     data={selectedItem}
                     key={selectedItem.value}
@@ -171,13 +174,18 @@ export const MultiSelectGrouped = (props: TMultiSelectGroupedProps): React.React
               })}
             </div>
           )}
-          {hasTopContent ? <Divider type="primary" isHorizontal /> : null}
+          {hasTopContent ? <Divider type="primary" isHorizontal theme={theme} /> : null}
           {filteredData.map(({ title, data }: TSelectGroupOption, index: number) => {
             const isActive = index === activeGroupId
             return (
               <div className="select__group group-item" key={`${data[0]?.value}_${index}`}>
                 <div onClick={() => onGroupClick(index)} className="group-item__top">
-                  <Text size="xxsmall" type="tertiary" className="group-item__title pr-4">
+                  <Text
+                    theme={theme}
+                    size="xxsmall"
+                    type="tertiary"
+                    className="group-item__title pr-4"
+                  >
                     {title}
                   </Text>
                   {isActive ? (
@@ -192,6 +200,7 @@ export const MultiSelectGrouped = (props: TMultiSelectGroupedProps): React.React
                       selectedValues.findIndex((s) => s.value === item.value) !== -1
                     return (
                       <OptionItem
+                        theme={theme}
                         data={item}
                         dataId={item.dataId}
                         key={item.value}
@@ -211,6 +220,7 @@ export const MultiSelectGrouped = (props: TMultiSelectGroupedProps): React.React
       </div>
       {filteredData.length === 0 ? (
         <Empty
+          theme={theme}
           size="small"
           mainMessage={emptyListMainMessage}
           paragraphMessage={emptyListSecondaryMessage}

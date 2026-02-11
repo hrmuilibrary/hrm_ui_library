@@ -2,8 +2,9 @@ import type { ForwardedRef } from 'react'
 import React, { forwardRef, useEffect, useRef } from 'react'
 import { Checkbox } from '../Checkbox'
 import classNames from 'classnames'
+import { ICommon } from '../../type'
 
-type IndeterminateCheckboxProps = {
+type IndeterminateCheckboxProps = ICommon & {
   indeterminate: boolean
   checked: boolean
   onChange: (e: { target: { checked: boolean } }) => void
@@ -12,7 +13,7 @@ type IndeterminateCheckboxProps = {
 
 export const IndeterminateCheckbox = forwardRef(
   (
-    { indeterminate, checked, onChange, disabled }: IndeterminateCheckboxProps,
+    { indeterminate, checked, onChange, disabled, theme = 'light' }: IndeterminateCheckboxProps,
     ref: ForwardedRef<HTMLInputElement>
   ) => {
     const defaultRef = useRef(null)
@@ -27,13 +28,14 @@ export const IndeterminateCheckbox = forwardRef(
     }
 
     return (
-      <div className={'actions-list'}>
+      <div className={'actions-list'} data-theme={theme}>
         <Checkbox
           className={classNames('actions-list__checkbox', { 'active-checkbox': checked })}
           value={checked}
           disabled={disabled}
           onClick={handleChange}
           ref={resolvedRef}
+          theme={theme}
         />
       </div>
     )

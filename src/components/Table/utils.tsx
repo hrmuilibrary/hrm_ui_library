@@ -1,11 +1,12 @@
 import React from 'react'
 import { Column, Hooks, Row } from 'react-table'
 import { IndeterminateCheckbox } from './IndeterminateCheckbox'
+import { TThemeMode } from '../../type'
 
 export const CHECKBOX_HEADER_ID = 'selection'
 export const CHECKBOX_DEFAULT_WIDTH = 48
 
-export function setSelectedRows(hooks: Hooks, withSelect: boolean): void {
+export function setSelectedRows(hooks: Hooks, withSelect: boolean, theme: TThemeMode): void {
   if (withSelect) {
     hooks.visibleColumns.push((columns: Column[]) => [
       {

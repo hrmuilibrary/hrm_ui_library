@@ -29,7 +29,8 @@ export const ButtonSelect = (props: TButtonSelectPropTypes): ReactElement => {
     offsets,
     dataId,
     type,
-    isMobileFullScreen = false
+    isMobileFullScreen = false,
+    theme = 'light'
   } = props
 
   const currentSelection = (value as TItemValue) || selectedItem
@@ -89,9 +90,10 @@ export const ButtonSelect = (props: TButtonSelectPropTypes): ReactElement => {
       dataId={dataId}
       type={type}
       isMobile={isMobile && isMobileFullScreen}
+      theme={theme}
     >
       {isLoading ? (
-        <Loading />
+        <Loading theme={theme} />
       ) : (
         <>
           <div
@@ -106,6 +108,7 @@ export const ButtonSelect = (props: TButtonSelectPropTypes): ReactElement => {
                 <OptionItem
                   tooltipAddons={tooltipAddons}
                   data={item}
+                  theme={theme}
                   key={item.value}
                   onClick={clickHandler(isSelected)}
                   labelLeftIconProps={labelLeftIconProps}

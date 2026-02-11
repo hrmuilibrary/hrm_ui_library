@@ -6,24 +6,26 @@ import { Link } from '../../Link'
 
 export const ProfileDropdown = (props: TProfileDropdownProps): React.ReactElement => {
   const menuRef = useRef<HTMLDivElement>(null)
-  const { avatar, name, email, bodyItems, footerItems, className } = props
+  const { avatar, name, email, bodyItems, footerItems, className, theme = 'light' } = props
   const [isOpen, setIsOpen] = React.useState(false)
 
   const closeDropdown = () => setIsOpen(false)
   useOnOutsideClick(menuRef.current, closeDropdown, isOpen, useId())
 
   return (
-    <div ref={menuRef} className={`relative ${className}`}>
+    <div ref={menuRef} className={`relative ${className}`} data-theme={theme}>
       <div onClick={() => setIsOpen(!isOpen)}>{avatar}</div>
       {isOpen && (
         <div className="profile-dropdown">
           <div className="profile-dropdown__top">
             {avatar}
             <div className={'pl-12'}>
-              <Text size={'medium'} weight={'bold'} lineHeight={'large'}>
+              <Text size={'medium'} weight={'bold'} lineHeight={'large'} theme={theme}>
                 {name}
               </Text>
-              <Text type={'tertiary'}>{email}</Text>
+              <Text type={'tertiary'} theme={theme}>
+                {email}
+              </Text>
             </div>
           </div>
           <div className="profile-dropdown__menu">

@@ -5,15 +5,25 @@ import { Link } from '../Link'
 import { Text } from '../Text'
 
 export const PopoverMobile = (props: TPopoverMobileProps): ReactElement | null => {
-  const { dataId, text, linkAddons, mobileTitle, hideMessage, clicked = false, children } = props
+  const {
+    dataId,
+    text,
+    linkAddons,
+    mobileTitle,
+    hideMessage,
+    clicked = false,
+    children,
+    theme = 'light'
+  } = props
 
   return (
     <>
-      <Modal closeIcon title={mobileTitle} onClose={hideMessage} isOpen={clicked}>
+      <Modal closeIcon title={mobileTitle} onClose={hideMessage} isOpen={clicked} theme={theme}>
         {clicked && (
           <>
             {linkAddons ? (
               <Link
+                theme={theme}
                 dataId={linkAddons.dataId}
                 url={linkAddons.url}
                 beforeLink={linkAddons.beforeLink}
@@ -25,6 +35,7 @@ export const PopoverMobile = (props: TPopoverMobileProps): ReactElement | null =
               </Link>
             ) : (
               <Text
+                theme={theme}
                 dataId={dataId ? `${dataId}-popover-text` : ''}
                 type="primary"
                 weight="regular"

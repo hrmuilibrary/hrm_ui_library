@@ -7,6 +7,7 @@ import type {
   Row
 } from '@tanstack/react-table'
 import type { ReactNode } from 'react'
+import { ICommon } from '../../type'
 
 export type TTable<TData> = Table<TData>
 export type TRowSelectionState = RowSelectionState
@@ -14,7 +15,7 @@ export type TColumnSizingState = ColumnSizingState
 export type TPaginationState = PaginationState
 export type TPersistColumnSettings = 'localStorage' | 'external'
 
-export type TTableProps<TData> = {
+export type TTableProps<TData> = ICommon & {
   data: (TData & { subRows?: TData[] })[]
   isLoading?: boolean
   columns: ColumnDef<TData>[]

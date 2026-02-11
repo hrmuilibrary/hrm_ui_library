@@ -3,8 +3,9 @@ import { TButtonPropTypes } from '../../Button/types'
 import { Button } from '../../Button'
 import { TCheckboxInfo } from '../types'
 import { Checkbox } from '../../Checkbox'
+import { ICommon } from '../../../type'
 
-type TProps = {
+type TProps = ICommon & {
   isLoading?: boolean
   footerButtons?: {
     cancel: TButtonPropTypes
@@ -20,7 +21,8 @@ export const Footer = ({
   footerButtons,
   onClose,
   onSubmit,
-  checkboxInfo
+  checkboxInfo,
+  theme = 'light'
 }: TProps): ReactElement | null => {
   const [isSelected, setIsSelected] = React.useState(checkboxInfo?.isChecked || false)
 
@@ -34,19 +36,40 @@ export const Footer = ({
 
   const { extraButton, confirm, cancel } = footerButtons
   return (
-    <div className="side-sheet__footer">
+    <div className="side-sheet__footer" data-theme={theme}>
       {checkboxInfo ? (
         <div className="side-sheet__footer_checkbox">
-          <Checkbox label={checkboxInfo.label} selectedValue={isSelected} onClick={setIsSelected} />
+          <Checkbox
+            theme={theme}
+            label={checkboxInfo.label}
+            selectedValue={isSelected}
+            onClick={setIsSelected}
+          />
         </div>
       ) : null}
 
       <div className="side-sheet__footer_buttons">
         {extraButton ? (
-          <Button size="large" type="secondary" {...footerButtons.extraButton} className="mr-12" />
+          <Button
+            theme={theme}
+            size="large"
+            type="secondary"
+            {...footerButtons.extraButton}
+            className="mr-12"
+          />
         ) : null}
-        {<Button type="secondary" size="large" className="mr-12" onClick={onClose} {...cancel} />}
+        {
+          <Button
+            theme={theme}
+            type="secondary"
+            size="large"
+            className="mr-12"
+            onClick={onClose}
+            {...cancel}
+          />
+        }
         <Button
+          theme={theme}
           type="primary"
           size="large"
           onClick={handleSubmit}
