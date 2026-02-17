@@ -134,6 +134,7 @@ export const MultiSelect = forwardRef((props: TMultiSelectPropTypes, _ref): Reac
           containerRef={containerRef}
           dropdownWidth={dropdownWidth}
           isMobileFullScreen={isMobileFullScreen}
+          applySelectedItems={applySelectedItems}
           {...rest}
         />
         {options.length && !(isMobile && isMobileFullScreen) ? (

@@ -27,11 +27,12 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
     maxSelectCount,
     menuOptions,
     dataIdPrefix,
-    dropdownWidth
+    dropdownWidth,
+    applySelectedItems
   } = props
 
   const { emptyListMainMessage, emptyListSecondaryMessage } = translations || {}
-
+  const [navigationMode, setNavigationMode] = useState(false)
   const [searchValue, setSearchValue] = useState('')
   const [isAllSelected, setAllSelected] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0)
@@ -43,30 +44,42 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
       case 'ArrowDown':
         e.preventDefault()
         setActiveIndex((prev) => Math.min(prev + 1, filteredData.length - 1))
+        setNavigationMode(true)
         break
 
       case 'ArrowUp':
         e.preventDefault()
         setActiveIndex((prev) => Math.max(prev - 1, 0))
+        setNavigationMode(true)
+        break
+
+      case ' ':
+        if (navigationMode && activeIndex !== null) {
+          e.preventDefault()
+          const item = filteredData[activeIndex]
+          if (!item) {
+            return
+          }
+          const isSelected = checkIsSelected(item.value)
+          if (isSelected) {
+            onDeselect(item)
+          } else {
+            onItemSelect(item)
+          }
+        }
         break
 
       case 'Enter':
         e.preventDefault()
-        const item = filteredData[activeIndex]
-        if (!item) {
-          return
-        }
-        const isSelected = checkIsSelected(item.value)
-        if (isSelected) {
-          onDeselect(item)
-        } else {
-          onItemSelect(item)
-        }
+        applySelectedItems()
         break
 
       case 'Escape':
         closeDropdown()
         break
+      default:
+        // any typing key exits navigation mode
+        setNavigationMode(false)
     }
   }
 
