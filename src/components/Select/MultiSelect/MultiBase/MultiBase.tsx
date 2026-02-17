@@ -32,7 +32,7 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
   } = props
 
   const { emptyListMainMessage, emptyListSecondaryMessage } = translations || {}
-  const [navigationMode, setNavigationMode] = useState(false);
+  const [navigationMode, setNavigationMode] = useState(false)
   const [searchValue, setSearchValue] = useState('')
   const [isAllSelected, setAllSelected] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0)
@@ -44,18 +44,18 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
       case 'ArrowDown':
         e.preventDefault()
         setActiveIndex((prev) => Math.min(prev + 1, filteredData.length - 1))
-        setNavigationMode(true);
+        setNavigationMode(true)
         break
 
       case 'ArrowUp':
         e.preventDefault()
         setActiveIndex((prev) => Math.max(prev - 1, 0))
-        setNavigationMode(true);
+        setNavigationMode(true)
         break
 
-      case " ":
+      case ' ':
         if (navigationMode && activeIndex !== null) {
-          e.preventDefault();
+          e.preventDefault()
           const item = filteredData[activeIndex]
           if (!item) {
             return
@@ -67,7 +67,7 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
             onItemSelect(item)
           }
         }
-        break;
+        break
 
       case 'Enter':
         e.preventDefault()
@@ -79,7 +79,7 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
         break
       default:
         // any typing key exits navigation mode
-        setNavigationMode(false);
+        setNavigationMode(false)
     }
   }
 

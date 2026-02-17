@@ -68,7 +68,7 @@ interface TMultiSelectCompProps extends IFormCompProps, TSelectBaseProps {
 
 export interface TMultiSingleTabPropTypes extends TMultiSelectCompProps {
   options: TSelectOptions
-  applySelectedItems:()=> void
+  applySelectedItems: () => void
 }
 
 export interface TMultiSelectGroupedProps extends TMultiSelectCompProps {
