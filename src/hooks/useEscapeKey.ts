@@ -1,26 +1,23 @@
-import { useEffect } from 'react';
+import { useEffect } from 'react'
 
 type UseEscapeKeyOptions = {
-  enabled?: boolean;
-};
+  enabled?: boolean
+}
 
-export function useEscapeKey(
-  onEscape: () => void,
-  { enabled = true }: UseEscapeKeyOptions = {}
-) {
+export function useEscapeKey(onEscape: () => void, { enabled = true }: UseEscapeKeyOptions = {}) {
   useEffect(() => {
-    if (!enabled) return;
+    if (!enabled) return
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
-        onEscape();
+        onEscape()
       }
-    };
+    }
 
-    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('keydown', handleKeyDown)
 
     return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [onEscape, enabled]);
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [onEscape, enabled])
 }
