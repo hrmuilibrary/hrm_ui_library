@@ -7,21 +7,6 @@
   --ds-modal-size-md: 600px;
   --ds-modal-size-sm: 400px;
 
-  --ds-modal-overlay-bg: var(--ds-overlay-9);
-  --ds-modal-overlay-padding: var(--ds-space-16);
-  --ds-modal-bg: var(--ds-color-bg-white);
-  --ds-modal-border-radius: var(--ds-border-radius-xs);
-  --ds-modal-border-radius-mobile: var(--ds-border-radius-2xl);
-  --ds-modal-shadow: var(--shadow-7);
-
-  --ds-modal-header-padding: var(--ds-space-16) var(--ds-space-24);
-
-  --ds-modal-content-border-width: var(--ds-border-thin);
-  --ds-modal-content-border-color: var(--ds-color-divider);
-  --ds-modal-content-padding: var(--ds-space-24);
-
-  --ds-modal-footer-padding: var(--ds-space-16) var(--ds-space-24);
-
   @include mixin.fixed(0, 0, 0, 0);
   @include mixin.flexbox;
   @include mixin.justify-content(center);
@@ -29,35 +14,30 @@
   height: 100%;
   width: 100%;
   z-index: 99999;
-  padding: var(--ds-modal-overlay-padding);
-  background-color: var(--ds-modal-overlay-bg);
+  padding: var(--ds-space-16);
+  background-color: var(--overlay-9);
 
   &__container {
     @include mixin.flexbox;
     @include mixin.flex-direction(column);
     width: 100%;
-    max-height: calc(100vh - calc(var(--ds-modal-overlay-padding) * 2));
-    border-radius: var(--ds-modal-border-radius);
-    background-color: var(--ds-modal-bg);
-    box-shadow: var(--ds-modal-shadow);
-    @media screen and (max-width: 768px) {
-      position: fixed;
-      max-height: 70%;
-      border-radius: var(--ds-modal-border-radius-mobile) var(--ds-modal-border-radius-mobile) 0 0;
-    }
-    &_fullScreen{
-      border-radius:0;
+    max-height: calc(100vh - calc(var(--ds-space-16) * 2));
+    border-radius: var(--ds-border-radius-xs);
+    background-color: var(--white);
+    box-shadow: var(--shadow-7);
+
+    &_fullScreen {
+      border-radius: 0;
       max-height: 100%;
     }
-
   }
 
   &__header {
     @include mixin.flexbox;
     @include mixin.align-items(center);
     @include mixin.justify-content(space-between);
-    padding: var(--ds-modal-header-padding);
-    border-bottom: var(--ds-modal-content-border-width) solid var(--ds-modal-content-border-color);
+    padding: var(--ds-space-16) var(--ds-space-24);
+    border-bottom: var(--ds-border-thin) solid var(--ds-color-divider);
   }
 
   &__title {
@@ -66,7 +46,7 @@
   }
 
   &__content {
-    padding: var(--ds-modal-content-padding);
+    padding: var(--ds-space-24);
     height: 100%;
   }
 
@@ -74,8 +54,8 @@
     @include mixin.flexbox;
     @include mixin.align-items(center);
     @include mixin.justify-content(flex-end);
-    padding: var(--ds-modal-footer-padding);
-    border-top: var(--ds-modal-content-border-width) solid var(--ds-modal-content-border-color);
+    padding: var(--ds-space-16) var(--ds-space-24);
+    border-top: var(--ds-border-thin) solid var(--ds-color-divider);
   }
 
   &--large {
@@ -99,11 +79,63 @@
   &__close {
     cursor: pointer;
   }
+
+  // Animation states
+  &--entering {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  &--entered {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+  }
+
+  &--exiting {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  &__container {
+    // Base transition for smooth animations
+    transition: opacity 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    // Desktop animation states
+    &--entering {
+      opacity: 0.5;
+      transform: scale(0.65);
+    }
+
+    &--entered {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    &--exiting {
+      opacity: 0;
+      transform: scale(0.7);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+  }
 }
 
 // Mobile
 @media screen and (max-width: 768px) {
   .modal {
+    &__container {
+      position: fixed;
+      max-height: 70%;
+      border-radius: var(--ds-border-radius-2xl) var(--ds-border-radius-2xl) 0 0;
+      bottom: 0;
+      height: auto;
+
+      &_fullScreen {
+        border-radius: 0;
+        height: 100%;
+      }
+    }
+
     &__footer {
       flex-direction: column-reverse;
       gap: var(--ds-space-8);
