@@ -1,99 +1,49 @@
 import React, { ReactElement, useId, useState } from 'react'
 import classnames from 'classnames'
-import { motion, AnimationGeneratorType } from 'motion/react'
-import { AnimatePresenceWrapper } from '../../helperComponents/AnimatePresenceWrapper'
 import { useHideBodyScroll, useOnOutsideClick } from '../../hooks'
+import { useAnimation } from '../../hooks/useAnimation'
 import { TModalPropTypes } from './types'
 import { ModalContent } from './ModalContent'
 import { useIsMobile } from '../../hooks/useGetIsMobile'
 import classNames from 'classnames'
+import { useEscapeKey } from '../../hooks/useEscapeKey'
 
-const DESKTOP_ANIMATION: {
-  initial: { opacity: number; scale: number }
-  animate: { opacity: number; scale: number[] }
-  exit: { opacity: number; scale: number; transition: { duration: number } }
-  transition: { duration: number; type: AnimationGeneratorType; damping: number; stiffness: number }
-} = {
-  initial: { opacity: 0.5, scale: 0.65 },
-  animate: { opacity: 1, scale: [0.95, 1] },
-  exit: {
-    opacity: 0,
-    scale: 0.7,
-    transition: {
-      duration: 0.2
-    }
-  },
-  transition: {
-    duration: 0.4,
-    type: 'spring',
-    damping: 55,
-    stiffness: 700
-  }
-}
-
-export const MOBILE_ANIMATION = (
-  isFullScreen?: boolean
-): { [key: string]: { [key: string]: string | number } } => {
-  return {
-    initial: {
-      height: 0,
-      bottom: 0
-    },
-    animate: {
-      height: isFullScreen ? '100%' : 'auto',
-      bottom: 0
-    },
-    exit: {
-      height: 0,
-      bottom: 0
-    },
-    transition: {
-      duration: 0.3
-    }
-  }
-}
-export const Modal = (props: TModalPropTypes): ReactElement => {
-  const {
-    isOpen,
-    onClose,
-    className = '',
-    size = 'medium',
-    closeOnOutsideClick = true,
-    isMobileFullScreen,
-    ...rest
-  } = props
-
+export const Modal = ({
+  isOpen,
+  onClose,
+  className = '',
+  size = 'medium',
+  closeOnOutsideClick = true,
+  isMobileFullScreen,
+  ...rest
+}: TModalPropTypes): ReactElement | null => {
   const isMobile = useIsMobile()
+  const { animationState, shouldRender } = useAnimation({
+    isOpen,
+    enterDuration: isMobile ? 0 : 400,
+    exitDuration: 200
+  })
 
   const [containerRef, setContainerRef] = useState<HTMLDivElement | null>(null)
   useOnOutsideClick(containerRef, onClose, closeOnOutsideClick && isOpen, useId())
   useHideBodyScroll(isOpen)
+  useEscapeKey(onClose, { enabled: isOpen })
+
+  if (!shouldRender) {
+    return null
+  }
 
   return (
-    <AnimatePresenceWrapper>
-      {isOpen ? (
-        <motion.div
-          className={classnames('modal', `modal--${size}`, className)}
-          initial={{
-            opacity: 0
-          }}
-          animate={{
-            opacity: 1
-          }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: isMobile ? 0 : 0.4 }}
-        >
-          <motion.div
-            className={classNames('modal__container', {
-              modal__container_fullScreen: isMobile && isMobileFullScreen
-            })}
-            ref={setContainerRef}
-            {...(isMobile ? MOBILE_ANIMATION(isMobileFullScreen) : DESKTOP_ANIMATION)}
-          >
-            <ModalContent {...rest} onClose={onClose} />
-          </motion.div>
-        </motion.div>
-      ) : null}
-    </AnimatePresenceWrapper>
+    <div className={classnames('modal', `modal--${size}`, `modal--${animationState}`, className)}>
+      <div
+        className={classNames('modal__container', `modal__container--${animationState}`, {
+          modal__container_fullScreen: isMobile && isMobileFullScreen,
+          [`modal__container_fullScreen--${animationState}`]: isMobile && isMobileFullScreen
+        })}
+        ref={setContainerRef}
+      >
+        <ModalContent {...rest} onClose={onClose} />
+      </div>
+    </div>
   )
 }
