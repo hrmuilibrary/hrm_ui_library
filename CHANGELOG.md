@@ -1,3 +1,11 @@
+## [3.1.13](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.12...3.1.13) (2026-02-18)
+
+
+### Bug Fixes
+
+* integrate custom animation instead of motion animation in modal components ([cdfed3a](https://github.com/hrmuilibrary/hrm_ui_library/commit/cdfed3aeb6fe1d73d874387d77af236ee1ebc01b))
+* run lint ([db8b0b0](https://github.com/hrmuilibrary/hrm_ui_library/commit/db8b0b0de9439bc4fe09f463f52e07fcfa168650))
+
 ## [3.1.12](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.11...3.1.12) (2026-02-17)
 
 
