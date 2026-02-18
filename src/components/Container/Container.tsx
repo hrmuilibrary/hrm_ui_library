@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { TContainerProps } from './types'
 
-export const Container: FC<TContainerProps> = (props) => {
+export const Container = (props: TContainerProps) => {
   const { children, theme = 'light' } = props
 
   return (
