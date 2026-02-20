@@ -2,21 +2,6 @@
 
 .progress-bar {
     $this: &;
-
-    --ds-progress-linear-size-lg: var(--ds-size-6);
-    --ds-progress-linear-size-sm: var(--ds-size-2);
-    --ds-progress-linear-border-radius: var(--ds-border-radius-md);
-    --ds-progress-linear-font-size-lg: var(--ds-paragraph-sm);
-    --ds-progress-linear-font-size-sm: var(--ds-paragraph-xs);
-
-    --ds-progress-circle-border-lg: var(--ds-size-4);
-    --ds-progress-circle-border-sm: var(--ds-size-2);
-    --ds-progress-circle-font-size-lg: var(--ds-paragraph-md);
-    --ds-progress-circle-font-size-sm: var(--ds-paragraph-sm);
-
-    --ds-progress-bg-default: var(--ds-color-bg-container-light);
-    --ds-progress-bg-filled: var(--ds-color-bg-brand);
-
     position: relative;
     font-family: var(--ds-font-family);
 
@@ -25,37 +10,37 @@
         @include mixin.align-items(center);
 
         &#{$this}--large {
-            height: var(--ds-progress-linear-size-lg);
+            height: var(--size-6);
 
             #{$this}__percent {
-                font-size: var(--ds-progress-linear-font-size-lg);
+                font-size: var(--ds-paragraph-sm);
             }
         }
 
         &#{$this}--small {
-            height: var(--ds-progress-linear-size-sm);
+            height: var(--size-2);
 
             #{$this}__percent {
-                font-size: var(--ds-progress-linear-font-size-sm);
+                font-size: var(--ds-paragraph-xs);
             }
         }
 
         #{$this}__inner {
             height: 100%;
             width: 100%;
-            background-color: var(--ds-progress-bg-default);
-            border-radius: var(--ds-progress-linear-border-radius);
+            background-color: var(--grey-40);
+            border-radius: var(--border-radius-8);
         }
 
         #{$this}__filled {
             height: 100%;
-            background-color: var(--ds-progress-bg-filled);
-            border-radius: var(--ds-progress-linear-border-radius);
+            background-color: var(--brand-500);
+            border-radius: var(--border-radius-8);
             transition: width .3s linear;
         }
 
         #{$this}__percent {
-            margin-left: var(--ds-space-8);
+            margin-left: var(--space-8);
         }
     }
 
@@ -69,33 +54,33 @@
                 width: 100%;
                 height: 100%;
                 fill: none;
-                stroke: var(--ds-progress-bg-default);
+                stroke: var(--grey-40);
                 stroke-linecap: round;
                 transition: stroke-dashoffset .3s linear;
 
                 &:last-of-type {
-                    stroke: var(--ds-progress-bg-filled);
+                    stroke: var(--brand-500);
                 }
             }
         }
 
         &#{$this}--large {
             circle {
-                stroke-width: var(--ds-progress-circle-border-lg);
+                stroke-width: var(--size-4);
             }
 
             #{$this}__percent {
-                font-size: var(--ds-progress-circle-font-size-lg);
+                font-size: var(--ds-paragraph-md);
             }
         }
 
         &#{$this}--small {
             circle {
-                stroke-width: var(--ds-progress-circle-border-sm);
+                stroke-width: var(--size-2);
             }
 
             #{$this}__percent {
-                font-size: var(--ds-progress-circle-font-size-sm);
+                font-size: var(--ds-paragraph-sm);
             }
         }
 

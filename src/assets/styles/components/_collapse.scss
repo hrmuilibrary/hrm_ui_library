@@ -3,16 +3,16 @@
 .collapse {
     $this: &;
 
-    --ds-collapse-border-radius: var(--ds-border-radius-xs);
-    --ds-collapse-border: 1px solid var(--ds-color-border-tertiary);
-    --ds-collapse-bg: var(--ds-color-bg-white);
+    --ds-collapse-border-radius: var(--border-radius-4);
+    --ds-collapse-border: 1px solid var(--grey-200);
+    --ds-collapse-bg: var(--white);
 
-    --ds-collapse-header-size: var(--ds-space-56);
-    --ds-collapse-header-space: var(--ds-space-16) var(--ds-space-24);
+    --ds-collapse-header-size: var(--space-56);
+    --ds-collapse-header-space: var(--space-16) var(--space-24);
 
-    --ds-collapse-content-space: 0 var(--ds-space-16) var(--ds-space-24);
+    --ds-collapse-content-space: 0 var(--space-16) var(--space-24);
 
-    --ds-collapse-divider-space: 0 0 var(--ds-space-16);
+    --ds-collapse-divider-space: 0 0 var(--space-16);
 
     border-radius: var(--ds-collapse-border-radius);
     border: var(--ds-collapse-border);
@@ -76,7 +76,7 @@
 }
 
 .collapse-group {
-    --ds-collapse-group-item-space: var(--ds-space-8);
+    --ds-collapse-group-item-space: var(--space-8);
 
     &__item {
         margin-bottom: var(--ds-collapse-group-item-space);

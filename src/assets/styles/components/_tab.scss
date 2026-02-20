@@ -3,37 +3,14 @@
 .tab {
   $this: &;
 
-  --ds-tab-color-default: var(--ds-color-text-tertiary);
-  --ds-tab-color-hover: var(--ds-color-text-tertiary);
-  --ds-tab-color-disabled: var(--ds-color-text-disabled);
-  --ds-tab-color-selected: var(--ds-color-text-primary);
-
-  --ds-tab-icon-color-default: var(--ds-color-text-secondary);
-  --ds-tab-icon-color-hover: var(--ds-color-text-tertiary);
-  --ds-tab-icon-color-disabled: var(--ds-color-text-disabled);
-  --ds-tab-icon-color-selected: var(--ds-color-text-primary);
-
-  --ds-tab-size-lg: var(--ds-size-56);
-  --ds-tab-size-md: var(--ds-size-48);
-  --ds-tab-size-sm: var(--ds-size-32);
-  --ds-tab-font-size-lg: var(--ds-paragraph-md);
-  --ds-tab-font-size-md: var(--ds-paragraph-std);
-  --ds-tab-font-size-sm: var(--ds-paragraph-sm);
-  --ds-tab-font: var(--ds-font-weight-active) var(--ds-tab-font-size-lg)/1 var(--ds-font-family);
-
-  --ds-tab-border-size: 0;
-  --ds-tab-border-default: var(--ds-color-border-tertiary);
-  --ds-tab-border-selected: var(--ds-color-border-brand);
-
   @include mixin.inline-flex;
   @include mixin.align-items(center);
   position: relative;
-  color: var(--ds-tab-color-default);
-  border-radius: var(--ds-badge-border-radius);
-  border-width: var(--ds-tab-border-size);
+  color: var(--grey-500);
+  border-width: 0;
   border-style: solid;
-  border-color: var(--ds-tab-border-default);
-  padding: 0 var(--ds-space-24);
+  border-color: var(--grey-200);
+  padding: 0 var(--space-24);
   box-sizing: border-box;
 
   &:after {
@@ -43,9 +20,9 @@
     left: 0;
     height: 4px;
     width: 0;
-    background-color: var(--ds-tab-border-selected);
-    border-top-right-radius: var(--ds-size-8);
-    border-top-left-radius: var(--ds-size-8);
+    background-color: var(--brand-500);
+    border-top-right-radius: var(--size-8);
+    border-top-left-radius: var(--size-8);
     transition: width .3s linear;
   }
 
@@ -54,23 +31,23 @@
   }
 
   &__icon {
-    color: var(--ds-tab-icon-color-default);
+    color: var(--grey-800);
   }
 
   &__label {
-    font: var(--ds-tab-font);
-    color: var(--ds-tab-color-default);
+    font: var(--ds-font-weight-active) var(--ds-paragraph-md)/1 var(--ds-font-family);
+    color: var(--grey-500);
   }
 
   &:hover {
     cursor: pointer;
 
     #{$this}__icon {
-      color: var(--ds-tab-icon-color-hover);
+      color: var(--grey-500);
     }
 
     #{$this}__label {
-      color: var(--ds-tab-color-hover);
+      color: var(--grey-500);
     }
   }
 
@@ -79,20 +56,20 @@
       cursor: default;
 
       #{$this}__icon {
-        color: var(--ds-tab-icon-color-disabled);
+        color: var(--grey-400);
       }
 
       #{$this}__label {
-        color: var(--ds-tab-color-disabled);
+        color: var(--grey-400);
       }
     }
 
     #{$this}__icon {
-      color: var(--ds-tab-icon-color-disabled);
+      color: var(--grey-400);
     }
 
     #{$this}__label {
-      color: var(--ds-tab-color-disabled);
+      color: var(--grey-400);
     }
   }
 
@@ -101,11 +78,11 @@
       cursor: default;
 
       #{$this}__icon {
-        color: var(--ds-tab-icon-color-selected);
+        color: var(--grey-900);
       }
 
       #{$this}__label {
-        color: var(--ds-tab-color-selected);
+        color: var(--grey-900);
       }
     }
 
@@ -114,35 +91,35 @@
     }
 
     #{$this}__icon {
-      color: var(--ds-tab-icon-color-selected);
+      color: var(--grey-900);
     }
 
     #{$this}__label {
-      color: var(--ds-tab-color-selected);
+      color: var(--grey-900);
     }
   }
 
   &--large {
-    height: var(--ds-tab-size-lg);
+    height: var(--size-56);
 
     #{$this}__label {
-      font-size: var(--ds-tab-font-size-lg);
+      font-size: var(--ds-paragraph-md);
     }
   }
 
   &--medium {
-    height: var(--ds-tab-size-md);
+    height: var(--size-48);
 
     #{$this}__label {
-      font-size: var(--ds-tab-font-size-md);
+      font-size: var(--ds-paragraph-std);
     }
   }
 
   &--small {
-    height: var(--ds-tab-size-sm);
+    height: var(--size-32);
 
     #{$this}__label {
-      font-size: var(--ds-tab-font-size-sm);
+      font-size: var(--ds-paragraph-sm);
     }
   }
 }
@@ -153,7 +130,7 @@
 
   .tabs-header-container {
     --ds-tabs-border-size: 0 0 1px 0;
-    --ds-tabs-border-default: var(--ds-color-divider);
+    --ds-tabs-border-default: var(--grey-100);
 
     @include mixin.inline-flex;
     @include mixin.align-items(flex-end);

@@ -1,27 +1,19 @@
 .link {
   $this: &;
-
-  --ds-link-text-defult: var(--ds-color-text-brand);
-  --ds-link-text-hover: var(--ds-color-text-brand);
-  --ds-link-text-pressed: var(--brand-600);
-  --ds-link-text-focused: var(--brand-700);
-
-  --ds-link-transition: background-color .3s linear, color .3s linear, border-color .3s linear;
-
-  color: var(--ds-link-text-defult);
-  transition: var(--ds-link-transition);
+  color: var(--brand-700);
+  transition: background-color .3s linear, color .3s linear, border-color .3s linear;
   text-decoration: none;
 
   &:hover {
-    color: var(--ds-link-text-hover);
+    color: var(--brand-700);
     text-decoration: underline;
   }
 
   &:active {
-    color: var(--ds-link-text-pressed);
+    color: var(--brand-600);
   }
 
   &:focus {
-    color: var(--ds-link-text-focused);
+    color: var(--brand-700);
   }
 }

@@ -1,8 +1,8 @@
 .divider {
     $this: &;
 
-    --ds-divider-bg-color: var(--ds-color-divider);
-    --ds-divider-bg-color-grey: var(--ds-color-divider-grey);
+    --ds-divider-bg-color: var(--grey-100);
+    --ds-divider-bg-color-grey: var(--grey-200);
 
     border: none;
 

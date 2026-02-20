@@ -3,10 +3,6 @@
 .modal {
   $this: &;
 
-  --ds-modal-size-lg: 720px;
-  --ds-modal-size-md: 600px;
-  --ds-modal-size-sm: 400px;
-
   @include mixin.fixed(0, 0, 0, 0);
   @include mixin.flexbox;
   @include mixin.justify-content(center);
@@ -14,15 +10,15 @@
   height: 100%;
   width: 100%;
   z-index: 99999;
-  padding: var(--ds-space-16);
+  padding: var(--space-16);
   background-color: var(--overlay-9);
 
   &__container {
     @include mixin.flexbox;
     @include mixin.flex-direction(column);
     width: 100%;
-    max-height: calc(100vh - calc(var(--ds-space-16) * 2));
-    border-radius: var(--ds-border-radius-xs);
+    max-height: calc(100vh - calc(var(--space-16) * 2));
+    border-radius: var(--border-radius-4);
     background-color: var(--white);
     box-shadow: var(--shadow-7);
 
@@ -36,8 +32,8 @@
     @include mixin.flexbox;
     @include mixin.align-items(center);
     @include mixin.justify-content(space-between);
-    padding: var(--ds-space-16) var(--ds-space-24);
-    border-bottom: var(--ds-border-thin) solid var(--ds-color-divider);
+    padding: var(--space-16) var(--space-24);
+    border-bottom: var(--border-size-1) solid var(--grey-100);
   }
 
   &__title {
@@ -46,7 +42,7 @@
   }
 
   &__content {
-    padding: var(--ds-space-24);
+    padding: var(--space-24);
     height: 100%;
   }
 
@@ -54,25 +50,25 @@
     @include mixin.flexbox;
     @include mixin.align-items(center);
     @include mixin.justify-content(flex-end);
-    padding: var(--ds-space-16) var(--ds-space-24);
-    border-top: var(--ds-border-thin) solid var(--ds-color-divider);
+    padding: var(--space-16) var(--space-24);
+    border-top: var(--border-size-1) solid var(--grey-100);
   }
 
   &--large {
     #{$this}__container {
-      max-width: var(--ds-modal-size-lg);
+      max-width: 720px;
     }
   }
 
   &--medium {
     #{$this}__container {
-      max-width: var(--ds-modal-size-md);
+      max-width: 600px;
     }
   }
 
   &--small {
     #{$this}__container {
-      max-width: var(--ds-modal-size-sm);
+      max-width: 400px;
     }
   }
 
@@ -109,7 +105,7 @@
 
     &--entered {
       opacity: 1;
-      transform: scale(1);
+      transform: none;
     }
 
     &--exiting {
@@ -126,7 +122,7 @@
     &__container {
       position: fixed;
       max-height: 70%;
-      border-radius: var(--ds-border-radius-2xl) var(--ds-border-radius-2xl) 0 0;
+      border-radius: var(--border-radius-16) var(--border-radius-16) 0 0;
       bottom: 0;
       height: auto;
 
@@ -138,7 +134,7 @@
 
     &__footer {
       flex-direction: column-reverse;
-      gap: var(--ds-space-8);
+      gap: var(--space-8);
 
       &__btn {
         width: 100%;

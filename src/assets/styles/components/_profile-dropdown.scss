@@ -2,15 +2,15 @@
 
 .profile-dropdown {
   width: 360px;
-  box-shadow: var(--ds-shadow-2);
-  border-radius: var(--ds-border-radius-lg);
-  background-color: var(--ds-color-bg-white);
-  @include mixin.absolute(calc(100% + var(--ds-space-8)), 0, unset, unset);
+  box-shadow: var(--shadow-2);
+  border-radius: var(--border-radius-10);
+  background-color: var(--white);
+  @include mixin.absolute(calc(100% + var(--space-8)), 0, unset, unset);
 
   &__top {
     @include mixin.flexbox;
     @include mixin.align-items(center);
-    padding: var(--ds-space-16);
+    padding: var(--space-16);
     border-bottom: 1px solid var(--grey-50);
   }
 
@@ -18,23 +18,23 @@
     list-style: none;
 
     li {
-      padding: var(--ds-space-10) var(--ds-space-16);
+      padding: var(--space-10) var(--space-16);
     }
 
     &__link {
       @include mixin.inline-flex;
       @include mixin.align-items(center);
-      color: var(--ds-color-text-primary);
+      color: var(--grey-900);
 
       &:hover {
-        color: var(--ds-color-text-brand);
+        color: var(--brand-700);
         text-decoration: none;
         transition: none;
         cursor: pointer;
 
         .svg-icon {
           path {
-            fill: var(--ds-color-text-brand);
+            fill: var(--brand-700);
           }
         }
       }
