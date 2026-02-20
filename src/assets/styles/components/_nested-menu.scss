@@ -5,10 +5,10 @@
   max-height: 748px;
   min-width: 408px;
   position: fixed;
-  background-color: var(--ds-color-bg-white);
+  background-color: var(--white);
   box-shadow: var(--shadow-3);
-  border-radius: var(--ds-border-radius-md);;
-  padding: var(--ds-space-24);
+  border-radius: var(--border-radius-8);;
+  padding: var(--space-24);
   overflow-y: auto;
 
   .collapse {
@@ -17,7 +17,7 @@
     margin: 0;
 
     &_header {
-      padding: var(--ds-space-14) 0;
+      padding: var(--space-14) 0;
     }
 
     &_container {
@@ -30,17 +30,17 @@
   }
 
   &__sub-items {
-    //margin: var(--ds-space-8) 0;
+    //margin: var(--space-8) 0;
   }
 
   &__sub-item {
     margin: 0;
-    height: var(--ds-size-48);
+    height: var(--size-48);
     @include mixin.font('--font-size-14');
-    padding: 0 var(--ds-space-24);
+    padding: 0 var(--space-24);
 
     .select__option__inner {
-      gap: var(--ds-space-16);
+      gap: var(--space-16);
     }
   }
 }

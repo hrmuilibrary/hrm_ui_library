@@ -58,7 +58,7 @@ const items = [
   },
   {
     label: 'logout',
-    value: 1,
+    value: 4,
     iconProps: {
       Component: IconArrowExit,
       type: 'selected'

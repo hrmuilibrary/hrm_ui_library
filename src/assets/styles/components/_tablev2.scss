@@ -1,38 +1,35 @@
 @use "../helpers/mixin";
 
 .advanced-table {
-  --ds-table-th-height: var(--ds-size-56);
-  --ds-table-td-height: var(--ds-size-56);
+  --ds-table-th-height: var(--size-56);
+  --ds-table-td-height: var(--size-56);
 
-  --ds-table-th-padding: var(--ds-space-8) var(--ds-space-16);
-  --ds-table-td-padding: var(--ds-space-8) var(--ds-space-16);
+  --ds-table-td-padding: var(--space-8) var(--space-16);
 
-  --ds-table-th-border-color: var(--ds-color-border-quintary);
-  --ds-table-td-border-color: var(--ds-color-border-quintary);
-  --ds-table-td-bg-hover: var(--ds-color-bg-container-lighter);
+  --ds-table-td-bg-hover: var(--grey-30);
   --ds-table-td-bg-selected: var(--grey-40);
 
   @include mixin.flexbox;
   @include mixin.flex-direction(column);
   height: 100%;
   position: relative;
-  border-radius: var(--ds-border-radius-2xl);
+  border-radius: var(--border-radius-16);
   font-size: var(--font-size-14);
 
   &__header-wrapper {
     @include mixin.flexbox;
     @include mixin.align-items(center);
     z-index: 3;
-    background-color: var(--ds-color-bg-white);
-    height: var(--ds-size-72);
-    padding: 0 var(--ds-space-24);
-    border-bottom: 1px solid var(--ds-color-border-quintary);
-    border-top-left-radius: var(--ds-border-radius-2xl);
-    border-top-right-radius: var(--ds-border-radius-2xl);
+    background-color: var(--white);
+    height: var(--size-72);
+    padding: 0 var(--space-24);
+    border-bottom: 1px solid var(--grey-300);
+    border-top-left-radius: var(--border-radius-16);
+    border-top-right-radius: var(--border-radius-16);
   }
 
   &__collapse-button {
-    margin-right: var(--ds-space-16);
+    margin-right: var(--space-16);
   }
 
   &__header {
@@ -45,17 +42,17 @@
     @include mixin.flexbox;
     @include mixin.align-items(center);
     z-index: 1;
-    background-color: var(--ds-color-bg-white);
-    height: var(--ds-size-64);
-    padding: 0 var(--ds-space-24);
-    border-top: 1px solid var(--ds-color-border-quintary);
-    border-bottom-left-radius: var(--ds-border-radius-2xl);
-    border-bottom-right-radius: var(--ds-border-radius-2xl);
+    background-color: var(--white);
+    height: var(--size-64);
+    padding: 0 var(--space-24);
+    border-top: 1px solid var(--grey-300);
+    border-bottom-left-radius: var(--border-radius-16);
+    border-bottom-right-radius: var(--border-radius-16);
   }
 
   &__inner {
     overflow-x: auto;
-    height: calc(100% - (var(--ds-size-72) + var(--ds-size-64)));
+    height: calc(100% - (var(--size-72) + var(--size-64)));
     transition: height 0.3s ease-in-out;
 
     &.is-collapsed {
@@ -68,13 +65,13 @@
     position: sticky;
     top: 0;
     z-index: 2;
-    background: var(--ds-color-bg-white);
+    background: var(--white);
   }
 
   .draggable-col {
-    background-color: var(--ds-color-bg-white);
+    background-color: var(--white);
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    border-radius: var(--ds-border-radius-md);
+    border-radius: var(--border-radius-8);
     text-align: left;
   }
 
@@ -132,16 +129,16 @@
     thead {
       tr {
         th {
-          border-bottom: 1px solid var(--ds-table-th-border-color);
+          border-bottom: 1px solid var(--grey-300);
           height: var(--ds-table-th-height);
-          padding: var(--ds-table-th-padding);
+          padding: var(--space-8) var(--space-16);
           vertical-align: middle;
 
           &.with-checkbox {
-            max-width: var(--ds-space-48);
-            width: var(--ds-space-48) !important;
+            max-width: var(--space-48);
+            width: var(--space-48) !important;
             min-width: initial !important;
-            padding: var(--ds-space-8) var(--ds-space-6) var(--ds-space-8) 22px;
+            padding: var(--space-8) var(--space-6) var(--space-8) 22px;
 
             .resize-icon {
               display: none;
@@ -160,18 +157,18 @@
     tbody {
       tr {
         td {
-          border-bottom: 1px solid var(--ds-table-td-border-color);
+          border-bottom: 1px solid var(--grey-300);
           height: var(--ds-table-td-height);
           padding: var(--ds-table-td-padding);
           vertical-align: middle;
 
           &.with-checkbox {
-            max-width: var(--ds-space-48);
-            width: var(--ds-space-48) !important;
+            max-width: var(--space-48);
+            width: var(--space-48) !important;
             min-width: initial !important;
-            padding: var(--ds-space-8) var(--ds-space-6) var(--ds-space-8) 22px;
+            padding: var(--space-8) var(--space-6) var(--space-8) 22px;
 
-            .actions-list {
+    .actions-list {
               &__checkbox {
                 display: none;
 
@@ -183,13 +180,13 @@
           }
 
           &:not(.with-checkbox, .action-column) {
-            padding: var(--ds-space-8) var(--ds-space-16) !important;
+            padding: var(--space-8) var(--space-16) !important;
             box-sizing: border-box;
           }
         }
 
         .action-column {
-          padding: var(--ds-space-0);
+          padding: var(--space0);
           width: 0 !important;
           min-width: initial !important;
           @include mixin.flexbox;
@@ -199,25 +196,25 @@
         &:hover {
           td {
             cursor: pointer;
-            background-color: var(--ds-table-td-bg-hover);
+            background-color: var(--grey-30);
 
             .actions-list {
 
               &__checkbox,
-              &__right {
+      &__right {
                 @include mixin.flexbox;
               }
             }
           }
 
           .action-column {
-            padding: var(--ds-space-0);
+            padding: var(--space0);
             @include mixin.flexbox;
             @include mixin.align-items(center);
           }
 
           .pinned-cell {
-            background-color: var(--ds-table-td-bg-hover) !important;
+            background-color: var(--grey-30) !important;
           }
         }
 
@@ -254,10 +251,10 @@
     &__right {
       @include mixin.flexbox;
       @include mixin.align-items(center);
-      gap: var(--ds-space-24);
+      gap: var(--space-24);
 
       &__input {
-        width: var(--ds-size-48);
+        width: var(--size-48);
 
         input {
           text-align: center;
@@ -277,10 +274,10 @@
   }
 
   &__expand-button {
-    padding: var(--ds-space-4);
+    padding: var(--space-4);
     min-width: auto;
-    width: var(--ds-size-32);
-    height: var(--ds-size-32);
+    width: var(--size-32);
+    height: var(--size-32);
     flex-shrink: 0;
   }
 
@@ -288,7 +285,7 @@
     td {
       padding: var(--ds-table-td-padding) !important;
       height: var(--ds-table-td-height);
-      border-bottom: 1px solid var(--ds-table-td-border-color);
+      border-bottom: 1px solid var(--grey-300);
       background-color: inherit;
       transition: background-color 0.2s ease;
       vertical-align: middle;
@@ -312,12 +309,10 @@
                 background-color: transparent;
 
                 &.with-checkbox {
-                  max-width: var(--ds-space-48);
-                  width: var(--ds-space-48) !important;
+                  max-width: var(--space-48);
+                  width: var(--space-48) !important;
                   min-width: initial !important;
-                  //padding: var(--ds-space-8) var(--ds-space-6) var(--ds-space-8) 55px !important;
-                  padding: var(--ds-space-8) var(--ds-space-40) var(--ds-space-8) 55px !important;
-                  //border-right: 1px solid var(--ds-table-td-border-color);
+                  padding: var(--space-8) var(--space-40) var(--space-8) 55px !important;
                   background-color: inherit;
 
                   .actions-list {
@@ -382,7 +377,7 @@
     //width: 50px !important;
     //min-width: 50px !important;
     //max-width: 50px !important;
-    padding: var(--ds-space-8) var(--ds-space-6) !important;
+    padding: var(--space-8) var(--space-6) !important;
     flex: 0 0 50px !important;
     box-sizing: border-box !important;
     overflow: hidden !important;
@@ -391,7 +386,7 @@
 }
 
 .with-border {
-  border: 1px solid var(--ds-color-border-quintary);
+  border: 1px solid var(--grey-300);
 }
 
 .actions-list {
@@ -403,9 +398,9 @@
     @include mixin.absolute(0, 0, 0, unset);
     @include mixin.align-items(center);
     display: none;
-    padding: var(--ds-space-2) var(--ds-space-16);
-    gap: var(--ds-space-8);
-    background-color: var(--ds-color-bg-container-lighter);
+        padding: var(--space-2) var(--space-16);
+        gap: var(--space-8);
+        background-color: var(--grey-30);
 
     &:before {
       content: '';
@@ -421,11 +416,11 @@
 
 .settings-menu {
   box-shadow: var(--shadow-2);
-  border-radius: var(--ds-border-radius-lg);
+  border-radius: var(--border-radius-10);
   width: 260px;
 
   &__dropdown {
-    padding: var(--ds-space-6) 0;
+    padding: var(--space-6) 0;
 
     .relative {
       position: relative;
@@ -436,14 +431,14 @@
       top: 0;
       background: white;
       z-index: 1;
-      border-bottom: 1px solid var(--ds-color-border-tertiary) !important;
-      padding: 0 var(--ds-space-16);
+      border-bottom: 1px solid var(--grey-200) !important;
+      padding: 0 var(--space-16);
     }
 
     .scrollbar--content {
       overflow-y: auto;
       max-height: 300px;
-      padding: 0 var(--ds-space-16);
+      padding: 0 var(--space-16);
       box-sizing: border-box;
       &::-webkit-scrollbar {
         display: none;
@@ -451,8 +446,8 @@
     }
 
     &__option {
-      border-bottom: 1px solid var(--ds-color-border-tertiary);
-      margin-bottom: var(--ds-space-4);
+      border-bottom: 1px solid var(--grey-200);
+      margin-bottom: var(--space-4);
 
       &:last-child {
         margin-bottom: 0;

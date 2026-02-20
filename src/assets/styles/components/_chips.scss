@@ -3,17 +3,17 @@
 .chips {
   $this: &;
 
-  --ds-chips-height-lg: var(--ds-size-32);
-  --ds-chips-height-md: var(--ds-size-24);
-  --ds-chips-height-sm: var(--ds-size-20);
-  --ds-chips-height-xs: var(--ds-size-16);
+  --ds-chips-height-lg: var(--size-32);
+  --ds-chips-height-md: var(--size-24);
+  --ds-chips-height-sm: var(--size-20);
+  --ds-chips-height-xs: var(--size-16);
 
-  --ds-chips-border-radius: var(--ds-border-radius-4xl);
+  --ds-chips-border-radius: var(--border-radius-40);
 
-  --ds-chips-padding-lg: 0 var(--ds-space-10);
-  --ds-chips-padding-md: 0 var(--ds-space-6);
-  --ds-chips-padding-sm: 0 var(--ds-space-4);
-  --ds-chips-padding-xs: 0 var(--ds-space-4);
+  --ds-chips-padding-lg: 0 var(--space-10);
+  --ds-chips-padding-md: 0 var(--space-6);
+  --ds-chips-padding-sm: 0 var(--space-4);
+  --ds-chips-padding-xs: 0 var(--space-4);
 
   --ds-chips-filled-bg-primary: var(--grey-400);
   --ds-chips-filled-bg-primary-hover: var(--grey-500);
@@ -55,7 +55,7 @@
   --ds-chips-outlined-bg-discovery-hover: var(--purple-50);
 
   --ds-chips-bg-disabled: var(--grey-50);
-  --ds-chips-border-color-disabled: var(--ds-color-border-disabled);
+  --ds-chips-border-color-disabled: var(--grey-50);
 
   @include mixin.inline-flex;
   @include mixin.align-items(center);

@@ -1,21 +1,6 @@
 @use "../helpers/mixin";
 
 .table-wrapper {
-  --ds-table-th-height: var(--ds-size-56);
-  --ds-table-td-height: var(--ds-size-56);
-
-  --ds-table-th-padding: 0 var(--ds-space-16);
-  --ds-table-td-padding: 0 var(--ds-space-16);
-
-  --ds-table-th-border-color: var(--ds-color-border-secondary);
-  --ds-table-td-border-color: var(--ds-color-border-secondary);
-  --ds-table-td-border-bottom-color: var(--ds-color-bg-container-lighter);
-  --ds-table-td-border-bottom-color-selected: var(--ds-color-border-selected);
-
-  --ds-table-th-bg-color: var(--ds-color-bg-white);
-  --ds-table-td-bg-color: var(--ds-color-bg-white);
-  --ds-table-td-bg-color-dark: var(--ds-color-bg-container-lighter);
-
   &.table-row-clickable {
     tbody tr:hover {
       td {
@@ -31,10 +16,10 @@
     thead {
       tr {
         th {
-          background-color: var(--ds-table-th-bg-color);
-          border-bottom: 1px solid var(--ds-table-th-border-color);
-          height: var(--ds-table-th-height);
-          padding: var(--ds-table-th-padding);
+          background-color: var(--white);
+          border-bottom: 1px solid var(--grey-300);
+          height: var(--size-56);
+          padding: 0 var(--space-16);
           vertical-align: middle;
 
           .table-header-title {
@@ -73,8 +58,8 @@
 
         td {
           border-bottom: 1px solid var(--grey-200);
-          height: var(--ds-table-td-height);
-          padding: var(--ds-table-td-padding);
+          height: var(--size-56);
+          padding: 0 var(--space-16);
           vertical-align: middle;
           background-color: var(--grey-0);
         }
@@ -98,9 +83,9 @@
   .fixed_checkbox {
     @include mixin.sticky(unset, unset, unset, 0);
     table-layout: fixed;
-    width: var(--ds-size-56);
-    max-width: var(--ds-size-56);
-    min-width: var(--ds-size-56);
+    width: var(--size-56);
+    max-width: var(--size-56);
+    min-width: var(--size-56);
 
     &+th,
     &+td {
@@ -111,11 +96,11 @@
   .fixed_column_left {
     @include mixin.sticky(0, unset, unset, unset);
     z-index: 1;
-    border-right: 1px solid var(--ds-table-td-border-color)
+    border-right: 1px solid var(--grey-300)
   }
 
   .fixed_column_right {
     @include mixin.sticky(unset, 0, unset, unset);
-    border-left: 1px solid var(--ds-table-td-border-color)
+    border-left: 1px solid var(--grey-300)
   }
 }

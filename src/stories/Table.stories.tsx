@@ -458,7 +458,7 @@ const meta = {
 export const TableV2 = Template1.bind({})
 TableV2.args = {
   // withSelect: true,
-  // withBorder: true,
+  withBorder: false,
   isActionsVisible: true,
   isLoading: false,
   // collapsibleRows: true,

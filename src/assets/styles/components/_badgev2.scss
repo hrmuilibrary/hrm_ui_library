@@ -5,11 +5,11 @@
   $this__inner: #{$this}__inner;
   @include mixin.inline-flex;
   @include mixin.align-items(center);
-  border-radius: var(--ds-border-radius-4xl);
-  gap: var(--ds-size-2);
+  border-radius: var(--border-radius-40);
+  gap: var(--size-2);
 
   &__inner {
-    font: var(--ds-font-weight-default) var(--ds-paragraph-xs)/0.8 var(--ds-font-family)
+    font: var(--font-weight-400) var(--font-size-10)/0.8 var(--font-family-primary)
   }
 
   &--filled {
@@ -431,40 +431,40 @@
   }
 
   &--large {
-    height: var(--ds-size-20);
-    padding: var(--ds-size-2) var(--ds-size-8);;
+    height: var(--size-20);
+    padding: var(--size-2) var(--size-8);;
 
     #{$this}__inner {
-      padding: 0 var(--ds-space-2);
+      padding: 0 var(--space-2);
     }
 
     &#{$this}--dot {
-      width: var(--ds-size-12);
-      height: var(--ds-size-12);
+      width: var(--size-12);
+      height: var(--size-12);
     }
 
     &#{$this}--with-dot {
-      width: var(--ds-size-6);
-      height: var(--ds-size-6);
+      width: var(--size-6);
+      height: var(--size-6);
     }
   }
 
   &--small {
-    height: var(--ds-size-16);
-    padding: var(--ds-size-2) var(--ds-size-8);
+    height: var(--size-16);
+    padding: var(--size-2) var(--size-8);
 
     #{$this}__inner {
-      padding: 0 var(--ds-space-4);
+      padding: 0 var(--space-4);
     }
 
     &#{$this}--dot {
-      width: var(--ds-size-8);
-      height: var(--ds-size-8);
+      width: var(--size-8);
+      height: var(--size-8);
     }
 
     &#{$this}--with-dot {
-      width: var(--ds-size-6);
-      height: var(--ds-size-6);
+      width: var(--size-6);
+      height: var(--size-6);
     }
   }
 

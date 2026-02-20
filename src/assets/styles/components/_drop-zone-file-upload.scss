@@ -11,24 +11,24 @@
     @include mixin.justify-content(center);
     @include mixin.align-items(center);
     @include mixin.flex-direction(column);
-    border-radius: var(--ds-size-12);
-    border: 1px dashed var(--ds-color-border-secondary);
-    background: var(--ds-color-bg-white);
-    padding: var(--ds-size-32);
+    border-radius: var(--size-12);
+    border: 1px dashed var(--grey-300);
+    background: var(--white);
+    padding: var(--size-32);
     cursor: pointer;
 
     &--active {
-      border-color: var(--ds-color-bg-container-darker);
-      background: var(--ds-color-bg-container-lighter);
+      border-color: var(--grey-200);
+      background: var(--grey-30);
     }
 
     &--focused {
-      border-color: var(--ds-color-bg-container-darker);
-      background: var(--ds-color-bg-container-lighter);
+      border-color: var(--grey-200);
+      background: var(--grey-30);
     }
 
     &--rejected {
-      border-color: var(--ds-color-bg-danger-dark);
+      border-color: var(--red-600);
       background: #FFF;
     }
   }
@@ -36,19 +36,19 @@
   &__files {
     @include mixin.flexbox();
     @include mixin.flex-direction(column);
-    gap: var(--ds-size-16);
-    margin-top: var(--ds-size-12);
+    gap: var(--size-16);
+    margin-top: var(--size-12);
 
     &--item {
       @include mixin.flexbox();
-      border-radius: var(--ds-size-12);
-      border: 1px solid var(--ds-color-border-secondary);
+      border-radius: var(--size-12);
+      border: 1px solid var(--grey-300);
       background: #FFF;
-      padding: var(--ds-size-16);
+      padding: var(--size-16);
 
       &__preview {
-        width: var(--ds-size-32);
-        height: var(--ds-size-32);
+        width: var(--size-32);
+        height: var(--size-32);
         position: initial;
 
         &--image {
@@ -68,7 +68,7 @@
       }
 
       &__info {
-        margin-left: var(--ds-size-12);
+        margin-left: var(--size-12);
         width: 100%;
 
         &-title {

@@ -4,6 +4,7 @@ import { ModalConfirmation as _ModalConfirmation } from '../components/Modal'
 import { StoryFn, type StoryObj } from '@storybook/react'
 import { TModalConfirmationPropTypes, TModalPropTypes } from '../components/Modal/types'
 import IconDelete from '../components/SVGIcons/IconDelete'
+import { Select } from '../components/Select'
 
 export default {
   title: 'Modal',
@@ -15,6 +16,19 @@ export default {
     }
   }
 }
+
+const OPTIONS = [
+  {
+    value: 1,
+    label: 'Armenia',
+    meta: 'AM'
+  },
+  {
+    value: 2,
+    label: 'Italy',
+    meta: 'IT'
+  }
+]
 
 const Template: StoryFn<TModalPropTypes> = (args) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -40,7 +54,9 @@ const Template: StoryFn<TModalPropTypes> = (args) => {
           cancel: { buttonText: 'Cancel', type: 'secondary' }
         }}
       >
-        <div>Modal content</div>
+        <div>
+          <Select options={OPTIONS} />
+        </div>
       </_Modal>
     </div>
   )

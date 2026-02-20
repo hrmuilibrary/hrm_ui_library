@@ -3,27 +3,27 @@
 .status {
   $this: &;
 
-  --ds-status-circle-size-lg: var(--ds-size-8);
-  --ds-status-circle-size-sm: var(--ds-size-6);
+  --ds-status-circle-size-lg: var(--size-8);
+  --ds-status-circle-size-sm: var(--size-6);
 
   --ds-status-circle-bg-primary: var(--grey-700);
-  --ds-status-circle-bg-information: var(--ds-color-icon-info);
-  --ds-status-circle-bg-brand: var(--ds-color-icon-brand);
-  --ds-status-circle-bg-danger: var(--ds-color-icon-danger);
-  --ds-status-circle-bg-warning: var(--ds-color-icon-warning);
-  --ds-status-circle-bg-success: var(--ds-color-icon-success);
-  --ds-status-circle-bg-discovery: var(--ds-color-icon-discovery);
-  --ds-status-circle-bg-disabled: var(--ds-color-icon-disabled);
+  --ds-status-circle-bg-information: var(--blue-800);
+  --ds-status-circle-bg-brand: var(--brand-700);
+  --ds-status-circle-bg-danger: var(--red-800);
+  --ds-status-circle-bg-warning: var(--yellow-800);
+  --ds-status-circle-bg-success: var(--green-600);
+  --ds-status-circle-bg-discovery: var(--purple-400);
+  --ds-status-circle-bg-disabled: var(--grey-500);
 
 
-  --ds-status-withBackground-bg-primary: var(--ds-color-bg-disabled);
-  --ds-status-withBackground-bg-information: var(--ds-color-bg-info-lighter);
-  --ds-status-withBackground-bg-brand: var(--ds-color-bg-brand-lighter);
+  --ds-status-withBackground-bg-primary: var(--grey-50);
+  --ds-status-withBackground-bg-information: var(--blue-50);
+  --ds-status-withBackground-bg-brand: var(--brand-20);
   --ds-status-withBackground-bg-danger: var(--red-20);
-  --ds-status-withBackground-bg-warning:var(--ds-color-bg-warning-lighter);
-  --ds-status-withBackground-bg-success: var(--ds-color-bg-success-lighter);
-  --ds-status-withBackground-bg-discovery:var(--ds-color-bg-discovery-lighter);
-  --ds-status-withBackground-bg-disabled:var(--ds-color-bg-container-lighter);
+  --ds-status-withBackground-bg-warning:var(--yellow-50);
+  --ds-status-withBackground-bg-success: var(--green-50);
+  --ds-status-withBackground-bg-discovery:var(--purple-50);
+  --ds-status-withBackground-bg-disabled:var(--grey-30);
 
 
   @include mixin.inline-flex;
@@ -35,7 +35,7 @@
   }
   &__circle {
     display: block;
-    border-radius: var(--ds-border-radius-full);
+    border-radius: var(--border-radius-percent-100);
     width: var(--ds-status-circle-size-lg);
     min-width: var(--ds-status-circle-size-lg);
     height: var(--ds-status-circle-size-lg);
@@ -67,19 +67,19 @@
 
   &__withBackground{
     padding: 4px 12px 4px 10px;
-    border-radius: var(--ds-border-radius-3xl)
+    border-radius: var(--border-radius-24)
   }
   &__withBackground--primary {
     background-color: var(--ds-status-withBackground-bg-primary);
-    border: var(--border-size-1) solid var(--ds-color-bg-grey-darker);
+    border: var(--border-size-1) solid var(--grey-500);
   }
   &__withBackground--information {
     background-color: var(--ds-status-withBackground-bg-information);
-    border: var(--border-size-1) solid var(--ds-color-bg-info-dark);
+    border: var(--border-size-1) solid var(--blue-600);
   }
   &__withBackground--brand {
     background-color: var(--ds-status-withBackground-bg-brand);
-    border: var(--border-size-1) solid var(--ds-color-bg-brand);
+    border: var(--border-size-1) solid var(--brand-500);
   }
   &__withBackground--danger {
     background-color: var(--ds-status-withBackground-bg-danger);
@@ -87,7 +87,7 @@
   }
   &__withBackground--success {
     background-color: var(--ds-status-withBackground-bg-success);
-    border: var(--border-size-1) solid var(--ds-color-border-success)
+    border: var(--border-size-1) solid var(--green-600)
   }
   &__withBackground--warning {
     background-color: var(--ds-status-withBackground-bg-warning);
@@ -95,11 +95,11 @@
   }
   &__withBackground--discovery {
     background-color: var(--ds-status-withBackground-bg-discovery);
-    border: var(--border-size-1) solid var(--ds-color-border-discovery);
+    border: var(--border-size-1) solid var(--purple-400);
   }
   &__withBackground--disabled {
     background-color: var(--ds-status-withBackground-bg-disabled);
-    border: var(--border-size-1) solid var(--ds-color-border-disabled);
+    border: var(--border-size-1) solid var(--grey-50);
   }
 
   &--small {

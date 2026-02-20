@@ -3,12 +3,12 @@
 .switcher {
   $this: &;
 
-  --ds-swither-inline-label-padding: var(--ds-space-16);
+  --ds-swither-inline-label-padding: var(--space-16);
 
   &--inline {
     @include mixin.flexbox;
     @include mixin.align-items(flex-start);
-    gap: var(--ds-space-16);
+    gap: var(--space-16);
     align-items: center;
 
     #{$this}__label {

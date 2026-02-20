@@ -3,7 +3,7 @@
 .radio-group {
   $this: &;
 
-  --radio-group-item-space: var(--ds-space-8);
+  --radio-group-item-space: var(--space-8);
 
   @include mixin.flexbox;
   @include mixin.flex-direction(column);
@@ -55,6 +55,6 @@
 
   &__label {
     flex: 100%;
-    margin-bottom: var(--ds-space-12);
+    margin-bottom: var(--space-12);
   }
 }

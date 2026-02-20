@@ -7,7 +7,7 @@
   width: 1em;
   height: 1em;
   vertical-align: top;
-  font-size: var(--ds-size-24);
+  font-size: var(--size-24);
 
   path {
     pointer-events: none;
@@ -15,13 +15,13 @@
 
   &__size {
     $sizes: (
-      xxsmall: var(--ds-size-12),
-      xsmall: var(--ds-size-16),
-      small: var(--ds-size-20),
-      medium: var(--ds-size-24),
-      large: var(--ds-size-28),
-      xlarge: var(--ds-size-32),
-      xxlarge: var(--ds-size-48),
+      xxsmall: var(--size-12),
+      xsmall: var(--size-16),
+      small: var(--size-20),
+      medium: var(--size-24),
+      large: var(--size-28),
+      xlarge: var(--size-32),
+      xxlarge: var(--size-48),
     );
     @each $key, $value in $sizes {
       &-#{$key} {
@@ -32,18 +32,18 @@
 
   &__type {
     $types: (
-        primary: var(--ds-color-text-primary),
-        secondary: var(--ds-color-text-secondary),
-        tertiary: var(--ds-color-text-tertiary),
-        disabled: var(--ds-color-text-disabled),
-        selected: var(--ds-color-text-selected),
-        inverse: var(--ds-color-text-inverse),
-        brand: var(--ds-color-text-brand),
-        success: var(--ds-color-text-success),
-        information: var(--ds-color-text-info),
-        warning: var(--ds-color-text-warning),
-        danger: var(--ds-color-text-danger),
-        discovery: var(--ds-color-text-discovery),
+        primary: var(--grey-900),
+        secondary: var(--grey-800),
+        tertiary: var(--grey-500),
+        disabled: var(--grey-400),
+        selected: var(--brand-500),
+        inverse: var(--white),
+        brand: var(--brand-700),
+        success: var(--green-600),
+        information: var(--blue-800),
+        warning: var(--yellow-800),
+        danger: var(--red-600),
+        discovery: var(--purple-800),
     );
     @each $key, $value in $types {
       &-#{$key} path {

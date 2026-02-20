@@ -1,85 +1,62 @@
 @use "../helpers/mixin";
+@use "sass:map";
+
+$alert-variants: (
+        information: (bg: var(--blue-50), border: var(--blue-600)),
+        discovery: (bg: var(--purple-50), border: var(--purple-400)),
+        success: (bg: var(--green-50), border: var(--green-600)),
+        warning: (bg: var(--yellow-50), border: var(--yellow-800)),
+        error: (bg: var(--red-50), border: var(--red-800)),
+);
 
 .alert {
-  $this: &;
+  padding: var(--space-12) var(--space-20);
 
-  --ds-alert-border-radius: var(--ds-border-radius-md);
-  --ds-alert-padding: var(--ds-space-12) var(--ds-space-20);
-
-  --ds-alert-information-bg: var(--ds-color-bg-info-lighter);
-  --ds-alert-information-border-color: var(--ds-color-border-info);
-
-  --ds-alert-success-bg: var(--ds-color-bg-success-lighter);
-  --ds-alert-success-border-color: var(--ds-color-border-success);
-
-  --ds-alert-warning-bg: var(--ds-color-bg-warning-lighter);
-  --ds-alert-warning-border-color: var(--ds-color-border-warning);
-
-  --ds-alert-danger-bg: var(--ds-color-bg-danger-lighter);
-  --ds-alert-danger-border-color: var(--ds-color-border-danger);
-
-  --ds-alert-discovery-bg: var(--ds-color-bg-discovery-lighter);
-  --ds-alert-discovery-border-color: var(--ds-color-border-discovery);
-
-  padding: var(--ds-alert-padding);
-
-  &--inline {
-    border: 1px solid;
-    border-radius: var(--ds-alert-border-radius);
-
-    #{$this}__content {
-      @include mixin.align-items(flex-start);
-    }
-    #{$this}__actions {
-      margin-top: var(--ds-space-12);
-    }
-  }
-
-  &--sticky {
-    #{$this}__content {
-      @include mixin.align-items(center);
-    }
-    #{$this}__text {
-      @include mixin.flexbox;
-      @include mixin.justify-content(space-between);
-      @include mixin.align-items(center);
-    }
-    #{$this}__actions {
-      margin-left: var(--ds-space-8);
-      white-space: nowrap;
-    }
-  }
-
-  &--information {
-    background-color: var(--ds-alert-information-bg);
-    border-color: var(--ds-alert-information-border-color)
-  }
-
-  &--discovery {
-    background-color: var(--ds-alert-discovery-bg);
-    border-color: var(--ds-alert-discovery-border-color)
-  }
-
-  &--success {
-    background-color: var(--ds-alert-success-bg);
-    border-color: var(--ds-alert-success-border-color)
-  }
-
-  &--warning {
-    background-color: var(--ds-alert-warning-bg);
-    border-color: var(--ds-alert-warning-border-color)
-  }
-
-  &--error {
-    background-color: var(--ds-alert-danger-bg);
-    border-color: var(--ds-alert-danger-border-color)
-  }
-
+  // Elements
   &__content {
     @include mixin.flexbox;
   }
 
   &__text {
     flex: 1;
+  }
+
+  // Modifiers
+  &--inline {
+    border: 1px solid;
+    border-radius: var(--border-radius-8);
+
+    .alert__content {
+      @include mixin.align-items(flex-start);
+    }
+
+    .alert__actions {
+      margin-top: var(--space-12);
+    }
+  }
+
+  &--sticky {
+    .alert__content {
+      @include mixin.align-items(center);
+    }
+
+    .alert__text {
+      @include mixin.flexbox;
+      @include mixin.justify-content(space-between);
+      @include mixin.align-items(center);
+    }
+
+    .alert__actions {
+      margin-left: var(--space-8);
+      white-space: nowrap;
+    }
+  }
+
+  // Variants generated from a map
+  @each $name, $vals in $alert-variants {
+    &--#{$name} {
+      background-color: map.get($vals, bg);
+      border-color: map.get($vals, border);
+    }
   }
 }

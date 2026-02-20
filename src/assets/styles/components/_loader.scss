@@ -3,17 +3,17 @@
 .loader {
   $this: &;
 
-  --ds-loader-large-size: var(--ds-size-24);
+  --ds-loader-large-size: var(--size-24);
   --ds-loader-large-size-part: calc(var(--ds-loader-large-size)/2);
 
-  --ds-loader-medium-size: var(--ds-size-16);
+  --ds-loader-medium-size: var(--size-16);
   --ds-loader-medium-size-part: calc(var(--ds-loader-medium-size)/2);
 
-  --ds-loader-small-size: var(--ds-size-12);
+  --ds-loader-small-size: var(--size-12);
   --ds-loader-small-size-part: calc(var(--ds-loader-small-size)/2);
 
-  --ds-loader-inner-border-radius: var(--ds-border-radius-full);
-  --ds-loader-inner-border: var(--ds-border-thin) solid;
+  --ds-loader-inner-border-radius: var(--border-radius-percent-100);
+  --ds-loader-inner-border: var(--border-size-1) solid;
 
   @include mixin.animation('loader1 4.8s linear infinite');
 
