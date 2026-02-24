@@ -167,7 +167,6 @@ export function Table({
         </thead>
         <tbody {...getTableBodyProps()}>
           {rows.map((row: RowType) => {
-            console.log(row)
             prepareRow(row)
             return (
               <Row
