@@ -136,9 +136,9 @@ export function Table({
             size="medium"
             iconProps={{ alignment: 'left', Component: IconDismiss }}
           />
-          {submitButtons?.map(({ buttonText, isLoading, onClick }) => (
+          {submitButtons?.map(({ buttonText, isLoading, onClick, iconProps }) => (
             <Button
-              iconProps={{ alignment: 'left', Component: IconCheckmark }}
+              iconProps={iconProps || { alignment: 'left', Component: IconCheckmark }}
               onClick={(event) => {
                 onClick(event, state, onClearSelectedRows)
               }}
