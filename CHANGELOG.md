@@ -1,3 +1,11 @@
+## [3.1.15](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.14...3.1.15) (2026-02-24)
+
+
+### Bug Fixes
+
+* use prop icon props instead of fixed ones ([88f1d36](https://github.com/hrmuilibrary/hrm_ui_library/commit/88f1d369436b122abbaf1bcfdeca2b2b8e4b86da))
+* user prop icon props ([c8c10c9](https://github.com/hrmuilibrary/hrm_ui_library/commit/c8c10c933eb584060b300642b8312f0c2ef3b2a7))
+
 ## [3.1.14](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.13...3.1.14) (2026-02-20)
 
 
