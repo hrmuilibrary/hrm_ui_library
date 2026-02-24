@@ -136,10 +136,10 @@ export function Table({
             size="medium"
             iconProps={{ alignment: 'left', Component: IconDismiss }}
           />
-          {submitButtons?.map(({ buttonText, isLoading, onClick }) => (
-            <Button
-              iconProps={{ alignment: 'left', Component: IconCheckmark }}
-              onClick={(event) => {
+          {submitButtons?.map(({ buttonText, isLoading, onClick,  iconProps  }) => (
+             <Button
+              iconProps={iconProps||{ alignment: 'left', Component: IconCheckmark }}
+               onClick={(event) => {
                 onClick(event, state, onClearSelectedRows)
               }}
               buttonText={buttonText || 'Submit'}
@@ -167,6 +167,7 @@ export function Table({
         </thead>
         <tbody {...getTableBodyProps()}>
           {rows.map((row: RowType) => {
+            console.log(row)
             prepareRow(row)
             return (
               <Row
@@ -178,6 +179,7 @@ export function Table({
                 uniqueKey={uniqueKey}
               />
             )
+            
           })}
         </tbody>
       </table>
