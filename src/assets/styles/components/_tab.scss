@@ -35,7 +35,7 @@
   }
 
   &__label {
-    font: var(--ds-font-weight-active) var(--ds-paragraph-md)/1 var(--ds-font-family);
+    font: var(--font-weight-500) var(--font-size-16)/1 var(--font-family-primary);
     color: var(--grey-500);
   }
 
@@ -103,7 +103,7 @@
     height: var(--size-56);
 
     #{$this}__label {
-      font-size: var(--ds-paragraph-md);
+      font-size: var(--font-size-16);
     }
   }
 
@@ -111,7 +111,7 @@
     height: var(--size-48);
 
     #{$this}__label {
-      font-size: var(--ds-paragraph-std);
+      font-size: var(--font-size-14);
     }
   }
 
@@ -119,7 +119,7 @@
     height: var(--size-32);
 
     #{$this}__label {
-      font-size: var(--ds-paragraph-sm);
+      font-size: var(--font-size-12);
     }
   }
 }
