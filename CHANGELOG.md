@@ -1,3 +1,10 @@
+## [3.1.16](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.15...3.1.16) (2026-02-25)
+
+
+### Bug Fixes
+
+* remove unnecessary css tokens ([9dced41](https://github.com/hrmuilibrary/hrm_ui_library/commit/9dced4157f75bdbbb6616eb566a84422e84507cf))
+
 ## [3.1.15](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.14...3.1.15) (2026-02-24)
 
 
