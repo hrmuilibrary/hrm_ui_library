@@ -11,9 +11,9 @@
   padding: 0;
   cursor: pointer;
   white-space: nowrap;
-  font-family: var(--ds-font-family);
-  font-weight: var(--ds-font-weight-default);
-  line-height: var(--ds-line-height-default);
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-400);
+  line-height: var(--line-height-xs);
   //transition: var(--ds-button-transition);
 
   &[disabled] {
@@ -23,21 +23,21 @@
   &--large {
     height: var(--size-40);
     padding: 0 var(--space-16);
-    font-size: var(--ds-paragraph-std);
+    font-size: var(--font-size-14);
     border-radius: var(--border-radius-10);
   }
 
   &--medium {
     height: var(--size-32);
     padding: 0 var(--space-12);
-    font-size: var(--ds-paragraph-std);
+    font-size: var(--font-size-14);
     border-radius: var(--border-radius-8);
   }
 
   &--small {
     height: var(--size-24);
     padding: 0 var(--space-12);
-    font-size: var(--ds-paragraph-sm);
+    font-size: var(--font-size-12);
     border-radius: var(--border-radius-6);
   }
 

@@ -3,7 +3,7 @@
 .progress-bar {
     $this: &;
     position: relative;
-    font-family: var(--ds-font-family);
+    font-family: var(--font-family-primary);
 
     &--linear {
         @include mixin.flexbox;
@@ -13,7 +13,7 @@
             height: var(--size-6);
 
             #{$this}__percent {
-                font-size: var(--ds-paragraph-sm);
+                font-size: var(--font-size-12);
             }
         }
 
@@ -21,7 +21,7 @@
             height: var(--size-2);
 
             #{$this}__percent {
-                font-size: var(--ds-paragraph-xs);
+                font-size: var(--font-size-10);
             }
         }
 
@@ -70,7 +70,7 @@
             }
 
             #{$this}__percent {
-                font-size: var(--ds-paragraph-md);
+                font-size: var(--font-size-16);
             }
         }
 
@@ -80,7 +80,7 @@
             }
 
             #{$this}__percent {
-                font-size: var(--ds-paragraph-sm);
+                font-size: var(--font-size-12);
             }
         }
 
