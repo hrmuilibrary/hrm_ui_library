@@ -1,3 +1,10 @@
+## [3.1.17](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.16...3.1.17) (2026-03-02)
+
+
+### Bug Fixes
+
+* add dark mode switcher ([cb80147](https://github.com/hrmuilibrary/hrm_ui_library/commit/cb80147c535f781fe4efa0ea07bbcd8ae118b439))
+
 ## [3.1.16](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.15...3.1.16) (2026-02-25)
 
 
