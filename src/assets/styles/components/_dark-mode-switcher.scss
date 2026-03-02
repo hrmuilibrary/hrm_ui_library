@@ -1,0 +1,60 @@
+@use "../helpers/mixin";
+
+.dark-mode-switcher {
+  $this: &;
+
+  --ds-swither-inline-label-padding: var(--space-16);
+
+  &--inline {
+    @include mixin.flexbox;
+    @include mixin.align-items(flex-start);
+    gap: var(--space-16);
+    align-items: center;
+
+    #{$this}__label {
+      padding-right: var(--ds-swither-inline-label-padding);
+      margin: 0;
+    }
+  }
+
+  &--space-between {
+    @include mixin.justify-content(space-between);
+  }
+  .controller {
+    .controller__icon {
+      background-color: var(--grey-600)!important;
+      border-color: var(--grey-600)!important;
+      &:hover {
+        background-color: var(--grey-700)!important;
+      }
+
+      &.dark_mode {
+        background-color: var(--yellow-50)!important;
+        &:hover {
+          background-color: var(--yellow-100)!important;
+        }
+
+        .controller__icon__inner {
+          left: 1px;
+          background-color: var(--grey-600)!important;
+        }
+        .svg-icon {
+          position: absolute;
+          left: 1px;
+          stroke: var(--yellow-900);
+          fill: var(--yellow-900);
+        }
+      }
+
+      .controller__icon__inner {
+        background-color: var(--grey-200)!important;
+      }
+      .svg-icon {
+        position: absolute;
+        right: 1px;
+        stroke: var(--yellow-600);
+        fill: var(--yellow-600);
+      }
+    }
+  }
+}
