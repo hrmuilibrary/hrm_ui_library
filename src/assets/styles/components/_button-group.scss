@@ -65,3 +65,29 @@
   }
 }
 
+[data-theme="dark"] {
+  .button-group-item {
+    &__primary {
+      border: 1px solid var(--grey-500);
+      background-color: var(--grey-700);
+
+      &:hover {
+        background: var(--grey-600);
+        color: var(--grey-50);
+      }
+
+      &.active {
+        background: var(--grey-500);
+      }
+
+      &.disabled {
+        background: var(--grey-500);
+        color: var(--grey-300);
+
+        > * {
+          color: var(--grey-300);
+        }
+      }
+    }
+  }
+}
