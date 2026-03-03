@@ -1,3 +1,10 @@
+## [3.1.18](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.17...3.1.18) (2026-03-03)
+
+
+### Bug Fixes
+
+* add styles for dark mode ([64290b6](https://github.com/hrmuilibrary/hrm_ui_library/commit/64290b6e72e9105700af1bd28fe058656b67389f))
+
 ## [3.1.17](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.16...3.1.17) (2026-03-02)
 
 
