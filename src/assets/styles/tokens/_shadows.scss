@@ -20,3 +20,24 @@
   --shadow-info: 0px 0px 0px 4px rgba(193, 222, 252, 0.80);
   --shadow-discovery: 0px 0px 0px 4px rgba(203, 196, 237, 0.80);
 }
+
+[data-theme="dark"] {
+  --shadow-1: 0px 1px 2px rgba(255, 255, 255, 0.06), 0px 2px 2px rgba(255, 255, 255, 0.08), 0px 1px 4px rgba(255, 255, 255, 0.08);
+  --shadow-2: 0px 2px 4px rgba(255, 255, 255, 0.06), 0px 3px 2px rgba(255, 255, 255, 0.08), 0px 1px 6px rgba(255, 255, 255, 0.1);
+  --shadow-3: 0px 3px 4px rgba(255, 255, 255, 0.12), 1px 3px 3px rgba(255, 255, 255, 0.1), 0px 1px 8px rgba(255, 255, 255, 0.16);
+  --shadow-4: 0px 4px 5px rgba(255, 255, 255, 0.1), 0px 1px 10px rgba(255, 255, 255, 0.08), 0px 2px 4px rgba(255, 255, 255, 0.16);
+  --shadow-5: 0px 6px 10px rgba(255, 255, 255, 0.12), 0px 1px 18px rgba(255, 255, 255, 0.08), 0px 3px 5px rgba(255, 255, 255, 0.16);
+  --shadow-6: 0px 8px 10px rgba(31, 31, 31, 0.12), 0px 3px 14px rgba(31, 31, 31, 0.08), 0px 5px 5px rgba(31, 31, 31, 0.16);
+  --shadow-7: 0px 9px 12px rgba(255, 255, 255, 0.12), 0px 3px 16px rgba(255, 255, 255, 0.08), 0px 5px 6px rgba(255, 255, 255, 0.16);
+  --shadow-8: 0px 12px 17px rgba(255, 255, 255, 0.12), 0px 5px 22px rgba(255, 255, 255, 0.08), 0px 7px 8px rgba(255, 255, 255, 0.16);
+  --shadow-9: 0px 16px 24px rgba(255, 255, 255, 0.12), 0px 6px 30px rgba(255, 255, 255, 0.08), 0px 8px 10px rgba(255, 255, 255, 0.16);
+  --shadow-10: 0px 24px 38px rgba(255, 255, 255, 0.12), 0px 9px 46px rgba(255, 255, 255, 0.08), 0px 11px 15px rgba(255, 255, 255, 0.16);
+
+  --shadow-brand-1: 0px 0px 0px 1px rgb(114, 191, 68);
+  --shadow-brand-2: 0px 0px 0px 4px rgba(202, 231, 185, 0.80);
+  --shadow-success: 0px 0px 0px 4px rgba(197, 229, 204, 0.80);
+  --shadow-warning: 0px 0px 0px 4px rgba(250, 235, 185, 0.80);
+  --shadow-danger: 0px 0px 0px 4px rgba(255, 181, 171, 0.80);
+  --shadow-info: 0px 0px 0px 4px rgba(193, 222, 252, 0.80);
+  --shadow-discovery: 0px 0px 0px 4px rgba(203, 196, 237, 0.80);
+}
