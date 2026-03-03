@@ -309,25 +309,25 @@
       &__meta {
         color: var(--grey-500);
       }
+    }
 
-      &__top {
-        border-bottom: 1px solid var(--grey-100);
-      }
+    &__top {
+      border-bottom: 1px solid var(--grey-100);
+    }
 
-      &__footer {
-        border-top: 1px solid var(--grey-100);
-      }
+    &__footer {
+      border-top: 1px solid var(--grey-100);
+    }
 
-      &--menu {
-        background-color: var(--grey-900);
-        color: var(--grey-50);
-      }
+    &--menu {
+      background-color: var(--grey-900);
+      color: var(--grey-50);
+    }
 
-      &--multi {
-        .input {
-          input {
-            color: var(--grey-900);
-          }
+    &--multi {
+      .input {
+        input {
+          color: var(--grey-900);
         }
       }
     }

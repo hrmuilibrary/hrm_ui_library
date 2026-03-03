@@ -57,8 +57,8 @@
   .svg-icon {
     fill: var(--grey-100);
 
-  &__type {
-    $types: (
+    &__type {
+      $types: (
         primary: var(--grey-50),
         secondary: var(--grey-400),
         tertiary: var(--grey-500),
@@ -71,8 +71,8 @@
         warning: var(--yellow-500),
         danger: var(--red-400),
         discovery: var(--purple-500),
-    );
+      );
+    }
   }
-}
 
 }
