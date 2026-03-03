@@ -1,3 +1,10 @@
+## [3.1.20](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.19...3.1.20) (2026-03-03)
+
+
+### Bug Fixes
+
+* add styles for dark mode: button-group, svg,classnames ([83e3afe](https://github.com/hrmuilibrary/hrm_ui_library/commit/83e3afebc60991a642929bafcee09d7fd7b922b5))
+
 ## [3.1.19](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.18...3.1.19) (2026-03-03)
 
 
