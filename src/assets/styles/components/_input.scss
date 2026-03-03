@@ -96,7 +96,7 @@
         color: var(--grey-300);
         pointer-events: none;
         cursor: default;
-        
+
         svg path {
           fill: var(--grey-400);
         }
@@ -197,4 +197,116 @@
   }
 }
 
+[data-theme="dark"] {
+  .input {
+    $this: &;
 
+    input {
+      color: var(--grey-50);
+      background-color: var(--grey-600);
+      border-color: var(--grey-500);
+
+      &:-ms-input-placeholder {
+        color: var(--grey-50);
+      }
+
+      &::placeholder {
+        color: var(--grey-50);
+      }
+
+      & + #{$this}__icon {
+        color: var(--grey-200);
+      }
+
+      & + #{$this}__icon + #{$this}__icon {
+        color: var(--grey-200);
+        fill: var(--grey-200);
+        stroke: var(--grey-200);
+      }
+
+      &:hover {
+        color: var(--grey-50);
+        background-color: var(--grey-700);
+        border-color: var(--grey-600);
+
+        & + #{$this}__icon,
+        & + #{$this}__icon + #{$this}__icon {
+          color: var(--grey-200);
+        }
+      }
+
+      &:focus {
+        color: var(--grey-50);
+        border: 1px solid var(--grey-100);
+        background-color: var(--grey-800);
+        box-shadow: 0 0 0 2px var(--grey-0), 0 0 0 4px var(--grey-200);
+
+        & + #{$this}__icon {
+          color: var(--grey-100);
+        }
+
+        & + #{$this}__icon + #{$this}__icon {
+          color: var(--grey-100);
+        }
+      }
+
+      &:active {
+        color: var(--grey-50);
+        background-color: var(--grey-700);
+        border-color: var(--grey-600);
+
+        & + #{$this}__icon,
+        & + #{$this}__icon + #{$this}__icon {
+          color: var(--grey-100);
+        }
+      }
+
+      &[disabled] {
+        cursor: default;
+        background-color: var(--grey-400);
+        border-color: var(--grey-50);
+        color: var(--grey-300);
+
+        &:-ms-input-placeholder {
+          color: var(--grey-300);
+        }
+
+        &::placeholder {
+          color: var(--grey-300);
+        }
+
+        & + #{$this}__icon,
+        & + #{$this}__icon + #{$this}__icon {
+          color: var(--grey-300);
+
+          svg path {
+            fill: var(--grey-400);
+          }
+        }
+      }
+    }
+
+    &--valid {
+      input {
+        color: var(--grey-900);
+        background-color: var(--white);
+        border-color: var(--grey-200);
+
+        & + #{$this}__icon {
+          color: var(--grey-900);
+        }
+      }
+    }
+
+    &--invalid {
+      input {
+        border-color: var(--red-600);
+
+        & + #{$this}__icon {
+          color: var(--grey-200);
+        }
+      }
+    }
+  }
+
+}
