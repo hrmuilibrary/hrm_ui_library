@@ -1,3 +1,10 @@
+## [3.1.23](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.22...3.1.23) (2026-03-04)
+
+
+### Bug Fixes
+
+* add styles for dark mode: svgIcons ([082b937](https://github.com/hrmuilibrary/hrm_ui_library/commit/082b9374614aa739cd2bd3255f32be9df6646b04))
+
 ## [3.1.22](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.21...3.1.22) (2026-03-04)
 
 
