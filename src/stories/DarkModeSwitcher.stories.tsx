@@ -18,7 +18,11 @@ const ID = 'am_custom_DarkModeSwitcher'
 
 const Template: StoryFn<TSwitcherProps> = (args) => {
   const [isChecked, setIsChecked] = useState(false)
-  return <_DarkModeSwitcher {...args} selectedValue={isChecked} onClick={setIsChecked} id={ID} />
+  return (
+    <div {...(isChecked ? { 'data-theme': 'dark' } : {})}>
+      <_DarkModeSwitcher {...args} selectedValue={isChecked} onClick={setIsChecked} id={ID} />
+    </div>
+  )
 }
 
 export const DarkModeSwitcher: StoryObj<TSwitcherProps> = Template.bind({})

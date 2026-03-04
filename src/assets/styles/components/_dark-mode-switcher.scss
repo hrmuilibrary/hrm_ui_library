@@ -28,24 +28,6 @@
         background-color: var(--grey-700)!important;
       }
 
-      &.dark_mode {
-        background-color: var(--yellow-50)!important;
-        &:hover {
-          background-color: var(--yellow-100)!important;
-        }
-
-        .controller__icon__inner {
-          left: 1px;
-          background-color: var(--grey-600)!important;
-        }
-        .svg-icon {
-          position: absolute;
-          left: 1px;
-          stroke: var(--yellow-900);
-          fill: var(--yellow-900);
-        }
-      }
-
       .controller__icon__inner {
         background-color: var(--grey-200)!important;
       }
@@ -54,6 +36,30 @@
         right: 1px;
         stroke: var(--yellow-600);
         fill: var(--yellow-600);
+      }
+    }
+  }
+}
+
+[data-theme="dark"] {
+  .dark-mode-switcher {
+    $this: &;
+    .controller {
+      .controller__icon {
+        background-color: var(--yellow-50)!important;
+        border-color: var(--grey-20)!important;
+        &:hover {
+          background-color: var(--yellow-100)!important;
+        }
+        .controller__icon__inner {
+          background-color: var(--grey-20)!important;
+          left: 1px;
+        }
+        .svg-icon {
+          left: 1px;
+          stroke: var(--yellow-900);
+          fill: var(--yellow-900);
+        }
       }
     }
   }

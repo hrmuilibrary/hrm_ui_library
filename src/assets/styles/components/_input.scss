@@ -196,3 +196,15 @@
     text-align: right;
   }
 }
+
+[data-theme="dark"] {
+  .input {
+    $this: &;
+
+    input {
+      &:focus {
+        box-shadow: 0 0 0 2px var(--grey-30), 0 0 0 4px var(--grey-40);
+      }
+    }
+  }
+}

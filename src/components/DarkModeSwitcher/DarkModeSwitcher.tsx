@@ -75,7 +75,7 @@ export const DarkModeSwitcher = forwardRef((props: TSwitcherProps, ref): React.R
           checked={isChecked}
           disabled={disabled}
         />
-        <span className={classnames('controller__icon', { dark_mode: selectedValue })}>
+        <span className="controller__icon">
           {selectedValue ? <IconSun size={iconSize} /> : <IconMoon size={iconSize} />}
           <span className="controller__icon__inner"></span>
         </span>
