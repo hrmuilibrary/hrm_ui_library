@@ -1,3 +1,10 @@
+## [3.1.22](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.21...3.1.22) (2026-03-04)
+
+
+### Bug Fixes
+
+* finalize darkModeSwitcher ([f0b7973](https://github.com/hrmuilibrary/hrm_ui_library/commit/f0b797328a6d02263671e33850ddb9669fba48db))
+
 ## [3.1.21](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.20...3.1.21) (2026-03-04)
 
 
