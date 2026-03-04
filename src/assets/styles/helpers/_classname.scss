@@ -380,38 +380,3 @@ $gaps: 4, 8, 12, 16;
 .pointer {
   cursor: pointer;
 }
-
-[data-theme="dark"] {
-  .color {
-    $color-type: (
-      primary: var(--grey-50),
-      secondary: var(--grey-400),
-      tertiary: var(--grey-300),
-      disabled: var(--grey-400),
-      selected: var(--brand-300),
-      inverse: var(--grey-900),
-      brand: var(--brand-700),
-      success: var(--green-600),
-      information: var(--blue-800),
-      warning: var(--yellow-500),
-      danger: var(--red-400),
-      discovery: var(--purple-500),
-    );
-
-    @each $type, $color in $color-type {
-      &-#{$type} {
-        color: $color;
-      }
-    }
-  }
-
-  .scrollbar {
-    &::-webkit-scrollbar-thumb {
-      background-color: var(--grey-200);
-
-      &:hover {
-        background-color: var(--grey-300);
-      }
-    }
-  }
-}
