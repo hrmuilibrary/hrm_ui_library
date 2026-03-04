@@ -11,6 +11,10 @@
 
   path {
     pointer-events: none;
+
+    &:not([fill]) {
+      fill: var(--grey-900);
+    }
   }
 
   &__size {
