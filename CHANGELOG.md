@@ -1,3 +1,10 @@
+## [3.1.24](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.23...3.1.24) (2026-03-04)
+
+
+### Bug Fixes
+
+* remove fixed color of svg icons, to edit from outside ([a727057](https://github.com/hrmuilibrary/hrm_ui_library/commit/a7270570b2ee07a59ace77f9a9f27894cf49f317))
+
 ## [3.1.23](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.22...3.1.23) (2026-03-04)
 
 
