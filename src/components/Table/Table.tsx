@@ -114,16 +114,7 @@ export function Table({
   }, [])
 
   return (
-    <div
-      onScroll={dispatchScrollEvent}
-      ref={containerRefHandler}
-      className={classNames(
-        'table-wrapper scrollbar scrollbar--horizontal scrollbar--vertical',
-        className,
-        { 'table-row-clickable': !!handleRowClick }
-      )}
-      style={{ maxHeight: fixedHeader?.y }}
-    >
+    <div ref={containerRefHandler}>
       {withSelect && selectedFlatRows.length > 0 && (
         <div className="table-wrapper__selected-rows">
           <Button
@@ -151,36 +142,45 @@ export function Table({
           ))}
         </div>
       )}
-
-      <table {...getTableProps()} ref={tableRef}>
-        <thead>
-          {headerGroups.map((headerGroup: HeaderGroup, i) => (
-            <Header
-              key={`table_head_${uniqueKey}_${i}`}
-              withSelect={withSelect}
-              fixedHeader={Boolean(fixedHeader)}
-              headerGroup={headerGroup}
-              tableWidth={tableWidth}
-              uniqueKey={uniqueKey}
-            />
-          ))}
-        </thead>
-        <tbody {...getTableBodyProps()}>
-          {rows.map((row: RowType) => {
-            prepareRow(row)
-            return (
-              <Row
-                handleRowClick={handleRowClick}
+      <div
+        onScroll={dispatchScrollEvent}
+        className={classNames(
+          'table-wrapper scrollbar scrollbar--horizontal scrollbar--vertical',
+          className,
+          { 'table-row-clickable': !!handleRowClick }
+        )}
+        style={{ maxHeight: fixedHeader?.y }}
+      >
+        <table {...getTableProps()} ref={tableRef}>
+          <thead>
+            {headerGroups.map((headerGroup: HeaderGroup, i) => (
+              <Header
+                key={`table_head_${uniqueKey}_${i}`}
                 withSelect={withSelect}
-                selectedFlatRows={selectedFlatRows}
-                row={row}
-                key={`table_row_${uniqueKey}_${row.id}`}
+                fixedHeader={Boolean(fixedHeader)}
+                headerGroup={headerGroup}
+                tableWidth={tableWidth}
                 uniqueKey={uniqueKey}
               />
-            )
-          })}
-        </tbody>
-      </table>
+            ))}
+          </thead>
+          <tbody {...getTableBodyProps()}>
+            {rows.map((row: RowType) => {
+              prepareRow(row)
+              return (
+                <Row
+                  handleRowClick={handleRowClick}
+                  withSelect={withSelect}
+                  selectedFlatRows={selectedFlatRows}
+                  row={row}
+                  key={`table_row_${uniqueKey}_${row.id}`}
+                  uniqueKey={uniqueKey}
+                />
+              )
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
   )
 }
