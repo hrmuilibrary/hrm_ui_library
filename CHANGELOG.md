@@ -1,3 +1,10 @@
+## [3.1.29](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.28...3.1.29) (2026-03-05)
+
+
+### Bug Fixes
+
+* add missing enum ([2edfa24](https://github.com/hrmuilibrary/hrm_ui_library/commit/2edfa246133603c5c005ce542295e2be4079e2f1))
+
 ## [3.1.28](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.27...3.1.28) (2026-03-05)
 
 
