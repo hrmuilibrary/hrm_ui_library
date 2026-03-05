@@ -25,7 +25,7 @@ const IconBuilding = ({
     id={id}
     data-id={dataId ? `${dataId}-svg-icon` : ''}
   >
-    <rect width="24" height="24" />
+    <rect width="24" height="24" fill="none" />
     <g id="Iconography">
       <rect width="51344" height="12568" transform="translate(-19103 -1288)" />
       <g id="B Icons">

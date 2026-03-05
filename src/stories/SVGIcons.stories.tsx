@@ -55,7 +55,13 @@ export default {
 
 const Template: StoryFn<ISVGIconProps & { filled: string }> = (args) => {
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-start' }}>
+    <div
+      style={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'flex-start'
+      }}
+    >
       {Object.keys(Icons)
         .filter((iconName) => {
           const isFilledIncluded = iconName.toLowerCase().includes('filled')
