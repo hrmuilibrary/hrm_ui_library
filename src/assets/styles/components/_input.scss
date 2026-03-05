@@ -201,6 +201,11 @@
   .input {
     $this: &;
 
+    & + #{$this}__icon + #{$this}__icon {
+      color: var(--grey-100);
+      fill: var(--grey-100);
+    }
+
     input {
       &:focus {
         box-shadow: 0 0 0 2px var(--grey-30), 0 0 0 4px var(--grey-40);
