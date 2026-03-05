@@ -105,5 +105,12 @@ export enum STORE_KEYS {
   isNavMenuExpanded = 'isNavMenuExpanded',
   isAuthenticated = 'isAuthenticated',
   personId = 'personId',
-  isMobile = 'isMobile'
+  isMobile = 'isMobile',
+  staffListColumns = 'staffListColumns',
+  themeMode = 'themeMode'
+}
+
+export enum ThemeMode {
+  Light = 'light',
+  Dark = 'dark'
 }
