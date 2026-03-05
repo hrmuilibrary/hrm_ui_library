@@ -1,3 +1,10 @@
+## [3.1.26](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.25...3.1.26) (2026-03-05)
+
+
+### Bug Fixes
+
+* resolve svg icons path ([561da9a](https://github.com/hrmuilibrary/hrm_ui_library/commit/561da9ae2ba0ef4449ddcea2c82d71396a0f409e))
+
 ## [3.1.25](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.24...3.1.25) (2026-03-05)
 
 
