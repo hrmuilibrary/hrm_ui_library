@@ -1,3 +1,10 @@
+## [3.1.25](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.24...3.1.25) (2026-03-05)
+
+
+### Bug Fixes
+
+* resolve svg icons color, and select options ([06dbe0b](https://github.com/hrmuilibrary/hrm_ui_library/commit/06dbe0b529bc400d502f18da74b44166f03bbe98))
+
 ## [3.1.24](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.23...3.1.24) (2026-03-04)
 
 
