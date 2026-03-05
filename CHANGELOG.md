@@ -1,3 +1,10 @@
+## [3.1.28](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.27...3.1.28) (2026-03-05)
+
+
+### Bug Fixes
+
+* make actions bar fixed for table ([e7961c7](https://github.com/hrmuilibrary/hrm_ui_library/commit/e7961c74f6abc863b7081dc10fcab4746fc969da))
+
 ## [3.1.27](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.26...3.1.27) (2026-03-05)
 
 
