@@ -1,3 +1,10 @@
+## [3.1.30](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.29...3.1.30) (2026-03-05)
+
+
+### Bug Fixes
+
+* add missing key in enum ([395c291](https://github.com/hrmuilibrary/hrm_ui_library/commit/395c2911aaa1ae24613f812cda6aeff9e173b70c))
+
 ## [3.1.29](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.28...3.1.29) (2026-03-05)
 
 
