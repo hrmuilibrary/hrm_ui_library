@@ -9,7 +9,7 @@
   vertical-align: top;
   font-size: var(--size-24);
 
-  path {
+  path, circle, line {
     pointer-events: none;
 
     &:not([fill]) {
@@ -50,7 +50,9 @@
         discovery: var(--purple-800),
     );
     @each $key, $value in $types {
-      &-#{$key} path:not([fill]) {
+      &-#{$key} path:not([fill]),
+      &-#{$key} circle:not([fill]),
+      &-#{$key} line:not([fill]) {
         fill: $value;
       }
     }
