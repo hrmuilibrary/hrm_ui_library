@@ -98,6 +98,7 @@ export const FILE_ACCEPT_TYPE = {
 
 export enum STORE_KEYS {
   selectedLanguage = 'selectedLanguage',
+  theme = 'theme',
   userActiveRole = 'userActiveRole',
   roleInfo = 'roleInfo',
   userInfo = 'userInfo',
