@@ -1,3 +1,10 @@
+## [3.1.27](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.26...3.1.27) (2026-03-05)
+
+
+### Bug Fixes
+
+* resolve colors for dark mode: select, darkModeSwitcher ([1997c27](https://github.com/hrmuilibrary/hrm_ui_library/commit/1997c2759cb515617f964cca6d41fbab45317890))
+
 ## [3.1.26](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.25...3.1.26) (2026-03-05)
 
 
