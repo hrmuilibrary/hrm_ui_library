@@ -1,3 +1,10 @@
+## [3.1.33](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.32...3.1.33) (2026-03-06)
+
+
+### Bug Fixes
+
+* add missing border to datepicker dark ([617d1f6](https://github.com/hrmuilibrary/hrm_ui_library/commit/617d1f659467180ceb9678803512c95cb694aa33))
+
 ## [3.1.32](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.31...3.1.32) (2026-03-06)
 
 
