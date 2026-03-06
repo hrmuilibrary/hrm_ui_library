@@ -375,11 +375,14 @@
 }
 
 [data-theme="dark"] {
-  input[type="checkbox"],
-  input[type="radio"] {
-    & + #{$this}__icon {
-      background-color: var(--grey-0);
-      border-color: var(--grey-30);
+  .controller {
+    $this: &;
+    input[type="checkbox"],
+    input[type="radio"] {
+      & + #{$this}__icon {
+        background-color: var(--grey-0);
+        border-color: var(--grey-30);
+      }
     }
   }
 }
