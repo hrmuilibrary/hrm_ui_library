@@ -290,3 +290,26 @@
     }
   }
 }
+
+[data-theme="dark"] {
+  .select {
+    color: var(--grey-100);
+
+    &__options {
+      background-color: var(--grey-0);
+      border: 1px solid var(--grey-30);
+      color: var(--grey-50);
+      box-shadow: none;
+
+      .option--active {
+        background: var(--grey-20);
+      }
+    }
+
+    &--menu {
+      background-color: var(--grey-0);
+      border: 1px solid var(--grey-30);
+      box-shadow: none;
+    }
+  }
+}

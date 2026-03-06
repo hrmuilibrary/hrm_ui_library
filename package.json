@@ -17,6 +17,7 @@
     "check": "npm run prettier && npm run lint && tsc",
     "install-latest": "pnpm install",
     "publish-alpha-version": "cd \"./dist/\" && npm publish --tag alpha",
+    "publish-beta-version": "cd \"./dist/\" && npm publish --tag beta",
     "generate-svg-component": "node ./bin/generate_svg_component.js && npm run check",
     "prepare": "husky"
   },

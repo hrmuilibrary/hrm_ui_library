@@ -207,8 +207,11 @@
     }
 
     input {
+      background-color: var(--grey-0);
+      border-color: var(--grey-30);
+      color: var(--grey-50);
       &:focus {
-        box-shadow: 0 0 0 2px var(--grey-30), 0 0 0 4px var(--grey-40);
+        box-shadow: 0 0 2px 1px var(--grey-30);
       }
     }
   }

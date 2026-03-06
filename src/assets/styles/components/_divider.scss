@@ -40,3 +40,15 @@
         }
     }
 }
+
+[data-theme="dark"] {
+    .divider {
+        &--primary {
+            background-color: var(--grey-30);
+
+            &.divider--grey {
+                background-color: var(--grey-40);
+            }
+        }
+    }
+}
