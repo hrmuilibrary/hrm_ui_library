@@ -104,3 +104,19 @@
     border-left: 1px solid var(--grey-300)
   }
 }
+
+[data-theme="dark"] {
+  .table-wrapper {
+    table {
+
+      tbody {
+        tr {
+          border-color: var(--grey-30);
+          &:hover {
+            background-color: var(--grey-20);
+          }
+        }
+      }
+    }
+  }
+}
