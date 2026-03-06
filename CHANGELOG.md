@@ -1,3 +1,11 @@
+## [3.1.31](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.30...3.1.31) (2026-03-06)
+
+
+### Bug Fixes
+
+* add styles for darkMode: select, input, buttonGroup ([d32c50f](https://github.com/hrmuilibrary/hrm_ui_library/commit/d32c50f28837dc569022e0ea54f42445f4f369aa))
+* resolve build error ([03500ae](https://github.com/hrmuilibrary/hrm_ui_library/commit/03500aecebf6307595a87978d4545ef29a869ad2))
+
 ## [3.1.30](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.29...3.1.30) (2026-03-05)
 
 
