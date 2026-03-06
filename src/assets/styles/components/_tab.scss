@@ -147,3 +147,29 @@
     scrollbar-width: none;
   }
 }
+
+[data-theme="dark"] {
+  .tab {
+    $this: &;
+
+    &__label {
+      color: var(--grey-50);
+    }
+    &--selected {
+      color: var(--grey-100);
+      &:hover {
+        #{$this}__label {
+          color: var(--grey-900);
+        }
+      }
+    }
+  }
+  .tabs-container {
+    width: 100%;
+    display: flex;
+
+    .tabs-header-container {
+      border-color: var(--grey-30);
+    }
+  }
+}

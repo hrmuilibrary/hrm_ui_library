@@ -377,6 +377,7 @@
 [data-theme="dark"] {
   .controller {
     $this: &;
+
     input[type="checkbox"],
     input[type="radio"] {
       & + #{$this}__icon {
