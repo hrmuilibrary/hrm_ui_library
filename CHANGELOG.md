@@ -1,3 +1,10 @@
+## [3.1.34](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.33...3.1.34) (2026-03-06)
+
+
+### Bug Fixes
+
+* resolve styles in datepicker, darkMode ([b7e1d87](https://github.com/hrmuilibrary/hrm_ui_library/commit/b7e1d877ff241a14ab613ef81f34cfb2152e0335))
+
 ## [3.1.33](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.32...3.1.33) (2026-03-06)
 
 
