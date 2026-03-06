@@ -108,12 +108,19 @@
 [data-theme="dark"] {
   .table-wrapper {
     table {
+      thead tr th {
+        border-color: var(--grey-30);
+      }
 
       tbody {
         tr {
-          border-color: var(--grey-30);
           &:hover {
-            background-color: var(--grey-20);
+            td {
+              background-color: var(--grey-20);
+            }
+          }
+          td {
+            border-color: var(--grey-30);
           }
         }
       }

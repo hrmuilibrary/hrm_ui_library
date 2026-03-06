@@ -92,3 +92,19 @@
     font-size: var(--font-size-16) !important;
   }
 }
+
+[data-theme="dark"] {
+  .textarea {
+    $this: &;
+
+    textarea {
+      background-color: var(--grey-0);
+      border-color: var(--grey-30);
+
+      &:valid {
+        background-color: var(--grey-0);
+        border-color: var(--grey-40);
+      }
+    }
+  }
+}
