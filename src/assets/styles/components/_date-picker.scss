@@ -941,8 +941,8 @@
   }
 }
 
-
-
-
-
-
+[data-theme="dark"] {
+  .react-datepicker {
+    border: 1px solid var(--grey-30);
+  }
+}
