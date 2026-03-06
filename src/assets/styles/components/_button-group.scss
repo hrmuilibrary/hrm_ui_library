@@ -64,3 +64,29 @@
     }
   }
 }
+
+[data-theme="dark"] {
+  .button-group-item {
+    &__primary {
+      border-color: var(--grey-30);
+      background-color: var(--grey-0);
+
+      &:hover {
+        background: var(--grey-20);
+      }
+
+      &.active {
+        background: var(--grey-30);
+      }
+
+      &.disabled {
+        background: var(--grey-30);
+        color: var(--grey-40);
+
+        > * {
+          color: var(--grey-30);
+        }
+      }
+    }
+  }
+}

@@ -58,3 +58,38 @@
     }
   }
 }
+
+[data-theme="dark"] {
+  .svg-icon {
+    path, circle, line {
+      pointer-events: none;
+
+      &:not([fill]) {
+        fill: var(--grey-50);
+      }
+    }
+    &__type {
+      $types: (
+        primary: var(--grey-900),
+        secondary: var(--grey-800),
+        tertiary: var(--grey-500),
+        disabled: var(--grey-400),
+        selected: var(--brand-500),
+        inverse: var(--white),
+        brand: var(--brand-700),
+        success: var(--green-600),
+        information: var(--blue-800),
+        warning: var(--yellow-800),
+        danger: var(--red-600),
+        discovery: var(--purple-800),
+      );
+      @each $key, $value in $types {
+        &-#{$key} path:not([fill]),
+        &-#{$key} circle:not([fill]),
+        &-#{$key} line:not([fill]) {
+          fill: $value;
+        }
+      }
+    }
+  }
+}

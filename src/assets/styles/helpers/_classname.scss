@@ -380,3 +380,28 @@ $gaps: 4, 8, 12, 16;
 .pointer {
   cursor: pointer;
 }
+
+[data-theme="dark"] {
+  .color {
+    $color-type: (
+      primary: var(--grey-100),
+      secondary: var(--grey-800),
+      tertiary: var(--grey-50),
+      disabled: var(--grey-400),
+      selected: var(--brand-500),
+      inverse: var(--white),
+      brand: var(--brand-700),
+      success: var(--green-600),
+      information: var(--blue-800),
+      warning: var(--yellow-800),
+      danger: var(--red-600),
+      discovery: var(--purple-800),
+    );
+
+    @each $type, $color in $color-type {
+      &-#{$type} {
+        color: $color;
+      }
+    }
+  }
+}
