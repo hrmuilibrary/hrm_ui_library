@@ -1,3 +1,11 @@
+## [3.1.32](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.31...3.1.32) (2026-03-06)
+
+
+### Bug Fixes
+
+* darkMode - sideSheet, textArea, table ([293a1bf](https://github.com/hrmuilibrary/hrm_ui_library/commit/293a1bf04dc066b66265e4caea00db63238d8ba8))
+* resolve datepicker styles ([49e7462](https://github.com/hrmuilibrary/hrm_ui_library/commit/49e7462026fbba828d41172d5ba23a1bef80b2e4))
+
 ## [3.1.31](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.30...3.1.31) (2026-03-06)
 
 
