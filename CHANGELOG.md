@@ -1,3 +1,10 @@
+## [3.1.35](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.34...3.1.35) (2026-03-09)
+
+
+### Bug Fixes
+
+* add styles for dark mode: button, sented_menu, icons ([e48a0bd](https://github.com/hrmuilibrary/hrm_ui_library/commit/e48a0bd31c68f7ee2b83ad5de08bf6ee09fb38a3))
+
 ## [3.1.34](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.33...3.1.34) (2026-03-06)
 
 
