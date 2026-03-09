@@ -45,3 +45,11 @@
     }
   }
 }
+
+[data-theme="dark"] {
+  .nested-menu {
+    background-color: var(--grey-0);
+    box-shadow: none;
+    border: 1px solid var(--grey-30);
+  }
+}

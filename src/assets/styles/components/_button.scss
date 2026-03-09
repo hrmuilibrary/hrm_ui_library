@@ -82,7 +82,7 @@
     &.pressed {
       background-color: var(--grey-200);
     }
-    
+
     &:not(#{$this}--loading) {
       &:hover {
         background-color: var(--grey-50);
@@ -348,6 +348,20 @@
     &#{$this}--small {
       width: var(--size-24);
       min-width: var(--size-24);
+    }
+  }
+}
+
+[data-theme="dark"] {
+  .btn {
+    $this: &;
+    &--secondary {
+      background-color: var(--grey-0);
+      border-color: var(--grey-30);
+      color: var(--grey-50);
+      &.pressed {
+        background-color: var(--grey-20);
+      }
     }
   }
 }
