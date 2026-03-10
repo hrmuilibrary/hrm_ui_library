@@ -157,3 +157,8 @@
     }
   }
 }
+[data-theme="dark"] {
+  .card {
+    border-color: var(--grey-30);
+  }
+}

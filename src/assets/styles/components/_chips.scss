@@ -67,7 +67,7 @@
       cursor: pointer;
     }
   }
-  
+
   &--disabled {
     cursor: default;
   }
@@ -262,6 +262,28 @@
     &#{$this}--disabled {
       border-color: var(--ds-chips-border-color-disabled);
       background-color: var(--ds-chips-outlined-bg);
+    }
+  }
+}
+
+[data-theme="dark"] {
+  .chips {
+    $this: &;
+    &--outlined {
+      background-color: var(--grey-20);
+      border-color: var(--grey-30);
+
+      &#{$this}--disabled {
+        background-color: red;
+        path, circle, line {
+          &:not([fill]) {
+            fill: var(--grey-30);
+          }
+        }
+        .color--disabled {
+          color: var(--grey-30);
+        }
+      }
     }
   }
 }
