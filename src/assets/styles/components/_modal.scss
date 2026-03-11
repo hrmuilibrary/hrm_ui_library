@@ -144,3 +144,16 @@
   }
 }
 
+[data-theme="dark"] {
+  .modal {
+    $this: &;
+
+    &__container {
+      box-shadow: none;
+    }
+
+    &__header, &__footer {
+      border-color: var(--grey-30);
+    }
+  }
+}

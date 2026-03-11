@@ -86,3 +86,9 @@
         }
     }
 }
+
+[data-theme="dark"] {
+    .collapse {
+        border-color: var(--grey-30);
+    }
+}
