@@ -1,3 +1,11 @@
+## [3.1.36](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.35...3.1.36) (2026-03-11)
+
+
+### Bug Fixes
+
+* add styles for dark mode: card, chips, table ([97b229d](https://github.com/hrmuilibrary/hrm_ui_library/commit/97b229db3647a9b43f858842f3fd3472d9322dec))
+* resolve disabled state styles on datepicker ([697ed36](https://github.com/hrmuilibrary/hrm_ui_library/commit/697ed368dc8504176a3161fb9d7ad64d5f47a612))
+
 ## [3.1.35](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.34...3.1.35) (2026-03-09)
 
 
