@@ -12,6 +12,7 @@
     border-collapse: separate;
     border-spacing: 0;
     width: 100%;
+    color: var(--grey-900);
 
     thead {
       tr {
@@ -62,6 +63,11 @@
           padding: 0 var(--space-16);
           vertical-align: middle;
           background-color: var(--grey-0);
+        }
+        &:nth-child(2n) {
+          td {
+            background-color: var(--white);
+          }
         }
       }
     }
