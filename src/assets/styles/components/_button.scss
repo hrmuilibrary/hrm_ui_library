@@ -362,6 +362,23 @@
       &.pressed {
         background-color: var(--grey-20);
       }
+      &:not(#{$this}--loading) {
+        &:hover {
+          background-color: var(--grey-20);
+          border-color: var(--grey-30);
+        }
+
+        &:active {
+          background-color: var(--grey-20);
+        }
+
+      }
+    }
+    &--text {
+      color: var(--blue-300);
+      &:hover {
+        color: var(--blue-200);
+      }
     }
   }
 }

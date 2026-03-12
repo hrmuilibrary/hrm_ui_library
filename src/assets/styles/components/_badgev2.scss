@@ -486,3 +486,18 @@
     }
   }
 }
+
+[data-theme="dark"] {
+  .badge-v2 {
+    $this: &;
+
+    &--filled {
+      &#{$this}--blue {
+        background-color: var(--blue-300);
+        #{$this}__inner {
+          font-weight: 800;
+        }
+      }
+    }
+  }
+}

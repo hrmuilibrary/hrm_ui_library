@@ -269,19 +269,30 @@
 [data-theme="dark"] {
   .chips {
     $this: &;
+
     &--outlined {
       background-color: var(--grey-20);
       border-color: var(--grey-30);
 
-      &#{$this}--disabled {
-        background-color: red;
-        path, circle, line {
-          &:not([fill]) {
-            fill: var(--grey-30);
+      &:not(&#{$this}--disabled) {
+        &#{$this}--primary {
+          border-color: var(--grey-40);
+          &:hover {
+            background-color: var(--grey-30);
           }
         }
-        .color--disabled {
-          color: var(--grey-30);
+      }
+
+      &#{$this}--disabled {
+        background-color: var(--grey-30);
+        border-color: var(--grey-30);
+        path, circle, line {
+          &:not([fill]) {
+            fill: var(--grey-20);
+          }
+        }
+        .color-disabled {
+          color: var(--grey-20);
         }
       }
     }
