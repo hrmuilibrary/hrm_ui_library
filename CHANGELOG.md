@@ -1,3 +1,10 @@
+## [3.1.37](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.36...3.1.37) (2026-03-12)
+
+
+### Bug Fixes
+
+* add darkMode styles for modal, collapse ([b02259e](https://github.com/hrmuilibrary/hrm_ui_library/commit/b02259e5dc8ff0dc769a8502dc308b8fb7105fb0))
+
 ## [3.1.36](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.35...3.1.36) (2026-03-11)
 
 
