@@ -26,7 +26,7 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
     labelAddons,
     dataId,
     className,
-    size='small',
+    size = 'small',
     label,
     hasError,
     isValid,
