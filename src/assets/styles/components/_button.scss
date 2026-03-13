@@ -374,6 +374,22 @@
 
       }
     }
+    &--tertiary {
+      &:not(.btn--loading) {
+        &[disabled] {
+          background-color: var(--white);
+          color: var(--grey-30);
+
+          #{$this}__icon {
+            color: var(--grey-30);
+          }
+
+          svg path {
+            fill: var(--grey-30);
+          }
+        }
+      }
+    }
     &--text {
       color: var(--blue-300);
       &:hover {

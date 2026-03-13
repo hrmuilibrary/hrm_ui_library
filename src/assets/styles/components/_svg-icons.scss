@@ -70,8 +70,8 @@
     }
     &__type {
       $types: (
-        primary: var(--grey-900),
-        secondary: var(--grey-50),
+        primary: var(--grey-50),
+        secondary: var(--grey-40),
         tertiary: var(--grey-500),
         disabled: var(--grey-400),
         selected: var(--brand-500),
