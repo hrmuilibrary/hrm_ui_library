@@ -1,3 +1,10 @@
+## [3.1.39](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.38...3.1.39) (2026-03-13)
+
+
+### Bug Fixes
+
+* select size ([abdf45b](https://github.com/hrmuilibrary/hrm_ui_library/commit/abdf45bedfb25435b675f5063ab373b8ba83fb23))
+
 ## [3.1.38](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.37...3.1.38) (2026-03-12)
 
 
