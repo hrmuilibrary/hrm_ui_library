@@ -269,7 +269,6 @@
 [data-theme="dark"] {
   .chips {
     $this: &;
-
     &--outlined {
       background-color: var(--grey-20);
       border-color: var(--grey-30);
