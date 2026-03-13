@@ -26,7 +26,7 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
     labelAddons,
     dataId,
     className,
-    size,
+    size = 'small',
     label,
     hasError,
     isValid,
@@ -168,7 +168,7 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
       {!isButtonSelect && (
         <Input
           onClick={disabled ? noop : onOpenOptions}
-          size={size === 'large' ? 'large' : 'small'}
+          size={size}
           dataId={dataId}
           hasError={hasError}
           className="select__input"
