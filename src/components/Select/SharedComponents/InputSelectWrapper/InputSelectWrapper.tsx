@@ -24,7 +24,7 @@ export const InputSelectWrapper = (props: TSelectWrapperProps): ReactElement | n
     className = '',
     dropdownWidth,
     align = 'left',
-    size,
+    size='small',
     dropdownRef,
     setDropdownRef,
     containerRef,
@@ -103,7 +103,7 @@ export const InputSelectWrapper = (props: TSelectWrapperProps): ReactElement | n
           }}
           labelAddons={labelAddons}
           disabled={disabled}
-          size={size === 'large' ? 'large' : 'small'}
+          size={size}
         />
       </div>
 
