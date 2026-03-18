@@ -384,12 +384,12 @@ $gaps: 4, 8, 12, 16;
 [data-theme="dark"] {
   .color {
     $color-type: (
-      primary: var(--grey-50),
-      secondary: var(--grey-100),
+      primary: var(--grey-100),
+      secondary: var(--grey-50),
       tertiary: var(--grey-40),
       disabled: var(--grey-30),
       selected: var(--brand-500),
-      inverse: var(--white),
+      inverse: var(--grey-500),
       brand: var(--brand-700),
       success: var(--green-600),
       information: var(--blue-800),

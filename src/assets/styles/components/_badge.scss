@@ -39,3 +39,16 @@
     }
   }
 }
+[data-theme="dark"] {
+  .badge {
+    $this: &;
+
+    &__inner {
+      font-weight: var(--font-weight-700);
+    }
+
+    &--primary {
+      background-color: var(--pink-400);
+    }
+  }
+}
