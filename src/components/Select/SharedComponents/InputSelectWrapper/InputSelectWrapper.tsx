@@ -24,7 +24,7 @@ export const InputSelectWrapper = (props: TSelectWrapperProps): ReactElement | n
     className = '',
     dropdownWidth,
     align = 'left',
-    size='small',
+    size = 'small',
     dropdownRef,
     setDropdownRef,
     containerRef,
