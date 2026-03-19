@@ -35,8 +35,11 @@
   }
 
   &__label {
-    font: var(--font-weight-500) var(--font-size-16)/1 var(--font-family-primary);
+    font: var(--font-weight-700) var(--font-size-14)/1 var(--font-family-primary);
     color: var(--grey-500);
+    letter-spacing: 1.4px;
+    font-weight: var(--font-weight-700);
+    text-transform: uppercase;
   }
 
   &:hover {
@@ -161,6 +164,10 @@
         #{$this}__label {
           color: var(--grey-900);
         }
+      }
+
+      #{$this}__label {
+        color: var(--grey-400);
       }
     }
   }
