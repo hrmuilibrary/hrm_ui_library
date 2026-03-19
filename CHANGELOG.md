@@ -1,3 +1,11 @@
+## [3.1.45](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.44...3.1.45) (2026-03-19)
+
+
+### Bug Fixes
+
+* multiselect size ([c5d8650](https://github.com/hrmuilibrary/hrm_ui_library/commit/c5d8650d58f9b4ed43c0cc176dff8d75338678af))
+* multiselect size prop ([0eedbb9](https://github.com/hrmuilibrary/hrm_ui_library/commit/0eedbb99af3aba2131b69e28830a8b1e013e0903))
+
 ## [3.1.44](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.43...3.1.44) (2026-03-18)
 
 
