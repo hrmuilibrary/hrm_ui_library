@@ -355,6 +355,11 @@
 [data-theme="dark"] {
   .btn {
     $this: &;
+
+    &--primary {
+      color: var(--grey-400);
+      font-weight: 700;
+    }
     &--secondary {
       background-color: var(--grey-0);
       border-color: var(--grey-30);
