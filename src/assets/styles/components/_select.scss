@@ -296,8 +296,8 @@
     color: var(--grey-100);
 
     &__options {
-      background-color: var(--grey-0);
-      border: 1px solid var(--grey-30);
+      background-color: var(--grey-20);
+      border: 1px solid var(--grey-40);
       color: var(--grey-50);
       box-shadow: none;
 
@@ -307,8 +307,8 @@
     }
 
     &--menu {
-      background-color: var(--grey-0);
-      border: 1px solid var(--grey-30);
+      background-color: var(--grey-20);
+      border: 1px solid var(--grey-40);
       box-shadow: none;
     }
   }

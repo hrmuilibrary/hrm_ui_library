@@ -80,3 +80,15 @@
     font-size: 0;
   }
 }
+[data-theme="dark"] {
+  .pagination {
+    li {
+      &.active {
+        a {
+          background-color: var(--green-500);
+          font-weight: var(--font-weight-700);
+        }
+      }
+    }
+  }
+}

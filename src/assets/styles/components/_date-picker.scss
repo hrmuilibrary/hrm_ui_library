@@ -946,12 +946,18 @@
     border: 1px solid var(--grey-30);
   }
 
+  .react-datepicker__day-name,
+  .react-datepicker__day,
+  .react-datepicker__time-name {
+    color: var(--grey-100);
+  }
+
   .react-datepicker__day--disabled,
   .react-datepicker__month-text--disabled,
   .react-datepicker__quarter-text--disabled,
   .react-datepicker__year-text--disabled {
     cursor: default;
-    color: var(--grey-30);
+    color: var(--grey-40);
   }
 
 }

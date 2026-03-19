@@ -90,5 +90,16 @@
 [data-theme="dark"] {
     .collapse {
         border-color: var(--grey-30);
+
+        &-icon {
+            &.icon-border {
+                border-color: var(--grey-40);
+            }
+
+            &.icon-open {
+                background-color: var(--grey-20);
+                border-color: var(--grey-40);
+            }
+        }
     }
 }

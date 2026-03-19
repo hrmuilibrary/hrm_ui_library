@@ -68,11 +68,11 @@
 [data-theme="dark"] {
   .button-group-item {
     &__primary {
-      border-color: var(--grey-30);
-      background-color: var(--grey-0);
+      border-color: var(--grey-40);
+      background-color: var(--grey-20);
 
       &:hover {
-        background: var(--grey-20);
+        background: var(--grey-30);
       }
 
       &.active {
