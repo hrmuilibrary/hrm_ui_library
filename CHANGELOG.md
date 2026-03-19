@@ -1,3 +1,10 @@
+## [3.1.46](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.45...3.1.46) (2026-03-19)
+
+
+### Bug Fixes
+
+* update tab, button for dark mode ([c8b2794](https://github.com/hrmuilibrary/hrm_ui_library/commit/c8b279425eec941537bf158101463a975ce3db7e))
+
 ## [3.1.45](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.44...3.1.45) (2026-03-19)
 
 
