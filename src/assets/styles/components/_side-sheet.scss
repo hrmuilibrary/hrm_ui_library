@@ -121,10 +121,10 @@
     $this: &;
     &__container {
       background-color: var(--grey-0);
-      border-left: 1px solid var(--grey-30);
+      border-left: 1px solid var(--grey-40);
     }
     &__header, &__footer {
-    border-color: var(--grey-30);
+    border-color: var(--grey-40);
     }
   }
 }

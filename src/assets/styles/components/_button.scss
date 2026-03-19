@@ -359,11 +359,19 @@
     &--primary {
       color: var(--grey-400);
       font-weight: 700;
+
+      svg path:not([fill]), svg circle:not([fill]), svg line:not([fill]) {
+        fill: var(--grey-400);
+      }
     }
     &--secondary {
       background-color: var(--grey-0);
       border-color: var(--grey-30);
       color: var(--grey-50);
+
+      svg path:not([fill]), svg circle:not([fill]), svg line:not([fill]) {
+        fill: var(--grey-50);
+      }
       &.pressed {
         background-color: var(--grey-20);
       }
@@ -385,14 +393,17 @@
           background-color: var(--white);
           color: var(--grey-30);
 
-          #{$this}__icon {
-            color: var(--grey-30);
-          }
-
-          svg path {
+          svg path:not([fill]), svg circle:not([fill]), svg line:not([fill]) {
             fill: var(--grey-30);
           }
         }
+      }
+    }
+    &--danger {
+      color: var(--grey-400);
+
+      svg path:not([fill]), svg circle:not([fill]), svg line:not([fill]) {
+        fill: var(--grey-400);
       }
     }
     &--text {

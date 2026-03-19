@@ -70,12 +70,12 @@
     }
     &__type {
       $types: (
-        primary: var(--grey-50),
+        primary: var(--grey-100),
         secondary: var(--grey-40),
-        tertiary: var(--grey-500),
+        tertiary: var(--grey-50),
         disabled: var(--grey-30),
         selected: var(--brand-500),
-        inverse: var(--white),
+        inverse: var(--grey-400),
         brand: var(--brand-700),
         success: var(--green-600),
         information: var(--blue-200),
