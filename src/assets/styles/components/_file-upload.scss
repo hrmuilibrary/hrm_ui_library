@@ -87,3 +87,13 @@
     cursor: pointer;
   }
 }
+[data-theme="dark"] {
+  .file-upload {
+    --ds-upload-edit-icon-bg: var(--grey-20);
+    --ds-upload-edit-icon-shadow: none;
+
+    .edit__icon {
+      border: 1px solid var(--grey-40);
+    }
+  }
+}

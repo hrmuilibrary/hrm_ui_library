@@ -29,6 +29,7 @@
 
   --ds-controller-border-color-focused: var(--grey-500);
   --ds-controller-border-color-disabled: var(--grey-50);
+  --ds-controller-border-color: var(--grey-200);
 
   --ds-controller-border: var(--border-size-1) solid;
   --ds-controller-border-radius-sm: var(--border-radius-2);
@@ -77,7 +78,7 @@
       height: var(--ds-controller-size);
       background-color: var(--ds-controller-bg-default-light);
       border-radius: var(--ds-controller-border-radius-sm);
-      border: var(--border-size-1) solid var(--grey-200);
+      border: var(--border-size-1) solid var(--ds-controller-border-color);
       transition: var(--ds-controller-transition);
       margin-top: var(--space-2);
 
@@ -378,98 +379,46 @@
   .controller {
     $this: &;
 
-  --ds-controller-bg-default-light: var(--grey-30);
-  --ds-controller-bg-default-dark: var(--grey-0);
-  --ds-controller-bg-hover-light: var(--grey-30);
-  --ds-controller-bg-hover-dark: var(--grey-20);
-  --ds-controller-bg-pressed-light: var(--grey-40);
-  --ds-controller-bg-pressed-dark: var(--grey-30);
-  --ds-controller-bg-focused: var(--grey-50);
-  --ds-controller-bg-disabled: var(--grey-50);
+    --ds-controller-bg-default-light: var(--grey-30);
+    --ds-controller-bg-default-dark: var(--grey-0);
+    --ds-controller-bg-hover-light: var(--grey-30);
+    --ds-controller-bg-hover-dark: var(--grey-20);
+    --ds-controller-bg-pressed-light: var(--grey-40);
+    --ds-controller-bg-pressed-dark: var(--grey-30);
+    --ds-controller-bg-focused: var(--grey-50);
+    --ds-controller-bg-disabled: var(--grey-50);
 
-  --ds-controller-selected-bg-default: var(--brand-500);
-  --ds-controller-selected-bg-hover: var(--brand-300);
-  --ds-controller-selected-bg-pressed: var(--brand-600);
-  --ds-controller-selected-bg-focused: var(--brand-700);
-  --ds-controller-selected-bg-disabled: var(--grey-50);
+    --ds-controller-selected-bg-default: var(--brand-500);
+    --ds-controller-selected-bg-hover: var(--brand-300);
+    --ds-controller-selected-bg-pressed: var(--brand-600);
+    --ds-controller-selected-bg-focused: var(--brand-700);
+    --ds-controller-selected-bg-disabled: var(--grey-50);
 
-  --ds-controller-mark-light: var(--white);
-  --ds-controller-mark-dark: var(--grey-500);
+    --ds-controller-mark-light: var(--white);
+    --ds-controller-mark-dark: var(--grey-500);
 
-  --ds-controller-border-color-focused: var(--grey-30);
-  --ds-controller-border-color-disabled: var(--grey-20);
+    --ds-controller-border-color-focused: var(--grey-40);
+    --ds-controller-border-color-disabled: var(--grey-30);
+    --ds-controller-border-color: var(--grey-40);
 
-  --ds-controller-error-bg-color: var(--red-600);
-  --ds-controller-error-border-color: var(--red-800);
-  --ds-controller-error-text-color: var(--red-600);
+    --ds-controller-error-bg-color: var(--red-600);
+    --ds-controller-error-border-color: var(--red-800);
+    --ds-controller-error-text-color: var(--red-600);
 
     input[type="checkbox"],
     input[type="radio"] {
-      & + #{$this}__icon {
-        background-color: var(--grey-0);
-        border-color: var(--grey-30);
-      }
-    }
-
-    &--switch {
-      input[type="checkbox"] {
-        & + #{$this}__icon {
-          background-color: var(--grey-0);
-          border-color: var(--grey-30);
-
-          #{$this}__icon__inner {
-            background-color: var(--grey-30);
-          }
-
-          #{$this}__mark {
-            background-color: var(--grey-0);
-          }
-
-          &:hover {
-            background-color: var(--grey-20);
-            border-color: var(--grey-20);
-
-            #{$this}__mark {
-              background-color: var(--grey-20);
-            }
-          }
-
-          &:active, &:visited {
-            background-color: var(--ds-controller-bg-pressed-dark);
-
-            #{$this}__mark {
-              background-color: var(--ds-controller-bg-pressed-dark);
-            }
+      & + .controller__icon {
+        .svg-icon__type-inverse {
+          path:not([fill]), circle:not([fill]), line:not([fill]) {
+            fill: var(--grey-30);
           }
         }
-        &:checked {
-          & + #{$this}__icon {
-            background-color: var(--ds-controller-selected-bg-default);
-            border-color: var(--ds-controller-selected-bg-default);
-
-            #{$this}__icon__inner {
-              color: var(--ds-controller-selected-bg-default);
-            }
-
-            #{$this}__mark {
-              background-color: var(--ds-controller-selected-bg-hover);
-            }
-
-            &:hover {
-              background-color: var(--ds-controller-selected-bg-hover);
-              border-color: var(--ds-controller-selected-bg-hover);
-
-              #{$this}__mark {
-                background-color: var(--ds-controller-selected-bg-hover);
-              }
-            }
-
-            &:active, &:visited {
-              background-color: var(--ds-controller-selected-bg-pressed);
-
-              #{$this}__mark {
-                background-color: var(--ds-controller-selected-bg-pressed);
-              }
+      }
+      &:checked {
+        & + .controller__icon {
+          .svg-icon__type-inverse {
+            path:not([fill]), circle:not([fill]), line:not([fill]) {
+              fill: var(--grey-0);
             }
           }
         }
