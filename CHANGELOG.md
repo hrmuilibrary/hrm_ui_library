@@ -1,3 +1,10 @@
+## [3.1.48](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.47...3.1.48) (2026-03-20)
+
+
+### Bug Fixes
+
+* update styles for DM ([9b90f2d](https://github.com/hrmuilibrary/hrm_ui_library/commit/9b90f2d5753cca860d1e06b04e9f4330b1085028))
+
 ## [3.1.47](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.46...3.1.47) (2026-03-19)
 
 
