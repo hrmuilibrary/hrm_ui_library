@@ -363,10 +363,21 @@
       svg path:not([fill]), svg circle:not([fill]), svg line:not([fill]) {
         fill: var(--grey-400);
       }
+      &:not(#{$this}--loading) {
+        &[disabled] {
+          background-color: var(--grey-20);
+          border-color: var(--grey-30);
+          color: var(--grey-30);
+
+          svg path {
+            fill: var(--grey-30);
+          }
+        }
+      }
     }
     &--secondary {
-      background-color: var(--grey-0);
-      border-color: var(--grey-30);
+      background-color: var(--grey-20);
+      border-color: var(--grey-40);
       color: var(--grey-50);
 
       svg path:not([fill]), svg circle:not([fill]), svg line:not([fill]) {
@@ -384,7 +395,15 @@
         &:active {
           background-color: var(--grey-20);
         }
+        &[disabled] {
+          background-color: var(--grey-20);
+          border-color: var(--grey-30);
+          color: var(--grey-30);
 
+          svg path {
+            fill: var(--grey-30);
+          }
+        }
       }
     }
     &--tertiary {
@@ -401,6 +420,12 @@
     }
     &--danger {
       color: var(--grey-400);
+
+      &:not(.btn--loading) {
+        &[disabled] {
+          opacity: 0.2;
+        }
+      }
 
       svg path:not([fill]), svg circle:not([fill]), svg line:not([fill]) {
         fill: var(--grey-400);
