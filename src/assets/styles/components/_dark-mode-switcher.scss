@@ -17,10 +17,28 @@
     }
   }
 
+  .icon-sun {
+    color: var(--yellow-40);
+    path, line {
+      fill: none
+    }
+  }
+  .icon-moon {
+    color: var(--grey-900);
+    path, line {
+      fill: none
+    }
+  }
   &--space-between {
     @include mixin.justify-content(space-between);
   }
   .controller {
+    align-items: center;
+    gap: 5px;
+    border: 1px solid var(--grey-200);
+    padding: 4px 5px;
+    border-radius: 16px;
+
     .controller__icon {
       background-color: var(--grey-600)!important;
       border-color: var(--grey-600)!important;
@@ -35,6 +53,9 @@
         position: absolute;
         right: 1px;
       }
+      .controller__mark {
+        background-color: var(--grey-200)!important;
+      }
     }
   }
 }
@@ -43,19 +64,31 @@
   .dark-mode-switcher {
     $this: &;
     .controller {
+      border-color: var(--grey-40);
       .controller__icon {
-        background-color: var(--yellow-50)!important;
-        border-color: var(--grey-20)!important;
-        &:hover {
-          background-color: var(--yellow-100)!important;
-        }
+        background-color: var(--grey-40)!important;
+        border-color: var(--grey-40)!important;
+
         .controller__icon__inner {
-          background-color: var(--grey-20)!important;
+          background-color: var(--grey-900)!important;
           left: 1px;
         }
-        .svg-icon {
-          left: 1px;
+        .controller__mark {
+          background-color: var(--grey-900)!important;
         }
+      }
+    }
+
+    .icon-sun {
+      color: var(--grey-100);
+      path, line {
+        fill: none
+      }
+    }
+    .icon-moon {
+      color: var(--blue-400);
+      path, line {
+        fill: none
       }
     }
   }

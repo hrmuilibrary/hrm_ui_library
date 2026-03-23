@@ -67,22 +67,23 @@ export const DarkModeSwitcher = forwardRef((props: TSwitcherProps, ref): React.R
           { 'controller--disabled': disabled }
         )}
       >
-        <input
-          data-id={dataId}
-          type="checkbox"
-          tabIndex={0}
-          onChange={changeHandler}
-          checked={isChecked}
-          disabled={disabled}
-        />
-        <span className="controller__icon">
-          {selectedValue ? (
-            <IconSun type="warning" size={iconSize} />
-          ) : (
-            <IconMoon type="warning" size={iconSize} />
-          )}
-          <span className="controller__icon__inner"></span>
-        </span>
+        <IconSun type="warning" size={iconSize} className="icon-sun" />
+        <div>
+          <input
+            data-id={dataId}
+            type="checkbox"
+            tabIndex={0}
+            onChange={changeHandler}
+            checked={isChecked}
+            disabled={disabled}
+          />
+          <span className="controller__icon">
+            <span className="controller__icon__inner">
+              <span className="controller__mark" />
+            </span>
+          </span>
+        </div>
+        <IconMoon type="warning" size={iconSize} className="icon-moon" />
       </label>
       {label && orientation === 'left' && labelComponent}
     </div>
