@@ -215,6 +215,10 @@
         box-shadow: 0 0 2px 1px var(--grey-30);
       }
 
+      &::placeholder {
+        color: var(--grey-40);
+      }
+
       &[disabled] {
         color: var(--grey-40);
 
