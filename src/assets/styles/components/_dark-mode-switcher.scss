@@ -19,13 +19,13 @@
 
   .icon-sun {
     color: var(--yellow-40);
-    path, line {
+    path, line, circle {
       fill: none
     }
   }
   .icon-moon {
-    color: var(--grey-900);
-    path, line {
+    color: var(--grey-400);
+    path, line, circle {
       fill: none
     }
   }
@@ -36,7 +36,7 @@
     align-items: center;
     gap: 5px;
     border: 1px solid var(--grey-200);
-    padding: 4px 5px;
+    padding: 2px 5px;
     border-radius: 16px;
 
     .controller__icon {
@@ -80,14 +80,14 @@
     }
 
     .icon-sun {
-      color: var(--grey-100);
-      path, line {
+      color: var(--grey-50);
+      path, line, circle {
         fill: none
       }
     }
     .icon-moon {
       color: var(--blue-400);
-      path, line {
+      path, line, circle {
         fill: none
       }
     }
