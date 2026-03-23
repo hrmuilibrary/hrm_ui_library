@@ -18,6 +18,32 @@ function extractPathFromSvg(svgContent) {
     return null;
 }
 
+function extractPropsFromSvg(svgContent){
+    const svgTagPattern = /<svg([^>]*)>/;
+    const match = svgContent.match(svgTagPattern);
+
+    if (!match || !match[1]) {
+        return null;
+    }
+
+    const propsString = match[1].trim();
+    if (!propsString) {
+        return {};
+    }
+
+    // Regex to capture key="value" or key='value' or key=value
+    const attrPattern = /(\S+)=["']?([^"'\s>]+)["']?/g;
+    const props = {};
+    let attrMatch;
+
+    while ((attrMatch = attrPattern.exec(propsString)) !== null) {
+        const [_, key, value] = attrMatch;
+        props[key] = value;
+    }
+
+    return props;
+}
+
 // Function to generate a valid React component name from SVG file name
 function generateComponentName(fileName) {
     // Remove file extension (.svg)
@@ -38,9 +64,13 @@ function generateComponentName(fileName) {
 
 
 // Function to generate React component code
-function generateReactComponent(componentName, svgPath) {
+function generateReactComponent(componentName, svgPath, props) {
     // Generate React component code using the provided SVG path
     // You can use a template string or any templating library to generate the component
+    const propsString = Object.entries(props)
+        .filter(([key]) => key !== 'xmlns' && key !== 'class' && key !== 'viewBox' && key !== 'fill' && key !== 'width' && key !== 'height'  )
+        .map(([key, value]) => `${key}="${value}"`)
+        .join(' ');
     return `import React, { ReactElement } from 'react'
 import {ISVGIconProps} from '../../type';
 import classNames from 'classnames'
@@ -59,6 +89,7 @@ const ${componentName} = ({size, type, className = '', onClick, refHandler, id, 
       ref={refHandler}
       id={id}
       data-id={dataId ? \`\${dataId}-svg-icon\` : ''}
+      ${propsString}
   >
       ${svgPath}
   </svg>
@@ -87,6 +118,7 @@ fs.readdir(svgDirectory, (err, files) => {
 
             // Parse SVG content and extract path
             const svgPath = extractPathFromSvg(data);
+            const props = extractPropsFromSvg(data);
 
             // Function to generate a valid React component name from SVG file name
             const componentName = generateComponentName(file);
@@ -96,7 +128,7 @@ fs.readdir(svgDirectory, (err, files) => {
             if (fs.existsSync(outputPath)) {
                 return;
             }
-            const reactComponent = generateReactComponent(componentName, svgPath);
+            const reactComponent = generateReactComponent(componentName, svgPath, props);
 
             // Write React component to file
             fs.writeFile(outputPath, reactComponent, err => {
