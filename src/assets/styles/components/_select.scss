@@ -311,5 +311,8 @@
       border: 1px solid var(--grey-40);
       box-shadow: none;
     }
+    &__top, &__footer {
+      border-color: var(--grey-40);
+    }
   }
 }
