@@ -1,3 +1,10 @@
+## [3.1.53](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.52...3.1.53) (2026-03-25)
+
+
+### Bug Fixes
+
+* add new icons ([4069ef6](https://github.com/hrmuilibrary/hrm_ui_library/commit/4069ef6afe243c764a52a657a531743c9b513c00))
+
 ## [3.1.52](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.51...3.1.52) (2026-03-24)
 
 
