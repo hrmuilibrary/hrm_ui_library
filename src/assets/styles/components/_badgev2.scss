@@ -492,6 +492,9 @@
     $this: &;
 
     &--filled {
+      color: var(--grey-900);
+      font-weight: 800;
+
       &#{$this}--blue {
         background-color: var(--blue-300);
         #{$this}__inner {
