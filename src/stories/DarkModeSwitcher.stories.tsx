@@ -23,11 +23,7 @@ const Template: StoryFn<TSwitcherProps> = (args) => {
     document.body.setAttribute('data-theme', value ? ThemeMode.Dark : ThemeMode.Light)
   }
 
-  return (
-    <div>
-      <_DarkModeSwitcher {...args} checked={isChecked} onChange={onChange} />
-    </div>
-  )
+  return <_DarkModeSwitcher {...args} checked={isChecked} onChange={onChange} />
 }
 
 export const DarkModeSwitcher: StoryObj<TSwitcherProps> = Template.bind({})
