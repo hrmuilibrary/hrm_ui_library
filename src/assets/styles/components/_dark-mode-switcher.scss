@@ -1,94 +1,103 @@
 @use "../helpers/mixin";
 
-.dark-mode-switcher {
-  $this: &;
+.theme-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-16);
+  cursor: pointer;
 
-  --ds-swither-inline-label-padding: var(--space-16);
-
-  &--inline {
-    @include mixin.flexbox;
-    @include mixin.align-items(flex-start);
-    gap: var(--space-16);
-    align-items: center;
-
-    #{$this}__label {
-      padding-right: var(--ds-swither-inline-label-padding);
-      margin: 0;
-    }
+  &.is-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 
-  .icon-sun {
-    color: var(--yellow-40);
-    path, line, circle {
-      fill: none
-    }
-  }
-  .icon-moon {
-    color: var(--grey-400);
-    path, line, circle {
-      fill: none
-    }
-  }
-  &--space-between {
-    @include mixin.justify-content(space-between);
-  }
-  .controller {
-    align-items: center;
-    gap: 5px;
+  &__track {
+    position: relative;
+    width: var(--size-64);
+    height: var(--size-32);
+    border-radius: var(--size-16);
     border: 1px solid var(--grey-200);
-    padding: 2px 5px;
-    border-radius: 16px;
+    transition: background 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--size-8);
+    box-sizing: border-box;
 
-    .controller__icon {
-      background-color: var(--grey-600)!important;
-      border-color: var(--grey-600)!important;
-      &:hover {
-        background-color: var(--grey-700)!important;
+    &.is-checked {
+      .theme-switch__thumb {
+        transform: translateX(calc(var(--size-32) - 1px));
       }
 
-      .controller__icon__inner {
-        background-color: var(--grey-200)!important;
+      .theme-switch__icon {
+        opacity: 1;
       }
-      .svg-icon {
-        position: absolute;
-        right: 1px;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  &__thumb {
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    width: var(--size-24);
+    height: var(--size-24);
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease;
+  }
+
+  &__icon {
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+
+    &--sun {
+      color: var(--yellow-40);
+
+      path, line, circle {
+        fill: none !important;
       }
-      .controller__mark {
-        background-color: var(--grey-200)!important;
+    }
+
+    &--moon {
+      color: var(--grey-400);
+
+      path, line, circle {
+        fill: none !important;
       }
     }
   }
 }
 
 [data-theme="dark"] {
-  .dark-mode-switcher {
-    $this: &;
-    .controller {
+  .theme-switch {
+    &__track {
       border-color: var(--grey-40);
-      .controller__icon {
-        background-color: var(--grey-40)!important;
-        border-color: var(--grey-40)!important;
-
-        .controller__icon__inner {
-          background-color: var(--grey-900)!important;
-          left: 1px;
-        }
-        .controller__mark {
-          background-color: var(--grey-900)!important;
-        }
-      }
     }
 
-    .icon-sun {
-      color: var(--grey-50);
-      path, line, circle {
-        fill: none
-      }
+    &__thumb {
+      left: 3px;
+      background: var(--grey-40);
     }
-    .icon-moon {
-      color: var(--blue-400);
-      path, line, circle {
-        fill: none
+
+    &__icon {
+      &--sun {
+        color: var(--grey-50);
+      }
+
+      &--moon {
+        color: var(--blue-400);
       }
     }
   }
