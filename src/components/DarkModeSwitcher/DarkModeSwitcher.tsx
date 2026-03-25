@@ -1,93 +1,56 @@
-import React, { forwardRef, useMemo } from 'react'
-import classnames from 'classnames'
-import { Label } from '../../helperComponents/Label'
-import { TSwitcherProps } from './types'
+import React, { ChangeEvent, forwardRef } from 'react'
+import classNames from 'classnames'
 import IconMoon from '../SVGIcons/IconMoon'
 import IconSun from '../SVGIcons/IconSun'
 
-export const DarkModeSwitcher = forwardRef((props: TSwitcherProps, ref): React.ReactElement => {
-  const {
-    onClick,
-    id = '',
-    name,
-    value,
-    disabled,
-    label,
-    inlineType = false,
-    dataId,
-    size = 'small',
-    setFieldValue,
-    selectedValue,
-    className = '',
-    labelAddons,
-    orientation = 'right',
-    hasSpaceBetween = true
-  } = props
-  const isChecked = !!value || !!selectedValue
+type DarkModeSwitcherProps = {
+  checked: boolean
+  onChange: (checked: boolean) => void
+  disabled?: boolean
+  id?: string
+  name?: string
+  className?: string
+}
 
-  const changeHandler = () => {
-    if (name && setFieldValue) {
-      setFieldValue(name, !isChecked)
+export const DarkModeSwitcher = forwardRef<HTMLInputElement, DarkModeSwitcherProps>(
+  ({ checked, onChange, disabled = false, id = 'dark-mode-switcher', name, className }, ref) => {
+    const _onChange = (e: ChangeEvent<HTMLInputElement>) => {
+      if (disabled) {
+        return
+      }
+      onChange(e.target.checked)
     }
 
-    if (onClick) {
-      onClick(!isChecked)
-    }
-  }
-
-  const labelComponent = useMemo(
-    () => (
-      <Label
-        text={label}
-        disabled={disabled}
-        labelAddons={labelAddons}
-        size={inlineType ? 'standard' : size}
-        className="switcher__label"
-      />
-    ),
-    [label, disabled, labelAddons, inlineType, size]
-  )
-
-  const iconSize = size === 'small' ? 'xsmall' : 'small'
-  return (
-    <div
-      className={classnames('dark-mode-switcher', {
-        'dark-mode-switcher--inline': inlineType,
-        'dark-mode-switcher--space-between': hasSpaceBetween
-      })}
-    >
-      {label && orientation === 'right' && labelComponent}
+    return (
       <label
-        id={id}
-        className={classnames(
-          'controller',
-          'controller--switch',
-          `controller--switch-${size}`,
-          className,
-          { 'controller--disabled': disabled }
-        )}
+        className={classNames('theme-switch', className, { 'is-disabled': disabled })}
+        htmlFor={id}
       >
-        <IconSun type="warning" size={iconSize} className="icon-sun" />
-        <div>
-          <input
-            data-id={dataId}
-            type="checkbox"
-            tabIndex={0}
-            onChange={changeHandler}
-            checked={isChecked}
-            disabled={disabled}
-          />
-          <span className="controller__icon">
-            <span className="controller__icon__inner">
-              <span className="controller__mark" />
-            </span>
+        <span className={classNames('theme-switch__track', { 'is-checked': checked })}>
+          <span className="theme-switch__icon theme-switch__icon--sun" aria-hidden="true">
+            <IconSun size="xsmall" />
           </span>
-        </div>
-        <IconMoon type="warning" size={iconSize} className="icon-moon" />
+
+          <input
+            ref={ref}
+            id={id}
+            name={name}
+            type="checkbox"
+            checked={checked}
+            disabled={disabled}
+            onChange={_onChange}
+            className="theme-switch__input"
+          />
+
+          <span className="theme-switch__thumb" aria-hidden="true" />
+
+          <span className="theme-switch__icon theme-switch__icon--moon" aria-hidden="true">
+            <IconMoon size="xsmall" />
+          </span>
+        </span>
       </label>
-      {label && orientation === 'left' && labelComponent}
-    </div>
-  )
-})
+    )
+  }
+)
 
 DarkModeSwitcher.displayName = 'DarkModeSwitcher'

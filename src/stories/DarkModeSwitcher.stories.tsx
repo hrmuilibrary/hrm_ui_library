@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { DarkModeSwitcher as _DarkModeSwitcher } from '../components/DarkModeSwitcher'
-import IconInfo from '../components/SVGIcons/IconInfo'
 import { StoryFn, StoryObj } from '@storybook/react'
 import { TSwitcherProps } from '../components/DarkModeSwitcher/types'
+import { ThemeMode } from '../consts'
 
 export default {
   title: 'DarkModeSwitcher',
@@ -14,13 +14,18 @@ export default {
     }
   }
 }
-const ID = 'am_custom_DarkModeSwitcher'
 
 const Template: StoryFn<TSwitcherProps> = (args) => {
   const [isChecked, setIsChecked] = useState(false)
+
+  const onChange = (value: boolean) => {
+    setIsChecked(value)
+    document.body.setAttribute('data-theme', value ? ThemeMode.Dark : ThemeMode.Light)
+  }
+
   return (
-    <div {...(isChecked ? { 'data-theme': 'dark' } : {})}>
-      <_DarkModeSwitcher {...args} selectedValue={isChecked} onClick={setIsChecked} id={ID} />
+    <div>
+      <_DarkModeSwitcher {...args} checked={isChecked} onChange={onChange} />
     </div>
   )
 }
@@ -29,8 +34,5 @@ export const DarkModeSwitcher: StoryObj<TSwitcherProps> = Template.bind({})
 
 DarkModeSwitcher.args = {
   size: 'small',
-  inlineType: false,
-  disabled: false,
-  label: 'label',
-  labelAddons: <IconInfo size={'xsmall'} type={'information'} className={'ml-4'} />
+  disabled: false
 }
