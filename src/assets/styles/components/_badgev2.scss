@@ -492,14 +492,18 @@
     $this: &;
 
     &--filled {
-      color: var(--grey-900);
-      font-weight: 800;
-
-      &#{$this}--blue {
-        background-color: var(--blue-300);
-        #{$this}__inner {
-          font-weight: 800;
-        }
+      & > .badge-v2__inner {
+        color: var(--grey-900);
+        font-weight: 600;
+      }
+      &.badge-v2--blue {
+        background-color: var(--blue-900);
+      }
+      &.badge-v2--orange {
+        background-color: var(--yellow-100);
+      }
+      &.badge-v2--gray {
+        background-color: var(--grey-40);
       }
     }
   }
