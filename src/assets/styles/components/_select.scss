@@ -305,6 +305,11 @@
         background: var(--grey-20);
       }
     }
+    &__option {
+      &:hover {
+        background-color: var(--grey-30);
+      }
+    }
 
     &--menu {
       background-color: var(--grey-20);
