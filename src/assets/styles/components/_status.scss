@@ -15,7 +15,6 @@
   --ds-status-circle-bg-discovery: var(--purple-400);
   --ds-status-circle-bg-disabled: var(--grey-500);
 
-
   --ds-status-withBackground-bg-primary: var(--grey-50);
   --ds-status-withBackground-bg-information: var(--blue-50);
   --ds-status-withBackground-bg-brand: var(--brand-20);
@@ -113,6 +112,16 @@
 [data-theme="dark"] {
   .status {
     --ds-status-withBackground-bg-disabled: var(--grey-50);
+
+
+    --ds-status-circle-bg-primary: var(--grey-100);
+    --ds-status-circle-bg-information: var(--blue-200);
+    --ds-status-circle-bg-brand: var(--brand-500);
+    --ds-status-circle-bg-danger: var(--red-600);
+    --ds-status-circle-bg-warning: var(--yellow-400);
+    --ds-status-circle-bg-success: var(--green-600);
+    --ds-status-circle-bg-discovery: var(--purple-800);
+    --ds-status-circle-bg-disabled: var(--grey-30);
 
     &__withBackground--disabled {
       border-color: var(--grey-50);
