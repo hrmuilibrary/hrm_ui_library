@@ -211,6 +211,9 @@
       background-color: var(--grey-20);
       color: var(--grey-50);
 
+      &:-internal-autofill-selected {
+        background-color: var(--grey-30);
+      }
       &:focus {
         box-shadow: 0 0 2px 1px var(--grey-30);
       }
