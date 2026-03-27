@@ -1,3 +1,10 @@
+## [3.1.56](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.55...3.1.56) (2026-03-27)
+
+
+### Bug Fixes
+
+* update styles for dark mode select, svg ([ed8932a](https://github.com/hrmuilibrary/hrm_ui_library/commit/ed8932ac837200a560a0fe7715da08c7629f12f2))
+
 ## [3.1.55](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.54...3.1.55) (2026-03-26)
 
 
