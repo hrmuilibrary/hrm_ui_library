@@ -125,12 +125,21 @@
               background-color: var(--grey-20);
             }
           }
+          &.selected {
+            td {
+              background: var(--grey-20);
+            }
+          }
           td {
             border-color: var(--grey-30);
             border-bottom: none;
           }
         }
       }
+    }
+
+    &__selected-rows {
+      background-color: var(--grey-20);
     }
   }
 }
