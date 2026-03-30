@@ -1,3 +1,10 @@
+## [3.1.59](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.58...3.1.59) (2026-03-30)
+
+
+### Bug Fixes
+
+* add table selected row styles for dark mode ([0cd81a1](https://github.com/hrmuilibrary/hrm_ui_library/commit/0cd81a1acb1a1c4534b656b2daf8c5f20f27a2e1))
+
 ## [3.1.58](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.57...3.1.58) (2026-03-27)
 
 
