@@ -7,6 +7,7 @@ import { OptionItem } from '../../../../helperComponents/OptionItem'
 import { ContentTop } from '../../SharedComponents'
 import { TMultiSelectGroupedProps } from '../../types'
 import { DROPDOWN_MAX_HEIGHT } from '../../constants'
+import { filterSearchData } from '../../Select/helpers'
 
 export const MultiSelectWithTabs = (props: TMultiSelectGroupedProps): React.ReactElement => {
   const {
@@ -44,12 +45,7 @@ export const MultiSelectWithTabs = (props: TMultiSelectGroupedProps): React.Reac
       return currentTabData
     }
 
-    return currentTabData.filter((dataItem) => {
-      return (
-        typeof dataItem.label === 'string' &&
-        dataItem.label.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())
-      )
-    })
+    return filterSearchData(currentTabData, searchValue)
   }, [searchValue, currentTabData])
 
   const clearAll = useCallback(() => {
