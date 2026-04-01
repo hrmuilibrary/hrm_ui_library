@@ -1,3 +1,10 @@
+## [3.1.62](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.61...3.1.62) (2026-04-01)
+
+
+### Bug Fixes
+
+* hide checkmark on disabled state of checkbox ([64fc919](https://github.com/hrmuilibrary/hrm_ui_library/commit/64fc91904ab118bebe1d93314db27fe57928091e))
+
 ## [3.1.61](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.60...3.1.61) (2026-04-01)
 
 
