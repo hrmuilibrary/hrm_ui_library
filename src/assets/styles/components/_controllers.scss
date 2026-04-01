@@ -140,6 +140,12 @@
       & + #{$this}__icon {
         background-color: var(--grey-0);
         border-color: var(--ds-controller-bg-default-dark);
+
+        .svg-icon__type-disabled {
+          path:not([fill]), circle:not([fill]), line:not([fill]) {
+            fill: none;
+          }
+        }
       }
     }
   }
