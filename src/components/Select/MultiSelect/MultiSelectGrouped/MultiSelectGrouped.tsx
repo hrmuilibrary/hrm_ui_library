@@ -9,6 +9,7 @@ import { TMultiSelectGroupedProps } from '../../types'
 import { DROPDOWN_MAX_HEIGHT } from '../../constants'
 import IconCaretUpFilled from '../../../SVGIcons/IconCaretUpFilled'
 import IconCaretDownFilled from '../../../SVGIcons/IconCaretDownFilled'
+import { filterSearchData } from '../../Select/helpers'
 
 export const MultiSelectGrouped = (props: TMultiSelectGroupedProps): React.ReactElement | null => {
   const {
@@ -48,12 +49,7 @@ export const MultiSelectGrouped = (props: TMultiSelectGroupedProps): React.React
     return options.reduce(
       (acc: TSelectGroupOptions, group: TSelectGroupOption): TSelectGroupOptions => {
         const { data, title } = group
-        const groupData = data.filter((dataItem) => {
-          return (
-            typeof dataItem.label === 'string' &&
-            dataItem.label.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())
-          )
-        })
+        const groupData = filterSearchData(data, searchValue)
 
         if (groupData.length) {
           return [

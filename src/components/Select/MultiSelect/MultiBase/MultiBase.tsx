@@ -7,6 +7,7 @@ import { FixedSizeList as List } from 'react-window'
 import { DROPDOWN_HEIGHT, DROPDOWN_WIDTH, ITEM_SIZE, ITEM_SIZE_MOBILE } from '../../constants'
 import classNames from 'classnames'
 import { noop } from '../../../../utils/helpers'
+import { filterSearchData } from '../../Select/helpers'
 
 export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null => {
   const {
@@ -101,12 +102,7 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
       return [...selectedValues, ...newOptions]
     }
 
-    return options.filter((dataItem) => {
-      return (
-        typeof dataItem.label === 'string' &&
-        dataItem.label.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())
-      )
-    })
+    return filterSearchData(options, searchValue)
   }, [searchValue, options, selectedValues])
 
   const selectAll = useCallback(() => {
