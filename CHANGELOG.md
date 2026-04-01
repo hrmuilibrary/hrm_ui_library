@@ -1,3 +1,10 @@
+## [3.1.63](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.62...3.1.63) (2026-04-01)
+
+
+### Bug Fixes
+
+* resolve search on multiselect ([605d75c](https://github.com/hrmuilibrary/hrm_ui_library/commit/605d75cd8d05292953e82314a241980051f2bc1a))
+
 ## [3.1.62](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.61...3.1.62) (2026-04-01)
 
 
