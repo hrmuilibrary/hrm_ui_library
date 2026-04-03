@@ -1,3 +1,10 @@
+## [3.1.64](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.63...3.1.64) (2026-04-03)
+
+
+### Bug Fixes
+
+* change dark mode colors ([709afc8](https://github.com/hrmuilibrary/hrm_ui_library/commit/709afc8444b29ddb1021cacebdf8e0f5724c764b))
+
 ## [3.1.63](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.62...3.1.63) (2026-04-01)
 
 
