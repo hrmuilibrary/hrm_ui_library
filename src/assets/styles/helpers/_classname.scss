@@ -384,8 +384,8 @@ $gaps: 4, 8, 12, 16;
 [data-theme="dark"] {
   .color {
     $color-type: (
-      primary: var(--grey-100),
-      secondary: var(--grey-50),
+      primary: var(--grey-800),
+      secondary: var(--color-10),
       tertiary: var(--grey-50),
       disabled: var(--grey-30),
       selected: var(--brand-500),

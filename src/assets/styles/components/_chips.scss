@@ -217,6 +217,7 @@
     &:not(&#{$this}--disabled) {
       &#{$this}--primary {
         border-color: var(--ds-chips-filled-bg-primary);
+        background-color: color-mix(in srgb, var(--color-5) 80%, transparent);
         &:hover {
           background-color: var(--ds-chips-outlined-bg-primary-hover)
         }
@@ -270,7 +271,7 @@
   .chips {
     $this: &;
 
-    --ds-chips-filled-bg-primary: var(--grey-30);
+    --ds-chips-filled-bg-primary: var(--grey-40);
     --ds-chips-filled-bg-primary-hover: var(--grey-40);
     --ds-chips-filled-bg-information: var(--blue-400);
     --ds-chips-filled-bg-information-hover: var(--blue-600);
@@ -301,12 +302,16 @@
     --ds-chips-accent-bg-discovery-hover: var(--purple-100);
 
     --ds-chips-outlined-bg: var(--grey-20);
-    --ds-chips-outlined-bg-primary-hover: var(--grey-30);
+    --ds-chips-outlined-bg-primary-hover: color-mix(in srgb, var(--grey-800) 5%, transparent);
     --ds-chips-outlined-bg-information-hover: var(--blue-50);
     --ds-chips-outlined-bg-brand-hover: var(--brand-20);
     --ds-chips-outlined-bg-danger-hover: var(--red-50);
     --ds-chips-outlined-bg-warning-hover: var(--yellow-50);
     --ds-chips-outlined-bg-success-hover: var(--green-50);
     --ds-chips-outlined-bg-discovery-hover: var(--purple-50);
+    
+    &__label {
+      color: var(--grey-50);
+    }
   }
 }

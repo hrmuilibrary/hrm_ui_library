@@ -157,6 +157,7 @@
     }
   }
 }
+
 [data-theme="dark"] {
   .card {
     background-color: var(--grey-20);
@@ -165,6 +166,12 @@
 
     &__content--footer {
       background: none;
+    }
+
+    &__content {
+      .card__divider {
+        background-color: var(--grey-50);
+      }
     }
   }
 }

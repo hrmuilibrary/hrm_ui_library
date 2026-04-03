@@ -295,14 +295,23 @@
   .select {
     color: var(--grey-100);
 
+    &__option {
+      &:hover {
+        color: var(--color-4);
+        background-color: var(--color-7);
+      }
+    }
+
     &__options {
-      background-color: var(--grey-20);
+      background-color: var(--color-9);
+      //background-color: var(--grey-20);
       border: 1px solid var(--grey-40);
       color: var(--grey-50);
       box-shadow: none;
 
       .option--active {
-        background: var(--grey-20);
+        background-color: var(--color-7);
+        //background: var(--grey-20);
       }
     }
     &__option {
@@ -312,7 +321,8 @@
     }
 
     &--menu {
-      background-color: var(--grey-20);
+      background-color: var(--color-9);
+      //background-color: var(--grey-20);
       border: 1px solid var(--grey-40);
       box-shadow: none;
     }

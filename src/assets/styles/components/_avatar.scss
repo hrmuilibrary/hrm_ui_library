@@ -209,3 +209,11 @@
     }
   }
 }
+
+[data-theme="dark"] {
+  .avatar {
+    &--default {
+      color: var(--white);
+    }
+  }
+}

@@ -112,6 +112,15 @@
 [data-theme="dark"] {
   .status {
     --ds-status-withBackground-bg-disabled: var(--grey-50);
+    --ds-status-circle-bg-warning: var(--yellow-100);
+
+    &__circle--primary {
+      background-color: var(--grey-50);
+    }
+
+    &__withBackground {
+      background-color: inherit;
+    }
 
 
     --ds-status-circle-bg-primary: var(--grey-100);
@@ -125,6 +134,14 @@
 
     &__withBackground--disabled {
       border-color: var(--grey-50);
+    }
+
+    &__withBackground--warning {
+      border-color: var(--yellow-100);
+
+      .color-warning {
+        color: var(--yellow-100);
+      }
     }
   }
 }
