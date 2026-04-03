@@ -496,14 +496,31 @@
         color: var(--grey-900);
         font-weight: 600;
       }
+
       &.badge-v2--blue {
         background-color: var(--blue-900);
       }
+
       &.badge-v2--orange {
         background-color: var(--yellow-100);
       }
+
       &.badge-v2--gray {
         background-color: var(--grey-40);
+      }
+
+      &.badge-v2--green .badge-v2__inner {
+        color: var(--white);
+      }
+
+      &--lighter {
+        &#{$this}--gray {
+          background-color: var(--grey-30);
+        }
+      }
+
+      &--stroke {
+        border-color: var(--grey-400);
       }
     }
   }

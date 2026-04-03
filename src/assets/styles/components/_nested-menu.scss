@@ -9,7 +9,7 @@
   background-color: var(--white);
   box-shadow: var(--shadow-3);
   border-radius: var(--border-radius-8);;
-  padding: var(--space-24);
+  padding: var(--space-8);
   overflow-y: auto;
 
   .collapse {
@@ -48,8 +48,13 @@
 
 [data-theme="dark"] {
   .nested-menu {
-    background-color: var(--grey-20);
+    background-color: var(--color-9);
+    //background-color: var(--grey-20);
     box-shadow: none;
     border: 1px solid var(--grey-40);
+
+    .select__option:hover {
+      border-radius: var(--size-8);
+    }
   }
 }

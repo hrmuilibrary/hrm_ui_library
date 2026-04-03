@@ -20,7 +20,7 @@
     color: var(--grey-900);
     background-color: var(--white);
     border: var(--border-size-1) solid var(--grey-200);
-    transition: background-color .3s linear, color .3s linear, border-color .3s linear;
+    //transition: background-color .3s linear, color .3s linear, border-color .3s linear;
     text-overflow: ellipsis;
 
     &:-ms-input-placeholder {
@@ -208,7 +208,7 @@
 
     input {
       border-color: var(--grey-40);
-      background-color: var(--grey-20);
+      background-color: var(--color-9);
       color: var(--grey-50);
 
       &:focus {

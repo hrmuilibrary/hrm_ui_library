@@ -376,9 +376,10 @@
       }
     }
     &--secondary {
-      background-color: var(--grey-20);
+      background-color: color-mix(in srgb, var(--color-5) 80%, transparent);
+      //background-color: var(--grey-20);
       border-color: var(--grey-40);
-      color: var(--grey-50);
+      color: var(--grey-800);
 
       svg path:not([fill]), svg circle:not([fill]), svg line:not([fill]) {
         fill: var(--grey-50);
@@ -388,7 +389,8 @@
       }
       &:not(#{$this}--loading) {
         &:hover {
-          background-color: var(--grey-20);
+          background-color: var(--color-1);
+          //background-color: var(--grey-20);
           border-color: var(--grey-30);
         }
 
@@ -408,6 +410,9 @@
     }
     &--tertiary {
       &:not(.btn--loading) {
+        &:hover {
+          background-color: var(--color-1);
+        }
         &[disabled] {
           background-color: var(--white);
           color: var(--grey-30);

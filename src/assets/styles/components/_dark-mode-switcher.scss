@@ -83,6 +83,7 @@
 [data-theme="dark"] {
   .theme-switch {
     &__track {
+      background-color: var(--color-1);
       border-color: var(--grey-40);
     }
 
