@@ -1,3 +1,10 @@
+## [3.1.65](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.64...3.1.65) (2026-04-07)
+
+
+### Bug Fixes
+
+* ressolve search for all Select components ([8059241](https://github.com/hrmuilibrary/hrm_ui_library/commit/8059241e4d2a77557f64356e6ca6f93eafe94f00))
+
 ## [3.1.64](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.63...3.1.64) (2026-04-03)
 
 
