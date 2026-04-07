@@ -1,3 +1,10 @@
+## [3.1.66](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.65...3.1.66) (2026-04-07)
+
+
+### Bug Fixes
+
+* change getCurrentWeekWorkdaysRange function direction ([e6a4426](https://github.com/hrmuilibrary/hrm_ui_library/commit/e6a44261dfb05592d1b3fb6ff5cc79d08b25b895))
+
 ## [3.1.65](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.64...3.1.65) (2026-04-07)
 
 
