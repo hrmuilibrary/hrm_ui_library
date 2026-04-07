@@ -1,3 +1,10 @@
+## [3.1.67](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.66...3.1.67) (2026-04-07)
+
+
+### Bug Fixes
+
+* change destination of getCurrentWeekWorkdaysRange ([7666c13](https://github.com/hrmuilibrary/hrm_ui_library/commit/7666c13dcec877556c89ebdfecb8139360607293))
+
 ## [3.1.66](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.65...3.1.66) (2026-04-07)
 
 
