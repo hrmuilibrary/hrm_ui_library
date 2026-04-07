@@ -19,7 +19,7 @@ import IconChevronUp from '../../SVGIcons/IconChevronUp'
 import IconChevronDown from '../../SVGIcons/IconChevronDown'
 import { SELECT_TRANSLATIONS } from '../localization'
 import { Button } from '../../Button'
-import { filterOptions } from './helpers'
+import { filterSearchData } from './helpers'
 
 export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactElement | null => {
   const {
@@ -115,9 +115,7 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
   const currentSelection = (value as TItemValue) || selectedItem
   const localizations = { ...SELECT_TRANSLATIONS[language], ...translations }
 
-  const filteredData = useMemo(() => {
-    return filterOptions(options, searchValue)
-  }, [searchValue, options])
+  const filteredData = useMemo(() => filterSearchData(options, searchValue), [searchValue, options])
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (!isOpen) return
 

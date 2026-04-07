@@ -40,13 +40,10 @@ export const MultiSelectWithTabs = (props: TMultiSelectGroupedProps): React.Reac
 
   const currentTabData = options[activeTab].data
 
-  const filteredData = useMemo(() => {
-    if (!searchValue) {
-      return currentTabData
-    }
-
-    return filterSearchData(currentTabData, searchValue)
-  }, [searchValue, currentTabData])
+  const filteredData = useMemo(
+    () => filterSearchData(currentTabData, searchValue),
+    [searchValue, currentTabData]
+  )
 
   const clearAll = useCallback(() => {
     setAllSelected(false)
