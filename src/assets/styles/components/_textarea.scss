@@ -98,11 +98,11 @@
     $this: &;
 
     textarea {
-      background-color: var(--grey-0);
-      border-color: var(--grey-30);
+      background-color: var(--color-9);
+      border-color: var(--grey-40);
 
       &:valid {
-        background-color: var(--grey-0);
+        background-color: var(--color-9);
         border-color: var(--grey-40);
       }
     }
