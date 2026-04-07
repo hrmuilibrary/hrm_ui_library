@@ -1,4 +1,4 @@
-import React, { ReactElement, useCallback, useEffect, useMemo, useState } from 'react'
+import React, { ReactElement } from 'react'
 import { OptionItem } from '../../../../helperComponents/OptionItem'
 import { Empty } from '../../../Empty'
 import { Modal } from '../../../Modal'
@@ -6,7 +6,6 @@ import { Text } from '../../../Text'
 import { ITEM_SIZE_MOBILE } from '../../constants'
 import { Loading } from '../../SharedComponents'
 import { ISingleSelectMobileProps } from '../../types'
-import { filterOptions } from '../helpers'
 import { MobileTopContent } from './MobileTopContent'
 import { FixedSizeList as List } from 'react-window'
 
