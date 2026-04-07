@@ -92,9 +92,15 @@
     &-right {
       &:after {
         right: 100%;
-        border-color: transparent var(--white) transparent transparent ;
+        border-color: transparent var(--white) transparent transparent;
       }
     }
+  }
+}
+
+[data-theme="dark"] {
+  .popover {
+    background-color: var(--color-2);
   }
 }
 

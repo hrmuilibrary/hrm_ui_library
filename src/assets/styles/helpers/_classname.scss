@@ -404,16 +404,37 @@ $gaps: 4, 8, 12, 16;
       }
     }
   }
+  
+  // Scrollbar
+  --track-color: var(--color-1);
+  --thumb-color: color-mix(in srgb, var(--grey-800) 5%, transparent);
+  --thumb-color-hover: color-mix(in srgb, var(--grey-800) 15%, transparent);
+
+  /* Dark mode */
+  @media (prefers-color-scheme: dark) {
+    ::-webkit-scrollbar-track {
+      background-color: var(--track-color);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--track-color);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: var(--thumb-color-hover);
+    }
+  }
+
   .scrollbar {
     @-moz-document url-prefix() {
-      scrollbar-color: var(--grey-50) transparent;
+      scrollbar-color: var(--track-color);
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: var(--grey-30);
+      background-color: var(--track-color);
 
       &:hover {
-        background-color: var(--grey-20);
+        background-color: var(--thumb-color-hover);
       }
     }
   }

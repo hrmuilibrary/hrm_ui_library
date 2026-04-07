@@ -357,11 +357,11 @@
     $this: &;
 
     &--primary {
-      color: var(--grey-400);
+      color: var(--white);
       font-weight: 700;
 
       svg path:not([fill]), svg circle:not([fill]), svg line:not([fill]) {
-        fill: var(--grey-400);
+        fill: var(--white);
       }
       &:not(#{$this}--loading) {
         &[disabled] {
@@ -398,12 +398,12 @@
           background-color: var(--grey-20);
         }
         &[disabled] {
-          background-color: var(--grey-20);
+          background-color: var(--color-1);
           border-color: var(--grey-30);
-          color: var(--grey-30);
+          color: var(--grey-40);
 
           svg path {
-            fill: var(--grey-30);
+            fill: var(--grey-40);
           }
         }
       }

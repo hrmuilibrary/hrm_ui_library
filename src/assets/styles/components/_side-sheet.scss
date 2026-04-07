@@ -22,7 +22,7 @@
   --ds-side-sheet-footer-height: var(--space-64);
   --ds-side-sheet-footer-padding: var(--space-8) var(--space-24);
 
-  @include mixin.fixed(0,0,0,0);
+  @include mixin.fixed(0, 0, 0, 0);
   z-index: 999;
   background-color: var(--ds-side-sheet-overlay-bg);
 
@@ -34,13 +34,16 @@
     bottom: 0;
     width: 100%;
     background-color: var(--ds-side-sheet-bg);
+
     &--small {
       max-width: var(--ds-side-sheet-width-sm);
     }
+
     &--large {
       max-width: var(--ds-side-sheet-width-lg);
     }
-    &--mobile{
+
+    &--mobile {
       max-width: 100%;
     }
   }
@@ -71,11 +74,13 @@
       border-radius: 50%;
 
       z-index: 999;
+
       &__small {
-        left: calc(var(--ds-side-sheet-width-sm) / 2  - var(--size-16));
+        left: calc(var(--ds-side-sheet-width-sm) / 2 - var(--size-16));
       }
+
       &__large {
-        left: calc(var(--ds-side-sheet-width-lg) / 2  - var(--size-16));
+        left: calc(var(--ds-side-sheet-width-lg) / 2 - var(--size-16));
       }
     }
   }
@@ -98,7 +103,8 @@
     height: var(--ds-side-sheet-footer-height);
     padding: var(--ds-side-sheet-footer-padding);
     border-top: var(--ds-side-sheet-content-border-width) solid var(--ds-side-sheet-content-border-color);
-    &_buttons{
+
+    &_buttons {
       margin-left: auto;
       @include mixin.flexbox;
       @include mixin.align-items(center);
@@ -119,12 +125,16 @@
 [data-theme="dark"] {
   .side-sheet {
     $this: &;
+    background-color: color-mix(in srgb, var(--color-11) 60%, transparent);
+
     &__container {
-      background-color: var(--grey-0);
+      background-color: var(--color-5);
+      box-shadow: none;
       border-left: 1px solid var(--grey-40);
     }
+
     &__header, &__footer {
-    border-color: var(--grey-40);
+      border-color: var(--grey-40);
     }
   }
 }

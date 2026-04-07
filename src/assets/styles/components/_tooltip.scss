@@ -116,3 +116,9 @@
   }
 }
 
+[data-theme="dark"] {
+  .tooltip {
+    --ds-tooltip-bg: var(--color-2);
+  }
+}
+
