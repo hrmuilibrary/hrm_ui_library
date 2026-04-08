@@ -25,7 +25,7 @@
   filter: drop-shadow(#{var(--ds-tooltip-shadow)});
   max-width: var(--ds-tooltip-max-width);
   padding: var(--ds-tooltip-padding);
-  z-index: 9999;
+  z-index: 999999;
 
   &:after {
     content: "";
