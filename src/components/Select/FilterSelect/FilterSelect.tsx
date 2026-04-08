@@ -132,7 +132,7 @@ export const FilterSelect = (props: TFilterProps): ReactElement | null => {
             )}
           </div>
         </div>,
-        parentRef
+        document.body
       )}
     </>
   )

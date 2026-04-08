@@ -94,7 +94,7 @@ export const NestedMenu = ({
         <div className={classNames('nested-menu', className)} style={menuStyles} ref={setMenuRef}>
           <CollapseGroup items={_menuItems} />
         </div>,
-        parentRef
+        document.body
       )}
     </>
   )
