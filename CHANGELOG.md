@@ -1,3 +1,10 @@
+## [3.1.70](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.69...3.1.70) (2026-04-08)
+
+
+### Bug Fixes
+
+* update menu options to be rendered in body ([b322be5](https://github.com/hrmuilibrary/hrm_ui_library/commit/b322be5480f5ac4c77380fa89aeb5dec4dc2d445))
+
 ## [3.1.69](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.68...3.1.69) (2026-04-08)
 
 
