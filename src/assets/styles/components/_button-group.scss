@@ -69,14 +69,14 @@
   .button-group-item {
     &__primary {
       border-color: var(--grey-40);
-      background-color: var(--grey-20);
+      background-color: var(--color-5);
 
       &:hover {
-        background: var(--grey-30);
+        background-color: var(--color-7);
       }
 
       &.active {
-        background: var(--grey-30);
+        background: var(--grey-40);
       }
 
       &.disabled {

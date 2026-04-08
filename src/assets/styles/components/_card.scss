@@ -160,8 +160,8 @@
 
 [data-theme="dark"] {
   .card {
-    background-color: var(--grey-20);
-    border-color: var(--grey-30);
+    background-color: color-mix(in srgb, var(--grey-800) 5%, transparent);
+    border-color: var(--grey-40);
     color: var(--grey-100);
 
     &__content--footer {
@@ -170,7 +170,7 @@
 
     &__content {
       .card__divider {
-        background-color: var(--grey-50);
+        background-color: var(--grey-40);
       }
     }
   }
