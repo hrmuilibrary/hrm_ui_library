@@ -1,3 +1,10 @@
+## [3.1.71](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.70...3.1.71) (2026-04-08)
+
+
+### Bug Fixes
+
+* update tooltip to show over everything ([74fb6de](https://github.com/hrmuilibrary/hrm_ui_library/commit/74fb6de16b7104cb0432ced89a2c52f33c89c8cd))
+
 ## [3.1.70](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.69...3.1.70) (2026-04-08)
 
 
