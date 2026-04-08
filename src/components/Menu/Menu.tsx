@@ -93,7 +93,7 @@ export const Menu = (props: TMenuProps): ReactElement | null => {
             </>
           </>
         </div>,
-        parentRef
+        document.body
       )}
     </>
   )
