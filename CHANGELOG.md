@@ -1,3 +1,10 @@
+## [3.1.73](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.72...3.1.73) (2026-04-09)
+
+
+### Bug Fixes
+
+* add scrollbar styles ([a28f1e0](https://github.com/hrmuilibrary/hrm_ui_library/commit/a28f1e0c587d0c68e938faae1196cdacf4197a8a))
+
 ## [3.1.72](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.71...3.1.72) (2026-04-09)
 
 
