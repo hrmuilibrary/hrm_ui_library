@@ -384,7 +384,7 @@ $gaps: 4, 8, 12, 16;
 [data-theme="dark"] {
   .color {
     $color-type: (
-      primary: var(--grey-800),
+      primary: var(--grey-200),
       secondary: var(--color-10),
       tertiary: var(--grey-50),
       disabled: var(--grey-30),
@@ -404,38 +404,41 @@ $gaps: 4, 8, 12, 16;
       }
     }
   }
-  
-  // Scrollbar
-  --track-color: var(--color-1);
-  --thumb-color: color-mix(in srgb, var(--grey-800) 5%, transparent);
-  --thumb-color-hover: color-mix(in srgb, var(--grey-800) 15%, transparent);
+}
 
-  /* Dark mode */
-  @media (prefers-color-scheme: dark) {
-    ::-webkit-scrollbar-track {
-      background-color: var(--track-color);
-    }
+body {
+  --track-color: var(--grey-50);
+  --thumb-color: var(--grey-200);
+  --thumb-color-hover: var(--grey-300);
+  --track-width: var(--size-10);
+  --track-height: var(--size-10);
 
-    ::-webkit-scrollbar-thumb {
-      background-color: var(--track-color);
-    }
+  &[data-theme="dark"] {
+    --track-color: var(--color-1);
+    --thumb-color: var(--grey-40);
+    --thumb-color-hover: color-mix(in srgb, var(--grey-800) 15%, transparent);
+  }
+}
 
-    ::-webkit-scrollbar-thumb:hover {
+.scrollbar {
+  &::-webkit-scrollbar {
+    width: var(--track-width);
+    height: var(--track-height);
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--track-color);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--thumb-color);
+
+    &:hover {
       background-color: var(--thumb-color-hover);
     }
   }
 
-  .scrollbar {
-    @-moz-document url-prefix() {
-      scrollbar-color: var(--track-color);
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background-color: var(--track-color);
-
-      &:hover {
-        background-color: var(--thumb-color-hover);
-      }
-    }
+  @-moz-document url-prefix() {
+    scrollbar-color: var(--thumb-color) var(--track-color);
   }
 }
