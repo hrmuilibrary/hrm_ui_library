@@ -23,7 +23,7 @@
   --ds-side-sheet-footer-padding: var(--space-8) var(--space-24);
 
   @include mixin.fixed(0, 0, 0, 0);
-  z-index: 999;
+  z-index: 100;
   background-color: var(--ds-side-sheet-overlay-bg);
 
   &__container {
@@ -73,7 +73,7 @@
       bottom: calc(var(--size-16) * -1);
       border-radius: 50%;
 
-      z-index: 999;
+      z-index: 100;
 
       &__small {
         left: calc(var(--ds-side-sheet-width-sm) / 2 - var(--size-16));
