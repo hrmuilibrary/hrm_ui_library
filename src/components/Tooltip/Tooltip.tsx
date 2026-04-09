@@ -3,6 +3,7 @@ import classNames from 'classnames'
 import { Text } from '../Text'
 import { useGetTooltipStyles, useHideOnScroll } from '../../hooks'
 import { Positions, TTooltipProps } from './types'
+import { createPortal } from 'react-dom'
 
 export const Tooltip = (props: TTooltipProps): React.ReactElement | null => {
   const tooltipRef = useRef<HTMLDivElement | null>(null)
@@ -66,7 +67,7 @@ export const Tooltip = (props: TTooltipProps): React.ReactElement | null => {
     return null
   }
 
-  return (
+  return createPortal(
     <div
       style={tooltipStyles}
       data-id={dataId}
@@ -83,6 +84,7 @@ export const Tooltip = (props: TTooltipProps): React.ReactElement | null => {
       >
         {text}
       </Text>
-    </div>
+    </div>,
+    document.body
   )
 }

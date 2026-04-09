@@ -1,3 +1,31 @@
+## [3.1.72](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.71...3.1.72) (2026-04-09)
+
+
+### Bug Fixes
+
+* resolve tooltip to be rendered in body, change z-indexes ([39ba0f8](https://github.com/hrmuilibrary/hrm_ui_library/commit/39ba0f807a8db995a8f62d613ab440c517776bc0))
+
+## [3.1.71](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.70...3.1.71) (2026-04-08)
+
+
+### Bug Fixes
+
+* update tooltip to show over everything ([74fb6de](https://github.com/hrmuilibrary/hrm_ui_library/commit/74fb6de16b7104cb0432ced89a2c52f33c89c8cd))
+
+## [3.1.70](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.69...3.1.70) (2026-04-08)
+
+
+### Bug Fixes
+
+* update menu options to be rendered in body ([b322be5](https://github.com/hrmuilibrary/hrm_ui_library/commit/b322be5480f5ac4c77380fa89aeb5dec4dc2d445))
+
+## [3.1.69](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.68...3.1.69) (2026-04-08)
+
+
+### Bug Fixes
+
+* add dark mode styles for some components ([da5105a](https://github.com/hrmuilibrary/hrm_ui_library/commit/da5105ae16517f9f506c4301fb13cdcc6498a002))
+
 ## [3.1.68](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.67...3.1.68) (2026-04-07)
 
 
