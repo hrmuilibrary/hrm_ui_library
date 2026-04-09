@@ -1,3 +1,10 @@
+## [3.1.72](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.71...3.1.72) (2026-04-09)
+
+
+### Bug Fixes
+
+* resolve tooltip to be rendered in body, change z-indexes ([39ba0f8](https://github.com/hrmuilibrary/hrm_ui_library/commit/39ba0f807a8db995a8f62d613ab440c517776bc0))
+
 ## [3.1.71](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.70...3.1.71) (2026-04-08)
 
 
