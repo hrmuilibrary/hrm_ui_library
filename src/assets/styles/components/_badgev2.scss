@@ -498,7 +498,7 @@
       }
 
       &.badge-v2--blue {
-        background-color: var(--blue-900);
+        background-color: var(--blue-800);
       }
 
       &.badge-v2--orange {
@@ -524,4 +524,8 @@
       }
     }
   }
+}
+
+[data-theme=dark] .badge-v2--filled.badge-v2--blue {
+  background-color: var(--blue-800);
 }
