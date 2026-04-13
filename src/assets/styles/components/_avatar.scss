@@ -113,7 +113,7 @@
     }
   }
 
-  &--image {
+  & &--image {
     @include mixin.flexbox;
     @include mixin.align-items(center);
     @include mixin.justify-content(center);
