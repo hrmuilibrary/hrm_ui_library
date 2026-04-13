@@ -1,3 +1,10 @@
+## [3.1.75](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.74...3.1.75) (2026-04-13)
+
+
+### Bug Fixes
+
+* add new component `vacation` ([86ad290](https://github.com/hrmuilibrary/hrm_ui_library/commit/86ad29017005a384b661c428eea310f9aa11608c))
+
 ## [3.1.74](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.73...3.1.74) (2026-04-10)
 
 
