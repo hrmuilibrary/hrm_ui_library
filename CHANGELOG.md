@@ -1,3 +1,10 @@
+## [3.1.76](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.75...3.1.76) (2026-04-13)
+
+
+### Bug Fixes
+
+* add handler for avatarClick ([91d81fa](https://github.com/hrmuilibrary/hrm_ui_library/commit/91d81fa0770a883d01c7b1d77d7161f5f76d756b))
+
 ## [3.1.75](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.74...3.1.75) (2026-04-13)
 
 
