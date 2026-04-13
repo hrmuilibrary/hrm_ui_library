@@ -1,3 +1,10 @@
+## [3.1.79](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.78...3.1.79) (2026-04-13)
+
+
+### Bug Fixes
+
+* add dark mode for chips info case ([ad469b9](https://github.com/hrmuilibrary/hrm_ui_library/commit/ad469b9e7989f7b8e86d026f8ca46f088c0df931))
+
 ## [3.1.78](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.77...3.1.78) (2026-04-13)
 
 
