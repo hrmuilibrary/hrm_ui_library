@@ -41,6 +41,9 @@ Avatar.args = {
   imagePath: image.src,
   onAvatarChange: (file: File) => {
     console.log(file)
+  },
+  onAvatarClick: () => {
+    console.log('Avatar clicked')
   }
 }
 

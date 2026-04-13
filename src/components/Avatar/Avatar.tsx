@@ -16,7 +16,8 @@ export const Avatar = ({
   allowedTypes = '.png, .jpg, .jpeg, image/jpeg, image/png, image/jpg',
   onError,
   fileAllowedSize,
-  onAvatarChange
+  onAvatarChange,
+  onAvatarClick
 }: TAvatarProps): ReactElement => {
   const [image, setImage] = useState(imagePath)
   const getFiles = (files: File[]) => {
@@ -38,11 +39,16 @@ export const Avatar = ({
       id={id}
       data-id={dataId}
       className={classNames(`avatar avatar--${color} avatar--${type} avatar--${size}`, className, {
-        'avatar--image': image,
         'avatar--edit': isEditable
       })}
-      style={style}
     >
+      <div
+        className={classNames({
+          'avatar--image': image
+        })}
+        onClick={onAvatarClick}
+        style={style}
+      />
       {!image ? initials : null}
       {isEditable && (
         <FileUpload
