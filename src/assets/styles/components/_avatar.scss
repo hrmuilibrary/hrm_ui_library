@@ -123,6 +123,7 @@
     transition: background-color .3s linear, color .3s linear;
     background: no-repeat center;
     background-size: cover;
+    border-radius: 50%;
 
     &:after {
       content: '';
