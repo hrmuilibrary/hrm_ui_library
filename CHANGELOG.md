@@ -1,3 +1,10 @@
+## [3.1.78](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.77...3.1.78) (2026-04-13)
+
+
+### Bug Fixes
+
+* resolve avatar image styles ([cb98ab0](https://github.com/hrmuilibrary/hrm_ui_library/commit/cb98ab068f080d181581126f2e3d99648e289e5b))
+
 ## [3.1.77](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.76...3.1.77) (2026-04-13)
 
 
