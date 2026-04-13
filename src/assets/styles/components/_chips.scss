@@ -345,5 +345,9 @@
       color: var(--white);
       font-weight: var(--font-weight-900);
     }
+
+    &--filled:not(.chips--filled.chips--disabled).chips--information .chips__label {
+      color: var(--white);
+    }
   }
 }
