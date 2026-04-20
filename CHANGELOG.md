@@ -1,3 +1,17 @@
+## [3.1.81](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.80...3.1.81) (2026-04-20)
+
+
+### Bug Fixes
+
+* show full value text then meta in select ([b58ec6a](https://github.com/hrmuilibrary/hrm_ui_library/commit/b58ec6acbe42257d1b6c32f609714b53ec3880e9))
+
+## [3.1.80](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.79...3.1.80) (2026-04-20)
+
+
+### Bug Fixes
+
+* resolve icon resizing issue ([0cf1686](https://github.com/hrmuilibrary/hrm_ui_library/commit/0cf168673d1202c92edec9582270dee85d14f658))
+
 ## [3.1.79](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.78...3.1.79) (2026-04-13)
 
 
