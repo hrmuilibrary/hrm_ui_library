@@ -68,9 +68,6 @@ const Avatars = [
     initials: 'T M'
   },
   {
-    imagePath: image.src
-  },
-  {
     initials: 'T M'
   },
   {
