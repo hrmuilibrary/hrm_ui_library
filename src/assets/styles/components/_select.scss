@@ -92,7 +92,8 @@
 
 
     &__text {
-      @include mixin.truncate(calc(100%));
+      max-width: 100%;
+      white-space: nowrap;
 
       &__large {
         font-size: var(--font-size-14);
@@ -100,7 +101,7 @@
     }
 
     &__meta {
-      white-space: nowrap;
+      @include mixin.truncate(calc(100%));
       color: var(--grey-500);
 
       &:before {
