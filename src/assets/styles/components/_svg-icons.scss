@@ -5,6 +5,7 @@
   @include mixin.align-items(center);
   @include mixin.justify-content(center);
   width: 1em;
+  min-width: 1em;
   height: 1em;
   vertical-align: top;
   font-size: var(--size-24);
