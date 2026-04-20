@@ -107,8 +107,7 @@ export enum STORE_KEYS {
   isAuthenticated = 'isAuthenticated',
   personId = 'personId',
   isMobile = 'isMobile',
-  staffListColumns = 'staffListColumns',
-  themeMode = 'themeMode'
+  staffListColumns = 'staffListColumns'
 }
 
 export enum ThemeMode {

@@ -100,8 +100,10 @@ export const generateDataTestId = (postfix: string, dataId?: string): string => 
   return `${dataId}-${postfix}`
 }
 
-export const clearStorage = () => {
-  for (const key in STORE_KEYS) {
-    localStorage.removeItem(key)
-  }
+export const clearStorage = (preservedKeys: STORE_KEYS[] = [STORE_KEYS.theme]) => {
+  Object.values(STORE_KEYS).forEach((key) => {
+    if (!preservedKeys.includes(key)) {
+      localStorage.removeItem(key)
+    }
+  })
 }
