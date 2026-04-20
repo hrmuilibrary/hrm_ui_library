@@ -1,3 +1,10 @@
+## [3.1.82](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.81...3.1.82) (2026-04-20)
+
+
+### Bug Fixes
+
+* preserve local storage keys ([69ebff0](https://github.com/hrmuilibrary/hrm_ui_library/commit/69ebff01e2881ca05c1f1010c06c62349482fdec))
+
 ## [3.1.81](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.80...3.1.81) (2026-04-20)
 
 
