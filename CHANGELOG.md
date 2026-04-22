@@ -1,3 +1,10 @@
+## [3.1.85](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.84...3.1.85) (2026-04-22)
+
+
+### Bug Fixes
+
+* resolve bug on search if typing space ([eb85e9d](https://github.com/hrmuilibrary/hrm_ui_library/commit/eb85e9d8e79a772475c1d9de6cccb9102719b89d))
+
 ## [3.1.84](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.83...3.1.84) (2026-04-22)
 
 
