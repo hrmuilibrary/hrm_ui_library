@@ -1,3 +1,10 @@
+## [3.1.84](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.83...3.1.84) (2026-04-22)
+
+
+### Bug Fixes
+
+* add more concrete search for selects ([3cb5b20](https://github.com/hrmuilibrary/hrm_ui_library/commit/3cb5b20dacca7455314d17e9392e9bcf5b9d1c4c))
+
 ## [3.1.83](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.82...3.1.83) (2026-04-22)
 
 
