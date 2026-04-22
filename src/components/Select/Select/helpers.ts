@@ -19,6 +19,7 @@ export const filterSearchData = (data: TSelectOptions, searchString: string): TS
   const tokens = searchString
     .toLowerCase()
     .split(/\s+/)
+    .filter(Boolean)
     .sort((a, b) => b.length - a.length)
   return data.filter(({ label }) => containsSearchString(label.toString().toLowerCase(), tokens))
 }
