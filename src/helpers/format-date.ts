@@ -1,6 +1,9 @@
 ﻿import dayjs from 'dayjs'
 import utc from 'dayjs/plugin/utc'
 import { getDayJSLocale } from './locale'
+import 'dayjs/locale/hy-am'
+import 'dayjs/locale/ru'
+import 'dayjs/locale/en'
 
 dayjs.extend(utc)
 
