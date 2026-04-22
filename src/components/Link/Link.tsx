@@ -11,6 +11,7 @@ export const Link = (props: LinkPropTypes): ReactElement => {
     url,
     dataId = '',
     target,
+    type = 'brand',
     onclick
   } = props
   return beforeLink || afterLink ? (
@@ -24,7 +25,7 @@ export const Link = (props: LinkPropTypes): ReactElement => {
           }
         }}
         href={url}
-        className={'link'}
+        className={`link link-${type}`}
         data-id={dataId ? `${dataId}-link` : ''}
         target={target}
       >
@@ -41,7 +42,7 @@ export const Link = (props: LinkPropTypes): ReactElement => {
         }
       }}
       href={url}
-      className={classNames(`link ${className}`)}
+      className={classNames(`link ${className} link-${type}`)}
       data-id={dataId ? `${dataId}-link` : ''}
       target={target}
     >

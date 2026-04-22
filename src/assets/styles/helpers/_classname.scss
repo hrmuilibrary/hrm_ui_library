@@ -156,6 +156,7 @@ $space-prefixes: (
   @each $type, $color in $color-type {
     &-#{$type} {
       color: $color;
+      text-decoration-color: $color;
     }
   }
 }
@@ -401,6 +402,7 @@ $gaps: 4, 8, 12, 16;
     @each $type, $color in $color-type {
       &-#{$type} {
         color: $color;
+        text-decoration-color: $color;
       }
     }
   }

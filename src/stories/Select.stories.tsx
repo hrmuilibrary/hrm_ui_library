@@ -995,6 +995,18 @@ const MOCK_DATA: TSelectOptions = [
   {
     value: 202,
     label: 'Armen Gevorgyan'
+  },
+  {
+    value: 203,
+    label: 'Hakob Hakobyan'
+  },
+  {
+    value: 204,
+    label: 'Armen Hakobyan'
+  },
+  {
+    value: 205,
+    label: 'Hakob Gevorgyan'
   }
 ]
 
