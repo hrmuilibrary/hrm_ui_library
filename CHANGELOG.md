@@ -1,3 +1,10 @@
+## [3.1.86](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.85...3.1.86) (2026-04-22)
+
+
+### Bug Fixes
+
+* update Link component to have different types ([13b61a8](https://github.com/hrmuilibrary/hrm_ui_library/commit/13b61a82a37f49a34bfb611254f0fc92f83ffe71))
+
 ## [3.1.85](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.84...3.1.85) (2026-04-22)
 
 
