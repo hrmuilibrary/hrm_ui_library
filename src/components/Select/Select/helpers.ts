@@ -1,13 +1,24 @@
-function containsSearchString(source: string | number, searchString: string): boolean {
-  const sourceWords = String(source).toLowerCase()
-  const targetWords = searchString.toLowerCase().split(/\s+/)
+function containsSearchString(source: string, tokens: string[]): boolean {
+  return tokens.reduce(
+    ({ contains, sourceStr }, w) => {
+      const remainingStr = sourceStr.replace(w, '')
 
-  return targetWords.every((word) => sourceWords.includes(word))
+      return {
+        contains: contains && remainingStr.length < sourceStr.length,
+        sourceStr: remainingStr
+      }
+    },
+    { contains: true, sourceStr: source }
+  ).contains
 }
 
 export const filterSearchData = (data: TSelectOptions, searchString: string): TSelectOptions => {
   if (!searchString) {
     return data
   }
-  return data.filter(({ label }) => containsSearchString(label, searchString))
+  const tokens = searchString
+    .toLowerCase()
+    .split(/\s+/)
+    .sort((a, b) => b.length - a.length)
+  return data.filter(({ label }) => containsSearchString(label.toString().toLowerCase(), tokens))
 }
