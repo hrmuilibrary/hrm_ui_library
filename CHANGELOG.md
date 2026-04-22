@@ -1,3 +1,10 @@
+## [3.1.83](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.82...3.1.83) (2026-04-22)
+
+
+### Bug Fixes
+
+* add locale support for format date ([f61a1a1](https://github.com/hrmuilibrary/hrm_ui_library/commit/f61a1a1eb14c84c69a7a2aebbb2c0e1ff6273542))
+
 ## [3.1.82](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.81...3.1.82) (2026-04-20)
 
 
