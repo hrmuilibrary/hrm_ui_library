@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement, useEffect, useRef } from 'react'
 import IconChevronLeft from '../../../SVGIcons/IconChevronLeft'
 import { Input } from '../../../Input'
 import IconDismissFilled from '../../../SVGIcons/IconDismissFilled'
@@ -16,6 +16,8 @@ export const MobileTopContent = ({
   searchValue,
   withSearch
 }: TProps): ReactElement => {
+  const inputRef = useRef<HTMLInputElement | null>(null)
+
   const onSearch = (e: TChangeEventType) => {
     setSearchValue(e.target.value)
   }
@@ -23,6 +25,12 @@ export const MobileTopContent = ({
   const removeFilter = () => {
     setSearchValue('')
   }
+
+  useEffect(() => {
+    if (inputRef && inputRef.current) {
+      inputRef.current.focus()
+    }
+  }, [inputRef])
   return (
     <div className="flexbox mobile_top_content">
       <IconChevronLeft onClick={onBack} size="large" />
@@ -32,6 +40,7 @@ export const MobileTopContent = ({
           handleChange={onSearch}
           className="ml-8"
           size="small"
+          ref={inputRef}
           rightIconProps={{
             Component: searchValue ? IconDismissFilled : IconSearchFilled,
             size: searchValue ? 'xsmall' : 'small',
