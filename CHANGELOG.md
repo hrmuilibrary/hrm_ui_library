@@ -1,3 +1,11 @@
+## [3.1.89](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.88...3.1.89) (2026-04-23)
+
+
+### Bug Fixes
+
+* commit ([aa220e9](https://github.com/hrmuilibrary/hrm_ui_library/commit/aa220e9b13cce394a1d2d9b626762df3d709522c))
+* mobile search input focus ([92a8fcc](https://github.com/hrmuilibrary/hrm_ui_library/commit/92a8fccf4e22f69ad60c9f97b45b480f9708e482))
+
 ## [3.1.88](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.87...3.1.88) (2026-04-23)
 
 
