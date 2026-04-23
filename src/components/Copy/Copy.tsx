@@ -12,7 +12,7 @@ export const Copy = ({ textAfterCopy, className = '', text, dataId }: TCopyProps
     e.stopPropagation()
     navigator.clipboard.writeText(text)
     setTooltipVisibility(true)
-    setTimeout(() => setTooltipVisibility(false), 3000)
+    setTimeout(() => setTooltipVisibility(false), 1000)
   }
 
   return (
