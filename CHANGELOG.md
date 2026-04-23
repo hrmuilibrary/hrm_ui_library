@@ -1,3 +1,10 @@
+## [3.1.88](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.87...3.1.88) (2026-04-23)
+
+
+### Bug Fixes
+
+* remove unnecessary css import ([ce8cc01](https://github.com/hrmuilibrary/hrm_ui_library/commit/ce8cc0168ef0ae36c2cd76a79548a2c9b6791e1f))
+
 ## [3.1.87](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.86...3.1.87) (2026-04-23)
 
 
