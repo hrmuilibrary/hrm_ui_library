@@ -1,3 +1,11 @@
+## [3.1.87](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.86...3.1.87) (2026-04-23)
+
+
+### Bug Fixes
+
+* change copy icon info visibility duration ([a75987a](https://github.com/hrmuilibrary/hrm_ui_library/commit/a75987aaad51adb80536d3364cfaccfd2028f4a7))
+* foxus input in mobile search ([4d939d0](https://github.com/hrmuilibrary/hrm_ui_library/commit/4d939d0b653fbb555d8c7453523db1c049328bc1))
+
 ## [3.1.86](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.85...3.1.86) (2026-04-22)
 
 
