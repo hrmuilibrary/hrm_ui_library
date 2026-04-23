@@ -156,7 +156,7 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
   }, [setCurrentSelectedLabel])
 
   useEffect(() => {
-    if(withSearch && inputRef && inputRef.current && isMobile) {
+    if (withSearch && inputRef && inputRef.current && isMobile) {
       inputRef.current.focus()
     }
   }, [isMobile, inputRef.current, withSearch])
@@ -191,7 +191,6 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
           autoComplete="false"
           readOnly={(isMobile && isMobileFullScreen) || !isWithSearch}
           onKeyDown={handleKeyDown}
-          
         />
       )}
       {/*// TODO add buttonSelect option for desktop view*/}
