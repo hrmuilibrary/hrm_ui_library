@@ -155,6 +155,12 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
     setCurrentSelectedLabel()
   }, [setCurrentSelectedLabel])
 
+  useEffect(() => {
+    if(withSearch && inputRef && inputRef.current && isMobile) {
+      inputRef.current.focus()
+    }
+  }, [isMobile, inputRef.current, withSearch])
+
   return (
     <div
       data-id={`${dataId}-content`}
@@ -185,6 +191,7 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
           autoComplete="false"
           readOnly={(isMobile && isMobileFullScreen) || !isWithSearch}
           onKeyDown={handleKeyDown}
+          
         />
       )}
       {/*// TODO add buttonSelect option for desktop view*/}
