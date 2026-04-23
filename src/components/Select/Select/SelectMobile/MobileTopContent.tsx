@@ -17,7 +17,7 @@ export const MobileTopContent = ({
   withSearch
 }: TProps): ReactElement => {
   const inputRef = useRef<HTMLInputElement | null>(null)
-  
+
   const onSearch = (e: TChangeEventType) => {
     setSearchValue(e.target.value)
   }
@@ -27,7 +27,7 @@ export const MobileTopContent = ({
   }
 
   useEffect(() => {
-    if(inputRef && inputRef.current){
+    if (inputRef && inputRef.current) {
       inputRef.current.focus()
     }
   }, [inputRef])

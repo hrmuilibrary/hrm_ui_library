@@ -155,7 +155,6 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
     setCurrentSelectedLabel()
   }, [setCurrentSelectedLabel])
 
-
   return (
     <div
       data-id={`${dataId}-content`}
