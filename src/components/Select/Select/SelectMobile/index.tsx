@@ -57,6 +57,7 @@ export const SelectMobile = (props: ISingleSelectMobileProps): ReactElement => {
         setSearchValue={setSearchValue}
         onBack={closeModal}
         withSearch={withSearch}
+        isOpen={isOpen}
       />
       <div className="mobile_options_content">
         {innerHelperText ? (

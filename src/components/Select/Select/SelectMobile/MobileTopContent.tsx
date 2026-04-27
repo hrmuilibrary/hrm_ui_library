@@ -9,12 +9,14 @@ type TProps = {
   setSearchValue: (value: string) => void
   onBack: () => void
   withSearch: boolean
+  isOpen: boolean
 }
 export const MobileTopContent = ({
   onBack,
   setSearchValue,
   searchValue,
-  withSearch
+  withSearch,
+  isOpen
 }: TProps): ReactElement => {
   const inputRef = useRef<HTMLInputElement | null>(null)
 
@@ -27,10 +29,10 @@ export const MobileTopContent = ({
   }
 
   useEffect(() => {
-    if (inputRef && inputRef.current) {
+    if (isOpen && inputRef && inputRef.current) {
       inputRef.current.focus()
     }
-  }, [inputRef])
+  }, [inputRef.current])
   return (
     <div className="flexbox mobile_top_content">
       <IconChevronLeft onClick={onBack} size="large" />
