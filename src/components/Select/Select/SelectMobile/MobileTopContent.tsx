@@ -29,12 +29,11 @@ export const MobileTopContent = ({
   }
 
   useEffect(() => {
-    console.log(isOpen)
-    if (isOpen && inputRef && inputRef.current) {
+    if (inputRef && inputRef.current) {
       inputRef.current.focus()
     }
-  }, [inputRef.current, isOpen])
-  
+  }, [inputRef.current])
+
   return (
     <div className="flexbox mobile_top_content">
       <IconChevronLeft onClick={onBack} size="large" />
