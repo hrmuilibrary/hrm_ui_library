@@ -1,3 +1,10 @@
+## [3.1.92](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.91...3.1.92) (2026-04-27)
+
+
+### Bug Fixes
+
+* remove log ([bc9f184](https://github.com/hrmuilibrary/hrm_ui_library/commit/bc9f1842d356abf101a6de1e7e13f0b001927131))
+
 ## [3.1.91](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.90...3.1.91) (2026-04-27)
 
 
