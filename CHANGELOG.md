@@ -1,3 +1,10 @@
+## [3.1.90](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.89...3.1.90) (2026-04-27)
+
+
+### Bug Fixes
+
+* test for select focus on mobile ([b19785d](https://github.com/hrmuilibrary/hrm_ui_library/commit/b19785d40128340d1ebe4dad28f2229e38bb366e))
+
 ## [3.1.89](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.88...3.1.89) (2026-04-23)
 
 
