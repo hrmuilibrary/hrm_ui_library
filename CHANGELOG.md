@@ -1,3 +1,10 @@
+## [3.1.93](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.92...3.1.93) (2026-04-28)
+
+
+### Bug Fixes
+
+* update modal to be rendered in body ([116aba1](https://github.com/hrmuilibrary/hrm_ui_library/commit/116aba1c71df730064187318366bedca0f5ba0d5))
+
 ## [3.1.92](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.91...3.1.92) (2026-04-27)
 
 
