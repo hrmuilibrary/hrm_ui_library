@@ -7,6 +7,7 @@ import { ModalContent } from './ModalContent'
 import { useIsMobile } from '../../hooks/useGetIsMobile'
 import classNames from 'classnames'
 import { useEscapeKey } from '../../hooks/useEscapeKey'
+import { createPortal } from 'react-dom'
 
 export const Modal = ({
   isOpen,
@@ -33,7 +34,7 @@ export const Modal = ({
     return null
   }
 
-  return (
+  return createPortal(
     <div className={classnames('modal', `modal--${size}`, `modal--${animationState}`, className)}>
       <div
         className={classNames('modal__container', `modal__container--${animationState}`, {
@@ -44,6 +45,7 @@ export const Modal = ({
       >
         <ModalContent {...rest} onClose={onClose} />
       </div>
-    </div>
+    </div>,
+    document.body
   )
 }
