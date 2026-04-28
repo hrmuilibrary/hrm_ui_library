@@ -1,0 +1,12 @@
+import{j as t}from"./jsx-runtime-7fv8tTCu.js";import{c as u}from"./index-t9KkYCCn.js";const p=o=>{const{children:r,afterLink:i,beforeLink:s,className:l="",url:m,dataId:e="",target:c,type:d="brand",onclick:a}=o;return s||i?t.jsxs("span",{className:l,children:[s,t.jsx("a",{onClick:n=>{a&&(n.preventDefault(),a())},href:m,className:`link link-${d}`,"data-id":e?`${e}-link`:"",target:c,children:r}),i]}):t.jsx("a",{onClick:n=>{a&&(n.preventDefault(),a())},href:m,className:u(`link ${l} link-${d}`),"data-id":e?`${e}-link`:"",target:c,children:r})};p.__docgenInfo={description:"",methods:[],displayName:"Link",props:{children:{required:!1,tsType:{name:"union",raw:"string | React.ReactElement",elements:[{name:"string"},{name:"ReactReactElement",raw:"React.ReactElement"}]},description:""},className:{required:!1,tsType:{name:"string"},description:""},type:{required:!1,tsType:{name:"union",raw:`| 'primary'
+| 'secondary'
+| 'tertiary'
+| 'disabled'
+| 'inverse'
+| 'selected'
+| 'brand'
+| 'danger'
+| 'warning'
+| 'success'
+| 'information'
+| 'discovery'`,elements:[{name:"literal",value:"'primary'"},{name:"literal",value:"'secondary'"},{name:"literal",value:"'tertiary'"},{name:"literal",value:"'disabled'"},{name:"literal",value:"'inverse'"},{name:"literal",value:"'selected'"},{name:"literal",value:"'brand'"},{name:"literal",value:"'danger'"},{name:"literal",value:"'warning'"},{name:"literal",value:"'success'"},{name:"literal",value:"'information'"},{name:"literal",value:"'discovery'"}]},description:""},url:{required:!1,tsType:{name:"string"},description:""},dataId:{required:!1,tsType:{name:"string"},description:""},target:{required:!1,tsType:{name:"string"},description:""},beforeLink:{required:!1,tsType:{name:"union",raw:"string | React.ReactElement",elements:[{name:"string"},{name:"ReactReactElement",raw:"React.ReactElement"}]},description:""},afterLink:{required:!1,tsType:{name:"union",raw:"string | React.ReactElement",elements:[{name:"string"},{name:"ReactReactElement",raw:"React.ReactElement"}]},description:""},onclick:{required:!1,tsType:{name:"signature",type:"function",raw:"() => void",signature:{arguments:[],return:{name:"void"}}},description:""}}};export{p as L};
