@@ -6,6 +6,7 @@ import { Button } from '../Button'
 import { Text } from '../Text'
 import { TModalConfirmationPropTypes } from './types'
 import { useEscapeKey } from '../../hooks/useEscapeKey'
+import { createPortal } from 'react-dom'
 
 export const ModalConfirmation = ({
   isOpen,
@@ -35,7 +36,7 @@ export const ModalConfirmation = ({
     return null
   }
 
-  return (
+  return createPortal(
     <div
       className={classnames(
         'modal modal--confirmation',
@@ -90,6 +91,7 @@ export const ModalConfirmation = ({
           ) : null}
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   )
 }
