@@ -1,3 +1,10 @@
+## [3.1.94](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.93...3.1.94) (2026-04-28)
+
+
+### Bug Fixes
+
+* resolve styles on mobile fullscreen ([1982bb2](https://github.com/hrmuilibrary/hrm_ui_library/commit/1982bb2e8c47ef2bf5bd6744d8ac7ffbaab4e532))
+
 ## [3.1.93](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.92...3.1.93) (2026-04-28)
 
 
