@@ -1,3 +1,10 @@
+## [3.1.95](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.94...3.1.95) (2026-05-06)
+
+
+### Bug Fixes
+
+* for semantic version ([66c2eff](https://github.com/hrmuilibrary/hrm_ui_library/commit/66c2eff8be9212d1bf45b41280c81418de7ac76b))
+
 ## [3.1.94](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.93...3.1.94) (2026-04-28)
 
 
