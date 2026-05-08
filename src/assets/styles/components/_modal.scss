@@ -150,11 +150,11 @@
     $this: &;
 
     &--entered {
-      background-color: color-mix(in srgb, var(--color-11) 60%, transparent);
+      background-color: color-mix(in srgb, var(--color-12) 50%, transparent);
     }
 
     &__container {
-      background-color: var(--color-5);
+      background-color: var(--color-9);
       box-shadow: none;
     }
 

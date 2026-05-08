@@ -1,0 +1,54 @@
+.bar {
+  display: flex;
+  width: 100%;
+  height: var(--size-8);
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.bar__segment {
+  transition: flex-basis 0.8s ease;
+
+  &--color {
+    $color-type: (
+      blue: var(--blue-500),
+      purple: var(--purple-500),
+      yellow: var(--yellow-500),
+      pink: var(--pink-500),
+      green: var(--brand-500),
+      grey: var(--grey-500),
+      red: var(--red-500)
+    );
+
+    @each $type, $color in $color-type {
+      &-#{$type} {
+        background-color: $color;
+      }
+    }
+  }
+}
+.line-chart-status {
+  .status__circle {
+    width: var(--size-8);
+    height: var(--size-8);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: var(--size-8);
+
+    $color-type: (
+      blue: var(--blue-500),
+      purple: var(--purple-500),
+      yellow: var(--yellow-500),
+      pink: var(--pink-500),
+      green: var(--brand-500),
+      grey: var(--grey-500),
+      red: var(--red-500)
+    );
+
+    @each $type, $color in $color-type {
+      &--#{$type} {
+        background-color: $color;
+      }
+    }
+  }
+}
