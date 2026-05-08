@@ -1,3 +1,10 @@
+## [3.1.96](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.95...3.1.96) (2026-05-08)
+
+
+### Bug Fixes
+
+* create LineChart ([8cfe720](https://github.com/hrmuilibrary/hrm_ui_library/commit/8cfe7201685f7480de8e6e82a85acc8561924db7))
+
 ## [3.1.95](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.94...3.1.95) (2026-05-06)
 
 
