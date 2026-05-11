@@ -1,3 +1,0 @@
-import{j as n}from"./jsx-runtime-Bw66X12A.js";import{P as t}from"./Progress-y_QSD__w.js";import"./iframe-CeX1-gjJ.js";import"./preload-helper-Dp1pzeXC.js";const g={title:"Progress",component:t,argTypes:{type:{options:["linear","circle"],control:{type:"radio"}},size:{options:["large","small"],control:{type:"radio"}}}},p=a=>n.jsx(t,{...a}),r=p.bind({});r.args={type:"linear",size:"large",percent:30,noText:!1,dimension:0,loop:!1};var e,s,o;r.parameters={...r.parameters,docs:{...(e=r.parameters)==null?void 0:e.docs,source:{originalSource:`args => {
-  return <_Progress {...args} />;
-}`,...(o=(s=r.parameters)==null?void 0:s.docs)==null?void 0:o.source}}};const d=["Progress"];export{r as Progress,d as __namedExportsOrder,g as default};
