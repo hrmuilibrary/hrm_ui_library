@@ -1,3 +1,10 @@
+## [3.1.97](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.96...3.1.97) (2026-05-11)
+
+
+### Bug Fixes
+
+* upodate styles for linechart ([68a566d](https://github.com/hrmuilibrary/hrm_ui_library/commit/68a566dfd5e49d487ee199ec602078538f28312b))
+
 ## [3.1.96](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.95...3.1.96) (2026-05-08)
 
 
