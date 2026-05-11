@@ -41,7 +41,7 @@ export const LineChart = ({ data }: TLineChartProps): React.ReactElement => {
                 >
                   <div className="flexbox align-items--center">
                     <span className={classNames('status__circle', `status__circle--${color}`)} />
-                    <Text type="disabled">{label}</Text>
+                    <Text type="tertiary">{label}</Text>
                   </div>
                   <div>
                     <Text>
