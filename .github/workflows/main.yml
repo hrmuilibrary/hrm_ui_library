@@ -50,18 +50,103 @@ jobs:
       - run: echo "VERSION=$(npm run version --silent)" >> $GITHUB_ENV
       - run: echo "PACKAGE_NAME=$(npm run name --silent)" >> $GITHUB_ENV
 
-      # Slack notification
-      - run: echo "PIPE_URL=$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID|Pipeline#$GITHUB_RUN_NUMBER" >> $GITHUB_ENV
-      - name: Post to a Slack channel
-        id: slack
-        uses: slackapi/slack-github-action@v1.17.0
-        with:
-          payload: |
-             {"attachments":[{"color":"#70aeff","blocks":[{"type":"section","text":{"type":"mrkdwn","text":"Notification sent from <${{ env.PIPE_URL }}>"}},{"type":"section","text":{"type":"mrkdwn","text":"${{ env.PACKAGE_NAME }}@${{ env.VERSION }} has been published"}}]}]}
-        env:
-           SLACK_WEBHOOK_URL: ${{ secrets.WEB_SLACK_WEBHOOK_URL }}
-           SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+      - name: Send Adaptive Card to Teams
+        run: |
+             curl -X POST "${{ secrets.TEAMS_WEBHOOK_URL }}" \
+               -H "Content-Type: application/json" \
+               -d '{
+                 "type": "AdaptiveCard",
+                 "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                 "version": "1.5",
+                 "msteams": {
+                   "width": "Full"
+                 },
+                 "body": [
+                   {
+                     "type": "Container",
+                     "style": "good",
+                     "bleed": true,
+                     "items": [
+                       {
+                         "type": "ColumnSet",
+                         "columns": [
+                           {
+                             "type": "Column",
+                             "width": "auto",
+                             "items": [
+                               {
+                                 "type": "TextBlock",
+                                 "text": "📦",
+                                 "size": "ExtraLarge"
+                               }
+                             ]
+                           },
+                           {
+                             "type": "Column",
+                             "width": "stretch",
+                             "items": [
+                               {
+                                 "type": "TextBlock",
+                                 "text": "NPM Package Published",
+                                 "weight": "Bolder",
+                                 "size": "Large",
+                                 "wrap": true
+                               },
+                               {
+                                 "type": "TextBlock",
+                                 "text": "${{ env.PACKAGE_NAME }}@${{ env.VERSION }}",
+                                 "spacing": "None",
+                                 "color": "Good",
+                                 "weight": "Bolder",
+                                 "wrap": true
+                               }
+                             ]
+                           }
+                         ]
+                       }
+                     ]
+                   },
+                   {
+                     "type": "FactSet",
+                     "facts": [
+                       {
+                         "title": "Package",
+                         "value": "${{ env.PACKAGE_NAME }}"
+                       },
+                       {
+                         "title": "Version",
+                         "value": "${{ env.VERSION }}"
+                       },
+                       {
+                         "title": "Repository",
+                         "value": "${{ github.repository }}"
+                       },
+                       {
+                         "title": "Workflow",
+                         "value": "${{ github.workflow }}"
+                       },
+                       {
+                         "title": "Run Number",
+                         "value": "#${{ github.run_number }}"
+                       }
+                     ]
+                   }
+                 ],
+                 "actions": [
+                   {
+                     "type": "Action.OpenUrl",
+                     "title": "🚀 View Pipeline",
+                     "url": "${{ env.PIPE_URL }}"
+                   },
+                   {
+                     "type": "Action.OpenUrl",
+                     "title": "📂 Open Repository",
+                     "url": "${{ github.server_url }}/${{ github.repository }}"
+                   }
+                 ]
+               }'
 
+      - run: echo "PIPE_URL=$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID|Pipeline#$GITHUB_RUN_NUMBER" >> $GITHUB_ENV
       # Deployment on GitHub Pages
       - name: Build Storybook
         run: npm run build-storybook
