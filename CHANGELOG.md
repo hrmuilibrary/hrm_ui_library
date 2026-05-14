@@ -1,3 +1,14 @@
+## [3.1.98](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.97...3.1.98) (2026-05-14)
+
+
+### Bug Fixes
+
+* for test teams notification ([579720b](https://github.com/hrmuilibrary/hrm_ui_library/commit/579720bed9ebc7476167cd2de09218cafff4dc41))
+* post to Microsoft Teams ([4d48d08](https://github.com/hrmuilibrary/hrm_ui_library/commit/4d48d0821445988c3cacc2a442ec17aa0c1700d7))
+* refactor yml file to send post message from slack to Microsoft Teams ([d621502](https://github.com/hrmuilibrary/hrm_ui_library/commit/d621502907e92605f99744b32c578f640f26757a))
+* send adaptive card to teams ([78eed19](https://github.com/hrmuilibrary/hrm_ui_library/commit/78eed1983d98af7c1e2fc33b453f996053c3afec))
+* send notification to the Microsoft Teams ([3c81db3](https://github.com/hrmuilibrary/hrm_ui_library/commit/3c81db3b6ade8ac990930065c2826389872585f8))
+
 ## [3.1.97](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.96...3.1.97) (2026-05-11)
 
 
