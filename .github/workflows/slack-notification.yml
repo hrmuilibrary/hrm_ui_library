@@ -14,11 +14,35 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Post to Microsoft Teams
+      - name: Post to Teams via Power Automate
         run: |
           curl -X POST "${{ secrets.TEAMS_WEBHOOK_URL }}" \
             -H "Content-Type: application/json" \
             -d '{
-              "title": "New Pull Request",
-              "text": "PR: ${{ github.event.pull_request.html_url }}"
+              "type": "AdaptiveCard",
+              "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+              "version": "1.4",
+              "body": [
+                {
+                  "type": "TextBlock",
+                  "size": "Large",
+                  "weight": "Bolder",
+                  "text": "📢 New Pull Request"
+                },
+                {
+                  "type": "TextBlock",
+                  "text": "Author: ${{ github.event.pull_request.user.login }}"
+                },
+                {
+                  "type": "TextBlock",
+                  "text": "Title: ${{ github.event.pull_request.title }}"
+                }
+              ],
+              "actions": [
+                {
+                  "type": "Action.OpenUrl",
+                  "title": "View Pull Request",
+                  "url": "${{ github.event.pull_request.html_url }}"
+                }
+              ]
             }'
