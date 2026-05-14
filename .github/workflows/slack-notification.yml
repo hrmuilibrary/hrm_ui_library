@@ -1,4 +1,4 @@
-name: Slack Notification on Pull Request Events
+name: Microsoft Teams Notification on Pull Request Events
 
 on:
   pull_request:
@@ -7,32 +7,54 @@ on:
       - reopened
 
 jobs:
-  send_slack_notification:
+  send_teams_notification:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
-      # Slack notification
-      - name: Post to a Slack channel
-        id: slack
-        uses: slackapi/slack-github-action@v1.17.0
-        with:
-          payload: |
-            {"attachments":[{"color":"#70aeff","blocks":[{"type":"section","text":{"type":"mrkdwn","text":"@frontend A new pull request was detected"}},{"type":"section","text":{"type": "mrkdwn","text": "Author: ${{github.event.pull_request.user.login}}"}},{"type": "section","text": {"type": "mrkdwn","text": "PR: ${{github.event.pull_request.html_url}}"}}]}]}
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.WEB_SLACK_WEBHOOK_URL }}
-          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
-#           PULL_REQUEST_NUMBER: ${{ github.event.pull_request.number }}
-#           PULL_REQUEST_TITLE: ${{ github.event.pull_request.title }}
-#           PULL_REQUEST_AUTHOR_NAME: ${{ github.event.pull_request.user.login }}
-#           PULL_REQUEST_AUTHOR_ICON_URL: ${{ github.event.pull_request.user.avatar_url }}
-#           PULL_REQUEST_URL: ${{ github.event.pull_request.html_url }}
-#           PULL_REQUEST_BODY: ${{ github.event.pull_request.body }}
-#           PULL_REQUEST_COMPARE_BRANCH_OWNER: ${{ github.event.pull_request.head.repo.owner.login }}
-#           PULL_REQUEST_COMPARE_BRANCH_NAME: ${{ github.event.pull_request.head.ref }}
-#           PULL_REQUEST_BASE_BRANCH_OWNER: ${{ github.event.pull_request.base.repo.owner.login }}
-#           PULL_REQUEST_BASE_BRANCH_NAME: ${{ github.event.pull_request.base.ref }}
-
-
+      - name: Post to Microsoft Teams
+        run: |
+          curl -H "Content-Type: application/json" \
+               -d '{
+                 "@type": "MessageCard",
+                 "@context": "https://schema.org/extensions",
+                 "themeColor": "70AEFF",
+                 "summary": "New Pull Request",
+                 "sections": [{
+                   "activityTitle": "📢 New Pull Request Detected",
+                   "facts": [
+                     {
+                       "name": "Author",
+                       "value": "${{ github.event.pull_request.user.login }}"
+                     },
+                     {
+                       "name": "Repository",
+                       "value": "${{ github.repository }}"
+                     },
+                     {
+                       "name": "PR Title",
+                       "value": "${{ github.event.pull_request.title }}"
+                     },
+                     {
+                       "name": "Source Branch",
+                       "value": "${{ github.event.pull_request.head.ref }}"
+                     },
+                     {
+                       "name": "Target Branch",
+                       "value": "${{ github.event.pull_request.base.ref }}"
+                     }
+                   ],
+                   "markdown": true
+                 }],
+                 "potentialAction": [{
+                   "@type": "OpenUri",
+                   "name": "View Pull Request",
+                   "targets": [{
+                     "os": "default",
+                     "uri": "${{ github.event.pull_request.html_url }}"
+                   }]
+                 }]
+               }' \
+               ${{ secrets.TEAMS_WEBHOOK_URL }}
