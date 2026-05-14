@@ -16,45 +16,9 @@ jobs:
 
       - name: Post to Microsoft Teams
         run: |
-          curl -H "Content-Type: application/json" \
-               -d '{
-                 "@type": "MessageCard",
-                 "@context": "https://schema.org/extensions",
-                 "themeColor": "70AEFF",
-                 "summary": "New Pull Request",
-                 "sections": [{
-                   "activityTitle": "📢 New Pull Request Detected",
-                   "facts": [
-                     {
-                       "name": "Author",
-                       "value": "${{ github.event.pull_request.user.login }}"
-                     },
-                     {
-                       "name": "Repository",
-                       "value": "${{ github.repository }}"
-                     },
-                     {
-                       "name": "PR Title",
-                       "value": "${{ github.event.pull_request.title }}"
-                     },
-                     {
-                       "name": "Source Branch",
-                       "value": "${{ github.event.pull_request.head.ref }}"
-                     },
-                     {
-                       "name": "Target Branch",
-                       "value": "${{ github.event.pull_request.base.ref }}"
-                     }
-                   ],
-                   "markdown": true
-                 }],
-                 "potentialAction": [{
-                   "@type": "OpenUri",
-                   "name": "View Pull Request",
-                   "targets": [{
-                     "os": "default",
-                     "uri": "${{ github.event.pull_request.html_url }}"
-                   }]
-                 }]
-               }' \
-               ${{ secrets.TEAMS_WEBHOOK_URL }}
+          curl -X POST "${{ secrets.TEAMS_WEBHOOK_URL }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "title": "New Pull Request",
+              "text": "PR: ${{ github.event.pull_request.html_url }}"
+            }'
