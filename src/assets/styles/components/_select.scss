@@ -319,6 +319,14 @@
       &:hover {
         background-color: var(--grey-30);
       }
+
+      &__text {
+        color: var(--grey-900);
+      }
+
+      &__meta {
+        color: var(--grey-500);
+      }
     }
 
     &--menu {
@@ -329,6 +337,16 @@
     }
     &__top, &__footer {
       border-color: var(--grey-40);
+    }
+
+    .select__modal {
+      .select__option__text {
+        color: var(--grey-900);
+
+        &__large {
+          color: var(--grey-900);
+        }
+      }
     }
   }
 }
