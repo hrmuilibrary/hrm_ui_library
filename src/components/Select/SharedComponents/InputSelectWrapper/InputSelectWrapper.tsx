@@ -78,6 +78,14 @@ export const InputSelectWrapper = (props: TSelectWrapperProps): ReactElement | n
       : joinedLabel
   }, [options, selectedValues, checkIsValueOverflowed])
 
+  const inputTitle = useMemo(() => {
+    if (selectedValues && selectedValues.length > 0) {
+      return selectedValues.map((s) => s.label).join(', ')
+    }
+    if (!placeHolder) return undefined
+    return checkIsValueOverflowed(placeHolder) ? placeHolder : undefined
+  }, [selectedValues, placeHolder, checkIsValueOverflowed])
+
   const { hasBottomSpace } = useGetHasBottomSpace({
     element: dropdownRef,
     input: inputRef.current
@@ -104,6 +112,7 @@ export const InputSelectWrapper = (props: TSelectWrapperProps): ReactElement | n
           labelAddons={labelAddons}
           disabled={disabled}
           size={size}
+          title={inputTitle}
         />
       </div>
 
