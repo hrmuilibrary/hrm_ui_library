@@ -1,3 +1,10 @@
+## [3.1.100](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.99...3.1.100) (2026-07-01)
+
+
+### Bug Fixes
+
+* show tooltip on truncated placeholder and selected items in MultiSelect ([c18a904](https://github.com/hrmuilibrary/hrm_ui_library/commit/c18a904ed20c34b490c73697d2062e53b5883c25))
+
 ## [3.1.99](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.98...3.1.99) (2026-06-24)
 
 
