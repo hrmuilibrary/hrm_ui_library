@@ -51,6 +51,9 @@
         discovery: var(--purple-800),
     );
     @each $key, $value in $types {
+      &-#{$key} {
+        color: $value;
+      }
       &-#{$key} path:not([fill]),
       &-#{$key} circle:not([fill]),
       &-#{$key} line:not([fill]) {
@@ -85,6 +88,9 @@
         discovery: var(--purple-800),
       );
       @each $key, $value in $types {
+        &-#{$key} {
+          color: $value;
+        }
         &-#{$key} path:not([fill]),
         &-#{$key} circle:not([fill]),
         &-#{$key} line:not([fill]) {
