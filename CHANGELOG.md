@@ -1,3 +1,10 @@
+## [3.2.1](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.2.0...3.2.1) (2026-07-10)
+
+
+### Bug Fixes
+
+* resolve Sass deprecation warnings in SCSS styles ([b1138cf](https://github.com/hrmuilibrary/hrm_ui_library/commit/b1138cf33b0cb795c2ffbd454c75dd1888b7d3f5))
+
 # [3.2.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.100...3.2.0) (2026-07-10)
 
 
