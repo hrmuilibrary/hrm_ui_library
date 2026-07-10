@@ -1,3 +1,10 @@
+# [3.2.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.100...3.2.0) (2026-07-10)
+
+
+### Features
+
+* add IconCode and IconLayers SVG icon components ([d02c2cb](https://github.com/hrmuilibrary/hrm_ui_library/commit/d02c2cb340b666259e03b6b3c0a8f775d657752f))
+
 ## [3.1.100](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.1.99...3.1.100) (2026-07-01)
 
 
