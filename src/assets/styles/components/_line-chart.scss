@@ -11,13 +11,13 @@
 
   &--color {
     $color-type: (
-      blue: var(--blue-500),
-      purple: var(--purple-500),
-      yellow: var(--yellow-500),
-      pink: var(--pink-500),
-      green: var(--brand-500),
-      grey: var(--grey-500),
-      red: var(--red-500)
+      'blue': var(--blue-500),
+      'purple': var(--purple-500),
+      'yellow': var(--yellow-500),
+      'pink': var(--pink-500),
+      'green': var(--brand-500),
+      'grey': var(--grey-500),
+      'red': var(--red-500)
     );
 
     @each $type, $color in $color-type {
@@ -36,13 +36,13 @@
     margin-right: var(--size-8);
 
     $color-type: (
-      blue: var(--blue-500),
-      purple: var(--purple-500),
-      yellow: var(--yellow-500),
-      pink: var(--pink-500),
-      green: var(--brand-500),
-      grey: var(--grey-500),
-      red: var(--red-500)
+      'blue': var(--blue-500),
+      'purple': var(--purple-500),
+      'yellow': var(--yellow-500),
+      'pink': var(--pink-500),
+      'green': var(--brand-500),
+      'grey': var(--grey-500),
+      'red': var(--red-500)
     );
 
     @each $type, $color in $color-type {
