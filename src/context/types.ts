@@ -23,6 +23,7 @@ export type TFormContextProps = {
   watch?: UseFormWatch<TFormData>
   reset?: UseFormReset<TFormData>
   isDirty?: boolean
+  isValid?:boolean
   clearErrors?: UseFormClearErrors<TFormData>
   setError?: UseFormSetError<TFormData>
   isSubmitted: boolean
@@ -32,6 +33,7 @@ export type TFormContextProps = {
   getFieldState?: UseFormGetFieldState<TFormData>
   unregister?: UseFormUnregister<TFormData>
   onSubmit?: () => void
+  
 }
 
 export const FormContext = createContext<TFormContextProps>({

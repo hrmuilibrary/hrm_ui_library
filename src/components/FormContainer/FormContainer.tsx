@@ -34,7 +34,8 @@ export const FormContainer = (props: FormPropTypes): React.ReactElement => {
     setError,
     trigger,
     getFieldState,
-    unregister
+    unregister,
+    
   } = useForm({
     mode: mode,
     resolver: yupResolver(validationScheme),
@@ -44,7 +45,7 @@ export const FormContainer = (props: FormPropTypes): React.ReactElement => {
     shouldUnregister: shouldUnregister
   })
 
-  const { errors, isDirty, isSubmitted, isSubmitting, dirtyFields } = formState
+  const { errors, isDirty, isSubmitted, isSubmitting, dirtyFields, isValid } = formState
 
   const customSubmit = (data: TFormData) => {
     if (onSubmit) {
@@ -85,6 +86,7 @@ export const FormContainer = (props: FormPropTypes): React.ReactElement => {
           dirtyFields,
           getFieldState,
           unregister,
+          isValid,
           onSubmit: () => handleSubmit(customSubmit)()
         }}
       >
