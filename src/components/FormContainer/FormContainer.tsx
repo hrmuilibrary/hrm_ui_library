@@ -34,8 +34,7 @@ export const FormContainer = (props: FormPropTypes): React.ReactElement => {
     setError,
     trigger,
     getFieldState,
-    unregister,
-    
+    unregister
   } = useForm({
     mode: mode,
     resolver: yupResolver(validationScheme),
