@@ -1,3 +1,10 @@
+## [3.2.2](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.2.1...3.2.2) (2026-07-13)
+
+
+### Bug Fixes
+
+* isValid state ([d7fef22](https://github.com/hrmuilibrary/hrm_ui_library/commit/d7fef229d1f1b9d7dd0644139072e38bd31aa7ca))
+
 ## [3.2.1](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.2.0...3.2.1) (2026-07-10)
 
 
