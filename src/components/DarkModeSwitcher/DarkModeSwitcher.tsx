@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import IconMoon from '../SVGIcons/IconMoon'
 import IconSun from '../SVGIcons/IconSun'
 
-type DarkModeSwitcherProps = {
+type DarkModeSwitcherProps = IBaseProps & {
   checked: boolean
   onChange: (checked: boolean) => void
   disabled?: boolean
@@ -13,7 +13,18 @@ type DarkModeSwitcherProps = {
 }
 
 export const DarkModeSwitcher = forwardRef<HTMLInputElement, DarkModeSwitcherProps>(
-  ({ checked, onChange, disabled = false, id = 'dark-mode-switcher', name, className }, ref) => {
+  (
+    {
+      checked,
+      onChange,
+      disabled = false,
+      id = 'dark-mode-switcher',
+      name,
+      className,
+      dataId = ''
+    },
+    ref
+  ) => {
     const _onChange = (e: ChangeEvent<HTMLInputElement>) => {
       if (disabled) {
         return
@@ -25,10 +36,11 @@ export const DarkModeSwitcher = forwardRef<HTMLInputElement, DarkModeSwitcherPro
       <label
         className={classNames('theme-switch', className, { 'is-disabled': disabled })}
         htmlFor={id}
+        data-id={dataId}
       >
         <span className={classNames('theme-switch__track', { 'is-checked': checked })}>
           <span className="theme-switch__icon theme-switch__icon--sun" aria-hidden="true">
-            <IconSun size="xsmall" />
+            <IconSun size="xsmall" dataId={dataId ? `${dataId}-sun-icon` : ''} />
           </span>
 
           <input
@@ -40,12 +52,13 @@ export const DarkModeSwitcher = forwardRef<HTMLInputElement, DarkModeSwitcherPro
             disabled={disabled}
             onChange={_onChange}
             className="theme-switch__input"
+            data-id={dataId ? `${dataId}-input` : ''}
           />
 
           <span className="theme-switch__thumb" aria-hidden="true" />
 
           <span className="theme-switch__icon theme-switch__icon--moon" aria-hidden="true">
-            <IconMoon size="xsmall" />
+            <IconMoon size="xsmall" dataId={dataId ? `${dataId}-moon-icon` : ''} />
           </span>
         </span>
       </label>

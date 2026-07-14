@@ -6,11 +6,10 @@ export type TCardGroupTitle = {
   color: 'blue' | 'purple' | 'yellow' | 'pink' | 'green' | 'grey'
 }
 
-export type TCardGroupProps = {
+export type TCardGroupProps = IBaseProps & {
   title?: TCardGroupTitle
   children: ReactNode
   className?: string
   id?: string
-  dataId?: string
   noDivider?: boolean
 }

@@ -16,7 +16,8 @@ export const Progress = (props: TProgressPropTypes): React.ReactElement => {
     noText = false,
     dimension,
     className = '',
-    loop = false
+    loop = false,
+    dataId = ''
   } = props
   const _dimension = dimension ? dimension : CIRCLE_SIZES[size]
   const r = _dimension - 5
@@ -27,6 +28,7 @@ export const Progress = (props: TProgressPropTypes): React.ReactElement => {
 
   return (
     <div
+      data-id={dataId}
       className={`progress-bar progress-bar--${type} progress-bar--${size} ${className}${
         loop ? ' progress-bar--loop' : ''
       }`}
@@ -58,7 +60,7 @@ export const Progress = (props: TProgressPropTypes): React.ReactElement => {
         </div>
       )}
       {!noText ? (
-        <span className="progress-bar__percent">
+        <span className="progress-bar__percent" data-id={dataId ? `${dataId}-text` : ''}>
           {stepCount ? `${currentStep}/${stepCount}` : `${percent}%`}
         </span>
       ) : null}

@@ -25,7 +25,7 @@ export interface IButtonPropTypes extends Omit<TButtonPropTypes, 'onClick'> {
   onClick: (event: TClickEventType, data: any, clearRowSelection?: () => void) => void
 }
 
-export type TTableProps = {
+export type TTableProps = IBaseProps & {
   className?: string
   columns: TColumn[]
   data: any[]

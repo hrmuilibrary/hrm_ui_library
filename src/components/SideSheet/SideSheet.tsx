@@ -27,7 +27,8 @@ export const SideSheet = (props: TSideSheetPropTypes): React.ReactElement | null
     scrollToTopOptions,
     children,
     closeOnOutsideClick = true,
-    checkboxInfo
+    checkboxInfo,
+    dataId = ''
   } = props
   const [containerRef, setContainerRef] = useState<HTMLDivElement | null>(null)
   const [isShownScrollIcon, setIsShownScrollIcon] = useState<boolean>(false)
@@ -75,6 +76,7 @@ export const SideSheet = (props: TSideSheetPropTypes): React.ReactElement | null
       {isOpen ? (
         <motion.div
           className="side-sheet"
+          data-id={dataId}
           initial={{
             opacity: 0
           }}
@@ -106,34 +108,55 @@ export const SideSheet = (props: TSideSheetPropTypes): React.ReactElement | null
               `side-sheet__container--${size}`,
               className
             )}
+            data-id={dataId ? `${dataId}-container` : ''}
             ref={setContainerRef}
           >
             <div className="side-sheet__header">
               <div className="side-sheet__header__left pr-16">
                 {headerButtons?.back ? (
-                  <Button size="small" type="tertiary" {...headerButtons.back} className="mr-8" />
+                  <Button
+                    size="small"
+                    type="tertiary"
+                    {...headerButtons.back}
+                    className="mr-8"
+                    dataId={dataId ? `${dataId}-back` : ''}
+                  />
                 ) : null}
                 <Text
                   className="side-sheet__title"
                   weight="bolder"
                   lineHeight="large"
                   size="medium"
+                  dataId={dataId ? `${dataId}-title` : ''}
                 >
                   {title}
                 </Text>
               </div>
               <div className="side-sheet__header__right">
                 {headerButtons?.pin ? (
-                  <Button size="small" type="tertiary" {...headerButtons.pin} className="mr-8" />
+                  <Button
+                    size="small"
+                    type="tertiary"
+                    {...headerButtons.pin}
+                    className="mr-8"
+                    dataId={dataId ? `${dataId}-pin` : ''}
+                  />
                 ) : null}
                 {headerButtons?.close ? (
-                  <Button size="small" type="tertiary" {...headerButtons.close} onClick={onClose} />
+                  <Button
+                    size="small"
+                    type="tertiary"
+                    {...headerButtons.close}
+                    onClick={onClose}
+                    dataId={dataId ? `${dataId}-close` : ''}
+                  />
                 ) : (
                   <Button
                     size="small"
                     type="tertiary"
                     iconProps={{ Component: IconDismissFilled }}
                     onClick={onClose}
+                    dataId={dataId ? `${dataId}-close` : ''}
                   />
                 )}
               </div>
@@ -143,12 +166,14 @@ export const SideSheet = (props: TSideSheetPropTypes): React.ReactElement | null
                   type="secondary"
                   iconProps={{ Component: IconCaretUp }}
                   className={`side-sheet__header__scroll-top side-sheet__header__scroll-top__${size}`}
+                  dataId={dataId ? `${dataId}-scroll-top` : ''}
                   onClick={handleScrollToTop}
                 />
               )}
             </div>
             <div
               className="side-sheet__content scrollbar scrollbar--vertical"
+              data-id={dataId ? `${dataId}-content` : ''}
               ref={scrollbarContainerRef}
             >
               {children}
@@ -159,6 +184,7 @@ export const SideSheet = (props: TSideSheetPropTypes): React.ReactElement | null
               onClose={onClose}
               onSubmit={onSubmit}
               checkboxInfo={checkboxInfo}
+              dataId={dataId}
             />
           </motion.div>
         </motion.div>

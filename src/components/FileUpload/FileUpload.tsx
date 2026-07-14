@@ -34,7 +34,8 @@ export const FileUpload = (props: TFileUploadProps): React.ReactElement | null =
     labelAddons,
     onError,
     fileAllowedSize,
-    mode = FileUploadMode.attach
+    mode = FileUploadMode.attach,
+    dataId = ''
   } = props
   const files = (value as File[]) || uploadedFiles || []
   const fileInputRef = useRef<HTMLInputElement>(null)
@@ -110,8 +111,14 @@ export const FileUpload = (props: TFileUploadProps): React.ReactElement | null =
   )
 
   return (
-    <div className="file-upload">
-      <Label text={label} required={required} disabled={disabled} labelAddons={labelAddons} />
+    <div className="file-upload" data-id={dataId}>
+      <Label
+        text={label}
+        required={required}
+        disabled={disabled}
+        labelAddons={labelAddons}
+        dataId={dataId ? `${dataId}-label` : ''}
+      />
       <div className="file-upload__inner">
         <input
           name={name}
@@ -120,11 +127,13 @@ export const FileUpload = (props: TFileUploadProps): React.ReactElement | null =
           className="hide"
           ref={fileInputRef}
           accept={allowedTypes}
+          data-id={dataId ? `${dataId}-input` : ''}
           onChange={handleChange}
         />
         {mode === FileUploadMode.edit && (
           <div
             className="edit__icon"
+            data-id={dataId ? `${dataId}-trigger` : ''}
             onMouseEnter={onMouseEnterOrLeave}
             onMouseLeave={onMouseEnterOrLeave}
             onClick={onUploadClick}
@@ -144,6 +153,7 @@ export const FileUpload = (props: TFileUploadProps): React.ReactElement | null =
             iconProps={{ Component: IconAttach }}
             onClick={onUploadClick}
             buttonText={buttonText}
+            dataId={dataId ? `${dataId}-action` : ''}
           />
         )}
 
@@ -152,6 +162,7 @@ export const FileUpload = (props: TFileUploadProps): React.ReactElement | null =
           onRemove={handleFileRemove}
           files={files}
           withFilePreview={withFilePreview}
+          dataId={dataId}
         />
       </div>
     </div>

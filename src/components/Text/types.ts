@@ -18,7 +18,7 @@ export type TTextSize = 'xxsmall' | 'xsmall' | 'small' | 'standard' | 'medium' |
 type TTextWeight = 'regular' | 'semibold' | 'bold' | 'bolder'
 type TTextLineHeight = 'xsmall' | 'small' | 'medium' | 'large'
 
-export interface TextPropTypes {
+export interface TextPropTypes extends IBaseProps {
   id?: string
   as?: ElementType
   title?: string
@@ -28,6 +28,5 @@ export interface TextPropTypes {
   weight?: TTextWeight
   lineHeight?: TTextLineHeight
   className?: string
-  dataId?: string
   onClick?: (event: MouseEvent<HTMLElement>) => void
 }

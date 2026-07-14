@@ -12,12 +12,11 @@ type TLinkTypes =
   | 'information'
   | 'discovery'
 
-export interface LinkPropTypes {
+export interface LinkPropTypes extends IBaseProps {
   children?: string | React.ReactElement
   className?: string
   type?: TLinkTypes
   url?: string
-  dataId?: string
   target?: string
   beforeLink?: string | React.ReactElement
   afterLink?: string | React.ReactElement

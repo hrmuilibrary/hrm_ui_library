@@ -6,7 +6,7 @@ export type TCardTitle = {
   color: 'blue' | 'purple' | 'yellow' | 'pink' | 'green' | 'grey'
 }
 
-export type TCardProps = {
+export type TCardProps = IBaseProps & {
   title?: TCardTitle
   isExpandable?: boolean
   isExpanded?: boolean
@@ -17,5 +17,4 @@ export type TCardProps = {
   children: ReactNode
   className?: string
   id?: string
-  dataId?: string
 }

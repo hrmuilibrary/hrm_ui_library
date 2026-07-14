@@ -10,13 +10,17 @@ export const ProgressStep = (props: TProgressStepProps): ReactElement | null => 
     activeStep,
     setActiveStep,
     stepSize = 'large',
-    stepDirection = 'horizontal'
+    stepDirection = 'horizontal',
+    dataId = ''
   } = props
 
   const singleStepWidth = `${100 / steps.length}%`
 
   return (
-    <div className={classnames('progress-stepper', `progress-stepper--${stepDirection}`)}>
+    <div
+      className={classnames('progress-stepper', `progress-stepper--${stepDirection}`)}
+      data-id={dataId}
+    >
       {steps.map((step, index) => {
         return (
           <Step
@@ -28,6 +32,7 @@ export const ProgressStep = (props: TProgressStepProps): ReactElement | null => 
             onStepClick={setActiveStep}
             stepType={stepType}
             stepSize={stepSize}
+            dataId={dataId ? `${dataId}-item-${index}` : ''}
           />
         )
       })}

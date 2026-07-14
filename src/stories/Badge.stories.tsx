@@ -27,7 +27,8 @@ export const Badge: StoryObj<TBadgeProps> = Template.bind({})
 Badge.args = {
   text: '999+',
   type: 'primary',
-  size: 'large'
+  size: 'large',
+  dataId: 'badge-1'
 }
 
 const TemplateV2: StoryFn<TBadgeV2Props> = (args) => <_BadgeV2 {...args} />
@@ -41,7 +42,8 @@ BadgeV2.args = {
   size: 'large',
   disabled: false,
   dot: false,
-  withDot: false
+  withDot: false,
+  dataId: 'badge-v2-1'
 }
 
 BadgeV2.argTypes = {

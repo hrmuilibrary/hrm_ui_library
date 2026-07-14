@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import { Row as RowType, CellValue } from 'react-table'
 import { CHECKBOX_DEFAULT_WIDTH, CHECKBOX_HEADER_ID } from './utils'
 
-type Props = {
+type Props = IBaseProps & {
   row: RowType
   handleRowClick?: (row: any) => void
   withSelect: boolean
@@ -16,7 +16,8 @@ export function Row({
   selectedFlatRows,
   withSelect,
   uniqueKey,
-  handleRowClick
+  handleRowClick,
+  dataId = ''
 }: Props): ReactElement {
   const isRowSelected = useMemo(
     () => selectedFlatRows.find((r) => r.id === row.id),
@@ -28,6 +29,7 @@ export function Row({
   return (
     <tr
       {...rowProps}
+      data-id={dataId ? `${dataId}-row-${row.index}` : ''}
       className={classNames({ selected: Boolean(isRowSelected) })}
       onClick={() => handleRowClick?.(row.original)}
     >
@@ -38,6 +40,7 @@ export function Row({
           <td
             key={`table_cell_${uniqueKey}_${i}`}
             {...cellProps}
+            data-id={dataId ? `${dataId}-row-${row.index}-cell-${column.id ?? i}` : ''}
             style={{
               left:
                 !isSelection && withSelect && column?.fixed === 'left' ? CHECKBOX_DEFAULT_WIDTH : 0

@@ -2,7 +2,8 @@ import { ButtonHTMLAttributes, LegacyRef, PropsWithChildren, ReactElement } from
 import { TSVGIconType } from '../../type'
 
 export interface TButtonPropTypes
-  extends PropsWithChildren<Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type' | 'children'>> {
+  extends PropsWithChildren<Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type' | 'children'>>,
+    IBaseProps {
   id?: string
   disabled?: boolean
   pressed?: boolean
@@ -20,6 +21,5 @@ export interface TButtonPropTypes
   }
   onClick?: (event: TClickEventType) => void
   formId?: string
-  dataId?: string
   refHandler?: LegacyRef<HTMLButtonElement> | undefined
 }

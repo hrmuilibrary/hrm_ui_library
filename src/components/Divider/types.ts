@@ -1,4 +1,4 @@
-export interface TDividerProps {
+export interface TDividerProps extends IBaseProps {
   type: 'primary' | 'secondary'
   isHorizontal?: boolean
   className?: string

@@ -1,12 +1,11 @@
 import { ReactNode } from 'react'
 
-export type TMenuItem = {
+export type TMenuItem = IBaseProps & {
   label: TItemLabel
   value: TItemValue
   iconProps?: TSelectIconProps
   handler?: TCallBackFn
   disabled?: boolean
-  dataId?: string
   meta?: string
 }
 

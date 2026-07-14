@@ -152,13 +152,17 @@ declare type TFormValue =
   | TSelectedValue[]
 declare type TOnChange = (event: TChangeEventType) => void
 
+// Shared base props for every component (QA/test hooks, future common attrs)
+declare interface IBaseProps {
+  dataId?: string
+}
+
 // Props which will pass FormField to component
-declare interface IFormCompProps {
+declare interface IFormCompProps extends IBaseProps {
   hasError?: boolean
   isValid?: boolean
   value?: TFormValue
   onChange?: TOnChange
-  dataId?: string
   name?: string
   setFieldValue?: (
     name: string,

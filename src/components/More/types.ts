@@ -1,6 +1,6 @@
 import { TextPropTypes } from '../Text/types'
 
-export type TMorePropTypes = {
+export type TMorePropTypes = IBaseProps & {
   textProps?: TextPropTypes
   expandedText: string
   collapsedText: string

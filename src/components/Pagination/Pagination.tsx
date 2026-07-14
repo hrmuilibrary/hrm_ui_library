@@ -17,10 +17,17 @@ export const Pagination = (props: TPaginationProps): React.ReactElement | null =
     pageSize,
     disableInitialCallback = false,
     page,
-    breakLabel = <IconMore size={ICON_SIZE_MAPPING[size]} />,
+    dataId = '',
+    breakLabel = (
+      <IconMore size={ICON_SIZE_MAPPING[size]} dataId={dataId ? `${dataId}-more` : ''} />
+    ),
     labels = {
-      previous: <IconChevronLeft size={ICON_SIZE_MAPPING[size]} />,
-      next: <IconChevronRight size={ICON_SIZE_MAPPING[size]} />
+      previous: (
+        <IconChevronLeft size={ICON_SIZE_MAPPING[size]} dataId={dataId ? `${dataId}-prev` : ''} />
+      ),
+      next: (
+        <IconChevronRight size={ICON_SIZE_MAPPING[size]} dataId={dataId ? `${dataId}-next` : ''} />
+      )
     }
   } = props
 
@@ -29,7 +36,7 @@ export const Pagination = (props: TPaginationProps): React.ReactElement | null =
   }
 
   return (
-    <div className="pagination-wrapper flexbox">
+    <div className="pagination-wrapper flexbox" data-id={dataId}>
       <ReactPaginate
         pageCount={Math.ceil(totalCount / pageSize)}
         disableInitialCallback={disableInitialCallback}

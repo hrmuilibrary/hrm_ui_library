@@ -35,6 +35,7 @@ export function useTableControl<TData>({
   withSelect,
   columns,
   data,
+  dataId = '',
   tableSettings,
   totalCount = 0,
   defaultPageSize = 10,
@@ -96,6 +97,7 @@ export function useTableControl<TData>({
             checked={table.getIsAllRowsSelected()}
             indeterminate={table.getIsSomeRowsSelected()}
             onChange={table.getToggleAllRowsSelectedHandler()}
+            dataId={dataId ? `${dataId}-select-all` : ''}
           />
         ),
         cell: ({ row }: ICellProps<TData>) => (
@@ -104,12 +106,13 @@ export function useTableControl<TData>({
             disabled={!row.getCanSelect()}
             indeterminate={row.getIsSomeSelected()}
             onChange={row.getToggleSelectedHandler()}
+            dataId={dataId ? `${dataId}-row-${row.index}-select` : ''}
           />
         )
       })
     }
     return columnsList
-  }, [columns])
+  }, [columns, dataId])
 
   const [columnOrder, setColumnOrder] = useState<string[]>(
     savedSettings.columnOrder?.length && savedSettings.columnOrder.length === memoizedColumns.length

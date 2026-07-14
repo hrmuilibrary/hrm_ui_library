@@ -5,7 +5,7 @@ import { TButtonPropTypes } from '../Button/types'
 
 export type TDirtyFields = Partial<Readonly<{ [x: string]: unknown }>>
 
-export interface FormPropTypes {
+export interface FormPropTypes extends IBaseProps {
   className?: string
   onSubmit?: (data: TFormData, formState: FormState<TFormData>, dirtyFields?: TDirtyFields) => void
   children?: ReactNode

@@ -18,7 +18,8 @@ export const FormContainer = (props: FormPropTypes): React.ReactElement => {
     buttonConfigs,
     formId,
     language,
-    onSubmit
+    onSubmit,
+    dataId = ''
   } = props
 
   const {
@@ -65,6 +66,7 @@ export const FormContainer = (props: FormPropTypes): React.ReactElement => {
     <form
       onSubmit={handleSubmit(customSubmit)}
       id={formId}
+      data-id={dataId}
       className={classnames('form-container', className)}
     >
       <FormContext.Provider
@@ -92,9 +94,15 @@ export const FormContainer = (props: FormPropTypes): React.ReactElement => {
         <>
           {children}
           {buttonConfigs && (
-            <div className="form-container__buttons">
+            <div className="form-container__buttons" data-id={dataId ? `${dataId}-buttons` : ''}>
               {buttonConfigs.map((buttonConfig, index) => {
-                return <Button {...buttonConfig} key={index} />
+                return (
+                  <Button
+                    {...buttonConfig}
+                    key={index}
+                    dataId={dataId ? `${dataId}-button-${index}` : buttonConfig.dataId}
+                  />
+                )
               })}
             </div>
           )}

@@ -3,9 +3,10 @@ import { TDividerProps } from './types'
 import classnames from 'classnames'
 
 export const Divider = (props: TDividerProps): React.ReactElement => {
-  const { type = 'primary', isHorizontal, className, color = 'light-grey' } = props
+  const { type = 'primary', isHorizontal, className, color = 'light-grey', dataId = '' } = props
   return (
     <hr
+      data-id={dataId}
       className={classnames(
         'divider',
         `divider--${type}`,

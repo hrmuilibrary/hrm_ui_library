@@ -12,11 +12,13 @@ import { downloadFile } from '../../../helpers'
 export const PreviewItem = ({
   file,
   onRemove,
-  mode
+  mode,
+  dataId = ''
 }: {
   file: FileType
   onRemove: () => void
   mode: FileUploadMode
+  dataId?: string
 }): ReactElement => {
   const type = file.type.split('/')[0]
 
@@ -41,6 +43,7 @@ export const PreviewItem = ({
       className={classnames('dz-file-upload__files--item', {
         'dz-file-upload__files--item--view': mode === FileUploadMode.view
       })}
+      data-id={dataId}
       onClick={handleItemClick}
     >
       <div className={'dz-file-upload__files--item__preview'}>
@@ -48,13 +51,16 @@ export const PreviewItem = ({
       </div>
       <div className={'dz-file-upload__files--item__info'}>
         <div className="dz-file-upload__files--item__info-title">
-          <Text weight="semibold">{shortenFileName(file.name, 40)}</Text>
+          <Text weight="semibold" dataId={dataId ? `${dataId}-text` : ''}>
+            {shortenFileName(file.name, 40)}
+          </Text>
           {mode === FileUploadMode.attach && (
             <Button
               size="small"
               type="tertiary"
               onClick={onRemove}
               iconProps={{ Component: IconDelete }}
+              dataId={dataId ? `${dataId}-close` : ''}
             />
           )}
           {mode === FileUploadMode.view && (
@@ -63,11 +69,14 @@ export const PreviewItem = ({
               type="tertiary"
               onClick={onFileDownload}
               iconProps={{ Component: IconArrowDownloadFilled }}
+              dataId={dataId ? `${dataId}-action` : ''}
             />
           )}
         </div>
         <div className="dz-file-upload__files--item__info-size">
-          <Text size="small">{formatFileSize(file.size)}</Text>
+          <Text size="small" dataId={dataId ? `${dataId}-size` : ''}>
+            {formatFileSize(file.size)}
+          </Text>
         </div>
       </div>
     </div>

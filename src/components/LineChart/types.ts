@@ -14,6 +14,6 @@ export interface TLineChartDataItemWithPercentage extends TLineChartDataItem {
   percentage: number
 }
 
-export type TLineChartProps = {
+export type TLineChartProps = IBaseProps & {
   data: Array<TLineChartDataItem>
 }

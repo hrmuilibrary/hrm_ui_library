@@ -1,4 +1,4 @@
-export interface TUnderConstructionProps {
+export interface TUnderConstructionProps extends IBaseProps {
   size?: string
   className?: string
   mainMessage?: string

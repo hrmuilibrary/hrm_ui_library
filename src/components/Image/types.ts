@@ -1,4 +1,4 @@
-export interface ImagePropTypes {
+export interface ImagePropTypes extends IBaseProps {
   name?: string
   imagePath?: string
   className?: string

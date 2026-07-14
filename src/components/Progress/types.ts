@@ -1,4 +1,4 @@
-export interface TProgressPropTypes {
+export interface TProgressPropTypes extends IBaseProps {
   percent?: number
   stepCount?: number
   currentStep?: number
