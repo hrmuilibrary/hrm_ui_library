@@ -1,3 +1,10 @@
+# [3.3.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.2.3...3.3.0) (2026-07-14)
+
+
+### Features
+
+* add dataTestId supports ([94f86e2](https://github.com/hrmuilibrary/hrm_ui_library/commit/94f86e2a6ce26b768e08450da3ff668fd2d6a199))
+
 ## [3.2.3](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.2.2...3.2.3) (2026-07-14)
 
 
