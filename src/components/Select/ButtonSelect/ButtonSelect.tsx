@@ -6,6 +6,7 @@ import { Loading, ButtonSelectWrapper } from '../SharedComponents'
 import { TButtonSelectPropTypes } from '../types'
 import { noop } from '../../../utils/helpers'
 import { useIsMobile } from '../../../hooks/useGetIsMobile'
+import { getOptionDataId } from '../helper'
 
 export const ButtonSelect = (props: TButtonSelectPropTypes): ReactElement => {
   const {
@@ -100,13 +101,14 @@ export const ButtonSelect = (props: TButtonSelectPropTypes): ReactElement => {
               'mr-6': scrollHeight > 300
             })}
           >
-            {options.map((item: TSelectOption) => {
+            {options.map((item: TSelectOption, index: number) => {
               const isSelected = item.value === currentSelection
               return (
                 <OptionItem
                   tooltipAddons={tooltipAddons}
                   data={item}
                   key={item.value}
+                  dataId={getOptionDataId(dataId, item.value, index) || item.dataId}
                   onClick={clickHandler(isSelected)}
                   labelLeftIconProps={labelLeftIconProps}
                   OptionRightIconComponent={optionRightIconComponent}

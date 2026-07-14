@@ -157,7 +157,7 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
 
   return (
     <div
-      data-id={`${dataId}-content`}
+      data-id={dataId}
       className={classNames(`select select--${size}`, className, {
         'select--opened': isOpen
       })}
@@ -167,7 +167,7 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
         <Input
           onClick={disabled ? noop : onOpenOptions}
           size={size}
-          dataId={dataId}
+          dataId={dataId ? `${dataId}-trigger` : ''}
           hasError={hasError}
           className="select__input"
           label={label}
@@ -192,7 +192,7 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
         <Button
           size={size}
           type="secondary"
-          dataId={dataId}
+          dataId={dataId ? `${dataId}-trigger` : ''}
           iconProps={selectRightIconProps}
           buttonText={placeHolder || ''}
           onClick={disabled ? noop : openDropdown}
@@ -202,6 +202,7 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
       {isMobile && isMobileFullScreen ? (
         <SelectMobile
           {...rest}
+          dataId={dataId}
           isOpen={isOpen}
           filteredData={filteredData}
           closeDropdown={closeDropdown}
@@ -217,6 +218,7 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
       ) : (
         <SelectDesktop
           {...rest}
+          dataId={dataId}
           onItemDeselect={onItemDeselect}
           onItemSelect={onItemSelect}
           currentSelection={currentSelection}

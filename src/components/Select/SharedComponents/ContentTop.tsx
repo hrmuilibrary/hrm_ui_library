@@ -24,6 +24,7 @@ type TProps = {
   hasLimitation?: boolean
   menuOptions?: TMenuItem[]
   dataIdPrefix?: string
+  dataId?: string
   closeDropdown?: () => void
   handleKeyDown?: (e: React.KeyboardEvent) => void
 }
@@ -42,10 +43,13 @@ export const ContentTop = React.memo<TProps>((props: TProps): React.ReactElement
     isSelectAllDisabled = false,
     menuOptions = [],
     dataIdPrefix,
+    dataId,
     closeDropdown,
     handleKeyDown
   } = props
   const inputRef = useRef<HTMLInputElement>(null)
+
+  const baseDataId = dataId || dataIdPrefix
 
   const { searchInputPlaceHolder, innerLabel, clearAllLabel, selectAllLabel } = translations || {}
 
@@ -60,7 +64,7 @@ export const ContentTop = React.memo<TProps>((props: TProps): React.ReactElement
           handler: selectAll,
           disabled: isSelectAllDisabled,
           iconProps: { Component: IconSelectAllOff },
-          dataId: dataIdPrefix ? `${dataIdPrefix}-select-all` : ''
+          dataId: baseDataId ? `${baseDataId}-select-all` : ''
         }
       ]
     }
@@ -73,7 +77,7 @@ export const ContentTop = React.memo<TProps>((props: TProps): React.ReactElement
           handler: clearAll,
           disabled: !isAnySelected,
           iconProps: { Component: IconDismissFilled },
-          dataId: dataIdPrefix ? `${dataIdPrefix}-clear-all` : ''
+          dataId: baseDataId ? `${baseDataId}-clear` : ''
         }
       ]
     }
@@ -86,7 +90,7 @@ export const ContentTop = React.memo<TProps>((props: TProps): React.ReactElement
     clearAllLabel,
     isSelectAllDisabled,
     isAnySelected,
-    dataIdPrefix
+    baseDataId
   ])
   const onSearch = (e: TChangeEventType) => {
     setSearchValue && setSearchValue(e.target.value)
@@ -116,6 +120,7 @@ export const ContentTop = React.memo<TProps>((props: TProps): React.ReactElement
         {isMobile && <IconChevronLeft onClick={onBack} size="large" />}
         {isSearchAvailable && (
           <Input
+            dataId={baseDataId ? `${baseDataId}-search` : ''}
             onKeyDown={handleKeyDown || noop}
             ref={inputRef}
             className="content-top__search"

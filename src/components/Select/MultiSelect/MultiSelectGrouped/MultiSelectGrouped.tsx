@@ -10,6 +10,7 @@ import { DROPDOWN_MAX_HEIGHT } from '../../constants'
 import IconCaretUpFilled from '../../../SVGIcons/IconCaretUpFilled'
 import IconCaretDownFilled from '../../../SVGIcons/IconCaretDownFilled'
 import { filterSearchData } from '../../Select/helpers'
+import { getOptionDataId } from '../../helper'
 
 export const MultiSelectGrouped = (props: TMultiSelectGroupedProps): React.ReactElement | null => {
   const {
@@ -29,6 +30,7 @@ export const MultiSelectGrouped = (props: TMultiSelectGroupedProps): React.React
     maxSelectCount,
     menuOptions,
     dataIdPrefix,
+    dataId,
     closeDropdown
   } = props
 
@@ -129,6 +131,7 @@ export const MultiSelectGrouped = (props: TMultiSelectGroupedProps): React.React
       {hasTopContent ? (
         <ContentTop
           closeDropdown={closeDropdown}
+          dataId={dataId}
           dataIdPrefix={dataIdPrefix}
           menuOptions={menuOptions}
           isSearchAvailable={isSearchAvailable || isMobile}
@@ -183,13 +186,13 @@ export const MultiSelectGrouped = (props: TMultiSelectGroupedProps): React.React
                   )}
                 </div>
                 {isActive &&
-                  data.map((item: TSelectOption) => {
+                  data.map((item: TSelectOption, itemIndex: number) => {
                     const isSelected =
                       selectedValues.findIndex((s) => s.value === item.value) !== -1
                     return (
                       <OptionItem
                         data={item}
-                        dataId={item.dataId}
+                        dataId={getOptionDataId(dataId, item.value, itemIndex) || item.dataId}
                         key={item.value}
                         isSelected={isSelected}
                         disabled={

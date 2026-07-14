@@ -24,6 +24,7 @@ import { Text } from '../../../Text'
 import { Loading } from '../../SharedComponents'
 import { DROPDOWN_HEIGHT, DROPDOWN_WIDTH, ITEM_SIZE } from '../../constants'
 import { ISingleSelectDesktopProps } from '../../types'
+import { getOptionDataId } from '../../helper'
 
 export const SelectDesktop = (props: ISingleSelectDesktopProps): ReactElement | null => {
   const {
@@ -115,6 +116,7 @@ export const SelectDesktop = (props: ISingleSelectDesktopProps): ReactElement | 
     <>
       {isOpen && (
         <div
+          data-id={dataId ? `${dataId}-content` : ''}
           className="select__options"
           style={{
             left,
@@ -129,10 +131,7 @@ export const SelectDesktop = (props: ISingleSelectDesktopProps): ReactElement | 
             <Loading />
           ) : (
             <>
-              <div
-                data-id={`${dataId}-options-content`}
-                className={classNames('select__options__scroll', 'scrollbar')}
-              >
+              <div className={classNames('select__options__scroll', 'scrollbar')}>
                 {innerHelperText ? (
                   <div className="content-top">
                     <Text size="xsmall" type="secondary" className="content-top__label">
@@ -173,7 +172,7 @@ export const SelectDesktop = (props: ISingleSelectDesktopProps): ReactElement | 
                           LabelRightIconComponent={labelRightIconComponent}
                           disabled={item.disabled}
                           isSelected={isSelected}
-                          dataId={item.dataId}
+                          dataId={getOptionDataId(dataId, item.value, index) || item.dataId}
                           style={style}
                           className={classNames('option', {
                             'option--active': isActive
