@@ -1,3 +1,10 @@
+## [3.4.1](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.4.0...3.4.1) (2026-07-14)
+
+
+### Bug Fixes
+
+* resolve avatar border ([38da332](https://github.com/hrmuilibrary/hrm_ui_library/commit/38da332041c14e1cc34c600af18b97fe9861d34b))
+
 # [3.4.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.3.0...3.4.0) (2026-07-14)
 
 
