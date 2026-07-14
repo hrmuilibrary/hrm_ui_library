@@ -1,3 +1,10 @@
+## [3.2.3](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.2.2...3.2.3) (2026-07-14)
+
+
+### Bug Fixes
+
+* add option to show icon and status in modal header ([0f7876e](https://github.com/hrmuilibrary/hrm_ui_library/commit/0f7876e9118d846a8b6c568c67016733522181cd))
+
 ## [3.2.2](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.2.1...3.2.2) (2026-07-13)
 
 
