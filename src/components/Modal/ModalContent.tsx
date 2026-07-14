@@ -1,4 +1,5 @@
 import React, { ReactElement, ReactNode } from 'react'
+import classNames from 'classnames'
 
 import IconDismiss from '../SVGIcons/IconDismiss'
 import { Positions } from '../Tooltip/types'
@@ -8,7 +9,7 @@ import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 import { TButtonPropTypes } from '../Button/types'
 import { noop } from '../../utils/helpers'
-import { TTitleSize } from './types'
+import { TModalHeaderIconColor, TTitleSize } from './types'
 
 type TProps = {
   title?: string
@@ -26,6 +27,9 @@ type TProps = {
   }
   onSubmit?: () => void
   titleSize?: TTitleSize
+  headerIcon?: React.ReactNode
+  headerIconColor?: TModalHeaderIconColor
+  headerStatus?: React.ReactNode
 }
 export const ModalContent = ({
   title,
@@ -38,26 +42,49 @@ export const ModalContent = ({
   confirmBtnTooltipText,
   buttonProps,
   onSubmit,
+  headerIcon,
+  headerIconColor = 'brand',
+  headerStatus,
   titleSize = 'large'
 }: TProps): ReactElement => {
   return (
     <>
       {title ? (
         <div className="modal__header">
-          <div>
-            <Text
-              lineHeight="large"
-              size={titleSize}
-              weight={'bolder'}
-              dataId={dataIdPrefix ? `${dataIdPrefix}-modal-title` : ''}
-            >
-              {title}
-            </Text>
-            {subtitle ? (
-              <Text className={'mt-12'} dataId={dataIdPrefix ? `${dataIdPrefix}-modal-title` : ''}>
-                {subtitle}
-              </Text>
+          <div className="modal__header-content">
+            {headerIcon ? (
+              <div
+                className={classNames(
+                  'modal__header-icon',
+                  `modal__header-icon--${headerIconColor}`
+                )}
+              >
+                {headerIcon}
+              </div>
             ) : null}
+
+            <div className="modal__header-text">
+              <div className="modal__header-title-row">
+                <Text
+                  className="modal__header-title"
+                  lineHeight="large"
+                  size={titleSize}
+                  weight={'bolder'}
+                  dataId={dataIdPrefix ? `${dataIdPrefix}-modal-title` : ''}
+                >
+                  {title}
+                </Text>
+                {headerStatus ? <div className="modal__header-status">{headerStatus}</div> : null}
+              </div>
+              {subtitle ? (
+                <Text
+                  className={'mt-12'}
+                  dataId={dataIdPrefix ? `${dataIdPrefix}-modal-title` : ''}
+                >
+                  {subtitle}
+                </Text>
+              ) : null}
+            </div>
           </div>
           {closeIcon ? (
             <Button
