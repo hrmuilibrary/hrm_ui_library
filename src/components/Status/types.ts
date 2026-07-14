@@ -21,5 +21,4 @@ export interface TStatusProps extends IFormCompProps {
   className?: string
   withCircle?: boolean
   withBackground?: boolean
-  dataId?: string
 }

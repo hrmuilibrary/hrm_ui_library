@@ -81,5 +81,6 @@ export const ProgressStep: StoryObj<TProgressStepProps> = Template.bind({})
 ProgressStep.args = {
   stepType: 'number',
   stepDirection: 'horizontal',
-  stepSize: 'large'
+  stepSize: 'large',
+  dataId: 'progress-step-1'
 }

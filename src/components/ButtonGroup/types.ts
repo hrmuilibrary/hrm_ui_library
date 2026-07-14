@@ -1,6 +1,6 @@
 import { ISVGIconProps } from '../../type'
 
-interface IButtonGroupBase {
+interface IButtonGroupBase extends IBaseProps {
   type?: 'primary'
   size?: 'small' | 'medium' | 'large'
   disabled?: boolean

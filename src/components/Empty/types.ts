@@ -1,6 +1,6 @@
 import { TButtonPropTypes } from '../Button/types'
 
-export interface TEmptyProps {
+export interface TEmptyProps extends IBaseProps {
   size?: string
   className?: string
   mainMessage?: string

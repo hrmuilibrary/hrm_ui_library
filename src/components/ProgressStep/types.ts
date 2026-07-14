@@ -10,7 +10,7 @@ export interface TStep {
 export type TStepType = 'number' | 'dot'
 export type TSteps = TStep[]
 
-export type TProgressStepProps = {
+export type TProgressStepProps = IBaseProps & {
   steps: TSteps
   stepType: TStepType
   stepDirection: 'horizontal' | 'vertical'
@@ -19,7 +19,7 @@ export type TProgressStepProps = {
   setActiveStep: (v: TStepValue) => void
 }
 
-export type TStepProps = {
+export type TStepProps = IBaseProps & {
   width: string
   step: TStep
   stepSize?: 'large' | 'small'

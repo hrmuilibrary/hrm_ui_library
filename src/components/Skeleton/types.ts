@@ -3,7 +3,7 @@ import { CSSProperties, ReactNode } from 'react'
 export type TSkeletonVariant = 'text' | 'circular' | 'rectangular' | 'rounded'
 export type TSkeletonAnimation = 'pulse' | 'wave' | 'none'
 
-export interface TSkeletonPropTypes {
+export interface TSkeletonPropTypes extends IBaseProps {
   /** Visual shape of the placeholder. */
   variant?: TSkeletonVariant
   /** Animation style. Pass `'none'` to disable. */
@@ -22,5 +22,4 @@ export interface TSkeletonPropTypes {
   /** Inline style overrides applied to every rendered skeleton element. */
   style?: CSSProperties
   className?: string
-  dataId?: string
 }

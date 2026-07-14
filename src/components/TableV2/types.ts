@@ -14,7 +14,7 @@ export type TColumnSizingState = ColumnSizingState
 export type TPaginationState = PaginationState
 export type TPersistColumnSettings = 'localStorage' | 'external'
 
-export type TTableProps<TData> = {
+export type TTableProps<TData> = IBaseProps & {
   data: (TData & { subRows?: TData[] })[]
   isLoading?: boolean
   columns: ColumnDef<TData>[]
@@ -71,7 +71,7 @@ export interface TableData {
   [key: string]: unknown
 }
 
-export interface ExpandColumnProps<TData> {
+export interface ExpandColumnProps<TData> extends IBaseProps {
   row: Row<TData>
   expandedRows: Set<string>
   onToggle: (rowId: string) => void

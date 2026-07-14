@@ -5,7 +5,6 @@ type DatePickerDefaultProps = Omit<IFormCompProps, 'value'> &
   Omit<DatePickerProps, 'onChange' | 'value'>
 
 export interface TDatepickerBaseProps extends DatePickerDefaultProps {
-  dataId?: string
   dataIdPrefix?: string
   label?: ReactNode
   format?: string

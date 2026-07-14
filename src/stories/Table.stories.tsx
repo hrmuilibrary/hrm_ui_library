@@ -142,7 +142,8 @@ Table.args = {
   withSelect: true,
   data: [],
   columns: [],
-  language: 'en'
+  language: 'en',
+  dataId: 'employee-table'
 }
 
 Table.argTypes = {
@@ -366,7 +367,11 @@ const Template1: StoryFn<TTableV2Props<any>> = (args) => {
         )}
         renderFooter={(table) => (
           <div className="advanced-table__footer">
-            <AdvancedPagination table={table} totalCount={1000} />
+            <AdvancedPagination
+              table={table}
+              totalCount={1000}
+              dataId="advanced-table-pagination"
+            />
           </div>
         )}
         renderExpandedContent={(row) => {
@@ -461,6 +466,7 @@ TableV2.args = {
   withBorder: false,
   isActionsVisible: true,
   isLoading: false,
+  dataId: 'advanced-table',
   // collapsibleRows: true,
   onSortChange: (state) => console.log(state),
   onRowSelection: (state) => console.log(state),

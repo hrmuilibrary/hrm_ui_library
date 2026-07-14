@@ -5,7 +5,7 @@ import { IndeterminateCheckbox } from './IndeterminateCheckbox'
 export const CHECKBOX_HEADER_ID = 'selection'
 export const CHECKBOX_DEFAULT_WIDTH = 48
 
-export function setSelectedRows(hooks: Hooks, withSelect: boolean): void {
+export function setSelectedRows(hooks: Hooks, withSelect: boolean, dataId = ''): void {
   if (withSelect) {
     hooks.visibleColumns.push((columns: Column[]) => [
       {
@@ -24,6 +24,7 @@ export function setSelectedRows(hooks: Hooks, withSelect: boolean): void {
                 indeterminate: !allSelected && someSelected,
                 disabled: allEnabledRows.length === 0
               })}
+              dataId={dataId ? `${dataId}-select-all` : ''}
               onChange={(e) => {
                 const checked = e.target.checked
                 allEnabledRows.forEach((row) => {
@@ -41,6 +42,7 @@ export function setSelectedRows(hooks: Hooks, withSelect: boolean): void {
               {...row.getToggleRowSelectedProps({
                 disabled
               })}
+              dataId={dataId ? `${dataId}-row-${row.index}-select` : ''}
             />
           )
         }

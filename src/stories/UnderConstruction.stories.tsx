@@ -22,5 +22,6 @@ export const UnderConstruction: StoryObj<TUnderConstructionProps> = Template.bin
 
 UnderConstruction.args = {
   size: 'large',
-  language: 'hy'
+  language: 'hy',
+  dataId: 'under-construction-1'
 }

@@ -29,5 +29,6 @@ Empty.args = {
     iconProps: {
       Component: IconAdd
     }
-  }
+  },
+  dataId: 'empty-1'
 }

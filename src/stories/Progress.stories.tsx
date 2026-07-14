@@ -29,5 +29,6 @@ Progress.args = {
   percent: 30,
   noText: false,
   dimension: 0,
-  loop: false
+  loop: false,
+  dataId: 'progress-1'
 }

@@ -23,7 +23,8 @@ export const DropzoneFileUpload = forwardRef(
       maxFiles = 1,
       mode = FileUploadMode.attach,
       locale,
-      multiple = false
+      multiple = false,
+      dataId = ''
     }: DzFileUploadProps,
     _ref
   ): ReactElement => {
@@ -84,7 +85,7 @@ export const DropzoneFileUpload = forwardRef(
     )
 
     return (
-      <div className="dz-file-upload">
+      <div className="dz-file-upload" data-id={dataId}>
         {mode !== FileUploadMode.view ? (
           <div
             {...getRootProps()}
@@ -92,9 +93,10 @@ export const DropzoneFileUpload = forwardRef(
               'dz-file-upload__area--focused': isFocused,
               'dz-file-upload__area--active': isDragActive
             })}
+            data-id={dataId ? `${dataId}-dropzone` : ''}
           >
             <IconUpload className="mb-20" size="xlarge" />
-            <input {...getInputProps()} name={name} />
+            <input {...getInputProps()} name={name} data-id={dataId ? `${dataId}-input` : ''} />
             <Text type="primary" weight="semibold" className="mb-6">
               {translation.title}
             </Text>
@@ -115,6 +117,7 @@ export const DropzoneFileUpload = forwardRef(
                 areaContent={areaContent}
                 onRemove={() => removeError(index)}
                 locale={locale}
+                dataId={dataId ? `${dataId}-error-${index}` : ''}
               />
             )
           })}
@@ -125,6 +128,7 @@ export const DropzoneFileUpload = forwardRef(
                 file={file}
                 onRemove={() => removeFile(file.name)}
                 mode={mode}
+                dataId={dataId ? `${dataId}-item-${index}` : ''}
               />
             )
           })}

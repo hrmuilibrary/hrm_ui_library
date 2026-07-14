@@ -8,7 +8,7 @@ export type TCheckboxInfo = {
   isChecked: boolean
 }
 
-export interface TSideSheetPropTypes {
+export interface TSideSheetPropTypes extends IBaseProps {
   closeOnOutsideClick?: boolean
   shouldRemoveCallback?: boolean
   size?: TSideSheetSize

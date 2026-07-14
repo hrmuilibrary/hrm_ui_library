@@ -9,13 +9,17 @@ import IconArrowUp from '../SVGIcons/IconArrowUp'
 import { Text } from '../Text'
 import classnames from 'classnames'
 
-interface DraggableColumnHeaderProps<TData> {
+interface DraggableColumnHeaderProps<TData> extends IBaseProps {
   header: Header<TData, unknown>
   isPinned?: boolean
   pinnedStyles: CSSProperties
 }
 
-export function ColumnHeader<TData>({ header, pinnedStyles }: DraggableColumnHeaderProps<TData>) {
+export function ColumnHeader<TData>({
+  header,
+  pinnedStyles,
+  dataId = ''
+}: DraggableColumnHeaderProps<TData>) {
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({
     id: header.id
   })
@@ -37,6 +41,7 @@ export function ColumnHeader<TData>({ header, pinnedStyles }: DraggableColumnHea
   return (
     <th
       ref={setNodeRef}
+      data-id={dataId ? `${dataId}-header-${header.column.id}` : ''}
       style={{ ...style, ...pinnedStyles }}
       className={classnames('select-none', {
         ['with-checkbox']: header.column.id === 'select',
@@ -47,6 +52,7 @@ export function ColumnHeader<TData>({ header, pinnedStyles }: DraggableColumnHea
     >
       <div
         onClick={header.column.getToggleSortingHandler()}
+        data-id={dataId ? `${dataId}-sort-${header.column.id}` : ''}
         className="flexbox align-items--center"
       >
         <div {...listeners}>

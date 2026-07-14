@@ -311,6 +311,7 @@ const Template: StoryFn<TSideSheetPropTypes> = (args) => {
 export const SideSheet: StoryObj<TSideSheetPropTypes> = Template.bind({})
 
 SideSheet.args = {
+  dataId: 'side-sheet',
   title: 'Side sheet title',
   headerButtons: {
     close: {

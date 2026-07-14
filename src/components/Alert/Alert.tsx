@@ -16,20 +16,31 @@ export const Alert = (props: TAlertProps): ReactElement => {
     subtext,
     closeIcon,
     onClose,
-    className = ''
+    className = '',
+    dataId = ''
   } = props
 
   return (
-    <div className={classnames('alert', `alert--${type} alert--${position}`, className)}>
+    <div
+      className={classnames('alert', `alert--${type} alert--${position}`, className)}
+      data-id={dataId}
+    >
       <div className="alert__content">
         <IconDynamicComponent
           Component={ICONS_MAPPING[type]}
           size="small"
           type={TYPE_MAPPING[type]}
+          dataId={dataId ? `${dataId}-icon` : ''}
         />
         <div className="alert__text pl-8">
           <div>
-            <Text type="primary" size="standard" weight="regular" lineHeight="large">
+            <Text
+              type="primary"
+              size="standard"
+              weight="regular"
+              lineHeight="large"
+              dataId={dataId ? `${dataId}-text` : ''}
+            >
               {text}
             </Text>
             {subtext ? (
@@ -39,6 +50,7 @@ export const Alert = (props: TAlertProps): ReactElement => {
                 size="small"
                 weight="regular"
                 lineHeight="large"
+                dataId={dataId ? `${dataId}-subtext` : ''}
               >
                 {subtext}
               </Text>
@@ -47,10 +59,21 @@ export const Alert = (props: TAlertProps): ReactElement => {
           {buttonProps ? (
             <div className="alert__actions">
               {buttonProps.confirm && (
-                <Button size="medium" type="secondary" {...buttonProps.confirm} />
+                <Button
+                  size="medium"
+                  type="secondary"
+                  dataId={dataId ? `${dataId}-confirm` : ''}
+                  {...buttonProps.confirm}
+                />
               )}
               {buttonProps.cancel && (
-                <Button size="medium" type="tertiary" className="ml-12" {...buttonProps.cancel} />
+                <Button
+                  size="medium"
+                  type="tertiary"
+                  className="ml-12"
+                  dataId={dataId ? `${dataId}-cancel` : ''}
+                  {...buttonProps.cancel}
+                />
               )}
             </div>
           ) : null}
@@ -61,6 +84,7 @@ export const Alert = (props: TAlertProps): ReactElement => {
             size="xsmall"
             className="ml-12 pointer"
             onClick={onClose}
+            dataId={dataId ? `${dataId}-close` : ''}
           />
         ) : null}
       </div>

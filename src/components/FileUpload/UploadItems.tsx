@@ -8,7 +8,7 @@ import { Button } from '../Button'
 import IconDelete from '../SVGIcons/IconDelete'
 
 export const UploadItems = (props: IUploadItemPropTypes): React.ReactElement => {
-  const { files, onRemove, withFilePreview, handleFileClick } = props
+  const { files, onRemove, withFilePreview, handleFileClick, dataId = '' } = props
   const { errors } = useFormProps()
   const filesErrors = errors && errors.files && errors.files.length > 0
 
@@ -20,6 +20,7 @@ export const UploadItems = (props: IUploadItemPropTypes): React.ReactElement => 
             className={`upload-item mt-4 ${
               filesErrors && errors.files[index]?.message ? 'upload-item--error' : ''
             }`}
+            data-id={dataId ? `${dataId}-item-${index}` : ''}
             key={index}
           >
             <div className="upload-item__inner">
@@ -29,6 +30,7 @@ export const UploadItems = (props: IUploadItemPropTypes): React.ReactElement => 
                     size="small"
                     lineHeight="medium"
                     className="upload-item__text"
+                    dataId={dataId ? `${dataId}-item-${index}-text` : ''}
                     onClick={(e) =>
                       withFilePreview &&
                       openFileInNewWindow({
@@ -40,12 +42,18 @@ export const UploadItems = (props: IUploadItemPropTypes): React.ReactElement => 
                   >
                     {file.name}
                   </Text>
-                  {filesErrors && <ErrorMessage message={errors.files[index]?.message} />}
+                  {filesErrors && (
+                    <ErrorMessage
+                      message={errors.files[index]?.message}
+                      dataId={dataId ? `${dataId}-item-${index}` : ''}
+                    />
+                  )}
                 </div>
                 <Button
                   type="tertiary"
                   size="small"
                   iconProps={{ Component: IconDelete }}
+                  dataId={dataId ? `${dataId}-item-${index}-close` : ''}
                   onClick={() => {
                     onRemove(file, index)
                   }}

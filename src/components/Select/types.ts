@@ -106,7 +106,6 @@ export interface TMultiSelectPropTypes extends IFormCompProps, TSelectBaseProps 
 
 export interface TButtonSelectPropTypes extends IFormCompProps, TSelectBaseProps {
   isMobileFullScreen?: boolean
-  dataId?: string
   options: TSelectOptions
   selectedItem?: TItemValue
   setSelectedItem?: (items: TItemValue | undefined) => void
@@ -137,11 +136,10 @@ export interface TSingleSelectPropTypes extends IFormCompProps, TSelectBaseProps
   }
 }
 
-export interface ISingleSelectResponsiveProps {
+export interface ISingleSelectResponsiveProps extends IBaseProps {
   isOpen: boolean
   closeDropdown: () => void
   isLoading?: boolean
-  dataId?: string
   innerHelperText?: string
   labelLeftIconProps?: {
     size?: TIconSize
@@ -243,7 +241,7 @@ export interface TFilterGroupDropdownContentProps extends IFormCompProps {
   checkIsSelected: (item: TItemValue) => boolean
 }
 
-export type TSelectWrapperProps = {
+export type TSelectWrapperProps = IBaseProps & {
   isMobile: boolean
   applySelectedItems: (isChecked: boolean) => void
   hasError?: boolean
@@ -271,7 +269,6 @@ export type TSelectWrapperProps = {
   dropdownRef: HTMLDivElement | null
   setDropdownRef: LegacyRef<HTMLDivElement>
   selectedValues?: TSelectedValue[]
-  dataId?: string
   type?: 'primary' | 'secondary' | 'tertiary'
   modalApplyButtonText?: string
   hideSelectedOptions?: boolean

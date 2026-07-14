@@ -1,4 +1,4 @@
-export interface TStepperContentWrapperProps {
+export interface TStepperContentWrapperProps extends IBaseProps {
   isPrevDisabled: boolean
   isNextDisabled: boolean
   prevHandler: () => void
@@ -8,7 +8,7 @@ export interface TStepperContentWrapperProps {
 }
 declare type TComp = (props: TStepperContentWrapperProps) => React.ReactElement
 
-export interface TStepperProps {
+export interface TStepperProps extends IBaseProps {
   list: TComp[]
   activeStep?: number
   setActiveStep?: (step: number) => void

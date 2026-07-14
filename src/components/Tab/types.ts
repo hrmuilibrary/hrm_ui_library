@@ -1,9 +1,8 @@
 import { TBadgeProps } from '../Badge/types'
 
-export type TTabItem = {
+export type TTabItem = IBaseProps & {
   value: number | string
   label: string | React.ReactElement
-  dataId?: string
   disabled?: boolean
   badgeProps?: TBadgeProps
   iconProps?: {
@@ -27,8 +26,7 @@ export interface TTabProps extends IFormCompProps {
   onSelect: (value: string | number) => void
 }
 
-export type TTabItemProps = {
-  dataId?: string
+export type TTabItemProps = IBaseProps & {
   label?: string | React.ReactElement
   size?: 'large' | 'medium' | 'small'
   className?: string

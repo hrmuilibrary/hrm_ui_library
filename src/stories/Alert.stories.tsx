@@ -38,5 +38,6 @@ Alert.args = {
   position: 'inline',
   text: 'Alert line which displays the main function or reason of the alert.',
   subtext: 'Become a legendary UX/UI designer through real world and practical courses.',
-  closeIcon: true
+  closeIcon: true,
+  dataId: 'alert-1'
 }

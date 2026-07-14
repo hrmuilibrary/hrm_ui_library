@@ -23,6 +23,6 @@ const COMP4 = () => {
 const LIST = [COMP1, COMP2, COMP3, COMP4]
 
 const Template = () => {
-  return <_Stepper list={LIST} />
+  return <_Stepper list={LIST} dataId="stepper" />
 }
 export const Stepper = Template.bind({})

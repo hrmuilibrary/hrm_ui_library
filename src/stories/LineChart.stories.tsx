@@ -69,5 +69,6 @@ LineChart.args = {
       label: 'taxes dolor sit',
       color: 'red'
     }
-  ]
+  ],
+  dataId: 'line-chart-1'
 }

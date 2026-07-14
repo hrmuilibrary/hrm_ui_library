@@ -30,5 +30,6 @@ export const DarkModeSwitcher: StoryObj<TSwitcherProps> = Template.bind({})
 
 DarkModeSwitcher.args = {
   size: 'small',
-  disabled: false
+  disabled: false,
+  dataId: 'dark-mode-switcher-1'
 }

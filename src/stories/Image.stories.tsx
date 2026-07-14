@@ -39,5 +39,6 @@ Image.args = {
   backgroundSize: 'contain',
   isFullWidth: false,
   isFullHeight: false,
-  ratio: '1/1'
+  ratio: '1/1',
+  dataId: 'image-1'
 }

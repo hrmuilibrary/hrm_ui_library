@@ -1,6 +1,6 @@
 import { ReactElement } from 'react'
 
-export type TPaginationProps = {
+export type TPaginationProps = IBaseProps & {
   labels?: {
     next: string | ReactElement
     previous: string | ReactElement

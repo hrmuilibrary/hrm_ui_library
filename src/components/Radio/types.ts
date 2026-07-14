@@ -11,11 +11,10 @@ export interface TRadioProps extends IFormCompProps {
   onClick?: (isChecked: boolean) => void
 }
 
-export type TRadioOptionItem = {
+export type TRadioOptionItem = IBaseProps & {
   value: number | string
   label: string
   helperText?: string | ReactElement
-  dataId?: string
 }
 
 export interface TRadioGroupProps extends IFormCompProps {

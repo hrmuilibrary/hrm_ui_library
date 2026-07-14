@@ -49,7 +49,7 @@ const Template: StoryFn<TModalPropTypes> = (args) => {
           console.log('submit')
         }}
         headerIcon={<IconOpen />}
-        headerStatus={<Status type="danger" text="Rejected" size="small" withBackground/>}
+        headerStatus={<Status type="danger" text="Rejected" size="small" withBackground />}
         buttonProps={{
           confirm: {
             buttonText: 'Save',

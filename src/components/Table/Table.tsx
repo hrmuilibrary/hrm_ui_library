@@ -39,7 +39,8 @@ export function Table({
   className,
   language = 'en',
   containerRefHandler,
-  submitButtons
+  submitButtons,
+  dataId = ''
 }: TTableProps): ReactElement {
   const tableRef = useRef<HTMLTableElement | null>(null)
   const [tableWidth, setTableWidth] = useState(400)
@@ -85,7 +86,7 @@ export function Table({
     },
     useSortBy,
     useRowSelect,
-    (hooks: Hooks) => setSelectedRows(hooks, withSelect)
+    (hooks: Hooks) => setSelectedRows(hooks, withSelect, dataId)
   ) as TableInstance & { selectedFlatRows: RowType[]; toggleAllRowsSelected: (c: boolean) => void }
 
   const handleResize = useCallback(() => {
@@ -114,7 +115,7 @@ export function Table({
   }, [])
 
   return (
-    <div ref={containerRefHandler}>
+    <div ref={containerRefHandler} data-id={dataId}>
       {withSelect && selectedFlatRows.length > 0 && (
         <div className="table-wrapper__selected-rows">
           <Button
@@ -126,8 +127,9 @@ export function Table({
             type="tertiary"
             size="medium"
             iconProps={{ alignment: 'left', Component: IconDismiss }}
+            dataId={dataId ? `${dataId}-clear-selected` : ''}
           />
-          {submitButtons?.map(({ buttonText, isLoading, onClick, iconProps }) => (
+          {submitButtons?.map(({ buttonText, isLoading, onClick, iconProps }, i) => (
             <Button
               iconProps={iconProps || { alignment: 'left', Component: IconCheckmark }}
               onClick={(event) => {
@@ -138,6 +140,7 @@ export function Table({
               size="medium"
               className="mr-8"
               isLoading={isLoading}
+              dataId={dataId ? `${dataId}-submit-${i}` : ''}
             />
           ))}
         </div>
@@ -161,6 +164,7 @@ export function Table({
                 headerGroup={headerGroup}
                 tableWidth={tableWidth}
                 uniqueKey={uniqueKey}
+                dataId={dataId}
               />
             ))}
           </thead>
@@ -175,6 +179,7 @@ export function Table({
                   row={row}
                   key={`table_row_${uniqueKey}_${row.id}`}
                   uniqueKey={uniqueKey}
+                  dataId={dataId}
                 />
               )
             })}

@@ -12,7 +12,7 @@ import IconChevronDoubleLeft from '../SVGIcons/IconChevronDoubleLeft'
 import IconChevronDoubleRight from '../SVGIcons/IconChevronDoubleRight'
 import IconMore from '../SVGIcons/IconMore'
 
-interface PaginationProps<T> {
+interface PaginationProps<T> extends IBaseProps {
   table: Table<T>
   totalCount: number
   buttonText?: string
@@ -21,7 +21,8 @@ interface PaginationProps<T> {
 export function AdvancedPagination<TData>({
   table,
   totalCount,
-  buttonText
+  buttonText,
+  dataId = ''
 }: PaginationProps<TData>) {
   const [navigatePage, setNavigatePage] = useState<string>('1')
   const pageIndex = table.getState().pagination.pageIndex
@@ -83,12 +84,13 @@ export function AdvancedPagination<TData>({
   }, [table.getPageCount(), table.getState().pagination])
 
   return (
-    <div className="advanced-table__pagination">
+    <div className="advanced-table__pagination" data-id={dataId}>
       <Select
         setSelectedItem={(value) => onRowCountChange(value)}
         selectedItem={`${pageSize}`}
         className={'no-border'}
         options={OPTIONS}
+        dataId={dataId ? `${dataId}-page-size` : ''}
       />
       <div className={'advanced-table__pagination__right'}>
         <Text type={'tertiary'}>
@@ -100,22 +102,34 @@ export function AdvancedPagination<TData>({
             size="small"
             onChange={(e) => onNavigateToPage(e.target.value)}
             className="advanced-table__pagination__right__input mr-8"
+            dataId={dataId ? `${dataId}-page-input` : ''}
           />
           <Button
             onClick={onGoToPage}
             type="secondary"
             size="medium"
             buttonText={buttonText ?? 'Go to page'}
+            dataId={dataId ? `${dataId}-goto` : ''}
           />
         </div>
-        <ul className="pagination">
+        <ul className="pagination" data-id={dataId ? `${dataId}-pagination` : ''}>
           <li className={`previous ${!table.getCanPreviousPage() ? 'disabled' : ''}`}>
-            <a rel={'prev'} role={'button'} onClick={() => table.firstPage()}>
+            <a
+              rel={'prev'}
+              role={'button'}
+              onClick={() => table.firstPage()}
+              data-id={dataId ? `${dataId}-first` : ''}
+            >
               <IconChevronDoubleLeft size={'small'} />
             </a>
           </li>
           <li className={`previous ${!table.getCanPreviousPage() ? 'disabled' : ''}`}>
-            <a rel={'prev'} role={'button'} onClick={() => table.previousPage()}>
+            <a
+              rel={'prev'}
+              role={'button'}
+              onClick={() => table.previousPage()}
+              data-id={dataId ? `${dataId}-prev` : ''}
+            >
               <IconChevronLeft size={'small'} />
             </a>
           </li>
@@ -123,13 +137,21 @@ export function AdvancedPagination<TData>({
           {getVisiblePageNumbers().map((pageNumber, index) =>
             pageNumber === '---' ? (
               <li key={`ellipsis-${index}`} className={'pagination__more'}>
-                <a role={'button'} onClick={() => table.setPageIndex(+pageIndex - 3)}>
+                <a
+                  role={'button'}
+                  onClick={() => table.setPageIndex(+pageIndex - 3)}
+                  data-id={dataId ? `${dataId}-ellipsis-prev` : ''}
+                >
                   <IconMore size={'small'} />
                 </a>
               </li>
             ) : pageNumber === '+++' ? (
               <li key={`ellipsis-${index}`} className={'pagination__more'}>
-                <a role={'button'} onClick={() => table.setPageIndex(+pageIndex + 3)}>
+                <a
+                  role={'button'}
+                  onClick={() => table.setPageIndex(+pageIndex + 3)}
+                  data-id={dataId ? `${dataId}-ellipsis-next` : ''}
+                >
                   <IconMore size={'small'} />
                 </a>
               </li>
@@ -140,7 +162,11 @@ export function AdvancedPagination<TData>({
                 })}
                 key={pageNumber}
               >
-                <a role={'button'} onClick={() => table.setPageIndex(+pageNumber - 1)}>
+                <a
+                  role={'button'}
+                  onClick={() => table.setPageIndex(+pageNumber - 1)}
+                  data-id={dataId ? `${dataId}-page-${pageNumber}` : ''}
+                >
                   {pageNumber}
                 </a>
               </li>
@@ -148,12 +174,22 @@ export function AdvancedPagination<TData>({
           )}
 
           <li className={`next ${!table.getCanNextPage() ? 'disabled' : ''}`}>
-            <a rel={'next'} role={'button'} onClick={() => table.nextPage()}>
+            <a
+              rel={'next'}
+              role={'button'}
+              onClick={() => table.nextPage()}
+              data-id={dataId ? `${dataId}-next` : ''}
+            >
               <IconChevronRight size={'small'} />
             </a>
           </li>
           <li className={`next ${!table.getCanNextPage() ? 'disabled' : ''}`}>
-            <a rel={'next'} role={'button'} onClick={() => table.lastPage()}>
+            <a
+              rel={'next'}
+              role={'button'}
+              onClick={() => table.lastPage()}
+              data-id={dataId ? `${dataId}-last` : ''}
+            >
               <IconChevronDoubleRight size={'small'} />
             </a>
           </li>

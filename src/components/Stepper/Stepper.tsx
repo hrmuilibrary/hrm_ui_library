@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { TStepperProps } from './types'
 
 export const Stepper = (props: TStepperProps): React.ReactElement => {
-  const { list, activeStep = 0, setActiveStep } = props
+  const { list, activeStep = 0, setActiveStep, dataId = '' } = props
 
   const [activeStepIndex, setActiveStepIndex] = useState(activeStep)
 
@@ -40,6 +40,7 @@ export const Stepper = (props: TStepperProps): React.ReactElement => {
       prevHandler={decreaseStepIndex}
       nextHandler={increaseStepIndex}
       stepCount={list.length}
+      dataId={dataId ? `${dataId}-step-${activeStepIndex}` : ''}
     />
   )
 }

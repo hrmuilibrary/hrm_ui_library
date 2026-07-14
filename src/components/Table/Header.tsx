@@ -6,7 +6,7 @@ import { Text } from '../Text'
 import IconArrowDown from '../SVGIcons/IconArrowDown'
 import IconArrowUp from '../SVGIcons/IconArrowUp'
 
-type Props = {
+type Props = IBaseProps & {
   fixedHeader?: boolean
   withSelect: boolean
   tableWidth: number
@@ -19,7 +19,8 @@ export function Header({
   tableWidth,
   withSelect,
   uniqueKey,
-  fixedHeader = false
+  fixedHeader = false,
+  dataId = ''
 }: Props): ReactElement {
   const { key: keyheaderGroup, ...headerGroupProps } = headerGroup.getHeaderGroupProps()
 
@@ -63,6 +64,7 @@ export function Header({
             <th
               key={`table_head_${uniqueKey}_${i}`}
               {...headProps}
+              data-id={dataId ? `${dataId}-header-${id ?? i}` : ''}
               className={classNames({
                 fixed_column_left: fixed === 'left',
                 fixed_column_right: fixed === 'right',
