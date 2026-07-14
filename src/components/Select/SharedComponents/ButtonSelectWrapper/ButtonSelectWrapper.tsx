@@ -54,11 +54,15 @@ export const ButtonSelectWrapper = (props: TSelectWrapperProps): ReactElement =>
   useChangePositionsOnScroll(buttonRef?.current, dropdownRef, hasBottomSpace)
 
   return (
-    <div className={classNames(`select select--${size}`, className)} ref={setContainerRef}>
+    <div
+      data-id={dataId}
+      className={classNames(`select select--${size}`, className)}
+      ref={setContainerRef}
+    >
       <Button
         size={size}
         type={type}
-        dataId={dataId}
+        dataId={dataId ? `${dataId}-trigger` : ''}
         isOpen={isOpen}
         buttonText={placeHolder || ''}
         selectedItemsLabels={selectedItemsLabels}
@@ -70,6 +74,7 @@ export const ButtonSelectWrapper = (props: TSelectWrapperProps): ReactElement =>
       <>
         {isMobile ? (
           <MobileWrapper
+            dataId={dataId}
             applySelectedItems={applySelectedItems}
             isOpen={isOpen}
             closeDrodown={() => setIsOpen(false)}
@@ -79,6 +84,7 @@ export const ButtonSelectWrapper = (props: TSelectWrapperProps): ReactElement =>
           </MobileWrapper>
         ) : (
           <DesktopWrapper
+            dataId={dataId}
             offsets={offsets}
             setDropdownRef={setDropdownRef}
             isOpen={isOpen}

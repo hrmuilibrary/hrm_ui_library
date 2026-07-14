@@ -21,6 +21,7 @@ export const TabItem = (props: TTabItemProps): React.ReactElement | null => {
 
   return (
     <div
+      data-id={dataId}
       onClick={disabled ? noop : onClick}
       className={classNames(
         'tab',
@@ -37,7 +38,7 @@ export const TabItem = (props: TTabItemProps): React.ReactElement | null => {
           {...iconProps}
         />
       ) : null}
-      <span className="tab__label" data-id={dataId}>
+      <span className="tab__label" data-id={dataId ? `${dataId}-label` : ''}>
         {label}
       </span>
       {rightIconProps?.Component ? (

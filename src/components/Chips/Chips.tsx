@@ -46,6 +46,7 @@ export const Chips = (props: TChipsProps): ReactElement => {
         className
       )}
       id={id}
+      data-id={dataId}
       onClick={handleClick}
     >
       {leftIconProps?.Component ? (

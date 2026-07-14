@@ -4,12 +4,12 @@ import { TabItem } from './TabItem'
 import classNames from 'classnames'
 
 export const Tab = (props: TTabProps): ReactElement => {
-  const { selectedValue, tabItems, onSelect, className, ...rest } = props
+  const { selectedValue, tabItems, onSelect, className, dataId = '', ...rest } = props
 
   return (
-    <div className="tabs-container">
+    <div className="tabs-container" data-id={dataId}>
       <div className={classNames('tabs-header-container', className)}>
-        {tabItems.map((tabInfo) => {
+        {tabItems.map((tabInfo, index) => {
           return (
             <TabItem
               label={tabInfo.label}
@@ -18,7 +18,7 @@ export const Tab = (props: TTabProps): ReactElement => {
               key={tabInfo.value}
               val={tabInfo.value}
               isSelected={selectedValue === tabInfo.value}
-              dataId={tabInfo?.dataId || ''}
+              dataId={tabInfo?.dataId || (dataId ? `${dataId}-item-${index}` : '')}
               disabled={tabInfo.disabled}
               {...rest}
             />

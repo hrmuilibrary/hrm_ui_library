@@ -7,6 +7,7 @@ type TProps = {
   closeDrodown: () => void
   modalApplyButtonText?: string
   applySelectedItems: (isChecked: boolean) => void
+  dataId?: string
 }
 
 export const MobileWrapper = (props: TProps): ReactElement => {
@@ -15,7 +16,8 @@ export const MobileWrapper = (props: TProps): ReactElement => {
     isOpen,
     closeDrodown,
     children,
-    modalApplyButtonText = 'Apply'
+    modalApplyButtonText = 'Apply',
+    dataId
   } = props
 
   const submitSelection = () => {
@@ -28,6 +30,7 @@ export const MobileWrapper = (props: TProps): ReactElement => {
       onClose={closeDrodown}
       onSubmit={submitSelection}
       isMobileFullScreen
+      dataIdPrefix={dataId}
       className={'select__modal'}
       buttonProps={{
         confirm: {

@@ -27,6 +27,7 @@ interface TSelectBaseProps {
   language?: string
 }
 export interface TNestedSelectProps {
+  dataId?: string
   options: TSelectOptions
   isRequiredField?: boolean
   label?: string | ReactElement
@@ -175,6 +176,7 @@ export interface ISingleSelectDesktopProps extends ISingleSelectResponsiveProps 
 }
 
 export type TSelectFooterPropTypes = {
+  dataId?: string
   checkboxInfo?: TCheckboxInfo
   hasChange?: boolean
   buttonProps?: {
@@ -283,6 +285,7 @@ declare type TNavItemValue = {
   children: ReactNode
 }
 export type TProfileDropdownProps = {
+  dataId?: string
   avatar: ReactElement
   email: string
   name: string

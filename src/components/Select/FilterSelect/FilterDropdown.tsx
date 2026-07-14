@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react'
 import { OptionItem } from '../../../helperComponents/OptionItem'
 import { TFilterDropdownContentProps } from '../types'
+import { getOptionDataId } from '../helper'
 
 export const FilterDropdownContent = (props: TFilterDropdownContentProps): React.ReactElement => {
   const {
@@ -11,7 +12,8 @@ export const FilterDropdownContent = (props: TFilterDropdownContentProps): React
     onItemDeselect,
     labelLeftIconProps,
     optionRightIconComponent,
-    labelRightIconComponent
+    labelRightIconComponent,
+    dataId
   } = props
 
   const filteredOptions = useMemo(() => {
@@ -22,13 +24,14 @@ export const FilterDropdownContent = (props: TFilterDropdownContentProps): React
 
   return (
     <>
-      {filteredOptions.map((item: TSelectOption) => {
+      {filteredOptions.map((item: TSelectOption, index: number) => {
         const isSelected = checkIsSelected(item.value)
 
         return (
           <OptionItem
             data={item}
             key={item.value}
+            dataId={getOptionDataId(dataId, item.value, index) || item.dataId}
             onClick={isSelected ? onItemDeselect : onItemSelect}
             labelLeftIconProps={labelLeftIconProps}
             OptionRightIconComponent={optionRightIconComponent}

@@ -36,7 +36,8 @@ export const InputSelectWrapper = (props: TSelectWrapperProps): ReactElement | n
     hasError,
     modalApplyButtonText,
     applySelectedItems,
-    hideSelectedOptions = false
+    hideSelectedOptions = false,
+    dataId
   } = props
 
   const inputRef = useRef<HTMLInputElement | null>(null)
@@ -94,9 +95,14 @@ export const InputSelectWrapper = (props: TSelectWrapperProps): ReactElement | n
   useChangePositionsOnScroll(inputRef?.current, dropdownRef, hasBottomSpace)
 
   return (
-    <div className={classNames('select select--multi', className)} ref={setContainerRef}>
+    <div
+      data-id={dataId}
+      className={classNames('select select--multi', className)}
+      ref={setContainerRef}
+    >
       <div onClick={disabled ? noop : toggleDropdown}>
         <Input
+          dataId={dataId ? `${dataId}-trigger` : ''}
           readonly
           label={label}
           ref={inputRef}
@@ -119,6 +125,7 @@ export const InputSelectWrapper = (props: TSelectWrapperProps): ReactElement | n
       <>
         {isMobile ? (
           <MobileWrapper
+            dataId={dataId}
             applySelectedItems={applySelectedItems}
             isOpen={isOpen}
             closeDrodown={() => setIsOpen(false)}
@@ -128,6 +135,7 @@ export const InputSelectWrapper = (props: TSelectWrapperProps): ReactElement | n
           </MobileWrapper>
         ) : (
           <DesktopWrapper
+            dataId={dataId}
             setDropdownRef={setDropdownRef}
             isOpen={isOpen}
             align={align}

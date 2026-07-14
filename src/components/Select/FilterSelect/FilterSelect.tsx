@@ -23,6 +23,7 @@ export const FilterSelect = (props: TFilterProps): ReactElement | null => {
     closeHandler,
     parentRef,
     language = 'en',
+    dataId,
     ...rest
   } = props
 
@@ -86,9 +87,14 @@ export const FilterSelect = (props: TFilterProps): ReactElement | null => {
   return (
     <>
       {createPortal(
-        <div className="select filter">
-          <div className="select__options" ref={setContainerRef}>
+        <div className="select filter" data-id={dataId}>
+          <div
+            className="select__options"
+            data-id={dataId ? `${dataId}-content` : ''}
+            ref={setContainerRef}
+          >
             <Input
+              dataId={dataId ? `${dataId}-search` : ''}
               onChange={onFilter}
               className="filter__input"
               size="small"
@@ -108,6 +114,7 @@ export const FilterSelect = (props: TFilterProps): ReactElement | null => {
                   onItemDeselect={onItemDeselect}
                   filterValue={filterValue}
                   onItemSelect={onItemSelect}
+                  dataId={dataId}
                   options={options as TSelectGroupOptions}
                   {...rest}
                 />
@@ -117,6 +124,7 @@ export const FilterSelect = (props: TFilterProps): ReactElement | null => {
                   onItemDeselect={onItemDeselect}
                   filterValue={filterValue}
                   onItemSelect={onItemSelect}
+                  dataId={dataId}
                   options={options as TSelectOptions}
                   {...rest}
                 />
@@ -124,6 +132,7 @@ export const FilterSelect = (props: TFilterProps): ReactElement | null => {
             </div>
             {isLoading ? null : (
               <Footer
+                dataId={dataId}
                 buttonProps={footerButtonProps}
                 onCancel={cancelSelectedItems}
                 onApply={applySelectedItems}
