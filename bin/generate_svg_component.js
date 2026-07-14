@@ -107,6 +107,11 @@ fs.readdir(svgDirectory, (err, files) => {
 
     // Process each SVG file
     files.forEach(file => {
+        // Skip non-SVG files (e.g. .DS_Store) so a stray file can't crash the generator
+        if (!file.toLowerCase().endsWith('.svg')) {
+            return;
+        }
+
         const filePath = path.join(svgDirectory, file);
 
         // Read SVG content

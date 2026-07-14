@@ -5,6 +5,8 @@ import { StoryFn, type StoryObj } from '@storybook/react'
 import { TModalConfirmationPropTypes, TModalPropTypes } from '../components/Modal/types'
 import IconDelete from '../components/SVGIcons/IconDelete'
 import { Select } from '../components/Select'
+import IconOpen from '../components/SVGIcons/IconOpen'
+import { Status } from '../components/Status'
 
 export default {
   title: 'Modal',
@@ -46,6 +48,8 @@ const Template: StoryFn<TModalPropTypes> = (args) => {
           closeModal()
           console.log('submit')
         }}
+        headerIcon={<IconOpen />}
+        headerStatus={<Status type="danger" text="Rejected" size="small" withBackground/>}
         buttonProps={{
           confirm: {
             buttonText: 'Save',

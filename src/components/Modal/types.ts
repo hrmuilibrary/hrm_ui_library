@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 import { TButtonPropTypes } from '../Button/types'
 export type TTitleSize = 'medium' | 'large'
+export type TModalHeaderIconColor = 'brand' | 'green' | 'blue' | 'red' | 'purple' | 'yellow'
 export interface TModalPropTypes {
   dataIdPrefix?: string
   closeOnOutsideClick?: boolean
@@ -21,6 +22,8 @@ export interface TModalPropTypes {
   className?: string
   confirmBtnTooltipText?: string
   isMobileFullScreen?: boolean
+  headerIcon?: ReactNode
+  headerStatus?: ReactNode
 }
 
 export interface TModalConfirmationPropTypes {
