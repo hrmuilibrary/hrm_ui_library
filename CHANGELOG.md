@@ -1,3 +1,10 @@
+## [4.0.1](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.0...4.0.1) (2026-07-15)
+
+
+### Bug Fixes
+
+* add optional props ([0d60f7a](https://github.com/hrmuilibrary/hrm_ui_library/commit/0d60f7ad78ccec71198aabded51440f8fbcf69a8))
+
 # [4.0.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.4.2...4.0.0) (2026-07-15)
 
 
