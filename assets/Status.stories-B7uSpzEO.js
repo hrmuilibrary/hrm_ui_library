@@ -1,0 +1,5 @@
+import{j as r}from"./jsx-runtime-BNdl7zfN.js";import{S as a}from"./Status-EJ0tuKiY.js";import{I as i}from"./IconPerson-BAsEK8Ce.js";import"./iframe-DdJqbjP1.js";import"./preload-helper-Dp1pzeXC.js";import"./Text-l0k1Tvx0.js";import"./index-C2AFq9e_.js";import"./helpers-tWzEQIDg.js";const y={title:"Status",component:a,argTypes:{type:{options:["primary","disabled","brand","danger","warning","success","information","discovery"],control:{type:"radio"}},size:{options:["large","medium","small"],control:{type:"radio"}}}},m=n=>r.jsx(r.Fragment,{children:r.jsx(a,{...n})}),t=m.bind({});t.args={text:"Status",type:"discovery",size:"large",withCircle:!1,withBackground:!0,leftIconProps:{Component:i}};var s,e,o;t.parameters={...t.parameters,docs:{...(s=t.parameters)==null?void 0:s.docs,source:{originalSource:`args => {
+  return <>
+      <_Status {...args}>{/*<Text size={'small'}>Status subtext</Text>*/}</_Status>
+    </>;
+}`,...(o=(e=t.parameters)==null?void 0:e.docs)==null?void 0:o.source}}};const f=["Status"];export{t as Status,f as __namedExportsOrder,y as default};
