@@ -30,8 +30,8 @@ const IconLayoutList = ({
     strokeLinejoin="round"
     aria-hidden="true"
   >
-    <rect width="18" height="18" x="3" y="3" rx="2"></rect>
-    <path d="M12 3v18"></path>
+    <rect fill="none" width="18" height="18" x="3" y="3" rx="2"></rect>
+    <path fill="none" d="M12 3v18"></path>
   </svg>
 )
 

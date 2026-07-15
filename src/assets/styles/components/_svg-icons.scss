@@ -9,12 +9,13 @@
   height: 1em;
   vertical-align: top;
   font-size: var(--size-24);
+  color: var(--grey-900);
 
   path, circle, line {
     pointer-events: none;
 
     &:not([fill]) {
-      fill: var(--grey-900);
+      fill: currentColor;
     }
   }
 
@@ -54,22 +55,19 @@
       &-#{$key} {
         color: $value;
       }
-      &-#{$key} path:not([fill]),
-      &-#{$key} circle:not([fill]),
-      &-#{$key} line:not([fill]) {
-        fill: $value;
-      }
     }
   }
 }
 
 [data-theme="dark"] {
   .svg-icon {
+    color: var(--grey-50);
+
     path, circle, line {
       pointer-events: none;
 
       &:not([fill]) {
-        fill: var(--grey-50);
+        fill: currentColor;
       }
     }
     &__type {
@@ -90,11 +88,6 @@
       @each $key, $value in $types {
         &-#{$key} {
           color: $value;
-        }
-        &-#{$key} path:not([fill]),
-        &-#{$key} circle:not([fill]),
-        &-#{$key} line:not([fill]) {
-          fill: $value;
         }
       }
     }

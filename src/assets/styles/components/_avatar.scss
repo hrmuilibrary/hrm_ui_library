@@ -11,7 +11,6 @@
   font: var(--font-weight-400) var(--font-size-32)/1 var(--font-family-primary);
   border-radius: var(--border-radius-percent-100);
   cursor: pointer;
-  border: 2px solid var(--white);
 
 
   &--xxlarge {
@@ -207,6 +206,9 @@
   &__item {
     &:first-child {
       margin-left: 0;
+    }
+    .avatar {
+      border: 2px solid var(--white);
     }
   }
 

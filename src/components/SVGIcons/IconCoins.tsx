@@ -24,16 +24,16 @@ const IconCoins = ({
     ref={refHandler}
     id={id}
     data-test-id={dataTestId ? `${dataTestId}-svg-icon` : ''}
-    stroke="#717784"
+    stroke="currentColor"
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
     aria-hidden="true"
   >
-    <circle cx="8" cy="8" r="6"></circle>
-    <path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path>
-    <path d="M7 6h1v4"></path>
-    <path d="m16.71 13.88.7.71-2.82 2.82"></path>
+    <circle fill="none" cx="8" cy="8" r="6"></circle>
+    <path fill="none" d="M18.09 10.37A6 6 0 1 1 10.34 18"></path>
+    <path fill="none" d="M7 6h1v4"></path>
+    <path fill="none" d="m16.71 13.88.7.71-2.82 2.82"></path>
   </svg>
 )
 
