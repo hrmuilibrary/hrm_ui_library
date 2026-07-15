@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react'
 import { ISVGIconProps } from '../../type'
 import classNames from 'classnames'
 
-const IconCode = ({
+const IconUsers = ({
   size,
   type,
   className = '',
@@ -20,20 +20,20 @@ const IconCode = ({
     })}
     viewBox="0 0 24 24"
     fill="none"
+    stroke="currentColor"
     onClick={onClick}
     ref={refHandler}
     id={id}
     data-test-id={dataTestId ? `${dataTestId}-svg-icon` : ''}
-    stroke="currentColor"
-    strokeWidth="1.2"
+    strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
     aria-hidden="true"
   >
-    <polyline fill="none" points="18,16 22,12 18,8"></polyline>
-    <polyline fill="none" points="6,8 2,12 6,16"></polyline>
-    <line fill="none" x1="14.5" y1="4" x2="9.5" y2="20"></line>
+    <path fill="none" d="M18 21a8 8 0 0 0-16 0"></path>
+    <circle fill="none" cx="10" cy="8" r="5"></circle>
+    <path fill="none" d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"></path>
   </svg>
 )
 
-export default IconCode
+export default IconUsers
