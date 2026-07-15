@@ -44,4 +44,5 @@ export interface InputCustomProps
     value: string
     floatValue: number | undefined
   }) => boolean
+  allowEmptyFormatting?: boolean
 }
