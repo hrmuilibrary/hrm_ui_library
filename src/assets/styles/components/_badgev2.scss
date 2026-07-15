@@ -307,7 +307,7 @@
   &--stroke {
     color: var(--grey-400);
     border: 1px solid var(--grey-400);
-    background-color: var(--grey-0);
+    background-color: none;
 
     & > &#{$this__inner} {
       color: var(--grey-400);
