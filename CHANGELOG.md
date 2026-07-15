@@ -1,3 +1,17 @@
+# [4.0.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.4.2...4.0.0) (2026-07-15)
+
+
+* feat!: rename dataId prop to dataTestId across all components ([5da1b0e](https://github.com/hrmuilibrary/hrm_ui_library/commit/5da1b0e2b4ae2d4ae3345d695cf340a3bf23b9cf))
+
+
+### BREAKING CHANGES
+
+* the `dataId` prop is now `dataTestId` and `dataIdPrefix` is
+now `dataTestIdPrefix`; the rendered attribute is `data-test-id` instead of
+`data-id`. Consumers passing `dataId`/`dataIdPrefix` must rename them.
+
+Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
+
 ## [3.4.2](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.4.1...3.4.2) (2026-07-15)
 
 
