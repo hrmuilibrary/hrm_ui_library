@@ -1,3 +1,10 @@
+## [4.0.5](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.4...4.0.5) (2026-07-15)
+
+
+### Bug Fixes
+
+* Changed SVG icon styling to use currentColor inheritance instead of hardcoded fills, fixed stroke-based icons, and added the users icon. ([af3e568](https://github.com/hrmuilibrary/hrm_ui_library/commit/af3e5688dfceef241e4e3c6d21927002be669c15))
+
 ## [4.0.4](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.3...4.0.4) (2026-07-15)
 
 
