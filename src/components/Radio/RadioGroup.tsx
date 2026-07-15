@@ -61,7 +61,7 @@ export const RadioGroup = forwardRef((props: TRadioGroupProps, ref): React.React
               className="radio-group__item"
               isSelected={radioOption.value === value || radioOption.value === selected}
               onClick={() => onSelect(radioOption.value)}
-              dataId={radioOption.dataId}
+              dataTestId={radioOption.dataTestId}
             />
           )
         })}

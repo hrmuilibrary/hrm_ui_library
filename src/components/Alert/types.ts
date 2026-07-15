@@ -1,3 +1,4 @@
+import { IFormCompProps } from '../../type'
 import { TButtonPropTypes } from '../Button/types'
 
 export type TAlertTypes = 'success' | 'error' | 'warning' | 'information' | 'discovery'

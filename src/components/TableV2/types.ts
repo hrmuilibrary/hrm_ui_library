@@ -1,3 +1,4 @@
+import { IBaseProps } from '../../type'
 import type {
   ColumnDef,
   ColumnSizingState,

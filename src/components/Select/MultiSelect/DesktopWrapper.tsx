@@ -8,7 +8,7 @@ import {
 } from '../../../hooks'
 
 type TProps = {
-  dataId?: string
+  dataTestId?: string
   isOpen: boolean
   children: ReactElement
   setDropdownRef: LegacyRef<HTMLDivElement>
@@ -34,7 +34,7 @@ export const DesktopWrapper = (props: TProps): ReactElement | null => {
     dropdownRef,
     containerRef,
     dropdownWidth,
-    dataId
+    dataTestId
   } = props
 
   const { bottom, left, top, right } = useGetElemPositions(inputRef)
@@ -51,7 +51,7 @@ export const DesktopWrapper = (props: TProps): ReactElement | null => {
 
   return isOpen ? (
     <div
-      data-id={dataId ? `${dataId}-content` : ''}
+      data-test-id={dataTestId ? `${dataTestId}-content` : ''}
       className="select__options"
       ref={setDropdownRef}
       style={{

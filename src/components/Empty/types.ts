@@ -1,3 +1,4 @@
+import { IBaseProps } from '../../type'
 import { TButtonPropTypes } from '../Button/types'
 
 export interface TEmptyProps extends IBaseProps {

@@ -82,5 +82,5 @@ ProgressStep.args = {
   stepType: 'number',
   stepDirection: 'horizontal',
   stepSize: 'large',
-  dataId: 'progress-step-1'
+  dataTestId: 'progress-step-1'
 }

@@ -9,7 +9,7 @@ const IconGb = ({
   onClick,
   refHandler,
   id,
-  dataId
+  dataTestId
 }: ISVGIconProps): ReactElement => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +23,7 @@ const IconGb = ({
     onClick={onClick}
     ref={refHandler}
     id={id}
-    data-id={dataId ? `${dataId}-svg-icon` : ''}
+    data-test-id={dataTestId ? `${dataTestId}-svg-icon` : ''}
   >
     <rect y="3.42999" width="24" height="17.1429" rx="2" fill="white" />
     <mask

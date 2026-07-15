@@ -1,3 +1,4 @@
+import { IBaseProps, IFormCompProps } from '../../type'
 import { ReactElement } from 'react'
 
 export interface TRadioProps extends IFormCompProps {

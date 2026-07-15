@@ -1,3 +1,4 @@
+import { IBaseProps } from '../../type'
 import { Column, TableState } from 'react-table'
 import { TButtonPropTypes } from '../Button/types'
 

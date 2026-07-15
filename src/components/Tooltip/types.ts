@@ -1,3 +1,4 @@
+import { IFormCompProps } from '../../type'
 import { ReactElement } from 'react'
 
 export enum Positions {

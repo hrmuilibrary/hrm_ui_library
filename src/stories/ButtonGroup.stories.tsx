@@ -76,5 +76,5 @@ export const ButtonGroup: StoryObj<IButtonGroup> = Template.bind({})
 ButtonGroup.args = {
   type: 'primary',
   size: 'large',
-  dataId: 'button-group'
+  dataTestId: 'button-group'
 }

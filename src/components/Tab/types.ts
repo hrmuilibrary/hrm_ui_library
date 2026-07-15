@@ -1,3 +1,4 @@
+import { IBaseProps, IFormCompProps } from '../../type'
 import { TBadgeProps } from '../Badge/types'
 
 export type TTabItem = IBaseProps & {

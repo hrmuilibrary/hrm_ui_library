@@ -1,3 +1,4 @@
+import { IBaseProps } from '../../type'
 import React, { useEffect, useState } from 'react'
 import type { Table } from '@tanstack/react-table'
 import { Input } from '../Input'
@@ -22,7 +23,7 @@ export function AdvancedPagination<TData>({
   table,
   totalCount,
   buttonText,
-  dataId = ''
+  dataTestId = ''
 }: PaginationProps<TData>) {
   const [navigatePage, setNavigatePage] = useState<string>('1')
   const pageIndex = table.getState().pagination.pageIndex
@@ -84,13 +85,13 @@ export function AdvancedPagination<TData>({
   }, [table.getPageCount(), table.getState().pagination])
 
   return (
-    <div className="advanced-table__pagination" data-id={dataId}>
+    <div className="advanced-table__pagination" data-test-id={dataTestId}>
       <Select
         setSelectedItem={(value) => onRowCountChange(value)}
         selectedItem={`${pageSize}`}
         className={'no-border'}
         options={OPTIONS}
-        dataId={dataId ? `${dataId}-page-size` : ''}
+        dataTestId={dataTestId ? `${dataTestId}-page-size` : ''}
       />
       <div className={'advanced-table__pagination__right'}>
         <Text type={'tertiary'}>
@@ -102,23 +103,23 @@ export function AdvancedPagination<TData>({
             size="small"
             onChange={(e) => onNavigateToPage(e.target.value)}
             className="advanced-table__pagination__right__input mr-8"
-            dataId={dataId ? `${dataId}-page-input` : ''}
+            dataTestId={dataTestId ? `${dataTestId}-page-input` : ''}
           />
           <Button
             onClick={onGoToPage}
             type="secondary"
             size="medium"
             buttonText={buttonText ?? 'Go to page'}
-            dataId={dataId ? `${dataId}-goto` : ''}
+            dataTestId={dataTestId ? `${dataTestId}-goto` : ''}
           />
         </div>
-        <ul className="pagination" data-id={dataId ? `${dataId}-pagination` : ''}>
+        <ul className="pagination" data-test-id={dataTestId ? `${dataTestId}-pagination` : ''}>
           <li className={`previous ${!table.getCanPreviousPage() ? 'disabled' : ''}`}>
             <a
               rel={'prev'}
               role={'button'}
               onClick={() => table.firstPage()}
-              data-id={dataId ? `${dataId}-first` : ''}
+              data-test-id={dataTestId ? `${dataTestId}-first` : ''}
             >
               <IconChevronDoubleLeft size={'small'} />
             </a>
@@ -128,7 +129,7 @@ export function AdvancedPagination<TData>({
               rel={'prev'}
               role={'button'}
               onClick={() => table.previousPage()}
-              data-id={dataId ? `${dataId}-prev` : ''}
+              data-test-id={dataTestId ? `${dataTestId}-prev` : ''}
             >
               <IconChevronLeft size={'small'} />
             </a>
@@ -140,7 +141,7 @@ export function AdvancedPagination<TData>({
                 <a
                   role={'button'}
                   onClick={() => table.setPageIndex(+pageIndex - 3)}
-                  data-id={dataId ? `${dataId}-ellipsis-prev` : ''}
+                  data-test-id={dataTestId ? `${dataTestId}-ellipsis-prev` : ''}
                 >
                   <IconMore size={'small'} />
                 </a>
@@ -150,7 +151,7 @@ export function AdvancedPagination<TData>({
                 <a
                   role={'button'}
                   onClick={() => table.setPageIndex(+pageIndex + 3)}
-                  data-id={dataId ? `${dataId}-ellipsis-next` : ''}
+                  data-test-id={dataTestId ? `${dataTestId}-ellipsis-next` : ''}
                 >
                   <IconMore size={'small'} />
                 </a>
@@ -165,7 +166,7 @@ export function AdvancedPagination<TData>({
                 <a
                   role={'button'}
                   onClick={() => table.setPageIndex(+pageNumber - 1)}
-                  data-id={dataId ? `${dataId}-page-${pageNumber}` : ''}
+                  data-test-id={dataTestId ? `${dataTestId}-page-${pageNumber}` : ''}
                 >
                   {pageNumber}
                 </a>
@@ -178,7 +179,7 @@ export function AdvancedPagination<TData>({
               rel={'next'}
               role={'button'}
               onClick={() => table.nextPage()}
-              data-id={dataId ? `${dataId}-next` : ''}
+              data-test-id={dataTestId ? `${dataTestId}-next` : ''}
             >
               <IconChevronRight size={'small'} />
             </a>
@@ -188,7 +189,7 @@ export function AdvancedPagination<TData>({
               rel={'next'}
               role={'button'}
               onClick={() => table.lastPage()}
-              data-id={dataId ? `${dataId}-last` : ''}
+              data-test-id={dataTestId ? `${dataTestId}-last` : ''}
             >
               <IconChevronDoubleRight size={'small'} />
             </a>

@@ -26,7 +26,7 @@ const ExpandColumn = <TData,>({
   row,
   expandedRows,
   onToggle,
-  dataId = ''
+  dataTestId = ''
 }: ExpandColumnProps<TData>) => {
   const hasSubRows =
     (row.original as TableData)?.subRows && (row.original as TableData)?.subRows?.length > 0
@@ -40,7 +40,7 @@ const ExpandColumn = <TData,>({
       iconProps={{
         Component: expandedRows.has(row.id) ? IconChevronUp : IconChevronDown
       }}
-      dataId={dataId ? `${dataId}-expand-${row.index}` : ''}
+      dataTestId={dataTestId ? `${dataTestId}-expand-${row.index}` : ''}
       onClick={(e) => {
         e.stopPropagation()
         onToggle(row.id)
@@ -51,7 +51,7 @@ const ExpandColumn = <TData,>({
 
 export function Table<TData>({
   data,
-  dataId = '',
+  dataTestId = '',
   columns,
   isLoading,
   hasError,
@@ -103,7 +103,7 @@ export function Table<TData>({
           row={row}
           expandedRows={expandedRows}
           onToggle={handleToggleRow}
-          dataId={dataId}
+          dataTestId={dataTestId}
         />
       ),
       meta: {
@@ -115,13 +115,13 @@ export function Table<TData>({
         enableSorting: false
       }
     }),
-    [expandedRows, handleToggleRow, dataId]
+    [expandedRows, handleToggleRow, dataTestId]
   )
 
   const { table, sensors, handleDragStart, handleDragEnd, handleDragCancel, activeHeader } =
     useTableControl({
       data,
-      dataId,
+      dataTestId,
       tableSettings,
       columns: collapsibleRows ? [expandColumn, ...columns] : columns,
       withSelect,
@@ -170,7 +170,7 @@ export function Table<TData>({
 
   return (
     <div
-      data-id={dataId}
+      data-test-id={dataTestId}
       className={classnames('advanced-table', {
         'with-border': withBorder
       })}
@@ -195,7 +195,7 @@ export function Table<TData>({
                   mainMessage={emptyTitle}
                   paragraphMessage={emptySubTitle}
                   illustration={emptyIllustration}
-                  dataId={dataId ? `${dataId}-empty` : ''}
+                  dataTestId={dataTestId ? `${dataTestId}-empty` : ''}
                 />
               ) : (
                 <>
@@ -213,7 +213,7 @@ export function Table<TData>({
                                 pinnedStyles={{ ...getCommonPinningStyles(header.column) }}
                                 key={header.id}
                                 header={header}
-                                dataId={dataId}
+                                dataTestId={dataTestId}
                               />
                             )
                           })}
@@ -226,7 +226,7 @@ export function Table<TData>({
                       ? skeletonRowSize.map((_, i) => (
                           <tr
                             key={`skeleton-row-${i}`}
-                            data-id={dataId ? `${dataId}-loader-row-${i}` : ''}
+                            data-test-id={dataTestId ? `${dataTestId}-loader-row-${i}` : ''}
                           >
                             {table.getVisibleFlatColumns().map((column) => (
                               <td
@@ -248,7 +248,7 @@ export function Table<TData>({
                           <React.Fragment key={row.id}>
                             <tr
                               className={classnames({ selected: row.getIsSelected() })}
-                              data-id={dataId ? `${dataId}-row-${row.index}` : ''}
+                              data-test-id={dataTestId ? `${dataTestId}-row-${row.index}` : ''}
                             >
                               {row.getVisibleCells().map((cell) => (
                                 <td
@@ -261,9 +261,9 @@ export function Table<TData>({
                                   })}
                                   id={cell.id}
                                   key={cell.id}
-                                  data-id={
-                                    dataId
-                                      ? `${dataId}-row-${row.index}-cell-${cell.column.id}`
+                                  data-test-id={
+                                    dataTestId
+                                      ? `${dataTestId}-row-${row.index}-cell-${cell.column.id}`
                                       : ''
                                   }
                                   onClick={() => handleRowClick(cell.column, row)}
@@ -284,7 +284,9 @@ export function Table<TData>({
                               renderExpandedContent && (
                                 <tr
                                   className={classnames('advanced-table__expanded-row')}
-                                  data-id={dataId ? `${dataId}-row-${row.index}-expanded` : ''}
+                                  data-test-id={
+                                    dataTestId ? `${dataTestId}-row-${row.index}-expanded` : ''
+                                  }
                                 >
                                   <td colSpan={row.getVisibleCells().length}>
                                     {renderExpandedContent(row)}

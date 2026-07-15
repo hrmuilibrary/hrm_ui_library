@@ -1,3 +1,4 @@
+import { IBaseProps } from '../../type'
 import { CSSProperties, ReactNode } from 'react'
 
 export type TSkeletonVariant = 'text' | 'circular' | 'rectangular' | 'rounded'

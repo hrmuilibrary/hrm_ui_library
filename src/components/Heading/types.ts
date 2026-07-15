@@ -1,3 +1,4 @@
+import { IBaseProps } from '../../type'
 import { ElementType, ReactNode } from 'react'
 
 export interface HeadingPropTypes extends IBaseProps {

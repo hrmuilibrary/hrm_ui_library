@@ -1,3 +1,4 @@
+import { IBaseProps } from '../../type'
 import { TextPropTypes } from '../Text/types'
 
 export type TMorePropTypes = IBaseProps & {

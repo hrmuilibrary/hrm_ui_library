@@ -25,7 +25,7 @@ export const CollapseGroup = forwardRef(
 
     return (
       <div className={classNames('collapse-group', className)} ref={ref}>
-        {items.map(({ id, title, value, content, dataId, iconProps }) => {
+        {items.map(({ id, title, value, content, dataTestId, iconProps }) => {
           const isOpen = openValues.indexOf(value) !== -1
           return (
             <CollapseItem
@@ -33,7 +33,7 @@ export const CollapseGroup = forwardRef(
               id={id}
               isOpen={isOpen}
               key={value}
-              dataId={dataId}
+              dataTestId={dataTestId}
               title={{ size, color, text: title }}
               toggle={() => (isOpen ? onCollapseDeselect(value) : onCollapseSelect(value))}
               labelLeftIconProps={iconProps}

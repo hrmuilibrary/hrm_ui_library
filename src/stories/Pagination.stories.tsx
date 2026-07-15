@@ -31,5 +31,5 @@ export const Pagination: StoryObj<TPaginationProps> = Template.bind({})
 Pagination.args = {
   size: 'large',
   totalCount: 100,
-  dataId: 'pagination'
+  dataTestId: 'pagination'
 }

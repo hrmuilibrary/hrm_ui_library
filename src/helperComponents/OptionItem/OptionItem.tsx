@@ -19,7 +19,7 @@ export const OptionItem = (props: TSelectItemProps): React.ReactElement => {
     isCheckbox,
     className = '',
     tooltipAddons,
-    dataId = '',
+    dataTestId = '',
     style = {}
   } = props
 
@@ -40,7 +40,7 @@ export const OptionItem = (props: TSelectItemProps): React.ReactElement => {
 
   const optionContent = (
     <div
-      data-id={dataId}
+      data-test-id={dataTestId}
       id={`${value}`}
       className={classNames(
         'select__option',
@@ -84,7 +84,7 @@ export const OptionItem = (props: TSelectItemProps): React.ReactElement => {
           className={classNames('select__option__content', {
             select__option__content__large: size === 'large'
           })}
-          data-id={dataId}
+          data-test-id={dataTestId}
         >
           <span
             className={classNames(`select__option__text pr-4 ${disabled ? 'color-disabled' : ''}`, {

@@ -93,11 +93,11 @@ export const isSameDay = (date1?: Date, date2?: Date): boolean => {
   return dayjs(date1).isSame(date2, 'day')
 }
 
-export const generateDataTestId = (postfix: string, dataId?: string): string => {
-  if (!dataId) {
+export const generateDataTestId = (postfix: string, dataTestId?: string): string => {
+  if (!dataTestId) {
     return ''
   }
-  return `${dataId}-${postfix}`
+  return `${dataTestId}-${postfix}`
 }
 
 export const clearStorage = (preservedKeys: STORE_KEYS[] = [STORE_KEYS.theme]) => {

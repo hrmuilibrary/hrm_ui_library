@@ -31,5 +31,5 @@ export const Divider: StoryObj<TDividerProps> = Template.bind({})
 Divider.args = {
   type: 'primary',
   isHorizontal: true,
-  dataId: 'divider-1'
+  dataTestId: 'divider-1'
 }

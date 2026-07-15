@@ -18,14 +18,14 @@ export const RangeDatePickerMobile = forwardRef<any, IRangeDatePickerProps>(
       setFieldValue,
       name,
       changeHandler,
-      dataId,
+      dataTestId,
       format = DateFormat.LongDate,
       maxDate,
       minDate,
       locale = 'hy',
       disabled,
       placeholderText,
-      dataIdPrefix,
+      dataTestIdPrefix,
       modalOptions,
       ...rest
     } = props
@@ -104,7 +104,7 @@ export const RangeDatePickerMobile = forwardRef<any, IRangeDatePickerProps>(
         <Input
           readOnly
           onClick={openDatepicker}
-          dataId={dataId}
+          dataTestId={dataTestId}
           disabled={disabled}
           placeholder={placeholderText}
           currentValue={renderCurrentSelectedDate(rangeArray)}
@@ -148,7 +148,7 @@ export const RangeDatePickerMobile = forwardRef<any, IRangeDatePickerProps>(
                 locale={locale}
                 startYear={startYear}
                 endYear={endYear}
-                dataPrefix={dataIdPrefix}
+                dataPrefix={dataTestIdPrefix}
                 isMobile
               />
             )}

@@ -8,7 +8,7 @@ import { DROPDOWN_HEIGHT, DROPDOWN_WIDTH, ITEM_SIZE, ITEM_SIZE_MOBILE } from '..
 import classNames from 'classnames'
 import { noop } from '../../../../utils/helpers'
 import { filterSearchData } from '../../Select/helpers'
-import { getOptionDataId } from '../../helper'
+import { getOptionDataTestId } from '../../helper'
 
 export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null => {
   const {
@@ -28,8 +28,8 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
     optionRightIconComponent,
     maxSelectCount,
     menuOptions,
-    dataIdPrefix,
-    dataId,
+    dataTestIdPrefix,
+    dataTestId,
     dropdownWidth,
     applySelectedItems
   } = props
@@ -146,8 +146,8 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
     <>
       <ContentTop
         closeDropdown={closeDropdown}
-        dataId={dataId}
-        dataIdPrefix={dataIdPrefix}
+        dataTestId={dataTestId}
+        dataTestIdPrefix={dataTestIdPrefix}
         menuOptions={menuOptions}
         selectAll={selectAll}
         clearAll={clearAll}
@@ -194,7 +194,7 @@ export const MultiBase = (props: TMultiSingleTabPropTypes): ReactElement | null 
                 <OptionItem
                   size={isMobile ? 'large' : 'small'}
                   data={item}
-                  dataId={getOptionDataId(dataId, item.value, index) || item.dataId}
+                  dataTestId={getOptionDataTestId(dataTestId, item.value, index) || item.dataTestId}
                   onClick={isSelected ? onDeselect : onItemSelect}
                   disabled={
                     item.disabled || (!isSelected && selectedValues.length === maxSelectCount)

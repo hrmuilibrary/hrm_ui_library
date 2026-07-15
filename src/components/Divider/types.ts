@@ -1,3 +1,4 @@
+import { IBaseProps } from '../../type'
 export interface TDividerProps extends IBaseProps {
   type: 'primary' | 'secondary'
   isHorizontal?: boolean

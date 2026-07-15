@@ -5,7 +5,7 @@ import { useGetElemPositions, useGetElemSizes, useOnOutsideClick } from '../../.
 import { TNestedSelectProps } from '../types'
 import IconChevronUp from '../../SVGIcons/IconChevronUp'
 import IconChevronDown from '../../SVGIcons/IconChevronDown'
-import { getOptionDataId } from '../helper'
+import { getOptionDataTestId } from '../helper'
 
 const LEVEL_LEFT_MARGIN = 10
 
@@ -21,7 +21,7 @@ export const NestedSelect = (props: TNestedSelectProps): React.ReactElement | nu
     optionRightIconComponent,
     labelRightIconComponent,
     labelAddons,
-    dataId
+    dataTestId
   } = props
 
   const [isDropdownOpen, setIsOpen] = useState(false)
@@ -75,7 +75,7 @@ export const NestedSelect = (props: TNestedSelectProps): React.ReactElement | nu
           <OptionItem
             data={option}
             key={value}
-            dataId={getOptionDataId(dataId, value, acc.length) || option.dataId}
+            dataTestId={getOptionDataTestId(dataTestId, value, acc.length) || option.dataTestId}
             isSelected={isSelected}
             onClick={() => onSelect({ value, label: option.label }, !!children)}
             disabled={disabled}
@@ -95,10 +95,10 @@ export const NestedSelect = (props: TNestedSelectProps): React.ReactElement | nu
     }, [])
 
   return (
-    <div className="select select--multi" data-id={dataId} ref={setContainerRef}>
+    <div className="select select--multi" data-test-id={dataTestId} ref={setContainerRef}>
       <div onClick={toggleDropdown}>
         <Input
-          dataId={dataId ? `${dataId}-trigger` : ''}
+          dataTestId={dataTestId ? `${dataTestId}-trigger` : ''}
           ref={inputRef}
           className="select__input"
           label={label}
@@ -117,7 +117,7 @@ export const NestedSelect = (props: TNestedSelectProps): React.ReactElement | nu
       {isDropdownOpen && (
         <div
           className="select__options"
-          data-id={dataId ? `${dataId}-content` : ''}
+          data-test-id={dataTestId ? `${dataTestId}-content` : ''}
           style={{ left, width, top: bottom }}
         >
           <div className="select__options__scroll scrollbar scrollbar--vertical">

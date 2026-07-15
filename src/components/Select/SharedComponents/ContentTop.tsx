@@ -23,8 +23,8 @@ type TProps = {
   isSearchAvailable?: boolean
   hasLimitation?: boolean
   menuOptions?: TMenuItem[]
-  dataIdPrefix?: string
-  dataId?: string
+  dataTestIdPrefix?: string
+  dataTestId?: string
   closeDropdown?: () => void
   handleKeyDown?: (e: React.KeyboardEvent) => void
 }
@@ -42,14 +42,14 @@ export const ContentTop = React.memo<TProps>((props: TProps): React.ReactElement
     hasLimitation = false,
     isSelectAllDisabled = false,
     menuOptions = [],
-    dataIdPrefix,
-    dataId,
+    dataTestIdPrefix,
+    dataTestId,
     closeDropdown,
     handleKeyDown
   } = props
   const inputRef = useRef<HTMLInputElement>(null)
 
-  const baseDataId = dataId || dataIdPrefix
+  const baseDataTestId = dataTestId || dataTestIdPrefix
 
   const { searchInputPlaceHolder, innerLabel, clearAllLabel, selectAllLabel } = translations || {}
 
@@ -64,7 +64,7 @@ export const ContentTop = React.memo<TProps>((props: TProps): React.ReactElement
           handler: selectAll,
           disabled: isSelectAllDisabled,
           iconProps: { Component: IconSelectAllOff },
-          dataId: baseDataId ? `${baseDataId}-select-all` : ''
+          dataTestId: baseDataTestId ? `${baseDataTestId}-select-all` : ''
         }
       ]
     }
@@ -77,7 +77,7 @@ export const ContentTop = React.memo<TProps>((props: TProps): React.ReactElement
           handler: clearAll,
           disabled: !isAnySelected,
           iconProps: { Component: IconDismissFilled },
-          dataId: baseDataId ? `${baseDataId}-clear` : ''
+          dataTestId: baseDataTestId ? `${baseDataTestId}-clear` : ''
         }
       ]
     }
@@ -90,7 +90,7 @@ export const ContentTop = React.memo<TProps>((props: TProps): React.ReactElement
     clearAllLabel,
     isSelectAllDisabled,
     isAnySelected,
-    baseDataId
+    baseDataTestId
   ])
   const onSearch = (e: TChangeEventType) => {
     setSearchValue && setSearchValue(e.target.value)
@@ -120,7 +120,7 @@ export const ContentTop = React.memo<TProps>((props: TProps): React.ReactElement
         {isMobile && <IconChevronLeft onClick={onBack} size="large" />}
         {isSearchAvailable && (
           <Input
-            dataId={baseDataId ? `${baseDataId}-search` : ''}
+            dataTestId={baseDataTestId ? `${baseDataTestId}-search` : ''}
             onKeyDown={handleKeyDown || noop}
             ref={inputRef}
             className="content-top__search"

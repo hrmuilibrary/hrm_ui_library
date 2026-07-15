@@ -1,3 +1,4 @@
+import { IFormCompProps } from '../../type'
 export type TBreadCrumbItem = {
   value: number | string
   label: string | React.ReactElement

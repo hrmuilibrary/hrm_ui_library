@@ -1,3 +1,4 @@
+import { IBaseProps } from '../../type'
 import { ReactElement } from 'react'
 
 export type TPaginationProps = IBaseProps & {

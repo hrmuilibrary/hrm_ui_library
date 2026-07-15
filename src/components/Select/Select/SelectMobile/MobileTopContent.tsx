@@ -10,7 +10,7 @@ type TProps = {
   onBack: () => void
   withSearch: boolean
   isOpen: boolean
-  dataId?: string
+  dataTestId?: string
 }
 export const MobileTopContent = ({
   onBack,
@@ -18,7 +18,7 @@ export const MobileTopContent = ({
   searchValue,
   withSearch,
   isOpen,
-  dataId
+  dataTestId
 }: TProps): ReactElement => {
   const inputRef = useRef<HTMLInputElement | null>(null)
 
@@ -41,7 +41,7 @@ export const MobileTopContent = ({
       <IconChevronLeft onClick={onBack} size="large" />
       {withSearch && (
         <Input
-          dataId={dataId ? `${dataId}-search` : ''}
+          dataTestId={dataTestId ? `${dataTestId}-search` : ''}
           currentValue={searchValue}
           handleChange={onSearch}
           className="ml-8"

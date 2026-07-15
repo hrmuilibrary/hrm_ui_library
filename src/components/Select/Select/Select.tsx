@@ -24,7 +24,7 @@ import { filterSearchData } from './helpers'
 export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactElement | null => {
   const {
     labelAddons,
-    dataId,
+    dataTestId,
     className,
     size = 'small',
     label,
@@ -157,7 +157,7 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
 
   return (
     <div
-      data-id={dataId}
+      data-test-id={dataTestId}
       className={classNames(`select select--${size}`, className, {
         'select--opened': isOpen
       })}
@@ -167,7 +167,7 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
         <Input
           onClick={disabled ? noop : onOpenOptions}
           size={size}
-          dataId={dataId ? `${dataId}-trigger` : ''}
+          dataTestId={dataTestId ? `${dataTestId}-trigger` : ''}
           hasError={hasError}
           className="select__input"
           label={label}
@@ -192,7 +192,7 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
         <Button
           size={size}
           type="secondary"
-          dataId={dataId ? `${dataId}-trigger` : ''}
+          dataTestId={dataTestId ? `${dataTestId}-trigger` : ''}
           iconProps={selectRightIconProps}
           buttonText={placeHolder || ''}
           onClick={disabled ? noop : openDropdown}
@@ -202,7 +202,7 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
       {isMobile && isMobileFullScreen ? (
         <SelectMobile
           {...rest}
-          dataId={dataId}
+          dataTestId={dataTestId}
           isOpen={isOpen}
           filteredData={filteredData}
           closeDropdown={closeDropdown}
@@ -218,7 +218,7 @@ export const Select = forwardRef((props: TSingleSelectPropTypes, _ref): ReactEle
       ) : (
         <SelectDesktop
           {...rest}
-          dataId={dataId}
+          dataTestId={dataTestId}
           onItemDeselect={onItemDeselect}
           onItemSelect={onItemSelect}
           currentSelection={currentSelection}

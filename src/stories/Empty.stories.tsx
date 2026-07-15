@@ -30,5 +30,5 @@ Empty.args = {
       Component: IconAdd
     }
   },
-  dataId: 'empty-1'
+  dataTestId: 'empty-1'
 }

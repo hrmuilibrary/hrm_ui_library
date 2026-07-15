@@ -16,7 +16,7 @@ export const ModalConfirmation = ({
   className = '',
   size = 'small',
   buttonProps,
-  dataIdPrefix,
+  dataTestIdPrefix,
   closeOnOutsideClick = true,
   iconProps,
   subtitle
@@ -64,7 +64,7 @@ export const ModalConfirmation = ({
               weight="bolder"
               lineHeight="large"
               size="large"
-              dataId={dataIdPrefix ? `${dataIdPrefix}-modal-title` : ''}
+              dataTestId={dataTestIdPrefix ? `${dataTestIdPrefix}-modal-title` : ''}
             >
               {title}
             </Text>
@@ -77,14 +77,14 @@ export const ModalConfirmation = ({
                 type="secondary"
                 className="modal__footer__btn mr-16"
                 onClick={onClose}
-                dataId={dataIdPrefix ? `${dataIdPrefix}-modal-cancel-button` : ''}
+                dataTestId={dataTestIdPrefix ? `${dataTestIdPrefix}-modal-cancel-button` : ''}
                 {...(buttonProps.cancel || {})}
               />
               <Button
                 type="danger"
                 className={'modal__footer__btn'}
                 onClick={onSubmit}
-                dataId={dataIdPrefix ? `${dataIdPrefix}-modal-confirm-button` : ''}
+                dataTestId={dataTestIdPrefix ? `${dataTestIdPrefix}-modal-confirm-button` : ''}
                 {...buttonProps.confirm}
               />
             </div>

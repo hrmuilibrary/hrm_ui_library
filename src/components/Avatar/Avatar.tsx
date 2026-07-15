@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import { FileUpload, FileUploadMode } from '../FileUpload'
 
 export const Avatar = ({
-  dataId,
+  dataTestId,
   id,
   color = 'default',
   size = 'medium',
@@ -37,7 +37,7 @@ export const Avatar = ({
   return (
     <div
       id={id}
-      data-id={dataId}
+      data-test-id={dataTestId}
       className={classNames(`avatar avatar--${color} avatar--${type} avatar--${size}`, className, {
         'avatar--edit': isEditable
       })}

@@ -1,3 +1,4 @@
+import { IBaseProps } from '../../type'
 import React from 'react'
 import type { CSSProperties } from 'react'
 import type { Header } from '@tanstack/react-table'
@@ -18,7 +19,7 @@ interface DraggableColumnHeaderProps<TData> extends IBaseProps {
 export function ColumnHeader<TData>({
   header,
   pinnedStyles,
-  dataId = ''
+  dataTestId = ''
 }: DraggableColumnHeaderProps<TData>) {
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({
     id: header.id
@@ -41,7 +42,7 @@ export function ColumnHeader<TData>({
   return (
     <th
       ref={setNodeRef}
-      data-id={dataId ? `${dataId}-header-${header.column.id}` : ''}
+      data-test-id={dataTestId ? `${dataTestId}-header-${header.column.id}` : ''}
       style={{ ...style, ...pinnedStyles }}
       className={classnames('select-none', {
         ['with-checkbox']: header.column.id === 'select',
@@ -52,7 +53,7 @@ export function ColumnHeader<TData>({
     >
       <div
         onClick={header.column.getToggleSortingHandler()}
-        data-id={dataId ? `${dataId}-sort-${header.column.id}` : ''}
+        data-test-id={dataTestId ? `${dataTestId}-sort-${header.column.id}` : ''}
         className="flexbox align-items--center"
       >
         <div {...listeners}>

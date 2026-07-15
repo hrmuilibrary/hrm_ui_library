@@ -28,7 +28,7 @@ export const SideSheet = (props: TSideSheetPropTypes): React.ReactElement | null
     children,
     closeOnOutsideClick = true,
     checkboxInfo,
-    dataId = ''
+    dataTestId = ''
   } = props
   const [containerRef, setContainerRef] = useState<HTMLDivElement | null>(null)
   const [isShownScrollIcon, setIsShownScrollIcon] = useState<boolean>(false)
@@ -76,7 +76,7 @@ export const SideSheet = (props: TSideSheetPropTypes): React.ReactElement | null
       {isOpen ? (
         <motion.div
           className="side-sheet"
-          data-id={dataId}
+          data-test-id={dataTestId}
           initial={{
             opacity: 0
           }}
@@ -108,7 +108,7 @@ export const SideSheet = (props: TSideSheetPropTypes): React.ReactElement | null
               `side-sheet__container--${size}`,
               className
             )}
-            data-id={dataId ? `${dataId}-container` : ''}
+            data-test-id={dataTestId ? `${dataTestId}-container` : ''}
             ref={setContainerRef}
           >
             <div className="side-sheet__header">
@@ -119,7 +119,7 @@ export const SideSheet = (props: TSideSheetPropTypes): React.ReactElement | null
                     type="tertiary"
                     {...headerButtons.back}
                     className="mr-8"
-                    dataId={dataId ? `${dataId}-back` : ''}
+                    dataTestId={dataTestId ? `${dataTestId}-back` : ''}
                   />
                 ) : null}
                 <Text
@@ -127,7 +127,7 @@ export const SideSheet = (props: TSideSheetPropTypes): React.ReactElement | null
                   weight="bolder"
                   lineHeight="large"
                   size="medium"
-                  dataId={dataId ? `${dataId}-title` : ''}
+                  dataTestId={dataTestId ? `${dataTestId}-title` : ''}
                 >
                   {title}
                 </Text>
@@ -139,7 +139,7 @@ export const SideSheet = (props: TSideSheetPropTypes): React.ReactElement | null
                     type="tertiary"
                     {...headerButtons.pin}
                     className="mr-8"
-                    dataId={dataId ? `${dataId}-pin` : ''}
+                    dataTestId={dataTestId ? `${dataTestId}-pin` : ''}
                   />
                 ) : null}
                 {headerButtons?.close ? (
@@ -148,7 +148,7 @@ export const SideSheet = (props: TSideSheetPropTypes): React.ReactElement | null
                     type="tertiary"
                     {...headerButtons.close}
                     onClick={onClose}
-                    dataId={dataId ? `${dataId}-close` : ''}
+                    dataTestId={dataTestId ? `${dataTestId}-close` : ''}
                   />
                 ) : (
                   <Button
@@ -156,7 +156,7 @@ export const SideSheet = (props: TSideSheetPropTypes): React.ReactElement | null
                     type="tertiary"
                     iconProps={{ Component: IconDismissFilled }}
                     onClick={onClose}
-                    dataId={dataId ? `${dataId}-close` : ''}
+                    dataTestId={dataTestId ? `${dataTestId}-close` : ''}
                   />
                 )}
               </div>
@@ -166,14 +166,14 @@ export const SideSheet = (props: TSideSheetPropTypes): React.ReactElement | null
                   type="secondary"
                   iconProps={{ Component: IconCaretUp }}
                   className={`side-sheet__header__scroll-top side-sheet__header__scroll-top__${size}`}
-                  dataId={dataId ? `${dataId}-scroll-top` : ''}
+                  dataTestId={dataTestId ? `${dataTestId}-scroll-top` : ''}
                   onClick={handleScrollToTop}
                 />
               )}
             </div>
             <div
               className="side-sheet__content scrollbar scrollbar--vertical"
-              data-id={dataId ? `${dataId}-content` : ''}
+              data-test-id={dataTestId ? `${dataTestId}-content` : ''}
               ref={scrollbarContainerRef}
             >
               {children}
@@ -184,7 +184,7 @@ export const SideSheet = (props: TSideSheetPropTypes): React.ReactElement | null
               onClose={onClose}
               onSubmit={onSubmit}
               checkboxInfo={checkboxInfo}
-              dataId={dataId}
+              dataTestId={dataTestId}
             />
           </motion.div>
         </motion.div>

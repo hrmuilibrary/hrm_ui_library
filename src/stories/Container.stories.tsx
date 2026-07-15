@@ -16,7 +16,7 @@ const Template = (): React.ReactElement => {
 
   return (
     <div>
-      <_Container dataId="container-1">
+      <_Container dataTestId="container-1">
         <div>
           <Text size="small" />
           <div style={helperStyles}>

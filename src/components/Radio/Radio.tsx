@@ -14,7 +14,7 @@ export const Radio = forwardRef((props: TRadioProps, _ref): ReactElement | null 
     value,
     className = '',
     onClick,
-    dataId = '',
+    dataTestId = '',
     iconProps
   } = props
   const isChecked = !!value || !!isSelected
@@ -36,7 +36,7 @@ export const Radio = forwardRef((props: TRadioProps, _ref): ReactElement | null 
       })}
     >
       <input
-        data-id={dataId}
+        data-test-id={dataTestId}
         type="radio"
         tabIndex={0}
         onChange={changeHandler}

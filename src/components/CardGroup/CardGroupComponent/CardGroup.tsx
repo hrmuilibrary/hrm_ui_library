@@ -5,7 +5,7 @@ import { generateDataTestId } from '../../../utils/helpers'
 import { useCardGroupContext } from '../CardGroupContext'
 
 export const CardGroup = ({ children }: { children: React.ReactNode }): React.ReactElement => {
-  const { className, title, dataId, id } = useCardGroupContext()
+  const { className, title, dataTestId, id } = useCardGroupContext()
   const { alignment } = title ?? { alignment: 'left' }
 
   return (
@@ -16,7 +16,7 @@ export const CardGroup = ({ children }: { children: React.ReactNode }): React.Re
         className
       )}
       id={`${id || ''}`}
-      data-id={generateDataTestId('card--group-item', dataId)}
+      data-test-id={generateDataTestId('card--group-item', dataTestId)}
     >
       <div className="card--group__content">{children}</div>
     </div>

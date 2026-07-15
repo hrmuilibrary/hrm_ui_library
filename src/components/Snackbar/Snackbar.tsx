@@ -9,7 +9,7 @@ import { IconDynamicComponent } from '../../helperComponents/IconDynamicComponen
 
 const CustomToast = ({ actionProps, toastId, type = 'information', text }: TToastProps) => {
   return (
-    <div data-id={`${type}-toast-message`} className="snackbar" key={toastId}>
+    <div data-test-id={`${type}-toast-message`} className="snackbar" key={toastId}>
       <div className="snackbar__content">
         <IconDynamicComponent
           Component={ICONS_MAPPING[type]}

@@ -30,7 +30,7 @@ export interface ISVGIconProps {
   className?: string
   refHandler?: LegacyRef<SVGSVGElement> | undefined
   id?: string
-  dataId?: string
+  dataTestId?: string
   Component?: TSVGIconComponent
 }
 

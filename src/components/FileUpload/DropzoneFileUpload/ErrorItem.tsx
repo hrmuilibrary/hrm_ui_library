@@ -9,7 +9,7 @@ interface IErrorItemProps {
   areaContent: AreaContentDTO
   onRemove: () => void
   locale?: string
-  dataId?: string
+  dataTestId?: string
 }
 
 export const ErrorItem = ({
@@ -17,7 +17,7 @@ export const ErrorItem = ({
   onRemove,
   areaContent,
   locale,
-  dataId = ''
+  dataTestId = ''
 }: IErrorItemProps): ReactElement | null => {
   const errorMessage = useMemo(() => {
     const translation = getDropzoneLocale(locale)
@@ -33,6 +33,6 @@ export const ErrorItem = ({
   }, [code])
 
   return errorMessage ? (
-    <Alert type="error" text={errorMessage} closeIcon onClose={onRemove} dataId={dataId} />
+    <Alert type="error" text={errorMessage} closeIcon onClose={onRemove} dataTestId={dataTestId} />
   ) : null
 }

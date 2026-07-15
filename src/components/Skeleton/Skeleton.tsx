@@ -20,7 +20,7 @@ export const Skeleton = (props: TSkeletonPropTypes): ReactElement => {
     children,
     style,
     className = '',
-    dataId = ''
+    dataTestId = ''
   } = props
 
   const hasChildren = children !== undefined && children !== null
@@ -46,7 +46,7 @@ export const Skeleton = (props: TSkeletonPropTypes): ReactElement => {
 
   if (hasChildren) {
     return (
-      <span className={rootClassName} style={inlineStyle} data-id={dataId}>
+      <span className={rootClassName} style={inlineStyle} data-test-id={dataTestId}>
         <span className="skeleton__children" aria-hidden="true">
           {children}
         </span>
@@ -59,7 +59,7 @@ export const Skeleton = (props: TSkeletonPropTypes): ReactElement => {
       <span
         className={rootClassName}
         style={inlineStyle}
-        data-id={dataId}
+        data-test-id={dataTestId}
         role="status"
         aria-label="Loading"
       />
@@ -73,7 +73,7 @@ export const Skeleton = (props: TSkeletonPropTypes): ReactElement => {
         key={i}
         className={rootClassName}
         style={inlineStyle}
-        data-id={dataId ? `${dataId}-${i}` : ''}
+        data-test-id={dataTestId ? `${dataTestId}-${i}` : ''}
         aria-hidden={i === 0 ? undefined : true}
         role={i === 0 ? 'status' : undefined}
         aria-label={i === 0 ? 'Loading' : undefined}

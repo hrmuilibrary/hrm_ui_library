@@ -1,3 +1,4 @@
+import { IFormCompProps } from '../../type'
 export interface TBadgeProps extends IFormCompProps {
   text?: number | string
   type?: 'primary' | 'secondary' | 'tertiary'

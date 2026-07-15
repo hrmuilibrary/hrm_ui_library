@@ -7,7 +7,7 @@ import { TPopoverDesktopProps } from './types'
 
 export const PopoverDesktop = (props: TPopoverDesktopProps): ReactElement => {
   const {
-    dataId,
+    dataTestId,
     text,
     linkAddons,
     className = '',
@@ -32,7 +32,7 @@ export const PopoverDesktop = (props: TPopoverDesktopProps): ReactElement => {
     <>
       {clicked && (
         <div
-          data-id={dataId ? `${dataId}-popover-content` : ''}
+          data-test-id={dataTestId ? `${dataTestId}-popover-content` : ''}
           className={classNames(`popover popover--${popoverPosition}`, className)}
           ref={setPopoverRef}
           style={popoverStyles}
@@ -40,7 +40,7 @@ export const PopoverDesktop = (props: TPopoverDesktopProps): ReactElement => {
           <div className="popover__inner scrollbar scrollbar--vertical pr-8">
             {linkAddons ? (
               <Link
-                dataId={linkAddons.dataId}
+                dataTestId={linkAddons.dataTestId}
                 url={linkAddons.url}
                 beforeLink={linkAddons.beforeLink}
                 afterLink={linkAddons.afterLink}
@@ -51,7 +51,7 @@ export const PopoverDesktop = (props: TPopoverDesktopProps): ReactElement => {
               </Link>
             ) : (
               <Text
-                dataId={dataId ? `${dataId}-popover-text` : ''}
+                dataTestId={dataTestId ? `${dataTestId}-popover-text` : ''}
                 type="primary"
                 weight="regular"
                 lineHeight="medium"

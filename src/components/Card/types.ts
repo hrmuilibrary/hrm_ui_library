@@ -1,3 +1,4 @@
+import { IBaseProps } from '../../type'
 import { ReactNode } from 'react'
 
 export type TCardTitle = {

@@ -24,7 +24,7 @@ export const DropzoneFileUpload = forwardRef(
       mode = FileUploadMode.attach,
       locale,
       multiple = false,
-      dataId = ''
+      dataTestId = ''
     }: DzFileUploadProps,
     _ref
   ): ReactElement => {
@@ -85,7 +85,7 @@ export const DropzoneFileUpload = forwardRef(
     )
 
     return (
-      <div className="dz-file-upload" data-id={dataId}>
+      <div className="dz-file-upload" data-test-id={dataTestId}>
         {mode !== FileUploadMode.view ? (
           <div
             {...getRootProps()}
@@ -93,10 +93,14 @@ export const DropzoneFileUpload = forwardRef(
               'dz-file-upload__area--focused': isFocused,
               'dz-file-upload__area--active': isDragActive
             })}
-            data-id={dataId ? `${dataId}-dropzone` : ''}
+            data-test-id={dataTestId ? `${dataTestId}-dropzone` : ''}
           >
             <IconUpload className="mb-20" size="xlarge" />
-            <input {...getInputProps()} name={name} data-id={dataId ? `${dataId}-input` : ''} />
+            <input
+              {...getInputProps()}
+              name={name}
+              data-test-id={dataTestId ? `${dataTestId}-input` : ''}
+            />
             <Text type="primary" weight="semibold" className="mb-6">
               {translation.title}
             </Text>
@@ -117,7 +121,7 @@ export const DropzoneFileUpload = forwardRef(
                 areaContent={areaContent}
                 onRemove={() => removeError(index)}
                 locale={locale}
-                dataId={dataId ? `${dataId}-error-${index}` : ''}
+                dataTestId={dataTestId ? `${dataTestId}-error-${index}` : ''}
               />
             )
           })}
@@ -128,7 +132,7 @@ export const DropzoneFileUpload = forwardRef(
                 file={file}
                 onRemove={() => removeFile(file.name)}
                 mode={mode}
-                dataId={dataId ? `${dataId}-item-${index}` : ''}
+                dataTestId={dataTestId ? `${dataTestId}-item-${index}` : ''}
               />
             )
           })}

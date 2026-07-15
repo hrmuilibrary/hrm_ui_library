@@ -1,10 +1,11 @@
+import { IBaseProps, IFormCompProps } from '../../type'
 import { LegacyRef, ReactElement, ReactNode } from 'react'
 import { TButtonPropTypes } from '../Button/types'
 import { TMenuItem } from '../Menu/types'
 import { TTooltipProps } from '../Tooltip/types'
 
 interface TSelectBaseProps {
-  dataIdPrefix?: string
+  dataTestIdPrefix?: string
   error?: string
   isLoading?: boolean
   disabled?: boolean
@@ -27,7 +28,7 @@ interface TSelectBaseProps {
   language?: string
 }
 export interface TNestedSelectProps {
-  dataId?: string
+  dataTestId?: string
   options: TSelectOptions
   isRequiredField?: boolean
   label?: string | ReactElement
@@ -176,7 +177,7 @@ export interface ISingleSelectDesktopProps extends ISingleSelectResponsiveProps 
 }
 
 export type TSelectFooterPropTypes = {
-  dataId?: string
+  dataTestId?: string
   checkboxInfo?: TCheckboxInfo
   hasChange?: boolean
   buttonProps?: {
@@ -285,7 +286,7 @@ declare type TNavItemValue = {
   children: ReactNode
 }
 export type TProfileDropdownProps = {
-  dataId?: string
+  dataTestId?: string
   avatar: ReactElement
   email: string
   name: string

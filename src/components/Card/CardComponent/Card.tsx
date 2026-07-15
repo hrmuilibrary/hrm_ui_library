@@ -4,7 +4,7 @@ import { useCardContext } from '../CardContext'
 import { generateDataTestId } from '../../../utils/helpers'
 
 export const Card = ({ children }: { children: React.ReactNode }): React.ReactElement => {
-  const { isExpanded, className, title, dataId, id, noBorder } = useCardContext()
+  const { isExpanded, className, title, dataTestId, id, noBorder } = useCardContext()
   const { alignment, color, text } = title ?? { alignment: 'left', color: 'blue' }
 
   return (
@@ -19,7 +19,7 @@ export const Card = ({ children }: { children: React.ReactNode }): React.ReactEl
         className
       )}
       id={`${id || ''}`}
-      data-id={generateDataTestId('card-item', dataId)}
+      data-test-id={generateDataTestId('card-item', dataTestId)}
     >
       {title && (
         <div className={classNames('card__title', { [`card__title--${color}`]: color })}>

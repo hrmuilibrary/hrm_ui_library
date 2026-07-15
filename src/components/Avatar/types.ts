@@ -1,3 +1,4 @@
+import { IBaseProps, IFormCompProps } from '../../type'
 import { ReactElement } from 'react'
 import { FILE_UPLOAD_ERRORS } from '../../consts'
 

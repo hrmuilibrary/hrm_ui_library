@@ -8,7 +8,7 @@ import { Loading } from '../../SharedComponents'
 import { ISingleSelectMobileProps } from '../../types'
 import { MobileTopContent } from './MobileTopContent'
 import { FixedSizeList as List } from 'react-window'
-import { getOptionDataId } from '../../helper'
+import { getOptionDataTestId } from '../../helper'
 
 export const SelectMobile = (props: ISingleSelectMobileProps): ReactElement => {
   const {
@@ -17,7 +17,7 @@ export const SelectMobile = (props: ISingleSelectMobileProps): ReactElement => {
     isOpen,
     closeDropdown,
     isLoading,
-    dataId,
+    dataTestId,
     innerHelperText,
     filteredData,
     isRequiredField,
@@ -54,7 +54,7 @@ export const SelectMobile = (props: ISingleSelectMobileProps): ReactElement => {
   return (
     <Modal isOpen={isOpen} onClose={closeDropdown} isMobileFullScreen>
       <MobileTopContent
-        dataId={dataId}
+        dataTestId={dataTestId}
         searchValue={searchValue}
         setSearchValue={setSearchValue}
         onBack={closeModal}
@@ -70,7 +70,7 @@ export const SelectMobile = (props: ISingleSelectMobileProps): ReactElement => {
         {isLoading ? (
           <Loading />
         ) : (
-          <div data-id={dataId ? `${dataId}-content` : ''}>
+          <div data-test-id={dataTestId ? `${dataTestId}-content` : ''}>
             {filteredData.length > 0 && (
               <List
                 height={windowHeight - 30 - 32 - 24}
@@ -99,7 +99,9 @@ export const SelectMobile = (props: ISingleSelectMobileProps): ReactElement => {
                       LabelRightIconComponent={labelRightIconComponent}
                       disabled={item.disabled}
                       isSelected={isSelected}
-                      dataId={getOptionDataId(dataId, item.value, index) || item.dataId}
+                      dataTestId={
+                        getOptionDataTestId(dataTestId, item.value, index) || item.dataTestId
+                      }
                       style={style}
                     />
                   )

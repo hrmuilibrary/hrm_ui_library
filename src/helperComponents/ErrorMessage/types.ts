@@ -1,6 +1,6 @@
 export interface TErrorMessageProps {
   message?: string | React.ReactElement
   icon?: string
-  dataId?: string
+  dataTestId?: string
   className?: string
 }

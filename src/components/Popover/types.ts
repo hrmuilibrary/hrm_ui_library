@@ -1,3 +1,4 @@
+import { IFormCompProps } from '../../type'
 import { ReactElement, ReactNode } from 'react'
 import { LinkPropTypes } from '../Link/types'
 

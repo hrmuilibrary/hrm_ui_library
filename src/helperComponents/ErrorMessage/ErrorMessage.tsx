@@ -9,7 +9,7 @@ import { IconDynamicComponent } from '../IconDynamicComponent'
 export const ErrorMessage = ({
   message,
   icon = 'infoFilled',
-  dataId,
+  dataTestId,
   className
 }: TErrorMessageProps): ReactElement => {
   return (
@@ -17,7 +17,7 @@ export const ErrorMessage = ({
       className={classnames('error-message', className)}
       size="small"
       type="danger"
-      dataId={generateDataTestId('error-message', dataId)}
+      dataTestId={generateDataTestId('error-message', dataTestId)}
     >
       <>
         <IconDynamicComponent

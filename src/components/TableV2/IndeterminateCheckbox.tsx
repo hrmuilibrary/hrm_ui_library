@@ -1,3 +1,4 @@
+import { IBaseProps } from '../../type'
 import type { ForwardedRef } from 'react'
 import React, { forwardRef, useEffect, useRef } from 'react'
 import { Checkbox } from '../Checkbox'
@@ -12,7 +13,7 @@ type IndeterminateCheckboxProps = IBaseProps & {
 
 export const IndeterminateCheckbox = forwardRef(
   (
-    { indeterminate, checked, onChange, disabled, dataId = '' }: IndeterminateCheckboxProps,
+    { indeterminate, checked, onChange, disabled, dataTestId = '' }: IndeterminateCheckboxProps,
     ref: ForwardedRef<HTMLInputElement>
   ) => {
     const defaultRef = useRef(null)
@@ -34,7 +35,7 @@ export const IndeterminateCheckbox = forwardRef(
           disabled={disabled}
           onClick={handleChange}
           ref={resolvedRef}
-          dataId={dataId}
+          dataTestId={dataTestId}
         />
       </div>
     )

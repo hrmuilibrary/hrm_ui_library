@@ -9,7 +9,7 @@ export const Link = (props: LinkPropTypes): ReactElement => {
     beforeLink,
     className = '',
     url,
-    dataId = '',
+    dataTestId = '',
     target,
     type = 'brand',
     onclick
@@ -26,7 +26,7 @@ export const Link = (props: LinkPropTypes): ReactElement => {
         }}
         href={url}
         className={`link link-${type}`}
-        data-id={dataId ? `${dataId}-link` : ''}
+        data-test-id={dataTestId ? `${dataTestId}-link` : ''}
         target={target}
       >
         {children}
@@ -43,7 +43,7 @@ export const Link = (props: LinkPropTypes): ReactElement => {
       }}
       href={url}
       className={classNames(`link ${className} link-${type}`)}
-      data-id={dataId ? `${dataId}-link` : ''}
+      data-test-id={dataTestId ? `${dataTestId}-link` : ''}
       target={target}
     >
       {children}

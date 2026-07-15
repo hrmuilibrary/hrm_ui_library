@@ -1,3 +1,4 @@
+import { IBaseProps } from '../../type'
 import React, { ReactElement } from 'react'
 import { HeaderGroup, CellValue } from 'react-table'
 import classNames from 'classnames'
@@ -20,7 +21,7 @@ export function Header({
   withSelect,
   uniqueKey,
   fixedHeader = false,
-  dataId = ''
+  dataTestId = ''
 }: Props): ReactElement {
   const { key: keyheaderGroup, ...headerGroupProps } = headerGroup.getHeaderGroupProps()
 
@@ -64,7 +65,7 @@ export function Header({
             <th
               key={`table_head_${uniqueKey}_${i}`}
               {...headProps}
-              data-id={dataId ? `${dataId}-header-${id ?? i}` : ''}
+              data-test-id={dataTestId ? `${dataTestId}-header-${id ?? i}` : ''}
               className={classNames({
                 fixed_column_left: fixed === 'left',
                 fixed_column_right: fixed === 'right',

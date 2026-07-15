@@ -15,7 +15,7 @@ export const CollapseItem = (props: TCollapseProps): React.ReactElement => {
     className,
     isOpen,
     toggle,
-    dataId,
+    dataTestId,
     children,
     reverse = false,
     additionalInfo,
@@ -25,7 +25,12 @@ export const CollapseItem = (props: TCollapseProps): React.ReactElement => {
 
   const title =
     typeof text === 'string' ? (
-      <Text size={size} type={color} weight={weight} dataId={generateDataTestId('title', dataId)}>
+      <Text
+        size={size}
+        type={color}
+        weight={weight}
+        dataTestId={generateDataTestId('title', dataTestId)}
+      >
         {text}
       </Text>
     ) : (
@@ -36,7 +41,7 @@ export const CollapseItem = (props: TCollapseProps): React.ReactElement => {
     <div
       className={classNames('collapse', { 'collapse--opened': isOpen }, className)}
       id={`${id || ''}`}
-      data-id={generateDataTestId('collapse-item', dataId)}
+      data-test-id={generateDataTestId('collapse-item', dataTestId)}
     >
       <div className="collapse__header flexbox justify-content--between" onClick={toggle}>
         {reverse ? (

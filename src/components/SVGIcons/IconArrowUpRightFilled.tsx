@@ -9,7 +9,7 @@ const IconArrowUpRightFilled = ({
   onClick,
   refHandler,
   id,
-  dataId
+  dataTestId
 }: ISVGIconProps): ReactElement => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +23,7 @@ const IconArrowUpRightFilled = ({
     onClick={onClick}
     ref={refHandler}
     id={id}
-    data-id={dataId ? `${dataId}-svg-icon` : ''}
+    data-test-id={dataTestId ? `${dataTestId}-svg-icon` : ''}
   >
     <g id="Direction=Up Right, Size=24, Theme=Filled">
       <path

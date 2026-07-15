@@ -1,3 +1,4 @@
+import { IBaseProps, IFormCompProps } from '../../type'
 export interface TFormFieldPropTypes extends IBaseProps {
   As: (props: IFormCompProps) => React.ReactElement
   name: string

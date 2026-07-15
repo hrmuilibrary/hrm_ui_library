@@ -12,12 +12,12 @@ export const Heading = (props: HeadingPropTypes): ReactElement => {
     type: As = 'h1',
     weight = 'regular',
     onClick = noop,
-    dataId = ''
+    dataTestId = ''
   } = props
 
   return (
     <As
-      dataid={dataId}
+      dataid={dataTestId}
       onClick={onClick}
       className={classNames(
         'heading',

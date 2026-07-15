@@ -1,3 +1,4 @@
+import { IBaseProps } from '../../type'
 export interface TProgressPropTypes extends IBaseProps {
   percent?: number
   stepCount?: number

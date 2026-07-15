@@ -16,7 +16,7 @@ export const RangeDatePickerDesktop = forwardRef<any, IRangeDatePickerProps>(
       setFieldValue,
       name,
       changeHandler,
-      dataId,
+      dataTestId,
       format = DateFormat.LongDate,
       maxDate,
       minDate,
@@ -107,7 +107,7 @@ export const RangeDatePickerDesktop = forwardRef<any, IRangeDatePickerProps>(
           customInput={
             <div className="date-picker_input-container">
               <Input
-                dataId={dataId}
+                dataTestId={dataTestId}
                 disabled={disabled}
                 placeholder={placeholderText}
                 // @ts-ignore
