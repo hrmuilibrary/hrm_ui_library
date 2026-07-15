@@ -1,3 +1,10 @@
+## [3.4.2](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.4.1...3.4.2) (2026-07-15)
+
+
+### Bug Fixes
+
+* resolve badgeV2 styles for stroke ([37a2857](https://github.com/hrmuilibrary/hrm_ui_library/commit/37a2857e0cad57682ee95e0fcfc88c63de3d17f1))
+
 ## [3.4.1](https://github.com/hrmuilibrary/hrm_ui_library/compare/3.4.0...3.4.1) (2026-07-14)
 
 
