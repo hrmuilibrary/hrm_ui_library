@@ -39,7 +39,7 @@ export interface ITimePickerProps extends TDatepickerBaseProps {
 
 export interface IRangeDatePickerProps extends TDatepickerBaseProps {
   currentDates?: TRangePickerValues
-  changeHandler: (date: TRangePickerValues) => void
+  changeHandler?: (date: TRangePickerValues) => void
   maxDate?: Date | undefined
   value?: [Date, Date]
 }

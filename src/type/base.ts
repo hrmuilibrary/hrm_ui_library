@@ -9,6 +9,7 @@ export interface IFormCompProps extends IBaseProps {
   isValid?: boolean
   value?: TFormValue
   onChange?: TOnChange
+  placeholder?: string
   name?: string
   setFieldValue?: (
     name: string,
