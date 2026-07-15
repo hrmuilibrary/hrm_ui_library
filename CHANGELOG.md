@@ -1,3 +1,10 @@
+## [4.0.4](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.3...4.0.4) (2026-07-15)
+
+
+### Bug Fixes
+
+* add new component MultiSelectV2 ([7f415a2](https://github.com/hrmuilibrary/hrm_ui_library/commit/7f415a2cfcc9555aa633ec69d38335fe5d4470ef))
+
 ## [4.0.3](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.2...4.0.3) (2026-07-15)
 
 
