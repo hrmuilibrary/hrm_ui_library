@@ -1,0 +1,255 @@
+@use '../helpers/mixin';
+
+.multi-select-v2 {
+  $this: &;
+
+  &__inner {
+    position: relative;
+    flex-wrap: wrap;
+    border: 1px solid var(--grey-200);
+    border-radius: var(--size-8);
+    background: var(--white);
+  }
+
+  &--small {
+    #{$this}__inner {
+      min-height: var(--size-32);
+      padding: var(--size-4) var(--size-8);
+    }
+
+    #{$this}__chip {
+      height: 24px;
+    }
+  }
+
+  &--medium {
+    #{$this}__inner {
+      min-height: 44px;
+      padding: var(--size-8) var(--size-12);
+    }
+
+    #{$this}__chip {
+      height: 32px;
+    }
+  }
+
+  &--large {
+    #{$this}__inner {
+      min-height: var(--size-48);
+      padding: var(--size-10) var(--size-14);
+    }
+
+    #{$this}__chip {
+      height: 36px;
+    }
+  }
+
+  &--invalid {
+    #{$this}__inner {
+      border-color: var(--red-400);
+    }
+  }
+
+  &--disabled {
+    #{$this}__inner {
+      cursor: default;
+      background-color: var(--grey-50);
+      border-color: var(--grey-50);
+    }
+
+    #{$this}__search {
+      color: var(--grey-300);
+      cursor: default;
+
+      &::placeholder {
+        color: var(--grey-300);
+      }
+    }
+
+    #{$this}__chip {
+      color: var(--grey-300);
+    }
+
+    #{$this}__chip-remove {
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+
+  &__search-wrap {
+    position: relative;
+    flex: 1;
+    min-width: 120px;
+  }
+
+  &__search {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: var(--size-14);
+    color: var(--grey-900);
+    width: 100%;
+    padding: var(--size-4) 0;
+
+    &::placeholder {
+      color: var(--grey-400);
+    }
+  }
+
+  &__chip {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--size-6);
+    background: var(--grey-50);
+    border: 1px solid var(--grey-200);
+    border-radius: 20px;
+    padding: var(--size-4);
+
+    &-name {
+      padding: 0 var(--size-4);
+    }
+
+    &--highlighted {
+      background: var(--brand-20);
+      border-color: var(--brand-50);
+    }
+
+    &-badge {
+      &.badge-v2 {
+        background: none;
+        border: none;
+        padding: 0;
+      }
+    }
+
+    &-remove {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      border-radius: 50%;
+      padding: 0;
+
+      &:hover {
+        background: var(--grey-100);
+      }
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border: 1px solid var(--grey-200);
+    border-radius: var(--size-8);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    overflow: hidden;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: var(--size-10);
+      width: 100%;
+      padding: var(--size-10) var(--size-12);
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+
+      &:hover {
+        background: var(--grey-50);
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    &-empty {
+      display: block;
+      padding: var(--size-10) var(--size-12);
+    }
+  }
+
+  &__message {
+    @include mixin.flexbox;
+    @include mixin.align-items(center);
+    @include mixin.justify-content(space-between);
+  }
+}
+
+[data-theme='dark'] {
+  .multi-select-v2 {
+    &__inner {
+      background-color: var(--color-9);
+      border-color: var(--grey-40);
+    }
+
+    &__search {
+      color: var(--grey-50);
+
+      &::placeholder {
+        color: var(--grey-40);
+      }
+    }
+
+    &__chip {
+      background: color-mix(in srgb, var(--grey-800) 12%, transparent);
+      border-color: var(--grey-40);
+
+      &--highlighted {
+        background: var(--brand-20);
+        border-color: var(--brand-50);
+      }
+
+      &-remove:hover {
+        background: color-mix(in srgb, var(--grey-500) 20%, transparent);
+      }
+    }
+
+    &__dropdown {
+      background: var(--color-9);
+      border-color: var(--grey-40);
+      box-shadow: none;
+
+      &-item:hover {
+        background: color-mix(in srgb, var(--grey-800) 12%, transparent);
+      }
+    }
+  }
+
+  // parent-level modifiers need explicit overrides here: nested inside the
+  // block above they'd share the same specificity as `&__inner`/`&__chip`
+  // and lose to source order instead of correctly overriding them.
+  .multi-select-v2--invalid .multi-select-v2__inner {
+    border-color: var(--red-400);
+  }
+
+  .multi-select-v2--disabled {
+    .multi-select-v2__inner {
+      background-color: var(--grey-50);
+      border-color: var(--grey-50);
+    }
+
+    .multi-select-v2__search {
+      color: var(--grey-40);
+
+      &::placeholder {
+        color: var(--grey-40);
+      }
+    }
+
+    .multi-select-v2__chip {
+      color: var(--grey-40);
+    }
+  }
+}
