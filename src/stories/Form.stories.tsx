@@ -189,7 +189,7 @@ const Template = (): React.ReactElement => {
         onSubmit={onSubmit}
         validationScheme={VALIDATION_SCHEME}
         initialValues={INITIAL_VALUES}
-        dataId="form-container"
+        dataTestId="form-container"
       >
         <>
           <CustomInput />

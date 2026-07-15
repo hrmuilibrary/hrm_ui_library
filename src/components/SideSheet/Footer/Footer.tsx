@@ -14,7 +14,7 @@ type TProps = {
   onClose: (e?: TClickEventType) => void
   onSubmit?: (isSelected: boolean) => void
   checkboxInfo?: TCheckboxInfo
-  dataId?: string
+  dataTestId?: string
 }
 export const Footer = ({
   isLoading,
@@ -22,7 +22,7 @@ export const Footer = ({
   onClose,
   onSubmit,
   checkboxInfo,
-  dataId = ''
+  dataTestId = ''
 }: TProps): ReactElement | null => {
   const [isSelected, setIsSelected] = React.useState(checkboxInfo?.isChecked || false)
 
@@ -36,14 +36,14 @@ export const Footer = ({
 
   const { extraButton, confirm, cancel } = footerButtons
   return (
-    <div className="side-sheet__footer" data-id={dataId ? `${dataId}-footer` : ''}>
+    <div className="side-sheet__footer" data-test-id={dataTestId ? `${dataTestId}-footer` : ''}>
       {checkboxInfo ? (
         <div className="side-sheet__footer_checkbox">
           <Checkbox
             label={checkboxInfo.label}
             selectedValue={isSelected}
             onClick={setIsSelected}
-            dataId={dataId ? `${dataId}-checkbox` : ''}
+            dataTestId={dataTestId ? `${dataTestId}-checkbox` : ''}
           />
         </div>
       ) : null}
@@ -55,7 +55,7 @@ export const Footer = ({
             type="secondary"
             {...footerButtons.extraButton}
             className="mr-12"
-            dataId={dataId ? `${dataId}-extra` : ''}
+            dataTestId={dataTestId ? `${dataTestId}-extra` : ''}
           />
         ) : null}
         {
@@ -65,7 +65,7 @@ export const Footer = ({
             className="mr-12"
             onClick={onClose}
             {...cancel}
-            dataId={dataId ? `${dataId}-cancel` : ''}
+            dataTestId={dataTestId ? `${dataTestId}-cancel` : ''}
           />
         }
         <Button
@@ -74,7 +74,7 @@ export const Footer = ({
           onClick={handleSubmit}
           disabled={isLoading}
           {...confirm}
-          dataId={dataId ? `${dataId}-confirm` : ''}
+          dataTestId={dataTestId ? `${dataTestId}-confirm` : ''}
         />
       </div>
     </div>

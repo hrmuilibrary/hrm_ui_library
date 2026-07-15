@@ -4,7 +4,12 @@ import { Popover } from '../Popover'
 import { TCopyProps } from './types'
 import IconCopy from '../SVGIcons/IconCopy'
 
-export const Copy = ({ textAfterCopy, className = '', text, dataId }: TCopyProps): ReactElement => {
+export const Copy = ({
+  textAfterCopy,
+  className = '',
+  text,
+  dataTestId
+}: TCopyProps): ReactElement => {
   const [isTooltipVisible, setTooltipVisibility] = useState(false)
   const copyIconRef = useRef<HTMLDivElement | null>(null)
 
@@ -18,7 +23,7 @@ export const Copy = ({ textAfterCopy, className = '', text, dataId }: TCopyProps
   return (
     <div ref={copyIconRef} className="copy-icon">
       <Button
-        dataId={dataId}
+        dataTestId={dataTestId}
         type="tertiary"
         iconProps={{ Component: IconCopy }}
         size="small"

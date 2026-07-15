@@ -12,7 +12,7 @@ export const Text = (props: TextPropTypes): ReactElement => {
     weight = 'regular',
     lineHeight = 'medium',
     as: As = 'p',
-    dataId = '',
+    dataTestId = '',
     onClick = noop,
     id = '',
     title
@@ -21,7 +21,7 @@ export const Text = (props: TextPropTypes): ReactElement => {
     <As
       id={id}
       title={title}
-      data-id={dataId}
+      data-test-id={dataTestId}
       onClick={onClick}
       className={classNames(
         'body',

@@ -37,7 +37,7 @@ export const InputSelectWrapper = (props: TSelectWrapperProps): ReactElement | n
     modalApplyButtonText,
     applySelectedItems,
     hideSelectedOptions = false,
-    dataId
+    dataTestId
   } = props
 
   const inputRef = useRef<HTMLInputElement | null>(null)
@@ -96,13 +96,13 @@ export const InputSelectWrapper = (props: TSelectWrapperProps): ReactElement | n
 
   return (
     <div
-      data-id={dataId}
+      data-test-id={dataTestId}
       className={classNames('select select--multi', className)}
       ref={setContainerRef}
     >
       <div onClick={disabled ? noop : toggleDropdown}>
         <Input
-          dataId={dataId ? `${dataId}-trigger` : ''}
+          dataTestId={dataTestId ? `${dataTestId}-trigger` : ''}
           readonly
           label={label}
           ref={inputRef}
@@ -125,7 +125,7 @@ export const InputSelectWrapper = (props: TSelectWrapperProps): ReactElement | n
       <>
         {isMobile ? (
           <MobileWrapper
-            dataId={dataId}
+            dataTestId={dataTestId}
             applySelectedItems={applySelectedItems}
             isOpen={isOpen}
             closeDrodown={() => setIsOpen(false)}
@@ -135,7 +135,7 @@ export const InputSelectWrapper = (props: TSelectWrapperProps): ReactElement | n
           </MobileWrapper>
         ) : (
           <DesktopWrapper
-            dataId={dataId}
+            dataTestId={dataTestId}
             setDropdownRef={setDropdownRef}
             isOpen={isOpen}
             align={align}

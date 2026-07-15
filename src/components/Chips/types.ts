@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { ISVGIconProps } from '../../type'
+import { ISVGIconProps, IFormCompProps } from '../../type'
 
 export type TChipsColors =
   | 'primary'

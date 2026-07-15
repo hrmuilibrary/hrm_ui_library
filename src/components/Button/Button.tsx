@@ -16,7 +16,7 @@ export const Button = (props: TButtonPropTypes): ReactElement => {
     pressed,
     isLoading,
     formId,
-    dataId = '',
+    dataTestId = '',
     onClick,
     refHandler = null,
     children,
@@ -37,7 +37,7 @@ export const Button = (props: TButtonPropTypes): ReactElement => {
   return (
     <button
       ref={refHandler}
-      data-id={dataId}
+      data-test-id={dataTestId}
       disabled={disabled}
       type={buttonActionType}
       className={classnames(

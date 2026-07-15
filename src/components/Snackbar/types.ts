@@ -1,3 +1,4 @@
+import { IFormCompProps } from '../../type'
 import { TButtonPropTypes } from '../Button/types'
 
 export type TSnackbarTypes = 'success' | 'error' | 'warning' | 'information'

@@ -1,3 +1,4 @@
+import { IBaseProps } from '../../type'
 export interface TUnderConstructionProps extends IBaseProps {
   size?: string
   className?: string

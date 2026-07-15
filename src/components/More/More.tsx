@@ -12,7 +12,7 @@ export const More = (props: TMorePropTypes): React.ReactElement => {
       expand: 'Ավելին',
       collapse: 'Փակել'
     },
-    dataId = ''
+    dataTestId = ''
   } = props
   const [isExpanded, setIsExpanded] = useState(false)
 
@@ -26,13 +26,13 @@ export const More = (props: TMorePropTypes): React.ReactElement => {
   }
 
   return (
-    <Text {...textProps} className={'more'} dataId={dataId}>
+    <Text {...textProps} className={'more'} dataTestId={dataTestId}>
       {`${isExpanded ? expandedText : collapsedText}`}
       <Button
         className={'more__btn ml-4'}
         type="link"
         buttonText={isExpanded ? buttonText.collapse : buttonText.expand}
-        dataId={dataId ? `${dataId}-action` : ''}
+        dataTestId={dataTestId ? `${dataTestId}-action` : ''}
         onClick={isExpanded ? collapse : expand}
       />
     </Text>

@@ -1,11 +1,11 @@
-export const getOptionDataId = (
-  dataId: string | undefined,
+export const getOptionDataTestId = (
+  dataTestId: string | undefined,
   value: TItemValue,
   index: number
 ): string => {
-  if (!dataId) {
+  if (!dataTestId) {
     return ''
   }
   const key = typeof value === 'string' || typeof value === 'number' ? value : index
-  return `${dataId}-option-${key}`
+  return `${dataTestId}-option-${key}`
 }

@@ -14,7 +14,7 @@ export const UnderConstruction = (props: TUnderConstructionProps): React.ReactEl
     className,
     illustration = noResultImage,
     language = 'en',
-    dataId = ''
+    dataTestId = ''
   } = props
 
   const localizations = SELECT_TRANSLATIONS[language]
@@ -25,22 +25,22 @@ export const UnderConstruction = (props: TUnderConstructionProps): React.ReactEl
         `under-construction ${size === 'large' ? 'under-construction--large' : 'under-construction--small'}`,
         className
       )}
-      data-id={dataId}
+      data-test-id={dataTestId}
     >
       <div className="under-construction__icon">
-        <Image imagePath={illustration} dataId={dataId ? `${dataId}-image` : ''} />
+        <Image imagePath={illustration} dataTestId={dataTestId ? `${dataTestId}-image` : ''} />
       </div>
       <div className="under-construction__content">
         <Text
           size={size == 'large' ? 'large' : 'medium'}
           weight="bold"
-          dataId={dataId ? `${dataId}-text` : ''}
+          dataTestId={dataTestId ? `${dataTestId}-text` : ''}
         >
           {mainMessage ?? localizations.mainMessage}
         </Text>
         <Text
           size={size == 'large' ? 'standard' : 'small'}
-          dataId={dataId ? `${dataId}-subtext` : ''}
+          dataTestId={dataTestId ? `${dataTestId}-subtext` : ''}
         >
           {paragraphMessage ?? localizations.paragraphMessage}
         </Text>

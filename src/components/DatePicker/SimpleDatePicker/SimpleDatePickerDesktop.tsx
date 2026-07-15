@@ -20,12 +20,12 @@ export const SimpleDatePickerDesktop = (props: ISimpleDatePickerProps): ReactEle
     changeHandler,
     format = 'M/D/YYYY',
     required = false,
-    dataId,
+    dataTestId,
     hasError,
     placeholderText,
     minDate,
     maxDate,
-    dataIdPrefix,
+    dataTestIdPrefix,
     helperText,
     inline,
     ...rest
@@ -75,7 +75,7 @@ export const SimpleDatePickerDesktop = (props: ISimpleDatePickerProps): ReactEle
         customInput={
           <Input
             size={size}
-            dataId={dataId}
+            dataTestId={dataTestId}
             helperText={helperText}
             datePlaceHolderText={label ? '' : placeholderText}
             rightIconProps={{ Component: IconCalendarRight, onClick: openDatepicker }}
@@ -91,7 +91,7 @@ export const SimpleDatePickerDesktop = (props: ISimpleDatePickerProps): ReactEle
             locale={locale}
             startYear={startYear}
             endYear={endYear}
-            dataPrefix={dataIdPrefix}
+            dataPrefix={dataTestIdPrefix}
           />
         )}
       />

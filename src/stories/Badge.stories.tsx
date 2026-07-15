@@ -28,7 +28,7 @@ Badge.args = {
   text: '999+',
   type: 'primary',
   size: 'large',
-  dataId: 'badge-1'
+  dataTestId: 'badge-1'
 }
 
 const TemplateV2: StoryFn<TBadgeV2Props> = (args) => <_BadgeV2 {...args} />
@@ -43,7 +43,7 @@ BadgeV2.args = {
   disabled: false,
   dot: false,
   withDot: false,
-  dataId: 'badge-v2-1'
+  dataTestId: 'badge-v2-1'
 }
 
 BadgeV2.argTypes = {

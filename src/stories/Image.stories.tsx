@@ -40,5 +40,5 @@ Image.args = {
   isFullWidth: false,
   isFullHeight: false,
   ratio: '1/1',
-  dataId: 'image-1'
+  dataTestId: 'image-1'
 }

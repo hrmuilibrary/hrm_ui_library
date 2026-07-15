@@ -6,19 +6,22 @@ import { Link } from '../../Link'
 
 export const ProfileDropdown = (props: TProfileDropdownProps): React.ReactElement => {
   const menuRef = useRef<HTMLDivElement>(null)
-  const { avatar, name, email, bodyItems, footerItems, className, dataId } = props
+  const { avatar, name, email, bodyItems, footerItems, className, dataTestId } = props
   const [isOpen, setIsOpen] = React.useState(false)
 
   const closeDropdown = () => setIsOpen(false)
   useOnOutsideClick(menuRef.current, closeDropdown, isOpen, useId())
 
   return (
-    <div ref={menuRef} data-id={dataId} className={`relative ${className}`}>
-      <div data-id={dataId ? `${dataId}-trigger` : ''} onClick={() => setIsOpen(!isOpen)}>
+    <div ref={menuRef} data-test-id={dataTestId} className={`relative ${className}`}>
+      <div
+        data-test-id={dataTestId ? `${dataTestId}-trigger` : ''}
+        onClick={() => setIsOpen(!isOpen)}
+      >
         {avatar}
       </div>
       {isOpen && (
-        <div data-id={dataId ? `${dataId}-content` : ''} className="profile-dropdown">
+        <div data-test-id={dataTestId ? `${dataTestId}-content` : ''} className="profile-dropdown">
           <div className="profile-dropdown__top">
             {avatar}
             <div className={'pl-12'}>
@@ -31,7 +34,7 @@ export const ProfileDropdown = (props: TProfileDropdownProps): React.ReactElemen
           <div className="profile-dropdown__menu">
             <ul className={'profile-dropdown__nav'}>
               {bodyItems?.map((item, index) => (
-                <li key={index} data-id={dataId ? `${dataId}-item-${index}` : ''}>
+                <li key={index} data-test-id={dataTestId ? `${dataTestId}-item-${index}` : ''}>
                   {item.text ? (
                     <Link
                       url={item.url}
@@ -58,7 +61,10 @@ export const ProfileDropdown = (props: TProfileDropdownProps): React.ReactElemen
               <div className={'profile-dropdown__bottom'}>
                 <ul className={'profile-dropdown__nav'}>
                   {footerItems?.map((item, index) => (
-                    <li key={index} data-id={dataId ? `${dataId}-footer-item-${index}` : ''}>
+                    <li
+                      key={index}
+                      data-test-id={dataTestId ? `${dataTestId}-footer-item-${index}` : ''}
+                    >
                       {item.text ? (
                         <Link
                           url={item.url}

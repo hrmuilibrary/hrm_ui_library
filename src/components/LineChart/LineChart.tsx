@@ -5,12 +5,12 @@ import { Text } from '../Text'
 import { Divider } from '../Divider'
 import { generateLinePath, formatWithDots } from './helper'
 
-export const LineChart = ({ data, dataId = '' }: TLineChartProps): React.ReactElement => {
+export const LineChart = ({ data, dataTestId = '' }: TLineChartProps): React.ReactElement => {
   const linePathes = generateLinePath(data)
   let percent = 0
 
   return (
-    <div data-id={dataId}>
+    <div data-test-id={dataTestId}>
       <div className="bar">
         {linePathes.map(({ percentage, color }, i) => {
           const start = percent
@@ -19,7 +19,7 @@ export const LineChart = ({ data, dataId = '' }: TLineChartProps): React.ReactEl
           return (
             <div
               key={`line-chart-segment-${i}`}
-              data-id={dataId ? `${dataId}-segment-${i}` : ''}
+              data-test-id={dataTestId ? `${dataTestId}-segment-${i}` : ''}
               className={classNames('bar__segment', `bar__segment--color-${color}`, {
                 'bar__segment--first': i === 0,
                 'bar__segment--last': i === linePathes.length - 1
@@ -39,16 +39,16 @@ export const LineChart = ({ data, dataId = '' }: TLineChartProps): React.ReactEl
                 <div
                   className="flexbox justify-content--between pt-6 pb-6"
                   key={`line-chart-status-${i}`}
-                  data-id={dataId ? `${dataId}-item-${i}` : ''}
+                  data-test-id={dataTestId ? `${dataTestId}-item-${i}` : ''}
                 >
                   <div className="flexbox align-items--center">
                     <span className={classNames('status__circle', `status__circle--${color}`)} />
-                    <Text type="tertiary" dataId={dataId ? `${dataId}-label-${i}` : ''}>
+                    <Text type="tertiary" dataTestId={dataTestId ? `${dataTestId}-label-${i}` : ''}>
                       {label}
                     </Text>
                   </div>
                   <div>
-                    <Text dataId={dataId ? `${dataId}-value-${i}` : ''}>
+                    <Text dataTestId={dataTestId ? `${dataTestId}-value-${i}` : ''}>
                       {formatWithDots(quantity)} {dataCurrency}
                     </Text>
                   </div>

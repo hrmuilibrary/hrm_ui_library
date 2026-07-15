@@ -1,5 +1,5 @@
 import { ReactElement, ReactNode } from 'react'
-import { ISVGIconProps } from '../../type'
+import { ISVGIconProps, IFormCompProps } from '../../type'
 
 export type TStatusTypes =
   | 'primary'

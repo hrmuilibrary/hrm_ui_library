@@ -112,7 +112,7 @@ declare type TSelectOption = {
   meta?: string
   disabled?: boolean
   children?: TSelectOption[]
-  dataId?: string
+  dataTestId?: string
   optionLeftIcon?: TSelectIconProps
   avatar?: {
     url: string
@@ -124,7 +124,7 @@ declare type TSelectOptions = TSelectOption[]
 
 declare type TSelectGroupOption = {
   title: string
-  dataId?: string
+  dataTestId?: string
   data: TSelectOptions
 }
 
@@ -152,24 +152,8 @@ declare type TFormValue =
   | TSelectedValue[]
 declare type TOnChange = (event: TChangeEventType) => void
 
-// Shared base props for every component (QA/test hooks, future common attrs)
-declare interface IBaseProps {
-  dataId?: string
-}
-
-// Props which will pass FormField to component
-declare interface IFormCompProps extends IBaseProps {
-  hasError?: boolean
-  isValid?: boolean
-  value?: TFormValue
-  onChange?: TOnChange
-  name?: string
-  setFieldValue?: (
-    name: string,
-    value: TFormValue,
-    shouldValidate?: { shouldValidate: boolean }
-  ) => void
-}
+// IBaseProps and IFormCompProps now live in ./type/base (a real module) so they
+// ship in the build and are imported explicitly by components.
 
 declare type TRegister = (name: string) => {
   onChange: TOnChange

@@ -9,7 +9,7 @@ const Template = () => {
   return (
     <div onClick={() => console.log('sdjbsd')}>
       <_More
-        dataId="more"
+        dataTestId="more"
         buttonText={{
           expand: 'Ավելին',
           collapse: 'Փակել'

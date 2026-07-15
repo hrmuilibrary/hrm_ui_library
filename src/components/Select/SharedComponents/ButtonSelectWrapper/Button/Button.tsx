@@ -9,7 +9,7 @@ type TProps = {
   size?: 'small' | 'medium' | 'large'
   className?: string
   disabled?: boolean
-  dataId?: string
+  dataTestId?: string
   onClick: () => void
   refHandler?: LegacyRef<HTMLButtonElement> | undefined
   selectedItemsLabels: string
@@ -25,7 +25,7 @@ export const Button = (props: TProps): ReactElement => {
     className = '',
     isOpen,
     disabled,
-    dataId = '',
+    dataTestId = '',
     onClick,
     refHandler = null,
     selectedItemsLabels
@@ -35,7 +35,7 @@ export const Button = (props: TProps): ReactElement => {
     <button
       type="button"
       ref={refHandler}
-      data-id={dataId}
+      data-test-id={dataTestId}
       disabled={disabled}
       className={classnames('btn', `btn--${type}`, `btn--${size}`, `btn--${size}`, className)}
       onClick={onClick}

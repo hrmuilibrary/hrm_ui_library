@@ -30,5 +30,5 @@ Progress.args = {
   noText: false,
   dimension: 0,
   loop: false,
-  dataId: 'progress-1'
+  dataTestId: 'progress-1'
 }

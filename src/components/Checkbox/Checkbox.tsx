@@ -21,7 +21,7 @@ export const Checkbox = forwardRef(
       value,
       className = '',
       iconProps = { name: 'checkmark' },
-      dataId = '',
+      dataTestId = '',
       onClick,
       beforeLink,
       afterLink,
@@ -51,7 +51,7 @@ export const Checkbox = forwardRef(
       <Popover id={`${popoverAddons.id}`} {...popoverAddons}>
         <div id={`${popoverAddons.id}`}>
           <IconInfo
-            dataId={dataId ? `${dataId}-icon` : ''}
+            dataTestId={dataTestId ? `${dataTestId}-icon` : ''}
             type="information"
             size="xsmall"
             className={'ml-4 pointer'}
@@ -82,7 +82,7 @@ export const Checkbox = forwardRef(
         <Text type={disabled ? 'disabled' : 'primary'} className="controller__label">
           <>
             {beforeLink && <span className="mr-4">{beforeLink}</span>}
-            <Link dataId={dataId ? `${dataId}-link` : ''} url={link} target="_blank">
+            <Link dataTestId={dataTestId ? `${dataTestId}-link` : ''} url={link} target="_blank">
               {label}
             </Link>
             {afterLink && <span className="ml-4">{afterLink}</span>}
@@ -95,7 +95,7 @@ export const Checkbox = forwardRef(
     return (
       <>
         <label
-          data-id={dataId}
+          data-test-id={dataTestId}
           className={classnames('controller', {
             'controller--checkbox': true,
             'controller--disabled': disabled,
@@ -105,7 +105,7 @@ export const Checkbox = forwardRef(
           onClick={(e) => stopPropagation && e.stopPropagation()}
         >
           <input
-            data-id={dataId ? `${dataId}-input` : ''}
+            data-test-id={dataTestId ? `${dataTestId}-input` : ''}
             type="checkbox"
             ref={inputRef}
             tabIndex={0}

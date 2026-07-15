@@ -1,5 +1,5 @@
 import { InputHTMLAttributes, ReactElement, RefObject, FocusEvent } from 'react'
-import { ISVGIconProps } from '../../type'
+import { ISVGIconProps, IFormCompProps } from '../../type'
 export interface InputCustomProps
   extends IFormCompProps,
     Omit<

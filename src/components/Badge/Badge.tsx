@@ -4,16 +4,19 @@ import { TBadgeProps } from './types'
 import classNames from 'classnames'
 
 export const Badge = (props: TBadgeProps): ReactElement => {
-  const { type = 'primary', size = 'large', text, className = '', dataId = '' } = props
+  const { type = 'primary', size = 'large', text, className = '', dataTestId = '' } = props
 
   return (
-    <div className={classNames(`badge badge--${type}  badge--${size}`, className)} data-id={dataId}>
+    <div
+      className={classNames(`badge badge--${type}  badge--${size}`, className)}
+      data-test-id={dataTestId}
+    >
       {text ? (
         <Text
           size="xsmall"
           type={type == 'secondary' ? 'primary' : 'inverse'}
           className="badge__inner"
-          dataId={dataId ? `${dataId}-text` : ''}
+          dataTestId={dataTestId ? `${dataTestId}-text` : ''}
         >
           <>{text}</>
         </Text>

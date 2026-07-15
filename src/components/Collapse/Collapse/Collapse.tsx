@@ -15,7 +15,7 @@ export const Collapse = (props: TCollapseV2Props): React.ReactElement => {
     iconAlignment = 'left',
     hasIconBorder = false,
     toggle,
-    dataId,
+    dataTestId,
     children,
     id
   } = props
@@ -33,14 +33,14 @@ export const Collapse = (props: TCollapseV2Props): React.ReactElement => {
     <div
       className={classNames('collapse collapse--v2', { 'collapse--opened': isOpen }, className)}
       id={`${id || ''}`}
-      data-id={generateDataTestId('collapse-item', dataId)}
+      data-test-id={generateDataTestId('collapse-item', dataTestId)}
     >
       <div className="collapse__header" onClick={onToggle}>
         <Title
           hasIconBorder={hasIconBorder}
           iconAlignment={iconAlignment}
           isOpen={isOpen}
-          dataId={dataId as string}
+          dataTestId={dataTestId as string}
           title={title}
         />
       </div>

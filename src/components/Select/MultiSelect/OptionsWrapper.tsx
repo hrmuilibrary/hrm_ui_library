@@ -10,7 +10,7 @@ import { TSelectTranslations } from '../types'
 import { useIsMobile } from '../../../hooks/useGetIsMobile'
 
 type TProps = {
-  dataId?: string
+  dataTestId?: string
   isLoading?: boolean
   withTabs?: boolean
   isGrouped?: boolean

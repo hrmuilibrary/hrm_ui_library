@@ -11,12 +11,12 @@ export const Image = (props: ImagePropTypes): React.ReactElement => {
     isFullWidth,
     isFullHeight,
     ratio,
-    dataId = ''
+    dataTestId = ''
   } = props
 
   return isBackgroundImage ? (
     <div
-      data-id={dataId}
+      data-test-id={dataTestId}
       className={`image image--bg ${className}`}
       style={{
         backgroundImage: `${imagePath ? `url(${imagePath})` : ''}`,
@@ -26,7 +26,7 @@ export const Image = (props: ImagePropTypes): React.ReactElement => {
     />
   ) : (
     <img
-      data-id={dataId}
+      data-test-id={dataTestId}
       className={`image ${className}`}
       src={imagePath}
       alt={name}

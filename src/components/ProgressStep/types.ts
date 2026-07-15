@@ -1,3 +1,4 @@
+import { IBaseProps } from '../../type'
 import { PROGRESS_STATUSES } from './consts'
 
 export type TStepValue = number | string

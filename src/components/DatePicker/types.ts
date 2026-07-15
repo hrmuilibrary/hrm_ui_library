@@ -1,3 +1,4 @@
+import { IFormCompProps } from '../../type'
 import { DatePickerProps } from 'react-datepicker'
 import { ReactNode } from 'react'
 
@@ -5,7 +6,7 @@ type DatePickerDefaultProps = Omit<IFormCompProps, 'value'> &
   Omit<DatePickerProps, 'onChange' | 'value'>
 
 export interface TDatepickerBaseProps extends DatePickerDefaultProps {
-  dataIdPrefix?: string
+  dataTestIdPrefix?: string
   label?: ReactNode
   format?: string
   inline?: boolean

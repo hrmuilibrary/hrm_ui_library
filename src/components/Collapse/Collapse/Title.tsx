@@ -7,25 +7,30 @@ import IconChevronDown from '../../SVGIcons/IconChevronDown'
 import IconChevronUp from '../../SVGIcons/IconChevronUp'
 
 interface ITitleProps {
-  dataId: string
+  dataTestId: string
   isOpen: boolean
   iconAlignment: 'left' | 'right'
   hasIconBorder: boolean
   title: TCollapseItemTitleV2
 }
-export const Title = ({ dataId, title, isOpen, iconAlignment, hasIconBorder }: ITitleProps) => {
+export const Title = ({ dataTestId, title, isOpen, iconAlignment, hasIconBorder }: ITitleProps) => {
   const { text = '', weight = 'bolder', size = 'medium', color } = title
 
   const titleText = useMemo(
     () =>
       typeof text === 'string' ? (
-        <Text size={size} type={color} weight={weight} dataId={generateDataTestId('title', dataId)}>
+        <Text
+          size={size}
+          type={color}
+          weight={weight}
+          dataTestId={generateDataTestId('title', dataTestId)}
+        >
           {text}
         </Text>
       ) : (
         text
       ),
-    [text, size, color, weight, dataId]
+    [text, size, color, weight, dataTestId]
   )
 
   const icon = useMemo(

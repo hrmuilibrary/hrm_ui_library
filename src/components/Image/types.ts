@@ -1,3 +1,4 @@
+import { IBaseProps } from '../../type'
 export interface ImagePropTypes extends IBaseProps {
   name?: string
   imagePath?: string

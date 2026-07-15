@@ -23,7 +23,7 @@ export const FilterSelect = (props: TFilterProps): ReactElement | null => {
     closeHandler,
     parentRef,
     language = 'en',
-    dataId,
+    dataTestId,
     ...rest
   } = props
 
@@ -87,14 +87,14 @@ export const FilterSelect = (props: TFilterProps): ReactElement | null => {
   return (
     <>
       {createPortal(
-        <div className="select filter" data-id={dataId}>
+        <div className="select filter" data-test-id={dataTestId}>
           <div
             className="select__options"
-            data-id={dataId ? `${dataId}-content` : ''}
+            data-test-id={dataTestId ? `${dataTestId}-content` : ''}
             ref={setContainerRef}
           >
             <Input
-              dataId={dataId ? `${dataId}-search` : ''}
+              dataTestId={dataTestId ? `${dataTestId}-search` : ''}
               onChange={onFilter}
               className="filter__input"
               size="small"
@@ -114,7 +114,7 @@ export const FilterSelect = (props: TFilterProps): ReactElement | null => {
                   onItemDeselect={onItemDeselect}
                   filterValue={filterValue}
                   onItemSelect={onItemSelect}
-                  dataId={dataId}
+                  dataTestId={dataTestId}
                   options={options as TSelectGroupOptions}
                   {...rest}
                 />
@@ -124,7 +124,7 @@ export const FilterSelect = (props: TFilterProps): ReactElement | null => {
                   onItemDeselect={onItemDeselect}
                   filterValue={filterValue}
                   onItemSelect={onItemSelect}
-                  dataId={dataId}
+                  dataTestId={dataTestId}
                   options={options as TSelectOptions}
                   {...rest}
                 />
@@ -132,7 +132,7 @@ export const FilterSelect = (props: TFilterProps): ReactElement | null => {
             </div>
             {isLoading ? null : (
               <Footer
-                dataId={dataId}
+                dataTestId={dataTestId}
                 buttonProps={footerButtonProps}
                 onCancel={cancelSelectedItems}
                 onApply={applySelectedItems}

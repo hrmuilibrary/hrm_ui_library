@@ -3,7 +3,7 @@ import { TButtonPropTypes } from '../Button/types'
 export type TTitleSize = 'medium' | 'large'
 export type TModalHeaderIconColor = 'brand' | 'green' | 'blue' | 'red' | 'purple' | 'yellow'
 export interface TModalPropTypes {
-  dataIdPrefix?: string
+  dataTestIdPrefix?: string
   closeOnOutsideClick?: boolean
   isOpen: boolean
   onClose: () => void
@@ -27,7 +27,7 @@ export interface TModalPropTypes {
 }
 
 export interface TModalConfirmationPropTypes {
-  dataIdPrefix?: string
+  dataTestIdPrefix?: string
   closeOnOutsideClick?: boolean
   isOpen: boolean
   onClose: () => void

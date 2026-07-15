@@ -41,7 +41,7 @@ FileUpload.args = {
   label: 'Label',
   buttonText: 'Attach file',
   isFileUploaded: false,
-  dataId: 'file-upload',
+  dataTestId: 'file-upload',
   labelAddons: <IconInfo size={'xsmall'} type={'information'} className={'ml-4'} />
 }
 
@@ -90,5 +90,5 @@ const Template2 = (args) => {
 
 export const DropzoneFileUpload = Template2.bind({})
 DropzoneFileUpload.args = {
-  dataId: 'dz-file-upload'
+  dataTestId: 'dz-file-upload'
 }

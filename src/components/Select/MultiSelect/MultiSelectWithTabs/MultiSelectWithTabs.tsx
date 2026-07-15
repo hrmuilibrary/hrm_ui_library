@@ -8,7 +8,7 @@ import { ContentTop } from '../../SharedComponents'
 import { TMultiSelectGroupedProps } from '../../types'
 import { DROPDOWN_MAX_HEIGHT } from '../../constants'
 import { filterSearchData } from '../../Select/helpers'
-import { getOptionDataId } from '../../helper'
+import { getOptionDataTestId } from '../../helper'
 
 export const MultiSelectWithTabs = (props: TMultiSelectGroupedProps): React.ReactElement => {
   const {
@@ -26,8 +26,8 @@ export const MultiSelectWithTabs = (props: TMultiSelectGroupedProps): React.Reac
     isSearchAvailable,
     maxSelectCount,
     menuOptions,
-    dataIdPrefix,
-    dataId,
+    dataTestIdPrefix,
+    dataTestId,
     closeDropdown
   } = props
 
@@ -107,8 +107,8 @@ export const MultiSelectWithTabs = (props: TMultiSelectGroupedProps): React.Reac
       </div>
       <ContentTop
         closeDropdown={closeDropdown}
-        dataId={dataId}
-        dataIdPrefix={dataIdPrefix}
+        dataTestId={dataTestId}
+        dataTestIdPrefix={dataTestIdPrefix}
         menuOptions={menuOptions}
         isSearchAvailable={isSearchAvailable}
         clearAll={clearAll}
@@ -151,7 +151,7 @@ export const MultiSelectWithTabs = (props: TMultiSelectGroupedProps): React.Reac
           return (
             <OptionItem
               data={item}
-              dataId={getOptionDataId(dataId, item.value, index) || item.dataId}
+              dataTestId={getOptionDataTestId(dataTestId, item.value, index) || item.dataTestId}
               key={item.value}
               onClick={isSelected ? onDeselect : onItemSelect}
               disabled={item.disabled || (!isSelected && selectedValues.length === maxSelectCount)}

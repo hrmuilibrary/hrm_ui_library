@@ -1,3 +1,4 @@
+import { IBaseProps } from '../../type'
 import { ElementType, MouseEvent, ReactNode } from 'react'
 
 type TTextTypes =

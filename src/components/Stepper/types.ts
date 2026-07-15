@@ -1,3 +1,4 @@
+import { IBaseProps } from '../../type'
 export interface TStepperContentWrapperProps extends IBaseProps {
   isPrevDisabled: boolean
   isNextDisabled: boolean

@@ -143,7 +143,7 @@ Table.args = {
   data: [],
   columns: [],
   language: 'en',
-  dataId: 'employee-table'
+  dataTestId: 'employee-table'
 }
 
 Table.argTypes = {
@@ -370,7 +370,7 @@ const Template1: StoryFn<TTableV2Props<any>> = (args) => {
             <AdvancedPagination
               table={table}
               totalCount={1000}
-              dataId="advanced-table-pagination"
+              dataTestId="advanced-table-pagination"
             />
           </div>
         )}
@@ -466,7 +466,7 @@ TableV2.args = {
   withBorder: false,
   isActionsVisible: true,
   isLoading: false,
-  dataId: 'advanced-table',
+  dataTestId: 'advanced-table',
   // collapsibleRows: true,
   onSortChange: (state) => console.log(state),
   onRowSelection: (state) => console.log(state),

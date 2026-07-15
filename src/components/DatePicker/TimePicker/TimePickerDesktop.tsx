@@ -15,7 +15,7 @@ export const TimePickerDesktop = (props: ITimePickerProps): React.ReactElement =
     setFieldValue,
     label,
     size,
-    dataId,
+    dataTestId,
     changeHandler,
     required,
     format = 'HH:mm',
@@ -94,7 +94,7 @@ export const TimePickerDesktop = (props: ITimePickerProps): React.ReactElement =
             handleChange={onInputChange}
             handleBlurEvent={formatAndSetTime}
             disabled={rest.disabled}
-            dataId={dataId}
+            dataTestId={dataTestId}
             size={size}
             rightIconProps={{ Component: IconClock, onClick: openDatepicker }}
           />

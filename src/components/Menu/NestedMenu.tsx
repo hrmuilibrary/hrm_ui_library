@@ -62,10 +62,10 @@ export const NestedMenu = ({
       content: item.subItems ? (
         <div className="nested-menu__sub-items select">
           {item.subItems.map(
-            ({ label, meta, value, handler, iconProps, disabled, dataId }: TMenuItem) => {
+            ({ label, meta, value, handler, iconProps, disabled, dataTestId }: TMenuItem) => {
               return (
                 <OptionItem
-                  dataId={dataId}
+                  dataTestId={dataTestId}
                   disabled={disabled}
                   key={`${index}-${value}`}
                   data={{

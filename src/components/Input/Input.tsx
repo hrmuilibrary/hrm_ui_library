@@ -35,7 +35,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputCustomProps>(
       maxCount,
       setFieldValue,
       handleChange,
-      dataId = '',
+      dataTestId = '',
       isValid,
       allowLeadingZeros,
       thousandSeparator = '',
@@ -101,7 +101,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputCustomProps>(
         onBlur={onBlurCallback}
         onChange={changeHandler}
         disabled={disabled}
-        data-id={dataId}
+        data-test-id={dataTestId}
         className={`${isErrorVisible ? 'with-error-styles' : ''}`}
         {...(currentValue ? { value: currentValue } : {})}
         maskChar={maskChar}
@@ -134,7 +134,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputCustomProps>(
         ref={ref}
         type={type}
         placeholder={placeHolder}
-        data-id={dataId}
+        data-test-id={dataTestId}
         {...rest}
         onBlur={onBlurCallback}
         onChange={changeHandler}
@@ -157,7 +157,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputCustomProps>(
           required={required}
           disabled={disabled}
           labelAddons={labelAddons}
-          dataId={dataId}
+          dataTestId={dataTestId}
         />
         <div className="input__inner">
           {input}
@@ -184,7 +184,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputCustomProps>(
         {error || successMessage || helperText || maxCount ? (
           <div className="input__message mt-8">
             {isErrorVisible && error ? (
-              <ErrorMessage message={error} icon="infoFilled" dataId={dataId} />
+              <ErrorMessage message={error} icon="infoFilled" dataTestId={dataTestId} />
             ) : null}
             {successMessage ? (
               <Text size="small" type="success" className="flexbox align-items--center">

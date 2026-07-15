@@ -45,7 +45,7 @@ export const CustomHeader = (props: TProps): ReactElement => {
       <IconChevronLeft
         size="small"
         className="cursor-pointer"
-        dataId={dataPrefix ? `${dataPrefix}-prev-month-button` : ''}
+        dataTestId={dataPrefix ? `${dataPrefix}-prev-month-button` : ''}
         onClick={prevMonthButtonDisabled ? noop : decreaseMonth}
         type={prevMonthButtonDisabled ? 'disabled' : 'primary'}
       />
@@ -56,7 +56,7 @@ export const CustomHeader = (props: TProps): ReactElement => {
           className="date_picker_select"
           offsets={isMobile ? {} : { top: 42, left: 48 }}
           placeHolder={getMonthLabel(month)}
-          dataId={dataPrefix ? `${dataPrefix}-month-select` : ''}
+          dataTestId={dataPrefix ? `${dataPrefix}-month-select` : ''}
           options={months}
           selectedItem={month}
           setSelectedItem={(m) => changeMonth(m as number)}
@@ -68,7 +68,7 @@ export const CustomHeader = (props: TProps): ReactElement => {
           className="date_picker_select"
           offsets={isMobile ? {} : { top: 42, left: 138 }}
           placeHolder={year.toString()}
-          dataId={dataPrefix ? `${dataPrefix}-year-select` : ''}
+          dataTestId={dataPrefix ? `${dataPrefix}-year-select` : ''}
           size="small"
           options={getYearOptions(startYear, endYear)}
           selectedItem={year}
@@ -80,7 +80,7 @@ export const CustomHeader = (props: TProps): ReactElement => {
       <IconChevronRight
         size="small"
         className="cursor-pointer"
-        dataId={dataPrefix ? `${dataPrefix}-next-month-button` : ''}
+        dataTestId={dataPrefix ? `${dataPrefix}-next-month-button` : ''}
         onClick={nextMonthButtonDisabled ? noop : increaseMonth}
         type={nextMonthButtonDisabled ? 'disabled' : 'primary'}
       />

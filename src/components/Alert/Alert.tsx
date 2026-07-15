@@ -17,20 +17,20 @@ export const Alert = (props: TAlertProps): ReactElement => {
     closeIcon,
     onClose,
     className = '',
-    dataId = ''
+    dataTestId = ''
   } = props
 
   return (
     <div
       className={classnames('alert', `alert--${type} alert--${position}`, className)}
-      data-id={dataId}
+      data-test-id={dataTestId}
     >
       <div className="alert__content">
         <IconDynamicComponent
           Component={ICONS_MAPPING[type]}
           size="small"
           type={TYPE_MAPPING[type]}
-          dataId={dataId ? `${dataId}-icon` : ''}
+          dataTestId={dataTestId ? `${dataTestId}-icon` : ''}
         />
         <div className="alert__text pl-8">
           <div>
@@ -39,7 +39,7 @@ export const Alert = (props: TAlertProps): ReactElement => {
               size="standard"
               weight="regular"
               lineHeight="large"
-              dataId={dataId ? `${dataId}-text` : ''}
+              dataTestId={dataTestId ? `${dataTestId}-text` : ''}
             >
               {text}
             </Text>
@@ -50,7 +50,7 @@ export const Alert = (props: TAlertProps): ReactElement => {
                 size="small"
                 weight="regular"
                 lineHeight="large"
-                dataId={dataId ? `${dataId}-subtext` : ''}
+                dataTestId={dataTestId ? `${dataTestId}-subtext` : ''}
               >
                 {subtext}
               </Text>
@@ -62,7 +62,7 @@ export const Alert = (props: TAlertProps): ReactElement => {
                 <Button
                   size="medium"
                   type="secondary"
-                  dataId={dataId ? `${dataId}-confirm` : ''}
+                  dataTestId={dataTestId ? `${dataTestId}-confirm` : ''}
                   {...buttonProps.confirm}
                 />
               )}
@@ -71,7 +71,7 @@ export const Alert = (props: TAlertProps): ReactElement => {
                   size="medium"
                   type="tertiary"
                   className="ml-12"
-                  dataId={dataId ? `${dataId}-cancel` : ''}
+                  dataTestId={dataTestId ? `${dataTestId}-cancel` : ''}
                   {...buttonProps.cancel}
                 />
               )}
@@ -84,7 +84,7 @@ export const Alert = (props: TAlertProps): ReactElement => {
             size="xsmall"
             className="ml-12 pointer"
             onClick={onClose}
-            dataId={dataId ? `${dataId}-close` : ''}
+            dataTestId={dataTestId ? `${dataTestId}-close` : ''}
           />
         ) : null}
       </div>

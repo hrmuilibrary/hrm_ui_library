@@ -1,3 +1,4 @@
+import { IFormCompProps } from '../../type'
 export interface TTextAreaTypeProps extends IFormCompProps {
   className?: string
   name?: string

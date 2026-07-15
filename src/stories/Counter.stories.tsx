@@ -15,7 +15,7 @@ const Template: StoryFn<ICounterProps> = (args) => {
     setCount(count as number)
   }
 
-  return <_Counter {...args} handleChange={onChange} counter={count} dataId={'counter'} />
+  return <_Counter {...args} handleChange={onChange} counter={count} dataTestId={'counter'} />
 }
 
 export const Counter: StoryObj<ICounterProps> = Template.bind({})

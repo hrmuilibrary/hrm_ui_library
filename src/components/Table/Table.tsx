@@ -40,7 +40,7 @@ export function Table({
   language = 'en',
   containerRefHandler,
   submitButtons,
-  dataId = ''
+  dataTestId = ''
 }: TTableProps): ReactElement {
   const tableRef = useRef<HTMLTableElement | null>(null)
   const [tableWidth, setTableWidth] = useState(400)
@@ -86,7 +86,7 @@ export function Table({
     },
     useSortBy,
     useRowSelect,
-    (hooks: Hooks) => setSelectedRows(hooks, withSelect, dataId)
+    (hooks: Hooks) => setSelectedRows(hooks, withSelect, dataTestId)
   ) as TableInstance & { selectedFlatRows: RowType[]; toggleAllRowsSelected: (c: boolean) => void }
 
   const handleResize = useCallback(() => {
@@ -115,7 +115,7 @@ export function Table({
   }, [])
 
   return (
-    <div ref={containerRefHandler} data-id={dataId}>
+    <div ref={containerRefHandler} data-test-id={dataTestId}>
       {withSelect && selectedFlatRows.length > 0 && (
         <div className="table-wrapper__selected-rows">
           <Button
@@ -127,7 +127,7 @@ export function Table({
             type="tertiary"
             size="medium"
             iconProps={{ alignment: 'left', Component: IconDismiss }}
-            dataId={dataId ? `${dataId}-clear-selected` : ''}
+            dataTestId={dataTestId ? `${dataTestId}-clear-selected` : ''}
           />
           {submitButtons?.map(({ buttonText, isLoading, onClick, iconProps }, i) => (
             <Button
@@ -140,7 +140,7 @@ export function Table({
               size="medium"
               className="mr-8"
               isLoading={isLoading}
-              dataId={dataId ? `${dataId}-submit-${i}` : ''}
+              dataTestId={dataTestId ? `${dataTestId}-submit-${i}` : ''}
             />
           ))}
         </div>
@@ -164,7 +164,7 @@ export function Table({
                 headerGroup={headerGroup}
                 tableWidth={tableWidth}
                 uniqueKey={uniqueKey}
-                dataId={dataId}
+                dataTestId={dataTestId}
               />
             ))}
           </thead>
@@ -179,7 +179,7 @@ export function Table({
                   row={row}
                   key={`table_row_${uniqueKey}_${row.id}`}
                   uniqueKey={uniqueKey}
-                  dataId={dataId}
+                  dataTestId={dataTestId}
                 />
               )
             })}

@@ -14,7 +14,7 @@ export const BadgeV2 = (props: TBadgeV2Props): ReactElement => {
     withDot,
     dot,
     disabled,
-    dataId = ''
+    dataTestId = ''
   } = props
   const {
     size: iconSize = 'small',
@@ -29,15 +29,15 @@ export const BadgeV2 = (props: TBadgeV2Props): ReactElement => {
   )
 
   if (dot) {
-    return <div className={classNames(baseClassName, 'badge-v2--dot')} data-id={dataId} />
+    return <div className={classNames(baseClassName, 'badge-v2--dot')} data-test-id={dataTestId} />
   }
 
   return (
-    <div className={baseClassName} data-id={dataId}>
+    <div className={baseClassName} data-test-id={dataTestId}>
       {withDot ? (
         <div
           className={classNames(baseClassName, 'badge-v2--dot badge-v2--with-dot')}
-          data-id={dataId ? `${dataId}-dot` : ''}
+          data-test-id={dataTestId ? `${dataTestId}-dot` : ''}
         />
       ) : null}
 
@@ -45,11 +45,15 @@ export const BadgeV2 = (props: TBadgeV2Props): ReactElement => {
         <iconProps.Component
           size={iconSize}
           type={iconType}
-          dataId={dataId ? `${dataId}-left-icon` : ''}
+          dataTestId={dataTestId ? `${dataTestId}-left-icon` : ''}
         />
       ) : null}
       {typeof text === 'string' || typeof text === 'number' ? (
-        <Text size="xsmall" className="badge-v2__inner" dataId={dataId ? `${dataId}-text` : ''}>
+        <Text
+          size="xsmall"
+          className="badge-v2__inner"
+          dataTestId={dataTestId ? `${dataTestId}-text` : ''}
+        >
           {text}
         </Text>
       ) : React.isValidElement(text) ? (
@@ -59,7 +63,7 @@ export const BadgeV2 = (props: TBadgeV2Props): ReactElement => {
         <iconProps.Component
           size={iconSize}
           type={iconType}
-          dataId={dataId ? `${dataId}-right-icon` : ''}
+          dataTestId={dataTestId ? `${dataTestId}-right-icon` : ''}
         />
       ) : null}
     </div>

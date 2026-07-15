@@ -14,7 +14,7 @@ import { Label } from '../../../helperComponents/Label'
 export const SimpleDatePickerMobile = (props: ISimpleDatePickerProps): ReactElement => {
   const {
     size,
-    dataId,
+    dataTestId,
     helperText,
     label,
     placeholderText,
@@ -24,7 +24,7 @@ export const SimpleDatePickerMobile = (props: ISimpleDatePickerProps): ReactElem
     minDate,
     maxDate,
     locale = 'hy',
-    dataIdPrefix,
+    dataTestIdPrefix,
     modalOptions,
     name,
     changeHandler,
@@ -68,7 +68,7 @@ export const SimpleDatePickerMobile = (props: ISimpleDatePickerProps): ReactElem
       <Input
         size={size}
         onClick={openDatepicker}
-        dataId={dataId}
+        dataTestId={dataTestId}
         readOnly={true}
         helperText={helperText}
         datePlaceHolderText={label ? '' : placeholderText}
@@ -96,7 +96,7 @@ export const SimpleDatePickerMobile = (props: ISimpleDatePickerProps): ReactElem
               locale={locale}
               startYear={startYear}
               endYear={endYear}
-              dataPrefix={dataIdPrefix}
+              dataPrefix={dataTestIdPrefix}
               isMobile
             />
           )}

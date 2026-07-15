@@ -11,7 +11,7 @@ export const FormField = (props: TFormFieldPropTypes): ReactElement | null => {
     As,
     name,
     className = '',
-    dataId = '',
+    dataTestId = '',
     hideErrorMessage = false,
     errorMessageIcon,
     defaultValue
@@ -36,7 +36,7 @@ export const FormField = (props: TFormFieldPropTypes): ReactElement | null => {
               {As({
                 hasError: !!fieldState.error,
                 isValid: fieldState.isTouched && fieldState.isDirty && !fieldState.invalid,
-                dataId,
+                dataTestId,
                 ...registerOptions,
                 setFieldValue: (data, name, options) =>
                   setValue(data, name, {
@@ -54,7 +54,7 @@ export const FormField = (props: TFormFieldPropTypes): ReactElement | null => {
                   render={({ message }: { message: string }) => {
                     return (
                       <ErrorMessage
-                        dataId={dataId}
+                        dataTestId={dataTestId}
                         message={message || ''}
                         className="full-width"
                         icon={errorMessageIcon}

@@ -32,7 +32,7 @@ export const MultiSelect = forwardRef((props: TMultiSelectPropTypes, _ref): Reac
     hasError,
     language = 'en',
     hideSelectedOptions = false,
-    dataId,
+    dataTestId,
     ...rest
   } = props
 
@@ -99,7 +99,7 @@ export const MultiSelect = forwardRef((props: TMultiSelectPropTypes, _ref): Reac
 
   return (
     <WrapperComponent
-      dataId={dataId}
+      dataTestId={dataTestId}
       dropdownRef={dropdownRef}
       isOpen={isOpen}
       setIsOpen={setIsOpen}
@@ -126,7 +126,7 @@ export const MultiSelect = forwardRef((props: TMultiSelectPropTypes, _ref): Reac
         <OptionsWrapper
           // @ts-ignore
           options={options}
-          dataId={dataId}
+          dataTestId={dataTestId}
           isOpen={isOpen}
           translations={localizations}
           setIsOpen={setIsOpen}
@@ -142,7 +142,7 @@ export const MultiSelect = forwardRef((props: TMultiSelectPropTypes, _ref): Reac
         />
         {options.length && !(isMobile && isMobileFullScreen) ? (
           <Footer
-            dataId={dataId}
+            dataTestId={dataTestId}
             checkboxInfo={checkboxInfo}
             hasChange={hasChange}
             buttonProps={footerButtonProps}

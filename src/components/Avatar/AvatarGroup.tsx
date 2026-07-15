@@ -18,7 +18,7 @@ export const AvatarGroup = ({
   onAddUser,
   size = 'medium',
   maxCount = 0,
-  dataId
+  dataTestId
 }: TAvatarGroupProps): ReactElement => {
   const screenSize = useScreenSize()
   const visibleAvatarsAmount = maxCount || VISIBLE_AVATARS_AMOUNT[screenSize]
@@ -40,7 +40,7 @@ export const AvatarGroup = ({
               />
             ) : null}
             <Avatar
-              dataId={dataId}
+              dataTestId={dataTestId}
               id={`${index}`}
               size={size}
               initials={avatar.initials}

@@ -11,7 +11,7 @@ export const ButtonGroup = ({
   size,
   disabled,
   onTabChange,
-  dataId = ''
+  dataTestId = ''
 }: IButtonGroup) => {
   const [activeItem, setActiveItem] = useState<number | string>(activeIndex)
 
@@ -22,7 +22,7 @@ export const ButtonGroup = ({
   }
 
   return (
-    <div className={classNames('button-group', className)} data-id={dataId}>
+    <div className={classNames('button-group', className)} data-test-id={dataTestId}>
       {buttons.map((button, index) => {
         return (
           <ButtonGroupItem
@@ -32,7 +32,7 @@ export const ButtonGroup = ({
             size={size}
             isActive={activeItem === button.id}
             disabled={disabled}
-            dataId={dataId ? `${dataId}-item-${index}` : ''}
+            dataTestId={dataTestId ? `${dataTestId}-item-${index}` : ''}
             onClick={() => handleItemClick(button.id)}
           />
         )

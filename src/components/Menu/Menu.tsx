@@ -68,10 +68,10 @@ export const Menu = (props: TMenuProps): ReactElement | null => {
             {children}
             <>
               {menuItems?.map(
-                ({ label, meta, value, handler, iconProps, disabled, dataId }: TMenuItem) => {
+                ({ label, meta, value, handler, iconProps, disabled, dataTestId }: TMenuItem) => {
                   return (
                     <OptionItem
-                      dataId={dataId}
+                      dataTestId={dataTestId}
                       disabled={disabled}
                       key={value}
                       data={{

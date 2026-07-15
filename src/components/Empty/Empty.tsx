@@ -15,26 +15,26 @@ export const Empty = (props: TEmptyProps): React.ReactElement => {
     buttonProps,
     className,
     illustration = noResultImage,
-    dataId = ''
+    dataTestId = ''
   } = props
 
   return (
     <div
-      data-id={dataId}
+      data-test-id={dataTestId}
       className={classNames(
         `no-result ${size == 'large' ? 'no-result--large' : 'no-result--small'}`,
         className
       )}
     >
       <div className="no-result__icon">
-        <Image imagePath={illustration} dataId={dataId ? `${dataId}-image` : ''} />
+        <Image imagePath={illustration} dataTestId={dataTestId ? `${dataTestId}-image` : ''} />
       </div>
       <div className="no-result__content">
         {mainMessage ? (
           <Text
             size={size == 'large' ? 'large' : 'small'}
             weight="bold"
-            dataId={dataId ? `${dataId}-text` : ''}
+            dataTestId={dataTestId ? `${dataTestId}-text` : ''}
           >
             {mainMessage}
           </Text>
@@ -43,7 +43,7 @@ export const Empty = (props: TEmptyProps): React.ReactElement => {
         {paragraphMessage ? (
           <Text
             size={size == 'large' ? 'small' : 'xsmall'}
-            dataId={dataId ? `${dataId}-subtext` : ''}
+            dataTestId={dataTestId ? `${dataTestId}-subtext` : ''}
           >
             {paragraphMessage}
           </Text>
@@ -53,7 +53,7 @@ export const Empty = (props: TEmptyProps): React.ReactElement => {
             {...buttonProps}
             size="medium"
             className="mt-4"
-            dataId={buttonProps.dataId ?? (dataId ? `${dataId}-action` : '')}
+            dataTestId={buttonProps.dataTestId ?? (dataTestId ? `${dataTestId}-action` : '')}
           />
         ) : null}
       </div>

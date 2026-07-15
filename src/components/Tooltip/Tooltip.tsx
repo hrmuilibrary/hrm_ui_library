@@ -12,7 +12,7 @@ export const Tooltip = (props: TTooltipProps): React.ReactElement | null => {
     text,
     className = '',
     position = Positions.BOTTOM_LEFT,
-    dataId = '',
+    dataTestId = '',
     id,
     elemRef,
     hovered = false
@@ -70,12 +70,12 @@ export const Tooltip = (props: TTooltipProps): React.ReactElement | null => {
   return createPortal(
     <div
       style={tooltipStyles}
-      data-id={dataId}
+      data-test-id={dataTestId}
       className={classNames(`tooltip tooltip--${size} tooltip--${tooltipPosition}`, className)}
       ref={tooltipRef}
     >
       <Text
-        dataId={`${dataId}-text`}
+        dataTestId={`${dataTestId}-text`}
         className="tooltip__inner"
         type="primary"
         weight="regular"

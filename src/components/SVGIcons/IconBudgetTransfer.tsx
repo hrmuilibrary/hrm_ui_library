@@ -9,7 +9,7 @@ const IconBudgetTransfer = ({
   onClick,
   refHandler,
   id,
-  dataId
+  dataTestId
 }: ISVGIconProps): ReactElement => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +23,7 @@ const IconBudgetTransfer = ({
     onClick={onClick}
     ref={refHandler}
     id={id}
-    data-id={dataId ? `${dataId}-svg-icon` : ''}
+    data-test-id={dataTestId ? `${dataTestId}-svg-icon` : ''}
   >
     <path d="M5.16353 5C4.81836 5 4.53853 5.27982 4.53853 5.625C4.53853 5.97018 4.81836 6.25 5.16353 6.25H5.91353C6.25871 6.25 6.53853 5.97018 6.53853 5.625C6.53853 5.27982 6.25871 5 5.91353 5H5.16353Z" />
     <path d="M4.53853 8.49426C4.53853 8.14908 4.81836 7.86926 5.16353 7.86926H5.91353C6.25871 7.86926 6.53853 8.14908 6.53853 8.49426C6.53853 8.83944 6.25871 9.11926 5.91353 9.11926H5.16353C4.81836 9.11926 4.53853 8.83944 4.53853 8.49426Z" />

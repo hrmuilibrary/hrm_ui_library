@@ -14,7 +14,7 @@ import { TModalHeaderIconColor, TTitleSize } from './types'
 type TProps = {
   title?: string
   subtitle?: string
-  dataIdPrefix?: string
+  dataTestIdPrefix?: string
   closeIcon?: boolean
   onClose: () => void
   children?: ReactNode
@@ -34,7 +34,7 @@ type TProps = {
 export const ModalContent = ({
   title,
   subtitle,
-  dataIdPrefix,
+  dataTestIdPrefix,
   closeIcon,
   onClose,
   children,
@@ -70,7 +70,7 @@ export const ModalContent = ({
                   lineHeight="large"
                   size={titleSize}
                   weight={'bolder'}
-                  dataId={dataIdPrefix ? `${dataIdPrefix}-modal-title` : ''}
+                  dataTestId={dataTestIdPrefix ? `${dataTestIdPrefix}-modal-title` : ''}
                 >
                   {title}
                 </Text>
@@ -79,7 +79,7 @@ export const ModalContent = ({
               {subtitle ? (
                 <Text
                   className={'mt-12'}
-                  dataId={dataIdPrefix ? `${dataIdPrefix}-modal-title` : ''}
+                  dataTestId={dataTestIdPrefix ? `${dataTestIdPrefix}-modal-title` : ''}
                 >
                   {subtitle}
                 </Text>
@@ -89,7 +89,7 @@ export const ModalContent = ({
           {closeIcon ? (
             <Button
               className={'modal__close ml-16'}
-              dataId={dataIdPrefix ? `${dataIdPrefix}-modal-close-button` : ''}
+              dataTestId={dataTestIdPrefix ? `${dataTestIdPrefix}-modal-close-button` : ''}
               iconProps={{ Component: IconDismiss }}
               onClick={onClose}
               type="tertiary"
@@ -107,7 +107,7 @@ export const ModalContent = ({
               type="tertiary"
               className="modal__footer__btn mr-16"
               onClick={onClose}
-              dataId={dataIdPrefix ? `${dataIdPrefix}-modal-cancel-button` : ''}
+              dataTestId={dataTestIdPrefix ? `${dataTestIdPrefix}-modal-cancel-button` : ''}
               {...(buttonProps.cancel || {})}
             />
           )}
@@ -123,7 +123,7 @@ export const ModalContent = ({
             className={'modal__footer__btn'}
             type="primary"
             onClick={onSubmit ? onSubmit : noop}
-            dataId={dataIdPrefix ? `${dataIdPrefix}-modal-confirm-button` : ''}
+            dataTestId={dataTestIdPrefix ? `${dataTestIdPrefix}-modal-confirm-button` : ''}
             {...buttonProps.confirm}
           />
         </div>

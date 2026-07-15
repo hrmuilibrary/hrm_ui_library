@@ -17,7 +17,7 @@ export const Chips = (props: TChipsProps): ReactElement => {
     withAction,
     onClick,
     onRemove,
-    dataId = '',
+    dataTestId = '',
     id = ''
   } = props
 
@@ -46,12 +46,12 @@ export const Chips = (props: TChipsProps): ReactElement => {
         className
       )}
       id={id}
-      data-id={dataId}
+      data-test-id={dataTestId}
       onClick={handleClick}
     >
       {leftIconProps?.Component ? (
         <leftIconProps.Component
-          dataId={`${dataId}-icon`}
+          dataTestId={`${dataTestId}-icon`}
           size={ICON_SIZE_MAPPING[size]}
           type={customType}
           className={classNames({ 'mr-6': !!text })}
@@ -60,7 +60,7 @@ export const Chips = (props: TChipsProps): ReactElement => {
       ) : null}
       {text ? (
         <Text
-          dataId={`${dataId}-text`}
+          dataTestId={`${dataTestId}-text`}
           type={customType}
           size={TEXT_SIZE_MAPPING[size]}
           className="chips__label"
@@ -70,7 +70,7 @@ export const Chips = (props: TChipsProps): ReactElement => {
       ) : null}
       {withAction && (
         <IconDismissCircleFilled
-          dataId={`${dataId}-icon`}
+          dataTestId={`${dataTestId}-icon`}
           size={ICON_SIZE_MAPPING[size]}
           type={customType}
           className="chips__delete ml-6"

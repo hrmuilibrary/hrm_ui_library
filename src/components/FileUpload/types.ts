@@ -1,5 +1,5 @@
 import { FILE_UPLOAD_ERRORS } from '../../consts'
-import { FileTypeEnum } from '../../type'
+import { FileTypeEnum, IBaseProps, IFormCompProps } from '../../type'
 import { Dispatch, SetStateAction } from 'react'
 import { Accept, DropzoneOptions } from 'react-dropzone'
 

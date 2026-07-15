@@ -55,7 +55,7 @@ export const Counter = forwardRef((props: ICounterProps, ref): React.ReactElemen
       label={label}
       required={required}
       leftIconProps={{
-        dataId: `${rest.dataId}-decrement`,
+        dataTestId: `${rest.dataTestId}-decrement`,
         size: 'small',
         Component: IconSubtract,
         className: classNames({ action_active: !isIncreaseIconDisabled }),
@@ -63,7 +63,7 @@ export const Counter = forwardRef((props: ICounterProps, ref): React.ReactElemen
         onClick: isIncreaseIconDisabled ? noop : increase
       }}
       rightIconProps={{
-        dataId: `${rest.dataId}-increment`,
+        dataTestId: `${rest.dataTestId}-increment`,
         Component: IconAdd,
         size: 'small',
         className: classNames({ action_active: !isDecreaseIconDisabled }),

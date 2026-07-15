@@ -6,7 +6,7 @@ import { Loading, ButtonSelectWrapper } from '../SharedComponents'
 import { TButtonSelectPropTypes } from '../types'
 import { noop } from '../../../utils/helpers'
 import { useIsMobile } from '../../../hooks/useGetIsMobile'
-import { getOptionDataId } from '../helper'
+import { getOptionDataTestId } from '../helper'
 
 export const ButtonSelect = (props: TButtonSelectPropTypes): ReactElement => {
   const {
@@ -28,7 +28,7 @@ export const ButtonSelect = (props: TButtonSelectPropTypes): ReactElement => {
     value,
     placeHolder,
     offsets,
-    dataId,
+    dataTestId,
     type,
     isMobileFullScreen = false
   } = props
@@ -87,7 +87,7 @@ export const ButtonSelect = (props: TButtonSelectPropTypes): ReactElement => {
       dropdownRef={dropdownRef}
       setDropdownRef={setDropdownRef}
       placeHolder={placeHolder}
-      dataId={dataId}
+      dataTestId={dataTestId}
       type={type}
       isMobile={isMobile && isMobileFullScreen}
     >
@@ -108,7 +108,7 @@ export const ButtonSelect = (props: TButtonSelectPropTypes): ReactElement => {
                   tooltipAddons={tooltipAddons}
                   data={item}
                   key={item.value}
-                  dataId={getOptionDataId(dataId, item.value, index) || item.dataId}
+                  dataTestId={getOptionDataTestId(dataTestId, item.value, index) || item.dataTestId}
                   onClick={clickHandler(isSelected)}
                   labelLeftIconProps={labelLeftIconProps}
                   OptionRightIconComponent={optionRightIconComponent}

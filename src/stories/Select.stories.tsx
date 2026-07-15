@@ -1149,7 +1149,7 @@ const Template: StoryFn<TSingleSelectPropTypes> = (args) => {
     <div style={{ display: 'flex', height: '100vh', width: 300, justifyContent: 'center' }}>
       <_Select
         {...args}
-        dataId={'single-select'}
+        dataTestId={'single-select'}
         // tooltipAddons={{ position: Positions.TOP_LEFT, text: '' }}
         // isRequiredField
         withSearch
@@ -1196,7 +1196,7 @@ const Template2: StoryFn<TButtonSelectPropTypes> = (args) => {
     >
       <_ButtonSelect
         {...args}
-        dataId={'button-select'}
+        dataTestId={'button-select'}
         size="small"
         placeHolder="Select month"
         // tooltipAddons={{ position: 'bottom-left' }}
@@ -1272,7 +1272,7 @@ const MultiSelectTemplate: StoryFn<TMultiSelectPropTypes> = (args) => {
     >
       <_MultiSelect
         {...args}
-        dataId={'multi-select'}
+        dataTestId={'multi-select'}
         // isButtonSelect={true}
         dropdownWidth={400}
         align="right"
@@ -1322,7 +1322,7 @@ const NestedSelectTemplate = (args: any): React.ReactElement => {
     <div style={{ width: 320, position: 'absolute', left: 300 }}>
       <_NestedSelect
         {...args}
-        dataId={'nested-select'}
+        dataTestId={'nested-select'}
         selected={selected}
         setSelectedValue={setSelected}
         initialSelectedFolderIds={[1, 2]}

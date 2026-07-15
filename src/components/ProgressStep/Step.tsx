@@ -16,7 +16,7 @@ export const Step = (props: TStepProps): ReactElement => {
 
     stepType,
     onStepClick,
-    dataId = ''
+    dataTestId = ''
   } = props
   const { label, subText, value, status } = step
   const isActive = activeStep === value
@@ -47,7 +47,7 @@ export const Step = (props: TStepProps): ReactElement => {
           type={textType}
           size={stepSize == 'large' ? 'medium' : 'small'}
           weight={stepSize == 'large' ? 'semibold' : 'regular'}
-          dataId={dataId ? `${dataId}-number` : ''}
+          dataTestId={dataTestId ? `${dataTestId}-number` : ''}
         >{`${index}`}</Text>
       )
     }
@@ -62,7 +62,7 @@ export const Step = (props: TStepProps): ReactElement => {
             <IconDismissCircle
               size={iconSize}
               type="inverse"
-              dataId={dataId ? `${dataId}-icon` : ''}
+              dataTestId={dataTestId ? `${dataTestId}-icon` : ''}
             />
           )
         }
@@ -70,13 +70,13 @@ export const Step = (props: TStepProps): ReactElement => {
           <IconCheckmarkCircle
             size={iconSize}
             type="inverse"
-            dataId={dataId ? `${dataId}-icon` : ''}
+            dataTestId={dataTestId ? `${dataTestId}-icon` : ''}
           />
         )
       }
     }
     return null
-  }, [index, stepType, stepSize, isCompleted, isActive, isRejected, textType, dataId])
+  }, [index, stepType, stepSize, isCompleted, isActive, isRejected, textType, dataTestId])
 
   return (
     <div
@@ -88,7 +88,7 @@ export const Step = (props: TStepProps): ReactElement => {
       })}
       style={{ width }}
       onClick={onClick}
-      data-id={dataId}
+      data-test-id={dataTestId}
     >
       <div className="step__top">
         <div className="step__circle">{stepItemContent}</div>
@@ -99,14 +99,14 @@ export const Step = (props: TStepProps): ReactElement => {
           weight="semibold"
           lineHeight={'large'}
           className="text-truncate"
-          dataId={dataId ? `${dataId}-label` : ''}
+          dataTestId={dataTestId ? `${dataTestId}-label` : ''}
         >
           {label}
         </Text>
         <Text
           size={stepSize == 'large' ? 'small' : 'xsmall'}
           className="text-truncate"
-          dataId={dataId ? `${dataId}-subtext` : ''}
+          dataTestId={dataTestId ? `${dataTestId}-subtext` : ''}
         >
           {subText}
         </Text>

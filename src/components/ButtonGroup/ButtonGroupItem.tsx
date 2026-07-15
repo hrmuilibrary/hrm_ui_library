@@ -13,7 +13,7 @@ export const ButtonGroupItem = ({
   onClick,
   className,
   icons,
-  dataId = ''
+  dataTestId = ''
 }: IButtonGroupItem) => {
   const onClickHandler = (event: React.MouseEvent<HTMLDivElement>) => {
     event.preventDefault()
@@ -40,22 +40,26 @@ export const ButtonGroupItem = ({
         { active: isActive, disabled },
         className
       )}
-      data-id={dataId}
+      data-test-id={dataTestId}
       onClick={onClickHandler}
     >
       {icons?.left?.Component ? (
         <icons.left.Component
-          dataId={dataId ? `${dataId}-left-icon` : ''}
+          dataTestId={dataTestId ? `${dataTestId}-left-icon` : ''}
           size={ICON_SIZE_MAPPING[size]}
           type={iconType}
         />
       ) : null}
-      <Text dataId={dataId ? `${dataId}-text` : ''} size={TEXT_SIZE_MAPPING[size]} type={iconType}>
+      <Text
+        dataTestId={dataTestId ? `${dataTestId}-text` : ''}
+        size={TEXT_SIZE_MAPPING[size]}
+        type={iconType}
+      >
         {buttonText}
       </Text>
       {icons?.right?.Component ? (
         <icons.right.Component
-          dataId={dataId ? `${dataId}-right-icon` : ''}
+          dataTestId={dataTestId ? `${dataTestId}-right-icon` : ''}
           size={ICON_SIZE_MAPPING[size]}
           type={iconType}
         />

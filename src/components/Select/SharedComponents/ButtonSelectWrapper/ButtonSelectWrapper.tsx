@@ -25,7 +25,7 @@ export const ButtonSelectWrapper = (props: TSelectWrapperProps): ReactElement =>
     setDropdownRef,
     selectedValues,
     placeHolder,
-    dataId,
+    dataTestId,
     disabled,
     modalApplyButtonText,
     type = 'secondary',
@@ -55,14 +55,14 @@ export const ButtonSelectWrapper = (props: TSelectWrapperProps): ReactElement =>
 
   return (
     <div
-      data-id={dataId}
+      data-test-id={dataTestId}
       className={classNames(`select select--${size}`, className)}
       ref={setContainerRef}
     >
       <Button
         size={size}
         type={type}
-        dataId={dataId ? `${dataId}-trigger` : ''}
+        dataTestId={dataTestId ? `${dataTestId}-trigger` : ''}
         isOpen={isOpen}
         buttonText={placeHolder || ''}
         selectedItemsLabels={selectedItemsLabels}
@@ -74,7 +74,7 @@ export const ButtonSelectWrapper = (props: TSelectWrapperProps): ReactElement =>
       <>
         {isMobile ? (
           <MobileWrapper
-            dataId={dataId}
+            dataTestId={dataTestId}
             applySelectedItems={applySelectedItems}
             isOpen={isOpen}
             closeDrodown={() => setIsOpen(false)}
@@ -84,7 +84,7 @@ export const ButtonSelectWrapper = (props: TSelectWrapperProps): ReactElement =>
           </MobileWrapper>
         ) : (
           <DesktopWrapper
-            dataId={dataId}
+            dataTestId={dataTestId}
             offsets={offsets}
             setDropdownRef={setDropdownRef}
             isOpen={isOpen}

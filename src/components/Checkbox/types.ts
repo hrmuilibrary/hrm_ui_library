@@ -1,3 +1,4 @@
+import { IFormCompProps } from '../../type'
 import { TPopoverProps } from '../Popover/types'
 
 export interface TCheckboxProps extends IFormCompProps {

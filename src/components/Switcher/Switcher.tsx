@@ -12,7 +12,7 @@ export const Switcher = forwardRef((props: TSwitcherProps, ref): React.ReactElem
     disabled,
     label,
     inlineType = false,
-    dataId,
+    dataTestId,
     size = 'large',
     setFieldValue,
     selectedValue,
@@ -65,7 +65,7 @@ export const Switcher = forwardRef((props: TSwitcherProps, ref): React.ReactElem
         )}
       >
         <input
-          data-id={dataId}
+          data-test-id={dataTestId}
           type="checkbox"
           tabIndex={0}
           onChange={changeHandler}

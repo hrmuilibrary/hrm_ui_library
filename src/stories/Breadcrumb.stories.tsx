@@ -17,7 +17,7 @@ const Template: StoryFn<TBreadCrumbProps> = (args) => {
 export const Breadcrumb: StoryObj<TBreadCrumbProps> = Template.bind({})
 
 Breadcrumb.args = {
-  dataId: 'breadcrumb',
+  dataTestId: 'breadcrumb',
   breadCrumbItems: [
     {
       label: 'Home',

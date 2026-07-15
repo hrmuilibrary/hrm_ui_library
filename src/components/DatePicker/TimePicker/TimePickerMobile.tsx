@@ -16,7 +16,7 @@ export const TimePickerMobile = (props: ITimePickerProps): ReactElement => {
     hasError,
     size,
     placeholderText,
-    dataId,
+    dataTestId,
     changeHandler,
     setFieldValue,
     modalOptions,
@@ -52,7 +52,7 @@ export const TimePickerMobile = (props: ITimePickerProps): ReactElement => {
       <Input
         size={size}
         onClick={openTimePicker}
-        dataId={dataId}
+        dataTestId={dataTestId}
         readOnly={true}
         datePlaceHolderText={label ? '' : placeholderText}
         rightIconProps={{ Component: IconCalendarRight, onClick: openTimePicker }}

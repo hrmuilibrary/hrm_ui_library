@@ -12,7 +12,7 @@ export type TSelectItemProps = {
   disabled?: boolean
   isCheckbox?: boolean
   tooltipAddons?: TTooltipProps
-  dataId?: string
+  dataTestId?: string
   style?: CSSProperties
   size?: 'small' | 'large'
 }

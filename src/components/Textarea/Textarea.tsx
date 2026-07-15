@@ -22,7 +22,7 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TTextAreaTypeProps
       maxCount,
       helperText,
       successMessage,
-      dataId = '',
+      dataTestId = '',
       labelAddons,
       isValid,
       setFieldValue,
@@ -57,7 +57,7 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TTextAreaTypeProps
           {/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore */}
           <textarea
-            data-id={dataId}
+            data-test-id={dataTestId}
             disabled={disabled}
             ref={ref}
             placeholder={placeHolder}
@@ -69,7 +69,7 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TTextAreaTypeProps
 
         {error || successMessage || helperText || maxCount ? (
           <div className="textarea__message mt-8">
-            {error && <ErrorMessage message={error} icon="infoFilled" dataId={dataId} />}
+            {error && <ErrorMessage message={error} icon="infoFilled" dataTestId={dataTestId} />}
             {successMessage ? (
               <Text size="small" type="success" className="flexbox align-items--center">
                 <>

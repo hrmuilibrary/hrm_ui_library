@@ -70,5 +70,5 @@ LineChart.args = {
       color: 'red'
     }
   ],
-  dataId: 'line-chart-1'
+  dataTestId: 'line-chart-1'
 }

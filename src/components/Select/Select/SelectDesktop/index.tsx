@@ -24,13 +24,13 @@ import { Text } from '../../../Text'
 import { Loading } from '../../SharedComponents'
 import { DROPDOWN_HEIGHT, DROPDOWN_WIDTH, ITEM_SIZE } from '../../constants'
 import { ISingleSelectDesktopProps } from '../../types'
-import { getOptionDataId } from '../../helper'
+import { getOptionDataTestId } from '../../helper'
 
 export const SelectDesktop = (props: ISingleSelectDesktopProps): ReactElement | null => {
   const {
     currentSelection,
     isLoading,
-    dataId = '',
+    dataTestId = '',
     innerHelperText,
     isRequiredField,
     labelLeftIconProps,
@@ -116,7 +116,7 @@ export const SelectDesktop = (props: ISingleSelectDesktopProps): ReactElement | 
     <>
       {isOpen && (
         <div
-          data-id={dataId ? `${dataId}-content` : ''}
+          data-test-id={dataTestId ? `${dataTestId}-content` : ''}
           className="select__options"
           style={{
             left,
@@ -172,7 +172,9 @@ export const SelectDesktop = (props: ISingleSelectDesktopProps): ReactElement | 
                           LabelRightIconComponent={labelRightIconComponent}
                           disabled={item.disabled}
                           isSelected={isSelected}
-                          dataId={getOptionDataId(dataId, item.value, index) || item.dataId}
+                          dataTestId={
+                            getOptionDataTestId(dataTestId, item.value, index) || item.dataTestId
+                          }
                           style={style}
                           className={classNames('option', {
                             'option--active': isActive

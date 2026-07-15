@@ -19,7 +19,7 @@ const Template: StoryFn<TCheckboxProps> = (args) => {
       popoverAddons={{
         id: 'some-id',
         text: 'hello-popover',
-        dataId: 'test'
+        dataTestId: 'test'
       }}
     />
   )
@@ -28,7 +28,7 @@ const Template: StoryFn<TCheckboxProps> = (args) => {
 export const Checkbox: StoryObj<TCheckboxProps> = Template.bind({})
 
 Checkbox.args = {
-  dataId: 'id',
+  dataTestId: 'id',
   disabled: false,
   required: false,
   isInvalid: false,

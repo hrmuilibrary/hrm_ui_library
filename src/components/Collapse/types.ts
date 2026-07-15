@@ -1,3 +1,4 @@
+import { IBaseProps } from '../../type'
 import { ReactElement, ReactNode } from 'react'
 
 export type TCollapseTitleColor = 'selected' | 'primary'
