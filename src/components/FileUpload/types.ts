@@ -2,6 +2,7 @@ import { FILE_UPLOAD_ERRORS } from '../../consts'
 import { FileTypeEnum, IBaseProps, IFormCompProps } from '../../type'
 import { Dispatch, SetStateAction } from 'react'
 import { Accept, DropzoneOptions } from 'react-dropzone'
+import { TButtonPropTypes } from '../Button/types'
 
 export interface TFileUploadProps extends IFormCompProps {
   allowedTypes?: string
@@ -21,6 +22,8 @@ export interface TFileUploadProps extends IFormCompProps {
   labelAddons?: React.ReactElement
   onError?: (errorType: FILE_UPLOAD_ERRORS) => void
   fileAllowedSize?: number
+  size?: TButtonPropTypes['size']
+  iconProps?: TButtonPropTypes['iconProps']
 }
 
 export enum FileUploadMode {

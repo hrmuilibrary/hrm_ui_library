@@ -35,6 +35,8 @@ export const FileUpload = (props: TFileUploadProps): React.ReactElement | null =
     onError,
     fileAllowedSize,
     mode = FileUploadMode.attach,
+    size = 'medium',
+    iconProps = { Component: IconAttach },
     dataTestId = ''
   } = props
   const files = (value as File[]) || uploadedFiles || []
@@ -148,9 +150,9 @@ export const FileUpload = (props: TFileUploadProps): React.ReactElement | null =
         {mode === FileUploadMode.attach && (
           <Button
             type="secondary"
-            size="medium"
+            size={size}
             disabled={disabled}
-            iconProps={{ Component: IconAttach }}
+            iconProps={iconProps}
             onClick={onUploadClick}
             buttonText={buttonText}
             dataTestId={dataTestId ? `${dataTestId}-action` : ''}

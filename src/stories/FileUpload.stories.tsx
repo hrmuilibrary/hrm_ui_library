@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
-import React, { useEffect, useState } from 'react'
+import React, { Component, useEffect, useState } from 'react'
 import {
   DropzoneFileUpload as _DropzoneFileUpload,
   FileUpload as _FileUpload,
@@ -10,10 +10,17 @@ import {
 import IconInfo from '../components/SVGIcons/IconInfo'
 import { StoryFn, type StoryObj } from '@storybook/react'
 import { FileTypeEnum } from '../type'
+import IconUpload2 from '../components/SVGIcons/IconUpload2'
 
 export default {
   title: 'FileUpload',
-  component: _FileUpload
+  component: _FileUpload,
+  argTypes: {
+    size: {
+      options: ['small', 'medium', 'large'],
+      control: { type: 'radio' }
+    }
+  }
 }
 
 const Template: StoryFn<TFileUploadProps> = (args) => {
@@ -39,10 +46,11 @@ export const FileUpload: StoryObj<TFileUploadProps> = Template.bind({})
 
 FileUpload.args = {
   label: 'Label',
-  buttonText: 'Attach file',
+  buttonText: 'Import',
   isFileUploaded: false,
   dataTestId: 'file-upload',
-  labelAddons: <IconInfo size={'xsmall'} type={'information'} className={'ml-4'} />
+  iconProps: { Component: IconUpload2, size: 'small' },
+  // labelAddons: <IconInfo size={'xsmall'} type={'information'} className={'ml-4'} />
 }
 
 async function urlToFile(url, fileName) {
