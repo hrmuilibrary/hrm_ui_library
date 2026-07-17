@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react'
 import { ISVGIconProps } from '../../type'
 import classNames from 'classnames'
 
-const IconCode = ({
+const IconCalendarDays = ({
   size,
   type,
   className = '',
@@ -30,10 +30,17 @@ const IconCode = ({
     strokeLinejoin="round"
     aria-hidden="true"
   >
-    <polyline points="18,16 22,12 18,8" fill="none"></polyline>
-    <polyline points="6,8 2,12 6,16" fill="none"></polyline>
-    <line x1="14.5" y1="4" x2="9.5" y2="20" fill="none"></line>
+    <path d="M8 2v4" fill="none"></path>
+    <path d="M16 2v4" fill="none"></path>
+    <rect width="18" height="18" x="3" y="4" rx="2" fill="none"></rect>
+    <path d="M3 10h18" fill="none"></path>
+    <path d="M8 14h.01" fill="none"></path>
+    <path d="M12 14h.01" fill="none"></path>
+    <path d="M16 14h.01" fill="none"></path>
+    <path d="M8 18h.01" fill="none"></path>
+    <path d="M12 18h.01" fill="none"></path>
+    <path d="M16 18h.01" fill="none"></path>
   </svg>
 )
 
-export default IconCode
+export default IconCalendarDays

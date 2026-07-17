@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react'
 import { ISVGIconProps } from '../../type'
 import classNames from 'classnames'
 
-const IconCode = ({
+const IconBedDouble = ({
   size,
   type,
   className = '',
@@ -30,10 +30,11 @@ const IconCode = ({
     strokeLinejoin="round"
     aria-hidden="true"
   >
-    <polyline points="18,16 22,12 18,8" fill="none"></polyline>
-    <polyline points="6,8 2,12 6,16" fill="none"></polyline>
-    <line x1="14.5" y1="4" x2="9.5" y2="20" fill="none"></line>
+    <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" fill="none"></path>
+    <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" fill="none"></path>
+    <path d="M12 4v6" fill="none"></path>
+    <path d="M2 18h20" fill="none"></path>
   </svg>
 )
 
-export default IconCode
+export default IconBedDouble
