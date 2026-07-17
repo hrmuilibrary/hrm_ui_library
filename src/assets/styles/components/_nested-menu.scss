@@ -5,8 +5,8 @@
   max-height: 748px;
   min-width: 408px;
   position: fixed;
-  color: var(--grey-900);
-  background-color: var(--white);
+  color: var(--color-nestedmenu-text);
+  background-color: var(--color-nestedmenu-bg);
   box-shadow: var(--shadow-3);
   border-radius: var(--border-radius-8);;
   padding: var(--space-8);
@@ -49,10 +49,10 @@
 
 [data-theme="dark"] {
   .nested-menu {
-    background-color: var(--color-9);
+    background-color: var(--color-nestedmenu-dark-bg);
     //background-color: var(--grey-20);
     box-shadow: none;
-    border: 1px solid var(--grey-40);
+    border: 1px solid var(--color-nestedmenu-dark-border);
 
     .select__option:hover {
       border-radius: var(--size-8);

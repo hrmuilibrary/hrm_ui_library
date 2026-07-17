@@ -6,9 +6,9 @@
   &__inner {
     position: relative;
     flex-wrap: wrap;
-    border: 1px solid var(--grey-200);
+    border: 1px solid var(--color-ms-inner-border);
     border-radius: var(--size-8);
-    background: var(--white);
+    background: var(--color-ms-inner-bg);
   }
 
   &--small {
@@ -46,28 +46,28 @@
 
   &--invalid {
     #{$this}__inner {
-      border-color: var(--red-400);
+      border-color: var(--color-ms-invalid-border);
     }
   }
 
   &--disabled {
     #{$this}__inner {
       cursor: default;
-      background-color: var(--grey-50);
-      border-color: var(--grey-50);
+      background-color: var(--color-ms-disabled-bg);
+      border-color: var(--color-ms-disabled-border);
     }
 
     #{$this}__search {
-      color: var(--grey-300);
+      color: var(--color-ms-disabled-search-text);
       cursor: default;
 
       &::placeholder {
-        color: var(--grey-300);
+        color: var(--color-ms-disabled-search-placeholder);
       }
     }
 
     #{$this}__chip {
-      color: var(--grey-300);
+      color: var(--color-ms-disabled-chip-text);
     }
 
     #{$this}__chip-remove {
@@ -87,12 +87,12 @@
     outline: none;
     background: transparent;
     font-size: var(--size-14);
-    color: var(--grey-900);
+    color: var(--color-ms-search-text);
     width: 100%;
     padding: var(--size-4) 0;
 
     &::placeholder {
-      color: var(--grey-400);
+      color: var(--color-ms-search-placeholder);
     }
   }
 
@@ -100,8 +100,8 @@
     display: inline-flex;
     align-items: center;
     gap: var(--size-6);
-    background: var(--grey-50);
-    border: 1px solid var(--grey-200);
+    background: var(--color-ms-chip-bg);
+    border: 1px solid var(--color-ms-chip-border);
     border-radius: 20px;
     padding: var(--size-4);
 
@@ -110,8 +110,8 @@
     }
 
     &--highlighted {
-      background: var(--brand-20);
-      border-color: var(--brand-50);
+      background: var(--color-ms-chip-highlighted-bg);
+      border-color: var(--color-ms-chip-highlighted-border);
     }
 
     &-badge {
@@ -135,7 +135,7 @@
       padding: 0;
 
       &:hover {
-        background: var(--grey-100);
+        background: var(--color-ms-chip-remove-hover-bg);
       }
     }
   }
@@ -145,8 +145,8 @@
     top: calc(100% + 4px);
     left: 0;
     right: 0;
-    background: var(--white);
-    border: 1px solid var(--grey-200);
+    background: var(--color-ms-dropdown-bg);
+    border: 1px solid var(--color-ms-dropdown-border);
     border-radius: var(--size-8);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     z-index: 100;
@@ -164,7 +164,7 @@
       text-align: left;
 
       &:hover {
-        background: var(--grey-50);
+        background: var(--color-ms-dropdown-item-hover-bg);
       }
     }
 
@@ -190,39 +190,39 @@
 [data-theme='dark'] {
   .multi-select-v2 {
     &__inner {
-      background-color: var(--color-9);
-      border-color: var(--grey-40);
+      background-color: var(--color-ms-dark-inner-bg);
+      border-color: var(--color-ms-dark-inner-border);
     }
 
     &__search {
-      color: var(--grey-50);
+      color: var(--color-ms-dark-search-text);
 
       &::placeholder {
-        color: var(--grey-40);
+        color: var(--color-ms-dark-search-placeholder);
       }
     }
 
     &__chip {
-      background: color-mix(in srgb, var(--grey-800) 12%, transparent);
-      border-color: var(--grey-40);
+      background: var(--color-ms-dark-chip-bg);
+      border-color: var(--color-ms-dark-inner-border);
 
       &--highlighted {
-        background: var(--brand-20);
-        border-color: var(--brand-50);
+        background: var(--color-ms-chip-highlighted-bg);
+        border-color: var(--color-ms-chip-highlighted-border);
       }
 
       &-remove:hover {
-        background: color-mix(in srgb, var(--grey-500) 20%, transparent);
+        background: var(--color-ms-dark-chip-remove-hover-bg);
       }
     }
 
     &__dropdown {
-      background: var(--color-9);
-      border-color: var(--grey-40);
+      background: var(--color-ms-dark-dropdown-bg);
+      border-color: var(--color-ms-dark-dropdown-border);
       box-shadow: none;
 
       &-item:hover {
-        background: color-mix(in srgb, var(--grey-800) 12%, transparent);
+        background: var(--color-ms-dark-dropdown-item-hover-bg);
       }
     }
   }
@@ -231,25 +231,25 @@
   // block above they'd share the same specificity as `&__inner`/`&__chip`
   // and lose to source order instead of correctly overriding them.
   .multi-select-v2--invalid .multi-select-v2__inner {
-    border-color: var(--red-400);
+    border-color: var(--color-ms-invalid-border);
   }
 
   .multi-select-v2--disabled {
     .multi-select-v2__inner {
-      background-color: var(--grey-50);
-      border-color: var(--grey-50);
+      background-color: var(--color-ms-disabled-bg);
+      border-color: var(--color-ms-disabled-border);
     }
 
     .multi-select-v2__search {
-      color: var(--grey-40);
+      color: var(--color-ms-dark-disabled-search-text);
 
       &::placeholder {
-        color: var(--grey-40);
+        color: var(--color-ms-dark-disabled-search-placeholder);
       }
     }
 
     .multi-select-v2__chip {
-      color: var(--grey-40);
+      color: var(--color-ms-dark-disabled-chip-text);
     }
   }
 }

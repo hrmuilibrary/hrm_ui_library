@@ -19,7 +19,7 @@
     width: 100%;
     max-height: calc(100vh - calc(var(--space-16) * 2));
     border-radius: var(--border-radius-4);
-    background-color: var(--white);
+    background-color: var(--color-modal-container-bg);
     box-shadow: var(--shadow-7);
 
     &_fullScreen {
@@ -33,7 +33,7 @@
     @include mixin.align-items(center);
     @include mixin.justify-content(space-between);
     padding: var(--space-16) var(--space-24);
-    border-bottom: var(--border-size-1) solid var(--grey-100);
+    border-bottom: var(--border-size-1) solid var(--color-modal-header-border);
 
     &-content {
       @include mixin.flexbox;
@@ -50,8 +50,8 @@
       width: var(--size-40);
       height: var(--size-40);
       border-radius: var(--border-radius-8);
-      background-color: var(--brand-20);
-      color: var(--brand-700);
+      background-color: var(--color-modal-header-icon-bg);
+      color: var(--color-modal-header-icon-text);
 
       .svg-icon {
         font-size: var(--size-20);
@@ -65,24 +65,24 @@
       }
 
       &--green {
-        background-color: var(--green-100);
-        color: var(--green-700);
+        background-color: var(--color-modal-header-icon-green-bg);
+        color: var(--color-modal-header-icon-green-text);
       }
       &--blue {
-        background-color: var(--blue-100);
-        color: var(--blue-700);
+        background-color: var(--color-modal-header-icon-blue-bg);
+        color: var(--color-modal-header-icon-blue-text);
       }
       &--red {
-        background-color: var(--red-100);
-        color: var(--red-800);
+        background-color: var(--color-modal-header-icon-red-bg);
+        color: var(--color-modal-header-icon-red-text);
       }
       &--purple {
-        background-color: var(--purple-100);
-        color: var(--purple-500);
+        background-color: var(--color-modal-header-icon-purple-bg);
+        color: var(--color-modal-header-icon-purple-text);
       }
       &--yellow {
-        background-color: var(--yellow-200);
-        color: var(--yellow-900);
+        background-color: var(--color-modal-header-icon-yellow-bg);
+        color: var(--color-modal-header-icon-yellow-text);
       }
     }
 
@@ -125,7 +125,7 @@
     @include mixin.align-items(center);
     @include mixin.justify-content(flex-end);
     padding: var(--space-16) var(--space-24);
-    border-top: var(--border-size-1) solid var(--grey-100);
+    border-top: var(--border-size-1) solid var(--color-modal-header-border);
   }
 
   &--large {
@@ -224,16 +224,16 @@
     $this: &;
 
     &--entered {
-      background-color: color-mix(in srgb, var(--color-12) 50%, transparent);
+      background-color: var(--color-modal-dark-entered-bg);
     }
 
     &__container {
-      background-color: var(--color-9);
+      background-color: var(--color-modal-dark-container-bg);
       box-shadow: none;
     }
 
     &__header, &__footer {
-      border-color: var(--grey-40);
+      border-color: var(--color-modal-dark-header-footer-border);
     }
   }
 }

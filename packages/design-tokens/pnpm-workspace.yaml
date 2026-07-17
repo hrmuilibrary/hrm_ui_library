@@ -1,0 +1,5 @@
+# Isolates this package as its own pnpm root (does not affect the parent repo).
+# style-dictionary ships a build script but is pure JS, so approving it is harmless.
+allowBuilds:
+  '@bundled-es-modules/glob': true
+  style-dictionary: true

@@ -12,15 +12,15 @@
   }
 
   &--primary {
-    background-color: var(--pink-500);
+    background-color: var(--color-badge-primary-bg);
   }
 
   &--secondary {
-    background-color: var(--grey-50);
+    background-color: var(--color-badge-secondary-bg);
   }
 
   &--tertiary {
-    background-color: var(--green-500);
+    background-color: var(--color-badge-tertiary-bg);
   }
 
   &--large {
@@ -48,7 +48,7 @@
     }
 
     &--primary {
-      background-color: var(--pink-400);
+      background-color: var(--color-badge-dark-primary-bg);
     }
   }
 }

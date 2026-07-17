@@ -13,13 +13,13 @@
     border-collapse: separate;
     border-spacing: 0;
     width: 100%;
-    color: var(--grey-900);
+    color: var(--color-table-text);
 
     thead {
       tr {
         th {
-          background-color: var(--white);
-          border-bottom: 1px solid var(--grey-300);
+          background-color: var(--color-table-head-bg);
+          border-bottom: 1px solid var(--color-table-head-border);
           height: var(--size-56);
           padding: 0 var(--space-16);
           vertical-align: middle;
@@ -48,28 +48,28 @@
       tr {
         &.selected {
           td {
-            border-bottom-color: var(--grey-100);
-            background: var(--grey-100);
+            border-bottom-color: var(--color-table-row-selected-border);
+            background: var(--color-table-row-selected-bg);
           }
         }
 
         &:hover {
           td {
-            background-color: var(--grey-50);
+            background-color: var(--color-table-row-hover-bg);
           }
         }
 
         td {
-          border-bottom: 1px solid var(--grey-200);
+          border-bottom: 1px solid var(--color-table-cell-border);
           height: var(--size-56);
           padding: 0 var(--space-16);
           vertical-align: middle;
-          background-color: var(--grey-0);
+          background-color: var(--color-table-cell-bg);
         }
 
         &:nth-child(2n) {
           td {
-            background-color: var(--white);
+            background-color: var(--color-table-cell-bg-alt);
           }
         }
       }
@@ -79,7 +79,7 @@
   &__selected-rows {
     display: flex;
     align-items: center;
-    background-color: var(--grey-50);
+    background-color: var(--color-table-selected-rows-bg);
     padding: var(--size-8) var(--size-24);
     border-radius: var(--size-40);
   }
@@ -105,12 +105,12 @@
   .fixed_column_left {
     @include mixin.sticky(0, unset, unset, unset);
     z-index: 1;
-    border-right: 1px solid var(--grey-300)
+    border-right: 1px solid var(--color-table-fixed-col-border)
   }
 
   .fixed_column_right {
     @include mixin.sticky(unset, 0, unset, unset);
-    border-left: 1px solid var(--grey-300)
+    border-left: 1px solid var(--color-table-fixed-col-border)
   }
 }
 
@@ -118,11 +118,11 @@
   .table-wrapper {
     table {
       thead tr th {
-        background-color: var(--color-6);
-        border-color: var(--color-8);
+        background-color: var(--color-table-dark-head-bg);
+        border-color: var(--color-table-dark-head-border);
         //border-color: var(--grey-30);
         .table-header-title {
-          color: var(--grey-50);
+          color: var(--color-table-dark-head-title-text);
         }
       }
 
@@ -130,25 +130,25 @@
         tr {
           &:hover {
             td, th {
-              background-color: var(--color-7);
+              background-color: var(--color-table-dark-row-hover-bg);
             }
           }
           &.selected {
             td {
-              background: var(--grey-20);
+              background: var(--color-table-dark-row-selected-bg);
             }
           }
 
           td {
-            background-color: var(--color-6);
-            border-color: var(--color-8);
+            background-color: var(--color-table-dark-head-bg);
+            border-color: var(--color-table-dark-head-border);
           }
         }
       }
     }
 
     &__selected-rows {
-      background-color: var(--grey-20);
+      background-color: var(--color-table-dark-selected-rows-bg);
     }
   }
 }

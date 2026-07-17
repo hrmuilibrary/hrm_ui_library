@@ -1,0 +1,159 @@
+{
+  "shadow": {
+    "1": {
+      "$type": "shadow",
+      "$value": "0px 1px 2px rgba(255, 255, 255, 0.06), 0px 2px 2px rgba(255, 255, 255, 0.08), 0px 1px 4px rgba(255, 255, 255, 0.08)",
+      "$extensions": {
+        "com.hrm": {
+          "cssVar": "shadow-1"
+        }
+      }
+    },
+    "2": {
+      "$type": "shadow",
+      "$value": "0px 2px 4px rgba(255, 255, 255, 0.06), 0px 3px 2px rgba(255, 255, 255, 0.08), 0px 1px 6px rgba(255, 255, 255, 0.1)",
+      "$extensions": {
+        "com.hrm": {
+          "cssVar": "shadow-2"
+        }
+      }
+    },
+    "3": {
+      "$type": "shadow",
+      "$value": "0px 3px 4px rgba(255, 255, 255, 0.12), 1px 3px 3px rgba(255, 255, 255, 0.1), 0px 1px 8px rgba(255, 255, 255, 0.16)",
+      "$extensions": {
+        "com.hrm": {
+          "cssVar": "shadow-3"
+        }
+      }
+    },
+    "4": {
+      "$type": "shadow",
+      "$value": "0px 4px 5px rgba(255, 255, 255, 0.1), 0px 1px 10px rgba(255, 255, 255, 0.08), 0px 2px 4px rgba(255, 255, 255, 0.16)",
+      "$extensions": {
+        "com.hrm": {
+          "cssVar": "shadow-4"
+        }
+      }
+    },
+    "5": {
+      "$type": "shadow",
+      "$value": "0px 6px 10px rgba(255, 255, 255, 0.12), 0px 1px 18px rgba(255, 255, 255, 0.08), 0px 3px 5px rgba(255, 255, 255, 0.16)",
+      "$extensions": {
+        "com.hrm": {
+          "cssVar": "shadow-5"
+        }
+      }
+    },
+    "6": {
+      "$type": "shadow",
+      "$value": "0px 8px 10px rgba(31, 31, 31, 0.12), 0px 3px 14px rgba(31, 31, 31, 0.08), 0px 5px 5px rgba(31, 31, 31, 0.16)",
+      "$extensions": {
+        "com.hrm": {
+          "cssVar": "shadow-6"
+        }
+      }
+    },
+    "7": {
+      "$type": "shadow",
+      "$value": "0px 9px 12px rgba(255, 255, 255, 0.12), 0px 3px 16px rgba(255, 255, 255, 0.08), 0px 5px 6px rgba(255, 255, 255, 0.16)",
+      "$extensions": {
+        "com.hrm": {
+          "cssVar": "shadow-7"
+        }
+      }
+    },
+    "8": {
+      "$type": "shadow",
+      "$value": "0px 12px 17px rgba(255, 255, 255, 0.12), 0px 5px 22px rgba(255, 255, 255, 0.08), 0px 7px 8px rgba(255, 255, 255, 0.16)",
+      "$extensions": {
+        "com.hrm": {
+          "cssVar": "shadow-8"
+        }
+      }
+    },
+    "9": {
+      "$type": "shadow",
+      "$value": "0px 16px 24px rgba(255, 255, 255, 0.12), 0px 6px 30px rgba(255, 255, 255, 0.08), 0px 8px 10px rgba(255, 255, 255, 0.16)",
+      "$extensions": {
+        "com.hrm": {
+          "cssVar": "shadow-9"
+        }
+      }
+    },
+    "10": {
+      "$type": "shadow",
+      "$value": "0px 24px 38px rgba(255, 255, 255, 0.12), 0px 9px 46px rgba(255, 255, 255, 0.08), 0px 11px 15px rgba(255, 255, 255, 0.16)",
+      "$extensions": {
+        "com.hrm": {
+          "cssVar": "shadow-10"
+        }
+      }
+    },
+    "brand": {
+      "1": {
+        "$type": "shadow",
+        "$value": "0px 0px 0px 1px rgb(114, 191, 68)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "shadow-brand-1"
+          }
+        }
+      },
+      "2": {
+        "$type": "shadow",
+        "$value": "0px 0px 0px 4px rgba(202, 231, 185, 0.80)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "shadow-brand-2"
+          }
+        }
+      }
+    },
+    "success": {
+      "$type": "shadow",
+      "$value": "0px 0px 0px 4px rgba(197, 229, 204, 0.80)",
+      "$extensions": {
+        "com.hrm": {
+          "cssVar": "shadow-success"
+        }
+      }
+    },
+    "warning": {
+      "$type": "shadow",
+      "$value": "0px 0px 0px 4px rgba(250, 235, 185, 0.80)",
+      "$extensions": {
+        "com.hrm": {
+          "cssVar": "shadow-warning"
+        }
+      }
+    },
+    "danger": {
+      "$type": "shadow",
+      "$value": "0px 0px 0px 4px rgba(255, 181, 171, 0.80)",
+      "$extensions": {
+        "com.hrm": {
+          "cssVar": "shadow-danger"
+        }
+      }
+    },
+    "info": {
+      "$type": "shadow",
+      "$value": "0px 0px 0px 4px rgba(193, 222, 252, 0.80)",
+      "$extensions": {
+        "com.hrm": {
+          "cssVar": "shadow-info"
+        }
+      }
+    },
+    "discovery": {
+      "$type": "shadow",
+      "$value": "0px 0px 0px 4px rgba(203, 196, 237, 0.80)",
+      "$extensions": {
+        "com.hrm": {
+          "cssVar": "shadow-discovery"
+        }
+      }
+    }
+  }
+}

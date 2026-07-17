@@ -15,6 +15,8 @@
     "lint": "eslint \"./src/**/*.{js,jsx,ts,tsx}\" --fix",
     "prettier": "prettier --write \"./{src,stories}/**/**.{js,jsx,ts,tsx}\"",
     "check": "npm run prettier && npm run lint && tsc",
+    "test:visual": "node ./bin/styles-snapshot.mjs",
+    "test:visual:update": "node ./bin/styles-snapshot.mjs --write",
     "install-latest": "pnpm install",
     "publish-alpha-version": "cd \"./dist/\" && npm publish --tag alpha",
     "publish-beta-version": "cd \"./dist/\" && npm publish --tag beta",

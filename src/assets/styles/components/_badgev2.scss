@@ -13,419 +13,419 @@
   }
 
   &--filled {
-    color: var(--grey-0);
+    color: var(--color-badgev2-filled-text);
 
     & > #{$this__inner} {
-      color: var(--grey-0);
+      color: var(--color-badgev2-filled-text);
     }
 
     &#{$this}--gray {
-      background-color: var(--grey-400);
+      background-color: var(--color-badgev2-filled-gray-bg);
     }
 
     &#{$this}--blue {
-      background-color: var(--blue-800);
+      background-color: var(--color-badgev2-filled-blue-bg);
     }
 
     &#{$this}--orange {
-      background-color: var(--yellow-800);
+      background-color: var(--color-badgev2-filled-orange-bg);
     }
 
     &#{$this}--red {
-      background-color: var(--red-500);
+      background-color: var(--color-badgev2-filled-red-bg);
     }
 
     &#{$this}--green {
-      background-color: var(--brand-500);
+      background-color: var(--color-badgev2-filled-green-bg);
     }
 
     &#{$this}--yellow {
-      background-color: var(--yellow-500);
+      background-color: var(--color-badgev2-filled-yellow-bg);
     }
 
     &#{$this}--purple {
-      background-color: var(--purple-400);
+      background-color: var(--color-badgev2-filled-purple-bg);
     }
 
     &#{$this}--sky {
-      background-color: var(--blue-500);
+      background-color: var(--color-badgev2-filled-sky-bg);
     }
 
     &#{$this}--pink {
-      background-color: var(--pink-200);
+      background-color: var(--color-badgev2-filled-pink-bg);
     }
 
     &#{$this}--teal {
-      background-color: var(--green-500);
+      background-color: var(--color-badgev2-filled-teal-bg);
     }
 
     &#{$this}--with-dot {
-      background: var(--grey-0);
+      background: var(--color-badgev2-filled-text);
     }
   }
 
   &--light {
-    color: var(--grey-800);
+    color: var(--color-badgev2-light-text);
 
     & > #{$this__inner} {
-      color: var(--grey-800);
+      color: var(--color-badgev2-light-text);
     }
 
     &#{$this}--gray {
-      background-color: var(--grey-200);
+      background-color: var(--color-badgev2-light-gray-bg);
 
       #{$this}--with-dot {
-        background-color: var(--grey-800);
+        background-color: var(--color-badgev2-light-text);
       }
     }
 
     &#{$this}--blue {
-      background-color: var(--blue-100);
+      background-color: var(--color-badgev2-light-blue-bg);
 
       #{$this}--with-dot {
-        background-color: var(--grey-800);
+        background-color: var(--color-badgev2-light-text);
       }
     }
 
     &#{$this}--orange {
-      background-color: var(--yellow-400);
+      background-color: var(--color-badgev2-light-orange-bg);
 
       #{$this}--with-dot {
-        background-color: var(--grey-800);
+        background-color: var(--color-badgev2-light-text);
       }
     }
 
     &#{$this}--red {
-      background-color: var(--red-200);
+      background-color: var(--color-badgev2-light-red-bg);
 
       & > #{$this__inner} {
-        color: var(--red-900);
+        color: var(--color-badgev2-light-red-text);
       }
 
       #{$this}--with-dot {
-        background-color: var(--red-900);
+        background-color: var(--color-badgev2-light-red-text);
       }
     }
 
     &#{$this}--green {
-      background-color: var(--brand-20);
+      background-color: var(--color-badgev2-light-green-bg);
 
       & > #{$this__inner} {
-        color: var(--brand-800);
+        color: var(--color-badgev2-light-green-text);
       }
 
       #{$this}--with-dot {
-        background-color: var(--brand-800);
+        background-color: var(--color-badgev2-light-green-text);
       }
     }
 
     &#{$this}--yellow {
-      background-color: var(--yellow-100);
+      background-color: var(--color-badgev2-light-yellow-bg);
 
       & > #{$this__inner} {
-        color: var(--yellow-900);
+        color: var(--color-badgev2-light-yellow-text);
       }
 
       #{$this}--with-dot {
-        background-color: var(--yellow-900);
+        background-color: var(--color-badgev2-light-yellow-text);
       }
     }
 
     &#{$this}--purple {
-      background-color: var(--purple-100);
+      background-color: var(--color-badgev2-light-purple-bg);
 
       & > #{$this__inner} {
-        color: var(--purple-900);
+        color: var(--color-badgev2-light-purple-text);
       }
 
       #{$this}--with-dot {
-        background-color: var(--purple-900);
+        background-color: var(--color-badgev2-light-purple-text);
       }
     }
 
     &#{$this}--sky {
-      background-color: var(--blue-100);
+      background-color: var(--color-badgev2-light-sky-bg);
 
       & > #{$this__inner} {
-        color: var(--blue-900);
+        color: var(--color-badgev2-light-sky-text);
       }
 
       #{$this}--with-dot {
-        background-color: var(--blue-900);
+        background-color: var(--color-badgev2-light-sky-text);
       }
     }
 
     &#{$this}--pink {
-      background-color: var(--pink-100);
+      background-color: var(--color-badgev2-light-pink-bg);
 
       & > #{$this__inner} {
-        color: var(--pink-900);
+        color: var(--color-badgev2-light-pink-text);
       }
 
       #{$this}--with-dot {
-        background-color: var(--pink-900);
+        background-color: var(--color-badgev2-light-pink-text);
       }
     }
 
     &#{$this}--teal {
-      background-color: var(--green-100);
+      background-color: var(--color-badgev2-light-teal-bg);
 
       & > #{$this__inner} {
-        color: var(--green-900);
+        color: var(--color-badgev2-light-teal-text);
       }
 
       #{$this}--with-dot {
-        background-color: var(--green-900);
+        background-color: var(--color-badgev2-light-teal-text);
       }
     }
   }
 
   &--lighter {
-    color: var(--grey-400);
+    color: var(--color-badgev2-lighter-text);
 
     & > &#{$this__inner} {
-      color: var(--grey-400);
+      color: var(--color-badgev2-lighter-text);
     }
 
     &#{$this}--gray {
-      background-color: var(--grey-100);
+      background-color: var(--color-badgev2-lighter-gray-bg);
 
       #{$this}--with-dot {
-        background-color: var(--grey-400);
+        background-color: var(--color-badgev2-lighter-text);
       }
     }
 
     &#{$this}--blue {
-      background-color: var(--blue-50);
+      background-color: var(--color-badgev2-lighter-blue-bg);
 
       & > #{$this__inner} {
-        color: var(--blue-800);
+        color: var(--color-badgev2-lighter-blue-text);
       }
 
       #{$this}--with-dot {
-        background-color: var(--blue-800);
+        background-color: var(--color-badgev2-lighter-blue-text);
       }
     }
 
     &#{$this}--orange {
-      background-color: var(--yellow-50);
+      background-color: var(--color-badgev2-lighter-orange-bg);
 
       & > #{$this__inner} {
-        color: var(--yellow-800);
+        color: var(--color-badgev2-lighter-orange-text);
       }
 
       #{$this}--with-dot {
-        background-color: var(--yellow-800);
+        background-color: var(--color-badgev2-lighter-orange-text);
       }
     }
 
     &#{$this}--red {
-      background-color: var(--red-20);
+      background-color: var(--color-badgev2-lighter-red-bg);
 
       & > #{$this__inner} {
-        color: var(--red-500);
+        color: var(--color-badgev2-lighter-red-text);
       }
 
       #{$this}--with-dot {
-        background-color: var(--red-500);
+        background-color: var(--color-badgev2-lighter-red-text);
       }
     }
 
     &#{$this}--green {
-      background-color: var(--green-50);
+      background-color: var(--color-badgev2-lighter-green-bg);
 
       & > #{$this__inner} {
-        color: var(--brand-600);
+        color: var(--color-badgev2-lighter-green-text);
       }
 
       #{$this}--with-dot {
-        background-color: var(--brand-600);
+        background-color: var(--color-badgev2-lighter-green-text);
       }
     }
 
     &#{$this}--yellow {
-      background-color: var(--yellow-50);
+      background-color: var(--color-badgev2-lighter-yellow-bg);
 
       & > #{$this__inner} {
-        color: var(--yellow-600);
+        color: var(--color-badgev2-lighter-yellow-text);
       }
 
       #{$this}--with-dot {
-        background-color: var(--yellow-600);
+        background-color: var(--color-badgev2-lighter-yellow-text);
       }
     }
 
     &#{$this}--purple {
-      background-color: var(--purple-50);
+      background-color: var(--color-badgev2-lighter-purple-bg);
 
       & > #{$this__inner} {
-        color: var(--purple-400);
+        color: var(--color-badgev2-lighter-purple-text);
       }
 
       #{$this}--with-dot {
-        background-color: var(--purple-400);
+        background-color: var(--color-badgev2-lighter-purple-text);
       }
     }
 
     &#{$this}--sky {
-      background-color: var(--blue-50);
+      background-color: var(--color-badgev2-lighter-sky-bg);
 
       & > #{$this__inner} {
-        color: var(--blue-500);
+        color: var(--color-badgev2-lighter-sky-text);
       }
 
       #{$this}--with-dot {
-        background-color: var(--blue-500);
+        background-color: var(--color-badgev2-lighter-sky-text);
       }
     }
 
     &#{$this}--pink {
-      background-color: var(--pink-50);
+      background-color: var(--color-badgev2-lighter-pink-bg);
 
       & > #{$this__inner} {
-        color: var(--pink-300);
+        color: var(--color-badgev2-lighter-pink-text);
       }
 
       #{$this}--with-dot {
-        background-color: var(--pink-300);
+        background-color: var(--color-badgev2-lighter-pink-text);
       }
     }
 
     &#{$this}--teal {
-      background-color: var(--green-50);
+      background-color: var(--color-badgev2-lighter-teal-bg);
 
       & > #{$this__inner} {
-        color: var(--green-500);
+        color: var(--color-badgev2-lighter-teal-text);
       }
 
       #{$this}--with-dot {
-        background-color: var(--green-500);
+        background-color: var(--color-badgev2-lighter-teal-text);
       }
     }
   }
 
   &--stroke {
-    color: var(--grey-400);
-    border: 1px solid var(--grey-400);
+    color: var(--color-badgev2-stroke-text);
+    border: 1px solid var(--color-badgev2-stroke-border);
     background-color: none;
 
     & > &#{$this__inner} {
-      color: var(--grey-400);
+      color: var(--color-badgev2-stroke-text);
     }
 
     &#{$this}--gray {
-      background-color: var(--grey-0);
+      background-color: var(--color-badgev2-stroke-gray-bg);
 
       #{$this}--with-dot {
-        background-color: var(--grey-400);
+        background-color: var(--color-badgev2-stroke-text);
       }
     }
 
     &#{$this}--blue {
-      border-color: var(--blue-600);
+      border-color: var(--color-badgev2-stroke-blue-border);
 
       & > #{$this__inner} {
-        color: var(--blue-800);
+        color: var(--color-badgev2-stroke-blue-text);
       }
 
       #{$this}--with-dot {
-        background-color: var(--blue-800);
+        background-color: var(--color-badgev2-stroke-blue-text);
       }
     }
 
     &#{$this}--orange {
-      border-color: var(--yellow-800);
+      border-color: var(--color-badgev2-stroke-orange-border);
 
       & > #{$this__inner} {
-        color: var(--yellow-800);
+        color: var(--color-badgev2-stroke-orange-text);
       }
 
       #{$this}--with-dot {
-        background-color: var(--yellow-800);
+        background-color: var(--color-badgev2-stroke-orange-text);
       }
     }
 
     &#{$this}--red {
-      border-color: var(--red-500);
+      border-color: var(--color-badgev2-stroke-red-border);
 
       & > #{$this__inner} {
-        color: var(--red-500);
+        color: var(--color-badgev2-stroke-red-text);
       }
 
       #{$this}--with-dot {
-        background-color: var(--red-500);
+        background-color: var(--color-badgev2-stroke-red-text);
       }
     }
 
     &#{$this}--green {
-      border-color: var(--brand-500);
+      border-color: var(--color-badgev2-stroke-green-border);
 
       & > #{$this__inner} {
-        color: var(--brand-500);
+        color: var(--color-badgev2-stroke-green-text);
       }
 
       #{$this}--with-dot {
-        background-color: var(--brand-500);
+        background-color: var(--color-badgev2-stroke-green-text);
       }
     }
 
     &#{$this}--yellow {
-      border-color: var(--yellow-500);
+      border-color: var(--color-badgev2-stroke-yellow-border);
 
       & > #{$this__inner} {
-        color: var(--yellow-500);
+        color: var(--color-badgev2-stroke-yellow-text);
       }
 
       #{$this}--with-dot {
-        background-color: var(--yellow-500);
+        background-color: var(--color-badgev2-stroke-yellow-text);
       }
     }
 
     &#{$this}--purple {
-      border-color: var(--purple-400);
+      border-color: var(--color-badgev2-stroke-purple-border);
 
       & > #{$this__inner} {
-        color: var(--purple-400);
+        color: var(--color-badgev2-stroke-purple-text);
       }
 
       #{$this}--with-dot {
-        background-color: var(--purple-400);
+        background-color: var(--color-badgev2-stroke-purple-text);
       }
     }
 
     &#{$this}--sky {
-      border-color: var(--blue-50);
+      border-color: var(--color-badgev2-stroke-sky-border);
 
       & > #{$this__inner} {
-        color: var(--blue-500);
+        color: var(--color-badgev2-stroke-sky-text);
       }
 
       #{$this}--with-dot {
-        background-color: var(--blue-500);
+        background-color: var(--color-badgev2-stroke-sky-text);
       }
     }
 
     &#{$this}--pink {
-      border-color: var(--pink-200);
+      border-color: var(--color-badgev2-stroke-pink-border);
 
       & > #{$this__inner} {
-        color: var(--pink-200);
+        color: var(--color-badgev2-stroke-pink-text);
       }
 
       #{$this}--with-dot {
-        background-color: var(--pink-200);
+        background-color: var(--color-badgev2-stroke-pink-text);
       }
     }
 
     &#{$this}--teal {
-      border-color: var(--green-500);
+      border-color: var(--color-badgev2-stroke-teal-border);
 
       & > #{$this__inner} {
-        color: var(--green-500);
+        color: var(--color-badgev2-stroke-teal-text);
       }
 
       #{$this}--with-dot {
-        background-color: var(--green-500);
+        background-color: var(--color-badgev2-stroke-teal-text);
       }
     }
   }
@@ -474,15 +474,15 @@
   }
 
   &#{$this}--disabled {
-    border: 1px solid var(--grey-200);
-    background-color: var(--grey-0);
+    border: 1px solid var(--color-badgev2-disabled-border);
+    background-color: var(--color-badgev2-disabled-bg);
 
     & > #{$this__inner} {
-      color: var(--grey-200);
+      color: var(--color-badgev2-disabled-border);
     }
 
     &#{$this}--with-dot {
-      background-color: var(--grey-300);
+      background-color: var(--color-badgev2-disabled-dot-bg);
     }
   }
 }
@@ -493,39 +493,39 @@
 
     &--filled {
       & > .badge-v2__inner {
-        color: var(--grey-900);
+        color: var(--color-badgev2-filled-dark-inner-text);
         font-weight: 600;
       }
 
       &.badge-v2--blue {
-        background-color: var(--blue-800);
+        background-color: var(--color-badgev2-filled-blue-bg);
       }
 
       &.badge-v2--orange {
-        background-color: var(--yellow-100);
+        background-color: var(--color-badgev2-filled-dark-orange-bg);
       }
 
       &.badge-v2--gray {
-        background-color: var(--grey-40);
+        background-color: var(--color-badgev2-filled-dark-gray-bg);
       }
 
       &.badge-v2--green .badge-v2__inner {
-        color: var(--white);
+        color: var(--color-badgev2-filled-dark-green-text);
       }
 
       &--lighter {
         &#{$this}--gray {
-          background-color: var(--grey-30);
+          background-color: var(--color-badgev2-filled-dark-lighter-gray-bg);
         }
       }
 
       &--stroke {
-        border-color: var(--grey-400);
+        border-color: var(--color-badgev2-stroke-border);
       }
     }
   }
 }
 
 [data-theme=dark] .badge-v2--filled.badge-v2--blue {
-  background-color: var(--blue-800);
+  background-color: var(--color-badgev2-filled-blue-bg);
 }
