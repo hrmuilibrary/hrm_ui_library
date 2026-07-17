@@ -30,10 +30,10 @@ const IconCoins = ({
     strokeLinejoin="round"
     aria-hidden="true"
   >
-    <circle fill="none" cx="8" cy="8" r="6"></circle>
-    <path fill="none" d="M18.09 10.37A6 6 0 1 1 10.34 18"></path>
-    <path fill="none" d="M7 6h1v4"></path>
-    <path fill="none" d="m16.71 13.88.7.71-2.82 2.82"></path>
+    <circle cx="8" cy="8" r="6" fill="none"></circle>
+    <path d="M18.09 10.37A6 6 0 1 1 10.34 18" fill="none"></path>
+    <path d="M7 6h1v4" fill="none"></path>
+    <path d="m16.71 13.88.7.71-2.82 2.82" fill="none"></path>
   </svg>
 )
 
