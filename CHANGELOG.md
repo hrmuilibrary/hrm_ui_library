@@ -1,3 +1,11 @@
+## [4.0.7](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.6...4.0.7) (2026-07-17)
+
+
+### Bug Fixes
+
+* add file upload props (size and iconProps) ([f52b310](https://github.com/hrmuilibrary/hrm_ui_library/commit/f52b310905a338ff0de2322b6e463b6da469e4c3))
+* add upload and download icons ([b21a9fd](https://github.com/hrmuilibrary/hrm_ui_library/commit/b21a9fd4da5c95e7b4e0b86647d6d707680273ff))
+
 ## [4.0.6](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.5...4.0.6) (2026-07-17)
 
 
