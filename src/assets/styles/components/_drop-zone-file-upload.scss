@@ -12,23 +12,23 @@
     @include mixin.align-items(center);
     @include mixin.flex-direction(column);
     border-radius: var(--size-12);
-    border: 1px dashed var(--grey-300);
-    background: var(--white);
+    border: 1px dashed var(--color-dropzone-border);
+    background: var(--color-dropzone-bg);
     padding: var(--size-32);
     cursor: pointer;
 
     &--active {
-      border-color: var(--grey-200);
-      background: var(--grey-30);
+      border-color: var(--color-dropzone-active-border);
+      background: var(--color-dropzone-active-bg);
     }
 
     &--focused {
-      border-color: var(--grey-200);
-      background: var(--grey-30);
+      border-color: var(--color-dropzone-active-border);
+      background: var(--color-dropzone-active-bg);
     }
 
     &--rejected {
-      border-color: var(--red-600);
+      border-color: var(--color-dropzone-rejected-border);
       background: #FFF;
     }
   }
@@ -42,7 +42,7 @@
     &--item {
       @include mixin.flexbox();
       border-radius: var(--size-12);
-      border: 1px solid var(--grey-300);
+      border: 1px solid var(--color-dropzone-border);
       background: #FFF;
       padding: var(--size-16);
 

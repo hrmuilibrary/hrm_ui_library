@@ -10,10 +10,10 @@
   --ds-button-icon-size-sm: var(--size-24);
 
   --ds-button-icon-bg: transparent;
-  --ds-button-icon-bg-hover: var(--grey-40);
+  --ds-button-icon-bg-hover: var(--color-buttonicon-hover-bg);
   --ds-button-icon-bg-disabled: transparent;
-  --ds-button-icon-bg-pressed: var(--grey-100);
-  --ds-button-icon-bg-focused: var(--grey-40);
+  --ds-button-icon-bg-pressed: var(--color-buttonicon-pressed-bg);
+  --ds-button-icon-bg-focused: var(--color-buttonicon-hover-bg);
 
   --ds-button-icon-border-radius-lg: var(--border-radius-10);
   --ds-button-icon-border-radius-md: var(--border-radius-8);

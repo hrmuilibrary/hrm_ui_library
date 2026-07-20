@@ -6,25 +6,6 @@
   --ds-status-circle-size-lg: var(--size-8);
   --ds-status-circle-size-sm: var(--size-6);
 
-  --ds-status-circle-bg-primary: var(--grey-700);
-  --ds-status-circle-bg-information: var(--blue-800);
-  --ds-status-circle-bg-brand: var(--brand-700);
-  --ds-status-circle-bg-danger: var(--red-800);
-  --ds-status-circle-bg-warning: var(--yellow-800);
-  --ds-status-circle-bg-success: var(--green-600);
-  --ds-status-circle-bg-discovery: var(--purple-400);
-  --ds-status-circle-bg-disabled: var(--grey-500);
-
-  --ds-status-withBackground-bg-primary: var(--grey-50);
-  --ds-status-withBackground-bg-information: var(--blue-50);
-  --ds-status-withBackground-bg-brand: var(--brand-20);
-  --ds-status-withBackground-bg-danger: var(--red-20);
-  --ds-status-withBackground-bg-warning:var(--yellow-50);
-  --ds-status-withBackground-bg-success: var(--green-50);
-  --ds-status-withBackground-bg-discovery:var(--purple-50);
-  --ds-status-withBackground-bg-disabled:var(--grey-30);
-
-
   @include mixin.inline-flex;
   @include mixin.align-items(center);
   &__label{
@@ -40,28 +21,28 @@
     height: var(--ds-status-circle-size-lg);
   }
   &__circle--primary {
-    background-color: var(--ds-status-circle-bg-primary);
+    background-color: var(--color-status-circle-bg-primary);
   }
   &__circle--information {
-    background-color: var(--ds-status-circle-bg-information);
+    background-color: var(--color-status-circle-bg-information);
   }
   &__circle--brand {
-    background-color: var(--ds-status-circle-bg-brand);
+    background-color: var(--color-status-circle-bg-brand);
   }
   &__circle--danger {
-    background-color: var(--ds-status-circle-bg-danger);
+    background-color: var(--color-status-circle-bg-danger);
   }
   &__circle--success {
-    background-color: var(--ds-status-circle-bg-success);
+    background-color: var(--color-status-circle-bg-success);
   }
   &__circle--warning {
-    background-color: var(--ds-status-circle-bg-warning);
+    background-color: var(--color-status-circle-bg-warning);
   }
   &__circle--discovery {
-    background-color: var(--ds-status-circle-bg-discovery);
+    background-color: var(--color-status-circle-bg-discovery);
   }
   &__circle--disabled {
-    background-color: var(--ds-status-circle-bg-disabled);
+    background-color: var(--color-status-circle-bg-disabled);
   }
 
   &__withBackground{
@@ -69,36 +50,36 @@
     border-radius: var(--border-radius-24)
   }
   &__withBackground--primary {
-    background-color: var(--ds-status-withBackground-bg-primary);
-    border: var(--border-size-1) solid var(--grey-500);
+    background-color: var(--color-status-with-bg-bg-primary);
+    border: var(--border-size-1) solid var(--color-status-with-bg-border-primary);
   }
   &__withBackground--information {
-    background-color: var(--ds-status-withBackground-bg-information);
-    border: var(--border-size-1) solid var(--blue-600);
+    background-color: var(--color-status-with-bg-bg-information);
+    border: var(--border-size-1) solid var(--color-status-with-bg-border-information);
   }
   &__withBackground--brand {
-    background-color: var(--ds-status-withBackground-bg-brand);
-    border: var(--border-size-1) solid var(--brand-500);
+    background-color: var(--color-status-with-bg-bg-brand);
+    border: var(--border-size-1) solid var(--color-status-with-bg-border-brand);
   }
   &__withBackground--danger {
-    background-color: var(--ds-status-withBackground-bg-danger);
-    border: var(--border-size-1) solid var(--red-500);
+    background-color: var(--color-status-with-bg-bg-danger);
+    border: var(--border-size-1) solid var(--color-status-with-bg-border-danger);
   }
   &__withBackground--success {
-    background-color: var(--ds-status-withBackground-bg-success);
-    border: var(--border-size-1) solid var(--green-600)
+    background-color: var(--color-status-with-bg-bg-success);
+    border: var(--border-size-1) solid var(--color-status-with-bg-border-success)
   }
   &__withBackground--warning {
-    background-color: var(--ds-status-withBackground-bg-warning);
-    border: var(--border-size-1) solid var(--yellow-500);
+    background-color: var(--color-status-with-bg-bg-warning);
+    border: var(--border-size-1) solid var(--color-status-with-bg-border-warning);
   }
   &__withBackground--discovery {
-    background-color: var(--ds-status-withBackground-bg-discovery);
-    border: var(--border-size-1) solid var(--purple-400);
+    background-color: var(--color-status-with-bg-bg-discovery);
+    border: var(--border-size-1) solid var(--color-status-with-bg-border-discovery);
   }
   &__withBackground--disabled {
-    background-color: var(--ds-status-withBackground-bg-disabled);
-    border: var(--border-size-1) solid var(--grey-50);
+    background-color: var(--color-status-with-bg-bg-disabled);
+    border: var(--border-size-1) solid var(--color-status-with-bg-border-disabled);
   }
 
   &--small {
@@ -111,19 +92,8 @@
 }
 [data-theme="dark"] {
   .status {
-    --ds-status-withBackground-bg-disabled: var(--grey-50);
-    --ds-status-circle-bg-warning: var(--yellow-100);
-    --ds-status-circle-bg-primary: var(--grey-100);
-    --ds-status-circle-bg-information: var(--blue-600);
-    --ds-status-circle-bg-brand: var(--brand-500);
-    --ds-status-circle-bg-danger: var(--red-600);
-    --ds-status-circle-bg-warning: var(--yellow-400);
-    --ds-status-circle-bg-success: var(--green-600);
-    --ds-status-circle-bg-discovery: var(--purple-800);
-    --ds-status-circle-bg-disabled: var(--grey-30);
-
     &__circle--primary {
-      background-color: var(--grey-50);
+      background-color: var(--color-status-dark-circle-primary-bg);
     }
 
     &__withBackground {
@@ -131,14 +101,14 @@
     }
 
     &__withBackground--disabled {
-      border-color: var(--grey-50);
+      border-color: var(--color-status-dark-with-bg-disabled-border);
     }
 
     &__withBackground--warning {
-      border-color: var(--yellow-100);
+      border-color: var(--color-status-dark-with-bg-warning-border);
 
       .color-warning {
-        color: var(--yellow-100);
+        color: var(--color-status-dark-color-warning-text);
       }
     }
   }

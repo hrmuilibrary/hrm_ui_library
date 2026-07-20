@@ -9,7 +9,7 @@
   height: 1em;
   vertical-align: top;
   font-size: var(--size-24);
-  color: var(--grey-900);
+  color: var(--color-svg-icon-base);
 
   path, circle, line {
     pointer-events: none;
@@ -38,18 +38,18 @@
 
   &__type {
     $types: (
-        primary: var(--grey-900),
-        secondary: var(--grey-800),
-        tertiary: var(--grey-500),
-        disabled: var(--grey-400),
-        selected: var(--brand-500),
-        inverse: var(--white),
-        brand: var(--brand-700),
-        success: var(--green-600),
-        information: var(--blue-800),
-        warning: var(--yellow-800),
-        danger: var(--red-600),
-        discovery: var(--purple-800),
+        primary: var(--color-svg-icon-type-primary),
+        secondary: var(--color-svg-icon-type-secondary),
+        tertiary: var(--color-svg-icon-type-tertiary),
+        disabled: var(--color-svg-icon-type-disabled),
+        selected: var(--color-svg-icon-type-selected),
+        inverse: var(--color-svg-icon-type-inverse),
+        brand: var(--color-svg-icon-type-brand),
+        success: var(--color-svg-icon-type-success),
+        information: var(--color-svg-icon-type-information),
+        warning: var(--color-svg-icon-type-warning),
+        danger: var(--color-svg-icon-type-danger),
+        discovery: var(--color-svg-icon-type-discovery),
     );
     @each $key, $value in $types {
       &-#{$key} {
@@ -61,7 +61,7 @@
 
 [data-theme="dark"] {
   .svg-icon {
-    color: var(--grey-50);
+    color: var(--color-svg-icon-dark-base);
 
     path, circle, line {
       pointer-events: none;
@@ -72,18 +72,18 @@
     }
     &__type {
       $types: (
-        primary: var(--grey-800),
-        secondary: var(--color-10),
-        tertiary: var(--grey-50),
-        disabled: var(--grey-30),
-        selected: var(--brand-500),
-        inverse: var(--grey-400),
-        brand: var(--brand-500),
-        success: var(--green-600),
-        information: var(--blue-800),
-        warning: var(--yellow-400),
-        danger: var(--red-600),
-        discovery: var(--purple-800),
+        primary: var(--color-svg-icon-dark-type-primary),
+        secondary: var(--color-svg-icon-dark-type-secondary),
+        tertiary: var(--color-svg-icon-dark-type-tertiary),
+        disabled: var(--color-svg-icon-dark-type-disabled),
+        selected: var(--color-svg-icon-type-selected),
+        inverse: var(--color-svg-icon-dark-type-inverse),
+        brand: var(--color-svg-icon-dark-type-brand),
+        success: var(--color-svg-icon-type-success),
+        information: var(--color-svg-icon-type-information),
+        warning: var(--color-svg-icon-dark-type-warning),
+        danger: var(--color-svg-icon-type-danger),
+        discovery: var(--color-svg-icon-type-discovery),
       );
       @each $key, $value in $types {
         &-#{$key} {

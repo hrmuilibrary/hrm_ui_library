@@ -6,26 +6,26 @@
   gap: var(--size-8);
 
   &__primary {
-    border: 1px solid var(--grey-200);
-    background-color: var(--white);
+    border: 1px solid var(--color-buttongroup-border);
+    background-color: var(--color-buttongroup-bg);
 
     &:hover {
-      background: var(--grey-50);
-      color: var(--grey-600);
+      background: var(--color-buttongroup-hover-bg);
+      color: var(--color-buttongroup-hover-text);
       cursor: pointer;
     }
 
     &.active {
-      background: var(--grey-50);
+      background: var(--color-buttongroup-hover-bg);
     }
 
     &.disabled {
-      background: var(--grey-50);
-      color: var(--grey-300);
+      background: var(--color-buttongroup-hover-bg);
+      color: var(--color-buttongroup-disabled-text);
       cursor: not-allowed;
 
       > * {
-        color: var(--grey-300);
+        color: var(--color-buttongroup-disabled-text);
       }
     }
   }
@@ -68,23 +68,23 @@
 [data-theme="dark"] {
   .button-group-item {
     &__primary {
-      border-color: var(--grey-40);
-      background-color: var(--color-5);
+      border-color: var(--color-buttongroup-dark-border);
+      background-color: var(--color-buttongroup-dark-bg);
 
       &:hover {
-        background-color: var(--color-7);
+        background-color: var(--color-buttongroup-dark-hover-bg);
       }
 
       &.active {
-        background: var(--grey-40);
+        background: var(--color-buttongroup-dark-border);
       }
 
       &.disabled {
-        background: var(--grey-30);
-        color: var(--grey-40);
+        background: var(--color-buttongroup-dark-disabled-bg);
+        color: var(--color-buttongroup-dark-border);
 
         > * {
-          color: var(--grey-30);
+          color: var(--color-buttongroup-dark-disabled-bg);
         }
       }
     }

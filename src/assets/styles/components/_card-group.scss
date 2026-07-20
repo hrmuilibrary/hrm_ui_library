@@ -1,14 +1,14 @@
 .card--group {
     $this: &;
 
-    border: 1px solid var(--grey-200);
+    border: 1px solid var(--color-cardgroup-border);
     border-radius: var(--size-8);
     display: flex;
     position: relative;
 
     &--title--alignment {
         &__body {
-            border: 1px solid var(--grey-200);
+            border: 1px solid var(--color-cardgroup-title-alignment-body-border);
         }
 
         &--left .card--group__content--header {
@@ -61,7 +61,7 @@
         &--header {
             display: flex;
             position: relative;
-            border-bottom: 1px solid var(--grey-200);
+            border-bottom: 1px solid var(--color-cardgroup-header-border);
             min-height: 56px;
 
             &--component {
@@ -78,39 +78,39 @@
                 line-height: 16px;
 
                 &--blue {
-                    color: var(--blue-900);
-                    background-color: var(--blue-100);
-                    border: 1px solid var(--blue-100);
+                    color: var(--color-cardgroup-title-blue-text);
+                    background-color: var(--color-cardgroup-title-blue-bg);
+                    border: 1px solid var(--color-cardgroup-title-blue-border);
                 }
 
                 &--purple {
-                    color: var(--purple-900);
-                    background-color: var(--purple-100);
-                    border: 1px solid var(--purple-100);
+                    color: var(--color-cardgroup-title-purple-text);
+                    background-color: var(--color-cardgroup-title-purple-bg);
+                    border: 1px solid var(--color-cardgroup-title-purple-border);
                 }
 
                 &--yellow {
-                    color: var(--yellow-900);
-                    background-color: var(--yellow-100);
-                    border: 1px solid var(--yellow-100);
+                    color: var(--color-cardgroup-title-yellow-text);
+                    background-color: var(--color-cardgroup-title-yellow-bg);
+                    border: 1px solid var(--color-cardgroup-title-yellow-border);
                 }
 
                 &--pink {
-                    color: var(--pink-900);
-                    background-color: var(--pink-100);
-                    border: 1px solid var(--pink-100);
+                    color: var(--color-cardgroup-title-pink-text);
+                    background-color: var(--color-cardgroup-title-pink-bg);
+                    border: 1px solid var(--color-cardgroup-title-pink-border);
                 }
 
                 &--green {
-                    color: var(--green-900);
-                    background-color: var(--green-100);
-                    border: 1px solid var(--green-100);
+                    color: var(--color-cardgroup-title-green-text);
+                    background-color: var(--color-cardgroup-title-green-bg);
+                    border: 1px solid var(--color-cardgroup-title-green-border);
                 }
 
                 &--grey {
-                    color: var(--grey-900);
-                    background-color: var(--grey-100);
-                    border: 1px solid var(--grey-100);
+                    color: var(--color-cardgroup-title-grey-text);
+                    background-color: var(--color-cardgroup-title-grey-bg);
+                    border: 1px solid var(--color-cardgroup-title-grey-border);
                 }
             }
         }
@@ -120,7 +120,7 @@
             padding-right: var(--size-8);
 
             .card--group__child {
-                border-bottom: 1px solid var(--grey-200);
+                border-bottom: 1px solid var(--color-cardgroup-child-border);
 
                 &:last-child {
                     border-bottom: none;

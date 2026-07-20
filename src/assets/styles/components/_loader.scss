@@ -77,7 +77,7 @@
   &--lite {
     #{$this}__inner {
       &:after {
-        border-color: var(--white);
+        border-color: var(--color-loader-lite-border);
       }
     }
   }
@@ -85,7 +85,7 @@
   &--dark {
     #{$this}__inner {
       &:after {
-        border-color: var(--grey-900);
+        border-color: var(--color-loader-dark-border);
       }
     }
   }

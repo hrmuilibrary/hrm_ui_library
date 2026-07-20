@@ -4,7 +4,7 @@
   $this: &;
   @include mixin.flexbox;
   position: fixed;
-  background-color: var(--white);
+  background-color: var(--color-popover-bg);
   border-radius: var(--border-radius-2);
   filter: drop-shadow(0px 1px 2px rgba(34, 34, 34, 0.06)) drop-shadow(0px 2px 2px rgba(34, 34, 34, 0.08)) drop-shadow(0px 1px 4px rgba(34, 34, 34, 0.08));
   min-width: var(--size-80);
@@ -34,7 +34,7 @@
     &-left, &-center, &-right {
       &:after {
         top: 100%;
-        border-color: var(--white) transparent transparent transparent;
+        border-color: var(--color-popover-bg) transparent transparent transparent;
       }
     }
   }
@@ -44,7 +44,7 @@
 
       &:after {
         bottom: 100%;
-        border-color: transparent transparent var(--white) transparent;
+        border-color: transparent transparent var(--color-popover-bg) transparent;
       }
     }
   }
@@ -85,14 +85,14 @@
     &-left {
       &:after {
         left: 100%;
-        border-color: transparent transparent transparent var(--white);
+        border-color: transparent transparent transparent var(--color-popover-bg);
       }
     }
 
     &-right {
       &:after {
         right: 100%;
-        border-color: transparent var(--white) transparent transparent;
+        border-color: transparent var(--color-popover-bg) transparent transparent;
       }
     }
   }
@@ -100,7 +100,7 @@
 
 [data-theme="dark"] {
   .popover {
-    background-color: var(--color-2);
+    background-color: var(--color-popover-dark-bg);
   }
 }
 

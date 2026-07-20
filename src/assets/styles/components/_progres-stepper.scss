@@ -128,15 +128,15 @@
   --ds-step-circle-border-size-lg: var(--border-size-2);
   --ds-step-circle-border-size-sm: var(--border-size-1);
 
-  --ds-step-circle-bg: var(--white);
-  --ds-step-circle-bg-active: var(--brand-500);
-  --ds-step-circle-bg-completed: var(--brand-500);
-  --ds-step-circle-bg-danger: var(--red-700);
+  --ds-step-circle-bg: var(--color-step-circle-bg);
+  --ds-step-circle-bg-active: var(--color-step-circle-bg-active);
+  --ds-step-circle-bg-completed: var(--color-step-circle-bg-completed);
+  --ds-step-circle-bg-danger: var(--color-step-circle-bg-danger);
 
-  --ds-step-circle-border-color: var(--grey-50);
-  --ds-step-circle-border-color-active: var(--brand-500);
-  --ds-step-circle-border-color-completed: var(--brand-500);
-  --ds-step-circle-border-color-danger: var(--red-800);
+  --ds-step-circle-border-color: var(--color-step-circle-border-color);
+  --ds-step-circle-border-color-active: var(--color-step-circle-border-color-active);
+  --ds-step-circle-border-color-completed: var(--color-step-circle-border-color-completed);
+  --ds-step-circle-border-color-danger: var(--color-step-circle-border-color-danger);
 
   --ds-step-circle-completed-shadow: 0px 0px 0px 4px rgba(202,231,185, 0.80);
   --ds-step-circle-danger-shadow: 0px 0px 0px 4px rgba(255, 181, 171, 0.80);
