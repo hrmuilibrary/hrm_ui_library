@@ -37,7 +37,8 @@ export const FileUpload = (props: TFileUploadProps): React.ReactElement | null =
     mode = FileUploadMode.attach,
     size = 'medium',
     iconProps = { Component: IconAttach },
-    dataTestId = ''
+    dataTestId = '',
+    uploading=false
   } = props
   const files = (value as File[]) || uploadedFiles || []
   const fileInputRef = useRef<HTMLInputElement>(null)
@@ -155,6 +156,7 @@ export const FileUpload = (props: TFileUploadProps): React.ReactElement | null =
             iconProps={iconProps}
             onClick={onUploadClick}
             buttonText={buttonText}
+            isLoading={uploading}
             dataTestId={dataTestId ? `${dataTestId}-action` : ''}
           />
         )}

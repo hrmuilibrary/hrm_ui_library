@@ -5,6 +5,7 @@ import { Accept, DropzoneOptions } from 'react-dropzone'
 import { TButtonPropTypes } from '../Button/types'
 
 export interface TFileUploadProps extends IFormCompProps {
+  uploading?: boolean
   allowedTypes?: string
   label?: string | React.ReactElement
   buttonText?: string | React.ReactElement
