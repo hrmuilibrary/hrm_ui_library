@@ -49,7 +49,7 @@ FileUpload.args = {
   buttonText: 'Import',
   isFileUploaded: false,
   dataTestId: 'file-upload',
-  iconProps: { Component: IconUpload2, size: 'small' },
+  iconProps: { Component: IconUpload2, size: 'small' }
   // labelAddons: <IconInfo size={'xsmall'} type={'information'} className={'ml-4'} />
 }
 

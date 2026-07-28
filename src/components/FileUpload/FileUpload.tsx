@@ -38,7 +38,7 @@ export const FileUpload = (props: TFileUploadProps): React.ReactElement | null =
     size = 'medium',
     iconProps = { Component: IconAttach },
     dataTestId = '',
-    uploading=false
+    uploading = false
   } = props
   const files = (value as File[]) || uploadedFiles || []
   const fileInputRef = useRef<HTMLInputElement>(null)
