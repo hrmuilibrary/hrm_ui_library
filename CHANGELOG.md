@@ -1,3 +1,10 @@
+## [4.0.9](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.8...4.0.9) (2026-07-29)
+
+
+### Bug Fixes
+
+* change for republish ([1ddd460](https://github.com/hrmuilibrary/hrm_ui_library/commit/1ddd46059b2b9017430ef9bee05fc32d1f9e4155))
+
 ## [4.0.8](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.7...4.0.8) (2026-07-24)
 
 
