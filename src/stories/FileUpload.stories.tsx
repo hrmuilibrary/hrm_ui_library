@@ -35,6 +35,7 @@ const Template: StoryFn<TFileUploadProps> = (args) => {
       <_FileUpload
         {...args}
         getFiles={getFiles}
+        uploading={false}
         fileAllowedSize={9000000}
         uploadedFiles={files}
         onError={(type) => console.log('type', type)}
