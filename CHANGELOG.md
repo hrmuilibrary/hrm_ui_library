@@ -1,3 +1,10 @@
+## [4.0.10](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.9...4.0.10) (2026-07-30)
+
+
+### Bug Fixes
+
+* add new modal size ([4ebb3b9](https://github.com/hrmuilibrary/hrm_ui_library/commit/4ebb3b9b530906a9b72777d2d60234ba2b962a05))
+
 ## [4.0.9](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.8...4.0.9) (2026-07-29)
 
 
