@@ -29,7 +29,21 @@ const OPTIONS: TMultiSelectOption[] = [
   },
   { id: '2', name: 'John Doe', initials: 'JD', meta: 'Engineer · Engineering' },
   { id: '3', name: 'Maria Petrosyan', initials: 'MP', meta: 'Designer · Product' },
-  { id: '4', name: 'David Grant', initials: 'DG', meta: 'Recruiter · People' }
+  { id: '4', name: 'David Grant', initials: 'DG', meta: 'Recruiter · People' },
+  { id: '5', name: 'Lilit Harutyunyan', initials: 'LH', meta: 'Accountant · Finance' },
+  { id: '6', name: 'Karen Sargsyan', initials: 'KS', meta: 'Backend Engineer · Engineering' },
+  { id: '7', name: 'Anna Baghdasaryan', initials: 'AB', meta: 'QA Engineer · Engineering' },
+  { id: '8', name: 'Tigran Avetisyan', initials: 'TA', meta: 'Product Manager · Product' },
+  { id: '9', name: 'Sona Grigoryan', initials: 'SG', meta: 'UX Researcher · Product' },
+  { id: '10', name: 'Vahagn Manukyan', initials: 'VM', meta: 'DevOps Engineer · Engineering' },
+  { id: '11', name: 'Nare Petrosyan', initials: 'NP', meta: 'Talent Acquisition · People' },
+  { id: '12', name: 'Armen Ghukasyan', initials: 'AG', meta: 'Frontend Engineer · Engineering' },
+  { id: '13', name: 'Diana Sahakyan', initials: 'DS', meta: 'Marketing Lead · Marketing' },
+  { id: '14', name: 'Hovhannes Dallakyan', initials: 'HD', meta: 'Data Analyst · Finance' },
+  { id: '15', name: 'Mane Voskanyan', initials: 'MV', meta: 'Support Specialist · Support' },
+  { id: '16', name: 'Gor Aslanyan', initials: 'GA', meta: 'Security Engineer · Engineering' },
+  { id: '17', name: 'Elen Mkrtchyan', initials: 'EM', meta: 'Payroll Specialist · Finance' },
+  { id: '18', name: 'Narek Hakobyan', initials: 'NH', meta: 'Solutions Architect · Engineering' }
 ]
 
 const Template: StoryFn<TMultiSelectV2PropTypes> = (args) => {
