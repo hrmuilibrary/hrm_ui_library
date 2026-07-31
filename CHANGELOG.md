@@ -1,3 +1,10 @@
+## [4.0.12](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.11...4.0.12) (2026-07-31)
+
+
+### Bug Fixes
+
+* validate form on value change in multiselectV2 ([bbe0540](https://github.com/hrmuilibrary/hrm_ui_library/commit/bbe05406ec361bc03bb51eeded51094c7c16a259))
+
 ## [4.0.11](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.10...4.0.11) (2026-07-31)
 
 
