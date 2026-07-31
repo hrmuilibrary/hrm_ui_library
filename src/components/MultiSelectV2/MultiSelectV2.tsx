@@ -74,7 +74,7 @@ export const MultiSelectV2 = forwardRef<HTMLInputElement, TMultiSelectV2PropType
       const nextItems = [...items, item]
 
       if (name && setFieldValue) {
-        setFieldValue(name, nextItems as unknown as TFormValue)
+        setFieldValue(name, nextItems as unknown as TFormValue, { shouldValidate: true })
       }
       onAdd?.(item)
       setSearchQuery('')
@@ -89,7 +89,7 @@ export const MultiSelectV2 = forwardRef<HTMLInputElement, TMultiSelectV2PropType
       const nextItems = items.filter((item) => item.id !== id)
 
       if (name && setFieldValue) {
-        setFieldValue(name, nextItems as unknown as TFormValue)
+        setFieldValue(name, nextItems as unknown as TFormValue, { shouldValidate: true })
       }
       onRemove?.(id)
     }
