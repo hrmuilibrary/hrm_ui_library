@@ -1,3 +1,10 @@
+## [4.0.13](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.12...4.0.13) (2026-07-31)
+
+
+### Bug Fixes
+
+* show loading in MultiselectV2 ([63b51f6](https://github.com/hrmuilibrary/hrm_ui_library/commit/63b51f61107da2d9fa82581664a56ae466d5b219))
+
 ## [4.0.12](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.11...4.0.12) (2026-07-31)
 
 
