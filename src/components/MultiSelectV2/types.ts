@@ -12,6 +12,7 @@ export type TMultiSelectOption = {
 
 export type TMultiSelectV2Translations = {
   emptyListMainMessage?: string
+  loadingMessage?: string
 }
 
 export interface TMultiSelectV2PropTypes extends IFormCompProps {
@@ -30,4 +31,5 @@ export interface TMultiSelectV2PropTypes extends IFormCompProps {
   dropdownWidth?: number
   translations?: TMultiSelectV2Translations
   dataTestIdPrefix?: string
+  isLoading?: boolean
 }
