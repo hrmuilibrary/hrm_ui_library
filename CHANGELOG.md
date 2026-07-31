@@ -1,3 +1,10 @@
+## [4.0.11](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.10...4.0.11) (2026-07-31)
+
+
+### Bug Fixes
+
+* add multiselect max-height ([dfb34bf](https://github.com/hrmuilibrary/hrm_ui_library/commit/dfb34bf0473688db5036a9792c097cacc1bca5c9))
+
 ## [4.0.10](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.9...4.0.10) (2026-07-30)
 
 
