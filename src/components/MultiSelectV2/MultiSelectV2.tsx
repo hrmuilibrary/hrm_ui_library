@@ -174,7 +174,12 @@ export const MultiSelectV2 = forwardRef<HTMLInputElement, TMultiSelectV2PropType
 
           {isDropdownOpen && !disabled ? (
             <div
-              className="multi-select-v2__dropdown"
+              className={classNames(
+                'multi-select-v2__dropdown',
+                'multi-select-v2__dropdown__options-scroll',
+                'scrollbar',
+                'scrollbar--vertical'
+              )}
               style={dropdownWidth ? { width: dropdownWidth, right: 'auto' } : undefined}
             >
               {searchResults.length > 0 ? (
