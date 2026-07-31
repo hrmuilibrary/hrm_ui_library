@@ -32,7 +32,8 @@ export const MultiSelectV2 = forwardRef<HTMLInputElement, TMultiSelectV2PropType
       size = 'medium',
       dropdownWidth,
       translations,
-      dataTestIdPrefix
+      dataTestIdPrefix,
+      isLoading
     } = props
 
     const [searchQuery, setSearchQuery] = useState('')
@@ -182,7 +183,16 @@ export const MultiSelectV2 = forwardRef<HTMLInputElement, TMultiSelectV2PropType
               )}
               style={dropdownWidth ? { width: dropdownWidth, right: 'auto' } : undefined}
             >
-              {searchResults.length > 0 ? (
+              {isLoading ? (
+                <Text
+                  size="small"
+                  type="tertiary"
+                  className="multi-select-v2__dropdown-empty"
+                  dataTestId={prefix ? `${prefix}-dropdown-loading` : undefined}
+                >
+                  {translations?.loadingMessage ?? 'Results loading ...'}
+                </Text>
+              ) : searchResults.length > 0 ? (
                 searchResults.map((option) => (
                   <button
                     key={option.id}
