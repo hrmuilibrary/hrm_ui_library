@@ -1,3 +1,10 @@
+## [4.0.14](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.13...4.0.14) (2026-08-03)
+
+
+### Bug Fixes
+
+* add third button for modal footer ([93f4f4d](https://github.com/hrmuilibrary/hrm_ui_library/commit/93f4f4d901b631433f87e87411e1e42be8c72f34))
+
 ## [4.0.13](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.12...4.0.13) (2026-07-31)
 
 
