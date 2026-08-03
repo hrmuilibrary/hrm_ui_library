@@ -48,6 +48,10 @@ const Template: StoryFn<TModalPropTypes> = (args) => {
           closeModal()
           console.log('submit')
         }}
+        additionalButton={{
+          buttonText: 'danger',
+          type: 'danger'
+        }}
         headerIcon={<IconOpen />}
         headerStatus={<Status type="danger" text="Rejected" size="small" withBackground />}
         buttonProps={{

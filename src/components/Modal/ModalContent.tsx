@@ -25,6 +25,7 @@ type TProps = {
     cancel?: TButtonPropTypes
     confirm: TButtonPropTypes
   }
+  additionalButton?: TButtonPropTypes
   onSubmit?: () => void
   titleSize?: TTitleSize
   headerIcon?: React.ReactNode
@@ -41,6 +42,7 @@ export const ModalContent = ({
   withFooter = true,
   confirmBtnTooltipText,
   buttonProps,
+  additionalButton,
   onSubmit,
   headerIcon,
   headerIconColor = 'brand',
@@ -102,10 +104,11 @@ export const ModalContent = ({
       <div className="modal__content scrollbar scrollbar--vertical">{children}</div>
       {withFooter && buttonProps ? (
         <div className="modal__footer">
+          {additionalButton && <Button {...additionalButton} />}
           {buttonProps.cancel && (
             <Button
               type="tertiary"
-              className="modal__footer__btn mr-16"
+              className="modal__footer__btn"
               onClick={onClose}
               dataTestId={dataTestIdPrefix ? `${dataTestIdPrefix}-modal-cancel-button` : ''}
               {...(buttonProps.cancel || {})}

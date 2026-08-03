@@ -17,6 +17,7 @@ export interface TModalPropTypes {
     cancel?: TButtonPropTypes
     confirm: TButtonPropTypes
   }
+  additionalButton?: TButtonPropTypes
   closeIcon?: boolean
   children?: ReactNode
   className?: string

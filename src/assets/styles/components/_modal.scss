@@ -124,6 +124,7 @@
     @include mixin.flexbox;
     @include mixin.align-items(center);
     @include mixin.justify-content(flex-end);
+    gap: var(--space-16);
     padding: var(--space-16) var(--space-24);
     border-top: var(--border-size-1) solid var(--grey-100);
   }
