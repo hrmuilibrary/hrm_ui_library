@@ -1,0 +1,487 @@
+{
+  "dark": {
+    "primary": {
+      "disabled-bg": {
+        "$type": "color",
+        "$value": "{color.grey.20}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-action-primary-disabled-bg"
+          }
+        }
+      },
+      "disabled-border": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-action-primary-disabled-border"
+          }
+        }
+      },
+      "disabled-text": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-action-primary-disabled-text"
+          }
+        }
+      }
+    },
+    "secondary": {
+      "surface": {
+        "$type": "color",
+        "$value": "{color.raw.5}",
+        "$description": "Operand of the dark secondary color-mix background.",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-action-secondary-surface"
+          }
+        }
+      },
+      "icon": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-action-secondary-icon"
+          }
+        }
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{color.raw.1}",
+        "$description": "OVERRIDE: dark hover background (light = grey-50).",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-action-secondary-bg-hover"
+          }
+        }
+      },
+      "bg-pressed": {
+        "$type": "color",
+        "$value": "{color.grey.20}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-action-secondary-bg-pressed"
+          }
+        }
+      },
+      "bg-disabled": {
+        "$type": "color",
+        "$value": "{color.raw.1}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-action-secondary-bg-disabled"
+          }
+        }
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$description": "OVERRIDE: dark base border (light = grey-300).",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-action-secondary-border"
+          }
+        }
+      },
+      "border-hover": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$description": "OVERRIDE: dark hover border (light = white).",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-action-secondary-border-hover"
+          }
+        }
+      },
+      "border-disabled": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-action-secondary-border-disabled"
+          }
+        }
+      },
+      "text-disabled": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-action-secondary-text-disabled"
+          }
+        }
+      }
+    },
+    "tertiary": {
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{color.raw.1}",
+        "$description": "OVERRIDE: dark hover background (light = grey-30).",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-action-tertiary-bg-hover"
+          }
+        }
+      },
+      "text-disabled": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-action-tertiary-text-disabled"
+          }
+        }
+      }
+    },
+    "danger": {
+      "text": {
+        "$type": "color",
+        "$value": "{color.grey.400}",
+        "$description": "OVERRIDE: dark danger foreground (light = white).",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-action-danger-text"
+          }
+        }
+      }
+    },
+    "text": {
+      "fg": {
+        "$type": "color",
+        "$value": "{color.blue.800}",
+        "$description": "OVERRIDE: dark text-variant foreground (light = blue-700).",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-action-text-fg"
+          }
+        }
+      }
+    },
+    "field": {
+      "fg-subtle": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$description": "Dark Input text + ::placeholder.",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-fg-subtle"
+          }
+        }
+      },
+      "bg-elevated": {
+        "$type": "color",
+        "$value": "{color.raw.9}",
+        "$description": "Dark Input background.",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-bg-elevated"
+          }
+        }
+      },
+      "border-strong": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$description": "Dark Input base border.",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-border-strong"
+          }
+        }
+      },
+      "fg-disabled": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$description": "Dark Input disabled text + icon fill.",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-fg-disabled"
+          }
+        }
+      },
+      "focus-shadow": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-focus-shadow"
+          }
+        }
+      },
+      "icon-adjacent": {
+        "$type": "color",
+        "$value": "{color.grey.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-icon-adjacent"
+          }
+        }
+      },
+      "autofill-bg": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-autofill-bg"
+          }
+        }
+      },
+      "autofill-fg": {
+        "$type": "color",
+        "$value": "{color.grey.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-autofill-fg"
+          }
+        }
+      }
+    },
+    "menu": {
+      "fg": {
+        "$type": "color",
+        "$value": "{color.grey.100}",
+        "$description": "Dark Select base text.",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-menu-fg-dark"
+          }
+        }
+      },
+      "option-hover-fg": {
+        "$type": "color",
+        "$value": "{color.raw.4}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-menu-option-hover-fg"
+          }
+        }
+      },
+      "active-bg": {
+        "$type": "color",
+        "$value": "{color.raw.7}",
+        "$description": "Dark Select active/hovered option background.",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-menu-active-bg-dark"
+          }
+        }
+      },
+      "option-hover-bg": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-menu-option-hover-bg-dark"
+          }
+        }
+      }
+    },
+    "chips": {
+      "filled-bg-primary": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-filled-bg-primary"
+          }
+        }
+      },
+      "filled-bg-primary-hover": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-filled-bg-primary-hover"
+          }
+        }
+      },
+      "filled-bg-brand-hover": {
+        "$type": "color",
+        "$value": "{color.brand.300}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-filled-bg-brand-hover"
+          }
+        }
+      },
+      "accent-bg-primary": {
+        "$type": "color",
+        "$value": "{color.grey.20}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-accent-bg-primary"
+          }
+        }
+      },
+      "accent-bg-primary-hover": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-accent-bg-primary-hover"
+          }
+        }
+      },
+      "outlined-bg": {
+        "$type": "color",
+        "$value": "{color.grey.20}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-outlined-bg"
+          }
+        }
+      },
+      "outlined-bg-primary-hover": {
+        "$type": "color",
+        "$value": "color-mix(in srgb, var(--grey-800) 5%, transparent)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-outlined-bg-primary-hover"
+          }
+        }
+      }
+    },
+    "controller": {
+      "bg-default-light": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-bg-default-light"
+          }
+        }
+      },
+      "bg-default-dark": {
+        "$type": "color",
+        "$value": "{color.grey.0}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-bg-default-dark"
+          }
+        }
+      },
+      "bg-hover-dark": {
+        "$type": "color",
+        "$value": "{color.grey.20}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-bg-hover-dark"
+          }
+        }
+      },
+      "bg-pressed-dark": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-bg-pressed-dark"
+          }
+        }
+      },
+      "border-color-focused": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-border-color-focused"
+          }
+        }
+      },
+      "border-color-disabled": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-border-color-disabled"
+          }
+        }
+      },
+      "border-color": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-border-color"
+          }
+        }
+      }
+    },
+    "status": {
+      "circle-bg-primary": {
+        "$type": "color",
+        "$value": "{color.grey.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-circle-bg-primary"
+          }
+        }
+      },
+      "circle-bg-information": {
+        "$type": "color",
+        "$value": "{color.blue.600}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-circle-bg-information"
+          }
+        }
+      },
+      "circle-bg-brand": {
+        "$type": "color",
+        "$value": "{color.brand.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-circle-bg-brand"
+          }
+        }
+      },
+      "circle-bg-danger": {
+        "$type": "color",
+        "$value": "{color.red.600}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-circle-bg-danger"
+          }
+        }
+      },
+      "circle-bg-warning": {
+        "$type": "color",
+        "$value": "{color.yellow.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-circle-bg-warning"
+          }
+        }
+      },
+      "circle-bg-discovery": {
+        "$type": "color",
+        "$value": "{color.purple.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-circle-bg-discovery"
+          }
+        }
+      },
+      "circle-bg-disabled": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-circle-bg-disabled"
+          }
+        }
+      },
+      "with-bg-bg-disabled": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-with-bg-bg-disabled"
+          }
+        }
+      }
+    }
+  }
+}

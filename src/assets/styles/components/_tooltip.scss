@@ -3,8 +3,8 @@
 .tooltip {
   $this: &;
 
-  --ds-tooltip-bg: var(--white);
-  --ds-tooltip-color: var(--white);
+  --ds-tooltip-bg: var(--color-tooltip-bg);
+  --ds-tooltip-color: var(--color-tooltip-text);
   --ds-tooltip-padding: var(--space-4) var(--space-8);
   --ds-tooltip-siz-lg: var(--size-32);
   --ds-tooltip-size-sm: var(--size-24);
@@ -13,7 +13,7 @@
 
   --ds-tooltip-arrow-size: var(--size-4);
   --ds-tooltip-arrow-position: var(--space-20);
-  --ds-tooltip-arrow-bg: var(--white);
+  --ds-tooltip-arrow-bg: var(--color-tooltip-arrow-bg);
   --ds-tooltip-shadow: 0px 2px 4px rgba(34, 34, 34, 0.16);
 
   @include mixin.flexbox;
@@ -118,7 +118,7 @@
 
 [data-theme="dark"] {
   .tooltip {
-    --ds-tooltip-bg: var(--color-2);
+    --ds-tooltip-bg: var(--color-tooltip-dark-bg);
   }
 }
 

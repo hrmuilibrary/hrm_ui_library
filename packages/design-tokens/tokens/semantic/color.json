@@ -1,0 +1,5389 @@
+{
+  "color": {
+    "action": {
+      "base": {
+        "bg": {
+          "$type": "color",
+          "$value": "{color.brand.300}",
+          "$description": "Fallback .btn background before a variant applies.",
+          "$extensions": {
+            "com.hrm": {
+              "cssVar": "color-action-base-bg"
+            }
+          }
+        }
+      },
+      "primary": {
+        "bg": {
+          "$type": "color",
+          "$value": "{color.brand.500}",
+          "$extensions": {
+            "com.hrm": {
+              "cssVar": "color-action-primary-bg"
+            }
+          }
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{color.brand.300}",
+          "$extensions": {
+            "com.hrm": {
+              "cssVar": "color-action-primary-bg-hover"
+            }
+          }
+        },
+        "bg-active": {
+          "$type": "color",
+          "$value": "{color.brand.600}",
+          "$extensions": {
+            "com.hrm": {
+              "cssVar": "color-action-primary-bg-active"
+            }
+          }
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{color.white}",
+          "$extensions": {
+            "com.hrm": {
+              "cssVar": "color-action-primary-text"
+            }
+          }
+        }
+      },
+      "secondary": {
+        "bg": {
+          "$type": "color",
+          "$value": "{color.white}",
+          "$extensions": {
+            "com.hrm": {
+              "cssVar": "color-action-secondary-bg"
+            }
+          }
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{color.grey.50}",
+          "$extensions": {
+            "com.hrm": {
+              "cssVar": "color-action-secondary-bg-hover"
+            }
+          }
+        },
+        "bg-active": {
+          "$type": "color",
+          "$value": "{color.grey.200}",
+          "$extensions": {
+            "com.hrm": {
+              "cssVar": "color-action-secondary-bg-active"
+            }
+          }
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{color.grey.800}",
+          "$extensions": {
+            "com.hrm": {
+              "cssVar": "color-action-secondary-text"
+            }
+          }
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.grey.300}",
+          "$extensions": {
+            "com.hrm": {
+              "cssVar": "color-action-secondary-border"
+            }
+          }
+        },
+        "border-hover": {
+          "$type": "color",
+          "$value": "{color.white}",
+          "$extensions": {
+            "com.hrm": {
+              "cssVar": "color-action-secondary-border-hover"
+            }
+          }
+        }
+      },
+      "tertiary": {
+        "text": {
+          "$type": "color",
+          "$value": "{color.grey.500}",
+          "$extensions": {
+            "com.hrm": {
+              "cssVar": "color-action-tertiary-text"
+            }
+          }
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{color.grey.30}",
+          "$extensions": {
+            "com.hrm": {
+              "cssVar": "color-action-tertiary-bg-hover"
+            }
+          }
+        },
+        "bg-active": {
+          "$type": "color",
+          "$value": "{color.grey.40}",
+          "$extensions": {
+            "com.hrm": {
+              "cssVar": "color-action-tertiary-bg-active"
+            }
+          }
+        }
+      },
+      "danger": {
+        "bg": {
+          "$type": "color",
+          "$value": "{color.red.600}",
+          "$extensions": {
+            "com.hrm": {
+              "cssVar": "color-action-danger-bg"
+            }
+          }
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{color.red.500}",
+          "$extensions": {
+            "com.hrm": {
+              "cssVar": "color-action-danger-bg-hover"
+            }
+          }
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{color.white}",
+          "$extensions": {
+            "com.hrm": {
+              "cssVar": "color-action-danger-text"
+            }
+          }
+        }
+      },
+      "text": {
+        "fg": {
+          "$type": "color",
+          "$value": "{color.blue.700}",
+          "$description": "Foreground for the text-style button variant.",
+          "$extensions": {
+            "com.hrm": {
+              "cssVar": "color-action-text-fg"
+            }
+          }
+        },
+        "fg-hover": {
+          "$type": "color",
+          "$value": "{color.blue.600}",
+          "$extensions": {
+            "com.hrm": {
+              "cssVar": "color-action-text-fg-hover"
+            }
+          }
+        },
+        "fg-active": {
+          "$type": "color",
+          "$value": "{color.blue.800}",
+          "$extensions": {
+            "com.hrm": {
+              "cssVar": "color-action-text-fg-active"
+            }
+          }
+        }
+      },
+      "link": {
+        "fg": {
+          "$type": "color",
+          "$value": "{color.brand.500}",
+          "$extensions": {
+            "com.hrm": {
+              "cssVar": "color-action-link-fg"
+            }
+          }
+        },
+        "fg-hover": {
+          "$type": "color",
+          "$value": "{color.brand.300}",
+          "$extensions": {
+            "com.hrm": {
+              "cssVar": "color-action-link-fg-hover"
+            }
+          }
+        },
+        "fg-active": {
+          "$type": "color",
+          "$value": "{color.brand.600}",
+          "$extensions": {
+            "com.hrm": {
+              "cssVar": "color-action-link-fg-active"
+            }
+          }
+        }
+      },
+      "disabled": {
+        "bg": {
+          "$type": "color",
+          "$value": "{color.grey.50}",
+          "$extensions": {
+            "com.hrm": {
+              "cssVar": "color-action-disabled-bg"
+            }
+          }
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{color.grey.400}",
+          "$extensions": {
+            "com.hrm": {
+              "cssVar": "color-action-disabled-text"
+            }
+          }
+        }
+      }
+    },
+    "field": {
+      "text": {
+        "$type": "color",
+        "$value": "{color.grey.900}",
+        "$description": "Form-field (Input) text.",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-text"
+          }
+        }
+      },
+      "text-hover": {
+        "$type": "color",
+        "$value": "{color.grey.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-text-hover"
+          }
+        }
+      },
+      "text-disabled": {
+        "$type": "color",
+        "$value": "{color.grey.300}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-text-disabled"
+          }
+        }
+      },
+      "bg": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-bg"
+          }
+        }
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-bg-hover"
+          }
+        }
+      },
+      "bg-focus": {
+        "$type": "color",
+        "$value": "{color.grey.0}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-bg-focus"
+          }
+        }
+      },
+      "bg-disabled": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-bg-disabled"
+          }
+        }
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-border"
+          }
+        }
+      },
+      "border-hover": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-border-hover"
+          }
+        }
+      },
+      "border-focus": {
+        "$type": "color",
+        "$value": "{color.grey.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-border-focus"
+          }
+        }
+      },
+      "border-disabled": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-border-disabled"
+          }
+        }
+      },
+      "border-invalid": {
+        "$type": "color",
+        "$value": "{color.red.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-border-invalid"
+          }
+        }
+      },
+      "placeholder": {
+        "$type": "color",
+        "$value": "{color.grey.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-placeholder"
+          }
+        }
+      },
+      "placeholder-disabled": {
+        "$type": "color",
+        "$value": "{color.grey.300}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-placeholder-disabled"
+          }
+        }
+      },
+      "icon": {
+        "$type": "color",
+        "$value": "{color.grey.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-icon"
+          }
+        }
+      },
+      "icon-strong": {
+        "$type": "color",
+        "$value": "{color.grey.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-icon-strong"
+          }
+        }
+      },
+      "icon-focus": {
+        "$type": "color",
+        "$value": "{color.grey.600}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-icon-focus"
+          }
+        }
+      },
+      "bg-hover-soft": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$description": "Textarea hover background (softer than Input).",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-bg-hover-soft"
+          }
+        }
+      },
+      "border-focus-accent": {
+        "$type": "color",
+        "$value": "{color.brand.700}",
+        "$description": "Textarea focus border (brand accent).",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-border-focus-accent"
+          }
+        }
+      },
+      "border-danger": {
+        "$type": "color",
+        "$value": "{color.red.800}",
+        "$description": "Textarea invalid border (stronger red than Input).",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-border-danger"
+          }
+        }
+      },
+      "fg-muted": {
+        "$type": "color",
+        "$value": "{color.grey.400}",
+        "$description": "Textarea disabled text/placeholder.",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-field-fg-muted"
+          }
+        }
+      }
+    },
+    "menu": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$description": "Dropdown/menu (Select options) surface.",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-menu-bg"
+          }
+        }
+      },
+      "option-active-bg": {
+        "$type": "color",
+        "$value": "{color.grey.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-menu-option-active-bg"
+          }
+        }
+      },
+      "option-hover-bg": {
+        "$type": "color",
+        "$value": "{color.grey.20}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-menu-option-hover-bg"
+          }
+        }
+      },
+      "meta": {
+        "$type": "color",
+        "$value": "{color.grey.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-menu-meta"
+          }
+        }
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.grey.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-menu-border"
+          }
+        }
+      }
+    },
+    "datepicker": {
+      "scrollbar-track": {
+        "$type": "color",
+        "$value": "#f1f1f1",
+        "$description": "LEGACY: off-palette value captured verbatim from react-datepicker CSS; pending designer reconciliation to the design system.",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-datepicker-scrollbar-track"
+          }
+        }
+      },
+      "scrollbar-thumb": {
+        "$type": "color",
+        "$value": "rgb(204, 203, 203)",
+        "$description": "LEGACY: pending reconciliation.",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-datepicker-scrollbar-thumb"
+          }
+        }
+      },
+      "scrollbar-thumb-hover": {
+        "$type": "color",
+        "$value": "#555",
+        "$description": "LEGACY: pending reconciliation.",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-datepicker-scrollbar-thumb-hover"
+          }
+        }
+      },
+      "arrow": {
+        "$type": "color",
+        "$value": "#8F9096",
+        "$description": "LEGACY: pending reconciliation.",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-datepicker-arrow"
+          }
+        }
+      },
+      "arrow-hover": {
+        "$type": "color",
+        "$value": "#a6a6a6",
+        "$description": "LEGACY: pending reconciliation.",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-datepicker-arrow-hover"
+          }
+        }
+      },
+      "arrow-muted": {
+        "$type": "color",
+        "$value": "#b3b3b3",
+        "$description": "LEGACY: pending reconciliation.",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-datepicker-arrow-muted"
+          }
+        }
+      },
+      "triangle-border": {
+        "$type": "color",
+        "$value": "#aeaeae",
+        "$description": "LEGACY: triangle/time/dropdown/today borders. Pending reconciliation.",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-datepicker-triangle-border"
+          }
+        }
+      },
+      "surface-muted": {
+        "$type": "color",
+        "$value": "#f0f0f0",
+        "$description": "LEGACY: dropdown/today/month-hover surface. Pending reconciliation.",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-datepicker-surface-muted"
+          }
+        }
+      },
+      "outline": {
+        "$type": "color",
+        "$value": "#0E0E0E",
+        "$description": "LEGACY: day-hover outline + in-selecting-range text. Pending reconciliation.",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-datepicker-outline"
+          }
+        }
+      },
+      "highlight-custom": {
+        "$type": "color",
+        "$value": "magenta",
+        "$description": "LEGACY: highlighted-custom-1 demo color. Pending reconciliation.",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-datepicker-highlight-custom"
+          }
+        }
+      },
+      "shadow-color": {
+        "$type": "color",
+        "$value": "rgba(14, 14, 14, 0.06)",
+        "$description": "LEGACY: popper drop-shadow color operand (dart-sass legacy form of rgb(14 14 14 / 6%)). Pending reconciliation.",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-datepicker-shadow-color"
+          }
+        }
+      },
+      "portal-overlay": {
+        "$type": "color",
+        "$value": "rgba(0, 0, 0, 0.8)",
+        "$description": "LEGACY: full-screen portal backdrop. Pending reconciliation.",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-datepicker-portal-overlay"
+          }
+        }
+      },
+      "white": {
+        "$type": "color",
+        "$value": "{color.grey.0}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-datepicker-white"
+          }
+        }
+      },
+      "brand": {
+        "$type": "color",
+        "$value": "{color.brand.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-datepicker-brand"
+          }
+        }
+      },
+      "grey-300": {
+        "$type": "color",
+        "$value": "{color.grey.300}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-datepicker-grey-300"
+          }
+        }
+      },
+      "grey-400": {
+        "$type": "color",
+        "$value": "{color.grey.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-datepicker-grey-400"
+          }
+        }
+      },
+      "grey-700": {
+        "$type": "color",
+        "$value": "{color.grey.700}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-datepicker-grey-700"
+          }
+        }
+      },
+      "blue-200": {
+        "$type": "color",
+        "$value": "{color.blue.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-datepicker-blue-200"
+          }
+        }
+      },
+      "blue-300": {
+        "$type": "color",
+        "$value": "{color.blue.300}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-datepicker-blue-300"
+          }
+        }
+      },
+      "dark-grey-30": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-datepicker-dark-grey-30"
+          }
+        }
+      },
+      "dark-grey-100": {
+        "$type": "color",
+        "$value": "{color.grey.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-datepicker-dark-grey-100"
+          }
+        }
+      },
+      "dark-grey-40": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-datepicker-dark-grey-40"
+          }
+        }
+      },
+      "dark-blue-400": {
+        "$type": "color",
+        "$value": "{color.blue.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-datepicker-dark-blue-400"
+          }
+        }
+      },
+      "grey-900": {
+        "$type": "color",
+        "$value": "{color.grey.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-datepicker-grey-900"
+          }
+        }
+      },
+      "grey-50": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-datepicker-grey-50"
+          }
+        }
+      }
+    },
+    "surface": {
+      "base": {
+        "$type": "color",
+        "$value": "{color.grey.0}",
+        "$description": "App/page background.",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-surface-base"
+          }
+        }
+      },
+      "raised": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$description": "Cards, popovers, menus.",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-surface-raised"
+          }
+        }
+      },
+      "sunken": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-surface-sunken"
+          }
+        }
+      }
+    },
+    "text": {
+      "default": {
+        "$type": "color",
+        "$value": "{color.grey.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-text-default"
+          }
+        }
+      },
+      "muted": {
+        "$type": "color",
+        "$value": "{color.grey.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-text-muted"
+          }
+        }
+      },
+      "inverse": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-text-inverse"
+          }
+        }
+      }
+    },
+    "border": {
+      "default": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-border-default"
+          }
+        }
+      },
+      "strong": {
+        "$type": "color",
+        "$value": "{color.grey.300}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-border-strong"
+          }
+        }
+      }
+    },
+    "focus": {
+      "ring": {
+        "$type": "color",
+        "$value": "{color.brand.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-focus-ring"
+          }
+        }
+      }
+    },
+    "badgev2": {
+      "filled-blue-bg": {
+        "$type": "color",
+        "$value": "{color.blue.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-filled-blue-bg"
+          }
+        }
+      },
+      "filled-red-bg": {
+        "$type": "color",
+        "$value": "{color.red.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-filled-red-bg"
+          }
+        }
+      },
+      "filled-green-bg": {
+        "$type": "color",
+        "$value": "{color.brand.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-filled-green-bg"
+          }
+        }
+      },
+      "filled-yellow-bg": {
+        "$type": "color",
+        "$value": "{color.yellow.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-filled-yellow-bg"
+          }
+        }
+      },
+      "filled-purple-bg": {
+        "$type": "color",
+        "$value": "{color.purple.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-filled-purple-bg"
+          }
+        }
+      },
+      "filled-sky-bg": {
+        "$type": "color",
+        "$value": "{color.blue.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-filled-sky-bg"
+          }
+        }
+      },
+      "filled-pink-bg": {
+        "$type": "color",
+        "$value": "{color.pink.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-filled-pink-bg"
+          }
+        }
+      },
+      "filled-teal-bg": {
+        "$type": "color",
+        "$value": "{color.green.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-filled-teal-bg"
+          }
+        }
+      },
+      "light-text": {
+        "$type": "color",
+        "$value": "{color.grey.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-light-text"
+          }
+        }
+      },
+      "light-gray-bg": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-light-gray-bg"
+          }
+        }
+      },
+      "light-blue-bg": {
+        "$type": "color",
+        "$value": "{color.blue.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-light-blue-bg"
+          }
+        }
+      },
+      "light-orange-bg": {
+        "$type": "color",
+        "$value": "{color.yellow.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-light-orange-bg"
+          }
+        }
+      },
+      "light-red-bg": {
+        "$type": "color",
+        "$value": "{color.red.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-light-red-bg"
+          }
+        }
+      },
+      "light-red-text": {
+        "$type": "color",
+        "$value": "{color.red.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-light-red-text"
+          }
+        }
+      },
+      "light-green-bg": {
+        "$type": "color",
+        "$value": "{color.brand.20}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-light-green-bg"
+          }
+        }
+      },
+      "light-green-text": {
+        "$type": "color",
+        "$value": "{color.brand.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-light-green-text"
+          }
+        }
+      },
+      "light-yellow-bg": {
+        "$type": "color",
+        "$value": "{color.yellow.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-light-yellow-bg"
+          }
+        }
+      },
+      "light-yellow-text": {
+        "$type": "color",
+        "$value": "{color.yellow.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-light-yellow-text"
+          }
+        }
+      },
+      "light-purple-bg": {
+        "$type": "color",
+        "$value": "{color.purple.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-light-purple-bg"
+          }
+        }
+      },
+      "light-purple-text": {
+        "$type": "color",
+        "$value": "{color.purple.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-light-purple-text"
+          }
+        }
+      },
+      "light-sky-bg": {
+        "$type": "color",
+        "$value": "{color.blue.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-light-sky-bg"
+          }
+        }
+      },
+      "light-sky-text": {
+        "$type": "color",
+        "$value": "{color.blue.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-light-sky-text"
+          }
+        }
+      },
+      "light-pink-bg": {
+        "$type": "color",
+        "$value": "{color.pink.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-light-pink-bg"
+          }
+        }
+      },
+      "light-pink-text": {
+        "$type": "color",
+        "$value": "{color.pink.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-light-pink-text"
+          }
+        }
+      },
+      "light-teal-bg": {
+        "$type": "color",
+        "$value": "{color.green.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-light-teal-bg"
+          }
+        }
+      },
+      "light-teal-text": {
+        "$type": "color",
+        "$value": "{color.green.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-light-teal-text"
+          }
+        }
+      },
+      "lighter-text": {
+        "$type": "color",
+        "$value": "{color.grey.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-lighter-text"
+          }
+        }
+      },
+      "lighter-gray-bg": {
+        "$type": "color",
+        "$value": "{color.grey.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-lighter-gray-bg"
+          }
+        }
+      },
+      "lighter-blue-bg": {
+        "$type": "color",
+        "$value": "{color.blue.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-lighter-blue-bg"
+          }
+        }
+      },
+      "lighter-blue-text": {
+        "$type": "color",
+        "$value": "{color.blue.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-lighter-blue-text"
+          }
+        }
+      },
+      "lighter-orange-bg": {
+        "$type": "color",
+        "$value": "{color.yellow.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-lighter-orange-bg"
+          }
+        }
+      },
+      "lighter-orange-text": {
+        "$type": "color",
+        "$value": "{color.yellow.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-lighter-orange-text"
+          }
+        }
+      },
+      "lighter-red-bg": {
+        "$type": "color",
+        "$value": "{color.red.20}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-lighter-red-bg"
+          }
+        }
+      },
+      "lighter-red-text": {
+        "$type": "color",
+        "$value": "{color.red.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-lighter-red-text"
+          }
+        }
+      },
+      "lighter-green-bg": {
+        "$type": "color",
+        "$value": "{color.green.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-lighter-green-bg"
+          }
+        }
+      },
+      "lighter-green-text": {
+        "$type": "color",
+        "$value": "{color.brand.600}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-lighter-green-text"
+          }
+        }
+      },
+      "lighter-yellow-bg": {
+        "$type": "color",
+        "$value": "{color.yellow.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-lighter-yellow-bg"
+          }
+        }
+      },
+      "lighter-yellow-text": {
+        "$type": "color",
+        "$value": "{color.yellow.600}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-lighter-yellow-text"
+          }
+        }
+      },
+      "lighter-purple-bg": {
+        "$type": "color",
+        "$value": "{color.purple.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-lighter-purple-bg"
+          }
+        }
+      },
+      "lighter-purple-text": {
+        "$type": "color",
+        "$value": "{color.purple.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-lighter-purple-text"
+          }
+        }
+      },
+      "lighter-sky-bg": {
+        "$type": "color",
+        "$value": "{color.blue.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-lighter-sky-bg"
+          }
+        }
+      },
+      "lighter-sky-text": {
+        "$type": "color",
+        "$value": "{color.blue.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-lighter-sky-text"
+          }
+        }
+      },
+      "lighter-pink-bg": {
+        "$type": "color",
+        "$value": "{color.pink.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-lighter-pink-bg"
+          }
+        }
+      },
+      "lighter-pink-text": {
+        "$type": "color",
+        "$value": "{color.pink.300}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-lighter-pink-text"
+          }
+        }
+      },
+      "lighter-teal-bg": {
+        "$type": "color",
+        "$value": "{color.green.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-lighter-teal-bg"
+          }
+        }
+      },
+      "lighter-teal-text": {
+        "$type": "color",
+        "$value": "{color.green.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-lighter-teal-text"
+          }
+        }
+      },
+      "stroke-text": {
+        "$type": "color",
+        "$value": "{color.grey.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-stroke-text"
+          }
+        }
+      },
+      "stroke-border": {
+        "$type": "color",
+        "$value": "{color.grey.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-stroke-border"
+          }
+        }
+      },
+      "stroke-gray-bg": {
+        "$type": "color",
+        "$value": "{color.grey.0}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-stroke-gray-bg"
+          }
+        }
+      },
+      "stroke-blue-border": {
+        "$type": "color",
+        "$value": "{color.blue.600}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-stroke-blue-border"
+          }
+        }
+      },
+      "stroke-blue-text": {
+        "$type": "color",
+        "$value": "{color.blue.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-stroke-blue-text"
+          }
+        }
+      },
+      "stroke-orange-border": {
+        "$type": "color",
+        "$value": "{color.yellow.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-stroke-orange-border"
+          }
+        }
+      },
+      "stroke-orange-text": {
+        "$type": "color",
+        "$value": "{color.yellow.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-stroke-orange-text"
+          }
+        }
+      },
+      "stroke-red-border": {
+        "$type": "color",
+        "$value": "{color.red.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-stroke-red-border"
+          }
+        }
+      },
+      "stroke-red-text": {
+        "$type": "color",
+        "$value": "{color.red.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-stroke-red-text"
+          }
+        }
+      },
+      "stroke-green-border": {
+        "$type": "color",
+        "$value": "{color.brand.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-stroke-green-border"
+          }
+        }
+      },
+      "stroke-green-text": {
+        "$type": "color",
+        "$value": "{color.brand.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-stroke-green-text"
+          }
+        }
+      },
+      "stroke-yellow-border": {
+        "$type": "color",
+        "$value": "{color.yellow.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-stroke-yellow-border"
+          }
+        }
+      },
+      "stroke-yellow-text": {
+        "$type": "color",
+        "$value": "{color.yellow.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-stroke-yellow-text"
+          }
+        }
+      },
+      "stroke-purple-border": {
+        "$type": "color",
+        "$value": "{color.purple.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-stroke-purple-border"
+          }
+        }
+      },
+      "stroke-purple-text": {
+        "$type": "color",
+        "$value": "{color.purple.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-stroke-purple-text"
+          }
+        }
+      },
+      "stroke-sky-border": {
+        "$type": "color",
+        "$value": "{color.blue.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-stroke-sky-border"
+          }
+        }
+      },
+      "stroke-sky-text": {
+        "$type": "color",
+        "$value": "{color.blue.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-stroke-sky-text"
+          }
+        }
+      },
+      "stroke-pink-border": {
+        "$type": "color",
+        "$value": "{color.pink.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-stroke-pink-border"
+          }
+        }
+      },
+      "stroke-pink-text": {
+        "$type": "color",
+        "$value": "{color.pink.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-stroke-pink-text"
+          }
+        }
+      },
+      "stroke-teal-border": {
+        "$type": "color",
+        "$value": "{color.green.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-stroke-teal-border"
+          }
+        }
+      },
+      "stroke-teal-text": {
+        "$type": "color",
+        "$value": "{color.green.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-stroke-teal-text"
+          }
+        }
+      },
+      "disabled-border": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-disabled-border"
+          }
+        }
+      },
+      "disabled-bg": {
+        "$type": "color",
+        "$value": "{color.grey.0}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-disabled-bg"
+          }
+        }
+      },
+      "disabled-dot-bg": {
+        "$type": "color",
+        "$value": "{color.grey.300}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-disabled-dot-bg"
+          }
+        }
+      },
+      "filled-text": {
+        "$type": "color",
+        "$value": "{color.grey.0}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-filled-text"
+          }
+        }
+      },
+      "filled-inner-text": {
+        "$type": "color",
+        "$value": "{color.grey.0}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-filled-inner-text"
+          }
+        }
+      },
+      "filled-dark-inner-text": {
+        "$type": "color",
+        "$value": "{color.grey.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-filled-dark-inner-text"
+          }
+        }
+      },
+      "filled-dark-gray-bg": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-filled-dark-gray-bg"
+          }
+        }
+      },
+      "filled-orange-bg": {
+        "$type": "color",
+        "$value": "{color.yellow.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-filled-orange-bg"
+          }
+        }
+      },
+      "filled-dark-orange-bg": {
+        "$type": "color",
+        "$value": "{color.yellow.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-filled-dark-orange-bg"
+          }
+        }
+      },
+      "filled-dark-green-text": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-filled-dark-green-text"
+          }
+        }
+      },
+      "filled-dark-lighter-gray-bg": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-filled-dark-lighter-gray-bg"
+          }
+        }
+      },
+      "filled-gray-bg": {
+        "$type": "color",
+        "$value": "{color.grey.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badgev2-filled-gray-bg"
+          }
+        }
+      }
+    },
+    "chips": {
+      "filled-bg-primary": {
+        "$type": "color",
+        "$value": "{color.grey.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-filled-bg-primary"
+          }
+        }
+      },
+      "filled-bg-primary-hover": {
+        "$type": "color",
+        "$value": "{color.grey.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-filled-bg-primary-hover"
+          }
+        }
+      },
+      "filled-bg-information": {
+        "$type": "color",
+        "$value": "{color.blue.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-filled-bg-information"
+          }
+        }
+      },
+      "filled-bg-information-hover": {
+        "$type": "color",
+        "$value": "{color.blue.600}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-filled-bg-information-hover"
+          }
+        }
+      },
+      "filled-bg-brand": {
+        "$type": "color",
+        "$value": "{color.brand.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-filled-bg-brand"
+          }
+        }
+      },
+      "filled-bg-brand-hover": {
+        "$type": "color",
+        "$value": "{color.brand.600}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-filled-bg-brand-hover"
+          }
+        }
+      },
+      "filled-bg-danger": {
+        "$type": "color",
+        "$value": "{color.red.700}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-filled-bg-danger"
+          }
+        }
+      },
+      "filled-bg-danger-hover": {
+        "$type": "color",
+        "$value": "{color.red.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-filled-bg-danger-hover"
+          }
+        }
+      },
+      "filled-bg-warning": {
+        "$type": "color",
+        "$value": "{color.yellow.600}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-filled-bg-warning"
+          }
+        }
+      },
+      "filled-bg-warning-hover": {
+        "$type": "color",
+        "$value": "{color.yellow.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-filled-bg-warning-hover"
+          }
+        }
+      },
+      "filled-bg-success": {
+        "$type": "color",
+        "$value": "{color.green.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-filled-bg-success"
+          }
+        }
+      },
+      "filled-bg-success-hover": {
+        "$type": "color",
+        "$value": "{color.green.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-filled-bg-success-hover"
+          }
+        }
+      },
+      "filled-bg-discovery": {
+        "$type": "color",
+        "$value": "{color.purple.300}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-filled-bg-discovery"
+          }
+        }
+      },
+      "filled-bg-discovery-hover": {
+        "$type": "color",
+        "$value": "{color.purple.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-filled-bg-discovery-hover"
+          }
+        }
+      },
+      "accent-bg-primary": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-accent-bg-primary"
+          }
+        }
+      },
+      "accent-bg-primary-hover": {
+        "$type": "color",
+        "$value": "{color.grey.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-accent-bg-primary-hover"
+          }
+        }
+      },
+      "accent-bg-information": {
+        "$type": "color",
+        "$value": "{color.blue.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-accent-bg-information"
+          }
+        }
+      },
+      "accent-bg-information-hover": {
+        "$type": "color",
+        "$value": "{color.blue.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-accent-bg-information-hover"
+          }
+        }
+      },
+      "accent-bg-brand": {
+        "$type": "color",
+        "$value": "{color.brand.20}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-accent-bg-brand"
+          }
+        }
+      },
+      "accent-bg-brand-hover": {
+        "$type": "color",
+        "$value": "{color.brand.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-accent-bg-brand-hover"
+          }
+        }
+      },
+      "accent-bg-danger": {
+        "$type": "color",
+        "$value": "{color.red.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-accent-bg-danger"
+          }
+        }
+      },
+      "accent-bg-danger-hover": {
+        "$type": "color",
+        "$value": "{color.red.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-accent-bg-danger-hover"
+          }
+        }
+      },
+      "accent-bg-warning": {
+        "$type": "color",
+        "$value": "{color.yellow.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-accent-bg-warning"
+          }
+        }
+      },
+      "accent-bg-warning-hover": {
+        "$type": "color",
+        "$value": "{color.yellow.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-accent-bg-warning-hover"
+          }
+        }
+      },
+      "accent-bg-success": {
+        "$type": "color",
+        "$value": "{color.green.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-accent-bg-success"
+          }
+        }
+      },
+      "accent-bg-success-hover": {
+        "$type": "color",
+        "$value": "{color.green.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-accent-bg-success-hover"
+          }
+        }
+      },
+      "accent-bg-discovery": {
+        "$type": "color",
+        "$value": "{color.purple.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-accent-bg-discovery"
+          }
+        }
+      },
+      "accent-bg-discovery-hover": {
+        "$type": "color",
+        "$value": "{color.purple.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-accent-bg-discovery-hover"
+          }
+        }
+      },
+      "outlined-bg": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-outlined-bg"
+          }
+        }
+      },
+      "outlined-bg-primary-hover": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-outlined-bg-primary-hover"
+          }
+        }
+      },
+      "outlined-bg-information-hover": {
+        "$type": "color",
+        "$value": "{color.blue.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-outlined-bg-information-hover"
+          }
+        }
+      },
+      "outlined-bg-brand-hover": {
+        "$type": "color",
+        "$value": "{color.brand.20}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-outlined-bg-brand-hover"
+          }
+        }
+      },
+      "outlined-bg-danger-hover": {
+        "$type": "color",
+        "$value": "{color.red.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-outlined-bg-danger-hover"
+          }
+        }
+      },
+      "outlined-bg-warning-hover": {
+        "$type": "color",
+        "$value": "{color.yellow.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-outlined-bg-warning-hover"
+          }
+        }
+      },
+      "outlined-bg-success-hover": {
+        "$type": "color",
+        "$value": "{color.green.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-outlined-bg-success-hover"
+          }
+        }
+      },
+      "outlined-bg-discovery-hover": {
+        "$type": "color",
+        "$value": "{color.purple.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-outlined-bg-discovery-hover"
+          }
+        }
+      },
+      "bg-disabled": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-bg-disabled"
+          }
+        }
+      },
+      "border-color-disabled": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-border-color-disabled"
+          }
+        }
+      },
+      "outlined-primary-raw": {
+        "$type": "color",
+        "$value": "var(--color-5)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-outlined-primary-raw"
+          }
+        }
+      },
+      "dark-label-text": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-dark-label-text"
+          }
+        }
+      },
+      "dark-label-text-strong": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-chips-dark-label-text-strong"
+          }
+        }
+      }
+    },
+    "controller": {
+      "bg-default-light": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-bg-default-light"
+          }
+        }
+      },
+      "bg-default-dark": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-bg-default-dark"
+          }
+        }
+      },
+      "bg-hover-light": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-bg-hover-light"
+          }
+        }
+      },
+      "bg-hover-dark": {
+        "$type": "color",
+        "$value": "{color.grey.300}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-bg-hover-dark"
+          }
+        }
+      },
+      "bg-pressed-light": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-bg-pressed-light"
+          }
+        }
+      },
+      "bg-pressed-dark": {
+        "$type": "color",
+        "$value": "{color.grey.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-bg-pressed-dark"
+          }
+        }
+      },
+      "bg-focused": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-bg-focused"
+          }
+        }
+      },
+      "bg-disabled": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-bg-disabled"
+          }
+        }
+      },
+      "selected-bg-default": {
+        "$type": "color",
+        "$value": "{color.brand.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-selected-bg-default"
+          }
+        }
+      },
+      "selected-bg-hover": {
+        "$type": "color",
+        "$value": "{color.brand.300}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-selected-bg-hover"
+          }
+        }
+      },
+      "selected-bg-pressed": {
+        "$type": "color",
+        "$value": "{color.brand.600}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-selected-bg-pressed"
+          }
+        }
+      },
+      "selected-bg-focused": {
+        "$type": "color",
+        "$value": "{color.brand.700}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-selected-bg-focused"
+          }
+        }
+      },
+      "selected-bg-disabled": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-selected-bg-disabled"
+          }
+        }
+      },
+      "mark-light": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-mark-light"
+          }
+        }
+      },
+      "mark-dark": {
+        "$type": "color",
+        "$value": "{color.grey.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-mark-dark"
+          }
+        }
+      },
+      "border-color-focused": {
+        "$type": "color",
+        "$value": "{color.grey.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-border-color-focused"
+          }
+        }
+      },
+      "border-color-disabled": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-border-color-disabled"
+          }
+        }
+      },
+      "border-color": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-border-color"
+          }
+        }
+      },
+      "icon-disabled": {
+        "$type": "color",
+        "$value": "{color.grey.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-icon-disabled"
+          }
+        }
+      },
+      "error-bg-color": {
+        "$type": "color",
+        "$value": "{color.red.600}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-error-bg-color"
+          }
+        }
+      },
+      "error-border-color": {
+        "$type": "color",
+        "$value": "{color.red.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-error-border-color"
+          }
+        }
+      },
+      "error-text-color": {
+        "$type": "color",
+        "$value": "{color.red.600}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-error-text-color"
+          }
+        }
+      },
+      "disabled-icon-bg": {
+        "$type": "color",
+        "$value": "{color.grey.0}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-disabled-icon-bg"
+          }
+        }
+      },
+      "dark-icon-inverse-fill": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-dark-icon-inverse-fill"
+          }
+        }
+      },
+      "dark-icon-inverse-fill-checked": {
+        "$type": "color",
+        "$value": "{color.grey.0}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-controller-dark-icon-inverse-fill-checked"
+          }
+        }
+      }
+    },
+    "status": {
+      "circle-bg-primary": {
+        "$type": "color",
+        "$value": "{color.grey.700}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-circle-bg-primary"
+          }
+        }
+      },
+      "circle-bg-information": {
+        "$type": "color",
+        "$value": "{color.blue.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-circle-bg-information"
+          }
+        }
+      },
+      "circle-bg-brand": {
+        "$type": "color",
+        "$value": "{color.brand.700}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-circle-bg-brand"
+          }
+        }
+      },
+      "circle-bg-danger": {
+        "$type": "color",
+        "$value": "{color.red.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-circle-bg-danger"
+          }
+        }
+      },
+      "circle-bg-warning": {
+        "$type": "color",
+        "$value": "{color.yellow.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-circle-bg-warning"
+          }
+        }
+      },
+      "circle-bg-success": {
+        "$type": "color",
+        "$value": "{color.green.600}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-circle-bg-success"
+          }
+        }
+      },
+      "circle-bg-discovery": {
+        "$type": "color",
+        "$value": "{color.purple.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-circle-bg-discovery"
+          }
+        }
+      },
+      "circle-bg-disabled": {
+        "$type": "color",
+        "$value": "{color.grey.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-circle-bg-disabled"
+          }
+        }
+      },
+      "with-bg-bg-primary": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-with-bg-bg-primary"
+          }
+        }
+      },
+      "with-bg-bg-information": {
+        "$type": "color",
+        "$value": "{color.blue.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-with-bg-bg-information"
+          }
+        }
+      },
+      "with-bg-bg-brand": {
+        "$type": "color",
+        "$value": "{color.brand.20}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-with-bg-bg-brand"
+          }
+        }
+      },
+      "with-bg-bg-danger": {
+        "$type": "color",
+        "$value": "{color.red.20}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-with-bg-bg-danger"
+          }
+        }
+      },
+      "with-bg-bg-warning": {
+        "$type": "color",
+        "$value": "{color.yellow.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-with-bg-bg-warning"
+          }
+        }
+      },
+      "with-bg-bg-success": {
+        "$type": "color",
+        "$value": "{color.green.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-with-bg-bg-success"
+          }
+        }
+      },
+      "with-bg-bg-discovery": {
+        "$type": "color",
+        "$value": "{color.purple.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-with-bg-bg-discovery"
+          }
+        }
+      },
+      "with-bg-bg-disabled": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-with-bg-bg-disabled"
+          }
+        }
+      },
+      "with-bg-border-primary": {
+        "$type": "color",
+        "$value": "{color.grey.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-with-bg-border-primary"
+          }
+        }
+      },
+      "with-bg-border-information": {
+        "$type": "color",
+        "$value": "{color.blue.600}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-with-bg-border-information"
+          }
+        }
+      },
+      "with-bg-border-brand": {
+        "$type": "color",
+        "$value": "{color.brand.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-with-bg-border-brand"
+          }
+        }
+      },
+      "with-bg-border-danger": {
+        "$type": "color",
+        "$value": "{color.red.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-with-bg-border-danger"
+          }
+        }
+      },
+      "with-bg-border-success": {
+        "$type": "color",
+        "$value": "{color.green.600}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-with-bg-border-success"
+          }
+        }
+      },
+      "with-bg-border-warning": {
+        "$type": "color",
+        "$value": "{color.yellow.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-with-bg-border-warning"
+          }
+        }
+      },
+      "with-bg-border-discovery": {
+        "$type": "color",
+        "$value": "{color.purple.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-with-bg-border-discovery"
+          }
+        }
+      },
+      "with-bg-border-disabled": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-with-bg-border-disabled"
+          }
+        }
+      },
+      "dark-circle-primary-bg": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-dark-circle-primary-bg"
+          }
+        }
+      },
+      "dark-with-bg-disabled-border": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-dark-with-bg-disabled-border"
+          }
+        }
+      },
+      "dark-with-bg-warning-border": {
+        "$type": "color",
+        "$value": "{color.yellow.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-dark-with-bg-warning-border"
+          }
+        }
+      },
+      "dark-color-warning-text": {
+        "$type": "color",
+        "$value": "{color.yellow.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-status-dark-color-warning-text"
+          }
+        }
+      }
+    },
+    "alert": {
+      "information-bg": {
+        "$type": "color",
+        "$value": "{color.blue.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-alert-information-bg"
+          }
+        }
+      },
+      "information-border": {
+        "$type": "color",
+        "$value": "{color.blue.600}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-alert-information-border"
+          }
+        }
+      },
+      "discovery-bg": {
+        "$type": "color",
+        "$value": "{color.purple.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-alert-discovery-bg"
+          }
+        }
+      },
+      "discovery-border": {
+        "$type": "color",
+        "$value": "{color.purple.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-alert-discovery-border"
+          }
+        }
+      },
+      "success-bg": {
+        "$type": "color",
+        "$value": "{color.green.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-alert-success-bg"
+          }
+        }
+      },
+      "success-border": {
+        "$type": "color",
+        "$value": "{color.green.600}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-alert-success-border"
+          }
+        }
+      },
+      "warning-bg": {
+        "$type": "color",
+        "$value": "{color.yellow.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-alert-warning-bg"
+          }
+        }
+      },
+      "warning-border": {
+        "$type": "color",
+        "$value": "{color.yellow.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-alert-warning-border"
+          }
+        }
+      },
+      "error-bg": {
+        "$type": "color",
+        "$value": "{color.red.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-alert-error-bg"
+          }
+        }
+      },
+      "error-border": {
+        "$type": "color",
+        "$value": "{color.red.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-alert-error-border"
+          }
+        }
+      },
+      "dark-information-border": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-alert-dark-information-border"
+          }
+        }
+      },
+      "dark-information-bg": {
+        "$type": "color",
+        "$value": "var(--color-5)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-alert-dark-information-bg"
+          }
+        }
+      }
+    },
+    "badge": {
+      "primary-bg": {
+        "$type": "color",
+        "$value": "{color.pink.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badge-primary-bg"
+          }
+        }
+      },
+      "secondary-bg": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badge-secondary-bg"
+          }
+        }
+      },
+      "tertiary-bg": {
+        "$type": "color",
+        "$value": "{color.green.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badge-tertiary-bg"
+          }
+        }
+      },
+      "dark-primary-bg": {
+        "$type": "color",
+        "$value": "{color.pink.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-badge-dark-primary-bg"
+          }
+        }
+      }
+    },
+    "snackbar": {
+      "toastify-light-bg": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-snackbar-toastify-light-bg"
+          }
+        }
+      }
+    },
+    "avatar": {
+      "default-bg": {
+        "$type": "color",
+        "$value": "{color.yellow.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-avatar-default-bg"
+          }
+        }
+      },
+      "default-text": {
+        "$type": "color",
+        "$value": "{color.yellow.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-avatar-default-text"
+          }
+        }
+      },
+      "default-bg-hover": {
+        "$type": "color",
+        "$value": "{color.yellow.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-avatar-default-bg-hover"
+          }
+        }
+      },
+      "purple-bg": {
+        "$type": "color",
+        "$value": "{color.purple.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-avatar-purple-bg"
+          }
+        }
+      },
+      "purple-text": {
+        "$type": "color",
+        "$value": "{color.purple.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-avatar-purple-text"
+          }
+        }
+      },
+      "purple-bg-hover": {
+        "$type": "color",
+        "$value": "{color.purple.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-avatar-purple-bg-hover"
+          }
+        }
+      },
+      "green-bg": {
+        "$type": "color",
+        "$value": "{color.green.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-avatar-green-bg"
+          }
+        }
+      },
+      "green-text": {
+        "$type": "color",
+        "$value": "{color.green.700}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-avatar-green-text"
+          }
+        }
+      },
+      "green-bg-hover": {
+        "$type": "color",
+        "$value": "{color.green.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-avatar-green-bg-hover"
+          }
+        }
+      },
+      "blue-bg": {
+        "$type": "color",
+        "$value": "{color.blue.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-avatar-blue-bg"
+          }
+        }
+      },
+      "blue-text": {
+        "$type": "color",
+        "$value": "{color.blue.700}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-avatar-blue-text"
+          }
+        }
+      },
+      "blue-bg-hover": {
+        "$type": "color",
+        "$value": "{color.blue.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-avatar-blue-bg-hover"
+          }
+        }
+      },
+      "red-bg": {
+        "$type": "color",
+        "$value": "{color.red.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-avatar-red-bg"
+          }
+        }
+      },
+      "red-text": {
+        "$type": "color",
+        "$value": "{color.red.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-avatar-red-text"
+          }
+        }
+      },
+      "red-bg-hover": {
+        "$type": "color",
+        "$value": "{color.red.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-avatar-red-bg-hover"
+          }
+        }
+      },
+      "count-bg": {
+        "$type": "color",
+        "$value": "{color.green.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-avatar-count-bg"
+          }
+        }
+      },
+      "count-text": {
+        "$type": "color",
+        "$value": "{color.brand.700}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-avatar-count-text"
+          }
+        }
+      },
+      "count-border": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-avatar-count-border"
+          }
+        }
+      },
+      "count-bg-hover": {
+        "$type": "color",
+        "$value": "{color.green.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-avatar-count-bg-hover"
+          }
+        }
+      },
+      "image-border": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-avatar-image-border"
+          }
+        }
+      },
+      "dark-default-text": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-avatar-dark-default-text"
+          }
+        }
+      },
+      "group-item-border": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-avatar-group-item-border"
+          }
+        }
+      },
+      "group-add-border": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-avatar-group-add-border"
+          }
+        }
+      },
+      "group-add-bg": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-avatar-group-add-bg"
+          }
+        }
+      },
+      "group-add-bg-hover": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-avatar-group-add-bg-hover"
+          }
+        }
+      }
+    },
+    "link": {
+      "base": {
+        "$type": "color",
+        "$value": "{color.brand.700}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-link-base"
+          }
+        }
+      },
+      "primary": {
+        "$type": "color",
+        "$value": "{color.grey.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-link-primary"
+          }
+        }
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": "{color.grey.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-link-secondary"
+          }
+        }
+      },
+      "tertiary": {
+        "$type": "color",
+        "$value": "{color.grey.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-link-tertiary"
+          }
+        }
+      },
+      "disabled": {
+        "$type": "color",
+        "$value": "{color.grey.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-link-disabled"
+          }
+        }
+      },
+      "selected": {
+        "$type": "color",
+        "$value": "{color.brand.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-link-selected"
+          }
+        }
+      },
+      "inverse": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-link-inverse"
+          }
+        }
+      },
+      "brand": {
+        "$type": "color",
+        "$value": "{color.brand.700}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-link-brand"
+          }
+        }
+      },
+      "success": {
+        "$type": "color",
+        "$value": "{color.green.600}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-link-success"
+          }
+        }
+      },
+      "information": {
+        "$type": "color",
+        "$value": "{color.blue.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-link-information"
+          }
+        }
+      },
+      "warning": {
+        "$type": "color",
+        "$value": "{color.yellow.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-link-warning"
+          }
+        }
+      },
+      "danger": {
+        "$type": "color",
+        "$value": "{color.red.600}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-link-danger"
+          }
+        }
+      },
+      "discovery": {
+        "$type": "color",
+        "$value": "{color.purple.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-link-discovery"
+          }
+        }
+      },
+      "dark-primary": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-link-dark-primary"
+          }
+        }
+      },
+      "dark-tertiary": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-link-dark-tertiary"
+          }
+        }
+      },
+      "dark-disabled": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-link-dark-disabled"
+          }
+        }
+      },
+      "dark-inverse": {
+        "$type": "color",
+        "$value": "{color.grey.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-link-dark-inverse"
+          }
+        }
+      },
+      "dark-secondary": {
+        "$type": "color",
+        "$value": "var(--color-10)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-link-dark-secondary"
+          }
+        }
+      }
+    },
+    "svg": {
+      "icon-base": {
+        "$type": "color",
+        "$value": "{color.grey.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-svg-icon-base"
+          }
+        }
+      },
+      "icon-type-primary": {
+        "$type": "color",
+        "$value": "{color.grey.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-svg-icon-type-primary"
+          }
+        }
+      },
+      "icon-type-secondary": {
+        "$type": "color",
+        "$value": "{color.grey.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-svg-icon-type-secondary"
+          }
+        }
+      },
+      "icon-type-tertiary": {
+        "$type": "color",
+        "$value": "{color.grey.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-svg-icon-type-tertiary"
+          }
+        }
+      },
+      "icon-type-disabled": {
+        "$type": "color",
+        "$value": "{color.grey.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-svg-icon-type-disabled"
+          }
+        }
+      },
+      "icon-type-selected": {
+        "$type": "color",
+        "$value": "{color.brand.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-svg-icon-type-selected"
+          }
+        }
+      },
+      "icon-type-inverse": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-svg-icon-type-inverse"
+          }
+        }
+      },
+      "icon-type-brand": {
+        "$type": "color",
+        "$value": "{color.brand.700}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-svg-icon-type-brand"
+          }
+        }
+      },
+      "icon-type-success": {
+        "$type": "color",
+        "$value": "{color.green.600}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-svg-icon-type-success"
+          }
+        }
+      },
+      "icon-type-information": {
+        "$type": "color",
+        "$value": "{color.blue.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-svg-icon-type-information"
+          }
+        }
+      },
+      "icon-type-warning": {
+        "$type": "color",
+        "$value": "{color.yellow.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-svg-icon-type-warning"
+          }
+        }
+      },
+      "icon-type-danger": {
+        "$type": "color",
+        "$value": "{color.red.600}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-svg-icon-type-danger"
+          }
+        }
+      },
+      "icon-type-discovery": {
+        "$type": "color",
+        "$value": "{color.purple.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-svg-icon-type-discovery"
+          }
+        }
+      },
+      "icon-dark-base": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-svg-icon-dark-base"
+          }
+        }
+      },
+      "icon-dark-type-primary": {
+        "$type": "color",
+        "$value": "{color.grey.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-svg-icon-dark-type-primary"
+          }
+        }
+      },
+      "icon-dark-type-tertiary": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-svg-icon-dark-type-tertiary"
+          }
+        }
+      },
+      "icon-dark-type-disabled": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-svg-icon-dark-type-disabled"
+          }
+        }
+      },
+      "icon-dark-type-inverse": {
+        "$type": "color",
+        "$value": "{color.grey.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-svg-icon-dark-type-inverse"
+          }
+        }
+      },
+      "icon-dark-type-brand": {
+        "$type": "color",
+        "$value": "{color.brand.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-svg-icon-dark-type-brand"
+          }
+        }
+      },
+      "icon-dark-type-warning": {
+        "$type": "color",
+        "$value": "{color.yellow.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-svg-icon-dark-type-warning"
+          }
+        }
+      },
+      "icon-dark-type-secondary": {
+        "$type": "color",
+        "$value": "var(--color-10)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-svg-icon-dark-type-secondary"
+          }
+        }
+      }
+    },
+    "ms": {
+      "inner-border": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-inner-border"
+          }
+        }
+      },
+      "inner-bg": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-inner-bg"
+          }
+        }
+      },
+      "invalid-border": {
+        "$type": "color",
+        "$value": "{color.red.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-invalid-border"
+          }
+        }
+      },
+      "disabled-bg": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-disabled-bg"
+          }
+        }
+      },
+      "disabled-border": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-disabled-border"
+          }
+        }
+      },
+      "disabled-search-text": {
+        "$type": "color",
+        "$value": "{color.grey.300}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-disabled-search-text"
+          }
+        }
+      },
+      "disabled-search-placeholder": {
+        "$type": "color",
+        "$value": "{color.grey.300}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-disabled-search-placeholder"
+          }
+        }
+      },
+      "disabled-chip-text": {
+        "$type": "color",
+        "$value": "{color.grey.300}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-disabled-chip-text"
+          }
+        }
+      },
+      "search-text": {
+        "$type": "color",
+        "$value": "{color.grey.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-search-text"
+          }
+        }
+      },
+      "search-placeholder": {
+        "$type": "color",
+        "$value": "{color.grey.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-search-placeholder"
+          }
+        }
+      },
+      "chip-bg": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-chip-bg"
+          }
+        }
+      },
+      "chip-border": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-chip-border"
+          }
+        }
+      },
+      "chip-highlighted-bg": {
+        "$type": "color",
+        "$value": "{color.brand.20}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-chip-highlighted-bg"
+          }
+        }
+      },
+      "chip-highlighted-border": {
+        "$type": "color",
+        "$value": "{color.brand.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-chip-highlighted-border"
+          }
+        }
+      },
+      "chip-remove-hover-bg": {
+        "$type": "color",
+        "$value": "{color.grey.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-chip-remove-hover-bg"
+          }
+        }
+      },
+      "dropdown-bg": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-dropdown-bg"
+          }
+        }
+      },
+      "dropdown-border": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-dropdown-border"
+          }
+        }
+      },
+      "dropdown-item-hover-bg": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-dropdown-item-hover-bg"
+          }
+        }
+      },
+      "dark-inner-border": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-dark-inner-border"
+          }
+        }
+      },
+      "dark-search-text": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-dark-search-text"
+          }
+        }
+      },
+      "dark-search-placeholder": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-dark-search-placeholder"
+          }
+        }
+      },
+      "dark-dropdown-border": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-dark-dropdown-border"
+          }
+        }
+      },
+      "dark-disabled-search-text": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-dark-disabled-search-text"
+          }
+        }
+      },
+      "dark-disabled-search-placeholder": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-dark-disabled-search-placeholder"
+          }
+        }
+      },
+      "dark-disabled-chip-text": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-dark-disabled-chip-text"
+          }
+        }
+      },
+      "dark-inner-bg": {
+        "$type": "color",
+        "$value": "var(--color-9)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-dark-inner-bg"
+          }
+        }
+      },
+      "dark-dropdown-bg": {
+        "$type": "color",
+        "$value": "var(--color-9)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-dark-dropdown-bg"
+          }
+        }
+      },
+      "dark-chip-bg": {
+        "$type": "color",
+        "$value": "color-mix(in srgb, var(--grey-800) 12%, transparent)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-dark-chip-bg"
+          }
+        }
+      },
+      "dark-dropdown-item-hover-bg": {
+        "$type": "color",
+        "$value": "color-mix(in srgb, var(--grey-800) 12%, transparent)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-dark-dropdown-item-hover-bg"
+          }
+        }
+      },
+      "dark-chip-remove-hover-bg": {
+        "$type": "color",
+        "$value": "color-mix(in srgb, var(--grey-500) 20%, transparent)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-ms-dark-chip-remove-hover-bg"
+          }
+        }
+      }
+    },
+    "card": {
+      "border": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-card-border"
+          }
+        }
+      },
+      "title-alignment-body-border": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-card-title-alignment-body-border"
+          }
+        }
+      },
+      "title-blue-text": {
+        "$type": "color",
+        "$value": "{color.blue.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-card-title-blue-text"
+          }
+        }
+      },
+      "title-blue-bg": {
+        "$type": "color",
+        "$value": "{color.blue.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-card-title-blue-bg"
+          }
+        }
+      },
+      "title-blue-border": {
+        "$type": "color",
+        "$value": "{color.blue.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-card-title-blue-border"
+          }
+        }
+      },
+      "title-purple-text": {
+        "$type": "color",
+        "$value": "{color.purple.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-card-title-purple-text"
+          }
+        }
+      },
+      "title-purple-bg": {
+        "$type": "color",
+        "$value": "{color.purple.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-card-title-purple-bg"
+          }
+        }
+      },
+      "title-purple-border": {
+        "$type": "color",
+        "$value": "{color.purple.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-card-title-purple-border"
+          }
+        }
+      },
+      "title-yellow-text": {
+        "$type": "color",
+        "$value": "{color.yellow.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-card-title-yellow-text"
+          }
+        }
+      },
+      "title-yellow-bg": {
+        "$type": "color",
+        "$value": "{color.yellow.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-card-title-yellow-bg"
+          }
+        }
+      },
+      "title-yellow-border": {
+        "$type": "color",
+        "$value": "{color.yellow.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-card-title-yellow-border"
+          }
+        }
+      },
+      "title-pink-text": {
+        "$type": "color",
+        "$value": "{color.pink.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-card-title-pink-text"
+          }
+        }
+      },
+      "title-pink-bg": {
+        "$type": "color",
+        "$value": "{color.pink.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-card-title-pink-bg"
+          }
+        }
+      },
+      "title-pink-border": {
+        "$type": "color",
+        "$value": "{color.pink.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-card-title-pink-border"
+          }
+        }
+      },
+      "title-green-text": {
+        "$type": "color",
+        "$value": "{color.green.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-card-title-green-text"
+          }
+        }
+      },
+      "title-green-bg": {
+        "$type": "color",
+        "$value": "{color.green.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-card-title-green-bg"
+          }
+        }
+      },
+      "title-green-border": {
+        "$type": "color",
+        "$value": "{color.green.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-card-title-green-border"
+          }
+        }
+      },
+      "title-grey-text": {
+        "$type": "color",
+        "$value": "{color.grey.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-card-title-grey-text"
+          }
+        }
+      },
+      "title-grey-bg": {
+        "$type": "color",
+        "$value": "{color.grey.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-card-title-grey-bg"
+          }
+        }
+      },
+      "title-grey-border": {
+        "$type": "color",
+        "$value": "{color.grey.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-card-title-grey-border"
+          }
+        }
+      },
+      "footer-border": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-card-footer-border"
+          }
+        }
+      },
+      "footer-bg": {
+        "$type": "color",
+        "$value": "{color.grey.0}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-card-footer-bg"
+          }
+        }
+      },
+      "divider-bg": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-card-divider-bg"
+          }
+        }
+      },
+      "dark-border": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-card-dark-border"
+          }
+        }
+      },
+      "dark-text": {
+        "$type": "color",
+        "$value": "{color.grey.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-card-dark-text"
+          }
+        }
+      },
+      "dark-divider-bg": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-card-dark-divider-bg"
+          }
+        }
+      },
+      "dark-bg": {
+        "$type": "color",
+        "$value": "color-mix(in srgb, var(--grey-800) 5%, transparent)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-card-dark-bg"
+          }
+        }
+      }
+    },
+    "cardgroup": {
+      "border": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-cardgroup-border"
+          }
+        }
+      },
+      "title-alignment-body-border": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-cardgroup-title-alignment-body-border"
+          }
+        }
+      },
+      "header-border": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-cardgroup-header-border"
+          }
+        }
+      },
+      "child-border": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-cardgroup-child-border"
+          }
+        }
+      },
+      "title-blue-text": {
+        "$type": "color",
+        "$value": "{color.blue.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-cardgroup-title-blue-text"
+          }
+        }
+      },
+      "title-blue-bg": {
+        "$type": "color",
+        "$value": "{color.blue.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-cardgroup-title-blue-bg"
+          }
+        }
+      },
+      "title-blue-border": {
+        "$type": "color",
+        "$value": "{color.blue.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-cardgroup-title-blue-border"
+          }
+        }
+      },
+      "title-purple-text": {
+        "$type": "color",
+        "$value": "{color.purple.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-cardgroup-title-purple-text"
+          }
+        }
+      },
+      "title-purple-bg": {
+        "$type": "color",
+        "$value": "{color.purple.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-cardgroup-title-purple-bg"
+          }
+        }
+      },
+      "title-purple-border": {
+        "$type": "color",
+        "$value": "{color.purple.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-cardgroup-title-purple-border"
+          }
+        }
+      },
+      "title-yellow-text": {
+        "$type": "color",
+        "$value": "{color.yellow.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-cardgroup-title-yellow-text"
+          }
+        }
+      },
+      "title-yellow-bg": {
+        "$type": "color",
+        "$value": "{color.yellow.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-cardgroup-title-yellow-bg"
+          }
+        }
+      },
+      "title-yellow-border": {
+        "$type": "color",
+        "$value": "{color.yellow.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-cardgroup-title-yellow-border"
+          }
+        }
+      },
+      "title-pink-text": {
+        "$type": "color",
+        "$value": "{color.pink.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-cardgroup-title-pink-text"
+          }
+        }
+      },
+      "title-pink-bg": {
+        "$type": "color",
+        "$value": "{color.pink.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-cardgroup-title-pink-bg"
+          }
+        }
+      },
+      "title-pink-border": {
+        "$type": "color",
+        "$value": "{color.pink.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-cardgroup-title-pink-border"
+          }
+        }
+      },
+      "title-green-text": {
+        "$type": "color",
+        "$value": "{color.green.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-cardgroup-title-green-text"
+          }
+        }
+      },
+      "title-green-bg": {
+        "$type": "color",
+        "$value": "{color.green.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-cardgroup-title-green-bg"
+          }
+        }
+      },
+      "title-green-border": {
+        "$type": "color",
+        "$value": "{color.green.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-cardgroup-title-green-border"
+          }
+        }
+      },
+      "title-grey-text": {
+        "$type": "color",
+        "$value": "{color.grey.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-cardgroup-title-grey-text"
+          }
+        }
+      },
+      "title-grey-bg": {
+        "$type": "color",
+        "$value": "{color.grey.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-cardgroup-title-grey-bg"
+          }
+        }
+      },
+      "title-grey-border": {
+        "$type": "color",
+        "$value": "{color.grey.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-cardgroup-title-grey-border"
+          }
+        }
+      }
+    },
+    "table": {
+      "text": {
+        "$type": "color",
+        "$value": "{color.grey.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-table-text"
+          }
+        }
+      },
+      "head-bg": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-table-head-bg"
+          }
+        }
+      },
+      "head-border": {
+        "$type": "color",
+        "$value": "{color.grey.300}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-table-head-border"
+          }
+        }
+      },
+      "row-selected-border": {
+        "$type": "color",
+        "$value": "{color.grey.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-table-row-selected-border"
+          }
+        }
+      },
+      "row-selected-bg": {
+        "$type": "color",
+        "$value": "{color.grey.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-table-row-selected-bg"
+          }
+        }
+      },
+      "row-hover-bg": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-table-row-hover-bg"
+          }
+        }
+      },
+      "cell-border": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-table-cell-border"
+          }
+        }
+      },
+      "cell-bg": {
+        "$type": "color",
+        "$value": "{color.grey.0}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-table-cell-bg"
+          }
+        }
+      },
+      "cell-bg-alt": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-table-cell-bg-alt"
+          }
+        }
+      },
+      "selected-rows-bg": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-table-selected-rows-bg"
+          }
+        }
+      },
+      "fixed-col-border": {
+        "$type": "color",
+        "$value": "{color.grey.300}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-table-fixed-col-border"
+          }
+        }
+      },
+      "dark-head-title-text": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-table-dark-head-title-text"
+          }
+        }
+      },
+      "dark-row-selected-bg": {
+        "$type": "color",
+        "$value": "{color.grey.20}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-table-dark-row-selected-bg"
+          }
+        }
+      },
+      "dark-selected-rows-bg": {
+        "$type": "color",
+        "$value": "{color.grey.20}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-table-dark-selected-rows-bg"
+          }
+        }
+      },
+      "dark-head-bg": {
+        "$type": "color",
+        "$value": "var(--color-6)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-table-dark-head-bg"
+          }
+        }
+      },
+      "dark-head-border": {
+        "$type": "color",
+        "$value": "var(--color-8)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-table-dark-head-border"
+          }
+        }
+      },
+      "dark-row-hover-bg": {
+        "$type": "color",
+        "$value": "var(--color-7)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-table-dark-row-hover-bg"
+          }
+        }
+      }
+    },
+    "tablev2": {
+      "td-bg-hover": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tablev2-td-bg-hover"
+          }
+        }
+      },
+      "td-bg-selected": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tablev2-td-bg-selected"
+          }
+        }
+      },
+      "header-bg": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tablev2-header-bg"
+          }
+        }
+      },
+      "header-border": {
+        "$type": "color",
+        "$value": "{color.grey.300}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tablev2-header-border"
+          }
+        }
+      },
+      "footer-bg": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tablev2-footer-bg"
+          }
+        }
+      },
+      "footer-border": {
+        "$type": "color",
+        "$value": "{color.grey.300}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tablev2-footer-border"
+          }
+        }
+      },
+      "thead-bg": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tablev2-thead-bg"
+          }
+        }
+      },
+      "draggable-bg": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tablev2-draggable-bg"
+          }
+        }
+      },
+      "th-border": {
+        "$type": "color",
+        "$value": "{color.grey.300}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tablev2-th-border"
+          }
+        }
+      },
+      "td-border": {
+        "$type": "color",
+        "$value": "{color.grey.300}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tablev2-td-border"
+          }
+        }
+      },
+      "with-border": {
+        "$type": "color",
+        "$value": "{color.grey.300}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tablev2-with-border"
+          }
+        }
+      },
+      "settings-sticky-bg": {
+        "$type": "color",
+        "$value": "{color.grey.0}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tablev2-settings-sticky-bg"
+          }
+        }
+      },
+      "settings-sticky-border": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tablev2-settings-sticky-border"
+          }
+        }
+      }
+    },
+    "tab": {
+      "text": {
+        "$type": "color",
+        "$value": "{color.grey.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tab-text"
+          }
+        }
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tab-border"
+          }
+        }
+      },
+      "indicator-bg": {
+        "$type": "color",
+        "$value": "{color.brand.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tab-indicator-bg"
+          }
+        }
+      },
+      "icon-text": {
+        "$type": "color",
+        "$value": "{color.grey.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tab-icon-text"
+          }
+        }
+      },
+      "disabled-text": {
+        "$type": "color",
+        "$value": "{color.grey.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tab-disabled-text"
+          }
+        }
+      },
+      "selected-text": {
+        "$type": "color",
+        "$value": "{color.grey.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tab-selected-text"
+          }
+        }
+      },
+      "header-container-border": {
+        "$type": "color",
+        "$value": "{color.grey.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tab-header-container-border"
+          }
+        }
+      },
+      "dark-label-text": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tab-dark-label-text"
+          }
+        }
+      },
+      "dark-selected-text": {
+        "$type": "color",
+        "$value": "{color.grey.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tab-dark-selected-text"
+          }
+        }
+      },
+      "dark-selected-label-text": {
+        "$type": "color",
+        "$value": "{color.grey.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tab-dark-selected-label-text"
+          }
+        }
+      },
+      "dark-header-container-border": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tab-dark-header-container-border"
+          }
+        }
+      }
+    },
+    "modal": {
+      "container-bg": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-modal-container-bg"
+          }
+        }
+      },
+      "header-border": {
+        "$type": "color",
+        "$value": "{color.grey.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-modal-header-border"
+          }
+        }
+      },
+      "header-icon-bg": {
+        "$type": "color",
+        "$value": "{color.brand.20}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-modal-header-icon-bg"
+          }
+        }
+      },
+      "header-icon-text": {
+        "$type": "color",
+        "$value": "{color.brand.700}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-modal-header-icon-text"
+          }
+        }
+      },
+      "header-icon-green-bg": {
+        "$type": "color",
+        "$value": "{color.green.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-modal-header-icon-green-bg"
+          }
+        }
+      },
+      "header-icon-green-text": {
+        "$type": "color",
+        "$value": "{color.green.700}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-modal-header-icon-green-text"
+          }
+        }
+      },
+      "header-icon-blue-bg": {
+        "$type": "color",
+        "$value": "{color.blue.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-modal-header-icon-blue-bg"
+          }
+        }
+      },
+      "header-icon-blue-text": {
+        "$type": "color",
+        "$value": "{color.blue.700}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-modal-header-icon-blue-text"
+          }
+        }
+      },
+      "header-icon-red-bg": {
+        "$type": "color",
+        "$value": "{color.red.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-modal-header-icon-red-bg"
+          }
+        }
+      },
+      "header-icon-red-text": {
+        "$type": "color",
+        "$value": "{color.red.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-modal-header-icon-red-text"
+          }
+        }
+      },
+      "header-icon-purple-bg": {
+        "$type": "color",
+        "$value": "{color.purple.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-modal-header-icon-purple-bg"
+          }
+        }
+      },
+      "header-icon-purple-text": {
+        "$type": "color",
+        "$value": "{color.purple.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-modal-header-icon-purple-text"
+          }
+        }
+      },
+      "header-icon-yellow-bg": {
+        "$type": "color",
+        "$value": "{color.yellow.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-modal-header-icon-yellow-bg"
+          }
+        }
+      },
+      "header-icon-yellow-text": {
+        "$type": "color",
+        "$value": "{color.yellow.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-modal-header-icon-yellow-text"
+          }
+        }
+      },
+      "dark-header-footer-border": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-modal-dark-header-footer-border"
+          }
+        }
+      },
+      "dark-entered-bg": {
+        "$type": "color",
+        "$value": "color-mix(in srgb, var(--color-12) 50%, transparent)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-modal-dark-entered-bg"
+          }
+        }
+      },
+      "dark-container-bg": {
+        "$type": "color",
+        "$value": "var(--color-9)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-modal-dark-container-bg"
+          }
+        }
+      }
+    },
+    "buttongroup": {
+      "border": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-buttongroup-border"
+          }
+        }
+      },
+      "bg": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-buttongroup-bg"
+          }
+        }
+      },
+      "hover-bg": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-buttongroup-hover-bg"
+          }
+        }
+      },
+      "hover-text": {
+        "$type": "color",
+        "$value": "{color.grey.600}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-buttongroup-hover-text"
+          }
+        }
+      },
+      "disabled-text": {
+        "$type": "color",
+        "$value": "{color.grey.300}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-buttongroup-disabled-text"
+          }
+        }
+      },
+      "dark-border": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-buttongroup-dark-border"
+          }
+        }
+      },
+      "dark-disabled-bg": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-buttongroup-dark-disabled-bg"
+          }
+        }
+      },
+      "dark-bg": {
+        "$type": "color",
+        "$value": "var(--color-5)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-buttongroup-dark-bg"
+          }
+        }
+      },
+      "dark-hover-bg": {
+        "$type": "color",
+        "$value": "var(--color-7)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-buttongroup-dark-hover-bg"
+          }
+        }
+      }
+    },
+    "linechart": {
+      "blue": {
+        "$type": "color",
+        "$value": "{color.blue.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-linechart-blue"
+          }
+        }
+      },
+      "purple": {
+        "$type": "color",
+        "$value": "{color.purple.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-linechart-purple"
+          }
+        }
+      },
+      "yellow": {
+        "$type": "color",
+        "$value": "{color.yellow.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-linechart-yellow"
+          }
+        }
+      },
+      "pink": {
+        "$type": "color",
+        "$value": "{color.pink.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-linechart-pink"
+          }
+        }
+      },
+      "green": {
+        "$type": "color",
+        "$value": "{color.brand.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-linechart-green"
+          }
+        }
+      },
+      "grey": {
+        "$type": "color",
+        "$value": "{color.grey.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-linechart-grey"
+          }
+        }
+      },
+      "red": {
+        "$type": "color",
+        "$value": "{color.red.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-linechart-red"
+          }
+        }
+      }
+    },
+    "pagination": {
+      "text": {
+        "$type": "color",
+        "$value": "{color.grey.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-pagination-text"
+          }
+        }
+      },
+      "hover-bg": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-pagination-hover-bg"
+          }
+        }
+      },
+      "active-border": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-pagination-active-border"
+          }
+        }
+      },
+      "selected-bg": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-pagination-selected-bg"
+          }
+        }
+      },
+      "selected-text": {
+        "$type": "color",
+        "$value": "{color.grey.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-pagination-selected-text"
+          }
+        }
+      },
+      "disabled-text": {
+        "$type": "color",
+        "$value": "{color.grey.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-pagination-disabled-text"
+          }
+        }
+      },
+      "dark-selected-bg": {
+        "$type": "color",
+        "$value": "{color.green.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-pagination-dark-selected-bg"
+          }
+        }
+      },
+      "dark-selected-text": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-pagination-dark-selected-text"
+          }
+        }
+      }
+    },
+    "profiledropdown": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-profiledropdown-bg"
+          }
+        }
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-profiledropdown-border"
+          }
+        }
+      },
+      "link-text": {
+        "$type": "color",
+        "$value": "{color.grey.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-profiledropdown-link-text"
+          }
+        }
+      },
+      "link-hover-text": {
+        "$type": "color",
+        "$value": "{color.brand.700}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-profiledropdown-link-hover-text"
+          }
+        }
+      },
+      "dark-link-text": {
+        "$type": "color",
+        "$value": "{color.grey.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-profiledropdown-dark-link-text"
+          }
+        }
+      },
+      "dark-link-hover-text": {
+        "$type": "color",
+        "$value": "{color.green.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-profiledropdown-dark-link-hover-text"
+          }
+        }
+      }
+    },
+    "collapse": {
+      "border": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-collapse-border"
+          }
+        }
+      },
+      "bg": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-collapse-bg"
+          }
+        }
+      },
+      "dark-border": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-collapse-dark-border"
+          }
+        }
+      }
+    },
+    "collapseicon": {
+      "border": {
+        "$type": "color",
+        "$value": "{color.grey.300}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-collapseicon-border"
+          }
+        }
+      },
+      "open-bg": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-collapseicon-open-bg"
+          }
+        }
+      },
+      "dark-border": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-collapseicon-dark-border"
+          }
+        }
+      },
+      "dark-open-bg": {
+        "$type": "color",
+        "$value": "{color.grey.20}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-collapseicon-dark-open-bg"
+          }
+        }
+      }
+    },
+    "step": {
+      "circle-bg": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-step-circle-bg"
+          }
+        }
+      },
+      "circle-bg-active": {
+        "$type": "color",
+        "$value": "{color.brand.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-step-circle-bg-active"
+          }
+        }
+      },
+      "circle-bg-completed": {
+        "$type": "color",
+        "$value": "{color.brand.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-step-circle-bg-completed"
+          }
+        }
+      },
+      "circle-bg-danger": {
+        "$type": "color",
+        "$value": "{color.red.700}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-step-circle-bg-danger"
+          }
+        }
+      },
+      "circle-border-color": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-step-circle-border-color"
+          }
+        }
+      },
+      "circle-border-color-active": {
+        "$type": "color",
+        "$value": "{color.brand.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-step-circle-border-color-active"
+          }
+        }
+      },
+      "circle-border-color-completed": {
+        "$type": "color",
+        "$value": "{color.brand.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-step-circle-border-color-completed"
+          }
+        }
+      },
+      "circle-border-color-danger": {
+        "$type": "color",
+        "$value": "{color.red.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-step-circle-border-color-danger"
+          }
+        }
+      }
+    },
+    "dropzone": {
+      "border": {
+        "$type": "color",
+        "$value": "{color.grey.300}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-dropzone-border"
+          }
+        }
+      },
+      "bg": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-dropzone-bg"
+          }
+        }
+      },
+      "active-border": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-dropzone-active-border"
+          }
+        }
+      },
+      "active-bg": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-dropzone-active-bg"
+          }
+        }
+      },
+      "rejected-border": {
+        "$type": "color",
+        "$value": "{color.red.600}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-dropzone-rejected-border"
+          }
+        }
+      }
+    },
+    "themeswitch": {
+      "track-border": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-themeswitch-track-border"
+          }
+        }
+      },
+      "sun-text": {
+        "$type": "color",
+        "$value": "{color.yellow.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-themeswitch-sun-text"
+          }
+        }
+      },
+      "moon-text": {
+        "$type": "color",
+        "$value": "{color.grey.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-themeswitch-moon-text"
+          }
+        }
+      },
+      "dark-track-border": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-themeswitch-dark-track-border"
+          }
+        }
+      },
+      "dark-sun-text": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-themeswitch-dark-sun-text"
+          }
+        }
+      },
+      "dark-moon-text": {
+        "$type": "color",
+        "$value": "{color.blue.400}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-themeswitch-dark-moon-text"
+          }
+        }
+      },
+      "dark-track-bg": {
+        "$type": "color",
+        "$value": "var(--color-1)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-themeswitch-dark-track-bg"
+          }
+        }
+      }
+    },
+    "sidesheet": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-sidesheet-bg"
+          }
+        }
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.grey.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-sidesheet-border"
+          }
+        }
+      },
+      "dark-border": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-sidesheet-dark-border"
+          }
+        }
+      },
+      "dark-bg": {
+        "$type": "color",
+        "$value": "color-mix(in srgb, var(--color-11) 60%, transparent)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-sidesheet-dark-bg"
+          }
+        }
+      },
+      "dark-container-bg": {
+        "$type": "color",
+        "$value": "var(--color-6)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-sidesheet-dark-container-bg"
+          }
+        }
+      }
+    },
+    "popover": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-popover-bg"
+          }
+        }
+      },
+      "dark-bg": {
+        "$type": "color",
+        "$value": "var(--color-2)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-popover-dark-bg"
+          }
+        }
+      }
+    },
+    "progress": {
+      "track": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-progress-track"
+          }
+        }
+      },
+      "fill": {
+        "$type": "color",
+        "$value": "{color.brand.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-progress-fill"
+          }
+        }
+      },
+      "dark-percent-text": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-progress-dark-percent-text"
+          }
+        }
+      }
+    },
+    "nestedmenu": {
+      "text": {
+        "$type": "color",
+        "$value": "{color.grey.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-nestedmenu-text"
+          }
+        }
+      },
+      "bg": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-nestedmenu-bg"
+          }
+        }
+      },
+      "dark-border": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-nestedmenu-dark-border"
+          }
+        }
+      },
+      "dark-bg": {
+        "$type": "color",
+        "$value": "var(--color-9)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-nestedmenu-dark-bg"
+          }
+        }
+      }
+    },
+    "fileupload": {
+      "edit-icon-bg": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-fileupload-edit-icon-bg"
+          }
+        }
+      },
+      "item-border": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-fileupload-item-border"
+          }
+        }
+      },
+      "item-error-border": {
+        "$type": "color",
+        "$value": "{color.red.600}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-fileupload-item-error-border"
+          }
+        }
+      },
+      "dark-edit-icon-bg": {
+        "$type": "color",
+        "$value": "{color.grey.20}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-fileupload-dark-edit-icon-bg"
+          }
+        }
+      },
+      "dark-edit-icon-border": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-fileupload-dark-edit-icon-border"
+          }
+        }
+      }
+    },
+    "tooltip": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tooltip-bg"
+          }
+        }
+      },
+      "text": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tooltip-text"
+          }
+        }
+      },
+      "arrow-bg": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tooltip-arrow-bg"
+          }
+        }
+      },
+      "dark-bg": {
+        "$type": "color",
+        "$value": "var(--color-2)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-tooltip-dark-bg"
+          }
+        }
+      }
+    },
+    "timepicker": {
+      "item-text": {
+        "$type": "color",
+        "$value": "{color.grey.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-timepicker-item-text"
+          }
+        }
+      },
+      "highlight-bg": {
+        "$type": "color",
+        "$value": "{color.grey.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-timepicker-highlight-bg"
+          }
+        }
+      },
+      "highlight-text": {
+        "$type": "color",
+        "$value": "{color.grey.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-timepicker-highlight-text"
+          }
+        }
+      }
+    },
+    "skeleton": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.grey.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-skeleton-bg"
+          }
+        }
+      },
+      "highlight": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-skeleton-highlight"
+          }
+        }
+      },
+      "dark-bg": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-skeleton-dark-bg"
+          }
+        }
+      },
+      "dark-highlight": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-skeleton-dark-highlight"
+          }
+        }
+      }
+    },
+    "divider": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.grey.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-divider-bg"
+          }
+        }
+      },
+      "bg-grey": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-divider-bg-grey"
+          }
+        }
+      },
+      "dark-bg-grey": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-divider-dark-bg-grey"
+          }
+        }
+      },
+      "dark-bg": {
+        "$type": "color",
+        "$value": "var(--color-5)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-divider-dark-bg"
+          }
+        }
+      }
+    },
+    "breadcrumb": {
+      "text": {
+        "$type": "color",
+        "$value": "{color.grey.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-breadcrumb-text"
+          }
+        }
+      },
+      "hover-text": {
+        "$type": "color",
+        "$value": "{color.grey.800}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-breadcrumb-hover-text"
+          }
+        }
+      },
+      "selected-text": {
+        "$type": "color",
+        "$value": "{color.grey.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-breadcrumb-selected-text"
+          }
+        }
+      }
+    },
+    "buttonicon": {
+      "hover-bg": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-buttonicon-hover-bg"
+          }
+        }
+      },
+      "pressed-bg": {
+        "$type": "color",
+        "$value": "{color.grey.100}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-buttonicon-pressed-bg"
+          }
+        }
+      }
+    },
+    "loader": {
+      "lite-border": {
+        "$type": "color",
+        "$value": "{color.white}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-loader-lite-border"
+          }
+        }
+      },
+      "dark-border": {
+        "$type": "color",
+        "$value": "{color.grey.900}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-loader-dark-border"
+          }
+        }
+      }
+    },
+    "underconstruction": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.green.20}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-underconstruction-bg"
+          }
+        }
+      }
+    },
+    "more": {
+      "text": {
+        "$type": "color",
+        "$value": "{color.brand.500}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-more-text"
+          }
+        }
+      }
+    },
+    "image": {
+      "placeholder-bg": {
+        "$type": "color",
+        "$value": "{color.grey.30}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-image-placeholder-bg"
+          }
+        }
+      }
+    },
+    "classname": {
+      "scrollbar-track": {
+        "$type": "color",
+        "$value": "{color.grey.50}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-classname-scrollbar-track"
+          }
+        }
+      },
+      "scrollbar-thumb": {
+        "$type": "color",
+        "$value": "{color.grey.200}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-classname-scrollbar-thumb"
+          }
+        }
+      },
+      "scrollbar-thumb-hover": {
+        "$type": "color",
+        "$value": "{color.grey.300}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-classname-scrollbar-thumb-hover"
+          }
+        }
+      },
+      "dark-scrollbar-thumb": {
+        "$type": "color",
+        "$value": "{color.grey.40}",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-classname-dark-scrollbar-thumb"
+          }
+        }
+      },
+      "dark-scrollbar-track": {
+        "$type": "color",
+        "$value": "var(--color-1)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-classname-dark-scrollbar-track"
+          }
+        }
+      },
+      "dark-scrollbar-thumb-hover": {
+        "$type": "color",
+        "$value": "color-mix(in srgb, var(--grey-800) 15%, transparent)",
+        "$extensions": {
+          "com.hrm": {
+            "cssVar": "color-classname-dark-scrollbar-thumb-hover"
+          }
+        }
+      }
+    }
+  }
+}

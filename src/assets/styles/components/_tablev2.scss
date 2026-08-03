@@ -6,8 +6,8 @@
 
   --ds-table-td-padding: var(--space-8) var(--space-16);
 
-  --ds-table-td-bg-hover: var(--grey-30);
-  --ds-table-td-bg-selected: var(--grey-40);
+  --ds-table-td-bg-hover: var(--color-tablev2-td-bg-hover);
+  --ds-table-td-bg-selected: var(--color-tablev2-td-bg-selected);
 
   @include mixin.flexbox;
   @include mixin.flex-direction(column);
@@ -20,10 +20,10 @@
     @include mixin.flexbox;
     @include mixin.align-items(center);
     z-index: 3;
-    background-color: var(--white);
+    background-color: var(--color-tablev2-header-bg);
     height: var(--size-72);
     padding: 0 var(--space-24);
-    border-bottom: 1px solid var(--grey-300);
+    border-bottom: 1px solid var(--color-tablev2-header-border);
     border-top-left-radius: var(--border-radius-16);
     border-top-right-radius: var(--border-radius-16);
   }
@@ -42,10 +42,10 @@
     @include mixin.flexbox;
     @include mixin.align-items(center);
     z-index: 1;
-    background-color: var(--white);
+    background-color: var(--color-tablev2-footer-bg);
     height: var(--size-64);
     padding: 0 var(--space-24);
-    border-top: 1px solid var(--grey-300);
+    border-top: 1px solid var(--color-tablev2-footer-border);
     border-bottom-left-radius: var(--border-radius-16);
     border-bottom-right-radius: var(--border-radius-16);
   }
@@ -65,11 +65,11 @@
     position: sticky;
     top: 0;
     z-index: 2;
-    background: var(--white);
+    background: var(--color-tablev2-thead-bg);
   }
 
   .draggable-col {
-    background-color: var(--white);
+    background-color: var(--color-tablev2-draggable-bg);
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     border-radius: var(--border-radius-8);
     text-align: left;
@@ -129,7 +129,7 @@
     thead {
       tr {
         th {
-          border-bottom: 1px solid var(--grey-300);
+          border-bottom: 1px solid var(--color-tablev2-th-border);
           height: var(--ds-table-th-height);
           padding: var(--space-8) var(--space-16);
           vertical-align: middle;
@@ -157,7 +157,7 @@
     tbody {
       tr {
         td {
-          border-bottom: 1px solid var(--grey-300);
+          border-bottom: 1px solid var(--color-tablev2-td-border);
           height: var(--ds-table-td-height);
           padding: var(--ds-table-td-padding);
           vertical-align: middle;
@@ -196,7 +196,7 @@
         &:hover {
           td {
             cursor: pointer;
-            background-color: var(--grey-30);
+            background-color: var(--color-tablev2-td-bg-hover);
 
             .actions-list {
 
@@ -214,7 +214,7 @@
           }
 
           .pinned-cell {
-            background-color: var(--grey-30) !important;
+            background-color: var(--color-tablev2-td-bg-hover) !important;
           }
         }
 
@@ -285,7 +285,7 @@
     td {
       padding: var(--ds-table-td-padding) !important;
       height: var(--ds-table-td-height);
-      border-bottom: 1px solid var(--grey-300);
+      border-bottom: 1px solid var(--color-tablev2-td-border);
       background-color: inherit;
       transition: background-color 0.2s ease;
       vertical-align: middle;
@@ -386,7 +386,7 @@
 }
 
 .with-border {
-  border: 1px solid var(--grey-300);
+  border: 1px solid var(--color-tablev2-with-border);
 }
 
 .actions-list {
@@ -400,7 +400,7 @@
     display: none;
         padding: var(--space-2) var(--space-16);
         gap: var(--space-8);
-        background-color: var(--grey-30);
+        background-color: var(--color-tablev2-td-bg-hover);
 
     &:before {
       content: '';
@@ -429,9 +429,9 @@
     .sticky {
       position: sticky;
       top: 0;
-      background: var(--grey-0);
+      background: var(--color-tablev2-settings-sticky-bg);
       z-index: 1;
-      border-bottom: 1px solid var(--grey-200) !important;
+      border-bottom: 1px solid var(--color-tablev2-settings-sticky-border) !important;
       padding: 0 var(--space-16);
     }
 
@@ -446,7 +446,7 @@
     }
 
     &__option {
-      border-bottom: 1px solid var(--grey-200);
+      border-bottom: 1px solid var(--color-tablev2-settings-sticky-border);
       margin-bottom: var(--space-4);
 
       &:last-child {

@@ -2,11 +2,11 @@
 @use "sass:map";
 
 $alert-variants: (
-        information: (bg: var(--blue-50), border: var(--blue-600)),
-        discovery: (bg: var(--purple-50), border: var(--purple-400)),
-        success: (bg: var(--green-50), border: var(--green-600)),
-        warning: (bg: var(--yellow-50), border: var(--yellow-800)),
-        error: (bg: var(--red-50), border: var(--red-800)),
+        information: (bg: var(--color-alert-information-bg), border: var(--color-alert-information-border)),
+        discovery: (bg: var(--color-alert-discovery-bg), border: var(--color-alert-discovery-border)),
+        success: (bg: var(--color-alert-success-bg), border: var(--color-alert-success-border)),
+        warning: (bg: var(--color-alert-warning-bg), border: var(--color-alert-warning-border)),
+        error: (bg: var(--color-alert-error-bg), border: var(--color-alert-error-border)),
 );
 
 .alert {
@@ -64,8 +64,8 @@ $alert-variants: (
 [data-theme="dark"] {
   .alert {
     &--information {
-      background-color: var(--color-5);
-      border-color: var(--grey-40);
+      background-color: var(--color-alert-dark-information-bg);
+      border-color: var(--color-alert-dark-information-border);
     }
   }
 }

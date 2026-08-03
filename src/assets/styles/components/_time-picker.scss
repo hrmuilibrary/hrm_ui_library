@@ -16,7 +16,7 @@
 
     &-item {
       font-weight: var(--font-weight-500) !important;
-      color: var(--grey-500) !important;
+      color: var(--color-timepicker-item-text) !important;
       width: max-content !important;
       font-size: var(--font-size-16) !important;
 
@@ -31,13 +31,13 @@
     }
 
     &-highlight {
-      background-color: var(--grey-100) !important;
+      background-color: var(--color-timepicker-highlight-bg) !important;
 
       &-item {
         &__hour {
           font-size: var(--font-size-20) !important;
           font-weight: var(--font-weight-600) !important;
-          color: var(--grey-900) !important;
+          color: var(--color-timepicker-highlight-text) !important;
           justify-content: flex-end !important;
           margin-right: var(--size-16) !important;
         }
@@ -45,7 +45,7 @@
         &__minute {
           font-size: var(--font-size-20) !important;
           font-weight: var(--font-weight-600) !important;
-          color: var(--grey-900) !important;
+          color: var(--color-timepicker-highlight-text) !important;
           justify-content: flex-start !important;
           margin-left: var(--size-16) !important;
         }

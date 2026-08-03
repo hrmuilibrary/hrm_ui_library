@@ -17,88 +17,88 @@
     outline: none;
     font: var(--font-weight-400) var(--font-size-14)/var(--line-height-xs) var(--font-family-primary);
     padding: 0 var(--space-12);
-    color: var(--grey-900);
-    background-color: var(--white);
-    border: var(--border-size-1) solid var(--grey-200);
+    color: var(--color-field-text);
+    background-color: var(--color-field-bg);
+    border: var(--border-size-1) solid var(--color-field-border);
     //transition: background-color .3s linear, color .3s linear, border-color .3s linear;
     text-overflow: ellipsis;
 
     &:-ms-input-placeholder {
-      color: var(--grey-500);
+      color: var(--color-field-placeholder);
     }
 
     &::placeholder {
-      color: var(--grey-500);
+      color: var(--color-field-placeholder);
     }
 
     & + #{$this}__icon {
-      color: var(--grey-400);
+      color: var(--color-field-icon);
     }
 
     & + #{$this}__icon + #{$this}__icon {
-      color: var(--grey-500);
+      color: var(--color-field-icon-strong);
     }
 
     &:hover {
-      color: var(--grey-800);
-      background-color: var(--grey-50);
-      border-color: var(--grey-50);
+      color: var(--color-field-text-hover);
+      background-color: var(--color-field-bg-hover);
+      border-color: var(--color-field-border-hover);
 
       & + #{$this}__icon,
       & + #{$this}__icon + #{$this}__icon {
-        color: var(--grey-800);
+        color: var(--color-field-text-hover);
       }
     }
 
     &:focus {
-      color: var(--grey-900);
+      color: var(--color-field-text);
       border-radius: var(--size-10);
-      border: 1px solid var(--grey-900);
-      background-color: var(--grey-0);
-      box-shadow: 0 0 0 2px var(--grey-0), 0 0 0 4px var(--grey-200);
+      border: 1px solid var(--color-field-border-focus);
+      background-color: var(--color-field-bg-focus);
+      box-shadow: 0 0 0 2px var(--color-field-bg-focus), 0 0 0 4px var(--color-field-border);
 
       & + #{$this}__icon {
-        color: var(--grey-600);
+        color: var(--color-field-icon-focus);
       }
 
       & + #{$this}__icon + #{$this}__icon {
-        color: var(--grey-900);
+        color: var(--color-field-text);
       }
     }
 
     &:active {
-      color: var(--grey-900);
-      background-color: var(--white);
-      border-color: var(--grey-200);
+      color: var(--color-field-text);
+      background-color: var(--color-field-bg);
+      border-color: var(--color-field-border);
 
       & + #{$this}__icon,
       & + #{$this}__icon + #{$this}__icon {
-        color: var(--grey-900);
+        color: var(--color-field-text);
       }
     }
 
     &[disabled] {
       cursor: default;
-      background-color: var(--grey-50);
-      border-color: var(--grey-50);
-      color: var(--grey-300);
+      background-color: var(--color-field-bg-disabled);
+      border-color: var(--color-field-border-disabled);
+      color: var(--color-field-text-disabled);
 
       &:-ms-input-placeholder {
-        color: var(--grey-300);
+        color: var(--color-field-placeholder-disabled);
       }
 
       &::placeholder {
-        color: var(--grey-300);
+        color: var(--color-field-placeholder-disabled);
       }
 
       & + #{$this}__icon,
       & + #{$this}__icon + #{$this}__icon {
-        color: var(--grey-300);
+        color: var(--color-field-text-disabled);
         pointer-events: none;
         cursor: default;
 
         svg path {
-          fill: var(--grey-400);
+          fill: var(--color-field-icon);
         }
       }
     }
@@ -110,24 +110,24 @@
 
   &--valid {
     input {
-      color: var(--grey-900);
-      background-color: var(--white);
-      border-color: var(--grey-200);
+      color: var(--color-field-text);
+      background-color: var(--color-field-bg);
+      border-color: var(--color-field-border);
 
       & + #{$this}__icon {
-        color: var(--grey-900);
+        color: var(--color-field-text);
       }
     }
   }
 
   &--invalid {
     input {
-      color: var(--grey-900);
-      background-color: var(--white);
-      border-color: var(--red-400);
+      color: var(--color-field-text);
+      background-color: var(--color-field-bg);
+      border-color: var(--color-field-border-invalid);
 
       & + #{$this}__icon {
-        color: var(--grey-900);
+        color: var(--color-field-text);
       }
     }
   }
@@ -202,30 +202,30 @@
     $this: &;
 
     & + #{$this}__icon + #{$this}__icon {
-      color: var(--grey-100);
-      fill: var(--grey-100);
+      color: var(--color-field-icon-adjacent);
+      fill: var(--color-field-icon-adjacent);
     }
 
     input {
-      border-color: var(--grey-40);
-      background-color: var(--color-9);
-      color: var(--grey-50);
+      border-color: var(--color-field-border-strong);
+      background-color: var(--color-field-bg-elevated);
+      color: var(--color-field-fg-subtle);
 
       &:focus {
-        box-shadow: 0 0 2px 1px var(--grey-30);
+        box-shadow: 0 0 2px 1px var(--color-field-focus-shadow);
       }
 
       &::placeholder {
-        color: var(--grey-50);
+        color: var(--color-field-fg-subtle);
       }
 
       &[disabled] {
-        color: var(--grey-40);
+        color: var(--color-field-fg-disabled);
 
         & + svg,
         & + svg + svg {
           path:not([fill]), circle:not([fill]), line:not([fill]) {
-            fill: var(--grey-40);
+            fill: var(--color-field-fg-disabled);
           }
         }
       }
@@ -236,9 +236,9 @@
   input:-webkit-autofill:focus,
   input:-webkit-autofill:active,
   input:-internal-autofill-selected {
-    background-color: var(--grey-30) !important;
-    box-shadow: 0 0 0 1000px var(--grey-30) inset !important;
-    -webkit-text-fill-color: var(--grey-100) !important;
-    color: var(--grey-100) !important;
+    background-color: var(--color-field-autofill-bg) !important;
+    box-shadow: 0 0 0 1000px var(--color-field-autofill-bg) inset !important;
+    -webkit-text-fill-color: var(--color-field-autofill-fg) !important;
+    color: var(--color-field-autofill-fg) !important;
   }
 }

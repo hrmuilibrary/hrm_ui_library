@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - 'master'
+      - 'alpha'
+
+jobs:
+  visual-regression:
+    name: Visual regression (token/color parity)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Specify Node Version
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # Fails if any resolved paint value (light or dark) drifts from the committed golden
+      # snapshot. A faithful token repoint changes var names only, not resolved values, so it
+      # passes clean. An intentional visual change requires `pnpm test:visual:update` + commit.
+      - name: Visual regression gate
+        run: node ./bin/styles-snapshot.mjs

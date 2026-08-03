@@ -4,14 +4,14 @@
   width: 360px;
   box-shadow: var(--shadow-2);
   border-radius: var(--border-radius-10);
-  background-color: var(--white);
+  background-color: var(--color-profiledropdown-bg);
   @include mixin.absolute(calc(100% + var(--space-8)), 0, unset, unset);
 
   &__top {
     @include mixin.flexbox;
     @include mixin.align-items(center);
     padding: var(--space-16);
-    border-bottom: 1px solid var(--grey-50);
+    border-bottom: 1px solid var(--color-profiledropdown-border);
   }
 
   &__nav {
@@ -24,17 +24,17 @@
     &__link {
       @include mixin.inline-flex;
       @include mixin.align-items(center);
-      color: var(--grey-900);
+      color: var(--color-profiledropdown-link-text);
 
       &:hover {
-        color: var(--brand-700);
+        color: var(--color-profiledropdown-link-hover-text);
         text-decoration: none;
         transition: none;
         cursor: pointer;
 
         .svg-icon {
           path {
-            fill: var(--brand-700);
+            fill: var(--color-profiledropdown-link-hover-text);
           }
         }
       }
@@ -42,7 +42,7 @@
   }
 
   &__bottom {
-    border-top: 1px solid var(--grey-50);
+    border-top: 1px solid var(--color-profiledropdown-border);
   }
 }
 
@@ -50,14 +50,14 @@
   .profile-dropdown {
     &__nav {
       &__link {
-        color: var(--grey-100);
+        color: var(--color-profiledropdown-dark-link-text);
 
         &:hover {
-          color: var(--green-500);
+          color: var(--color-profiledropdown-dark-link-hover-text);
 
           .svg-icon {
             path {
-              fill: var(--green-500);
+              fill: var(--color-profiledropdown-dark-link-hover-text);
             }
           }
         }

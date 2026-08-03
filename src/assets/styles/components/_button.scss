@@ -2,7 +2,7 @@
 
 .btn {
   $this: &;
-  background-color: var(--brand-300);
+  background-color: var(--color-action-base-bg);
 
   display: inline-flex;
   align-items: center;
@@ -42,143 +42,143 @@
   }
 
   &--primary {
-    background-color: var(--brand-500);
-    color: var(--white);
+    background-color: var(--color-action-primary-bg);
+    color: var(--color-action-primary-text);
 
     &.pressed {
-      background-color: var(--brand-600);
+      background-color: var(--color-action-primary-bg-active);
     }
     &:not(#{$this}--loading) {
       &:hover {
-        background-color: var(--brand-300);
+        background-color: var(--color-action-primary-bg-hover);
       }
 
       &:active {
-        background-color: var(--brand-600);
+        background-color: var(--color-action-primary-bg-active);
       }
 
       &[disabled] {
-        background-color: var(--grey-50);
-        color: var(--grey-400);
+        background-color: var(--color-action-disabled-bg);
+        color: var(--color-action-disabled-text);
 
         #{$this}__icon {
-          color: var(--grey-400);
+          color: var(--color-action-disabled-text);
         }
         svg path {
-          fill: var(--grey-400);
+          fill: var(--color-action-disabled-text);
         }
       }
     }
 
     #{$this}__icon {
-      color: var(--white);
+      color: var(--color-action-primary-text);
     }
   }
 
   &--secondary {
-    background-color: var(--white);
-    color: var(--grey-800);
-    border: var(--border-size-1) solid var(--grey-300);
+    background-color: var(--color-action-secondary-bg);
+    color: var(--color-action-secondary-text);
+    border: var(--border-size-1) solid var(--color-action-secondary-border);
     &.pressed {
-      background-color: var(--grey-200);
+      background-color: var(--color-action-secondary-bg-active);
     }
 
     &:not(#{$this}--loading) {
       &:hover {
-        background-color: var(--grey-50);
-        border-color: var(--white);
+        background-color: var(--color-action-secondary-bg-hover);
+        border-color: var(--color-action-secondary-border-hover);
       }
 
       &:active {
-        background-color: var(--grey-200);
+        background-color: var(--color-action-secondary-bg-active);
       }
 
       &[disabled] {
-        background-color: var(--white);
-        color: var(--grey-400);
-        border-color: var(--grey-300);
+        background-color: var(--color-action-secondary-bg);
+        color: var(--color-action-disabled-text);
+        border-color: var(--color-action-secondary-border);
 
         #{$this}__icon {
-          color: var(--grey-400);
+          color: var(--color-action-disabled-text);
         }
 
         svg path {
-          fill: var(--grey-400);
+          fill: var(--color-action-disabled-text);
         }
 
       }
     }
 
     #{$this}__icon {
-      color: var(--grey-800);
+      color: var(--color-action-secondary-text);
     }
   }
 
   &--tertiary {
     background-color: transparent;
-    color: var(--grey-500);
+    color: var(--color-action-tertiary-text);
     &.pressed {
-      background-color: var(--grey-40);
+      background-color: var(--color-action-tertiary-bg-active);
     }
     &:not(#{$this}--loading) {
       &:hover {
-        background-color: var(--grey-30);
+        background-color: var(--color-action-tertiary-bg-hover);
       }
 
       &:active {
-        background-color: var(--grey-40);
+        background-color: var(--color-action-tertiary-bg-active);
       }
 
       &[disabled] {
-        background-color: var(--white);
-        color: var(--grey-400);
+        background-color: var(--color-action-secondary-bg);
+        color: var(--color-action-disabled-text);
 
         #{$this}__icon {
-          color: var(--grey-400);
+          color: var(--color-action-disabled-text);
         }
 
         svg path {
-          fill: var(--grey-400);
+          fill: var(--color-action-disabled-text);
         }
       }
     }
 
     #{$this}__icon {
-      color: var(--grey-500);
+      color: var(--color-action-tertiary-text);
     }
   }
 
   &--danger {
-    background-color: var(--red-600);
-    color: var(--white);
+    background-color: var(--color-action-danger-bg);
+    color: var(--color-action-danger-text);
     &.pressed {
-      background-color: var(--red-600);
+      background-color: var(--color-action-danger-bg);
     }
     &:not(#{$this}--loading) {
       &:hover {
-        background-color: var(--red-500);
+        background-color: var(--color-action-danger-bg-hover);
       }
 
       &:active {
-        background-color: var(--red-600);
+        background-color: var(--color-action-danger-bg);
       }
 
       &[disabled] {
-        background-color: var(--grey-50);
-        color: var(--grey-400);
+        background-color: var(--color-action-disabled-bg);
+        color: var(--color-action-disabled-text);
 
         #{$this}__icon {
-          color: var(--grey-400);
+          color: var(--color-action-disabled-text);
         }
 
         svg path {
-          fill: var(--grey-400);
+          fill: var(--color-action-disabled-text);
         }
       }
     }
 
     #{$this}__icon {
-      color: var(--white);
+      color: var(--color-action-danger-text);
     }
   }
 
@@ -186,49 +186,49 @@
     padding: 0;
     width: auto;
     background: none;
-    color: var(--blue-700);
+    color: var(--color-action-text-fg);
 
     &:not(#{$this}--loading) {
       &:hover {
-        color: var(--blue-600);
+        color: var(--color-action-text-fg-hover);
 
         #{$this}__icon {
-          color: var(--blue-600);
+          color: var(--color-action-text-fg-hover);
         }
 
         svg path {
-          fill: var(--blue-600);
+          fill: var(--color-action-text-fg-hover);
         }
       }
 
       &:active {
-        color: var(--blue-800);
+        color: var(--color-action-text-fg-active);
 
         #{$this}__icon {
-          color: var(--blue-800);
+          color: var(--color-action-text-fg-active);
         }
 
         svg path {
-          fill: var(--blue-800);
+          fill: var(--color-action-text-fg-active);
         }
       }
 
 
       &[disabled] {
-        color: var(--grey-400);
+        color: var(--color-action-disabled-text);
 
         #{$this}__icon {
-          color: var(--grey-400);
+          color: var(--color-action-disabled-text);
         }
 
         svg path {
-          fill: var(--grey-400);
+          fill: var(--color-action-disabled-text);
         }
       }
     }
 
     #{$this}__icon {
-      color: var(--blue-700);
+      color: var(--color-action-text-fg);
     }
   }
 
@@ -237,48 +237,48 @@
     width: auto;
     height: auto;
     background: none;
-    color: var(--brand-500);
+    color: var(--color-action-link-fg);
 
     &:not(#{$this}--loading) {
       &:hover {
-        color: var(--brand-300);
+        color: var(--color-action-link-fg-hover);
 
         #{$this}__icon {
-          color: var(--brand-300);
+          color: var(--color-action-link-fg-hover);
         }
 
         svg path {
-          fill: var(--brand-300);
+          fill: var(--color-action-link-fg-hover);
         }
       }
 
       &:active {
-        color: var(--brand-600);
+        color: var(--color-action-link-fg-active);
 
         #{$this}__icon {
-          color: var(--brand-600);
+          color: var(--color-action-link-fg-active);
         }
 
         svg path {
-          fill: var(--brand-600);
+          fill: var(--color-action-link-fg-active);
         }
       }
 
       &[disabled] {
-        color: var(--grey-400);
+        color: var(--color-action-disabled-text);
 
         #{$this}__icon {
-          color: var(--grey-400);
+          color: var(--color-action-disabled-text);
         }
 
         svg path {
-          fill: var(--grey-400);
+          fill: var(--color-action-disabled-text);
         }
       }
     }
 
     #{$this}__icon {
-      color: var(--brand-500);
+      color: var(--color-action-link-fg);
     }
   }
 
@@ -357,53 +357,51 @@
     $this: &;
 
     &--primary {
-      color: var(--white);
+      color: var(--color-action-primary-text);
       font-weight: 700;
 
       svg path:not([fill]), svg circle:not([fill]), svg line:not([fill]) {
-        fill: var(--white);
+        fill: var(--color-action-primary-text);
       }
       &:not(#{$this}--loading) {
         &[disabled] {
-          background-color: var(--grey-20);
-          border-color: var(--grey-30);
-          color: var(--grey-30);
+          background-color: var(--color-action-primary-disabled-bg);
+          border-color: var(--color-action-primary-disabled-border);
+          color: var(--color-action-primary-disabled-text);
 
           svg path {
-            fill: var(--grey-30);
+            fill: var(--color-action-primary-disabled-text);
           }
         }
       }
     }
     &--secondary {
-      background-color: color-mix(in srgb, var(--color-5) 80%, transparent);
-      //background-color: var(--grey-20);
-      border-color: var(--grey-40);
-      color: var(--grey-800);
+      background-color: color-mix(in srgb, var(--color-action-secondary-surface) 80%, transparent);
+      border-color: var(--color-action-secondary-border);
+      color: var(--color-action-secondary-text);
 
       svg path:not([fill]), svg circle:not([fill]), svg line:not([fill]) {
-        fill: var(--grey-50);
+        fill: var(--color-action-secondary-icon);
       }
       &.pressed {
-        background-color: var(--grey-20);
+        background-color: var(--color-action-secondary-bg-pressed);
       }
       &:not(#{$this}--loading) {
         &:hover {
-          background-color: var(--color-1);
-          //background-color: var(--grey-20);
-          border-color: var(--grey-30);
+          background-color: var(--color-action-secondary-bg-hover);
+          border-color: var(--color-action-secondary-border-hover);
         }
 
         &:active {
-          background-color: var(--grey-20);
+          background-color: var(--color-action-secondary-bg-pressed);
         }
         &[disabled] {
-          background-color: var(--color-1);
-          border-color: var(--grey-30);
-          color: var(--grey-40);
+          background-color: var(--color-action-secondary-bg-disabled);
+          border-color: var(--color-action-secondary-border-disabled);
+          color: var(--color-action-secondary-text-disabled);
 
           svg path {
-            fill: var(--grey-40);
+            fill: var(--color-action-secondary-text-disabled);
           }
         }
       }
@@ -411,20 +409,20 @@
     &--tertiary {
       &:not(.btn--loading) {
         &:hover {
-          background-color: var(--color-1);
+          background-color: var(--color-action-tertiary-bg-hover);
         }
         &[disabled] {
-          background-color: var(--white);
-          color: var(--grey-30);
+          background-color: var(--color-action-secondary-bg);
+          color: var(--color-action-tertiary-text-disabled);
 
           svg path:not([fill]), svg circle:not([fill]), svg line:not([fill]) {
-            fill: var(--grey-30);
+            fill: var(--color-action-tertiary-text-disabled);
           }
         }
       }
     }
     &--danger {
-      color: var(--grey-400);
+      color: var(--color-action-danger-text);
 
       &:not(.btn--loading) {
         &[disabled] {
@@ -433,15 +431,15 @@
       }
 
       svg path:not([fill]), svg circle:not([fill]), svg line:not([fill]) {
-        fill: var(--grey-400);
+        fill: var(--color-action-danger-text);
       }
     }
     &--text {
-      color: var(--blue-800);
+      color: var(--color-action-text-fg);
       &:hover {
-        color: var(--blue-600);
+        color: var(--color-action-text-fg-hover);
         svg path {
-          fill: var(--blue-600);
+          fill: var(--color-action-text-fg-hover);
         }
       }
     }

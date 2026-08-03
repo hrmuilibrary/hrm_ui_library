@@ -28,13 +28,13 @@
         #{$this}__inner {
             height: 100%;
             width: 100%;
-            background-color: var(--grey-40);
+            background-color: var(--color-progress-track);
             border-radius: var(--border-radius-8);
         }
 
         #{$this}__filled {
             height: 100%;
-            background-color: var(--brand-500);
+            background-color: var(--color-progress-fill);
             border-radius: var(--border-radius-8);
             transition: width .3s linear;
         }
@@ -54,12 +54,12 @@
                 width: 100%;
                 height: 100%;
                 fill: none;
-                stroke: var(--grey-40);
+                stroke: var(--color-progress-track);
                 stroke-linecap: round;
                 transition: stroke-dashoffset .3s linear;
 
                 &:last-of-type {
-                    stroke: var(--brand-500);
+                    stroke: var(--color-progress-fill);
                 }
             }
         }
@@ -111,7 +111,7 @@
 [data-theme="dark"] {
     .progress-bar {
         &--linear .progress-bar__percent {
-            color: var(--grey-50);
+            color: var(--color-progress-dark-percent-text);
         }
     }
 }

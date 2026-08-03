@@ -11,7 +11,7 @@
       @include mixin.flexbox;
       @include mixin.align-items(center);
       @include mixin.justify-content(center);
-      color: var(--grey-500);
+      color: var(--color-pagination-text);
       border-radius: var(--border-radius-8);
       cursor: pointer;
       border: 1px solid transparent;
@@ -25,7 +25,7 @@
 
       svg {
         path {
-          fill: var(--grey-500);
+          fill: var(--color-pagination-text);
         }
       }
     }
@@ -33,11 +33,11 @@
     &:not(&.active, &.disabled) {
       a {
         &:hover {
-          background-color: var(--grey-40);
+          background-color: var(--color-pagination-hover-bg);
         }
 
         &:active {
-          border-color: var(--grey-200);
+          border-color: var(--color-pagination-active-border);
         }
       }
     }
@@ -46,12 +46,12 @@
       a {
         cursor: default;
         font-weight: var(--font-weight-500);
-        background-color: var(--grey-50);
-        color: var(--grey-900);
+        background-color: var(--color-pagination-selected-bg);
+        color: var(--color-pagination-selected-text);
 
         svg {
           path {
-            fill: var(--grey-900);
+            fill: var(--color-pagination-selected-text);
           }
         }
       }
@@ -60,12 +60,12 @@
     &.disabled {
       a {
         cursor: default;
-        color: var(--grey-400);
-        border-color: var(--grey-50);
+        color: var(--color-pagination-disabled-text);
+        border-color: var(--color-pagination-selected-bg);
 
         svg {
           path {
-            fill: var(--grey-400);
+            fill: var(--color-pagination-disabled-text);
           }
         }
 
@@ -85,9 +85,9 @@
     li {
       &.active {
         a {
-          background-color: var(--green-500);
+          background-color: var(--color-pagination-dark-selected-bg);
           font-weight: var(--font-weight-700);
-          color: var(--white);
+          color: var(--color-pagination-dark-selected-text);
         }
       }
     }

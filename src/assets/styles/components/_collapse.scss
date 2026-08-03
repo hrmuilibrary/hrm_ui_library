@@ -4,8 +4,8 @@
     $this: &;
 
     --ds-collapse-border-radius: var(--border-radius-4);
-    --ds-collapse-border: 1px solid var(--grey-200);
-    --ds-collapse-bg: var(--white);
+    --ds-collapse-border: 1px solid var(--color-collapse-border);
+    --ds-collapse-bg: var(--color-collapse-bg);
 
     --ds-collapse-header-size: var(--space-56);
     --ds-collapse-header-space: var(--space-16) var(--space-24);
@@ -66,12 +66,12 @@
     }
 
     &.icon-border {
-        border-color: var(--grey-300);
+        border-color: var(--color-collapseicon-border);
     }
 
     &.icon-open {
-        background-color: var(--grey-200);
-        border-color: var(--grey-200);
+        background-color: var(--color-collapseicon-open-bg);
+        border-color: var(--color-collapseicon-open-bg);
     }
 }
 
@@ -89,16 +89,16 @@
 
 [data-theme="dark"] {
     .collapse {
-        border-color: var(--grey-30);
+        border-color: var(--color-collapse-dark-border);
 
         &-icon {
             &.icon-border {
-                border-color: var(--grey-40);
+                border-color: var(--color-collapseicon-dark-border);
             }
 
             &.icon-open {
-                background-color: var(--grey-20);
-                border-color: var(--grey-40);
+                background-color: var(--color-collapseicon-dark-open-bg);
+                border-color: var(--color-collapseicon-dark-border);
             }
         }
     }

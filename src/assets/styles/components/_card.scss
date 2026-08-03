@@ -1,7 +1,7 @@
 .card {
   $this: &;
 
-  border: 1px solid var(--grey-200);
+  border: 1px solid var(--color-card-border);
   border-radius: var(--size-8);
   display: flex;
   position: relative;
@@ -12,7 +12,7 @@
 
   &--title--alignment {
     &__body {
-      border: 1px solid var(--grey-200);
+      border: 1px solid var(--color-card-title-alignment-body-border);
     }
 
     &--left {
@@ -82,39 +82,39 @@
     line-height: 16px;
 
     &--blue {
-      color: var(--blue-900);
-      background-color: var(--blue-100);
-      border: 1px solid var(--blue-100);
+      color: var(--color-card-title-blue-text);
+      background-color: var(--color-card-title-blue-bg);
+      border: 1px solid var(--color-card-title-blue-border);
     }
 
     &--purple {
-      color: var(--purple-900);
-      background-color: var(--purple-100);
-      border: 1px solid var(--purple-100);
+      color: var(--color-card-title-purple-text);
+      background-color: var(--color-card-title-purple-bg);
+      border: 1px solid var(--color-card-title-purple-border);
     }
 
     &--yellow {
-      color: var(--yellow-900);
-      background-color: var(--yellow-100);
-      border: 1px solid var(--yellow-100);
+      color: var(--color-card-title-yellow-text);
+      background-color: var(--color-card-title-yellow-bg);
+      border: 1px solid var(--color-card-title-yellow-border);
     }
 
     &--pink {
-      color: var(--pink-900);
-      background-color: var(--pink-100);
-      border: 1px solid var(--pink-100);
+      color: var(--color-card-title-pink-text);
+      background-color: var(--color-card-title-pink-bg);
+      border: 1px solid var(--color-card-title-pink-border);
     }
 
     &--green {
-      color: var(--green-900);
-      background-color: var(--green-100);
-      border: 1px solid var(--green-100);
+      color: var(--color-card-title-green-text);
+      background-color: var(--color-card-title-green-bg);
+      border: 1px solid var(--color-card-title-green-border);
     }
 
     &--grey {
-      color: var(--grey-900);
-      background-color: var(--grey-100);
-      border: 1px solid var(--grey-100);
+      color: var(--color-card-title-grey-text);
+      background-color: var(--color-card-title-grey-bg);
+      border: 1px solid var(--color-card-title-grey-border);
     }
   }
 
@@ -148,21 +148,21 @@
     }
 
     &--footer {
-      border-top: 1px solid var(--grey-200);
-      background-color: var(--grey-0);
+      border-top: 1px solid var(--color-card-footer-border);
+      background-color: var(--color-card-footer-bg);
     }
 
     .card__divider {
-      background-color: var(--grey-200);
+      background-color: var(--color-card-divider-bg);
     }
   }
 }
 
 [data-theme="dark"] {
   .card {
-    background-color: color-mix(in srgb, var(--grey-800) 5%, transparent);
-    border-color: var(--grey-40);
-    color: var(--grey-100);
+    background-color: var(--color-card-dark-bg);
+    border-color: var(--color-card-dark-border);
+    color: var(--color-card-dark-text);
 
     &__content--footer {
       background: none;
@@ -170,7 +170,7 @@
 
     &__content {
       .card__divider {
-        background-color: var(--grey-40);
+        background-color: var(--color-card-dark-divider-bg);
       }
     }
   }

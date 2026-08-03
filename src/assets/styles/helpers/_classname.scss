@@ -139,18 +139,18 @@ $space-prefixes: (
 
 .color {
   $color-type: (
-          primary: var(--grey-900),
-          secondary: var(--grey-800),
-          tertiary: var(--grey-500),
-          disabled: var(--grey-400),
-          selected: var(--brand-500),
-          inverse: var(--white),
-          brand: var(--brand-700),
-          success: var(--green-600),
-          information: var(--blue-800),
-          warning: var(--yellow-800),
-          danger: var(--red-600),
-          discovery: var(--purple-800),
+          primary: var(--color-link-primary),
+          secondary: var(--color-link-secondary),
+          tertiary: var(--color-link-tertiary),
+          disabled: var(--color-link-disabled),
+          selected: var(--color-link-selected),
+          inverse: var(--color-link-inverse),
+          brand: var(--color-link-brand),
+          success: var(--color-link-success),
+          information: var(--color-link-information),
+          warning: var(--color-link-warning),
+          danger: var(--color-link-danger),
+          discovery: var(--color-link-discovery),
   );
 
   @each $type, $color in $color-type {
@@ -214,7 +214,7 @@ $space-prefixes: (
   /* Works on Firefox */
   @-moz-document url-prefix() {
     scrollbar-width: thin;
-    scrollbar-color: var(--grey-50) transparent;
+    scrollbar-color: var(--color-classname-scrollbar-track) transparent;
   }
 
   /* Works on Chrome, Edge, and Safari */
@@ -224,11 +224,11 @@ $space-prefixes: (
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: var(--grey-200);
+    background-color: var(--color-classname-scrollbar-thumb);
     border-radius: var(--border-radius-100);
 
     &:hover {
-      background-color: var(--grey-300);
+      background-color: var(--color-classname-scrollbar-thumb-hover);
     }
   }
 
@@ -385,18 +385,18 @@ $gaps: 4, 8, 12, 16;
 [data-theme="dark"] {
   .color {
     $color-type: (
-      primary: var(--grey-200),
-      secondary: var(--color-10),
-      tertiary: var(--grey-50),
-      disabled: var(--grey-30),
-      selected: var(--brand-500),
-      inverse: var(--grey-500),
-      brand: var(--brand-700),
-      success: var(--green-600),
-      information: var(--blue-800),
-      warning: var(--yellow-800),
-      danger: var(--red-600),
-      discovery: var(--purple-800),
+      primary: var(--color-link-dark-primary),
+      secondary: var(--color-link-dark-secondary),
+      tertiary: var(--color-link-dark-tertiary),
+      disabled: var(--color-link-dark-disabled),
+      selected: var(--color-link-selected),
+      inverse: var(--color-link-dark-inverse),
+      brand: var(--color-link-brand),
+      success: var(--color-link-success),
+      information: var(--color-link-information),
+      warning: var(--color-link-warning),
+      danger: var(--color-link-danger),
+      discovery: var(--color-link-discovery),
     );
 
     @each $type, $color in $color-type {
@@ -409,16 +409,16 @@ $gaps: 4, 8, 12, 16;
 }
 
 body {
-  --track-color: var(--grey-50);
-  --thumb-color: var(--grey-200);
-  --thumb-color-hover: var(--grey-300);
+  --track-color: var(--color-classname-scrollbar-track);
+  --thumb-color: var(--color-classname-scrollbar-thumb);
+  --thumb-color-hover: var(--color-classname-scrollbar-thumb-hover);
   --track-width: var(--size-10);
   --track-height: var(--size-10);
 
   &[data-theme="dark"] {
-    --track-color: var(--color-1);
-    --thumb-color: var(--grey-40);
-    --thumb-color-hover: color-mix(in srgb, var(--grey-800) 15%, transparent);
+    --track-color: var(--color-classname-dark-scrollbar-track);
+    --thumb-color: var(--color-classname-dark-scrollbar-thumb);
+    --thumb-color-hover: var(--color-classname-dark-scrollbar-thumb-hover);
   }
 }
 

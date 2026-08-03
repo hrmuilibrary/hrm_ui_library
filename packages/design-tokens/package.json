@@ -1,0 +1,16 @@
+{
+  "name": "@hrm/design-tokens",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Single source of truth for hrm_ui_lib visual design. W3C DTCG tokens -> CSS/SCSS/TS via Style Dictionary.",
+  "type": "module",
+  "scripts": {
+    "tokens:import": "node scripts/scss-to-dtcg.mjs",
+    "tokens:build": "node build.mjs",
+    "tokens:verify": "node scripts/verify-parity.mjs",
+    "build": "pnpm tokens:import && pnpm tokens:build && pnpm tokens:verify"
+  },
+  "devDependencies": {
+    "style-dictionary": "^4.3.0"
+  }
+}

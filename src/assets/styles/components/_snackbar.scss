@@ -20,7 +20,7 @@
 
 .Toastify {
   --toastify-toast-width: 400px;
-  --toastify-color-light: var(--white);
+  --toastify-color-light: var(--color-snackbar-toastify-light-bg);
   --toastify-toast-min-height: var(--size-56);
   --toastify-toast-bottom: max(var(--toastify-toast-offset), env(safe-area-inset-bottom));
 

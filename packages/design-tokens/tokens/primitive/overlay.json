@@ -1,0 +1,94 @@
+{
+  "overlay": {
+    "1": {
+      "$type": "color",
+      "$value": "rgba(0, 0, 0, 0.02)",
+      "$extensions": {
+        "com.hrm": {
+          "cssVar": "overlay-1"
+        }
+      }
+    },
+    "2": {
+      "$type": "color",
+      "$value": "rgba(0, 0, 0, 0.05)",
+      "$extensions": {
+        "com.hrm": {
+          "cssVar": "overlay-2"
+        }
+      }
+    },
+    "3": {
+      "$type": "color",
+      "$value": "rgba(34, 34, 34, 0.1)",
+      "$extensions": {
+        "com.hrm": {
+          "cssVar": "overlay-3"
+        }
+      }
+    },
+    "4": {
+      "$type": "color",
+      "$value": "rgba(34, 34, 34, 0.15)",
+      "$extensions": {
+        "com.hrm": {
+          "cssVar": "overlay-4"
+        }
+      }
+    },
+    "5": {
+      "$type": "color",
+      "$value": "rgba(34, 34, 34, 0.2)",
+      "$extensions": {
+        "com.hrm": {
+          "cssVar": "overlay-5"
+        }
+      }
+    },
+    "6": {
+      "$type": "color",
+      "$value": "rgba(34, 34, 34, 0.3)",
+      "$extensions": {
+        "com.hrm": {
+          "cssVar": "overlay-6"
+        }
+      }
+    },
+    "7": {
+      "$type": "color",
+      "$value": "rgba(34, 34, 34, 0.4)",
+      "$extensions": {
+        "com.hrm": {
+          "cssVar": "overlay-7"
+        }
+      }
+    },
+    "8": {
+      "$type": "color",
+      "$value": "rgba(34, 34, 34, 0.5)",
+      "$extensions": {
+        "com.hrm": {
+          "cssVar": "overlay-8"
+        }
+      }
+    },
+    "9": {
+      "$type": "color",
+      "$value": "rgba(34, 34, 34, 0.6)",
+      "$extensions": {
+        "com.hrm": {
+          "cssVar": "overlay-9"
+        }
+      }
+    },
+    "10": {
+      "$type": "color",
+      "$value": "rgba(34, 34, 34, 0.7)",
+      "$extensions": {
+        "com.hrm": {
+          "cssVar": "overlay-10"
+        }
+      }
+    }
+  }
+}

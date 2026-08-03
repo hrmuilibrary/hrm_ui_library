@@ -1,8 +1,8 @@
 .skeleton {
     $this: &;
 
-    --ds-skeleton-bg-color: var(--grey-100);
-    --ds-skeleton-highlight-color: var(--grey-50);
+    --ds-skeleton-bg-color: var(--color-skeleton-bg);
+    --ds-skeleton-highlight-color: var(--color-skeleton-highlight);
     --ds-skeleton-wave-color: rgba(255, 255, 255, 0.6);
 
     display: block;
@@ -136,8 +136,8 @@
 
 [data-theme="dark"] {
     .skeleton {
-        --ds-skeleton-bg-color: var(--grey-40);
-        --ds-skeleton-highlight-color: var(--grey-30);
+        --ds-skeleton-bg-color: var(--color-skeleton-dark-bg);
+        --ds-skeleton-highlight-color: var(--color-skeleton-dark-highlight);
         --ds-skeleton-wave-color: rgba(255, 255, 255, 0.08);
     }
 }
