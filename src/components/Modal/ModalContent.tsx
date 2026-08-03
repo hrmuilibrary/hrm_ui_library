@@ -42,7 +42,7 @@ export const ModalContent = ({
   withFooter = true,
   confirmBtnTooltipText,
   buttonProps,
-                               additionalButton,
+  additionalButton,
   onSubmit,
   headerIcon,
   headerIconColor = 'brand',
@@ -104,7 +104,7 @@ export const ModalContent = ({
       <div className="modal__content scrollbar scrollbar--vertical">{children}</div>
       {withFooter && buttonProps ? (
         <div className="modal__footer">
-          {additionalButton && <Button {...additionalButton}/>}
+          {additionalButton && <Button {...additionalButton} />}
           {buttonProps.cancel && (
             <Button
               type="tertiary"
