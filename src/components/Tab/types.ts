@@ -6,6 +6,7 @@ export type TTabItem = IBaseProps & {
   label: string | React.ReactElement
   disabled?: boolean
   badgeProps?: TBadgeProps
+  hide?: boolean
   iconProps?: {
     alignment?: string
     Component?: TSVGIconComponent
