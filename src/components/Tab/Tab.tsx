@@ -9,21 +9,25 @@ export const Tab = (props: TTabProps): ReactElement => {
   return (
     <div className="tabs-container" data-test-id={dataTestId}>
       <div className={classNames('tabs-header-container', className)}>
-        {tabItems.map((tabInfo, index) => {
-          return (
-            <TabItem
-              label={tabInfo.label}
-              badgeProps={tabInfo.badgeProps}
-              onClick={() => onSelect(tabInfo.value)}
-              key={tabInfo.value}
-              val={tabInfo.value}
-              isSelected={selectedValue === tabInfo.value}
-              dataTestId={tabInfo?.dataTestId || (dataTestId ? `${dataTestId}-item-${index}` : '')}
-              disabled={tabInfo.disabled}
-              {...rest}
-            />
-          )
-        })}
+        {tabItems
+          .filter(({ hide }) => !hide)
+          .map((tabInfo, index) => {
+            return (
+              <TabItem
+                label={tabInfo.label}
+                badgeProps={tabInfo.badgeProps}
+                onClick={() => onSelect(tabInfo.value)}
+                key={tabInfo.value}
+                val={tabInfo.value}
+                isSelected={selectedValue === tabInfo.value}
+                dataTestId={
+                  tabInfo?.dataTestId || (dataTestId ? `${dataTestId}-item-${index}` : '')
+                }
+                disabled={tabInfo.disabled}
+                {...rest}
+              />
+            )
+          })}
       </div>
     </div>
   )
