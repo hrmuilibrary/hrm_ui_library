@@ -1,3 +1,10 @@
+## [4.0.15](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.14...4.0.15) (2026-08-04)
+
+
+### Bug Fixes
+
+* add hide prop to tabItem ([4f64726](https://github.com/hrmuilibrary/hrm_ui_library/commit/4f647267e4b3e8dda4946a3ab04bccc9f5d7e699))
+
 ## [4.0.14](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.13...4.0.14) (2026-08-03)
 
 
