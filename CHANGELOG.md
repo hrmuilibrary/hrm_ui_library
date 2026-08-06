@@ -1,3 +1,10 @@
+## [4.0.16](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.15...4.0.16) (2026-08-06)
+
+
+### Bug Fixes
+
+* resolve dark mode styles for select ([acbd729](https://github.com/hrmuilibrary/hrm_ui_library/commit/acbd729c0f5d12634931c80ad9d751692b59bf4c))
+
 ## [4.0.15](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.14...4.0.15) (2026-08-04)
 
 
