@@ -296,13 +296,6 @@
   .select {
     color: var(--grey-100);
 
-    &__option {
-      &:hover {
-        color: var(--color-4);
-        background-color: var(--color-7);
-      }
-    }
-
     &__options {
       background-color: var(--color-9);
       //background-color: var(--grey-20);
@@ -317,15 +310,16 @@
     }
     &__option {
       &:hover {
+        color: var(--color-4);
         background-color: var(--grey-30);
       }
 
       &__text {
-        color: var(--grey-900);
+        color: var(--grey-100)!important;
       }
 
       &__meta {
-        color: var(--grey-500);
+        color: var(--grey-50)!important;
       }
     }
 
@@ -336,16 +330,6 @@
     }
     &__top, &__footer {
       border-color: var(--grey-40);
-    }
-
-    .select__modal {
-      .select__option__text {
-        color: var(--grey-900);
-
-        &__large {
-          color: var(--grey-900);
-        }
-      }
     }
   }
 }
