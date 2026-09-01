@@ -51,7 +51,10 @@ Avatar.args = {
 const Avatars = [
   {
     initials: 'G M',
-    tooltipContent: 'G M'
+    tooltipContent: 'G M',
+    onAvatarClick: () => {
+      console.log('Avatar clicked')
+    }
   },
   {
     imagePath: image.src,

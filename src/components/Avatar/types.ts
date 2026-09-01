@@ -16,7 +16,7 @@ export interface TAvatarProps extends IFormCompProps {
   tooltipContent?: string | ReactElement
   onError?: (type: FILE_UPLOAD_ERRORS) => void
   fileAllowedSize?: number
-  onAvatarClick?: () => void
+  onAvatarClick?: (event: React.MouseEvent<any>) => void
 }
 
 export interface TAvatarGroupProps extends IBaseProps {

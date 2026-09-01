@@ -41,12 +41,12 @@ export const Avatar = ({
       className={classNames(`avatar avatar--${color} avatar--${type} avatar--${size}`, className, {
         'avatar--edit': isEditable
       })}
+      onClick={onAvatarClick}
     >
       <div
         className={classNames({
           'avatar--image': image
         })}
-        onClick={onAvatarClick}
         style={style}
       />
       {!image ? initials : null}
