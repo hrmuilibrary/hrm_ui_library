@@ -1,7 +1,7 @@
 {
   "homepage": "https://github.com/hrmuilibrary/hrm_ui_library",
   "name": "hrm_ui_lib",
-  "version": "4.0.17",
+  "version": "4.0.18",
   "description": "UI library for Dino",
   "private": false,
   "type": "module",
@@ -113,6 +113,9 @@
     "url": "https://github.com/hrmuilibrary/hrm_ui_library.git"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["@parcel/watcher", "esbuild"]
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "esbuild"
+    ]
   }
 }

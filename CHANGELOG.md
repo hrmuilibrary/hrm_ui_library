@@ -1,3 +1,13 @@
+## [4.0.18](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.17...4.0.18) (2026-09-01)
+
+
+### Bug Fixes
+
+* add pnpm-workspace.yaml to approve build scripts ([52d981c](https://github.com/hrmuilibrary/hrm_ui_library/commit/52d981c0992a9ecb67e0e518a69d390b4cea9d22))
+* approve pnpm build scripts for @parcel/watcher and esbuild ([24bd83a](https://github.com/hrmuilibrary/hrm_ui_library/commit/24bd83a1ea51aa4cd2f58bc4878c742ed0f21ba7))
+* handle avatar click in avatarGroup ([7c57b7c](https://github.com/hrmuilibrary/hrm_ui_library/commit/7c57b7c3a6260b504cb604b1fce9f1f546ab0ae1))
+* resolve build error ([1992fec](https://github.com/hrmuilibrary/hrm_ui_library/commit/1992fec24cbc63ed7b1039ab2a18c90c8ca03ae3))
+
 ## [4.0.17](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.16...4.0.17) (2026-08-26)
 
 
