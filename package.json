@@ -111,5 +111,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/hrmuilibrary/hrm_ui_library.git"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["@parcel/watcher", "esbuild"]
   }
 }
