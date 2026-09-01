@@ -114,7 +114,11 @@ export const FileUpload = (props: TFileUploadProps): React.ReactElement | null =
   )
 
   return (
-    <div className="file-upload" data-test-id={dataTestId}>
+    <div
+      className="file-upload"
+      data-test-id={dataTestId}
+      onClick={(event) => event.stopPropagation()}
+    >
       <Label
         text={label}
         required={required}
