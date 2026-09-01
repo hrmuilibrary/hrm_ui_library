@@ -39,13 +39,7 @@ export const AvatarGroup = ({
                 position={Positions.TOP_CENTER}
               />
             ) : null}
-            <Avatar
-              dataTestId={dataTestId}
-              id={`${index}`}
-              size={size}
-              initials={avatar.initials}
-              imagePath={avatar.imagePath}
-            />
+            <Avatar {...avatar} dataTestId={dataTestId} id={`${index}`} size={size} />
           </div>
         )
       })}
