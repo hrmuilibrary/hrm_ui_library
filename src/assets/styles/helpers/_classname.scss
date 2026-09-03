@@ -369,7 +369,7 @@ $text-alignments: center, left, right, justify;
 }
 
 // Gaps
-$gaps: 4, 8, 12, 16;
+$gaps: 4, 8, 12, 16, 24;
 .gap {
   @each $space in $gaps {
     &-#{$space} {
