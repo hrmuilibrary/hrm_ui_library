@@ -1,0 +1,3 @@
+import{j as i}from"./jsx-runtime-CixmCXYB.js";import{L as s}from"./Link-B6-6snZI.js";import"./iframe-CdU7qALN.js";import"./preload-helper-Dp1pzeXC.js";import"./index-DE9b-KKH.js";const k={title:"Link",component:s},a=n=>i.jsx(s,{...n}),r=a.bind({});r.args={children:"Bro",url:"/",beforeLink:"Hello ",afterLink:" By"};var e,o,t;r.parameters={...r.parameters,docs:{...(e=r.parameters)==null?void 0:e.docs,source:{originalSource:`args => {
+  return <_Link {...args} />;
+}`,...(t=(o=r.parameters)==null?void 0:o.docs)==null?void 0:t.source}}};const l=["Link"];export{r as Link,l as __namedExportsOrder,k as default};
