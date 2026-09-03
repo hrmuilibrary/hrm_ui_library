@@ -1,3 +1,10 @@
+## [4.0.19](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.18...4.0.19) (2026-09-03)
+
+
+### Bug Fixes
+
+* ui-fixes for dark mode ([a175b27](https://github.com/hrmuilibrary/hrm_ui_library/commit/a175b272502799ff3b1bf891d00e2c8000d2bfb0))
+
 ## [4.0.18](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.17...4.0.18) (2026-09-01)
 
 
