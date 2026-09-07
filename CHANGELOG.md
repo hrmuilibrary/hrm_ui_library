@@ -1,3 +1,11 @@
+## [4.0.21](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.20...4.0.21) (2026-09-07)
+
+
+### Bug Fixes
+
+* change button group styles ([bc50bf8](https://github.com/hrmuilibrary/hrm_ui_library/commit/bc50bf88f06e2775e5c6e502ccb6d91ab00d5278))
+* ui-fix ([47af42e](https://github.com/hrmuilibrary/hrm_ui_library/commit/47af42e8ef6fda48963c62b6e5342248efd21276))
+
 ## [4.0.20](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.19...4.0.20) (2026-09-07)
 
 
