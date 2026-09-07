@@ -1,3 +1,10 @@
+## [4.0.20](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.19...4.0.20) (2026-09-07)
+
+
+### Bug Fixes
+
+* remove redundant style for input disabled state ([b8f7d84](https://github.com/hrmuilibrary/hrm_ui_library/commit/b8f7d8453a3e504b49c3dadd9cbd057a45eccaef))
+
 ## [4.0.19](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.18...4.0.19) (2026-09-03)
 
 
