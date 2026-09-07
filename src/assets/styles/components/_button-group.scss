@@ -4,6 +4,7 @@
   align-items: center;
   flex-shrink: 0;
   gap: var(--size-8);
+  outline: none;
 
   &__primary {
     border: 1px solid var(--grey-200);
@@ -16,7 +17,17 @@
     }
 
     &.active {
-      background: var(--grey-50);
+      background: var(--brand-500);
+      border-color: var(--brand-500);
+
+      .color-primary,
+      .color-tertiary {
+        color: #fff;
+      }
+
+      svg path:not([fill]) {
+        fill: #fff;
+      }
     }
 
     &.disabled {
@@ -76,7 +87,17 @@
       }
 
       &.active {
-        background: var(--grey-40);
+        background: var(--brand-500);
+        border-color: var(--brand-500);
+
+        .color-primary,
+        .color-tertiary {
+          color: #fff;
+        }
+
+        svg path:not([fill]) {
+          fill: #fff;
+        }
       }
 
       &.disabled {
