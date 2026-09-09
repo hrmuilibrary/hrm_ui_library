@@ -1,3 +1,11 @@
+## [4.0.22](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.21...4.0.22) (2026-09-09)
+
+
+### Bug Fixes
+
+* comment ([32af1e9](https://github.com/hrmuilibrary/hrm_ui_library/commit/32af1e96456a350bdfae7b0337180cd1cd40a2ab))
+* comment ([3849dc2](https://github.com/hrmuilibrary/hrm_ui_library/commit/3849dc294110efe68510d52451747a46228ffda9))
+
 ## [4.0.21](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.20...4.0.21) (2026-09-07)
 
 
