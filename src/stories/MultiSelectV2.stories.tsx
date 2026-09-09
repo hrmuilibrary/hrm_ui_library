@@ -152,7 +152,7 @@ const VALIDATION_SCHEME = yup.object({
 const WithFormContainerTemplate = (): React.ReactElement => {
   const onSubmit = (data: any) => {
     // eslint-disable-next-line no-console
-    console.log('data',data)
+    console.log('data', data)
   }
 
   return (
