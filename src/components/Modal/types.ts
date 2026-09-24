@@ -23,6 +23,7 @@ export interface TModalPropTypes {
   className?: string
   confirmBtnTooltipText?: string
   isMobileFullScreen?: boolean
+  isFullScreen?: boolean
   headerIcon?: ReactNode
   headerStatus?: ReactNode
 }
