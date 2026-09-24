@@ -80,6 +80,13 @@ Modal.args = {
   confirmBtnTooltipText: 'Confirm'
 }
 
+export const FullScreenModal: StoryObj<TModalPropTypes> = Template.bind({})
+
+FullScreenModal.args = {
+  ...Modal.args,
+  isFullScreen: true
+}
+
 const ModalConfirmationTemplate: StoryFn<TModalConfirmationPropTypes> = (args) => {
   const [isOpen, setIsOpen] = useState(false)
   const closeModal = () => setIsOpen(false)
