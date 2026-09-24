@@ -1,3 +1,10 @@
+# [4.1.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.22...4.1.0) (2026-09-24)
+
+
+### Features
+
+* **modal:** add isFullScreen prop to show modal in full screen ([6a6dbef](https://github.com/hrmuilibrary/hrm_ui_library/commit/6a6dbef56fbdb2a97b5d79c0e041f5b750d6e96a))
+
 ## [4.0.22](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.21...4.0.22) (2026-09-09)
 
 
