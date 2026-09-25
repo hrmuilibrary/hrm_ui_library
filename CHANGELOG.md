@@ -1,3 +1,10 @@
+# [4.2.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.1.0...4.2.0) (2026-09-25)
+
+
+### Features
+
+* integrate file preview ([fd57b3d](https://github.com/hrmuilibrary/hrm_ui_library/commit/fd57b3d91a808e384cdd4d38fc7daed2e4365d00))
+
 # [4.1.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.0.22...4.1.0) (2026-09-24)
 
 
