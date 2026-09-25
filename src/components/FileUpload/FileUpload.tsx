@@ -42,9 +42,9 @@ export const FileUpload = (props: TFileUploadProps): React.ReactElement | null =
   } = props
   const files = (value as File[]) || uploadedFiles || []
   const fileInputRef = useRef<HTMLInputElement>(null)
-  const [isHovered, setHoverState] = useState(false)
+  const [isHovered, setIsHovered] = useState(false)
 
-  const onMouseEnterOrLeave = () => setHoverState(!isHovered)
+  const onMouseEnterOrLeave = () => setIsHovered(!isHovered)
 
   const onUploadClick = () => {
     if (fileInputRef.current) {
@@ -70,11 +70,11 @@ export const FileUpload = (props: TFileUploadProps): React.ReactElement | null =
     })
 
     if (allowedFilesByExtension.length !== selectedFiles.length) {
-      onError && onError(FILE_UPLOAD_ERRORS.type)
+      onError?.(FILE_UPLOAD_ERRORS.type)
       return
     }
     if (allowedFilesBySize.length !== selectedFiles.length) {
-      onError && onError(FILE_UPLOAD_ERRORS.size)
+      onError?.(FILE_UPLOAD_ERRORS.size)
       return
     }
     updateInForm(toBase64 ? getFormattedValues(selectedFiles) : selectedFiles)
