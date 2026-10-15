@@ -1,3 +1,10 @@
+# [4.3.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.2.0...4.3.0) (2026-10-15)
+
+
+### Features
+
+* forward test ids and aria attributes across components ([f894119](https://github.com/hrmuilibrary/hrm_ui_library/commit/f894119ff10357c6991eba3cf78150ef1d99264c))
+
 # [4.2.0](https://github.com/hrmuilibrary/hrm_ui_library/compare/4.1.0...4.2.0) (2026-09-25)
 
 
