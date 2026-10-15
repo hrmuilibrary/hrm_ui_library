@@ -15,6 +15,7 @@ type TProps = {
   title?: string
   subtitle?: string
   dataTestIdPrefix?: string
+  closeAriaLabel?: string
   closeIcon?: boolean
   onClose: () => void
   children?: ReactNode
@@ -36,6 +37,7 @@ export const ModalContent = ({
   title,
   subtitle,
   dataTestIdPrefix,
+  closeAriaLabel = 'Close',
   closeIcon,
   onClose,
   children,
@@ -81,7 +83,7 @@ export const ModalContent = ({
               {subtitle ? (
                 <Text
                   className={'mt-12'}
-                  dataTestId={dataTestIdPrefix ? `${dataTestIdPrefix}-modal-title` : ''}
+                  dataTestId={dataTestIdPrefix ? `${dataTestIdPrefix}-modal-subtitle` : ''}
                 >
                   {subtitle}
                 </Text>
@@ -93,6 +95,7 @@ export const ModalContent = ({
               className={'modal__close ml-16'}
               dataTestId={dataTestIdPrefix ? `${dataTestIdPrefix}-modal-close-button` : ''}
               iconProps={{ Component: IconDismiss }}
+              aria-label={closeAriaLabel}
               onClick={onClose}
               type="tertiary"
               size={titleSize === 'medium' ? 'small' : 'large'}

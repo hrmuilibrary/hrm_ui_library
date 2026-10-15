@@ -65,6 +65,7 @@ export const Button = (props: TButtonPropTypes): ReactElement => {
               size={ICON_SIZE_MAPPING[iconProps.size || size]}
               type={ICON_TYPE_MAPPING[iconProps.type || type]}
               className="btn__icon"
+              dataTestId={dataTestId ? `${dataTestId}-icon` : ''}
             />
           ) : null}
           {/* {buttonSecondaryText ? <span className="btn__text">{buttonSecondaryText}</span> : null} */}

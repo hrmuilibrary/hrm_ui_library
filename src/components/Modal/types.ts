@@ -4,6 +4,7 @@ export type TTitleSize = 'medium' | 'large'
 export type TModalHeaderIconColor = 'brand' | 'green' | 'blue' | 'red' | 'purple' | 'yellow'
 export interface TModalPropTypes {
   dataTestIdPrefix?: string
+  closeAriaLabel?: string
   closeOnOutsideClick?: boolean
   isOpen: boolean
   onClose: () => void

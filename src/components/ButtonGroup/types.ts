@@ -9,6 +9,7 @@ interface IButtonGroupBase extends IBaseProps {
 
 export interface IButtonGroupItem extends IButtonGroupBase {
   buttonText: string
+  ariaLabel?: string
   isActive?: boolean
   id: string | number
   onClick?: () => void

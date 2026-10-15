@@ -18,7 +18,16 @@ export const Chips = (props: TChipsProps): ReactElement => {
     onClick,
     onRemove,
     dataTestId = '',
-    id = ''
+    id = '',
+    // form props are not DOM attributes, keep them out of `rest`
+    hasError: _hasError,
+    isValid: _isValid,
+    value: _value,
+    onChange: _onChange,
+    placeholder: _placeholder,
+    name: _name,
+    setFieldValue: _setFieldValue,
+    ...rest
   } = props
 
   const customType = disabled
@@ -48,6 +57,7 @@ export const Chips = (props: TChipsProps): ReactElement => {
       id={id}
       data-test-id={dataTestId}
       onClick={handleClick}
+      {...rest}
     >
       {leftIconProps?.Component ? (
         <leftIconProps.Component

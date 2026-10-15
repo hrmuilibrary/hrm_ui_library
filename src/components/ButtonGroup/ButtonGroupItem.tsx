@@ -13,7 +13,8 @@ export const ButtonGroupItem = ({
   onClick,
   className,
   icons,
-  dataTestId = ''
+  dataTestId = '',
+  ariaLabel
 }: IButtonGroupItem) => {
   const onClickHandler = (event: React.MouseEvent<HTMLDivElement>) => {
     event.preventDefault()
@@ -41,6 +42,8 @@ export const ButtonGroupItem = ({
         className
       )}
       data-test-id={dataTestId}
+      aria-label={ariaLabel}
+      aria-pressed={!!isActive}
       onClick={onClickHandler}
     >
       {icons?.left?.Component ? (

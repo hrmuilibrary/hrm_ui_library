@@ -28,30 +28,43 @@ export const AvatarGroup = ({
     avatarGroup.length - visibleAvatarsAmount > 0 ? avatarGroup.length - visibleAvatarsAmount : 0
 
   return (
-    <div className={classNames(`avatar-group avatar-group--${size}`)}>
+    <div className={classNames(`avatar-group avatar-group--${size}`)} data-test-id={dataTestId}>
       {visibleAvatars.map((avatar, index) => {
         return (
-          <div className={'avatar-group__item'} key={index}>
+          <div
+            className={'avatar-group__item'}
+            key={avatar.id ?? index}
+            data-test-id={avatar.dataTestId}
+          >
             {avatar.tooltipContent ? (
               <Tooltip
                 text={avatar.tooltipContent}
-                id={`${index}`}
+                id={avatar.id ?? `${index}`}
                 position={Positions.TOP_CENTER}
               />
             ) : null}
-            <Avatar {...avatar} dataTestId={dataTestId} id={`${index}`} size={size} />
+            <Avatar
+              {...avatar}
+              dataTestId={avatar.dataTestId ? `${avatar.dataTestId}-avatar` : dataTestId}
+              id={avatar.id ?? `${index}`}
+              size={size}
+            />
           </div>
         )
       })}
 
       {invisibleAvatarsAmount ? (
-        <div className="avatar-group__item">
+        <div
+          className="avatar-group__item"
+          data-test-id={dataTestId ? `${dataTestId}-more` : undefined}
+        >
           {/*Todo please fix tooltip*/}
           <Tooltip text={'Name Surname'} id={'amountTooltip'} position={Positions.TOP_CENTER} />
           <Avatar
             type={'count'}
             size={size}
             id={'amountTooltip'}
+            dataTestId={dataTestId ? `${dataTestId}-more-count` : undefined}
             initials={`+${invisibleAvatarsAmount}`}
           />
         </div>

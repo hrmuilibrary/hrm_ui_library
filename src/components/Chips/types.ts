@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { HTMLAttributes, ReactNode } from 'react'
 import { ISVGIconProps, IFormCompProps } from '../../type'
 
 export type TChipsColors =
@@ -10,7 +10,13 @@ export type TChipsColors =
   | 'success'
   | 'information'
   | 'discovery'
-export interface TChipsProps extends IFormCompProps {
+export interface TChipsProps
+  extends IFormCompProps,
+    Omit<
+      HTMLAttributes<HTMLDivElement>,
+      'color' | 'onClick' | 'onChange' | 'placeholder' | 'className' | 'id' | 'children'
+    > {
+  [key: `data-${string}`]: string | number | boolean | undefined
   text?: string | ReactNode
   leftIconProps?: ISVGIconProps
   color?: TChipsColors

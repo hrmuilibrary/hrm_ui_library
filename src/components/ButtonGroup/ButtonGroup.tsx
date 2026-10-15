@@ -32,7 +32,7 @@ export const ButtonGroup = ({
             size={size}
             isActive={activeItem === button.id}
             disabled={disabled}
-            dataTestId={dataTestId ? `${dataTestId}-item-${index}` : ''}
+            dataTestId={button.dataTestId ?? (dataTestId ? `${dataTestId}-item-${index}` : '')}
             onClick={() => handleItemClick(button.id)}
           />
         )
