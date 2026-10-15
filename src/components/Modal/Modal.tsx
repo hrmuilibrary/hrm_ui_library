@@ -16,6 +16,7 @@ export const Modal = ({
   closeOnOutsideClick = true,
   isMobileFullScreen,
   isFullScreen,
+  dataTestIdPrefix,
   ...rest
 }: TModalPropTypes): ReactElement | null => {
   const isMobile = useIsMobile()
@@ -47,8 +48,9 @@ export const Modal = ({
             isFullScreen || (isMobile && isMobileFullScreen)
         })}
         ref={setContainerRef}
+        data-test-id={dataTestIdPrefix ? `${dataTestIdPrefix}-modal` : undefined}
       >
-        <ModalContent {...rest} onClose={onClose} />
+        <ModalContent {...rest} dataTestIdPrefix={dataTestIdPrefix} onClose={onClose} />
       </div>
     </div>,
     document.body
